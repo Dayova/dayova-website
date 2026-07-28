@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --dayova-page: #f6f7f5;
   --dayova-surface: #fbfcfb;
   --dayova-elevated: #ffffff;
@@ -22,6 +23,27 @@
   --dayova-radius-md: 22px;
   --dayova-radius-lg: 30px;
   --dayova-ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+.dark {
+  color-scheme: dark;
+  --dayova-page: #101419;
+  --dayova-surface: #151a20;
+  --dayova-elevated: #191f26;
+  --dayova-subtle: #202a33;
+  --dayova-ink: #f2f5f7;
+  --dayova-muted: #a8b5c2;
+  --dayova-line: #2d3a45;
+  --dayova-brand: #25c2f3;
+  --dayova-brand-deep: #50d0f6;
+  --dayova-brand-soft: #123342;
+  --dayova-positive: #62c89a;
+  --dayova-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.18),
+    0 18px 42px rgba(0, 0, 0, 0.2);
+  --dayova-shadow-strong:
+    0 2px 4px rgba(0, 0, 0, 0.22),
+    0 26px 70px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 1024px) {

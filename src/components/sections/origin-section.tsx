@@ -12,25 +12,26 @@ export function OriginSection() {
             Aus unserer Arbeit mit Schülern wurde Dayova
           </h2>
           <p className="mt-5 max-w-[720px] text-dayova-body text-muted">
-            Das eigentliche Problem ist oft nicht der Wille, sondern zu viel auf
-            einmal, kein klarer Plan und zu wenig Feedback. Genau das macht
-            Lernen anstrengend und unübersichtlich.
+            Das Problem ist oft nicht die Motivation, sondern ein fehlender
+            klarer Plan. Aufgaben, Prüfungen, Termine und Wissenslücken werden
+            schnell zu viel auf einmal. Dayova macht daraus einen verständlichen
+            Weg.
           </p>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-[22px] bg-ink px-6 py-8 text-center text-white shadow-card">
-              <strong className="block text-[30px] font-semibold leading-none">
+            <div className="rounded-[22px] border border-line bg-elevated px-6 py-8 text-center shadow-card">
+              <strong className="block text-[30px] font-semibold leading-none text-ink">
                 150+
               </strong>
-              <span className="mt-2 block text-sm text-white/80">
+              <span className="mt-2 block text-sm text-muted">
                 Schüler begleitet
               </span>
             </div>
-            <div className="rounded-[22px] border border-line bg-white px-6 py-8 text-center shadow-card">
+            <div className="rounded-[22px] border border-line bg-elevated px-6 py-8 text-center shadow-card">
               <strong className="block text-[30px] font-semibold leading-none text-ink">
                 2023
               </strong>
-              <span className="mt-2 block text-sm text-ink">entstanden</span>
+              <span className="mt-2 block text-sm text-muted">entstanden</span>
             </div>
           </div>
         </div>

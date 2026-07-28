@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "Dayova",
+  url: "https://dayova.com",
   description:
     "Dein Lernbegleiter für einen klaren, persönlichen Weg durch Prüfungen und Aufgaben.",
   launch: {
@@ -11,7 +12,9 @@ export const siteConfig = {
     appStore: process.env.NEXT_PUBLIC_APP_STORE_URL || null,
     googlePlay: process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || null,
     linkedin: "https://www.linkedin.com/company/dayova",
+    discord: process.env.NEXT_PUBLIC_DISCORD_URL || null,
     email: "kontakt@dayova.de",
+    schoolEmail: "kontakt@dayova.de",
   },
 } as const;
 

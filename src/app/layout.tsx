@@ -17,7 +17,10 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dayova.com"),
-  title: "Dayova – Dein persönlicher Lernbegleiter",
+  title: {
+    default: "Dayova – Dein persönlicher Lernbegleiter",
+    template: "%s | Dayova",
+  },
   description:
     "Dayova zeigt dir, was als Nächstes zählt, erstellt einen realistischen Lernplan und macht Stärken und Wissenslücken sichtbar.",
   keywords: [
@@ -51,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={poppins.variable}>
+    <html lang="de" className={poppins.variable} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

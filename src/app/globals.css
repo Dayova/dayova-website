@@ -51,6 +51,9 @@ body {
   color: var(--dayova-ink);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition:
+    background-color 220ms var(--dayova-ease),
+    color 220ms var(--dayova-ease);
 }
 
 button,
@@ -101,29 +104,88 @@ img {
   box-shadow: var(--dayova-shadow);
 }
 
-.waitlist-button {
+.section-card.section-card-dark {
+  border-color: #213f59;
+  background: #15283b;
+}
+
+.section-card.section-card-brand {
+  border-color: rgba(18, 184, 239, 0.25);
+  background: linear-gradient(180deg, #08ade9 0%, #46cff3 100%);
+}
+
+.button-primary,
+.button-secondary,
+.button-dark,
+.button-text {
   display: inline-flex;
   min-height: 48px;
   align-items: center;
   justify-content: center;
+  gap: 9px;
   border-radius: 999px;
   padding-inline: 28px;
-  background: linear-gradient(180deg, #0bade9 0%, #4bd0f4 100%);
-  color: white;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  box-shadow: 0 10px 24px rgba(18, 184, 239, 0.18);
   transition:
     transform 180ms var(--dayova-ease),
     box-shadow 180ms var(--dayova-ease),
-    filter 180ms var(--dayova-ease);
+    border-color 180ms var(--dayova-ease),
+    background-color 180ms var(--dayova-ease);
 }
 
-.waitlist-button:hover {
+.button-primary {
+  background: linear-gradient(180deg, #0bade9 0%, #4bd0f4 100%);
+  color: white;
+  box-shadow: 0 10px 24px rgba(18, 184, 239, 0.18);
+}
+
+.button-secondary {
+  border: 1px solid var(--dayova-line);
+  background: var(--dayova-elevated);
+  color: var(--dayova-ink);
+}
+
+.button-dark {
+  background: var(--dayova-ink);
+  color: var(--dayova-page);
+}
+
+.button-text {
+  min-height: 44px;
+  padding-inline: 4px;
+  color: var(--dayova-ink);
+}
+
+.button-compact {
+  min-height: 44px;
+  padding-inline: 22px;
+  font-size: 13px;
+}
+
+.button-primary:hover,
+.button-secondary:hover,
+.button-dark:hover,
+.button-text:hover {
   transform: translateY(-2px);
-  filter: saturate(1.08);
+}
+
+.button-primary:hover {
   box-shadow: 0 14px 30px rgba(18, 184, 239, 0.25);
+}
+
+.button-secondary:hover {
+  border-color: var(--dayova-brand);
+}
+
+.section-label {
+  color: var(--dayova-brand-deep);
+  font-size: var(--type-label);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: var(--leading-label);
+  text-transform: uppercase;
 }
 
 .faq-item > summary::-webkit-details-marker {
@@ -138,6 +200,28 @@ img {
 
 .faq-item[open] .faq-chevron {
   transform: rotate(180deg);
+}
+
+.faq-chevron {
+  transition: transform 180ms var(--dayova-ease);
+}
+
+.theme-sun {
+  display: none;
+}
+
+.dark .theme-moon {
+  display: none;
+}
+
+.dark .theme-sun {
+  display: inline;
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  #produkt .section-card img {
+    margin-inline: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

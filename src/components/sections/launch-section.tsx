@@ -5,7 +5,7 @@ export function LaunchSection() {
   return (
     <section
       className="dayova-section"
-      id="warteliste"
+      id="app-start"
       aria-labelledby="launch-title"
     >
       <div className="dayova-container">
@@ -17,8 +17,9 @@ export function LaunchSection() {
               Sei beim App-Start dabei
             </h2>
             <p className="mt-4 max-w-[650px] text-dayova-body text-muted">
-              Trage dich jetzt in die Warteliste ein und sichere dir 14 Tage
-              kostenlosen Zugang zum App-Start.
+              Dayova startet am 17. August. Folge uns auf Instagram und erfahre
+              direkt, sobald du die App herunterladen und 14 Tage vollständig
+              testen kannst.
             </p>
             <div className="mt-8">
               <LaunchCta />

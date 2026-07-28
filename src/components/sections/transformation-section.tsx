@@ -11,7 +11,7 @@ export function TransformationSection() {
 
         <div className="mt-8 grid gap-5 lg:grid-cols-[1.4fr_0.94fr]">
           <div className="grid gap-5 sm:grid-cols-2">
-            <article className="section-card flex min-h-[300px] flex-col bg-ink p-7 text-white sm:p-8">
+            <article className="section-card section-card-dark flex min-h-[300px] flex-col p-7 text-white sm:p-8">
               <h3>Alles im Blick</h3>
               <div className="mt-auto flex justify-center overflow-hidden pt-6">
                 <Image
@@ -39,8 +39,8 @@ export function TransformationSection() {
             <article className="section-card p-7 sm:col-span-2 sm:p-8">
               <h3 className="text-ink">Von Überforderung zu Orientierung</h3>
               <p className="mt-4 max-w-3xl text-dayova-body text-muted">
-                Dayova bringt zusammen, was im Lernen oft fehlt: Orientierung,
-                Rückmeldung und einen Weg, der zu dir passt.
+                Dayova gibt dir Orientierung, zeigt deinen Lernstand und passt
+                deinen Weg an das an, was du als Nächstes brauchst.
               </p>
               <div className="mt-6">
                 <LaunchCta compact />
@@ -48,7 +48,7 @@ export function TransformationSection() {
             </article>
           </div>
 
-          <article className="section-card flex min-h-[620px] flex-col bg-gradient-to-b from-[#08ade9] to-[#46cff3] p-7 pb-0 text-white sm:p-8 sm:pb-0">
+          <article className="section-card section-card-brand flex min-h-[620px] flex-col p-7 pb-0 text-white sm:p-8 sm:pb-0">
             <h3>Lernpläne, die sich dir anpassen</h3>
             <div className="mt-auto flex min-h-0 flex-1 items-end justify-center overflow-hidden">
               <Image

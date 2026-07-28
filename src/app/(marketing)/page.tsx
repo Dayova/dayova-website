@@ -1,5 +1,4 @@
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
+import { ContactForm } from "@/components/contact-form";
 import { CompanionSection } from "@/components/sections/companion-section";
 import { DifferentiationSection } from "@/components/sections/differentiation-section";
 import { FaqSection } from "@/components/sections/faq-section";
@@ -12,18 +11,15 @@ import { TransformationSection } from "@/components/sections/transformation-sect
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
-        <HeroSection />
-        <OriginSection />
-        <CompanionSection />
-        <DifferentiationSection />
-        <TransformationSection />
-        <ProcessSection />
-        <LaunchSection />
-        <FaqSection />
-      </main>
-      <Footer />
+      <HeroSection />
+      <OriginSection />
+      <CompanionSection />
+      <DifferentiationSection />
+      <TransformationSection />
+      <ProcessSection />
+      <LaunchSection />
+      <FaqSection />
+      <ContactForm />
     </>
   );
 }

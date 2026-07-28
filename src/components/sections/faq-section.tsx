@@ -27,13 +27,12 @@ export function FaqSection() {
             Häufige Fragen
           </h2>
           <div className="grid gap-3">
-            {faqs.map((faq, index) => (
+            {faqs.map((faq) => (
               <details
                 className="faq-item rounded-[22px]"
                 key={faq.question}
-                open={index === 0}
               >
-                <summary className="flex min-h-[62px] cursor-pointer list-none items-center justify-between gap-4 rounded-[22px] border border-line bg-white px-6 py-4 font-semibold text-ink shadow-[0_2px_8px_rgba(36,64,80,0.02)]">
+                <summary className="flex min-h-[62px] cursor-pointer list-none items-center justify-between gap-4 rounded-[22px] border border-line bg-elevated px-6 py-4 font-semibold text-ink shadow-[0_2px_8px_rgba(36,64,80,0.02)]">
                   <span>{faq.question}</span>
                   <span
                     className="faq-chevron shrink-0 text-xl transition-transform"

@@ -1,6 +1,17 @@
 "use client";
 
+import { useEffect } from "react";
+
 export function ThemeToggle() {
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("dayova-theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.classList.toggle(
+      "dark",
+      savedTheme ? savedTheme === "dark" : prefersDark,
+    );
+  }, []);
+
   function toggleTheme() {
     const nextIsDark = !document.documentElement.classList.contains("dark");
     document.documentElement.classList.toggle("dark", nextIsDark);
@@ -15,11 +26,11 @@ export function ThemeToggle() {
       aria-label="Farbschema wechseln"
       title="Farbschema wechseln"
     >
-      <span className="theme-sun" aria-hidden="true">
-        ☼
-      </span>
       <span className="theme-moon" aria-hidden="true">
         ☾
+      </span>
+      <span className="theme-sun" aria-hidden="true">
+        ☼
       </span>
     </button>
   );
