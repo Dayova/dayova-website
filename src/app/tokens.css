@@ -1,0 +1,39 @@
+:root {
+  --dayova-page: #f6f7f5;
+  --dayova-surface: #fbfcfb;
+  --dayova-elevated: #ffffff;
+  --dayova-subtle: #eff4f7;
+  --dayova-ink: #171819;
+  --dayova-muted: #758196;
+  --dayova-line: #dce6ed;
+  --dayova-brand: #12b8ef;
+  --dayova-brand-deep: #08a8e4;
+  --dayova-brand-soft: #e9f8fe;
+  --dayova-positive: #24855d;
+  --dayova-shadow:
+    0 1px 2px rgba(24, 32, 37, 0.03),
+    0 16px 36px rgba(36, 64, 80, 0.08);
+  --dayova-shadow-strong:
+    0 2px 4px rgba(24, 32, 37, 0.05),
+    0 24px 60px rgba(36, 64, 80, 0.12);
+  --dayova-container: 1960px;
+  --dayova-section: 92px;
+  --dayova-radius-sm: 16px;
+  --dayova-radius-md: 22px;
+  --dayova-radius-lg: 30px;
+  --dayova-ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --dayova-section: 76px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --dayova-section: 58px;
+    --dayova-radius-md: 20px;
+    --dayova-radius-lg: 26px;
+  }
+}

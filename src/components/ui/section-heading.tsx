@@ -1,0 +1,47 @@
+type SectionHeadingProps = {
+  label: string;
+  title: string;
+  description?: string;
+  align?: "left" | "center";
+  id?: string;
+  inverse?: boolean;
+};
+
+export function SectionHeading({
+  label,
+  title,
+  description,
+  align = "left",
+  id,
+  inverse = false,
+}: SectionHeadingProps) {
+  const centered = align === "center";
+
+  return (
+    <div
+      className={[
+        "flex max-w-2xl flex-col gap-4",
+        centered ? "mx-auto items-center text-center" : "",
+      ].join(" ")}
+    >
+      <p className={`section-label${inverse ? " !text-cyan-200" : ""}`}>
+        {label}
+      </p>
+      <h2
+        className={inverse ? "text-white" : "text-ink"}
+        id={id}
+      >
+        {title}
+      </h2>
+      {description ? (
+        <p
+          className={`text-dayova-body leading-relaxed ${
+            inverse ? "text-white/70" : "text-muted"
+          }`}
+        >
+          {description}
+        </p>
+      ) : null}
+    </div>
+  );
+}

@@ -1,0 +1,79 @@
+:root {
+  --type-h1: 44px;
+  --type-h2: 26px;
+  --type-h3: 22px;
+  --type-body-lg: 18px;
+  --type-body: 16px;
+  --type-small: 14px;
+  --type-label: 12px;
+  --leading-heading: 1.16;
+  --leading-body: 1.72;
+  --leading-label: 1.45;
+  --tracking-heading: -0.025em;
+}
+
+body {
+  font-family: var(--font-poppins), Arial, sans-serif;
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: var(--type-h1);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+h2 {
+  font-size: var(--type-h2);
+  font-weight: 600;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+h3 {
+  font-size: var(--type-h3);
+  font-weight: 600;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+p,
+li,
+input,
+textarea {
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --type-h1: 36px;
+    --type-h2: 22px;
+    --type-h3: 20px;
+    --type-body-lg: 17px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --type-h1: 28px;
+    --type-h2: 20px;
+    --type-h3: 18px;
+    --type-body-lg: 16px;
+    --type-body: 15px;
+    --type-small: 13px;
+    --type-label: 11px;
+    --leading-heading: 1.18;
+    --leading-body: 1.7;
+  }
+}

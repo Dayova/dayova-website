@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-poppins);
+  --color-page: var(--dayova-page);
+  --color-surface: var(--dayova-surface);
+  --color-elevated: var(--dayova-elevated);
+  --color-subtle: var(--dayova-subtle);
+  --color-ink: var(--dayova-ink);
+  --color-muted: var(--dayova-muted);
+  --color-line: var(--dayova-line);
+  --color-brand: var(--dayova-brand);
+  --color-brand-deep: var(--dayova-brand-deep);
+  --color-brand-soft: var(--dayova-brand-soft);
+  --color-positive: var(--dayova-positive);
+  --shadow-card: var(--dayova-shadow);
+  --shadow-card-strong: var(--dayova-shadow-strong);
+  --radius-dayova-sm: var(--dayova-radius-sm);
+  --radius-dayova-md: var(--dayova-radius-md);
+  --radius-dayova-lg: var(--dayova-radius-lg);
+  --text-dayova-h1: var(--type-h1);
+  --text-dayova-h1--line-height: var(--leading-heading);
+  --text-dayova-h2: var(--type-h2);
+  --text-dayova-h2--line-height: var(--leading-heading);
+  --text-dayova-h3: var(--type-h3);
+  --text-dayova-h3--line-height: var(--leading-heading);
+  --text-dayova-body-lg: var(--type-body-lg);
+  --text-dayova-body-lg--line-height: var(--leading-body);
+  --text-dayova-body: var(--type-body);
+  --text-dayova-body--line-height: var(--leading-body);
+  --text-dayova-small: var(--type-small);
+  --text-dayova-small--line-height: var(--leading-body);
+  --text-dayova-label: var(--type-label);
+  --text-dayova-label--line-height: var(--leading-label);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 124px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--dayova-page);
+  color: var(--dayova-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--dayova-brand) 75%, transparent);
+  color: #071217;
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--dayova-brand) 55%, transparent);
+  outline-offset: 4px;
+}
+
+.dayova-container {
+  width: min(calc(100% - clamp(28px, 4vw, 80px)), var(--dayova-container));
+  margin-inline: auto;
+}
+
+.dayova-section {
+  padding-block: var(--dayova-section);
+}
+
+.section-card {
+  overflow: hidden;
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-lg);
+  background: var(--dayova-elevated);
+  box-shadow: var(--dayova-shadow);
+}
+
+.waitlist-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding-inline: 28px;
+  background: linear-gradient(180deg, #0bade9 0%, #4bd0f4 100%);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 10px 24px rgba(18, 184, 239, 0.18);
+  transition:
+    transform 180ms var(--dayova-ease),
+    box-shadow 180ms var(--dayova-ease),
+    filter 180ms var(--dayova-ease);
+}
+
+.waitlist-button:hover {
+  transform: translateY(-2px);
+  filter: saturate(1.08);
+  box-shadow: 0 14px 30px rgba(18, 184, 239, 0.25);
+}
+
+.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item[open] > summary {
+  border-color: transparent;
+  background: linear-gradient(180deg, #08aae6 0%, #48cef1 100%);
+  color: #fff;
+}
+
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
