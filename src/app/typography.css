@@ -1,19 +1,24 @@
 :root {
-  --type-h1: 44px;
-  --type-h2: 26px;
-  --type-h3: 22px;
-  --type-body-lg: 18px;
+  --type-hero: clamp(40px, 5vw, 56px);
+  --type-h1: 28px;
+  --type-h2: clamp(20px, 2.4vw, 24px);
+  --type-h3: 20px;
+  --type-body-lg: 16px;
   --type-body: 16px;
   --type-small: 14px;
   --type-label: 12px;
-  --leading-heading: 1.16;
-  --leading-body: 1.72;
-  --leading-label: 1.45;
-  --tracking-heading: -0.025em;
+  --leading-hero: 1.08;
+  --leading-heading: 1.2;
+  --leading-body: 1.6;
+  --leading-label: 1.5;
+  --tracking-hero: -0.02em;
+  --tracking-heading: -0.015em;
 }
 
 body {
-  font-family: var(--font-poppins), Arial, sans-serif;
+  font-family:
+    var(--font-poppins), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
   font-size: var(--type-body);
   font-weight: 400;
   line-height: var(--leading-body);
@@ -28,6 +33,13 @@ p {
 }
 
 h1 {
+  font-size: var(--type-h1);
+  font-weight: 700;
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+.dayova-section-title {
   font-size: var(--type-h1);
   font-weight: 700;
   line-height: var(--leading-heading);
@@ -55,25 +67,21 @@ textarea {
   font-weight: 400;
 }
 
-@media (max-width: 1024px) {
+.dayova-hero-claim {
+  font-size: var(--type-hero);
+  font-weight: 700;
+  line-height: var(--leading-hero);
+  letter-spacing: var(--tracking-hero);
+}
+
+@media (min-width: 768px) {
   :root {
     --type-h1: 36px;
-    --type-h2: 22px;
-    --type-h3: 20px;
-    --type-body-lg: 17px;
   }
 }
 
-@media (max-width: 640px) {
+@media (min-width: 1024px) {
   :root {
-    --type-h1: 28px;
-    --type-h2: 20px;
-    --type-h3: 18px;
-    --type-body-lg: 16px;
-    --type-body: 15px;
-    --type-small: 13px;
-    --type-label: 11px;
-    --leading-heading: 1.18;
-    --leading-body: 1.7;
+    --type-h1: 44px;
   }
 }

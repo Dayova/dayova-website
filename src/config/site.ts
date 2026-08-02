@@ -12,7 +12,12 @@ export const siteConfig = {
     appStore: process.env.NEXT_PUBLIC_APP_STORE_URL || null,
     googlePlay: process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || null,
     linkedin: "https://www.linkedin.com/company/dayova",
-    discord: process.env.NEXT_PUBLIC_DISCORD_URL || null,
+    discord:
+      process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/dayova",
+    facebook:
+      process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/dayova",
+    youtube:
+      process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://www.youtube.com/@dayova",
     email: "kontakt@dayova.de",
     schoolEmail: "kontakt@dayova.de",
   },

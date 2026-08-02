@@ -26,12 +26,6 @@ export function ButtonLink({
   dataPlanId,
 }: ButtonLinkProps) {
   const classes = `${variants[variant]} ${className}`.trim();
-  const content = (
-    <>
-      <span>{children}</span>
-      <span aria-hidden="true">→</span>
-    </>
-  );
 
   if (external || href.startsWith("mailto:")) {
     return (
@@ -42,14 +36,14 @@ export function ButtonLink({
         rel={external ? "noreferrer" : undefined}
         target={external ? "_blank" : undefined}
       >
-        {content}
+        {children}
       </a>
     );
   }
 
   return (
     <Link className={classes} data-plan-id={dataPlanId} href={href}>
-      {content}
+      {children}
     </Link>
   );
 }

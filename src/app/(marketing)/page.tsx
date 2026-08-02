@@ -1,24 +1,24 @@
 import { ContactForm } from "@/components/contact-form";
-import { CompanionSection } from "@/components/sections/companion-section";
-import { DifferentiationSection } from "@/components/sections/differentiation-section";
-import { FaqSection } from "@/components/sections/faq-section";
-import { HeroSection } from "@/components/sections/hero-section";
-import { LaunchSection } from "@/components/sections/launch-section";
-import { OriginSection } from "@/components/sections/origin-section";
-import { ProcessSection } from "@/components/sections/process-section";
-import { TransformationSection } from "@/components/sections/transformation-section";
+import {
+  BenefitsSection,
+  HomeFaqSection,
+  HomeHeroSection,
+  HowItWorksSection,
+  LaunchCtaSection,
+  ProblemSolutionSection,
+  TrustSection,
+} from "@/components/sections/homepage-sections";
 
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <OriginSection />
-      <CompanionSection />
-      <DifferentiationSection />
-      <TransformationSection />
-      <ProcessSection />
-      <LaunchSection />
-      <FaqSection />
+      <HomeHeroSection />
+      <ProblemSolutionSection />
+      <HowItWorksSection />
+      <BenefitsSection />
+      <TrustSection />
+      <LaunchCtaSection />
+      <HomeFaqSection />
       <ContactForm />
     </>
   );

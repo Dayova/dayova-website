@@ -1,61 +1,111 @@
 :root {
   color-scheme: light;
-  --dayova-page: #f6f7f5;
-  --dayova-surface: #fbfcfb;
+
+  /* Dayova color system */
+  --dayova-page: #f6f6f4;
+  --dayova-surface: #fafaf8;
   --dayova-elevated: #ffffff;
-  --dayova-subtle: #eff4f7;
-  --dayova-ink: #171819;
-  --dayova-muted: #758196;
-  --dayova-line: #dce6ed;
-  --dayova-brand: #12b8ef;
-  --dayova-brand-deep: #08a8e4;
-  --dayova-brand-soft: #e9f8fe;
+  --dayova-subtle: #eeeeeb;
+  --dayova-ink: #1a1a1a;
+  --dayova-muted: #737780;
+  --dayova-line: #dedfdd;
+  --dayova-brand: #00baff;
+  --dayova-brand-deep: #00baff;
+  --dayova-brand-hover: #00baff;
+  --dayova-brand-soft: #e8f9ff;
+  --dayova-brand-gradient: linear-gradient(180deg, #00baff 0%, #51d7ff 100%);
+  --dayova-brand-gradient-hover: linear-gradient(180deg, #00baff 0%, #38d0ff 100%);
   --dayova-positive: #24855d;
+  --dayova-dark-panel: #212325;
+  --dayova-hero-frame: transparent;
+  --dayova-hero-ink: #17191b;
+  --dayova-hero-gradient: linear-gradient(
+    180deg,
+    #fbfcfc 0%,
+    #effaff 48%,
+    #d6f5ff 100%
+  );
+
+  /* Canonical 4px spacing system */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Backwards-compatible aliases for existing component tokens */
+  --dayova-space-1: var(--space-1);
+  --dayova-space-2: var(--space-2);
+  --dayova-space-3: var(--space-3);
+  --dayova-space-4: var(--space-4);
+  --dayova-space-6: var(--space-6);
+  --dayova-space-8: var(--space-8);
+  --dayova-space-12: var(--space-12);
+  --dayova-space-16: var(--space-16);
+  --dayova-space-20: var(--space-20);
+
+  /* Apple-inspired concentric corner system */
+  --dayova-radius-xs: 4px;
+  --dayova-radius-sm: 8px;
+  --dayova-radius-md: 12px;
+  --dayova-radius-lg: 16px;
+  --dayova-radius-xl: 24px;
+  --dayova-radius-2xl: 32px;
+  --dayova-radius-3xl: 48px;
+  --dayova-radius-hero: 48px;
+  --dayova-radius-phone: 56px;
+  --dayova-radius-pill: 9999px;
+  --dayova-radius-control: var(--dayova-radius-md);
+
+  /* Layout and elevation */
+  --dayova-container: 1920px;
+  --dayova-section: var(--space-12);
   --dayova-shadow:
-    0 1px 2px rgba(24, 32, 37, 0.03),
-    0 16px 36px rgba(36, 64, 80, 0.08);
+    0 1px 2px rgba(26, 26, 26, 0.03),
+    0 12px 32px rgba(30, 42, 50, 0.06);
   --dayova-shadow-strong:
-    0 2px 4px rgba(24, 32, 37, 0.05),
-    0 24px 60px rgba(36, 64, 80, 0.12);
-  --dayova-container: 1960px;
-  --dayova-section: 92px;
-  --dayova-radius-sm: 16px;
-  --dayova-radius-md: 22px;
-  --dayova-radius-lg: 30px;
-  --dayova-ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+    0 2px 4px rgba(26, 26, 26, 0.05),
+    0 20px 48px rgba(30, 42, 50, 0.1);
+  --dayova-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .dark {
   color-scheme: dark;
-  --dayova-page: #101419;
-  --dayova-surface: #151a20;
-  --dayova-elevated: #191f26;
-  --dayova-subtle: #202a33;
-  --dayova-ink: #f2f5f7;
-  --dayova-muted: #a8b5c2;
-  --dayova-line: #2d3a45;
-  --dayova-brand: #25c2f3;
-  --dayova-brand-deep: #50d0f6;
-  --dayova-brand-soft: #123342;
+  --dayova-page: #212325;
+  --dayova-surface: #26292c;
+  --dayova-elevated: #2b2e32;
+  --dayova-subtle: #32363a;
+  --dayova-ink: #ffffff;
+  --dayova-muted: #b0b2ba;
+  --dayova-line: #41464c;
+  --dayova-brand: #00baff;
+  --dayova-brand-deep: #00baff;
+  --dayova-brand-hover: #00baff;
+  --dayova-brand-soft: #153f4d;
   --dayova-positive: #62c89a;
+  --dayova-dark-panel: #17191b;
+  --dayova-hero-frame: transparent;
+  --dayova-hero-ink: #ffffff;
+  --dayova-hero-gradient: linear-gradient(
+    180deg,
+    #212325 0%,
+    #1d2d33 52%,
+    #163d4a 100%
+  );
   --dayova-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.18),
-    0 18px 42px rgba(0, 0, 0, 0.2);
+    0 1px 2px rgba(0, 0, 0, 0.16),
+    0 12px 32px rgba(0, 0, 0, 0.18);
   --dayova-shadow-strong:
-    0 2px 4px rgba(0, 0, 0, 0.22),
-    0 26px 70px rgba(0, 0, 0, 0.3);
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 20px 48px rgba(0, 0, 0, 0.28);
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   :root {
-    --dayova-section: 76px;
-  }
-}
-
-@media (max-width: 640px) {
-  :root {
-    --dayova-section: 58px;
-    --dayova-radius-md: 20px;
-    --dayova-radius-lg: 26px;
+    --dayova-section: var(--space-16);
   }
 }
