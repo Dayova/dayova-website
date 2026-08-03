@@ -54,7 +54,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={poppins.variable} suppressHydrationWarning>
+    <html
+      lang="de"
+      className={poppins.variable}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <body>{children}</body>
     </html>
   );

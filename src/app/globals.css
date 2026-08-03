@@ -1433,6 +1433,1647 @@ img {
   }
 }
 
+/* Homepage v3 — product-led, editorial Dayova story */
+.home-v3-container {
+  width: min(100%, 1248px);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.home-v3-section,
+.home-v3-launch-section {
+  padding-block: var(--space-12);
+}
+
+.home-v3-section-soft {
+  background: color-mix(in srgb, var(--dayova-subtle) 72%, transparent);
+}
+
+.home-v3-heading {
+  display: grid;
+  max-width: 760px;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.home-v3-heading-text,
+.home-v3-hero-text {
+  max-width: 68ch;
+}
+
+.home-v3-section .dayova-section-title,
+.home-v3-launch-section .dayova-section-title {
+  font-size: 28px;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.home-v3-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--space-16);
+  background:
+    radial-gradient(circle at 82% 34%, color-mix(in srgb, var(--dayova-brand) 19%, transparent), transparent 34%),
+    linear-gradient(180deg, color-mix(in srgb, var(--dayova-brand) 7%, var(--dayova-page)), var(--dayova-page));
+}
+
+.home-v3-hero-grid {
+  display: grid;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.home-v3-hero-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: start;
+  gap: var(--space-6);
+}
+
+.home-v3-hero .dayova-hero-claim {
+  max-width: 18ch;
+  font-size: clamp(36px, 7vw, 56px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.home-v3-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.home-v3-proof {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--dayova-muted);
+  font-size: 14px;
+}
+
+.home-v3-proof svg {
+  color: var(--dayova-brand);
+}
+
+.home-v3-daily-scene {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 596px;
+  isolation: isolate;
+}
+
+.home-v3-daily-scene::before {
+  position: absolute;
+  z-index: -1;
+  width: min(92%, 536px);
+  aspect-ratio: 1;
+  border-radius: var(--radius-3xl);
+  background: linear-gradient(145deg, color-mix(in srgb, var(--dayova-surface) 92%, transparent), color-mix(in srgb, var(--dayova-brand) 14%, var(--dayova-surface)));
+  box-shadow: var(--dayova-shadow-soft);
+  content: "";
+  transform: rotate(-4deg);
+}
+
+.home-v3-phone {
+  position: relative;
+  z-index: 2;
+  width: min(78vw, 316px);
+  padding: var(--space-2);
+  border: 1px solid color-mix(in srgb, white 20%, transparent);
+  border-radius: var(--radius-phone);
+  background: #111316;
+  box-shadow: 0 32px 80px rgb(11 25 37 / 20%);
+  transform: rotate(2deg);
+}
+
+.home-v3-phone-screen {
+  display: grid;
+  min-height: 552px;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  overflow: hidden;
+  border-radius: calc(var(--radius-phone) - var(--space-2));
+  background: #f7f8f8;
+  color: #17191c;
+}
+
+.home-v3-status-row,
+.home-v3-welcome-row,
+.home-v3-mini-plan-head,
+.home-v3-plans-head,
+.home-v3-plan-card-head,
+.home-v3-analysis-top,
+.home-v3-capture-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.home-v3-status-row {
+  padding-inline: var(--space-2);
+  font-size: 11px;
+}
+
+.home-v3-welcome-row > div:first-child,
+.home-v3-plans-head > div,
+.home-v3-capture-item > div,
+.home-v3-float-card > div {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.home-v3-welcome-row strong {
+  font-size: 20px;
+}
+
+.home-v3-welcome-row span,
+.home-v3-plan-card p,
+.home-v3-float-card span,
+.home-v3-capture-item span,
+.home-v3-path-copy span {
+  color: #747d89;
+  font-size: 12px;
+}
+
+.home-v3-avatar {
+  display: grid;
+  width: calc(var(--space-8) + var(--space-2));
+  height: calc(var(--space-8) + var(--space-2));
+  place-items: center;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--dayova-brand) 20%, white);
+  color: #006c96;
+  font-weight: 700;
+}
+
+.home-v3-schedule-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  background: var(--dayova-brand-gradient);
+  color: white;
+  box-shadow: 0 16px 32px rgb(0 186 255 / 20%);
+}
+
+.home-v3-schedule-meta {
+  display: grid;
+  min-width: 64px;
+  gap: var(--space-1);
+  padding-right: var(--space-4);
+  border-right: 1px solid rgb(255 255 255 / 34%);
+}
+
+.home-v3-schedule-meta strong {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.home-v3-schedule-card > div:last-child {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.home-v3-schedule-card > div:last-child span {
+  color: rgb(255 255 255 / 78%);
+  font-size: 12px;
+}
+
+.home-v3-today-card,
+.home-v3-mini-plan,
+.home-v3-capture-item,
+.home-v3-availability,
+.home-v3-answer-card,
+.home-v3-feedback-card,
+.home-v3-plan-card {
+  padding: var(--space-4);
+  border: 1px solid rgb(24 38 53 / 7%);
+  border-radius: var(--radius-lg);
+  background: white;
+  box-shadow: 0 8px 24px rgb(19 32 45 / 6%);
+}
+
+.home-v3-today-card {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.home-v3-today-card p,
+.home-v3-answer-card p,
+.home-v3-feedback-card p {
+  margin: 0;
+  color: #68727f;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.home-v3-ui-label {
+  color: var(--dayova-brand);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.home-v3-mini-plan {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.home-v3-progress {
+  height: var(--space-2);
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: #edf1f4;
+}
+
+.home-v3-progress span {
+  display: block;
+  width: 68%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--dayova-brand-gradient);
+}
+
+.home-v3-day-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-2);
+  color: #818a95;
+  font-size: 11px;
+  text-align: center;
+}
+
+.home-v3-day-row .is-active,
+.home-v3-availability .is-selected {
+  border-radius: var(--radius-pill);
+  background: var(--dayova-brand-gradient);
+  color: white;
+}
+
+.home-v3-float-card {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  width: 196px;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid color-mix(in srgb, var(--dayova-line) 70%, transparent);
+  border-radius: var(--radius-xl);
+  background: color-mix(in srgb, var(--dayova-surface) 94%, transparent);
+  box-shadow: var(--dayova-shadow-strong);
+  backdrop-filter: blur(16px);
+}
+
+.home-v3-float-card--next {
+  top: var(--space-16);
+  left: 0;
+  transform: rotate(-3deg);
+}
+
+.home-v3-float-card--analysis {
+  right: 0;
+  bottom: var(--space-16);
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  transform: rotate(3deg);
+}
+
+.home-v3-score {
+  display: grid;
+  width: var(--space-12);
+  height: var(--space-12);
+  place-items: center;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--dayova-brand) 15%, var(--dayova-surface));
+  color: var(--dayova-brand);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.home-v3-problem-grid,
+.home-v3-benefits-layout,
+.home-v3-faq-grid,
+.home-v3-trust-grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.home-v3-problem-intro,
+.home-v3-benefits-copy,
+.home-v3-faq-intro,
+.home-v3-trust-copy,
+.home-v3-launch-copy {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+}
+
+.home-v3-challenges {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.home-v3-challenge {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid color-mix(in srgb, var(--dayova-line) 60%, transparent);
+}
+
+.home-v3-challenge > span {
+  color: color-mix(in srgb, var(--dayova-muted) 55%, transparent);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.home-v3-challenge div {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.home-v3-challenge p,
+.home-v3-orientation-panel p,
+.home-v3-story-copy p,
+.home-v3-outcome p,
+.home-v3-trust-copy p,
+.home-v3-launch-copy p,
+.home-v3-faq-intro p {
+  margin: 0;
+  color: var(--dayova-muted);
+  line-height: 1.7;
+}
+
+.home-v3-orientation-panel {
+  display: grid;
+  align-content: center;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border-radius: var(--radius-3xl);
+  background: var(--dayova-dark-panel);
+  color: white;
+  box-shadow: var(--dayova-shadow-soft);
+}
+
+.home-v3-orientation-panel > span {
+  color: rgb(255 255 255 / 64%);
+  font-size: 13px;
+}
+
+.home-v3-orientation-panel h3 {
+  max-width: 14ch;
+  font-size: 28px;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+}
+
+.home-v3-orientation-panel p {
+  color: rgb(255 255 255 / 70%);
+}
+
+.home-v3-orientation-task {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  background: rgb(255 255 255 / 8%);
+}
+
+.home-v3-orientation-task > div {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-1);
+}
+
+.home-v3-orientation-task span {
+  color: rgb(255 255 255 / 64%);
+  font-size: 12px;
+}
+
+.home-v3-orientation-task strong {
+  line-height: 1.4;
+}
+
+.home-v3-orientation-note {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: color-mix(in srgb, var(--dayova-brand) 82%, white);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.home-v3-product-stories {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.home-v3-story {
+  display: grid;
+  gap: var(--space-6);
+  min-width: 0;
+  padding: var(--space-6);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--dayova-line) 65%, transparent);
+  border-radius: var(--radius-3xl);
+  background: var(--dayova-surface);
+  box-shadow: var(--dayova-shadow-soft);
+}
+
+.home-v3-story-copy {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+}
+
+.home-v3-story-copy > span {
+  color: var(--dayova-brand);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.home-v3-story-copy h3 {
+  font-size: 24px;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.home-v3-story--dark {
+  border-color: transparent;
+  background: var(--dayova-dark-panel);
+  color: white;
+}
+
+.home-v3-story--dark .home-v3-story-copy p {
+  color: rgb(255 255 255 / 70%);
+}
+
+.home-v3-capture,
+.home-v3-analysis,
+.home-v3-plans {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-2xl);
+  background: color-mix(in srgb, var(--dayova-subtle) 76%, var(--dayova-surface));
+}
+
+.home-v3-capture-toolbar strong,
+.home-v3-plans-add {
+  display: grid;
+  width: var(--space-8);
+  height: var(--space-8);
+  place-items: center;
+  border-radius: var(--radius-pill);
+  background: var(--dayova-brand-gradient);
+  color: white;
+}
+
+.home-v3-capture-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.home-v3-capture-item small {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--dayova-brand) 9%, white);
+  color: #007da9;
+}
+
+.home-v3-capture-icon,
+.home-v3-outcome > span {
+  display: grid;
+  width: calc(var(--space-8) + var(--space-2));
+  height: calc(var(--space-8) + var(--space-2));
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--dayova-brand) 10%, var(--dayova-surface));
+  color: var(--dayova-brand);
+}
+
+.home-v3-availability {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.home-v3-availability > div {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+  text-align: center;
+}
+
+.home-v3-availability .is-selected {
+  padding-block: var(--space-1);
+}
+
+.home-v3-path {
+  display: grid;
+  align-content: center;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border-radius: var(--radius-2xl);
+  background: rgb(255 255 255 / 7%);
+}
+
+.home-v3-path-summary {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.home-v3-path-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+}
+
+.home-v3-path-line {
+  position: absolute;
+  top: var(--space-4);
+  bottom: var(--space-4);
+  left: 19px;
+  width: 2px;
+  background: rgb(255 255 255 / 14%);
+}
+
+.home-v3-path-node {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: calc(var(--space-8) + var(--space-2));
+  height: calc(var(--space-8) + var(--space-2));
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: var(--radius-pill);
+  background: #34383d;
+  color: rgb(255 255 255 / 62%);
+}
+
+.home-v3-path-node.is-done,
+.home-v3-path-node.is-current {
+  border-color: transparent;
+  background: var(--dayova-brand-gradient);
+  color: white;
+}
+
+.home-v3-path-node.is-current {
+  box-shadow: 0 0 0 6px rgb(0 186 255 / 15%);
+}
+
+.home-v3-path-copy {
+  display: grid;
+  align-content: center;
+  gap: var(--space-1);
+  min-height: calc(var(--space-8) + var(--space-2));
+  padding-bottom: var(--space-4);
+}
+
+.home-v3-path-copy span {
+  color: rgb(255 255 255 / 55%);
+}
+
+.home-v3-analysis-state {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: #fff1df;
+  color: #b06100;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.home-v3-analysis-top {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.home-v3-answer-card,
+.home-v3-feedback-card {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.home-v3-feedback-card {
+  background: color-mix(in srgb, var(--dayova-brand) 7%, white);
+}
+
+.home-v3-confidence {
+  height: var(--space-2);
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--dayova-line) 56%, transparent);
+}
+
+.home-v3-confidence span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--dayova-brand-gradient);
+}
+
+.home-v3-outcomes {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.home-v3-outcome {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+}
+
+.home-v3-outcome > div {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.home-v3-plans {
+  padding: var(--space-6);
+}
+
+.home-v3-plans-head strong {
+  font-size: 20px;
+}
+
+.home-v3-plan-card {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.home-v3-plan-card-head span {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--dayova-brand) 8%, white);
+  color: #007da9;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.home-v3-trust {
+  padding-block: var(--space-12);
+}
+
+.home-v3-trust-grid {
+  padding: var(--space-8);
+  border-radius: var(--radius-3xl);
+  background: var(--dayova-dark-panel);
+  color: white;
+  box-shadow: var(--dayova-shadow-strong);
+}
+
+.home-v3-trust-copy p {
+  color: rgb(255 255 255 / 68%);
+}
+
+.home-v3-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.home-v3-facts > div {
+  display: grid;
+  align-content: center;
+  min-height: 128px;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  background: rgb(255 255 255 / 7%);
+}
+
+.home-v3-facts strong {
+  color: color-mix(in srgb, var(--dayova-brand) 78%, white);
+  font-size: 28px;
+}
+
+.home-v3-facts span {
+  color: rgb(255 255 255 / 62%);
+  font-size: 13px;
+}
+
+.home-v3-launch {
+  display: grid;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: 520px;
+  padding: var(--space-8);
+  overflow: hidden;
+  border-radius: var(--radius-3xl);
+  background:
+    radial-gradient(circle at 82% 24%, rgb(255 255 255 / 56%), transparent 28%),
+    linear-gradient(135deg, color-mix(in srgb, var(--dayova-brand) 8%, var(--dayova-surface)), color-mix(in srgb, var(--dayova-brand) 24%, var(--dayova-surface)));
+  box-shadow: var(--dayova-shadow-soft);
+}
+
+.home-v3-launch-copy {
+  max-width: 620px;
+  min-width: 0;
+  width: 100%;
+  justify-items: start;
+}
+
+.home-v3-launch-copy .button-primary {
+  max-width: 100%;
+  height: auto;
+  min-height: 48px;
+  line-height: 1.35;
+  white-space: normal;
+  text-align: center;
+}
+
+.home-v3-countdown-wrap {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  width: 100%;
+  padding: var(--space-6);
+  border-radius: var(--radius-2xl);
+  background: color-mix(in srgb, var(--dayova-surface) 82%, transparent);
+  box-shadow: var(--dayova-shadow-soft);
+  backdrop-filter: blur(18px);
+}
+
+.home-v3-faq-list {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.home-v3-faq-item {
+  border-bottom: 1px solid color-mix(in srgb, var(--dayova-line) 68%, transparent);
+}
+
+.home-v3-faq-item summary {
+  position: relative;
+  padding: var(--space-4) var(--space-8) var(--space-4) 0;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.home-v3-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-v3-faq-item summary::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: "+";
+  color: var(--dayova-muted);
+  font-size: 22px;
+  font-weight: 400;
+  transform: translateY(-50%);
+}
+
+.home-v3-faq-item[open] summary::after {
+  content: "−";
+}
+
+.home-v3-faq-item p {
+  max-width: 72ch;
+  margin: 0;
+  padding: 0 var(--space-8) var(--space-4) 0;
+  color: var(--dayova-muted);
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .home-v3-container {
+    padding-inline: var(--space-8);
+  }
+
+  .home-v3-section .dayova-section-title,
+  .home-v3-launch-section .dayova-section-title {
+    font-size: 36px;
+  }
+
+  .home-v3-heading {
+    margin-bottom: var(--space-8);
+  }
+
+  .home-v3-product-stories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .home-v3-story--wide {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+  }
+
+  .home-v3-launch {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-v3-section,
+  .home-v3-launch-section {
+    padding-block: var(--space-16);
+  }
+
+  .home-v3-hero {
+    min-height: 760px;
+    padding-block: var(--space-20);
+  }
+
+  .home-v3-hero-grid {
+    grid-template-columns: minmax(0, 0.92fr) minmax(520px, 1.08fr);
+    gap: var(--space-16);
+  }
+
+  .home-v3-section .dayova-section-title,
+  .home-v3-launch-section .dayova-section-title {
+    font-size: 44px;
+  }
+
+  .home-v3-problem-grid,
+  .home-v3-benefits-layout,
+  .home-v3-faq-grid,
+  .home-v3-trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-16);
+  }
+
+  .home-v3-orientation-panel {
+    padding: var(--space-8);
+  }
+
+  .home-v3-story {
+    padding: var(--space-8);
+  }
+
+  .home-v3-trust-grid,
+  .home-v3-launch {
+    padding: var(--space-12);
+  }
+}
+
+@media (max-width: 767px) {
+  .home-v3-actions {
+    display: grid;
+    width: 100%;
+  }
+
+  .home-v3-actions > * {
+    width: 100%;
+  }
+
+  .home-v3-daily-scene {
+    min-height: 520px;
+  }
+
+  .home-v3-float-card {
+    width: 168px;
+    padding: var(--space-3);
+  }
+
+  .home-v3-float-card--next {
+    top: var(--space-8);
+  }
+
+  .home-v3-float-card--analysis {
+    bottom: var(--space-8);
+  }
+
+  .home-v3-phone-screen {
+    min-height: 496px;
+  }
+
+  .home-v3-trust-grid,
+  .home-v3-launch {
+    padding: var(--space-6);
+  }
+
+  .home-v3-launch {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 600px;
+  }
+
+  .home-v3-launch-copy {
+    justify-items: stretch;
+  }
+
+  .home-v3-launch-copy .button-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .home-v3-countdown-wrap {
+    padding: var(--space-4);
+  }
+}
+
+@media (hover: hover) {
+  .home-v3-story,
+  .home-v3-plan-card,
+  .home-v3-float-card {
+    transition: transform 180ms var(--dayova-ease), box-shadow 180ms var(--dayova-ease);
+  }
+
+  .home-v3-story:hover,
+  .home-v3-plan-card:hover {
+    box-shadow: var(--dayova-shadow-strong);
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-v3-phone,
+  .home-v3-float-card,
+  .home-v3-story,
+  .home-v3-plan-card {
+    transition: none;
+  }
+}
+
+/* Homepage v2 — scoped so the approved shell and all subpages remain unchanged. */
+.home-v2-container {
+  width: min(100% - (var(--space-4) * 2), 1180px);
+  margin-inline: auto;
+}
+
+.home-v2-section {
+  padding-block: var(--space-12);
+}
+
+.home-v2-section-soft {
+  background: color-mix(in srgb, var(--dayova-surface-subtle) 72%, transparent);
+}
+
+.home-v2-heading {
+  display: grid;
+  max-width: 780px;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.home-v2-heading-text {
+  max-width: 68ch;
+  color: var(--dayova-muted);
+}
+
+.home-v2-section-label,
+.home-v2-product-label {
+  color: var(--dayova-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.home-v2-hero {
+  overflow: hidden;
+  padding-block: var(--space-16);
+  background:
+    radial-gradient(circle at 82% 44%, color-mix(in srgb, var(--dayova-brand) 13%, transparent), transparent 34%),
+    linear-gradient(180deg, color-mix(in srgb, var(--dayova-brand) 5%, var(--dayova-page)), var(--dayova-page));
+}
+
+.home-v2-hero-grid,
+.home-v2-story-grid,
+.home-v2-workflow-grid,
+.home-v2-benefits-grid,
+.home-v2-trust-grid,
+.home-v2-faq-grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.home-v2-hero-copy {
+  display: grid;
+  align-content: center;
+  gap: var(--space-6);
+}
+
+.home-v2-hero-text {
+  max-width: 62ch;
+  color: var(--dayova-muted);
+}
+
+.home-v2-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.home-v2-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+  color: var(--dayova-muted);
+  font-size: 0.875rem;
+}
+
+.home-v2-proof span {
+  position: relative;
+  padding-left: var(--space-4);
+}
+
+.home-v2-proof span::before {
+  position: absolute;
+  top: 0.58em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: var(--dayova-radius-pill);
+  background: var(--dayova-brand);
+  content: "";
+}
+
+.home-v2-product,
+.home-v2-planner {
+  border: 1px solid color-mix(in srgb, var(--dayova-line) 58%, transparent);
+  border-radius: var(--dayova-radius-3xl);
+  background: color-mix(in srgb, var(--dayova-surface-elevated) 94%, transparent);
+  box-shadow: var(--dayova-shadow-soft);
+}
+
+.home-v2-product {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-6);
+}
+
+.home-v2-product-bar,
+.home-v2-plan-heading,
+.home-v2-planner-header,
+.home-v2-today-meta,
+.home-v2-plan-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.home-v2-product-bar > div,
+.home-v2-plan-heading > div,
+.home-v2-planner-header > div {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.home-v2-product-date {
+  flex: 0 0 auto;
+  color: var(--dayova-muted);
+  font-size: 0.8125rem;
+}
+
+.home-v2-today {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border-radius: var(--dayova-radius-2xl);
+  color: #07141a;
+  background: var(--dayova-brand-gradient);
+}
+
+.home-v2-today-meta {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.home-v2-today-main,
+.home-v2-planner-note {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.home-v2-today-main > div,
+.home-v2-planner-note > div {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.home-v2-today-main span,
+.home-v2-planner-note span {
+  font-size: 0.875rem;
+}
+
+.home-v2-plan {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-4);
+  border-radius: var(--dayova-radius-xl);
+  background: var(--dayova-surface-subtle);
+}
+
+.home-v2-progress {
+  overflow: hidden;
+  height: var(--space-2);
+  border-radius: var(--dayova-radius-pill);
+  background: color-mix(in srgb, var(--dayova-muted) 12%, transparent);
+}
+
+.home-v2-progress span {
+  display: block;
+  width: 68%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--dayova-brand-gradient);
+}
+
+.home-v2-plan-row {
+  justify-content: initial;
+  color: var(--dayova-muted);
+  font-size: 0.875rem;
+}
+
+.home-v2-plan-row strong {
+  margin-left: auto;
+  color: var(--dayova-ink);
+  font-weight: 500;
+}
+
+.home-v2-story-grid {
+  align-items: stretch;
+}
+
+.home-v2-friction,
+.home-v2-orientation,
+.home-v2-focus-panel,
+.home-v2-benefit,
+.home-v2-launch,
+.home-v2-faq-item {
+  border-radius: var(--dayova-radius-2xl);
+}
+
+.home-v2-friction {
+  padding: var(--space-6);
+  background: var(--dayova-surface-subtle);
+}
+
+.home-v2-friction h3,
+.home-v2-orientation h3,
+.home-v2-step h3,
+.home-v2-benefit h3,
+.home-v2-focus-panel h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.home-v2-friction-list {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.home-v2-friction-list li {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid color-mix(in srgb, var(--dayova-line) 45%, transparent);
+  color: var(--dayova-muted);
+}
+
+.home-v2-friction-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.home-v2-orientation {
+  display: grid;
+  align-content: center;
+  gap: 0;
+  padding: var(--space-6);
+  background: var(--dayova-surface-elevated);
+  box-shadow: var(--dayova-shadow-soft);
+}
+
+.home-v2-orientation > .home-v2-section-label {
+  margin-bottom: var(--space-3);
+}
+
+.home-v2-orientation-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid color-mix(in srgb, var(--dayova-line) 42%, transparent);
+}
+
+.home-v2-orientation-row:last-child {
+  border-bottom: 0;
+}
+
+.home-v2-orientation-row > svg,
+.home-v2-benefit > svg,
+.home-v2-planner-note > svg {
+  color: var(--dayova-brand);
+}
+
+.home-v2-orientation-row p,
+.home-v2-step p,
+.home-v2-benefit p,
+.home-v2-focus-panel p,
+.home-v2-trust-copy p,
+.home-v2-launch-copy p,
+.home-v2-faq-item p {
+  margin-top: var(--space-2);
+  color: var(--dayova-muted);
+}
+
+.home-v2-planner {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-6);
+}
+
+.home-v2-week {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.home-v2-week > div {
+  display: grid;
+  min-height: 76px;
+  place-content: center;
+  gap: var(--space-1);
+  border-radius: var(--dayova-radius-lg);
+  color: var(--dayova-muted);
+  background: var(--dayova-surface-subtle);
+  text-align: center;
+}
+
+.home-v2-week > .is-planned {
+  color: var(--dayova-ink);
+  background: color-mix(in srgb, var(--dayova-brand) 12%, var(--dayova-surface-elevated));
+}
+
+.home-v2-week span,
+.home-v2-week small {
+  font-size: 0.75rem;
+}
+
+.home-v2-planner-note {
+  padding-top: var(--space-4);
+  border-top: 1px solid color-mix(in srgb, var(--dayova-line) 42%, transparent);
+}
+
+.home-v2-step-list,
+.home-v2-benefit-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-v2-step {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: var(--space-4);
+  padding-block: var(--space-6);
+  border-bottom: 1px solid color-mix(in srgb, var(--dayova-line) 45%, transparent);
+}
+
+.home-v2-step:first-child {
+  padding-top: 0;
+}
+
+.home-v2-step:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.home-v2-step > span {
+  color: var(--dayova-brand);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.home-v2-benefits-grid {
+  align-items: stretch;
+}
+
+.home-v2-focus-panel {
+  display: grid;
+  align-content: space-between;
+  min-height: 360px;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  background: color-mix(in srgb, var(--dayova-brand) 10%, var(--dayova-surface-elevated));
+}
+
+.home-v2-focus-task {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border-radius: var(--dayova-radius-xl);
+  background: color-mix(in srgb, var(--dayova-surface-elevated) 88%, transparent);
+  box-shadow: var(--dayova-shadow-soft);
+}
+
+.home-v2-focus-task > span,
+.home-v2-focus-task > small {
+  color: var(--dayova-muted);
+}
+
+.home-v2-benefit-list {
+  align-content: center;
+}
+
+.home-v2-benefit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  padding-block: var(--space-6);
+  border-bottom: 1px solid color-mix(in srgb, var(--dayova-line) 45%, transparent);
+}
+
+.home-v2-benefit:first-child {
+  padding-top: 0;
+}
+
+.home-v2-benefit:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.home-v2-trust {
+  overflow: hidden;
+  border-radius: var(--dayova-radius-3xl);
+  color: #f8fafb;
+  background: #181a1c;
+}
+
+.home-v2-trust-grid {
+  padding-block: var(--space-8);
+}
+
+.home-v2-trust-copy .dayova-section-title {
+  color: inherit;
+}
+
+.home-v2-trust-copy p {
+  max-width: 60ch;
+  color: #aeb3ba;
+}
+
+.home-v2-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.home-v2-facts > div {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border-radius: var(--dayova-radius-xl);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.home-v2-facts strong {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+.home-v2-facts span {
+  color: #aeb3ba;
+  font-size: 0.8125rem;
+}
+
+.home-v2-launch-section {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-16);
+}
+
+.home-v2-launch {
+  display: grid;
+  gap: var(--space-8);
+  min-height: 420px;
+  align-items: center;
+  padding: var(--space-8);
+  background:
+    radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--dayova-brand) 24%, transparent), transparent 34%),
+    color-mix(in srgb, var(--dayova-brand) 8%, var(--dayova-surface-elevated));
+}
+
+.home-v2-launch-copy {
+  display: grid;
+  align-content: center;
+  gap: var(--space-4);
+  max-width: 630px;
+}
+
+.home-v2-countdown-wrap {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.home-launch-live {
+  color: var(--dayova-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.home-launch-countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.home-launch-countdown-item {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-4);
+  border-radius: var(--dayova-radius-xl);
+  background: color-mix(in srgb, var(--dayova-surface-elevated) 88%, transparent);
+  text-align: center;
+}
+
+.home-launch-countdown-value {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.home-launch-countdown-unit {
+  color: var(--dayova-muted);
+  font-size: 0.75rem;
+}
+
+.home-v2-faq-grid {
+  align-items: start;
+}
+
+.home-v2-faq-intro {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.home-v2-faq-intro p {
+  color: var(--dayova-muted);
+}
+
+.home-v2-faq-list {
+  display: grid;
+}
+
+.home-v2-faq-item {
+  border-bottom: 1px solid color-mix(in srgb, var(--dayova-line) 48%, transparent);
+  border-radius: 0;
+}
+
+.home-v2-faq-item summary {
+  padding-block: var(--space-6);
+  cursor: pointer;
+  font-weight: 600;
+  list-style-position: outside;
+}
+
+.home-v2-faq-item p {
+  max-width: 66ch;
+  margin-top: 0;
+  padding-bottom: var(--space-6);
+}
+
+.home-v2-faq-item summary:focus-visible {
+  border-radius: var(--dayova-radius-sm);
+  outline: 2px solid var(--dayova-brand);
+  outline-offset: 4px;
+}
+
+@media (min-width: 768px) {
+  .home-v2-container {
+    width: min(100% - (var(--space-6) * 2), 1180px);
+  }
+
+  .home-v2-product,
+  .home-v2-planner,
+  .home-v2-friction,
+  .home-v2-orientation {
+    padding: var(--space-8);
+  }
+
+  .home-v2-launch {
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-v2-container {
+    width: min(100% - (var(--space-8) * 2), 1180px);
+  }
+
+  .home-v2-section {
+    padding-block: var(--space-16);
+  }
+
+  .home-v2-heading {
+    margin-bottom: var(--space-8);
+  }
+
+  .home-v2-hero {
+    padding-block: var(--space-20);
+  }
+
+  .home-v2-hero-grid {
+    grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
+    gap: var(--space-16);
+  }
+
+  .home-v2-story-grid {
+    grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
+  }
+
+  .home-v2-workflow-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.86fr);
+    gap: var(--space-16);
+  }
+
+  .home-v2-benefits-grid {
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+    gap: var(--space-16);
+  }
+
+  .home-v2-trust-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(440px, 0.9fr);
+    align-items: end;
+    padding-block: var(--space-16);
+  }
+
+  .home-v2-faq-grid {
+    grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+    gap: var(--space-16);
+  }
+
+  .home-v2-launch-section {
+    padding-block: var(--space-16);
+  }
+
+  .home-v2-launch {
+    min-height: 500px;
+    padding: var(--space-16);
+  }
+}
+
+@media (max-width: 767px) {
+  .home-v2-actions {
+    display: grid;
+  }
+
+  .home-v2-actions > * {
+    width: 100%;
+  }
+
+  .home-v2-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .home-v2-launch,
+  .home-v2-focus-panel {
+    min-height: auto;
+    padding: var(--space-6);
+  }
+
+  .home-launch-countdown-item {
+    padding-inline: var(--space-2);
+  }
+}
+
+@media (hover: hover) {
+  .home-v2-product,
+  .home-v2-planner,
+  .home-v2-orientation {
+    transition:
+      transform 180ms var(--dayova-ease),
+      box-shadow 180ms var(--dayova-ease);
+  }
+
+  .home-v2-product:hover,
+  .home-v2-planner:hover,
+  .home-v2-orientation:hover {
+    box-shadow: var(--dayova-shadow-strong);
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-v2-product,
+  .home-v2-planner,
+  .home-v2-orientation {
+    transition: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

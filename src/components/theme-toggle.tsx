@@ -1,6 +1,8 @@
 "use client";
 
+import { Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
 import { useEffect } from "react";
+import { DayovaIcon } from "@/components/ui/huge-icon";
 
 export function ThemeToggle() {
   useEffect(() => {
@@ -20,18 +22,24 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="theme-panel grid size-11 shrink-0 place-items-center rounded-full border border-line bg-elevated text-lg text-ink transition hover:border-brand hover:text-brand-deep"
+      className="theme-panel grid size-11 shrink-0 place-items-center rounded-dayova-md border border-line bg-elevated text-lg text-ink transition hover:border-brand hover:text-brand-deep"
       type="button"
       onClick={toggleTheme}
       aria-label="Farbschema wechseln"
       title="Farbschema wechseln"
     >
-      <span className="theme-moon" aria-hidden="true">
-        ☾
-      </span>
-      <span className="theme-sun" aria-hidden="true">
-        ☼
-      </span>
+      <DayovaIcon
+        className="theme-moon"
+        icon={Moon02Icon}
+        size={20}
+        aria-hidden="true"
+      />
+      <DayovaIcon
+        className="theme-sun"
+        icon={Sun03Icon}
+        size={20}
+        aria-hidden="true"
+      />
     </button>
   );
 }

@@ -3,18 +3,17 @@ import { siteConfig } from "@/config/site";
 export function ContactForm() {
   return (
     <section
-      className="dayova-section"
+      className="section"
       id="kontakt"
       aria-labelledby="contact-title"
     >
       <div className="dayova-container">
-        <div className="theme-panel grid gap-10 rounded-dayova-lg border border-line bg-elevated p-7 shadow-card sm:p-10 lg:grid-cols-[0.9fr_1.1fr] lg:p-12">
+        <div className="theme-panel grid gap-6 rounded-dayova-xl border border-line bg-elevated p-6 shadow-card lg:grid-cols-[0.9fr_1.1fr]">
           <div className="flex flex-col justify-center">
-            <p className="section-label mb-4">Du hast Fragen?</p>
-            <h2 className="text-ink" id="contact-title">
+            <h2 className="dayova-section-title text-ink" id="contact-title">
               Wir helfen dir gerne weiter.
             </h2>
-            <p className="mt-5 max-w-lg text-dayova-body text-muted">
+            <p className="mt-4 max-w-lg text-dayova-body text-muted">
               Eine kurze Nachricht genügt. Beim Absenden öffnet sich dein
               E-Mail-Programm; deine Angaben werden nicht auf dieser Website
               gespeichert.
@@ -22,12 +21,12 @@ export function ContactForm() {
           </div>
 
           <form
-            className="grid gap-5"
+            className="grid gap-4"
             action={`mailto:${siteConfig.links.email}`}
             method="post"
             encType="text/plain"
           >
-            <div className="grid gap-5 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               <div className="grid gap-2">
                 <label
                   className="text-dayova-small font-medium text-ink"
@@ -36,7 +35,7 @@ export function ContactForm() {
                   Name
                 </label>
                 <input
-                  className="min-h-12 rounded-xl border border-line bg-surface px-4 text-ink placeholder:text-muted/70 focus:border-brand focus:outline-none"
+                  className="min-h-12 rounded-dayova-control border border-line bg-surface px-4 text-ink placeholder:text-muted/70 focus:border-brand focus:outline-none"
                   id="contact-name"
                   name="Name"
                   type="text"
@@ -53,7 +52,7 @@ export function ContactForm() {
                   E-Mail
                 </label>
                 <input
-                  className="min-h-12 rounded-xl border border-line bg-surface px-4 text-ink placeholder:text-muted/70 focus:border-brand focus:outline-none"
+                  className="min-h-12 rounded-dayova-control border border-line bg-surface px-4 text-ink placeholder:text-muted/70 focus:border-brand focus:outline-none"
                   id="contact-email"
                   name="E-Mail"
                   type="email"
@@ -71,7 +70,7 @@ export function ContactForm() {
                 Nachricht <span className="text-muted">(optional)</span>
               </label>
               <textarea
-                className="min-h-28 resize-y rounded-xl border border-line bg-surface px-4 py-3 text-ink placeholder:text-muted/70 focus:border-brand focus:outline-none"
+                className="min-h-28 resize-y rounded-dayova-control border border-line bg-surface px-4 py-3 text-ink placeholder:text-muted/70 focus:border-brand focus:outline-none"
                 id="contact-message"
                 name="Nachricht"
                 placeholder="Wobei können wir helfen?"
@@ -82,13 +81,10 @@ export function ContactForm() {
                 Keine Registrierung erforderlich.
               </p>
               <button
-                className="inline-flex min-h-12 cursor-pointer items-center justify-center rounded-full bg-ink px-6 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-slate-800"
+                className="button-dark cursor-pointer"
                 type="submit"
               >
                 Nachricht vorbereiten
-                <span className="ml-2" aria-hidden="true">
-                  →
-                </span>
               </button>
             </div>
           </form>

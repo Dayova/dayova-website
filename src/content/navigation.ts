@@ -4,12 +4,7 @@ export type NavigationItem = {
   description?: string;
 };
 
-export const primaryNavigation: readonly NavigationItem[] = [
-  {
-    href: "/#produkt",
-    label: "Produkt",
-    description: "So begleitet dich Dayova",
-  },
+export const primaryNavigation = [
   {
     href: "/parents",
     label: "Für Eltern",
@@ -30,23 +25,16 @@ export const primaryNavigation: readonly NavigationItem[] = [
     label: "Blog",
     description: "Lernen verständlich gemacht",
   },
-] as const;
+] as const satisfies readonly NavigationItem[];
 
 export const footerNavigation = [
   {
-    title: "Dayova",
-    links: [
-      { href: "/#produkt", label: "Produkt" },
-      { href: "/#so-funktionierts", label: "So funktioniert’s" },
-      { href: "/pricing", label: "Preise" },
-      { href: "/blog", label: "Blog" },
-    ],
-  },
-  {
-    title: "Für wen",
+    title: "Seiten",
     links: [
       { href: "/parents", label: "Eltern" },
       { href: "/schools", label: "Schulen" },
+      { href: "/pricing", label: "Preise" },
+      { href: "/blog", label: "Blog" },
     ],
   },
   {
