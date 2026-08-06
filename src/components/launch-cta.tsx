@@ -1,4 +1,5 @@
 import { siteConfig, getConversionMode } from "@/config/site";
+import { StoreDownloadLink } from "@/components/store-download-link";
 
 type LaunchCtaProps = {
   compact?: boolean;
@@ -14,20 +15,13 @@ export function LaunchCta({
   const mode = getConversionMode();
 
   if (mode === "download") {
-    const storeLink =
-      siteConfig.links.appStore || siteConfig.links.googlePlay || "#";
-
     return (
-      <a
-        className={`${variant === "primary" ? "button-primary" : "button-secondary"} ${
-          compact ? "button-compact" : ""
-        } ${className}`}
-        href={storeLink}
-        rel="noreferrer"
-        target="_blank"
+      <StoreDownloadLink
+        className={`${compact ? "button-compact" : ""} ${className}`}
+        variant={variant}
       >
         Dayova herunterladen
-      </a>
+      </StoreDownloadLink>
     );
   }
 

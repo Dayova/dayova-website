@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import type { BlogArticle } from "@/content/blog";
 
 type ArticleCardProps = {
@@ -13,12 +15,19 @@ export function ArticleCard({ article }: ArticleCardProps) {
         </span>
         <span className="text-xs text-muted">{article.readingTime}</span>
       </div>
-      <h2 className="mt-6 text-ink">{article.title}</h2>
+      <h2 className="mt-6 text-ink">
+        <Link className="blog-card-link" href={`/blog/${article.slug}`}>
+          {article.title}
+        </Link>
+      </h2>
       <p className="mt-4 text-dayova-body text-muted">{article.excerpt}</p>
       <div className="mt-auto pt-8">
-        <span className="inline-flex min-h-10 items-center rounded-full border border-line px-4 text-xs font-semibold text-muted">
-          Artikel in Vorbereitung
-        </span>
+        <Link
+          className="button-text inline-flex min-h-10 items-center"
+          href={`/blog/${article.slug}`}
+        >
+          Beitrag lesen
+        </Link>
       </div>
     </article>
   );

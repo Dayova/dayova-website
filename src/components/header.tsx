@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { Brand } from "@/components/brand";
 import { HeaderNavigation } from "@/components/header-navigation";
+import { StoreDownloadLink } from "@/components/store-download-link";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { ButtonLink } from "@/components/ui/button-link";
 
 export function Header() {
   return (
@@ -18,13 +18,12 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <div className="hidden sm:block">
-            <ButtonLink
+            <StoreDownloadLink
               className="button-compact"
-              href="/app-start"
               variant="primary"
             >
               App herunterladen
-            </ButtonLink>
+            </StoreDownloadLink>
           </div>
           <ThemeToggle />
           <HeaderNavigation />

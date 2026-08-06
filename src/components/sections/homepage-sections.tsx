@@ -1,6 +1,8 @@
 import Image from "next/image";
 
 import { ButtonLink } from "@/components/ui/button-link";
+import { ProcessTimeline } from "@/components/sections/process-timeline";
+import { StoreDownloadLink } from "@/components/store-download-link";
 
 const companionFeatures = [
   {
@@ -35,35 +37,11 @@ const companionFeatures = [
   },
 ] as const;
 
-const processSteps = [
-  {
-    number: "01",
-    title: "Eintragen",
-    description:
-      "Füge Aufgaben, Prüfungen und deine verfügbaren Lernzeiten hinzu.",
-    image: "/images/step-download.svg",
-  },
-  {
-    number: "02",
-    title: "Lernplan erhalten",
-    description:
-      "Dayova plant sinnvolle Lerneinheiten bis zu deiner Prüfung.",
-    image: "/images/step-plan.svg",
-  },
-  {
-    number: "03",
-    title: "Mit Plan lernen",
-    description:
-      "Arbeite Schritt für Schritt und sieh, was schon sitzt und noch fehlt.",
-    image: "/images/step-learn.svg",
-  },
-] as const;
-
 const faqItems = [
   {
-    question: "Wann kann ich Dayova herunterladen?",
+    question: "Wie kann ich mich anmelden?",
     answer:
-      "Dayova startet am 17. August. Auf unserer App-Start-Seite findest du alle wichtigen Informationen zum Start.",
+      "Trag dich einfach auf die Warteliste ein und sichere dir deinen Platz zum Start von Dayova.",
   },
   {
     question: "Was kostet Dayova?",
@@ -71,14 +49,9 @@ const faqItems = [
       "Alle aktuellen Preise und Abomodelle findest du transparent auf unserer Preisseite.",
   },
   {
-    question: "Wie erstellt Dayova meinen Lernplan?",
+    question: "Wie erstelle ich meinen Lernplan?",
     answer:
       "Du trägst Aufgaben, Prüfungen und deine Lernzeiten ein. Dayova verteilt passende Einheiten bis zu deinem Termin und passt den Plan an deinen Fortschritt an.",
-  },
-  {
-    question: "Für wen ist Dayova geeignet?",
-    answer:
-      "Dayova ist für Schülerinnen und Schüler gedacht, die ihren Lernalltag strukturieren, gezielter üben und ihren Fortschritt besser verstehen möchten.",
   },
 ] as const;
 
@@ -88,8 +61,7 @@ export function HomeHeroSection() {
       <div className="dayova-container home-classic-hero__inner">
         <div className="home-classic-hero__copy">
           <h1 id="home-hero-title" className="dayova-hero-claim">
-            Endlich ein Lernbegleiter, der versteht, wo du stehst, und dir den
-            nächsten Schritt zeigt.
+            Dein Lernbegleiter. Dein nächster Schritt.
           </h1>
           <p className="dayova-body home-classic-hero__description">
             <strong>Dayova ist dein Lernbegleiter:</strong> Du lernst direkt in
@@ -97,9 +69,9 @@ export function HomeHeroSection() {
             dir deine Wissenslücken und Stärken.
           </p>
           <div className="home-classic-actions" aria-label="Dayova entdecken">
-            <ButtonLink href="/app-start" variant="primary">
+            <StoreDownloadLink variant="primary">
               App herunterladen
-            </ButtonLink>
+            </StoreDownloadLink>
             <ButtonLink href="#so-funktioniert-dayova" variant="secondary">
               So funktioniert Dayova
             </ButtonLink>
@@ -108,12 +80,12 @@ export function HomeHeroSection() {
 
         <div className="home-classic-hero__visual">
           <Image
-            src="/images/dayova-hero-phones.png"
-            alt="Drei Smartphone-Ansichten der Dayova App"
-            width={1423}
-            height={800}
+            src="/images/dayova-hero-hand.png"
+            alt="Dayova App auf einem Smartphone in einer Hand"
+            width={650}
+            height={1084}
             priority
-            sizes="(max-width: 767px) 108vw, (max-width: 1199px) 88vw, 920px"
+            sizes="(max-width: 767px) 88vw, (max-width: 1199px) 48vw, 620px"
           />
         </div>
       </div>
@@ -127,8 +99,14 @@ export function HomeAboutSection() {
       <div className="dayova-container home-classic-about">
         <div className="home-classic-about__content">
           <div className="home-classic-heading-group">
+            <span className="home-classic-section-eyebrow">Über Dayova</span>
             <h2 id="about-title" className="dayova-section-title">
-              Aus unserer Arbeit mit Schülern wurde Dayova
+              <span className="home-classic-about__title-line">
+                Aus unserer Arbeit mit Schülern
+              </span>{" "}
+              <span className="home-classic-about__title-line">
+                wurde Dayova
+              </span>
             </h2>
             <p className="dayova-body">
               Das eigentliche Problem ist oft nicht der Wille, sondern zu viel
@@ -138,7 +116,7 @@ export function HomeAboutSection() {
           </div>
 
           <div className="home-classic-metrics" aria-label="Dayova in Zahlen">
-            <article className="home-classic-metric home-classic-metric--dark">
+            <article className="home-classic-metric home-classic-metric--accent">
               <strong>150+</strong>
               <span>Schüler begleitet</span>
             </article>
@@ -167,37 +145,46 @@ export function HomeAboutSection() {
 export function HomeCompanionSection() {
   return (
     <section
-      className="home-classic-section home-classic-section--soft"
+      className="home-classic-section"
       aria-labelledby="companion-title"
     >
       <div className="dayova-container">
-        <div className="home-classic-section-heading">
-          <h2 id="companion-title" className="dayova-section-title">
-            Was dein Lernbegleiter für dich übernimmt
-          </h2>
-        </div>
+        <div className="home-classic-companion">
+          <div className="home-classic-companion__intro">
+            <span className="home-classic-section-eyebrow">
+              Alles an einem Ort
+            </span>
+            <h2 id="companion-title" className="dayova-section-title">
+              Was dein Lernbegleiter für dich <span>übernimmt</span>
+            </h2>
+            <p>
+              Von deinen Terminen bis zum nächsten sinnvollen Lernschritt:
+              Dayova hält deinen Lernweg übersichtlich und aktuell.
+            </p>
+          </div>
 
-        <div className="home-classic-feature-grid">
-          {companionFeatures.map((feature) => (
-            <article
-              className={`home-classic-feature-card ${feature.className}`}
-              key={feature.title}
-            >
-              <div className="home-classic-feature-card__copy">
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </div>
-              <div className="home-classic-feature-card__visual">
-                <Image
-                  src={feature.image}
-                  alt={feature.alt}
-                  width={feature.width}
-                  height={feature.height}
-                  sizes="(max-width: 767px) 86vw, (max-width: 1023px) 42vw, 360px"
-                />
-              </div>
-            </article>
-          ))}
+          <div className="home-classic-feature-grid">
+            {companionFeatures.map((feature) => (
+              <article
+                className={`home-classic-feature-card ${feature.className}`}
+                key={feature.title}
+              >
+                <div className="home-classic-feature-card__copy">
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
+                <div className="home-classic-feature-card__visual">
+                  <Image
+                    src={feature.image}
+                    alt={feature.alt}
+                    width={feature.width}
+                    height={feature.height}
+                    sizes="(max-width: 767px) 78vw, (max-width: 1023px) 38vw, 320px"
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -212,29 +199,21 @@ export function HomeProcessSection() {
       aria-labelledby="process-title"
     >
       <div className="dayova-container">
-        <div className="home-classic-section-heading home-classic-section-heading--centered">
-          <h2 id="process-title" className="dayova-section-title">
-            In 3 Schritten zu deinem Lernplan
-          </h2>
-        </div>
+        <div className="home-classic-process__panel">
+          <div className="home-classic-process__intro">
+            <span className="home-classic-section-eyebrow">So startest du</span>
+            <h2 id="process-title" className="dayova-section-title">
+              In 3 Schritten zu deinem Lernplan
+            </h2>
+            <p>
+              Vom Download bis zur ersten Lerneinheit: Dayova führt dich durch
+              jeden Schritt und macht aus deinen Zielen einen Plan, der in
+              deinen Alltag passt.
+            </p>
+          </div>
 
-        <ol className="home-classic-process-grid">
-          {processSteps.map((step) => (
-            <li className="home-classic-process-card" key={step.number}>
-              <div className="home-classic-process-card__top">
-                <span aria-hidden="true">{step.number}</span>
-                <Image
-                  src={step.image}
-                  alt=""
-                  width={64}
-                  height={64}
-                />
-              </div>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </li>
-          ))}
-        </ol>
+          <ProcessTimeline />
+        </div>
       </div>
     </section>
   );
@@ -246,6 +225,9 @@ export function HomeDownloadSection() {
       <div className="dayova-container">
         <div className="home-classic-download">
           <div className="home-classic-download__copy">
+            <span className="home-classic-section-eyebrow home-classic-section-eyebrow--inverse">
+              Bereit zum Start
+            </span>
             <h2 id="download-title" className="dayova-section-title">
               Jetzt Dayova herunterladen
             </h2>
@@ -253,13 +235,12 @@ export function HomeDownloadSection() {
               Dein nächster Schritt ist klar: Hol dir Dayova und starte mit
               einem Lernplan, der zu deinem Alltag passt.
             </p>
-            <ButtonLink
-              href="/app-start"
+            <StoreDownloadLink
               variant="secondary"
               className="home-classic-download__button"
             >
               Jetzt App downloaden
-            </ButtonLink>
+            </StoreDownloadLink>
           </div>
           <div className="home-classic-download__visual">
             <Image
@@ -278,7 +259,11 @@ export function HomeDownloadSection() {
 
 export function HomeFaqSection() {
   return (
-    <section className="home-classic-section" aria-labelledby="faq-title">
+    <section
+      className="home-classic-section"
+      id="faq"
+      aria-labelledby="faq-title"
+    >
       <div className="dayova-container home-classic-faq">
         <article className="home-classic-faq__visual">
           <h3>Bereit für deinen Lernweg?</h3>
@@ -292,12 +277,17 @@ export function HomeFaqSection() {
         </article>
 
         <div className="home-classic-faq__content">
+          <span className="home-classic-section-eyebrow">Gut zu wissen</span>
           <h2 id="faq-title" className="dayova-section-title">
             Häufige Fragen
           </h2>
           <div className="home-classic-faq__list">
             {faqItems.map((item, index) => (
-              <details key={item.question} open={index === 0}>
+              <details
+                key={item.question}
+                name="home-faq"
+                open={index === 0}
+              >
                 <summary>{item.question}</summary>
                 <p>{item.answer}</p>
               </details>

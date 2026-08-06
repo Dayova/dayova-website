@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+import { blogArticles } from "@/content/blog";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     { path: "", priority: 1 },
@@ -12,10 +14,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/datenschutz", priority: 0.2 },
   ];
 
-  return routes.map((route) => ({
+  return [
+    ...routes.map((route) => ({
       url: `https://dayova.com${route.path}`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "weekly" as const,
       priority: route.priority,
-    }));
+    })),
+    ...blogArticles.map((article) => ({
+      url: `https://dayova.com/blog/${article.slug}`,
+      lastModified: new Date("2026-08-06"),
+      changeFrequency: "monthly" as const,
+      priority: 0.65,
+    })),
+  ];
 }

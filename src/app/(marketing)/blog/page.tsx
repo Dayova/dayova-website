@@ -23,12 +23,12 @@ export default function BlogPage() {
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 className="dayova-section-title" id="articles-title">
-                Themen in Vorbereitung
+                Neue Beiträge
               </h2>
             </div>
             <p className="max-w-md text-sm text-muted">
-              Die Inhaltsstruktur ist vorbereitet. Die ersten Artikel werden
-              redaktionell ergänzt und anschließend hier veröffentlicht.
+              Konkrete Impulse, die dir helfen, deinen Lernalltag klarer zu
+              planen und mit weniger Druck voranzukommen.
             </p>
           </div>
           <div className="card-grid mt-6 lg:mt-8 lg:grid-cols-3">

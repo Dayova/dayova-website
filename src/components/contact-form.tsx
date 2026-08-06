@@ -3,17 +3,20 @@ import { siteConfig } from "@/config/site";
 export function ContactForm() {
   return (
     <section
-      className="section"
+      className="home-classic-section home-classic-contact"
       id="kontakt"
       aria-labelledby="contact-title"
     >
       <div className="dayova-container">
-        <div className="theme-panel grid gap-6 rounded-dayova-xl border border-line bg-elevated p-6 shadow-card lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="flex flex-col justify-center">
+        <div className="home-classic-contact__panel theme-panel">
+          <div className="home-classic-contact__intro">
+            <span className="home-classic-section-eyebrow">
+              Wir sind für dich da
+            </span>
             <h2 className="dayova-section-title text-ink" id="contact-title">
               Wir helfen dir gerne weiter.
             </h2>
-            <p className="mt-4 max-w-lg text-dayova-body text-muted">
+            <p className="max-w-lg text-dayova-body text-muted">
               Eine kurze Nachricht genügt. Beim Absenden öffnet sich dein
               E-Mail-Programm; deine Angaben werden nicht auf dieser Website
               gespeichert.
@@ -21,13 +24,13 @@ export function ContactForm() {
           </div>
 
           <form
-            className="grid gap-4"
+            className="home-classic-contact__form"
             action={`mailto:${siteConfig.links.email}`}
             method="post"
             encType="text/plain"
           >
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="grid gap-2">
+            <div className="home-classic-contact__row">
+              <div className="home-classic-contact__field">
                 <label
                   className="text-dayova-small font-medium text-ink"
                   htmlFor="contact-name"
@@ -44,7 +47,7 @@ export function ContactForm() {
                   required
                 />
               </div>
-              <div className="grid gap-2">
+              <div className="home-classic-contact__field">
                 <label
                   className="text-dayova-small font-medium text-ink"
                   htmlFor="contact-email"
@@ -62,7 +65,7 @@ export function ContactForm() {
                 />
               </div>
             </div>
-            <div className="grid gap-2">
+            <div className="home-classic-contact__field">
               <label
                 className="text-dayova-small font-medium text-ink"
                 htmlFor="contact-message"
@@ -76,7 +79,7 @@ export function ContactForm() {
                 placeholder="Wobei können wir helfen?"
               />
             </div>
-            <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="home-classic-contact__actions">
               <p className="text-dayova-small text-muted">
                 Keine Registrierung erforderlich.
               </p>

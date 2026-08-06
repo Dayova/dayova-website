@@ -4,6 +4,7 @@ import { MenuTwoLineIcon } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { primaryNavigation } from "@/content/navigation";
 
@@ -53,13 +54,12 @@ export function HeaderNavigation() {
             ) : null}
           </Link>
         ))}
-        <Link
-          className="button-primary button-compact mt-1 sm:hidden"
-          href="/app-start"
-          onNavigate={closeNavigation}
+        <StoreDownloadLink
+          className="button-compact mt-1 sm:hidden"
+          onClick={closeNavigation}
         >
           App herunterladen
-        </Link>
+        </StoreDownloadLink>
       </nav>
     </details>
   );
