@@ -28,14 +28,15 @@ not be placed inside that marketing route.
 
 ## Checkout boundary
 
-Pricing content is typed in `src/content/pricing.ts`. Each student plan has a
-stable `id` (`annual` or `monthly`), and the CTA renders a matching
-`data-plan-id`. At the moment, the CTA opens a contact email because the payment
-provider, tax model, and app-store compliance decision are not final.
+Pricing content is typed in `src/content/pricing.ts`. The student offer uses one
+interactive card with the stable billing IDs `annual` and `monthly`; its CTA
+renders the active cycle as a matching `data-plan-id`. At the moment, the CTA
+opens a contact email because the payment provider, tax model, and app-store
+compliance decision are not final.
 
 When checkout is approved:
 
-1. Keep the plan IDs and pricing cards unchanged.
+1. Keep the billing IDs and unified student pricing card unchanged.
 2. Add a server-side checkout adapter for the selected provider.
 3. Replace the email destination with a route handler or server action.
 4. Validate prices on the server; never trust the browser plan price.

@@ -1,5 +1,4 @@
 type SectionHeadingProps = {
-  label: string;
   title: string;
   description?: string;
   align?: "left" | "center";
@@ -8,7 +7,6 @@ type SectionHeadingProps = {
 };
 
 export function SectionHeading({
-  label,
   title,
   description,
   align = "left",
@@ -24,11 +22,10 @@ export function SectionHeading({
         centered ? "mx-auto items-center text-center" : "",
       ].join(" ")}
     >
-      <p className={`section-label${inverse ? " !text-cyan-200" : ""}`}>
-        {label}
-      </p>
       <h2
-        className={inverse ? "text-white" : "text-ink"}
+        className={`dayova-section-title ${
+          inverse ? "text-white" : "text-ink"
+        }`}
         id={id}
       >
         {title}

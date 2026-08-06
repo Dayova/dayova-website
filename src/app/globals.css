@@ -41,6 +41,521 @@
   --text-dayova-label--line-height: var(--leading-label);
 }
 
+/* Classic Dayova homepage composition */
+.home-classic-hero,
+.home-classic-section {
+  color: var(--dayova-ink);
+}
+
+.home-classic-hero {
+  overflow: clip;
+  padding-block: var(--space-16) 0;
+  background: var(--dayova-page);
+}
+
+.home-classic-hero__inner {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-12);
+  text-align: center;
+}
+
+.home-classic-hero__copy {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+  max-width: 1120px;
+}
+
+.home-classic-hero .dayova-hero-claim {
+  margin: 0;
+  max-width: 1050px;
+  font-size: 28px;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.home-classic-hero__description {
+  max-width: 900px;
+  margin: 0;
+  color: var(--dayova-muted);
+}
+
+.home-classic-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.home-classic-hero__visual {
+  width: min(100%, 960px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.home-classic-hero__visual img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 36px rgb(19 46 64 / 0.12));
+}
+
+.home-classic-section {
+  padding-block: var(--space-12);
+}
+
+.home-classic-section--soft {
+  background: color-mix(in srgb, var(--dayova-surface) 75%, var(--dayova-page));
+}
+
+.home-classic-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.home-classic-section-heading--centered {
+  justify-content: center;
+  text-align: center;
+}
+
+.home-classic-section .dayova-section-title,
+.home-classic-heading-group .dayova-section-title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.home-classic-about {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.home-classic-about__content {
+  display: grid;
+  gap: var(--space-8);
+  align-content: center;
+}
+
+.home-classic-heading-group {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.home-classic-about__content p {
+  margin: 0;
+  color: var(--dayova-muted);
+}
+
+.home-classic-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.home-classic-metric {
+  min-height: 140px;
+  padding: var(--space-6);
+  border: 1px solid color-mix(in srgb, var(--dayova-line) 75%, transparent);
+  border-radius: var(--dayova-radius-2xl);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: var(--space-1);
+  background: var(--dayova-elevated);
+  box-shadow: var(--dayova-shadow);
+}
+
+.home-classic-metric--dark {
+  background: #191a1b;
+  color: #fff;
+  border-color: transparent;
+}
+
+.home-classic-metric strong {
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.home-classic-about__visual {
+  min-height: 480px;
+  overflow: hidden;
+  padding: var(--space-8) var(--space-8) 0;
+  background: var(--dayova-elevated);
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-3xl);
+  box-shadow: var(--dayova-shadow);
+}
+
+.home-classic-about__visual h3 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.home-classic-about__visual img {
+  width: min(100%, 440px);
+  height: auto;
+  margin: var(--space-8) auto 0;
+  display: block;
+}
+
+.home-classic-feature-grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.home-classic-feature-card {
+  min-height: 620px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  padding: var(--space-8) var(--space-8) 0;
+  border-radius: var(--dayova-radius-3xl);
+  border: 1px solid var(--dayova-line);
+  background: var(--dayova-elevated);
+  box-shadow: var(--dayova-shadow);
+}
+
+.home-classic-feature-card__copy {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.home-classic-feature-card__copy h3 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.home-classic-feature-card__copy p {
+  margin: 0;
+  color: var(--dayova-muted);
+}
+
+.home-classic-feature-card__visual {
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.home-classic-feature-card__visual img {
+  height: auto;
+  max-height: 470px;
+  object-fit: contain;
+}
+
+.home-classic-feature-card--home img {
+  width: 112%;
+}
+
+.home-classic-feature-card--plan img {
+  width: 92%;
+}
+
+.home-classic-feature-card--feedback img {
+  width: 86%;
+  align-self: center;
+  margin-block: auto;
+}
+
+.home-classic-process-grid {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--space-4);
+}
+
+.home-classic-process-card {
+  padding: var(--space-8);
+  border-radius: var(--dayova-radius-2xl);
+  border: 1px solid var(--dayova-line);
+  background: var(--dayova-elevated);
+  box-shadow: var(--dayova-shadow);
+}
+
+.home-classic-process-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-classic-process-card__top span {
+  color: var(--dayova-muted);
+  font-weight: 600;
+}
+
+.home-classic-process-card__top img {
+  padding: var(--space-3);
+  background: var(--dayova-brand-soft);
+  border-radius: var(--dayova-radius-pill);
+}
+
+.home-classic-process-card h3 {
+  margin: var(--space-6) 0 var(--space-2);
+  font-size: 24px;
+}
+
+.home-classic-process-card p {
+  margin: 0;
+  color: var(--dayova-muted);
+}
+
+.home-classic-download {
+  display: grid;
+  overflow: hidden;
+  min-height: 520px;
+  background: var(--dayova-brand-gradient);
+  color: white;
+  border-radius: var(--dayova-radius-3xl);
+  box-shadow: var(--dayova-shadow-strong);
+}
+
+.home-classic-download__copy {
+  padding: var(--space-8);
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: var(--space-4);
+}
+
+.home-classic-download__copy .dayova-section-title {
+  color: white;
+}
+
+.home-classic-download__copy p {
+  margin: 0;
+  max-width: 620px;
+}
+
+.home-classic-download__button {
+  background: var(--dayova-elevated) !important;
+  color: var(--dayova-ink) !important;
+  border-color: transparent !important;
+}
+
+.home-classic-download__visual {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--space-8) var(--space-8) 0;
+}
+
+.home-classic-download__visual img {
+  width: min(100%, 560px);
+  height: auto;
+}
+
+.home-classic-faq {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.home-classic-faq__visual {
+  min-height: 500px;
+  overflow: hidden;
+  padding: var(--space-8) var(--space-8) 0;
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-3xl);
+  background: var(--dayova-elevated);
+  box-shadow: var(--dayova-shadow);
+}
+
+.home-classic-faq__visual h3 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.home-classic-faq__visual img {
+  width: min(100%, 460px);
+  height: auto;
+  margin: var(--space-6) auto 0;
+  display: block;
+}
+
+.home-classic-faq__content {
+  display: grid;
+  align-content: start;
+}
+
+.home-classic-faq__content .dayova-section-title {
+  margin-bottom: var(--space-8);
+}
+
+.home-classic-faq__list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.home-classic-faq details {
+  overflow: hidden;
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-2xl);
+  background: var(--dayova-elevated);
+}
+
+.home-classic-faq summary {
+  list-style: none;
+  padding: var(--space-6);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.home-classic-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-classic-faq summary::after {
+  content: "+";
+  float: right;
+  color: var(--dayova-brand);
+}
+
+.home-classic-faq details[open] summary {
+  background: var(--dayova-brand-gradient);
+  color: white;
+}
+
+.home-classic-faq details[open] summary::after {
+  content: "−";
+  color: white;
+}
+
+.home-classic-faq details p {
+  margin: 0;
+  padding: 0 var(--space-6) var(--space-6);
+  color: var(--dayova-muted);
+}
+
+@media (max-width: 599px) {
+  .home-classic-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-classic-actions {
+    display: grid;
+    width: 100%;
+  }
+
+  .home-classic-actions > * {
+    width: 100%;
+  }
+
+  .home-classic-hero__visual {
+    width: 112%;
+    margin-inline: -6%;
+  }
+
+  .home-classic-feature-card {
+    min-height: 560px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-classic-hero .dayova-hero-claim,
+  .home-classic-section .dayova-section-title,
+  .home-classic-heading-group .dayova-section-title {
+    font-size: 36px;
+  }
+
+  .home-classic-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-classic-feature-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .home-classic-process-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-classic-hero {
+    padding-block: var(--space-20) 0;
+  }
+
+  .home-classic-section {
+    padding-block: var(--space-16);
+  }
+
+  .home-classic-hero .dayova-hero-claim,
+  .home-classic-section .dayova-section-title,
+  .home-classic-heading-group .dayova-section-title {
+    font-size: 44px;
+  }
+
+  .home-classic-section-heading {
+    margin-bottom: var(--space-8);
+  }
+
+  .home-classic-about {
+    grid-template-columns: minmax(0, 1.4fr) minmax(360px, 0.9fr);
+    align-items: stretch;
+    gap: var(--space-6);
+  }
+
+  .home-classic-feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .home-classic-feature-card:last-child {
+    grid-column: auto;
+  }
+
+  .home-classic-process-grid {
+    gap: var(--space-6);
+  }
+
+  .home-classic-download {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  }
+
+  .home-classic-download__copy {
+    padding: var(--space-12);
+  }
+
+  .home-classic-faq {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+}
+
+@media (hover: hover) {
+  .home-classic-feature-card,
+  .home-classic-process-card,
+  .home-classic-metric {
+    transition:
+      transform 180ms var(--dayova-ease),
+      box-shadow 180ms var(--dayova-ease);
+  }
+
+  .home-classic-feature-card:hover,
+  .home-classic-process-card:hover,
+  .home-classic-metric:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--dayova-shadow-strong);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-classic-feature-card,
+  .home-classic-process-card,
+  .home-classic-metric {
+    transition: none;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

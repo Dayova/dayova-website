@@ -4,32 +4,39 @@ import { processSteps } from "@/content/home";
 export function ProcessSection() {
   return (
     <section
-      className="dayova-section"
-      id="so-funktionierts"
+      className="section"
+      id="how-it-works"
       aria-labelledby="process-title"
     >
       <div className="dayova-container">
-        <h2 className="text-center" id="process-title">
-          In 3 Schritten zu deinem Lernplan
-        </h2>
+        <div className="section-heading process-heading">
+          <h2 className="dayova-section-title" id="process-title">
+            From upcoming exam to a plan you can follow.
+          </h2>
+          <p>
+            Three simple steps turn what is coming up into what to do next.
+          </p>
+        </div>
 
-        <ol className="mt-10 grid list-none gap-5 p-0 md:grid-cols-3">
+        <ol className="process-grid">
           {processSteps.map((step) => (
-            <li
-              className="section-card flex min-h-[260px] flex-col items-center justify-center p-7 text-center transition-transform duration-300 hover:-translate-y-1 sm:p-8"
-              key={step.number}
-            >
-              <span className="grid size-16 place-items-center rounded-full bg-subtle">
-                <Image
-                  className="size-9 object-contain"
-                  src={step.icon}
-                  alt=""
-                  width={40}
-                  height={40}
-                />
-              </span>
-              <h3 className="mt-7 text-ink">{step.title}</h3>
-              <p className="mt-4 text-dayova-body text-muted">{step.text}</p>
+            <li className="section-card process-card" key={step.number}>
+              <div className="process-card-topline">
+                <span className="process-number">{step.number}</span>
+                <span className="process-icon">
+                  <Image
+                    className="process-icon-image"
+                    src={step.icon}
+                    alt=""
+                    width={40}
+                    height={40}
+                  />
+                </span>
+              </div>
+              <div className="stack-sm">
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
             </li>
           ))}
         </ol>

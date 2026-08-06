@@ -1,67 +1,53 @@
 # Dayova Typography Guidelines
 
-Dayova uses Poppins across the complete website. The type system should feel
-clean, calm, friendly, and product-focused. Hierarchy comes from size, weight,
-spacing, and contrast rather than decorative treatments.
+Dayova uses Poppins across the complete website. The type system is designed to
+feel clear, calm, friendly, and product-focused, with hierarchy coming from
+size, weight, spacing, and contrast rather than decoration.
 
 ## Typeface and loading
 
-- Primary and only typeface: Poppins
+- Primary typeface: Poppins
+- System fallback stack: `-apple-system`, `BlinkMacSystemFont`, `Segoe UI`,
+  `system-ui`, `sans-serif`
 - Source: locally hosted WOFF2 files through `next/font/local`
-- Fallback: Arial, then the browser sans-serif default
 - Font display strategy: `swap`
-- Supported weights in the website bundle: 400, 500, 600, and 700
-- Approved weights for website content:
-  - 700 for the main page heading and the Dayova wordmark
-  - 600 for section headings, card headings, important buttons, and questions
-  - 500 for lower-priority controls and labels
-  - 400 for paragraphs, descriptions, answers, and form inputs
+- Website weights: 400, 500, 600, and 700
+
+Local hosting avoids a render-blocking third-party font request while producing
+the same Poppins visual result.
 
 ## Responsive scale
 
-| Role | Desktop | Tablet | Mobile | Weight |
-| --- | ---: | ---: | ---: | ---: |
-| Heading 1 | 44px | 36px | 28px | 700 |
-| Heading 2 | 26px | 22px | 20px | 600 |
-| Heading 3 | 22px | 20px | 18px | 600 |
-| Large body | 18px | 17px | 16px | 400 |
-| Body | 16px | 16px | 15px | 400 |
-| Small text | 14px | 14px | 13px | 400 |
-| Label | 12px | 12px | 11px | 500–600 |
+| Role | Size | Weight | Line height |
+| --- | ---: | ---: | ---: |
+| Hero claim | `clamp(40px, 5vw, 56px)` | 700 | 1.08 |
+| Page heading | `clamp(28px, 3vw, 32px)` | 700 | 1.2 |
+| Section heading | `clamp(20px, 2.4vw, 24px)` | 600 | 1.2 |
+| Card heading | 20px | 600 | 1.2 |
+| Body | 16px | 400 | 1.6 |
+| Secondary/meta | 14px | 400–500 | 1.6 |
+| Label | 12px | 600 | 1.5 |
 
-Tablet begins below 1024px. Mobile begins below 640px.
-
-## Line height and tracking
-
-- Headings use a compact `1.16` line height on desktop and tablet.
-- Headings use a `1.18` line height on mobile.
-- Body text uses a generous `1.72` line height, reduced slightly to `1.7` on
-  mobile.
-- Heading tracking is slightly tightened at `-0.025em`.
-- Body tracking remains neutral.
-- Uppercase section labels use `0.12em` tracking for clarity at small sizes.
+The hero uses `-0.02em` tracking. Other headings use `-0.015em`; body text
+keeps neutral tracking.
 
 ## Usage
 
 - Use one `h1` per page for the primary message.
-- Use `h2` for major sections.
-- Use `h3` for cards, steps, payment paths, and smaller content groups.
-- Do not use heading sizes only to make text visually larger. Preserve semantic
-  heading order.
-- Keep paragraphs short and scannable. Avoid bolding entire paragraphs.
-- Buttons use 600 for primary actions and may use 500 for secondary controls.
-- FAQ questions use 600; answers use 400.
-- The same tokens apply in light and dark mode. Theme changes affect color and
-  contrast, not hierarchy.
+- Use the `.dayova-hero-claim` role only for the homepage claim.
+- Use `h2` for major sections and `h3` for cards or smaller content groups.
+- Keep semantic heading order; do not choose a heading only for its visual size.
+- Keep paragraphs concise and no wider than approximately 70–80 characters.
+- Use weight 500 for emphasis, 600 for controls and section titles, and 700
+  only for main headings.
+- The same scale applies in light and dark mode.
 
 ## Implementation
 
-The source of truth is `src/app/typography.css`. Color, surface, spacing, and
-motion tokens live in `src/app/tokens.css`. Responsive CSS custom properties
-control the scale, and `src/app/globals.css` exposes matching Tailwind v4
-utilities:
+The source of truth is `src/app/typography.css`. Tailwind-compatible text roles
+are exposed by `src/app/globals.css`:
 
-- `font-sans`
+- `text-dayova-hero`
 - `text-dayova-h1`
 - `text-dayova-h2`
 - `text-dayova-h3`
@@ -70,4 +56,4 @@ utilities:
 - `text-dayova-small`
 - `text-dayova-label`
 
-Prefer these roles and tokens over one-off font sizes.
+Prefer these roles and the semantic heading styles over one-off font sizes.

@@ -1,40 +1,51 @@
-import Image from "next/image";
-import { LaunchCta } from "@/components/launch-cta";
+import { CheckmarkCircle02Icon } from "@hugeicons/core-free-icons";
+import { ButtonLink } from "@/components/ui/button-link";
+import { DayovaIcon } from "@/components/ui/huge-icon";
+import { siteConfig } from "@/config/site";
+
+const waitlistBenefits = [
+  "14 days free when Dayova launches",
+  "Early launch updates",
+  "A place in the limited first launch wave",
+] as const;
 
 export function LaunchSection() {
+  const waitlistHref = `mailto:${siteConfig.links.email}?subject=${encodeURIComponent(
+    "Dayova waitlist",
+  )}&body=${encodeURIComponent(
+    "Hi Dayova team,\n\nPlease add me to the Dayova launch waitlist.\n\nName:\n",
+  )}`;
+
   return (
-    <section
-      className="dayova-section"
-      id="app-start"
-      aria-labelledby="launch-title"
-    >
+    <section className="section waitlist-section" id="waitlist" aria-labelledby="waitlist-title">
       <div className="dayova-container">
-        <div className="section-card grid min-h-[420px] lg:grid-cols-[1.25fr_0.75fr]">
-          <div className="flex flex-col items-start justify-center p-7 sm:p-12 lg:p-14">
-            <h2
-              id="launch-title"
-            >
-              Sei beim App-Start dabei
+        <div className="waitlist-panel">
+          <div className="waitlist-copy">
+            <span className="waitlist-status">Launching August 17, 2026</span>
+            <h2 className="dayova-section-title" id="waitlist-title">
+              Be there when Dayova launches.
             </h2>
-            <p className="mt-4 max-w-[650px] text-dayova-body text-muted">
-              Dayova startet am 17. August. Folge uns auf Instagram und erfahre
-              direkt, sobald du die App herunterladen und 14 Tage vollständig
-              testen kannst.
+            <p>
+              Join the waitlist for early launch updates and 14 days of free
+              access when the app goes live. The first launch wave is limited.
             </p>
-            <div className="mt-8">
-              <LaunchCta />
-            </div>
+            <ButtonLink href={waitlistHref}>Secure my waitlist spot</ButtonLink>
+            <p className="waitlist-data-note">
+              This opens your email app. We only use your email to contact you
+              about the Dayova launch and early access.
+            </p>
           </div>
-          <div className="flex min-h-[350px] items-end justify-center overflow-hidden px-4 pt-5 lg:min-h-0">
-            <Image
-              className="h-auto max-h-[520px] w-full object-contain object-bottom"
-              src="/images/dayova-screen-collage.png"
-              alt="Mehrere Bildschirme der Dayova App"
-              width={964}
-              height={883}
-              sizes="(max-width: 1024px) 88vw, 38vw"
-            />
-          </div>
+
+          <ul className="waitlist-benefits" aria-label="Waitlist benefits">
+            {waitlistBenefits.map((benefit) => (
+              <li key={benefit}>
+                <span aria-hidden="true">
+                  <DayovaIcon icon={CheckmarkCircle02Icon} size={22} />
+                </span>
+                {benefit}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

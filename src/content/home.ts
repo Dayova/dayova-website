@@ -1,45 +1,50 @@
-export const companionFeatures = [
+export const problemOutcomes = [
   {
-    title: "Trag ein, was ansteht",
-    text: "Füge Prüfungen, Aufgaben und deine verfügbaren Lernzeiten hinzu.",
-    image: "/images/dayova-home-phone.png",
-    alt: "Der persönliche Tagesplan in Dayova",
-    width: 872,
-    height: 1080,
+    problem: "Everything feels urgent",
+    problemText:
+      "Assignments, exams, and unfinished topics all compete for your attention.",
+    outcome: "One clear next step",
+    outcomeText:
+      "Dayova prioritizes what matters now, so you can start without second-guessing.",
   },
   {
-    title: "Bekomm deinen Lernplan",
-    text: "Dayova plant, was du bis zur Prüfung lernen solltest – und wann es in deinen Alltag passt.",
-    image: "/images/dayova-hand-home.png",
-    alt: "Eine Hand hält Dayova mit einem persönlichen Lernplan",
-    width: 1206,
-    height: 2622,
+    problem: "Your plan ignores real life",
+    problemText:
+      "Rigid schedules fall apart as soon as a busy school week changes.",
+    outcome: "A plan that fits your week",
+    outcomeText:
+      "Available time, tasks, and exam dates shape every realistic learning block.",
   },
   {
-    title: "Lerne und sieh, was noch fehlt",
-    text: "Dein Plan passt sich an und zeigt dir, was du als Nächstes üben solltest.",
-    image: "/images/dayova-feedback-phone.png",
-    alt: "Eine Lernstandsauswertung in Dayova",
-    width: 512,
-    height: 512,
+    problem: "Answers do not show the whole picture",
+    problemText:
+      "Solving one question does not tell you what you understand or what still needs work.",
+    outcome: "Progress you can act on",
+    outcomeText:
+      "See strengths, knowledge gaps, and the topic that deserves your attention next.",
   },
 ] as const;
 
 export const comparisonRows = [
   {
-    need: "Klarer nächster Schritt",
-    generic: "Gibt Hilfe auf Anfrage",
-    dayova: "Erkennt Lücken in deinen Antworten",
+    need: "Next step",
+    generic: "Waits for your next prompt",
+    dayova: "Keeps your next priority visible",
   },
   {
-    need: "Individuelle Planung",
-    generic: "Unterstützt beim Lernen",
-    dayova: "Plant mit Aufgaben und Terminen",
+    need: "Planning",
+    generic: "Creates a generic schedule",
+    dayova: "Plans around your tasks, deadlines, and time",
   },
   {
-    need: "Rückmeldung zum Lernstand",
-    generic: "Erstellt allgemeine Lernpläne",
-    dayova: "Passt sich deinen Stärken und Schwächen an",
+    need: "Feedback",
+    generic: "Explains a single answer",
+    dayova: "Finds patterns and gaps across your learning",
+  },
+  {
+    need: "Adaptation",
+    generic: "Starts over with every session",
+    dayova: "Adapts to your strengths and weaknesses",
   },
 ] as const;
 
@@ -47,47 +52,47 @@ export const processSteps = [
   {
     number: "01",
     icon: "/images/step-download.svg",
-    title: "Mit Dayova starten",
-    text: "Folge Dayova bis zum App-Start und erfahre direkt, sobald du loslegen kannst.",
+    title: "Add what is coming up",
+    text: "Enter exams, assignments, and the times you can realistically study.",
   },
   {
     number: "02",
     icon: "/images/step-plan.svg",
-    title: "Lernweg planen",
-    text: "Gib an, was ansteht und wann du Zeit hast. Dayova macht daraus deinen persönlichen Plan.",
+    title: "Get a realistic learning plan",
+    text: "Dayova turns your workload into manageable blocks with clear priorities.",
   },
   {
     number: "03",
     icon: "/images/step-learn.svg",
-    title: "Fokussiert lernen",
-    text: "Arbeite Schritt für Schritt an dem, was für dich gerade wirklich wichtig ist.",
+    title: "Learn, adjust, keep moving",
+    text: "Your plan reacts to your progress and keeps the next useful step in view.",
   },
 ] as const;
 
 export const faqs = [
   {
-    question: "Wie kann ich beim Start dabei sein?",
+    question: "What exactly does Dayova do?",
     answer:
-      "Dayova startet am 17. August 2026. Folge uns auf Instagram, damit du den App-Start und alle wichtigen Neuigkeiten nicht verpasst.",
+      "Dayova organizes your exams, assignments, available time, and learning progress into one personal plan. It helps you understand what to work on next instead of leaving you with another long list.",
   },
   {
-    question: "Wann kann ich Dayova herunterladen?",
+    question: "How does Dayova build my learning plan?",
     answer:
-      "Ab dem 17. August 2026 soll Dayova für iOS und Android verfügbar sein. Sobald die Store-Links freigeschaltet sind, findest du sie direkt hier auf der Website.",
+      "You add what is coming up and when you can study. Dayova divides the work into realistic learning blocks, prioritizes important topics, and adjusts the plan as you make progress.",
   },
   {
-    question: "Wie erstelle ich meinen Lernplan?",
+    question: "How is Dayova different from a typical AI learning tool?",
     answer:
-      "Du trägst deine Prüfung, Aufgaben und verfügbaren Lernzeiten ein. Dayova strukturiert daraus passende Lernblöcke und zeigt dir, was wann sinnvoll ist.",
+      "A typical tool answers an individual question. Dayova supports the full learning process: planning around your real schedule, identifying gaps, and keeping your next step clear.",
   },
   {
-    question: "Was kostet Dayova?",
+    question: "When can I use Dayova?",
     answer:
-      "Das Jahresabo kostet 13,50 € pro Monat, das Monatsabo 15 € pro Monat. Zum Start kannst du Dayova 14 Tage vollständig testen.",
+      "The first Dayova launch is planned for August 17, 2026. Join the waitlist to receive the launch details and early-access information first.",
   },
   {
-    question: "Gibt es Dayova auch für Schulen?",
+    question: "What happens after I join the waitlist?",
     answer:
-      "Ja. Für Schulen erstellen wir ein individuelles Angebot, das zu Umfang und Anzahl der Schülerinnen und Schüler passt.",
+      "We will contact you with essential launch updates and instructions for accessing Dayova. You will also receive 14 days of free access when the app goes live.",
   },
 ] as const;

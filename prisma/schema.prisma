@@ -1,0 +1,355 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  TEACHER
+  SCHOOL_ADMIN
+  INTERNAL_SETUP
+}
+
+enum WorkStatus {
+  OPEN
+  REVIEW_PENDING
+  COMPLETED
+}
+
+enum TestStatus {
+  SCHEDULED
+  COMPLETED
+}
+
+enum SchoolSemester {
+  FIRST
+  SECOND
+}
+
+model School {
+  id           String   @id @default(cuid())
+  name         String
+  address      String?
+  city         String?
+  country      String   @default("DE")
+  contactEmail String?
+  classes      Class[]
+  teachers     Teacher[]
+  students     Student[]
+  subjects     Subject[]
+  groups       TeachingGroup[]
+  notifications Notification[]
+  attendanceRecords StudentAttendanceRecord[]
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Class {
+  id         String   @id @default(cuid())
+  schoolId   String
+  name       String
+  gradeLevel Int?
+  school     School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  students   Student[]
+  groups     TeachingGroup[]
+  recommendations LessonRecommendation[]
+  attendanceRecords StudentAttendanceRecord[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@unique([schoolId, name])
+  @@index([schoolId])
+}
+
+model Teacher {
+  id             String   @id @default(cuid())
+  schoolId       String
+  firstName      String
+  lastName       String
+  email          String   @unique
+  externalAuthId String?  @unique
+  passwordHash   String?
+  role           UserRole @default(TEACHER)
+  isActive       Boolean  @default(true)
+  school         School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  groups         TeachingGroup[]
+  homework       Homework[]
+  tests          Test[]
+  checks         KnowledgeCheck[]
+  attendanceRecords StudentAttendanceRecord[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([schoolId, isActive])
+}
+
+model Student {
+  id                String   @id @default(cuid())
+  schoolId          String
+  classId           String
+  firstName         String
+  lastName          String
+  email             String?
+  externalStudentId String?
+  isActive          Boolean  @default(true)
+  targetGradeFirstSemester  String?
+  targetGradeSecondSemester String?
+  school            School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  class             Class    @relation(fields: [classId], references: [id])
+  grades            Grade[]
+  analyses          StudentKnowledgeAnalysis[]
+  notifications     Notification[]
+  attendanceRecords StudentAttendanceRecord[]
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([schoolId, classId, isActive])
+  @@unique([schoolId, externalStudentId])
+}
+
+model StudentAttendanceRecord {
+  id          String   @id @default(cuid())
+  schoolId    String
+  classId     String
+  studentId   String
+  recordedByTeacherId String
+  date        DateTime
+  status      String
+  note        String?
+  sickNoteAvailable Boolean @default(false)
+  isExcused   Boolean?
+  school      School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  class       Class    @relation(fields: [classId], references: [id], onDelete: Cascade)
+  student     Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  recordedBy  Teacher  @relation(fields: [recordedByTeacherId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([studentId, date])
+  @@index([schoolId, classId, date])
+}
+
+model Subject {
+  id              String   @id @default(cuid())
+  schoolId        String
+  name            String
+  code            String?
+  school          School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  groups          TeachingGroup[]
+  topics          TopicCompetency[]
+  recommendations LessonRecommendation[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([schoolId, name])
+}
+
+model TeachingGroup {
+  id             String   @id @default(cuid())
+  schoolId       String
+  classId        String
+  subjectId      String
+  teacherId      String
+  name           String
+  isActive       Boolean  @default(true)
+  school         School   @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  class          Class    @relation(fields: [classId], references: [id])
+  subject        Subject  @relation(fields: [subjectId], references: [id])
+  teacher        Teacher  @relation(fields: [teacherId], references: [id])
+  homework       Homework[]
+  tests          Test[]
+  checks         KnowledgeCheck[]
+  grades         Grade[]
+  studentAnalyses StudentKnowledgeAnalysis[]
+  classAnalyses  ClassKnowledgeAnalysis[]
+  recommendations LessonRecommendation[]
+  notifications  Notification[]
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([schoolId, teacherId, classId, subjectId])
+  @@index([teacherId, isActive])
+  @@index([schoolId, classId])
+}
+
+model TopicCompetency {
+  id          String   @id @default(cuid())
+  subjectId   String
+  code        String
+  name        String
+  description String?
+  subject     Subject  @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  homework    Homework[]
+  checks      KnowledgeCheck[]
+  grades      Grade[]
+  testTopics  TestTopic[]
+  studentAnalyses StudentKnowledgeAnalysis[]
+  classAnalyses ClassKnowledgeAnalysis[]
+  primaryRecommendations LessonRecommendation[] @relation("PrimaryTopic")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([subjectId, code])
+}
+
+model Homework {
+  id                 String     @id @default(cuid())
+  teachingGroupId    String
+  title              String
+  description        String
+  dueDate            DateTime
+  topicCompetencyId  String?
+  knowledgeCheckId   String?    @unique
+  createdByTeacherId String
+  status             WorkStatus @default(OPEN)
+  teachingGroup      TeachingGroup @relation(fields: [teachingGroupId], references: [id], onDelete: Cascade)
+  topic              TopicCompetency? @relation(fields: [topicCompetencyId], references: [id])
+  knowledgeCheck     KnowledgeCheck? @relation(fields: [knowledgeCheckId], references: [id])
+  createdBy          Teacher    @relation(fields: [createdByTeacherId], references: [id])
+  createdAt          DateTime   @default(now())
+  updatedAt          DateTime   @updatedAt
+
+  @@index([teachingGroupId, dueDate, status])
+}
+
+model Test {
+  id                 String     @id @default(cuid())
+  teachingGroupId    String
+  title              String
+  description        String
+  date               DateTime
+  createdByTeacherId String
+  status             TestStatus @default(SCHEDULED)
+  difficulty         String?
+  aiTemplate         Json?
+  teachingGroup      TeachingGroup @relation(fields: [teachingGroupId], references: [id], onDelete: Cascade)
+  createdBy          Teacher    @relation(fields: [createdByTeacherId], references: [id])
+  topics             TestTopic[]
+  createdAt          DateTime   @default(now())
+  updatedAt          DateTime   @updatedAt
+
+  @@index([teachingGroupId, date, status])
+}
+
+model TestTopic {
+  testId  String
+  topicId String
+  test    Test @relation(fields: [testId], references: [id], onDelete: Cascade)
+  topic   TopicCompetency @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  @@id([testId, topicId])
+}
+
+model KnowledgeCheck {
+  id                 String   @id @default(cuid())
+  teachingGroupId    String
+  title              String
+  description        String
+  topicCompetencyId  String
+  createdByTeacherId String
+  teachingGroup      TeachingGroup @relation(fields: [teachingGroupId], references: [id], onDelete: Cascade)
+  topic              TopicCompetency @relation(fields: [topicCompetencyId], references: [id])
+  createdBy          Teacher @relation(fields: [createdByTeacherId], references: [id])
+  homework           Homework?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+model Grade {
+  id                String   @id @default(cuid())
+  teachingGroupId   String
+  studentId         String
+  assessmentType    String
+  assessmentReferenceId String?
+  value             String
+  weight            Float    @default(1)
+  topicCompetencyId String?
+  date              DateTime
+  semester          SchoolSemester @default(FIRST)
+  teachingGroup     TeachingGroup @relation(fields: [teachingGroupId], references: [id], onDelete: Cascade)
+  student           Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  topic             TopicCompetency? @relation(fields: [topicCompetencyId], references: [id])
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([teachingGroupId, studentId, date])
+}
+
+model StudentKnowledgeAnalysis {
+  id                     String   @id @default(cuid())
+  teachingGroupId        String
+  studentId              String
+  topicCompetencyId      String
+  currentLevel           Float
+  trend                  String
+  misconceptionPatterns  Json
+  repeatedMistakesCount  Int      @default(0)
+  learningMomentumScore  Float
+  lastUpdatedAt          DateTime @updatedAt
+  teachingGroup          TeachingGroup @relation(fields: [teachingGroupId], references: [id], onDelete: Cascade)
+  student                Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  topic                  TopicCompetency @relation(fields: [topicCompetencyId], references: [id])
+
+  @@unique([teachingGroupId, studentId, topicCompetencyId])
+  @@index([teachingGroupId, currentLevel])
+}
+
+model ClassKnowledgeAnalysis {
+  id                        String   @id @default(cuid())
+  teachingGroupId           String
+  topicCompetencyId         String
+  masteryDistribution       Json
+  commonMisconceptions      Json
+  readinessForUpcomingTests Float?
+  priorityForNextLessons    Int
+  lastUpdatedAt             DateTime @updatedAt
+  teachingGroup             TeachingGroup @relation(fields: [teachingGroupId], references: [id], onDelete: Cascade)
+  topic                     TopicCompetency @relation(fields: [topicCompetencyId], references: [id])
+
+  @@unique([teachingGroupId, topicCompetencyId])
+  @@index([teachingGroupId, priorityForNextLessons])
+}
+
+model LessonRecommendation {
+  id                    String   @id @default(cuid())
+  teachingGroupId       String
+  subjectId             String
+  classId               String
+  primaryTopicId        String
+  secondaryTopicIds     Json
+  generatedForDate      DateTime?
+  recommendationPayload Json
+  evidencePayload       Json
+  teachingGroup         TeachingGroup @relation(fields: [teachingGroupId], references: [id], onDelete: Cascade)
+  subject               Subject @relation(fields: [subjectId], references: [id])
+  class                 Class @relation(fields: [classId], references: [id])
+  primaryTopic          TopicCompetency @relation("PrimaryTopic", fields: [primaryTopicId], references: [id])
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  @@index([teachingGroupId, createdAt])
+}
+
+model Notification {
+  id              String   @id @default(cuid())
+  schoolId        String
+  studentId       String?
+  teachingGroupId String?
+  type            String
+  title           String
+  message         String
+  target          String
+  scheduledAt     DateTime
+  sentAt          DateTime?
+  school          School @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  student         Student? @relation(fields: [studentId], references: [id])
+  teachingGroup   TeachingGroup? @relation(fields: [teachingGroupId], references: [id])
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([schoolId, scheduledAt, sentAt])
+  @@index([studentId, scheduledAt])
+}

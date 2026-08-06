@@ -1,6 +1,12 @@
+import {
+  Calendar03Icon,
+  School01Icon,
+  TaskDone01Icon,
+} from "@hugeicons/core-free-icons";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/button-link";
+import { DayovaIcon } from "@/components/ui/huge-icon";
 import { IconBadge } from "@/components/ui/icon-badge";
 import { PageHero } from "@/components/ui/page-hero";
 import { siteConfig } from "@/config/site";
@@ -13,17 +19,17 @@ export const metadata: Metadata = {
 
 const schoolBenefits = [
   {
-    icon: "↗",
+    icon: TaskDone01Icon,
     title: "Klare nächste Schritte",
     text: "Lernaufgaben werden für Schülerinnen und Schüler verständlich und handhabbar.",
   },
   {
-    icon: "⌁",
+    icon: Calendar03Icon,
     title: "Planung mit Terminen",
     text: "Prüfungen, Aufgaben und verfügbare Lernzeit fließen in einen realistischen Plan ein.",
   },
   {
-    icon: "◎",
+    icon: School01Icon,
     title: "Passend zum Einsatz",
     text: "Das Angebot wird nach Umfang, Schülerzahl und schulischem Kontext zusammengestellt.",
   },
@@ -37,7 +43,6 @@ export default function SchoolsPage() {
   return (
     <>
       <PageHero
-        eyebrow="Für Schulen"
         title="Lernorganisation, die Schülerinnen und Schüler wirklich erreicht."
         description="Dayova verbindet Aufgaben, Prüfungstermine und persönliche Lernzeiten zu einem klaren Lernweg. Für Schulen entwickeln wir ein Angebot, das zum konkreten Einsatz passt."
         actions={
@@ -62,20 +67,21 @@ export default function SchoolsPage() {
         }
       />
 
-      <section className="dayova-section pt-0" aria-labelledby="school-value">
+      <section className="section" aria-labelledby="school-value">
         <div className="dayova-container">
           <div className="max-w-2xl">
-            <p className="section-label">Für den schulischen Alltag</p>
-            <h2 className="mt-3" id="school-value">
+            <h2 className="dayova-section-title" id="school-value">
               Ein gemeinsamer Rahmen, der individuelles Lernen übersichtlich
               macht.
             </h2>
           </div>
-          <div className="mt-9 grid gap-5 md:grid-cols-3">
+          <div className="card-grid mt-6 md:grid-cols-3 lg:mt-8">
             {schoolBenefits.map((benefit) => (
-              <article className="section-card p-7 sm:p-8" key={benefit.title}>
-                <IconBadge>{benefit.icon}</IconBadge>
-                <h3 className="mt-7">{benefit.title}</h3>
+              <article className="section-card p-6" key={benefit.title}>
+                <IconBadge>
+                  <DayovaIcon icon={benefit.icon} size={24} />
+                </IconBadge>
+                <h3 className="mt-6">{benefit.title}</h3>
                 <p className="mt-4 text-dayova-body text-muted">
                   {benefit.text}
                 </p>
@@ -85,28 +91,25 @@ export default function SchoolsPage() {
         </div>
       </section>
 
-      <section className="dayova-section pt-0">
+      <section className="section">
         <div className="dayova-container">
-          <div className="grid overflow-hidden rounded-dayova-lg bg-[#15283b] text-white lg:grid-cols-[1fr_0.8fr]">
-            <div className="p-7 sm:p-10 lg:p-12">
-              <p className="section-label !text-cyan-200">
-                Individuelles Schulangebot
-              </p>
-              <h2 className="mt-3 max-w-2xl text-white">
+          <div className="grid overflow-hidden rounded-dayova-xl bg-dark-panel text-white lg:grid-cols-[1fr_0.8fr]">
+            <div className="p-6 lg:p-8">
+              <h2 className="dayova-section-title max-w-2xl text-white">
                 Preis und Umfang richten sich nach Ihrer Schule.
               </h2>
-              <p className="mt-5 max-w-2xl text-dayova-body text-white/70">
+              <p className="mt-4 max-w-2xl text-dayova-body text-white/70">
                 Wir klären gemeinsam Einsatzszenario, Anzahl der Schülerinnen
                 und Schüler sowie den gewünschten Umfang. Anschließend erhalten
                 Sie ein transparentes, individuelles Angebot.
               </p>
-              <div className="mt-8">
+              <div className="mt-6">
                 <ButtonLink href={offerHref}>
                   Angebot unverbindlich anfragen
                 </ButtonLink>
               </div>
             </div>
-            <div className="grid content-center gap-4 border-t border-white/10 p-7 sm:p-10 lg:border-l lg:border-t-0">
+            <div className="grid content-center gap-4 border-t border-white/10 p-6 lg:border-l lg:border-t-0 lg:p-8">
               <p className="text-sm font-semibold text-white">
                 Bereits für die nächste Phase vorbereitet
               </p>

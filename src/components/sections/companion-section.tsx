@@ -1,60 +1,60 @@
-import Image from "next/image";
-import { companionFeatures } from "@/content/home";
+import {
+  BookOpen02Icon,
+  Calendar03Icon,
+  ChartHistogramIcon,
+} from "@hugeicons/core-free-icons";
+import { DayovaIcon } from "@/components/ui/huge-icon";
+import { problemOutcomes } from "@/content/home";
+
+const outcomeIcons = [
+  Calendar03Icon,
+  BookOpen02Icon,
+  ChartHistogramIcon,
+] as const;
 
 export function CompanionSection() {
   return (
     <section
-      className="dayova-section"
-      id="produkt"
+      className="section dayova-benefits-section"
+      id="outcomes"
       aria-labelledby="companion-title"
     >
       <div className="dayova-container">
-        <h2 className="text-center" id="companion-title">
-          Was dein Lernbegleiter für dich übernimmt
-        </h2>
+        <div className="dayova-benefits-panel">
+          <div className="dayova-benefits-heading">
+            <h2 className="dayova-section-title" id="companion-title">
+              Learning should not feel like guessing.
+            </h2>
+            <p>
+              When everything feels urgent, even starting can feel difficult.
+              Dayova turns that pressure into a clear, manageable path toward
+              your exams.
+            </p>
+          </div>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {companionFeatures.map((feature, index) => (
-            <article
-              className="section-card group flex min-h-[540px] flex-col transition-transform duration-300 hover:-translate-y-1 lg:min-h-[580px]"
-              key={feature.title}
-            >
-              {index !== 2 ? (
-                <div className="p-7 pb-3 sm:p-8 sm:pb-3">
-                  <h3 className="text-ink">{feature.title}</h3>
-                  <p className="mt-4 text-dayova-body text-muted">
-                    {feature.text}
-                  </p>
+          <div className="dayova-benefits-grid">
+            {problemOutcomes.map((item, index) => (
+              <article className="dayova-benefit-card" key={item.problem}>
+                <div className="problem-outcome-problem">
+                  <span className="problem-outcome-icon" aria-hidden="true">
+                    <DayovaIcon
+                      icon={outcomeIcons[index] ?? Calendar03Icon}
+                      size={22}
+                    />
+                  </span>
+                  <span className="problem-outcome-label">The problem</span>
+                  <h3>{item.problem}</h3>
+                  <p>{item.problemText}</p>
                 </div>
-              ) : null}
-              <div
-                className={`flex min-h-[280px] flex-1 items-end justify-center overflow-hidden px-3 ${
-                  index !== 2 ? "mt-auto" : ""
-                } ${
-                  index === 1 ? "px-0" : ""
-                }`}
-              >
-                <Image
-                  className={`h-auto max-h-[330px] w-auto max-w-full object-contain object-bottom transition-transform duration-500 group-hover:scale-[1.02] ${
-                    index === 1 ? "max-h-[360px]" : ""
-                  }`}
-                  src={feature.image}
-                  alt={feature.alt}
-                  width={feature.width}
-                  height={feature.height}
-                  sizes="(max-width: 1024px) 88vw, 32vw"
-                />
-              </div>
-              {index === 2 ? (
-                <div className="p-7 pt-5 sm:p-8 sm:pt-5">
-                  <h3 className="text-ink">{feature.title}</h3>
-                  <p className="mt-4 text-dayova-body text-muted">
-                    {feature.text}
-                  </p>
+
+                <div className="problem-outcome-result">
+                  <span className="problem-outcome-label">With Dayova</span>
+                  <h3>{item.outcome}</h3>
+                  <p>{item.outcomeText}</p>
                 </div>
-              ) : null}
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,14 +1,20 @@
+import {
+  ArrowDown01Icon,
+  ArrowRight01Icon,
+  ArrowUpRight01Icon,
+} from "@hugeicons/core-free-icons";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
+import { DayovaIcon } from "@/components/ui/huge-icon";
 
 type TextLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
   arrow?: "right" | "down" | "external";
 };
 
-const arrowGlyph = {
-  right: "→",
-  down: "↓",
-  external: "↗",
+const arrowIcon = {
+  right: ArrowRight01Icon,
+  down: ArrowDown01Icon,
+  external: ArrowUpRight01Icon,
 } as const;
 
 export function TextLink({
@@ -23,9 +29,12 @@ export function TextLink({
       {...props}
     >
       {children}
-      <span className="text-brand" aria-hidden="true">
-        {arrowGlyph[arrow]}
-      </span>
+      <DayovaIcon
+        className="text-brand"
+        icon={arrowIcon[arrow]}
+        size={17}
+        aria-hidden="true"
+      />
     </a>
   );
 }

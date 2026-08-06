@@ -7,7 +7,7 @@ export type BlogArticle = {
   status: "planned" | "published";
 };
 
-export const blogArticles: readonly BlogArticle[] = [
+export const blogArticles = [
   {
     slug: "lernplan-der-wirklich-funktioniert",
     title: "Ein Lernplan, der wirklich in deinen Alltag passt",
@@ -35,4 +35,4 @@ export const blogArticles: readonly BlogArticle[] = [
     readingTime: "5 Min.",
     status: "planned",
   },
-] as const;
+] as const satisfies readonly BlogArticle[];

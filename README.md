@@ -1,70 +1,91 @@
 # Dayova Website
 
-Die Launch-Website für Dayova – gebaut mit Next.js App Router, TypeScript und
-Tailwind CSS.
+The launch website for Dayova, built with the Next.js App Router, TypeScript,
+and Tailwind CSS.
 
-## Lokal starten
+The repository language is English. Customer-facing website copy remains in
+German because the current product audience is German-speaking.
+
+## Local development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Die Website ist anschließend unter
-[http://localhost:3000](http://localhost:3000) erreichbar.
+The website is then available at
+[http://localhost:3000](http://localhost:3000).
 
-## Launch-Logik
+## Launch behavior
 
-Der Launch-Termin und alle zentralen Links liegen in
-`src/config/site.ts`. Vor dem dort gesetzten Termin verweist der primäre CTA auf
-Instagram. Ab dem Launch-Termin wechselt die Website automatisch zu den
-Download-Buttons für App Store und Google Play, sobald beide finalen Store-Links
-konfiguriert sind.
+The launch date and all central links are defined in `src/config/site.ts`.
+Before that date, the primary CTA points to Instagram. From the launch date
+onward, the website automatically switches to App Store and Google Play
+download buttons as soon as both final store links are configured.
 
-Die finalen Store-URLs können ohne Codeänderung als Umgebungsvariablen gesetzt
-werden:
+The final store URLs can be supplied as environment variables without changing
+the code:
 
 ```bash
 NEXT_PUBLIC_APP_STORE_URL=https://apps.apple.com/...
 NEXT_PUBLIC_GOOGLE_PLAY_URL=https://play.google.com/store/apps/...
 NEXT_PUBLIC_DISCORD_URL=https://discord.gg/...
+NEXT_PUBLIC_FACEBOOK_URL=https://www.facebook.com/...
+NEXT_PUBLIC_YOUTUBE_URL=https://www.youtube.com/@...
 ```
 
-Solange die finalen Links fehlen, bleibt der Instagram-CTA aktiv. Dadurch führt
-die Website nie zu einer ungenauen Store-Suche oder einem nicht veröffentlichten
-Produkt.
+Until both store links are available, the Instagram CTA remains active. This
+prevents the website from linking to an imprecise store search or an
+unpublished product.
 
-## Wichtige Befehle
+## Commands
 
 ```bash
 npm run lint
+npm run typecheck
 npm run build
 npm run start
 ```
 
-## Routen
+## Routes
 
-- `/` – Startseite
-- `/blog` – Blog-Shell mit vorbereiteten Artikelkarten
-- `/parents` – Dayova für Eltern
-- `/schools` – Schulangebot
-- `/pricing` – Schülerabos und individuelle Schulangebote
-- `/impressum` und `/datenschutz` – rechtliche Seiten
+- `/` — student-focused homepage
+- `/blog` — blog shell with prepared article cards
+- `/parents` — parent-focused marketing page
+- `/schools` — school offer
+- `/pricing` — student subscriptions and custom school pricing
+- `/impressum` and `/datenschutz` — legal pages
 
-Ein zukünftiger geschützter Zugang für Lehrkräfte wird als eigene
-Produktfläche ergänzt und nicht mit den öffentlichen Marketingseiten
-vermischt.
+A future protected teacher experience will be implemented as a separate
+product surface and will not be mixed into the public marketing routes.
 
-## Struktur
+## Project structure
 
-- `src/app/(marketing)` – öffentliches Marketing-Layout und alle Zielgruppen-Routen
-- `src/components/sections` – eigenständige Homepage-Sektionen
-- `src/components/blog` und `src/components/pricing` – domänenspezifische Komponenten
-- `src/components/ui` – wiederverwendbare UI-Grundbausteine
-- `src/content` – zentral gepflegte Navigation, Artikel, Preise und Marketingtexte
-- `src/config/site.ts` – Launch-Termin, Social-, Kontakt- und Store-Links
-- `src/app/tokens.css` – Farb-, Oberflächen-, Spacing- und Theme-Tokens
-- `public/images` – Produkt-Screens und Mockups aus der Dayova App
+- `src/app/(marketing)` — public marketing layout and audience routes
+- `src/components/sections` — standalone homepage sections
+- `src/components/blog` and `src/components/pricing` — domain components
+- `src/components/ui` — reusable UI primitives
+- `src/content` — centrally maintained navigation, articles, pricing, and copy
+- `src/config/site.ts` — launch date, social, contact, and store links
+- `src/app/tokens.css` — color, surface, spacing, and theme tokens
+- `public/images` — product screens and mockups from the Dayova app
 
-Weitere Architekturentscheidungen und die vorbereitete Checkout-Grenze sind in
-[`docs/architecture.md`](docs/architecture.md) dokumentiert.
+Additional architecture decisions and the prepared checkout boundary are
+documented in [`docs/architecture.md`](docs/architecture.md).
+
+The visual foundations, spacing rules, typography, color system, radii, and
+interaction standards are documented in
+[`docs/design-system.md`](docs/design-system.md).
+
+## TypeScript standards
+
+The project follows strict TypeScript practices inspired by Matt Pocock's
+Total TypeScript guidance:
+
+- strict type checking and safer indexed access
+- explicit type-only imports
+- `satisfies` for validating configuration objects without losing inference
+- no unchecked type errors in production builds
+- a dedicated `npm run typecheck` command for CI and local verification
+
+See [`docs/typescript.md`](docs/typescript.md) for the complete conventions.

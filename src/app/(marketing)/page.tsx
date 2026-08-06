@@ -1,25 +1,23 @@
 import { ContactForm } from "@/components/contact-form";
 import {
-  BenefitsSection,
+  HomeAboutSection,
+  HomeCompanionSection,
+  HomeDownloadSection,
   HomeFaqSection,
   HomeHeroSection,
-  HowItWorksSection,
-  LaunchCtaSection,
-  ProblemSolutionSection,
-  TrustSection,
+  HomeProcessSection,
 } from "@/components/sections/homepage-sections";
 
 export default function Home() {
   return (
     <>
       <HomeHeroSection />
-      <ProblemSolutionSection />
-      <HowItWorksSection />
-      <BenefitsSection />
-      <TrustSection />
-      <LaunchCtaSection />
-      <HomeFaqSection />
+      <HomeAboutSection />
+      <HomeCompanionSection />
+      <HomeProcessSection />
+      <HomeDownloadSection />
       <ContactForm />
+      <HomeFaqSection />
     </>
   );
 }

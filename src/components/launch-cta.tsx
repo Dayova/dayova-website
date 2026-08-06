@@ -26,8 +26,7 @@ export function LaunchCta({
         rel="noreferrer"
         target="_blank"
       >
-        <span>Dayova herunterladen</span>
-        <span aria-hidden="true">→</span>
+        Dayova herunterladen
       </a>
     );
   }
@@ -41,8 +40,7 @@ export function LaunchCta({
       rel="noreferrer"
       target="_blank"
     >
-      <span>{compact ? "Auf Instagram folgen" : "Dayova auf Instagram folgen"}</span>
-      <span aria-hidden="true">↗</span>
+      {compact ? "Auf Instagram folgen" : "Dayova auf Instagram folgen"}
     </a>
   );
 }

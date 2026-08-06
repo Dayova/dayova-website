@@ -1,49 +1,54 @@
-import Image from "next/image";
+import { ArrowDown01Icon, CheckmarkCircle02Icon } from "@hugeicons/core-free-icons";
+import { ButtonLink } from "@/components/ui/button-link";
+import { DayovaIcon } from "@/components/ui/huge-icon";
 import { faqs } from "@/content/home";
+
+const reasons = [
+  "A plan shaped around your real week",
+  "Clear priorities instead of another task list",
+  "14 days free when Dayova launches",
+] as const;
 
 export function FaqSection() {
   return (
-    <section className="dayova-section pt-3" id="faq" aria-labelledby="faq-title">
-      <div className="dayova-container grid items-stretch gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-        <article className="section-card flex min-h-[420px] flex-col p-7 pb-0 sm:p-8 sm:pb-0">
-          <h2 className="text-ink">Bereit für deinen Lernweg?</h2>
-          <div className="mt-auto flex flex-1 items-end justify-center overflow-hidden">
-            <Image
-              className="h-auto max-h-[390px] w-full object-contain object-bottom"
-              src="/images/dayova-home-phone.png"
-              alt="Der Tagesplan in Dayova"
-              width={872}
-              height={1080}
-              sizes="(max-width: 1024px) 88vw, 38vw"
-            />
+    <section className="section" id="faq" aria-labelledby="faq-title">
+      <div className="dayova-container faq-layout">
+        <article className="faq-lead-card">
+          <div className="stack-md">
+            <h2>Still deciding?</h2>
+            <p>
+              Join the first students who will turn exam pressure into a plan
+              they can actually follow.
+            </p>
           </div>
+          <ul>
+            {reasons.map((reason) => (
+              <li key={reason}>
+                <DayovaIcon icon={CheckmarkCircle02Icon} size={20} aria-hidden="true" />
+                {reason}
+              </li>
+            ))}
+          </ul>
+          <ButtonLink href="#waitlist">Join the waitlist</ButtonLink>
         </article>
 
         <div>
-          <h2
-            className="mb-7"
-            id="faq-title"
-          >
-            Häufige Fragen
+          <h2 className="dayova-section-title faq-title" id="faq-title">
+            Questions before you join
           </h2>
-          <div className="grid gap-3">
+          <div className="faq-list">
             {faqs.map((faq) => (
-              <details
-                className="faq-item rounded-[22px]"
-                key={faq.question}
-              >
-                <summary className="flex min-h-[62px] cursor-pointer list-none items-center justify-between gap-4 rounded-[22px] border border-line bg-elevated px-6 py-4 font-semibold text-ink shadow-[0_2px_8px_rgba(36,64,80,0.02)]">
+              <details className="faq-item" key={faq.question}>
+                <summary>
                   <span>{faq.question}</span>
-                  <span
-                    className="faq-chevron shrink-0 text-xl transition-transform"
+                  <DayovaIcon
+                    className="faq-chevron"
+                    icon={ArrowDown01Icon}
+                    size={20}
                     aria-hidden="true"
-                  >
-                    ⌄
-                  </span>
+                  />
                 </summary>
-                <p className="px-6 pb-5 pt-4 text-dayova-body text-ink/85">
-                  {faq.answer}
-                </p>
+                <p>{faq.answer}</p>
               </details>
             ))}
           </div>
