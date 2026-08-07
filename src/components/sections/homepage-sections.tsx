@@ -1,8 +1,15 @@
+import {
+  ArrowDown01Icon,
+  Calendar03Icon,
+  ChartHistogramIcon,
+  SmartPhone01Icon,
+} from "@hugeicons/core-free-icons";
 import Image from "next/image";
 
 import { ButtonLink } from "@/components/ui/button-link";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { StoreDownloadLink } from "@/components/store-download-link";
+import { DayovaIcon } from "@/components/ui/huge-icon";
 
 const companionFeatures = [
   {
@@ -34,6 +41,45 @@ const companionFeatures = [
     width: 512,
     height: 512,
     className: "home-classic-feature-card--feedback",
+  },
+] as const;
+
+const dayovaAdvantages = [
+  {
+    label: "Lernbegleitung",
+    title: "Mehr als Antworten",
+    description:
+      "Viele Lern-Tools erklären dir Themen – lassen dich aber mit zu viel Stoff und ohne klaren nächsten Schritt zurück. Dayova setzt genau dort an, ordnet, was ansteht, und macht daraus einen verständlichen Lernweg.",
+    icon: SmartPhone01Icon,
+    image: "/images/dayova-hero-phones.png",
+    alt: "Mehrere Ansichten der Dayova Lern-App",
+    width: 4269,
+    height: 2400,
+    className: "home-classic-advantage--app",
+  },
+  {
+    label: "Lernplanung",
+    title: "Plan statt Lernchaos",
+    description:
+      "Dayova kennt deine Aufgaben, Prüfungen und Lernzeiten und verbindet alles zu einem Plan, der in deinen Alltag passt. Du siehst, womit du anfangen kannst, wie viel pro Tag sinnvoll ist und was rechtzeitig vor der Prüfung wichtig wird.",
+    icon: Calendar03Icon,
+    image: "/images/dayova-notifications.png",
+    alt: "Dayova App mit Aufgaben und wichtigen Benachrichtigungen",
+    width: 512,
+    height: 512,
+    className: "home-classic-advantage--planning",
+  },
+  {
+    label: "Wissensanalyse",
+    title: "Fortschritt, den du sehen kannst",
+    description:
+      "Während du in Dayova lernst, werden deine Antworten ausgewertet: Die App erkennt Lücken, stärkt deine Stärken und passt deinen Plan an. So weißt du jederzeit, wo du stehst und worauf du dich als Nächstes konzentrieren solltest.",
+    icon: ChartHistogramIcon,
+    image: "/images/dayova-feedback-phone.png",
+    alt: "Dayova Wissensanalyse mit Feedback zu einer Antwort",
+    width: 512,
+    height: 512,
+    className: "home-classic-advantage--analysis",
   },
 ] as const;
 
@@ -116,7 +162,7 @@ export function HomeAboutSection() {
           </div>
 
           <div className="home-classic-metrics" aria-label="Dayova in Zahlen">
-            <article className="home-classic-metric home-classic-metric--accent">
+            <article className="home-classic-metric">
               <strong>150+</strong>
               <span>Schüler begleitet</span>
             </article>
@@ -185,6 +231,59 @@ export function HomeCompanionSection() {
               </article>
             ))}
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function HomeAdvantagesSection() {
+  return (
+    <section
+      className="home-classic-section"
+      aria-labelledby="advantages-title"
+    >
+      <div className="dayova-container home-classic-advantages">
+        <div className="home-classic-advantages__intro">
+          <span className="home-classic-section-eyebrow">Darum Dayova</span>
+          <h2 id="advantages-title" className="dayova-section-title">
+            Warum ein Lernbegleiter mehr hilft als ein Tool, das nur Antworten
+            ausspuckt.
+          </h2>
+        </div>
+
+        <div className="home-classic-advantages__list">
+          {dayovaAdvantages.map((advantage) => (
+            <article
+              className={`home-classic-advantage ${advantage.className}`}
+              key={advantage.title}
+            >
+              <div className="home-classic-advantage__copy">
+                <span className="home-classic-advantage__label">
+                  <span className="home-classic-advantage__icon">
+                    <DayovaIcon
+                      icon={advantage.icon}
+                      size={22}
+                      aria-hidden="true"
+                    />
+                  </span>
+                  {advantage.label}
+                </span>
+                <h3>{advantage.title}</h3>
+                <p>{advantage.description}</p>
+              </div>
+
+              <div className="home-classic-advantage__visual">
+                <Image
+                  src={advantage.image}
+                  alt={advantage.alt}
+                  width={advantage.width}
+                  height={advantage.height}
+                  sizes="(max-width: 767px) 88vw, (max-width: 1023px) 44vw, 520px"
+                />
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
@@ -288,7 +387,16 @@ export function HomeFaqSection() {
                 name="home-faq"
                 open={index === 0}
               >
-                <summary>{item.question}</summary>
+                <summary>
+                  <span>{item.question}</span>
+                  <DayovaIcon
+                    className="home-classic-faq__icon"
+                    icon={ArrowDown01Icon}
+                    size={24}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  />
+                </summary>
                 <p>{item.answer}</p>
               </details>
             ))}

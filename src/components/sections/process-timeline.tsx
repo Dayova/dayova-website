@@ -171,10 +171,11 @@ export function ProcessTimeline() {
       <ol className="home-classic-process-timeline__list">
         {processSteps.map((step, index) => {
           const isActive = activeIndex === index;
+          const isReached = index <= activeIndex;
 
           return (
             <li
-              className={`home-classic-process-step${isActive ? " home-classic-process-step--active" : ""}${index % 2 === 1 ? " home-classic-process-step--reverse" : ""}`}
+              className={`home-classic-process-step${isReached ? " home-classic-process-step--reached" : ""}${isActive ? " home-classic-process-step--active" : ""}${index % 2 === 1 ? " home-classic-process-step--reverse" : ""}`}
               key={step.number}
               ref={(element) => {
                 stepRefs.current[index] = element;

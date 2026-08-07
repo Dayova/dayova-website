@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 type PageHeroProps = {
+  eyebrow?: string;
   title: string;
   description: string;
   actions?: ReactNode;
@@ -8,38 +9,36 @@ type PageHeroProps = {
 };
 
 export function PageHero({
+  eyebrow,
   title,
   description,
   actions,
   aside,
 }: PageHeroProps) {
   return (
-    <section className="section">
+    <section
+      className={`marketing-page-hero ${aside ? "marketing-page-hero--with-aside" : ""}`}
+    >
       <div
-        className={`dayova-container grid items-center gap-6 ${
-          aside ? "lg:grid-cols-2" : ""
+        className={`dayova-container marketing-page-hero__inner ${
+          aside ? "marketing-page-hero__inner--with-aside" : ""
         }`}
       >
-        <div className={aside ? "" : "mx-auto max-w-3xl text-center"}>
-          <h1 className="text-balance text-ink">{title}</h1>
-          <p
-            className={`mt-4 text-dayova-body-lg text-muted ${
-              aside ? "max-w-2xl" : "mx-auto max-w-2xl"
-            }`}
-          >
-            {description}
-          </p>
+        <div className="marketing-page-hero__copy">
+          {eyebrow ? (
+            <span className="home-classic-section-eyebrow">{eyebrow}</span>
+          ) : null}
+          <h1>{title}</h1>
+          <p>{description}</p>
           {actions ? (
-            <div
-              className={`mt-6 flex flex-wrap gap-3 ${
-                aside ? "" : "justify-center"
-              }`}
-            >
+            <div className="marketing-page-hero__actions">
               {actions}
             </div>
           ) : null}
         </div>
-        {aside ? <div>{aside}</div> : null}
+        {aside ? (
+          <div className="marketing-page-hero__aside">{aside}</div>
+        ) : null}
       </div>
     </section>
   );

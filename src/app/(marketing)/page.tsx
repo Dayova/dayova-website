@@ -1,6 +1,7 @@
 import { ContactForm } from "@/components/contact-form";
 import {
   HomeAboutSection,
+  HomeAdvantagesSection,
   HomeCompanionSection,
   HomeDownloadSection,
   HomeFaqSection,
@@ -14,6 +15,7 @@ export default function Home() {
       <HomeHeroSection />
       <HomeAboutSection />
       <HomeCompanionSection />
+      <HomeAdvantagesSection />
       <HomeProcessSection />
       <HomeDownloadSection />
       <ContactForm />

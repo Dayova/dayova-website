@@ -93,7 +93,7 @@ export default async function BlogArticlePage({
         </div>
       </section>
 
-      <ReadingProgress readingTime={article.readingTime} />
+      <ReadingProgress />
     </>
   );
 }

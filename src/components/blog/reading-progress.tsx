@@ -3,15 +3,11 @@
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 
-type ReadingProgressProps = {
-  readingTime: string;
-};
-
 function clamp(value: number) {
   return Math.min(100, Math.max(0, value));
 }
 
-export function ReadingProgress({ readingTime }: ReadingProgressProps) {
+export function ReadingProgress() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -57,10 +53,6 @@ export function ReadingProgress({ readingTime }: ReadingProgressProps) {
         { "--reading-progress": `${progress}%` } as CSSProperties
       }
     >
-      <span className="blog-reading-progress__time">{readingTime} Lesezeit</span>
-      <span className="blog-reading-progress__value">
-        {roundedProgress}% gelesen
-      </span>
       <span className="blog-reading-progress__track" aria-hidden="true">
         <span />
       </span>

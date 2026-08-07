@@ -11,12 +11,16 @@ export default function PrivacyPage() {
   return (
     <>
       <PageHero
+        eyebrow="Rechtliches"
         title="Datenschutz"
         description="Transparente Informationen zum Umgang mit personenbezogenen Daten auf der Dayova Website."
       />
-      <section className="section">
-        <div className="dayova-container">
-          <div className="section-card mx-auto max-w-3xl p-6">
+      <section className="section marketing-legal-section">
+        <div className="dayova-container marketing-legal">
+          <div>
+            <span className="home-classic-section-eyebrow">
+              Datenschutz bei Dayova
+            </span>
             <h2>Aktueller Stand</h2>
             <p className="mt-4 text-dayova-body text-muted">
               Diese Website verwendet aktuell keine öffentliche

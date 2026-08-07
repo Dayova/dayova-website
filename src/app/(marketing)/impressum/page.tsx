@@ -11,12 +11,16 @@ export default function ImprintPage() {
   return (
     <>
       <PageHero
+        eyebrow="Rechtliches"
         title="Impressum"
         description="Die vollständigen rechtlich geprüften Anbieterangaben werden vor der Veröffentlichung ergänzt."
       />
-      <section className="section">
-        <div className="dayova-container">
-          <div className="section-card mx-auto max-w-3xl p-6">
+      <section className="section marketing-legal-section">
+        <div className="dayova-container marketing-legal">
+          <div>
+            <span className="home-classic-section-eyebrow">
+              Anbieterangaben
+            </span>
             <h2>Kontakt</h2>
             <p className="mt-4 text-dayova-body text-muted">
               E-Mail:{" "}

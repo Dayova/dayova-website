@@ -29,7 +29,7 @@ export const studentPricing = {
     annual: {
       id: "annual",
       tabLabel: "Jährlich",
-      badge: "13 % günstiger",
+      badge: "13 % sparen",
       price: "12,99 €",
       period: "pro Monat im Jahresabo",
       supportingPrice: "155,88 € pro Jahr",

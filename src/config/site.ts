@@ -9,8 +9,12 @@ export const siteConfig = {
   },
   links: {
     instagram: "https://www.instagram.com/dayova/",
-    appStore: process.env.NEXT_PUBLIC_APP_STORE_URL || null,
-    googlePlay: process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL || null,
+    appStore:
+      process.env.NEXT_PUBLIC_APP_STORE_URL ||
+      "https://apps.apple.com/de/search?term=Dayova",
+    googlePlay:
+      process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ||
+      "https://play.google.com/store/search?q=Dayova&c=apps",
     linkedin: "https://www.linkedin.com/company/dayova",
     discord:
       process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/dayova",
@@ -28,9 +32,6 @@ export type ConversionMode = "follow" | "download";
 export function getConversionMode(date = new Date()): ConversionMode {
   const isLive =
     date.getTime() >= new Date(siteConfig.launch.date).getTime();
-  const hasStoreLinks = Boolean(
-    siteConfig.links.appStore && siteConfig.links.googlePlay,
-  );
 
-  return isLive && hasStoreLinks ? "download" : "follow";
+  return isLive ? "download" : "follow";
 }

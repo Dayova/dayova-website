@@ -5,7 +5,6 @@ import { blogArticles } from "@/content/blog";
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     { path: "", priority: 1 },
-    { path: "/app-start", priority: 0.8 },
     { path: "/blog", priority: 0.7 },
     { path: "/parents", priority: 0.8 },
     { path: "/schools", priority: 0.8 },

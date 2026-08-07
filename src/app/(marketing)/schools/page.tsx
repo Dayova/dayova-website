@@ -43,6 +43,7 @@ export default function SchoolsPage() {
   return (
     <>
       <PageHero
+        eyebrow="Für Schulen"
         title="Lernorganisation, die Schülerinnen und Schüler wirklich erreicht."
         description="Dayova verbindet Aufgaben, Prüfungstermine und persönliche Lernzeiten zu einem klaren Lernweg. Für Schulen entwickeln wir ein Angebot, das zum konkreten Einsatz passt."
         actions={
@@ -54,9 +55,9 @@ export default function SchoolsPage() {
           </>
         }
         aside={
-          <div className="section-card flex min-h-[460px] items-end justify-center overflow-hidden bg-brand-soft px-4 pt-8">
+          <div className="marketing-page-hero__visual marketing-page-hero__visual--collage">
             <Image
-              className="h-auto max-h-[440px] w-auto object-contain object-bottom"
+              className="marketing-page-hero__image"
               src="/images/dayova-screen-collage.png"
               alt="Mehrere Ansichten der Dayova App"
               width={964}
@@ -69,15 +70,21 @@ export default function SchoolsPage() {
 
       <section className="section" aria-labelledby="school-value">
         <div className="dayova-container">
-          <div className="max-w-2xl">
+          <div className="marketing-section-heading">
+            <span className="home-classic-section-eyebrow">
+              Im Schulalltag
+            </span>
             <h2 className="dayova-section-title" id="school-value">
               Ein gemeinsamer Rahmen, der individuelles Lernen übersichtlich
               macht.
             </h2>
           </div>
-          <div className="card-grid mt-6 md:grid-cols-3 lg:mt-8">
+          <div className="card-grid marketing-feature-grid">
             {schoolBenefits.map((benefit) => (
-              <article className="section-card p-6" key={benefit.title}>
+              <article
+                className="section-card marketing-feature-card"
+                key={benefit.title}
+              >
                 <IconBadge>
                   <DayovaIcon icon={benefit.icon} size={24} />
                 </IconBadge>
@@ -93,27 +100,30 @@ export default function SchoolsPage() {
 
       <section className="section">
         <div className="dayova-container">
-          <div className="grid overflow-hidden rounded-dayova-xl bg-dark-panel text-white lg:grid-cols-[1fr_0.8fr]">
-            <div className="p-6 lg:p-8">
-              <h2 className="dayova-section-title max-w-2xl text-white">
+          <div className="marketing-split-cta">
+            <div className="marketing-split-cta__copy">
+              <span className="home-classic-section-eyebrow home-classic-section-eyebrow--inverse">
+                Individuelles Angebot
+              </span>
+              <h2 className="dayova-section-title">
                 Preis und Umfang richten sich nach Ihrer Schule.
               </h2>
-              <p className="mt-4 max-w-2xl text-dayova-body text-white/70">
+              <p>
                 Wir klären gemeinsam Einsatzszenario, Anzahl der Schülerinnen
                 und Schüler sowie den gewünschten Umfang. Anschließend erhalten
                 Sie ein transparentes, individuelles Angebot.
               </p>
-              <div className="mt-6">
+              <div className="marketing-split-cta__action">
                 <ButtonLink href={offerHref}>
                   Angebot unverbindlich anfragen
                 </ButtonLink>
               </div>
             </div>
-            <div className="grid content-center gap-4 border-t border-white/10 p-6 lg:border-l lg:border-t-0 lg:p-8">
-              <p className="text-sm font-semibold text-white">
+            <div className="marketing-split-cta__aside">
+              <p className="marketing-split-cta__aside-title">
                 Bereits für die nächste Phase vorbereitet
               </p>
-              <p className="text-sm text-white/65">
+              <p>
                 Die Website-Architektur lässt sich später sauber um einen
                 geschützten Schul- und Lehrkräftezugang erweitern. Dieser Zugang
                 ist noch nicht Teil der aktuellen Website.

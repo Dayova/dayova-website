@@ -1,7 +1,12 @@
+import { InstagramIcon } from "@hugeicons/core-free-icons";
 import type { Metadata } from "next";
+import Image from "next/image";
+
 import { ArticleCard } from "@/components/blog/article-card";
-import { LaunchCta } from "@/components/launch-cta";
+import { StoreDownloadLink } from "@/components/store-download-link";
+import { DayovaIcon } from "@/components/ui/huge-icon";
 import { PageHero } from "@/components/ui/page-hero";
+import { siteConfig } from "@/config/site";
 import { blogArticles } from "@/content/blog";
 
 export const metadata: Metadata = {
@@ -14,24 +19,26 @@ export default function BlogPage() {
   return (
     <>
       <PageHero
+        eyebrow="Dayova Blog"
         title="Lernen wird leichter, wenn der nächste Schritt klar ist."
         description="Hier entsteht ein Ort für verständliche, konkrete Inhalte rund um Lernplanung, Prüfungsvorbereitung und den Alltag von Schülerinnen, Schülern und Eltern."
       />
 
-      <section className="section" aria-labelledby="articles-title">
+      <section
+        className="section blog-overview"
+        aria-labelledby="articles-title"
+      >
         <div className="dayova-container">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 className="dayova-section-title" id="articles-title">
-                Neue Beiträge
-              </h2>
-            </div>
-            <p className="max-w-md text-sm text-muted">
+          <div className="blog-overview__header">
+            <h2 className="dayova-section-title" id="articles-title">
+              Neue Beiträge
+            </h2>
+            <p>
               Konkrete Impulse, die dir helfen, deinen Lernalltag klarer zu
               planen und mit weniger Druck voranzukommen.
             </p>
           </div>
-          <div className="card-grid mt-6 lg:mt-8 lg:grid-cols-3">
+          <div className="card-grid blog-overview__grid">
             {blogArticles.map((article) => (
               <ArticleCard article={article} key={article.slug} />
             ))}
@@ -39,16 +46,54 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section
+        className="blog-overview-cta-section"
+        aria-labelledby="blog-download-title"
+      >
         <div className="dayova-container">
-          <div className="rounded-dayova-xl bg-dark-panel p-6 text-white lg:flex lg:items-center lg:justify-between lg:gap-8 lg:p-8">
-            <div>
-              <h2 className="dayova-section-title max-w-2xl text-white">
-                Folge Dayova und verpasse keinen neuen Beitrag.
+          <div className="blog-overview-cta">
+            <div className="blog-overview-cta__copy">
+              <span className="home-classic-section-eyebrow home-classic-section-eyebrow--inverse">
+                Dein nächster Schritt
+              </span>
+              <h2 id="blog-download-title" className="dayova-section-title">
+                Jetzt Dayova herunterladen
               </h2>
+              <p>
+                Hol dir deinen persönlichen Lernbegleiter und starte mit einem
+                Lernplan, der zu deinem Alltag passt.
+              </p>
+              <div className="blog-overview-cta__actions">
+                <StoreDownloadLink
+                  variant="secondary"
+                  className="blog-overview-cta__download"
+                >
+                  Dayova herunterladen
+                </StoreDownloadLink>
+                <a
+                  className="blog-overview-cta__instagram"
+                  href={siteConfig.links.instagram}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <DayovaIcon
+                    icon={InstagramIcon}
+                    size={20}
+                    aria-hidden="true"
+                  />
+                  Auf Instagram folgen
+                </a>
+              </div>
             </div>
-            <div className="mt-6 shrink-0 lg:mt-0">
-              <LaunchCta />
+
+            <div className="blog-overview-cta__visual" aria-hidden="true">
+              <Image
+                src="/images/dayova-screen-collage.png"
+                alt=""
+                width={964}
+                height={883}
+                sizes="(max-width: 767px) 90vw, (max-width: 1023px) 44vw, 520px"
+              />
             </div>
           </div>
         </div>

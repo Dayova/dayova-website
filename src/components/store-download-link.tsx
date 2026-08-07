@@ -17,26 +17,24 @@ const variants = {
   dark: "button-dark",
 } as const;
 
-function getStoreHref() {
+export function resolveStoreHref(userAgent: string) {
   const { appStore, googlePlay } = siteConfig.links;
-
-  if (!appStore && !googlePlay) {
-    return "/app-start";
-  }
-
-  const userAgent = navigator.userAgent;
   const isAppleDevice = /iPhone|iPad|iPod|Macintosh/i.test(userAgent);
   const isAndroidDevice = /Android/i.test(userAgent);
 
   if (isAppleDevice) {
-    return appStore || googlePlay || "/app-start";
+    return appStore;
   }
 
   if (isAndroidDevice) {
-    return googlePlay || appStore || "/app-start";
+    return googlePlay;
   }
 
-  return googlePlay || appStore || "/app-start";
+  return googlePlay;
+}
+
+function getStoreHref() {
+  return resolveStoreHref(navigator.userAgent);
 }
 
 function subscribe() {
@@ -49,7 +47,11 @@ export function StoreDownloadLink({
   variant = "primary",
   onClick,
 }: StoreDownloadLinkProps) {
-  const href = useSyncExternalStore(subscribe, getStoreHref, () => "/app-start");
+  const href = useSyncExternalStore(
+    subscribe,
+    getStoreHref,
+    () => siteConfig.links.googlePlay,
+  );
 
   return (
     <a

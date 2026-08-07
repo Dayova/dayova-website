@@ -2,6 +2,7 @@
 
 import { CheckmarkCircle02Icon } from "@hugeicons/core-free-icons";
 import { useState } from "react";
+import { StoreDownloadLink } from "@/components/store-download-link";
 import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { siteConfig } from "@/config/site";
@@ -20,9 +21,9 @@ export function StudentPricingCard() {
   )}`;
 
   return (
-    <article className="flex flex-col overflow-hidden rounded-dayova-xl border border-brand/55 bg-[linear-gradient(180deg,var(--dayova-brand-soft),var(--dayova-elevated)_34%)] p-4 shadow-card-strong lg:min-h-[480px] lg:p-6">
+    <article className="pricing-plan-card pricing-plan-card--student">
       <div
-        className="grid grid-cols-2 gap-1 rounded-full border border-line bg-elevated/80 p-1 shadow-[inset_0_1px_2px_rgba(36,64,80,0.05)]"
+        className="pricing-cycle-toggle"
         role="group"
         aria-label="Abrechnungszeitraum wählen"
       >
@@ -32,24 +33,14 @@ export function StudentPricingCard() {
           return (
             <button
               aria-pressed={isSelected}
-              className={`relative min-h-11 rounded-full px-4 text-sm font-semibold transition-all duration-200 ${
-                isSelected
-                  ? "bg-ink text-page shadow-[0_8px_18px_rgba(24,32,37,0.14)]"
-                  : "text-muted hover:bg-subtle hover:text-ink"
-              }`}
+              className={`pricing-cycle-toggle__option${isSelected ? " pricing-cycle-toggle__option--active" : ""}`}
               key={pricingOption.id}
               onClick={() => setBillingCycle(pricingOption.id)}
               type="button"
             >
               <span>{pricingOption.tabLabel}</span>
               {pricingOption.badge ? (
-                <span
-                  className={`ml-2 hidden rounded-full px-2 py-1 text-[10px] font-semibold sm:inline ${
-                    isSelected
-                      ? "bg-brand text-white"
-                      : "bg-brand-soft text-brand-deep"
-                  }`}
-                >
+                <span className="pricing-cycle-toggle__badge">
                   {pricingOption.badge}
                 </span>
               ) : null}
@@ -58,35 +49,26 @@ export function StudentPricingCard() {
         })}
       </div>
 
-      <div className="mt-4 flex flex-col">
+      <div className="pricing-plan-card__heading">
         <h2>{studentPricing.title}</h2>
 
         <div
-          className="pricing-value-enter mt-4 grid gap-2"
+          className="pricing-plan-card__price pricing-value-enter"
           key={option.id}
           aria-live="polite"
         >
-          <div className="flex flex-wrap items-end gap-x-3 gap-y-1">
-            <strong className="text-[40px] font-semibold leading-none tracking-[-0.04em] text-ink sm:text-[48px]">
-              {option.price}
-            </strong>
-            <span className="pb-1 text-sm text-muted">{option.period}</span>
+          <div className="pricing-plan-card__price-row">
+            <strong>{option.price}</strong>
+            <span>{option.period}</span>
           </div>
-          <div className="text-sm">
-            <span className="font-medium text-brand-deep">
-              {option.supportingPrice}
-            </span>
-          </div>
+          <p>{option.supportingPrice}</p>
         </div>
       </div>
 
-      <ul className="mt-4 grid gap-2">
+      <ul className="pricing-plan-card__benefits">
         {studentPricing.benefits.map((benefit) => (
-          <li className="flex gap-3 text-sm text-ink" key={benefit}>
-            <span
-              className="grid size-6 shrink-0 place-items-center text-brand-deep"
-              aria-hidden="true"
-            >
+          <li key={benefit}>
+            <span aria-hidden="true">
               <DayovaIcon icon={CheckmarkCircle02Icon} size={20} />
             </span>
             <span>{benefit}</span>
@@ -94,12 +76,18 @@ export function StudentPricingCard() {
         ))}
       </ul>
 
-      <div className="mt-auto pt-6">
+      <div className="pricing-plan-card__actions">
+        <StoreDownloadLink
+          className="pricing-plan-card__button"
+          variant="secondary"
+        >
+          14 Tage kostenlos testen
+        </StoreDownloadLink>
         <ButtonLink
-          className="w-full"
+          className="pricing-plan-card__button"
           dataPlanId={option.id}
           href={checkoutHref}
-          variant={option.id === "annual" ? "primary" : "secondary"}
+          variant="primary"
         >
           {option.ctaLabel}
         </ButtonLink>

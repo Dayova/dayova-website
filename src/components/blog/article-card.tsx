@@ -1,5 +1,7 @@
+import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 
+import { DayovaIcon } from "@/components/ui/huge-icon";
 import type { BlogArticle } from "@/content/blog";
 
 type ArticleCardProps = {
@@ -8,25 +10,30 @@ type ArticleCardProps = {
 
 export function ArticleCard({ article }: ArticleCardProps) {
   return (
-    <article className="section-card flex min-h-[320px] flex-col p-6">
-      <div className="flex items-center justify-between gap-4">
-        <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand-deep">
+    <article className="section-card blog-overview-card">
+      <div className="blog-overview-card__meta">
+        <span className="blog-overview-card__category">
           {article.category}
         </span>
-        <span className="text-xs text-muted">{article.readingTime}</span>
+        <span className="blog-overview-card__time">{article.readingTime}</span>
       </div>
-      <h2 className="mt-6 text-ink">
+      <h2>
         <Link className="blog-card-link" href={`/blog/${article.slug}`}>
           {article.title}
         </Link>
       </h2>
-      <p className="mt-4 text-dayova-body text-muted">{article.excerpt}</p>
-      <div className="mt-auto pt-8">
+      <p>{article.excerpt}</p>
+      <div className="blog-overview-card__footer">
         <Link
-          className="button-text inline-flex min-h-10 items-center"
+          className="button-secondary blog-overview-card__button"
           href={`/blog/${article.slug}`}
         >
           Beitrag lesen
+          <DayovaIcon
+            icon={ArrowRight02Icon}
+            size={18}
+            aria-hidden="true"
+          />
         </Link>
       </div>
     </article>
