@@ -11,7 +11,9 @@ export function SchoolPricingCard() {
 
   return (
     <article className="pricing-plan-card pricing-plan-card--school">
-      <span className="pricing-plan-card__badge">Für Schulen</span>
+      <span className="home-classic-section-eyebrow pricing-plan-card__badge">
+        Für Schulen
+      </span>
 
       <div className="pricing-plan-card__heading">
         <h2>{schoolPricing.title}</h2>

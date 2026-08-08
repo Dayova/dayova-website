@@ -21,7 +21,7 @@ export default function ImprintPage() {
             <span className="home-classic-section-eyebrow">
               Anbieterangaben
             </span>
-            <h2>Kontakt</h2>
+            <h2 className="dayova-section-title">Kontakt</h2>
             <p className="mt-4 text-dayova-body text-muted">
               E-Mail:{" "}
               <a className="font-medium text-ink underline" href={`mailto:${siteConfig.links.email}`}>

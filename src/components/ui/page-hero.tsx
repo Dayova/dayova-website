@@ -6,6 +6,7 @@ type PageHeroProps = {
   description: string;
   actions?: ReactNode;
   aside?: ReactNode;
+  className?: string;
 };
 
 export function PageHero({
@@ -14,10 +15,11 @@ export function PageHero({
   description,
   actions,
   aside,
+  className,
 }: PageHeroProps) {
   return (
     <section
-      className={`marketing-page-hero ${aside ? "marketing-page-hero--with-aside" : ""}`}
+      className={`marketing-page-hero${aside ? " marketing-page-hero--with-aside" : ""}${className ? ` ${className}` : ""}`}
     >
       <div
         className={`dayova-container marketing-page-hero__inner ${

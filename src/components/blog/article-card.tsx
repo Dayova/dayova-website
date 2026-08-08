@@ -15,7 +15,10 @@ export function ArticleCard({ article }: ArticleCardProps) {
         <span className="blog-overview-card__category">
           {article.category}
         </span>
-        <span className="blog-overview-card__time">{article.readingTime}</span>
+        <span className="blog-overview-card__time">
+          <time dateTime={article.publishedAtISO}>{article.publishedAt}</time>
+          <span>{article.readingTime}</span>
+        </span>
       </div>
       <h2>
         <Link className="blog-card-link" href={`/blog/${article.slug}`}>

@@ -56,6 +56,7 @@
   --dayova-radius-xl: 24px;
   --dayova-radius-2xl: 32px;
   --dayova-radius-3xl: 48px;
+  --dayova-radius-card: var(--dayova-radius-3xl);
   --dayova-radius-hero: 48px;
   --dayova-radius-phone: 56px;
   --dayova-radius-pill: 9999px;

@@ -10,18 +10,19 @@ import { siteConfig } from "@/config/site";
 import { blogArticles } from "@/content/blog";
 
 export const metadata: Metadata = {
-  title: "Blog – Klarer lernen mit Dayova",
+  title: "Blog – Lernen mit Plan und Rückmeldung",
   description:
-    "Praktische Gedanken zu Lernplanung, Prüfungsvorbereitung und einem Lernalltag mit mehr Orientierung.",
+    "Fundierte Beiträge zu Lernplanung, Lernpsychologie, Prüfungsvorbereitung und dem Schulalltag von Schülern, Eltern und Lehrkräften.",
 };
 
 export default function BlogPage() {
   return (
     <>
       <PageHero
+        className="blog-overview-hero"
         eyebrow="Dayova Blog"
-        title="Lernen wird leichter, wenn der nächste Schritt klar ist."
-        description="Hier entsteht ein Ort für verständliche, konkrete Inhalte rund um Lernplanung, Prüfungsvorbereitung und den Alltag von Schülerinnen, Schülern und Eltern."
+        title="Lernen mit Plan und Rückmeldung."
+        description="Verständliche Beiträge über Lernmethoden, Motivation und Prüfungsvorbereitung – für Schülerinnen, Schüler, Eltern und Lehrkräfte."
       />
 
       <section
@@ -30,12 +31,13 @@ export default function BlogPage() {
       >
         <div className="dayova-container">
           <div className="blog-overview__header">
+            <span className="home-classic-section-eyebrow">Neu im Blog</span>
             <h2 className="dayova-section-title" id="articles-title">
               Neue Beiträge
             </h2>
             <p>
-              Konkrete Impulse, die dir helfen, deinen Lernalltag klarer zu
-              planen und mit weniger Druck voranzukommen.
+              Jede Woche montags um 10 Uhr: fundierte Impulse, die Lernen
+              planbarer machen und unnötigen Druck reduzieren.
             </p>
           </div>
           <div className="card-grid blog-overview__grid">

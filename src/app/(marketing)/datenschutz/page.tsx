@@ -21,7 +21,7 @@ export default function PrivacyPage() {
             <span className="home-classic-section-eyebrow">
               Datenschutz bei Dayova
             </span>
-            <h2>Aktueller Stand</h2>
+            <h2 className="dayova-section-title">Aktueller Stand</h2>
             <p className="mt-4 text-dayova-body text-muted">
               Diese Website verwendet aktuell keine öffentliche
               Vorabregistrierung und führt noch keine Zahlungen durch. Das

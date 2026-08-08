@@ -62,7 +62,7 @@ export const pricingFaqs = [
   {
     question: "Wann beginnt die Zahlung?",
     answer:
-      "Nach der 14-tägigen Testphase. Alle Kosten werden vor dem Checkout klar angezeigt.",
+      "Die 14-tägige Testphase funktioniert ohne Zahlungsdaten und endet automatisch. Erst wenn du danach bewusst ein Abo auswählst und den Kauf bestätigst, beginnt die Zahlung.",
   },
   {
     question: "Kann ich später den Tarif wechseln?",

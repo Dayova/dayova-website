@@ -41,9 +41,10 @@ h1 {
 
 .dayova-section-title {
   font-size: var(--type-h1);
-  font-weight: 700;
-  line-height: var(--leading-heading);
-  letter-spacing: var(--tracking-heading);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
 }
 
 h2 {

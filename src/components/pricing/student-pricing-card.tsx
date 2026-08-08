@@ -5,7 +5,6 @@ import { useState } from "react";
 import { StoreDownloadLink } from "@/components/store-download-link";
 import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
-import { siteConfig } from "@/config/site";
 import {
   type BillingCycle,
   studentPricing,
@@ -16,9 +15,7 @@ export function StudentPricingCard() {
     studentPricing.defaultCycle,
   );
   const option = studentPricing.options[billingCycle];
-  const checkoutHref = `mailto:${siteConfig.links.email}?subject=${encodeURIComponent(
-    `Interesse am Dayova ${option.tabLabel}abo`,
-  )}`;
+  const checkoutHref = `/checkout?plan=${option.id}`;
 
   return (
     <article className="pricing-plan-card pricing-plan-card--student">

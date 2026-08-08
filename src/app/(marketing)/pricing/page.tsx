@@ -12,7 +12,26 @@ export const metadata: Metadata = {
     "Dayova im Jahresabo für 12,99 € pro Monat, im Monatsabo für 14,99 € und mit individuellen Angeboten für Schulen.",
 };
 
-export default function PricingPage() {
+const checkoutMessages = {
+  "invalid-plan": "Bitte wähle ein gültiges Monats- oder Jahresabo aus.",
+  unavailable:
+    "Der Bezahlvorgang ist gerade noch nicht verfügbar. Bitte versuche es später erneut.",
+  "invalid-configuration":
+    "Der Bezahlvorgang konnte nicht sicher gestartet werden. Bitte versuche es später erneut.",
+} as const;
+
+export default async function PricingPage({
+  searchParams,
+}: PageProps<"/pricing">) {
+  const query = await searchParams;
+  const checkoutState = Array.isArray(query.checkout)
+    ? query.checkout[0]
+    : query.checkout;
+  const checkoutMessage =
+    checkoutState && checkoutState in checkoutMessages
+      ? checkoutMessages[checkoutState as keyof typeof checkoutMessages]
+      : null;
+
   return (
     <>
       <section
@@ -29,6 +48,11 @@ export default function PricingPage() {
               Teste Dayova 14 Tage kostenlos und wähle danach das Abo, das zu
               deinem Lernalltag passt.
             </p>
+            {checkoutMessage ? (
+              <p className="pricing-page__notice" role="alert">
+                {checkoutMessage}
+              </p>
+            ) : null}
           </div>
 
           <div className="pricing-plans-layout">
@@ -37,8 +61,8 @@ export default function PricingPage() {
               <SchoolPricingCard />
             </div>
             <p className="pricing-plans-note">
-              Vor dem Abschluss werden Laufzeit, Gesamtpreis und Kündigung klar
-              angezeigt. Die Testphase endet nicht überraschend.
+              Vor dem Abschluss werden Laufzeit, Gesamtpreis und Kündigung
+              verständlich angezeigt. Die Testphase endet nicht überraschend.
             </p>
           </div>
         </div>

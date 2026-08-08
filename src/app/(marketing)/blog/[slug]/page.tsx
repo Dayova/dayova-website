@@ -28,6 +28,12 @@ export async function generateMetadata({
   return {
     title: `${article.title} – Dayova Blog`,
     description: article.excerpt,
+    openGraph: {
+      type: "article",
+      title: article.title,
+      description: article.excerpt,
+      publishedTime: article.publishedAtISO,
+    },
   };
 }
 
@@ -51,7 +57,9 @@ export default async function BlogArticlePage({
             </Link>
             <div className="blog-article-meta" aria-label="Beitragsinformationen">
               <span>{article.category}</span>
-              <span>{article.publishedAt}</span>
+              <time dateTime={article.publishedAtISO}>
+                {article.publishedAt}, 10:00 Uhr
+              </time>
               <span>{article.readingTime} Lesezeit</span>
             </div>
             <h1 id="article-title">{article.title}</h1>

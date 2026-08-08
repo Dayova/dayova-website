@@ -7,7 +7,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 export function Header() {
   return (
     <header className="pointer-events-none sticky top-4 z-50 pt-4">
-      <div className="dayova-container pointer-events-auto flex min-h-20 items-center justify-between gap-4 rounded-dayova-xl border border-line bg-elevated/90 px-4 shadow-card backdrop-blur-xl sm:min-h-[88px] sm:px-6">
+      <div className="dayova-container pointer-events-auto flex min-h-20 items-center justify-between gap-4 rounded-dayova-card border border-line bg-elevated/90 px-4 shadow-card backdrop-blur-xl sm:min-h-[88px] sm:px-6">
         <Link
           className="inline-flex rounded-dayova-sm"
           href="/"

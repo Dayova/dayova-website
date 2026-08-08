@@ -30,21 +30,23 @@ not be placed inside that marketing route.
 
 Pricing content is typed in `src/content/pricing.ts`. The student offer uses one
 interactive card with the stable billing IDs `annual` and `monthly`; its CTA
-renders the active cycle as a matching `data-plan-id`. At the moment, the CTA
-opens a contact email because the payment provider, tax model, and app-store
-compliance decision are not final.
+renders the active cycle as a matching `data-plan-id`. The student CTA now
+starts a server-validated RevenueCat Web Purchase Link. The current website has
+no production learner login, so anonymous checkout and a short-lived RevenueCat
+Redemption Link provide the secure handoff to the authenticated mobile app
+account, including the approved parent-payer flow.
 
-When checkout is approved:
+Checkout follows these boundaries:
 
 1. Keep the billing IDs and unified student pricing card unchanged.
-2. Add a server-side checkout adapter for the selected provider.
-3. Replace the email destination with a route handler or server action.
+2. Resolve RevenueCat package IDs only on the server.
+3. Validate the billing cycle in the `/checkout` route handler before redirecting.
 4. Validate prices on the server; never trust the browser plan price.
-5. Add provider-specific environment variables and update the privacy policy.
+5. Configure production and sandbox purchase links separately and complete the
+   privacy-policy review before launch.
 
-This keeps payment infrastructure outside the presentation components and
-allows Stripe, a Merchant of Record, or another provider to be selected without
-redesigning the page.
+Implementation and RevenueCat dashboard requirements are documented in
+`docs/revenuecat-checkout.md`.
 
 ## Content and design system
 

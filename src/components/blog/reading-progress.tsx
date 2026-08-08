@@ -9,6 +9,7 @@ function clamp(value: number) {
 
 export function ReadingProgress() {
   const [progress, setProgress] = useState(0);
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     const updateProgress = () => {
@@ -20,17 +21,19 @@ export function ReadingProgress() {
         return;
       }
 
-      const articleTop = article.offsetTop;
-      const readableDistance = Math.max(
-        1,
-        article.offsetHeight - window.innerHeight * 0.55,
-      );
+      const articleRect = article.getBoundingClientRect();
+      const articleTop = window.scrollY + articleRect.top;
+      const articleBottom = articleTop + article.offsetHeight;
+      const readingStart = articleTop - window.innerHeight * 0.2;
+      const readingEnd = articleBottom - window.innerHeight * 0.72;
+      const readableDistance = Math.max(1, readingEnd - readingStart);
       const nextProgress =
-        ((window.scrollY - articleTop + window.innerHeight * 0.22) /
-          readableDistance) *
-        100;
+        ((window.scrollY - readingStart) / readableDistance) * 100;
 
       setProgress(clamp(nextProgress));
+      setIsActive(
+        articleRect.top < window.innerHeight && articleRect.bottom > 112,
+      );
     };
 
     updateProgress();
@@ -47,14 +50,18 @@ export function ReadingProgress() {
 
   return (
     <aside
-      className="blog-reading-progress"
-      aria-label={`${roundedProgress} Prozent des Beitrags gelesen`}
+      className={`blog-reading-progress${isActive ? " blog-reading-progress--active" : ""}`}
+      aria-label="Lesefortschritt"
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={roundedProgress}
+      role="progressbar"
       style={
         { "--reading-progress": `${progress}%` } as CSSProperties
       }
     >
       <span className="blog-reading-progress__track" aria-hidden="true">
-        <span />
+        <span className="blog-reading-progress__fill" />
       </span>
     </aside>
   );

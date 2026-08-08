@@ -3,17 +3,19 @@
 import { MenuTwoLineIcon } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { primaryNavigation } from "@/content/navigation";
 
 export function HeaderNavigation() {
   const detailsRef = useRef<HTMLDetailsElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const closeNavigation = () => {
     detailsRef.current?.removeAttribute("open");
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -21,10 +23,15 @@ export function HeaderNavigation() {
   }, [pathname]);
 
   return (
-    <details className="group relative" ref={detailsRef}>
+    <details
+      className="group relative"
+      ref={detailsRef}
+      onToggle={(event) => setIsOpen(event.currentTarget.open)}
+    >
       <summary
         className="grid size-12 cursor-pointer list-none place-items-center rounded-dayova-pill bg-ink text-page transition-colors hover:bg-brand hover:text-white"
-        aria-label="Navigation öffnen"
+        aria-expanded={isOpen}
+        aria-label={isOpen ? "Navigation schließen" : "Navigation öffnen"}
       >
         <DayovaIcon
           icon={MenuTwoLineIcon}
