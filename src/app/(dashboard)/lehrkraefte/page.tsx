@@ -8,6 +8,7 @@ import {
   Metric,
   PageHeading,
   Panel,
+  PrimaryAction,
   ProgressBar,
   RiskBadge,
   TextAction,
@@ -28,6 +29,7 @@ export default function TeacherDashboardPage() {
         eyebrow="Startseite"
         title={`Guten Morgen, ${overview.teacherName}`}
         description="Hier sehen Sie, was heute wichtig ist und wo Ihre Klassen Unterstützung benötigen."
+        actions={<PrimaryAction href="/lehrkraefte/assistent">Unterricht planen</PrimaryAction>}
       />
 
       <section className="teacher-metric-grid" aria-label="Übersicht">

@@ -1,5 +1,6 @@
 import {
   Analytics01Icon,
+  AiMagicIcon,
   BookOpen01Icon,
   Calendar01Icon,
   Home01Icon,
@@ -21,6 +22,11 @@ export const dashboardNavigation: DashboardNavigationItem[] = [
     label: "Startseite",
     href: "/lehrkraefte",
     icon: Home01Icon,
+  },
+  {
+    label: "Unterrichtsassistent",
+    href: "/lehrkraefte/assistent",
+    icon: AiMagicIcon,
   },
   {
     label: "Klassen",

@@ -1,20 +1,21 @@
-import {
-  Notification01Icon,
-  Search01Icon,
-} from "@hugeicons/core-free-icons";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Brand } from "@/components/brand";
-import { DayovaIcon } from "@/components/ui/huge-icon";
 import { DashboardNavigation } from "./dashboard-navigation";
+import { DashboardNotificationLink } from "./dashboard-notification-link";
+import {
+  GlobalDashboardSearch,
+  type DashboardSearchItem,
+} from "./global-dashboard-search";
 import type { DashboardSession } from "../types";
 
 type DashboardShellProps = {
   session: DashboardSession;
   children: ReactNode;
+  searchItems: DashboardSearchItem[];
 };
 
-export function DashboardShell({ session, children }: DashboardShellProps) {
+export function DashboardShell({ session, children, searchItems }: DashboardShellProps) {
   return (
     <div className="teacher-app-shell">
       <aside className="teacher-sidebar">
@@ -40,18 +41,8 @@ export function DashboardShell({ session, children }: DashboardShellProps) {
 
       <div className="teacher-app-content">
         <header className="teacher-topbar">
-          <div className="teacher-search">
-            <DayovaIcon icon={Search01Icon} size={18} />
-            <span>Klassen und Schüler:innen suchen</span>
-          </div>
-          <Link
-            href="/lehrkraefte/benachrichtigungen"
-            className="teacher-icon-button"
-            aria-label="Benachrichtigungen anzeigen"
-          >
-            <DayovaIcon icon={Notification01Icon} size={20} />
-            <span className="teacher-notification-dot" />
-          </Link>
+          <GlobalDashboardSearch items={searchItems} />
+          <DashboardNotificationLink />
           <span className="teacher-topbar-school">Albert-Einstein-Schule</span>
         </header>
 

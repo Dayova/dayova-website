@@ -5,6 +5,7 @@ import {
   PrimaryAction,
   StatusBadge,
 } from "@/features/teacher-dashboard/components/dashboard-ui";
+import { TeacherInvitePanel } from "@/features/teacher-dashboard/components/teacher-invite-panel";
 import {
   getDemoDashboardSession,
   getTeachingGroupsForSession,
@@ -34,6 +35,7 @@ export default function SchoolAdministrationPage() {
           <div className="teacher-callout"><strong>Rollenbasierter Zugriff</strong><p>Lehrkräfte sehen nur ihre Unterrichtsgruppen. Schuladministrationen verwalten schulweite Zuordnungen.</p></div>
         </Panel>
       </div>
+      <TeacherInvitePanel />
     </>
   );
 }
