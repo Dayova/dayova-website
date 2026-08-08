@@ -1,8 +1,10 @@
+import { ArrowLeft02Icon } from "@hugeicons/core-free-icons";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ReadingProgress } from "@/components/blog/reading-progress";
+import { DayovaIcon } from "@/components/ui/huge-icon";
 import { blogArticles, getBlogArticle } from "@/content/blog";
 
 type BlogArticlePageProps = {
@@ -53,12 +55,18 @@ export default async function BlogArticlePage({
         <div className="dayova-container">
           <div className="blog-article-hero__inner">
             <Link className="blog-article-back" href="/blog">
-              ← Zur Blogübersicht
+              <DayovaIcon
+                icon={ArrowLeft02Icon}
+                size={18}
+                strokeWidth={1.9}
+                aria-hidden="true"
+              />
+              Zur Blogübersicht
             </Link>
             <div className="blog-article-meta" aria-label="Beitragsinformationen">
               <span>{article.category}</span>
               <time dateTime={article.publishedAtISO}>
-                {article.publishedAt}, 10:00 Uhr
+                {article.publishedAt}
               </time>
               <span>{article.readingTime} Lesezeit</span>
             </div>

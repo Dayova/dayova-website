@@ -22,24 +22,11 @@ export default function BlogPage() {
         className="blog-overview-hero"
         eyebrow="Dayova Blog"
         title="Lernen mit Plan und Rückmeldung."
-        description="Verständliche Beiträge über Lernmethoden, Motivation und Prüfungsvorbereitung – für Schülerinnen, Schüler, Eltern und Lehrkräfte."
+        description="Jeden Montag erscheinen fundierte Beiträge zu Lernmethoden, Motivation und Prüfungsvorbereitung – für Schülerinnen, Schüler, Eltern und Lehrkräfte."
       />
 
-      <section
-        className="section blog-overview"
-        aria-labelledby="articles-title"
-      >
+      <section className="section blog-overview" aria-label="Blogbeiträge">
         <div className="dayova-container">
-          <div className="blog-overview__header">
-            <span className="home-classic-section-eyebrow">Neu im Blog</span>
-            <h2 className="dayova-section-title" id="articles-title">
-              Neue Beiträge
-            </h2>
-            <p>
-              Jede Woche montags um 10 Uhr: fundierte Impulse, die Lernen
-              planbarer machen und unnötigen Druck reduzieren.
-            </p>
-          </div>
           <div className="card-grid blog-overview__grid">
             {blogArticles.map((article) => (
               <ArticleCard article={article} key={article.slug} />

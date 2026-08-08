@@ -1,9 +1,13 @@
 import { blogArticles2025 } from "./blog/articles-2025";
 import { blogArticlesEarly2026 } from "./blog/articles-2026-early";
 import { blogArticlesLate2026 } from "./blog/articles-2026-late";
+import { articleDeepDives } from "./blog/article-deep-dives";
+import { articlePracticeSections } from "./blog/article-practice";
 import type { BlogArticle } from "./blog/types";
 
 export type { BlogArticle } from "./blog/types";
+
+const BLOG_READING_WORDS_PER_MINUTE = 90;
 
 function calculateReadingTime(article: BlogArticle) {
   const text = [
@@ -19,7 +23,10 @@ function calculateReadingTime(article: BlogArticle) {
   ].join(" ");
   const wordCount = text.trim().split(/\s+/u).length;
 
-  return `${Math.max(3, Math.ceil(wordCount / 150))} Min.`;
+  return `${Math.max(
+    4,
+    Math.ceil(wordCount / BLOG_READING_WORDS_PER_MINUTE),
+  )} Min.`;
 }
 
 export const blogArticles: readonly BlogArticle[] = [
@@ -27,10 +34,21 @@ export const blogArticles: readonly BlogArticle[] = [
   ...blogArticlesEarly2026,
   ...blogArticles2025,
 ]
-  .map((article) => ({
-    ...article,
-    readingTime: calculateReadingTime(article),
-  }))
+  .map((article): BlogArticle => {
+    const enrichedArticle: BlogArticle = {
+      ...article,
+      sections: [
+        ...article.sections,
+        ...(articleDeepDives[article.slug] ?? []),
+        ...(articlePracticeSections[article.slug] ?? []),
+      ],
+    };
+
+    return {
+      ...enrichedArticle,
+      readingTime: calculateReadingTime(enrichedArticle),
+    };
+  })
   .sort(
     (articleA, articleB) =>
       new Date(articleB.publishedAtISO).getTime() -

@@ -42,6 +42,41 @@
   --text-dayova-label--line-height: var(--leading-label);
 }
 
+/*
+ * Figma-like 60% corner smoothing. Browsers without `corner-shape` keep the
+ * 34px border-radius fallback from the shared design tokens.
+ */
+:where(
+  .rounded-dayova-card,
+  .marketing-page-hero__visual,
+  .marketing-feature-card,
+  .marketing-cta-panel,
+  .marketing-split-cta,
+  .marketing-faq-item,
+  .blog-overview-card,
+  .blog-overview-cta,
+  .home-classic-metrics,
+  .home-classic-about__visual,
+  .home-classic-feature-card,
+  .home-classic-advantage__visual,
+  .home-classic-process-step__button,
+  .home-classic-download,
+  .home-classic-contact__panel,
+  .home-classic-faq__visual,
+  .pricing-plan-card,
+  .dayova-benefits-panel,
+  .section-card,
+  .waitlist-panel,
+  .faq-lead-card,
+  .home-v2-product,
+  .home-v2-planner,
+  .home-v2-trust,
+  .home-launch-panel,
+  .parents-comparison
+) {
+  corner-shape: var(--dayova-corner-shape);
+}
+
 .blog-card-link {
   color: inherit;
   text-decoration: none;
@@ -404,7 +439,7 @@
 }
 
 .blog-overview-hero {
-  padding-block: var(--space-6) var(--space-8);
+  padding-block: var(--space-12) var(--space-8);
 }
 
 .blog-overview-hero .marketing-page-hero__copy {
@@ -423,23 +458,6 @@
   max-width: 760px;
   font-size: clamp(16px, 1.4vw, 18px);
   line-height: 1.65;
-}
-
-.blog-overview__header {
-  display: grid;
-  gap: var(--space-4);
-  margin-bottom: clamp(var(--space-8), 5vw, var(--space-12));
-}
-
-.blog-overview__header .dayova-section-title {
-  margin: 0;
-}
-
-.blog-overview__header p {
-  max-width: 560px;
-  margin: 0;
-  color: var(--dayova-muted);
-  line-height: 1.7;
 }
 
 .blog-overview__grid {
@@ -463,14 +481,15 @@
 
 .blog-overview-card__category {
   display: inline-flex;
-  min-height: 32px;
+  min-height: 38px;
   align-items: center;
-  padding-inline: var(--space-4);
+  padding: 10px var(--space-6);
   border-radius: var(--dayova-radius-pill);
   background: var(--dayova-brand-soft);
   color: var(--dayova-brand-deep);
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
 }
 
 .blog-overview-card__time {
@@ -595,7 +614,7 @@
 
 @media (max-width: 767px) {
   .blog-overview-hero {
-    padding-block: var(--space-4) var(--space-6);
+    padding-block: var(--space-12) var(--space-6);
   }
 
   .blog-overview-hero .marketing-page-hero__copy h1 {
@@ -618,15 +637,6 @@
 }
 
 @media (min-width: 768px) {
-  .blog-overview__header {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.6fr);
-    align-items: end;
-  }
-
-  .blog-overview__header p {
-    justify-self: end;
-  }
-
   .blog-overview-cta {
     grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
   }
@@ -656,6 +666,9 @@
 }
 
 .blog-article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
   color: var(--dayova-muted);
   font-size: 14px;
   font-weight: 600;
@@ -797,7 +810,7 @@
   position: fixed;
   top: clamp(152px, 18vh, 196px);
   right: clamp(12px, 1.8vw, 28px);
-  bottom: clamp(28px, 7vh, 72px);
+  bottom: var(--reading-progress-bottom, clamp(28px, 7vh, 72px));
   z-index: 80;
   width: 12px;
   opacity: 0;
@@ -834,6 +847,22 @@
   transition: height 120ms linear;
 }
 
+.blog-reading-progress__thumb {
+  position: absolute;
+  top: var(--reading-progress);
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  border: 3px solid var(--dayova-elevated);
+  border-radius: 50%;
+  background: var(--dayova-brand);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--dayova-brand) 55%, transparent),
+    0 3px 10px color-mix(in srgb, var(--dayova-brand) 24%, transparent);
+  transform: translate(-50%, -50%);
+  transition: top 120ms linear;
+}
+
 @media (max-width: 599px) {
   .blog-article-hero .dayova-container,
   .blog-article-section .dayova-container {
@@ -860,13 +889,19 @@
 
   .blog-reading-progress {
     top: 128px;
-    right: 3px;
-    bottom: var(--space-4);
+    right: 8px;
+    bottom: var(--reading-progress-bottom, var(--space-4));
     width: 8px;
   }
 
   .blog-reading-progress__track {
     width: 2px;
+  }
+
+  .blog-reading-progress__thumb {
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
   }
 }
 
@@ -1248,19 +1283,38 @@
 .home-classic-advantage__label {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-4);
   color: var(--dayova-brand-deep);
+  font-size: 14px;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .home-classic-advantage__icon {
-  width: 46px;
-  height: 46px;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
   display: inline-grid;
   place-items: center;
+  border: 1px solid var(--dayova-line);
   border-radius: var(--dayova-radius-xl);
-  background: var(--dayova-brand-soft);
-  color: var(--dayova-brand);
+  background: var(--dayova-surface);
+  color: var(--dayova-ink);
+  box-shadow: var(--dayova-shadow);
+  transition:
+    transform 240ms var(--dayova-ease),
+    border-color 240ms var(--dayova-ease),
+    background-color 240ms var(--dayova-ease),
+    color 240ms var(--dayova-ease);
+}
+
+@media (hover: hover) {
+  .home-classic-advantage:hover .home-classic-advantage__icon {
+    border-color: transparent;
+    background: var(--dayova-dark-panel);
+    color: white;
+    transform: scale(1.12);
+  }
 }
 
 .home-classic-advantage__copy h3 {
@@ -2084,9 +2138,11 @@
   height: 64px;
   display: grid;
   place-items: center;
-  border-radius: var(--dayova-radius-pill);
-  background: var(--dayova-brand-soft);
-  color: var(--dayova-brand);
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-xl);
+  background: var(--dayova-surface);
+  color: var(--dayova-ink);
+  box-shadow: var(--dayova-shadow);
 }
 
 .checkout-result-page .dayova-hero-claim {
@@ -2449,9 +2505,28 @@ img {
   margin-inline: auto;
 }
 
+.dayova-icon-card {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-xl);
+  background: var(--dayova-surface);
+  color: var(--dayova-ink);
+  box-shadow: var(--dayova-shadow);
+}
+
+.dayova-icon-card--inverse {
+  border-color: color-mix(in srgb, white 28%, transparent);
+  background: color-mix(in srgb, white 12%, transparent);
+  color: white;
+}
+
 .section,
 .dayova-section {
-  padding-block: var(--space-12);
+  padding-block: var(--dayova-section);
 }
 
 .section-inner {
@@ -3648,11 +3723,6 @@ img {
 @media (min-width: 1024px) {
   .dayova-container {
     width: min(calc(100% - (var(--space-8) * 2)), var(--dayova-container));
-  }
-
-  .section,
-  .dayova-section {
-    padding-block: var(--space-16);
   }
 
   .section-heading {

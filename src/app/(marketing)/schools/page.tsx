@@ -86,7 +86,7 @@ export default function SchoolsPage() {
                 key={benefit.title}
               >
                 <IconBadge>
-                  <DayovaIcon icon={benefit.icon} size={24} />
+                  <DayovaIcon icon={benefit.icon} size={30} strokeWidth={1.8} />
                 </IconBadge>
                 <h3 className="mt-6">{benefit.title}</h3>
                 <p className="mt-4 text-dayova-body text-muted">

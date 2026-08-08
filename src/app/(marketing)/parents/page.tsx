@@ -178,7 +178,7 @@ export default function ParentsPage() {
                 key={benefit.title}
               >
                 <IconBadge>
-                  <DayovaIcon icon={benefit.icon} size={24} />
+                  <DayovaIcon icon={benefit.icon} size={30} strokeWidth={1.8} />
                 </IconBadge>
                 <h3>{benefit.title}</h3>
                 <p>{benefit.text}</p>
@@ -216,7 +216,12 @@ export default function ParentsPage() {
                 <div className="home-classic-advantage__copy">
                   <span className="home-classic-advantage__label">
                     <span className="home-classic-advantage__icon">
-                      <DayovaIcon icon={item.icon} size={22} aria-hidden="true" />
+                      <DayovaIcon
+                        icon={item.icon}
+                        size={30}
+                        strokeWidth={1.8}
+                        aria-hidden="true"
+                      />
                     </span>
                     {item.label}
                   </span>

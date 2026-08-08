@@ -263,7 +263,8 @@ export function HomeAdvantagesSection() {
                   <span className="home-classic-advantage__icon">
                     <DayovaIcon
                       icon={advantage.icon}
-                      size={22}
+                      size={30}
+                      strokeWidth={1.8}
                       aria-hidden="true"
                     />
                   </span>

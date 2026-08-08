@@ -10,6 +10,7 @@ function clamp(value: number) {
 export function ReadingProgress() {
   const [progress, setProgress] = useState(0);
   const [isActive, setIsActive] = useState(false);
+  const [trackBottom, setTrackBottom] = useState(28);
 
   useEffect(() => {
     const updateProgress = () => {
@@ -29,10 +30,27 @@ export function ReadingProgress() {
       const readableDistance = Math.max(1, readingEnd - readingStart);
       const nextProgress =
         ((window.scrollY - readingStart) / readableDistance) * 100;
+      const isMobile = window.innerWidth < 600;
+      const trackTop = isMobile
+        ? 128
+        : Math.min(196, Math.max(152, window.innerHeight * 0.18));
+      const defaultBottom = isMobile
+        ? 16
+        : Math.min(72, Math.max(28, window.innerHeight * 0.07));
+      const articleInset = isMobile ? 16 : 24;
+      const articleBoundBottom =
+        window.innerHeight - articleRect.bottom + articleInset;
+      const maximumBottom = Math.max(
+        defaultBottom,
+        window.innerHeight - trackTop - 24,
+      );
 
       setProgress(clamp(nextProgress));
+      setTrackBottom(
+        Math.min(maximumBottom, Math.max(defaultBottom, articleBoundBottom)),
+      );
       setIsActive(
-        articleRect.top < window.innerHeight && articleRect.bottom > 112,
+        articleRect.top < window.innerHeight && articleRect.bottom > trackTop + 24,
       );
     };
 
@@ -57,11 +75,15 @@ export function ReadingProgress() {
       aria-valuenow={roundedProgress}
       role="progressbar"
       style={
-        { "--reading-progress": `${progress}%` } as CSSProperties
+        {
+          "--reading-progress": `${progress}%`,
+          "--reading-progress-bottom": `${trackBottom}px`,
+        } as CSSProperties
       }
     >
       <span className="blog-reading-progress__track" aria-hidden="true">
         <span className="blog-reading-progress__fill" />
+        <span className="blog-reading-progress__thumb" />
       </span>
     </aside>
   );

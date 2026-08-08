@@ -8,9 +8,7 @@ type IconBadgeProps = {
 export function IconBadge({ children, inverse = false }: IconBadgeProps) {
   return (
     <span
-      className={`grid size-12 place-items-center rounded-dayova-sm text-lg font-semibold ${
-        inverse ? "bg-white/12 text-white" : "bg-brand-soft text-brand-deep"
-      }`}
+      className={`dayova-icon-card${inverse ? " dayova-icon-card--inverse" : ""}`}
       aria-hidden="true"
     >
       {children}
