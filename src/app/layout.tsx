@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./tokens.css";
 import "./globals.css";
 import "./typography.css";
@@ -48,6 +49,24 @@ export const metadata: Metadata = {
   },
 };
 
+const themeInitializer = `
+(() => {
+  const root = document.documentElement;
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  let savedTheme = null;
+
+  try {
+    savedTheme = window.localStorage.getItem("dayova-theme");
+  } catch {}
+
+  const isDark =
+    savedTheme === "dark" || (savedTheme !== "light" && systemPrefersDark);
+
+  root.classList.toggle("dark", isDark);
+  root.dataset.theme = isDark ? "dark" : "light";
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -60,7 +79,12 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script id="dayova-theme" strategy="beforeInteractive">
+          {themeInitializer}
+        </Script>
+      </body>
     </html>
   );
 }
