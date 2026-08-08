@@ -464,6 +464,67 @@
   gap: var(--space-6);
 }
 
+.blog-topic-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: clamp(var(--space-8), 5vw, var(--space-12));
+}
+
+.blog-topic-filter__button {
+  min-height: 38px;
+  padding: 10px var(--space-6);
+  border: 1px solid transparent;
+  border-radius: var(--dayova-radius-pill);
+  background: var(--dayova-brand-soft);
+  color: var(--dayova-brand-deep);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    border-color 180ms var(--dayova-ease),
+    background-color 180ms var(--dayova-ease),
+    color 180ms var(--dayova-ease),
+    transform 180ms var(--dayova-ease);
+}
+
+.blog-topic-filter__button:hover {
+  border-color: color-mix(in srgb, var(--dayova-brand) 42%, transparent);
+  transform: translateY(-1px);
+}
+
+.blog-topic-filter__button--active {
+  border-color: var(--dayova-brand);
+  background: var(--dayova-brand);
+  color: white;
+}
+
+@media (max-width: 599px) {
+  .blog-topic-filter {
+    width: calc(100% + (var(--space-4) * 2));
+    margin-inline: calc(var(--space-4) * -1);
+    padding: 0 var(--space-4) var(--space-1);
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-padding-inline: var(--space-4);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .blog-topic-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blog-topic-filter__button {
+    flex: 0 0 auto;
+  }
+}
+
 .blog-overview-card {
   min-height: 390px;
   display: flex;

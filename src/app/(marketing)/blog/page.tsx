@@ -2,7 +2,7 @@ import { InstagramIcon } from "@hugeicons/core-free-icons";
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import { ArticleCard } from "@/components/blog/article-card";
+import { ArticleFilter } from "@/components/blog/article-filter";
 import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { PageHero } from "@/components/ui/page-hero";
@@ -27,11 +27,17 @@ export default function BlogPage() {
 
       <section className="section blog-overview" aria-label="Blogbeiträge">
         <div className="dayova-container">
-          <div className="card-grid blog-overview__grid">
-            {blogArticles.map((article) => (
-              <ArticleCard article={article} key={article.slug} />
-            ))}
-          </div>
+          <ArticleFilter
+            articles={blogArticles.map((article) => ({
+              category: article.category,
+              excerpt: article.excerpt,
+              publishedAt: article.publishedAt,
+              publishedAtISO: article.publishedAtISO,
+              readingTime: article.readingTime,
+              slug: article.slug,
+              title: article.title,
+            }))}
+          />
         </div>
       </section>
 

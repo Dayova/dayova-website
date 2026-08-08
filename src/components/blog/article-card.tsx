@@ -4,8 +4,19 @@ import Link from "next/link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import type { BlogArticle } from "@/content/blog";
 
+export type ArticleCardArticle = Pick<
+  BlogArticle,
+  | "category"
+  | "excerpt"
+  | "publishedAt"
+  | "publishedAtISO"
+  | "readingTime"
+  | "slug"
+  | "title"
+>;
+
 type ArticleCardProps = {
-  article: BlogArticle;
+  article: ArticleCardArticle;
 };
 
 export function ArticleCard({ article }: ArticleCardProps) {
