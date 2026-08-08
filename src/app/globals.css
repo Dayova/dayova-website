@@ -464,64 +464,132 @@
   gap: var(--space-6);
 }
 
-.blog-topic-filter {
+.blog-topic-filter-row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-2);
+  justify-content: flex-end;
   margin-bottom: clamp(var(--space-8), 5vw, var(--space-12));
 }
 
-.blog-topic-filter__button {
-  min-height: 38px;
-  padding: 10px var(--space-6);
-  border: 1px solid transparent;
-  border-radius: var(--dayova-radius-pill);
-  background: var(--dayova-brand-soft);
-  color: var(--dayova-brand-deep);
-  font: inherit;
-  font-size: 14px;
+.blog-topic-filter {
+  width: min(100%, 340px);
+  position: relative;
+  z-index: 12;
+}
+
+.blog-topic-filter__trigger {
+  width: 100%;
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-4);
+  list-style: none;
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-xl);
+  background: var(--dayova-elevated);
+  color: var(--dayova-ink);
+  box-shadow: var(--dayova-shadow);
+  font-size: 15px;
   font-weight: 600;
-  line-height: 1;
   cursor: pointer;
   transition:
     border-color 180ms var(--dayova-ease),
-    background-color 180ms var(--dayova-ease),
-    color 180ms var(--dayova-ease),
-    transform 180ms var(--dayova-ease);
+    box-shadow 180ms var(--dayova-ease),
+    background-color 180ms var(--dayova-ease);
 }
 
-.blog-topic-filter__button:hover {
-  border-color: color-mix(in srgb, var(--dayova-brand) 42%, transparent);
-  transform: translateY(-1px);
+.blog-topic-filter__trigger::-webkit-details-marker {
+  display: none;
 }
 
-.blog-topic-filter__button--active {
-  border-color: var(--dayova-brand);
-  background: var(--dayova-brand);
-  color: white;
+.blog-topic-filter__icon {
+  color: var(--dayova-muted);
 }
 
-@media (max-width: 599px) {
+.blog-topic-filter__arrow {
+  color: var(--dayova-ink);
+  transition: transform 180ms var(--dayova-ease);
+}
+
+.blog-topic-filter[open] .blog-topic-filter__arrow {
+  transform: rotate(180deg);
+}
+
+.blog-topic-filter[open] .blog-topic-filter__trigger {
+  border-color: color-mix(in srgb, var(--dayova-ink) 48%, var(--dayova-line));
+  box-shadow: var(--dayova-shadow-strong);
+}
+
+.blog-topic-filter__menu {
+  width: 100%;
+  position: absolute;
+  top: calc(100% + var(--space-3));
+  right: 0;
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-xl);
+  background: var(--dayova-elevated);
+  box-shadow: var(--dayova-shadow-strong);
+}
+
+.blog-topic-filter__menu-label {
+  padding: var(--space-2) var(--space-3) var(--space-1);
+  color: var(--dayova-muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.blog-topic-filter__option {
+  min-height: 46px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 0;
+  border-radius: var(--dayova-radius-md);
+  background: transparent;
+  color: var(--dayova-ink);
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 160ms var(--dayova-ease),
+    color 160ms var(--dayova-ease);
+}
+
+.blog-topic-filter__option[data-active="true"] {
+  background: var(--dayova-subtle);
+  color: var(--dayova-ink);
+  font-weight: 600;
+}
+
+.blog-topic-filter__option[data-active="true"] svg {
+  color: var(--dayova-brand);
+}
+
+@media (hover: hover) {
+  .blog-topic-filter__trigger:hover {
+    border-color: color-mix(in srgb, var(--dayova-ink) 32%, var(--dayova-line));
+    background: var(--dayova-surface);
+  }
+
+  .blog-topic-filter__option:hover {
+    background: var(--dayova-subtle);
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-topic-filter-row {
+    justify-content: stretch;
+  }
+
   .blog-topic-filter {
-    width: calc(100% + (var(--space-4) * 2));
-    margin-inline: calc(var(--space-4) * -1);
-    padding: 0 var(--space-4) var(--space-1);
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scroll-padding-inline: var(--space-4);
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .blog-topic-filter::-webkit-scrollbar {
-    display: none;
-  }
-
-  .blog-topic-filter__button {
-    flex: 0 0 auto;
+    width: 100%;
   }
 }
 
@@ -1338,17 +1406,19 @@
   max-width: 560px;
   display: grid;
   justify-items: start;
-  gap: var(--space-4);
+  gap: 0;
 }
 
 .home-classic-advantage__label {
   display: inline-flex;
   align-items: center;
   gap: var(--space-4);
-  color: var(--dayova-brand-deep);
+  margin-bottom: var(--space-6);
+  color: var(--dayova-brand);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.2;
+  transition: color 240ms var(--dayova-ease);
 }
 
 .home-classic-advantage__icon {
@@ -1376,10 +1446,41 @@
     color: white;
     transform: scale(1.12);
   }
+
+  .home-classic-advantage:hover .home-classic-advantage__label {
+    color: var(--dayova-brand-deep);
+  }
+}
+
+.home-classic-advantages__list[data-scroll-active-index="0"]
+  > .home-classic-advantage:nth-child(1)
+  .home-classic-advantage__icon,
+.home-classic-advantages__list[data-scroll-active-index="1"]
+  > .home-classic-advantage:nth-child(2)
+  .home-classic-advantage__icon,
+.home-classic-advantages__list[data-scroll-active-index="2"]
+  > .home-classic-advantage:nth-child(3)
+  .home-classic-advantage__icon {
+  border-color: transparent;
+  background: var(--dayova-dark-panel);
+  color: white;
+  transform: scale(1.12);
+}
+
+.home-classic-advantages__list[data-scroll-active-index="0"]
+  > .home-classic-advantage:nth-child(1)
+  .home-classic-advantage__label,
+.home-classic-advantages__list[data-scroll-active-index="1"]
+  > .home-classic-advantage:nth-child(2)
+  .home-classic-advantage__label,
+.home-classic-advantages__list[data-scroll-active-index="2"]
+  > .home-classic-advantage:nth-child(3)
+  .home-classic-advantage__label {
+  color: var(--dayova-brand);
 }
 
 .home-classic-advantage__copy h3 {
-  margin: 0;
+  margin: 0 0 var(--space-3);
   font-size: clamp(26px, 3vw, 38px);
   font-weight: 600;
   line-height: 1.12;
@@ -2008,6 +2109,13 @@
 }
 
 @media (min-width: 1024px) {
+  .dayova-container.home-classic-advantages {
+    width: min(
+      calc(100% - (clamp(var(--space-12), 7vw, var(--space-20)) * 2)),
+      1680px
+    );
+  }
+
   .home-classic-hero {
     padding-block: var(--space-8) 0;
   }
@@ -2281,11 +2389,7 @@
 }
 
 .pricing-plan-card--student {
-  border-color: color-mix(in srgb, var(--dayova-brand) 46%, var(--dayova-line));
   background: var(--dayova-elevated);
-  box-shadow:
-    inset 0 4px 0 var(--dayova-brand),
-    var(--dayova-shadow);
 }
 
 .pricing-plan-card--school {
@@ -2299,8 +2403,8 @@
   padding: 4px;
   border: 1px solid var(--dayova-line);
   border-radius: var(--dayova-radius-pill);
-  background: var(--dayova-subtle);
-  box-shadow: none;
+  background: var(--dayova-elevated);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--dayova-line) 50%, transparent);
 }
 
 .pricing-cycle-toggle__option {
@@ -2326,9 +2430,9 @@
 }
 
 .pricing-cycle-toggle__option--active {
-  background: var(--dayova-ink);
-  color: var(--dayova-page);
-  box-shadow: var(--dayova-shadow);
+  background: #151515;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 18%);
 }
 
 .pricing-cycle-toggle__badge {

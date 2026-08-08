@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import { ButtonLink } from "@/components/ui/button-link";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
+import { ScrollActiveAdvantages } from "@/components/sections/scroll-active-advantages";
 import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
@@ -252,7 +253,7 @@ export function HomeAdvantagesSection() {
           </h2>
         </div>
 
-        <div className="home-classic-advantages__list">
+        <ScrollActiveAdvantages>
           {dayovaAdvantages.map((advantage) => (
             <article
               className={`home-classic-advantage ${advantage.className}`}
@@ -285,7 +286,7 @@ export function HomeAdvantagesSection() {
               </div>
             </article>
           ))}
-        </div>
+        </ScrollActiveAdvantages>
       </div>
     </section>
   );
