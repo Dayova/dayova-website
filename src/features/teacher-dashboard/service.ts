@@ -11,6 +11,7 @@ import {
   topicAnalyses,
   teacherNotifications,
   teacherProfile,
+  timetableEntries,
 } from "./demo-data";
 import type {
   DashboardOverview,
@@ -25,6 +26,7 @@ import type {
   AttendanceRecord,
   TeacherNotification,
   TeacherProfile,
+  ResolvedTimetableEntry,
 } from "./types";
 import { buildRuleBasedRecommendation } from "./recommendation-engine";
 
@@ -75,6 +77,40 @@ export function getTeachingGroupsForSession(
 
   return clone(
     teachingGroups.filter((group) => group.schoolId === session.schoolId),
+  );
+}
+
+export function getTimetableForSession(
+  session: DashboardSession,
+): ResolvedTimetableEntry[] {
+  const groups = getTeachingGroupsForSession(session);
+  const groupsById = new Map(groups.map((group) => [group.id, group]));
+
+  return clone(
+    timetableEntries
+      .filter(
+        (entry) =>
+          !entry.teachingGroupId || groupsById.has(entry.teachingGroupId),
+      )
+      .map((entry) => ({
+        ...entry,
+        teachingGroup: entry.teachingGroupId
+          ? groupsById.get(entry.teachingGroupId)
+          : undefined,
+      }))
+      .sort(
+        (a, b) =>
+          a.weekday - b.weekday || a.startTime.localeCompare(b.startTime),
+      ),
+  );
+}
+
+export function getTimetableForDay(
+  session: DashboardSession,
+  weekday: 1 | 2 | 3 | 4 | 5,
+): ResolvedTimetableEntry[] {
+  return getTimetableForSession(session).filter(
+    (entry) => entry.weekday === weekday,
   );
 }
 

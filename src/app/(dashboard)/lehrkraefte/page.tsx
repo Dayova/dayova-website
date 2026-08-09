@@ -1,100 +1,76 @@
-import {
-  Alert02Icon,
-  Calendar03Icon,
-  CheckmarkCircle02Icon,
-} from "@hugeicons/core-free-icons";
-import { DayovaIcon } from "@/components/ui/huge-icon";
-import {
-  PageHeading,
-  Panel,
-  PrimaryAction,
-  TextAction,
-} from "@/features/teacher-dashboard/components/dashboard-ui";
+import { PageHeading } from "@/features/teacher-dashboard/components/dashboard-ui";
+import { TodayTimetable } from "@/features/teacher-dashboard/components/today-timetable";
 import { TomorrowRecommendationsCarousel } from "@/features/teacher-dashboard/components/tomorrow-recommendations-carousel";
 import {
   getDashboardOverview,
   getDemoDashboardSession,
   getLatestRecommendation,
+  getTimetableForDay,
 } from "@/features/teacher-dashboard/service";
 
 export default function TeacherDashboardPage() {
   const session = getDemoDashboardSession();
   const overview = getDashboardOverview(session);
-  const recommendations = overview.teachingGroups
-    .map((group) => getLatestRecommendation(session, group.id))
+  const today = new Date();
+  const calendarWeekday = today.getDay();
+  const currentSchoolWeekday =
+    calendarWeekday >= 1 && calendarWeekday <= 5
+      ? (calendarWeekday as 1 | 2 | 3 | 4 | 5)
+      : 1;
+  const nextSchoolWeekday =
+    calendarWeekday >= 1 && calendarWeekday <= 4
+      ? ((calendarWeekday + 1) as 2 | 3 | 4 | 5)
+      : 1;
+  const dayLabel =
+    calendarWeekday >= 1 && calendarWeekday <= 5
+      ? new Intl.DateTimeFormat("de-DE", {
+          weekday: "long",
+          day: "2-digit",
+          month: "long",
+        }).format(today)
+      : "Nächster Schultag · Montag";
+  const todayHeading =
+    calendarWeekday >= 1 && calendarWeekday <= 5
+      ? "Heute im Stundenplan"
+      : "Am nächsten Schultag";
+  const nextDayLabel =
+    calendarWeekday >= 1 && calendarWeekday <= 4
+      ? `Morgen · ${["", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"][nextSchoolWeekday]}`
+      : "Nächster Schultag · Montag";
+  const timetable = getTimetableForDay(session, currentSchoolWeekday);
+  const nextDayTimetable = getTimetableForDay(session, nextSchoolWeekday);
+  const nextGroupIds = Array.from(
+    new Set(
+      nextDayTimetable.flatMap((entry) =>
+        entry.teachingGroupId ? [entry.teachingGroupId] : [],
+      ),
+    ),
+  );
+  const recommendationGroupIds =
+    nextGroupIds.length > 0
+      ? nextGroupIds
+      : overview.teachingGroups.map((group) => group.id);
+  const recommendations = recommendationGroupIds
+    .map((groupId) => getLatestRecommendation(session, groupId))
     .filter((recommendation) => recommendation !== undefined);
-  const nextTest = overview.upcomingTests[0];
 
   return (
     <>
       <PageHeading
-        eyebrow="Startseite"
         title={`Guten Morgen, ${overview.teacherName}`}
-        description="Ihr kompakter Überblick für heute – mit der Vorbereitung für morgen an erster Stelle."
-        actions={<PrimaryAction href="/lehrkraefte/assistent">Unterricht planen</PrimaryAction>}
+        description="Zuerst die Vorbereitung für den nächsten Schultag, danach Ihr heutiger Stundenplan."
       />
 
-      <TomorrowRecommendationsCarousel recommendations={recommendations} />
+      <TomorrowRecommendationsCarousel
+        recommendations={recommendations}
+        dayLabel={nextDayLabel}
+      />
 
-      <div className="teacher-two-column teacher-home-priorities">
-        <Panel
-          title="Heute abschließen"
-          description="Das sollte vor Feierabend erledigt sein"
-          action={<TextAction href="/lehrkraefte/planung">Aufgaben & Tests</TextAction>}
-        >
-          <div className="teacher-list">
-            {overview.todos.map((todo) => (
-              <article className="teacher-list-row" key={todo.id}>
-                <span className="teacher-list-icon" data-tone="brand">
-                  <DayovaIcon icon={CheckmarkCircle02Icon} size={20} />
-                </span>
-                <div>
-                  <strong>{todo.title}</strong>
-                  <p>{todo.description}</p>
-                </div>
-                <small>{todo.dueLabel}</small>
-              </article>
-            ))}
-          </div>
-        </Panel>
-
-        <Panel
-          title="Morgen im Blick"
-          description="Signale und Termine für Ihre Vorbereitung"
-          action={<TextAction href="/lehrkraefte/analysen">Lernstände</TextAction>}
-        >
-          <div className="teacher-list">
-            {overview.warnings.map((warning) => (
-              <article className="teacher-list-row" key={warning.id}>
-                <span className="teacher-list-icon" data-tone="warning">
-                  <DayovaIcon icon={Alert02Icon} size={20} />
-                </span>
-                <div>
-                  <strong>{warning.title}</strong>
-                  <p>{warning.description}</p>
-                </div>
-              </article>
-            ))}
-            {nextTest ? (
-              <article className="teacher-list-row">
-                <span className="teacher-list-icon" data-tone="brand">
-                  <DayovaIcon icon={Calendar03Icon} size={20} />
-                </span>
-                <div>
-                  <strong>{nextTest.title}</strong>
-                  <p>{nextTest.description}</p>
-                </div>
-                <small>
-                  {new Intl.DateTimeFormat("de-DE", {
-                    day: "2-digit",
-                    month: "2-digit",
-                  }).format(new Date(nextTest.date))}
-                </small>
-              </article>
-            ) : null}
-          </div>
-        </Panel>
-      </div>
+      <TodayTimetable
+        entries={timetable}
+        dayLabel={dayLabel}
+        heading={todayHeading}
+      />
     </>
   );
 }

@@ -23,15 +23,20 @@ export default function PrivacyPage() {
             </span>
             <h2 className="dayova-section-title">Aktueller Stand</h2>
             <p className="mt-4 text-dayova-body text-muted">
-              Diese Website verwendet aktuell keine öffentliche
-              Vorabregistrierung und führt noch keine Zahlungen durch. Das
-              Kontaktformular öffnet das lokale E-Mail-Programm; Eingaben
-              werden nicht über die Website gespeichert.
+              Das Kontaktformular öffnet das lokale E-Mail-Programm; Eingaben
+              werden nicht über die Website gespeichert. Zahlungen werden nur
+              nach einer bewussten Auswahl über den jeweils angegebenen
+              Zahlungsdienst ausgelöst.
             </p>
             <p className="mt-4 text-dayova-body text-muted">
-              Der vollständige, rechtlich geprüfte Datenschutzhinweis wird vor
-              Veröffentlichung und vor der Anbindung von Analyse-, Newsletter-
-              oder Checkout-Diensten ergänzt.
+              Mit deiner Einwilligung verwendet diese Website Google Analytics
+              4, um Seitenaufrufe und Interaktionen in zusammengefasster Form
+              auszuwerten. Die Analyse wird erst nach deiner Zustimmung geladen.
+              Du kannst deine Auswahl jederzeit über „Cookie-Einstellungen“ im
+              Footer ändern. Anbieter ist Google Ireland Limited, Gordon House,
+              Barrow Street, Dublin 4, Irland. Die Rechtsgrundlage ist Art. 6
+              Abs. 1 lit. a DSGVO. Deine Einwilligung kannst du jederzeit mit
+              Wirkung für die Zukunft widerrufen.
             </p>
             <p className="mt-6 text-sm text-muted">
               Datenschutzanfragen:{" "}

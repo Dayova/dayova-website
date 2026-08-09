@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/lehrkraefte/", "/checkout/"],
     },
     sitemap: "https://dayova.com/sitemap.xml",
   };

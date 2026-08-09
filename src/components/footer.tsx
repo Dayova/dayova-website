@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Brand } from "@/components/brand";
 import { SocialLinks } from "@/components/social-links";
 import { ButtonLink } from "@/components/ui/button-link";
+import { CookieSettingsButton } from "@/components/analytics-consent";
 import { siteConfig } from "@/config/site";
 import { footerNavigation } from "@/content/navigation";
 
@@ -67,7 +68,10 @@ export function Footer() {
 
         <div className="flex flex-col gap-3 pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <span>Copyright © 2026 Dayova</span>
-          <span>Mit Klarheit für Schülerinnen und Schüler entwickelt.</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <CookieSettingsButton />
+            <span>Mit Klarheit für Schülerinnen und Schüler entwickelt.</span>
+          </div>
         </div>
       </div>
     </footer>

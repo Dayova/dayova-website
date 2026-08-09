@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { notFound } from "next/navigation";
 import { DashboardShell } from "@/features/teacher-dashboard/components/dashboard-shell";
 import { TeacherDashboardProvider } from "@/features/teacher-dashboard/components/dashboard-store";
 import {
@@ -20,11 +21,17 @@ export const metadata: Metadata = {
     "Dayova für Lehrkräfte: Unterrichtsgruppen, Lernstände und Empfehlungen im Blick.",
 };
 
+const teacherDashboardEnabled =
+  process.env.NODE_ENV !== "production" ||
+  process.env.ENABLE_TEACHER_DASHBOARD === "true";
+
 export default function TeacherDashboardLayout({
   children,
 }: {
   children: ReactNode;
 }) {
+  if (!teacherDashboardEnabled) notFound();
+
   const session = getDemoDashboardSession();
   const classes = getClassesForSession(session);
   const initialData = {
@@ -44,6 +51,13 @@ export default function TeacherDashboardLayout({
       meta: "Unterricht mit den Lernsignalen Ihrer Klasse planen",
       href: "/lehrkraefte/assistent",
       keywords: "Unterricht Planung Stunde Assistent",
+    },
+    {
+      id: "timetable",
+      label: "Stundenplan",
+      meta: "Unterricht, Räume und Vorbereitung der Woche",
+      href: "/lehrkraefte/stundenplan",
+      keywords: "Stundenplan Unterricht Räume Woche Termine",
     },
     {
       id: "classes-and-classbook",

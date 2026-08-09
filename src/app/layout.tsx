@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { AnalyticsConsent } from "@/components/analytics-consent";
 import "./tokens.css";
 import "./globals.css";
 import "./typography.css";
@@ -67,6 +68,9 @@ const themeInitializer = `
 })();
 `;
 
+const googleAnalyticsId =
+  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? "G-039JN6DY6L";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -81,6 +85,7 @@ export default function RootLayout({
     >
       <body>
         {children}
+        <AnalyticsConsent measurementId={googleAnalyticsId} />
         <Script id="dayova-theme" strategy="beforeInteractive">
           {themeInitializer}
         </Script>

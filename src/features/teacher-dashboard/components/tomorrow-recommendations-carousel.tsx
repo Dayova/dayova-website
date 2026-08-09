@@ -12,8 +12,10 @@ import { PrimaryAction, SecondaryAction } from "./dashboard-ui";
 
 export function TomorrowRecommendationsCarousel({
   recommendations,
+  dayLabel,
 }: {
   recommendations: LessonRecommendation[];
+  dayLabel: string;
 }) {
   const railRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -64,10 +66,9 @@ export function TomorrowRecommendationsCarousel({
         <div>
           <div className="teacher-tomorrow-label">
             <DayovaIcon icon={SparklesIcon} size={18} />
-            <span>Für morgen empfohlen</span>
+            <span>{dayLabel}</span>
           </div>
-          <h2 id="tomorrow-heading">Ihre nächsten Klassen vorbereitet</h2>
-          <p>Wählen Sie eine Klasse und starten Sie direkt mit dem wichtigsten Schwerpunkt.</p>
+          <h2 id="tomorrow-heading">Nächste Stunden vorbereiten</h2>
         </div>
         {recommendations.length > 1 ? (
           <div className="teacher-carousel-controls" aria-label="Empfehlungen wechseln">
@@ -101,17 +102,23 @@ export function TomorrowRecommendationsCarousel({
               <span>{recommendation.subject}</span>
               <span>{recommendation.durationMinutes} Min.</span>
             </div>
-            <h3>{recommendation.lessonTitle}</h3>
-            <p>{recommendation.whyThisMattersNow}</p>
-            <div className="teacher-tomorrow-slide-focus">
-              <span>Schwerpunkt</span>
-              <strong>{recommendation.primaryTopic}</strong>
-            </div>
-            <div className="teacher-tomorrow-actions">
-              <PrimaryAction href="/lehrkraefte/assistent">Stunde vorbereiten</PrimaryAction>
-              <SecondaryAction href={`/lehrkraefte/analysen/${recommendation.teachingGroupId}`}>
-                Lernstand
-              </SecondaryAction>
+            <div className="teacher-tomorrow-slide-body">
+              <div className="teacher-tomorrow-slide-content">
+                <h3>{recommendation.lessonTitle}</h3>
+                <p>{recommendation.whyThisMattersNow}</p>
+                <p className="teacher-tomorrow-focus-line">
+                  <span>Schwerpunkt</span>
+                  <strong>{recommendation.primaryTopic}</strong>
+                </p>
+                <div className="teacher-tomorrow-actions">
+                  <PrimaryAction href={`/lehrkraefte/assistent?gruppe=${recommendation.teachingGroupId}`}>
+                    Stunde vorbereiten
+                  </PrimaryAction>
+                  <SecondaryAction href={`/lehrkraefte/analysen/${recommendation.teachingGroupId}`}>
+                    Lernstand
+                  </SecondaryAction>
+                </div>
+              </div>
             </div>
           </article>
         ))}
