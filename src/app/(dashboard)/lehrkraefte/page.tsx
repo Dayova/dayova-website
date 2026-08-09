@@ -1,67 +1,46 @@
 import {
   Alert02Icon,
+  Calendar03Icon,
   CheckmarkCircle02Icon,
-  SparklesIcon,
 } from "@hugeicons/core-free-icons";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import {
-  Metric,
   PageHeading,
   Panel,
   PrimaryAction,
-  ProgressBar,
-  RiskBadge,
   TextAction,
 } from "@/features/teacher-dashboard/components/dashboard-ui";
+import { TomorrowRecommendationsCarousel } from "@/features/teacher-dashboard/components/tomorrow-recommendations-carousel";
 import {
   getDashboardOverview,
   getDemoDashboardSession,
+  getLatestRecommendation,
 } from "@/features/teacher-dashboard/service";
 
 export default function TeacherDashboardPage() {
   const session = getDemoDashboardSession();
   const overview = getDashboardOverview(session);
-  const recommendation = overview.recommendations[0];
+  const recommendations = overview.teachingGroups
+    .map((group) => getLatestRecommendation(session, group.id))
+    .filter((recommendation) => recommendation !== undefined);
+  const nextTest = overview.upcomingTests[0];
 
   return (
     <>
       <PageHeading
         eyebrow="Startseite"
         title={`Guten Morgen, ${overview.teacherName}`}
-        description="Hier sehen Sie, was heute wichtig ist und wo Ihre Klassen Unterstützung benötigen."
+        description="Ihr kompakter Überblick für heute – mit der Vorbereitung für morgen an erster Stelle."
         actions={<PrimaryAction href="/lehrkraefte/assistent">Unterricht planen</PrimaryAction>}
       />
 
-      <section className="teacher-metric-grid" aria-label="Übersicht">
-        <Metric
-          label="Klassen"
-          value={String(overview.teachingGroups.length)}
-          detail="Aktiv in diesem Schuljahr"
-          tone="brand"
-        />
-        <Metric
-          label="Offene Aufgaben"
-          value={String(overview.todos.length)}
-          detail="Heute zu bearbeiten"
-        />
-        <Metric
-          label="Unterstützungsbedarf"
-          value={String(overview.supportStudents.length)}
-          detail="Schüler:innen beobachten"
-          tone="warning"
-        />
-        <Metric
-          label="Anstehende Tests"
-          value={String(overview.upcomingTests.length)}
-          detail="In den nächsten 14 Tagen"
-        />
-      </section>
+      <TomorrowRecommendationsCarousel recommendations={recommendations} />
 
-      <div className="teacher-two-column">
+      <div className="teacher-two-column teacher-home-priorities">
         <Panel
-          title="Heute wichtig"
-          description="Ihre priorisierten Aufgaben"
-          action={<TextAction href="/lehrkraefte/klassen">Alle Klassen</TextAction>}
+          title="Heute abschließen"
+          description="Das sollte vor Feierabend erledigt sein"
+          action={<TextAction href="/lehrkraefte/planung">Aufgaben & Tests</TextAction>}
         >
           <div className="teacher-list">
             {overview.todos.map((todo) => (
@@ -76,6 +55,15 @@ export default function TeacherDashboardPage() {
                 <small>{todo.dueLabel}</small>
               </article>
             ))}
+          </div>
+        </Panel>
+
+        <Panel
+          title="Morgen im Blick"
+          description="Signale und Termine für Ihre Vorbereitung"
+          action={<TextAction href="/lehrkraefte/analysen">Lernstände</TextAction>}
+        >
+          <div className="teacher-list">
             {overview.warnings.map((warning) => (
               <article className="teacher-list-row" key={warning.id}>
                 <span className="teacher-list-icon" data-tone="warning">
@@ -87,53 +75,26 @@ export default function TeacherDashboardPage() {
                 </div>
               </article>
             ))}
-          </div>
-        </Panel>
-
-        <Panel
-          title="Klassen"
-          description="Wissensstand und offene Aufgaben"
-        >
-          <div className="teacher-list">
-            {overview.teachingGroups.map((group) => (
-              <article className="teacher-group-compact" key={group.id}>
+            {nextTest ? (
+              <article className="teacher-list-row">
+                <span className="teacher-list-icon" data-tone="brand">
+                  <DayovaIcon icon={Calendar03Icon} size={20} />
+                </span>
                 <div>
-                  <strong>{group.className} · {group.subjectName}</strong>
-                  <p>{group.studentCount} Schüler:innen · {group.openHomeworkCount} offene Hausaufgaben</p>
+                  <strong>{nextTest.title}</strong>
+                  <p>{nextTest.description}</p>
                 </div>
-                <ProgressBar value={group.masteryScore} label="Wissensstand" />
-                <TextAction href={`/lehrkraefte/klassen/${group.classId}`}>
-                  Öffnen
-                </TextAction>
+                <small>
+                  {new Intl.DateTimeFormat("de-DE", {
+                    day: "2-digit",
+                    month: "2-digit",
+                  }).format(new Date(nextTest.date))}
+                </small>
               </article>
-            ))}
+            ) : null}
           </div>
         </Panel>
       </div>
-
-      {recommendation ? (
-        <Panel
-          title="Empfehlung für die nächste Stunde"
-          description={`${recommendation.className} · ${recommendation.subject} · ${recommendation.durationMinutes} Minuten`}
-          emphasis="priority"
-          action={
-            <TextAction href={`/lehrkraefte/analysen/${recommendation.teachingGroupId}`}>
-              Planung öffnen
-            </TextAction>
-          }
-        >
-          <div className="teacher-recommendation-summary">
-            <span className="teacher-list-icon" data-tone="brand">
-              <DayovaIcon icon={SparklesIcon} size={22} />
-            </span>
-            <div>
-              <h3>{recommendation.lessonTitle}</h3>
-              <p>{recommendation.whyThisMattersNow}</p>
-            </div>
-            <RiskBadge risk="mittel" />
-          </div>
-        </Panel>
-      ) : null}
     </>
   );
 }

@@ -40,10 +40,12 @@ export function DashboardNavigation({ role }: DashboardNavigationProps) {
         aria-label="Hauptnavigation"
       >
         {items.map((item) => {
-          const isActive =
-            item.href === "/lehrkraefte"
-              ? pathname === item.href
-              : pathname.startsWith(item.href);
+          const activePaths = item.activePaths ?? [item.href];
+          const isActive = activePaths.some((path) =>
+            path === "/lehrkraefte"
+              ? pathname === path
+              : pathname === path || pathname.startsWith(`${path}/`),
+          );
 
           return (
             <Link

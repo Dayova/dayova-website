@@ -15,7 +15,7 @@ export default async function ClassPage({ params }: { params: Promise<{ id: stri
   }));
   return <>
     <BackButton fallback="/lehrkraefte/klassen" />
-    <PageHeading title={`Klasse ${item.name}`} description={`${item.studentCount} Schüler:innen · ${item.subjects.join(" · ")}`} actions={<><SecondaryAction href={`/lehrkraefte/analysen/${item.groups[0]?.id}`}>Analyse dieser Klasse</SecondaryAction>{item.isClassTeacher ? <TextAction href={`/lehrkraefte/klassenlehrer/klasse/${item.id}`}>Klassenleitungsübersicht</TextAction> : null}</>} />
+    <PageHeading eyebrow="Klassenbereich" title={`Klasse ${item.name}`} description={`${item.studentCount} Schüler:innen · ${item.subjects.join(" · ")}`} actions={<><SecondaryAction href={`/lehrkraefte/klassenbuch?klasse=${item.id}&ansicht=tag`}>Klassenbuch öffnen</SecondaryAction><TextAction href={`/lehrkraefte/noten/klasse/${item.id}`}>Noten öffnen</TextAction></>} />
     <section className="teacher-recommendation-grid" aria-label="Empfehlungen für die nächste Stunde">
       {recommendations.map(({ group, recommendation }) => recommendation ? (
         <Panel
@@ -42,5 +42,6 @@ export default async function ClassPage({ params }: { params: Promise<{ id: stri
         <TextAction href={`/lehrkraefte/klassen/${item.id}/schueler`}>Gesamte Schüler:innenliste anzeigen</TextAction>
       </Panel>
     </div>
+    {item.isClassTeacher ? <Panel title="Klassenleitung" description="Alle wichtigen Signale dieser Klasse in einer Übersicht." action={<TextAction href={`/lehrkraefte/klassenlehrer/klasse/${item.id}`}>Übersicht öffnen</TextAction>}><p className="teacher-muted-copy">Leistung, Mitarbeit, Anwesenheit und Unterstützungsbedarf werden hier gemeinsam betrachtet.</p></Panel> : null}
   </>;
 }

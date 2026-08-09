@@ -38,6 +38,34 @@ export default function TeacherDashboardLayout({
     savedLessonIds: [],
   };
   const searchItems = [
+    {
+      id: "teacher-assistant",
+      label: "Unterrichtsassistent",
+      meta: "Unterricht mit den Lernsignalen Ihrer Klasse planen",
+      href: "/lehrkraefte/assistent",
+      keywords: "Unterricht Planung Stunde Assistent",
+    },
+    {
+      id: "classes-and-classbook",
+      label: "Klassen & Klassenbuch",
+      meta: "Klassen, Anwesenheit und Noten",
+      href: "/lehrkraefte/klassen",
+      keywords: "Klassenbuch Anwesenheit Noten Schüler",
+    },
+    {
+      id: "tasks-and-tests",
+      label: "Aufgaben & Tests",
+      meta: "Hausaufgaben und Leistungsnachweise planen",
+      href: "/lehrkraefte/planung",
+      keywords: "Hausaufgaben Aufgaben Tests Prüfung Leistungsnachweis",
+    },
+    {
+      id: "learning-progress",
+      label: "Lernstände",
+      meta: "Wissensstände und Unterstützungsbedarf",
+      href: "/lehrkraefte/analysen",
+      keywords: "Analyse Lernstand Wissen Unterstützung",
+    },
     ...classes.map((item) => ({
       id: item.id,
       label: `Klasse ${item.name}`,

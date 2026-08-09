@@ -321,6 +321,28 @@ export const topicAnalyses: TopicAnalysis[] = [
     misconception: "Vereinzelte Vorzeichenfehler bei längeren Termen.",
     priority: 3,
   },
+  {
+    id: "topic-percent-applications",
+    teachingGroupId: "7b-mathematik",
+    name: "Prozentrechnung",
+    masteryScore: 63,
+    level: "im_aufbau",
+    trend: "stabil",
+    affectedStudents: 8,
+    misconception: "Grundwert und Prozentwert werden in Sachaufgaben noch häufig vertauscht.",
+    priority: 1,
+  },
+  {
+    id: "topic-forces",
+    teachingGroupId: "8a-physik",
+    name: "Kräfte und Bewegung",
+    masteryScore: 69,
+    level: "im_aufbau",
+    trend: "steigend",
+    affectedStudents: 7,
+    misconception: "Kraftpfeile werden noch nicht sicher aus Alltagssituationen abgeleitet.",
+    priority: 1,
+  },
 ];
 
 export const lessonRecommendations: LessonRecommendation[] = [
