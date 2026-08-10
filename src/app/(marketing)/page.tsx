@@ -18,7 +18,7 @@ const homeDescription =
   "Dayova ist dein persönlicher Lernbegleiter: Die App erstellt Lernpläne, erkennt Wissenslücken und zeigt dir den nächsten sinnvollen Lernschritt.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Dayova – Dein persönlicher Lernbegleiter",
+  title: "Dayova – Lernplan-App und persönlicher Lernbegleiter",
   description: homeDescription,
   path: "/",
   absoluteTitle: true,
@@ -60,7 +60,7 @@ const homeStructuredData = {
       "@type": "WebPage",
       "@id": "https://dayova.com/#webpage",
       url: "https://dayova.com/",
-      name: "Dayova – Dein persönlicher Lernbegleiter",
+      name: "Dayova – Lernplan-App und persönlicher Lernbegleiter",
       description: homeDescription,
       isPartOf: { "@id": "https://dayova.com/#website" },
       about: { "@id": "https://dayova.com/#organization" },

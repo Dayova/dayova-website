@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dayova.com"),
   applicationName: "Dayova",
   title: {
-    default: "Dayova – Dein persönlicher Lernbegleiter",
+    default: "Dayova – Lernplan-App und persönlicher Lernbegleiter",
     template: "%s | Dayova",
   },
   description:
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     apple: "/favicon-light.png",
   },
   openGraph: {
-    title: "Dayova – Dein persönlicher Lernbegleiter",
+    title: "Dayova – Lernplan-App und persönlicher Lernbegleiter",
     description:
       "Dayova erstellt Lernpläne, erkennt Wissenslücken und zeigt dir den nächsten sinnvollen Lernschritt.",
     url: "https://dayova.com",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dayova – Dein persönlicher Lernbegleiter",
+    title: "Dayova – Lernplan-App und persönlicher Lernbegleiter",
     description:
       "Dayova erstellt Lernpläne, erkennt Wissenslücken und zeigt dir den nächsten sinnvollen Lernschritt.",
     images: ["/images/dayova-hero-phones.png"],
