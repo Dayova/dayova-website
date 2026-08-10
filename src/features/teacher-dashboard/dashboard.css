@@ -370,6 +370,10 @@
   padding: var(--space-8);
 }
 
+.teacher-main > * {
+  min-width: 0;
+}
+
 .teacher-page-heading {
   display: flex;
   align-items: end;
@@ -412,6 +416,7 @@
 
 .teacher-heading-actions {
   display: flex;
+  flex: 0 0 auto;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: var(--space-3);
@@ -714,7 +719,7 @@
 .teacher-group-grid,
 .teacher-analysis-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: var(--space-6);
 }
 
@@ -953,7 +958,7 @@
 
 .teacher-horizontal-strip {
   display: grid;
-  grid-auto-columns: minmax(288px, 34%);
+  grid-auto-columns: minmax(320px, calc((100% - var(--space-4)) / 2));
   grid-auto-flow: column;
   gap: var(--space-4);
   overflow-x: auto;
@@ -965,10 +970,14 @@
   scroll-snap-align: start;
 }
 
+.teacher-horizontal-strip:has(> :only-child) {
+  grid-auto-columns: 100%;
+}
+
 .teacher-subject-tiles,
 .teacher-action-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: var(--space-4);
 }
 
@@ -1948,11 +1957,20 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  margin-bottom: var(--space-6);
   border: 1px solid #e1e6e8;
   border-radius: var(--dayova-radius-xl);
   padding: var(--space-6);
   background: #fff;
+}
+
+.teacher-profile-hero > div:last-child {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-1);
+}
+
+.teacher-profile-hero p {
+  overflow-wrap: anywhere;
 }
 
 .teacher-profile-hero .teacher-avatar {
@@ -2899,13 +2917,6 @@
     grid-column: span 6;
   }
 
-  .teacher-group-cards,
-  .teacher-cards-grid,
-  .teacher-group-grid,
-  .teacher-analysis-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .teacher-week-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2918,11 +2929,6 @@
 
   .teacher-lesson-phases {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .teacher-subject-tiles,
-  .teacher-action-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .teacher-assistant-layout {
