@@ -5,6 +5,30 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: process.cwd(),
   },
+  async headers() {
+    return [
+      {
+        source: "/",
+        has: [
+          {
+            type: "query",
+            key: "reset-cache",
+            value: "1",
+          },
+        ],
+        headers: [
+          {
+            key: "Clear-Site-Data",
+            value: '"cache"',
+          },
+          {
+            key: "Cache-Control",
+            value: "no-store, max-age=0",
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
