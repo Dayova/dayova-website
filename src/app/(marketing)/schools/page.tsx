@@ -279,7 +279,7 @@ export default function SchoolsPage() {
           <article className="home-classic-faq__visual schools-faq__visual">
             <h3>Bereit für Dayova an Ihrer Schule?</h3>
             <Image
-              src="/images/schools/teacher-dashboard-macbook-light.png"
+              src="/images/schools/teacher-dashboard-macbook-transparent-light.png"
               alt="Dayova für Lehrkräfte auf einem MacBook"
               width={1364}
               height={768}
@@ -287,7 +287,7 @@ export default function SchoolsPage() {
               className="schools-faq__image schools-faq__image--light"
             />
             <Image
-              src="/images/schools/teacher-dashboard-macbook-dark.png"
+              src="/images/schools/teacher-dashboard-macbook-transparent-dark.png"
               alt=""
               width={1364}
               height={768}
