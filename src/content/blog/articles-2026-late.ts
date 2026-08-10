@@ -23,7 +23,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       {
         title: "Zu schwer liefert kaum Orientierung",
         paragraphs: [
-          "Überforderung zeigt sich nicht nur an Fehlern. Entscheidend ist, ob du aus einem Versuch etwas ableiten kannst. Wenn Grundlagen fehlen, mehrere neue Schritte gleichzeitig nötig sind oder die Aufgabenstellung unklar bleibt, entsteht kein brauchbares Feedback. Du weißt lediglich, dass es nicht funktioniert hat.",
+          "Überforderung zeigt sich an Fehlern und fehlenden Lösungsansätzen. Prüfe, ob du aus einem Versuch etwas ableiten kannst. Wenn Grundlagen fehlen, mehrere neue Schritte gleichzeitig nötig sind oder die Aufgabenstellung unklar bleibt, entsteht kein brauchbares Feedback. Du weißt lediglich, dass es nicht funktioniert hat.",
           "Dann hilft nicht automatisch mehr Anstrengung. Die Aufgabe muss zerlegt, ein fehlender Begriff geklärt oder ein einfacherer Zwischenschritt eingefügt werden. Erst wenn der nächste Versuch erreichbar wird, kann ein Fehler wieder Orientierung geben.",
         ],
       },
@@ -42,14 +42,14 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       {
         title: "Schwierigkeit gezielt verändern",
         paragraphs: [
-          "Schwierigkeit hängt nicht nur vom Inhalt ab. Auch Zeitdruck, Sprache, Anzahl der Schritte, verfügbare Hilfen und Vertrautheit mit dem Format verändern die Anforderung. Deshalb muss nicht immer ein neues Kapitel begonnen werden, um anspruchsvoller zu lernen.",
+          "Schwierigkeit hängt vom Inhalt, vom Zeitdruck, von der Sprache, der Anzahl der Schritte, verfügbaren Hilfen und der Vertrautheit mit dem Format ab. Deshalb muss nicht immer ein neues Kapitel begonnen werden, um anspruchsvoller zu lernen.",
           "Du kannst eine bekannte Aufgabe ohne Unterlagen erklären, Zahlen oder Bedingungen verändern, einen Lösungsweg begründen oder zwei ähnliche Fälle vergleichen. Wird es zu schwer, gehst du den umgekehrten Weg: Problem aufteilen, Beispiel ergänzen, Vorwissen aktivieren und erst danach erneut selbst lösen.",
         ],
       },
       {
         title: "Wie Dayova den nächsten Schritt anpasst",
         paragraphs: [
-          "Dayova verbindet deine Antworten mit Lernzielen, Terminen und bisherigen Versuchen. Wiederkehrende Fehler können auf eine fehlende Grundlage hinweisen, sichere Antworten auf eine mögliche Steigerung. So bleibt der Plan nicht bei einer starren Reihenfolge, sondern reagiert auf deinen tatsächlichen Lernstand.",
+          "Dayova verbindet deine Antworten mit Lernzielen, Terminen und bisherigen Versuchen. Wiederkehrende Fehler können auf eine fehlende Grundlage hinweisen, sichere Antworten auf eine mögliche Steigerung. So bleibt der Plan nicht bei einer starren Reihenfolge, sondern reagiert auf deinen aktuellen Lernstand.",
           "Für Schüler wird der Einstieg klarer, weil nicht jede Aufgabe selbst ausgewählt werden muss. Eltern sehen Fortschritt, ohne nur die Zahl richtiger Antworten zu betrachten. Lehrkräfte erhalten Hinweise darauf, ob mehr Übung, eine andere Erklärung oder ein anspruchsvollerer Transfer sinnvoll ist.",
         ],
       },
@@ -61,7 +61,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
     slug: "vom-lernstand-zum-naechsten-schritt",
     title: "Vom Lernstand zum nächsten Schritt",
     excerpt:
-      "Wie Rückmeldung aus Antworten einen Lernweg formt, der sich an deinem tatsächlichen Stand orientiert.",
+      "Wie Rückmeldung aus Antworten einen Lernweg formt, der sich an deinem aktuellen Stand orientiert.",
     category: "Lernplanung",
     readingTime: "7 Min.",
     publishedAt: "3. August 2026",
@@ -115,7 +115,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
     publishedAt: "27. Juli 2026",
     publishedAtISO: "2026-07-27T10:00:00+02:00",
     intro:
-      "Viele digitale Werkzeuge versprechen Übersicht und erzeugen trotzdem neue Arbeit. Aufgaben müssen übertragen, Termine an mehreren Stellen gepflegt und Fortschritte selbst gedeutet werden. Eine Lern-App hilft erst dann wirklich, wenn sie Entscheidungen vereinfacht und aus verstreuten Informationen einen verständlichen nächsten Schritt macht.",
+      "Viele digitale Werkzeuge versprechen Übersicht und erzeugen trotzdem neue Arbeit. Aufgaben müssen übertragen, Termine an mehreren Stellen gepflegt und Fortschritte selbst gedeutet werden. Eine Lern-App hilft, wenn sie Entscheidungen vereinfacht und aus verstreuten Informationen einen verständlichen nächsten Schritt macht.",
     sections: [
       {
         title: "Mehr Funktionen bedeuten nicht automatisch mehr Orientierung",
@@ -128,7 +128,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         title: "Ein Ort für Termine, Aufgaben und Lernzeiten",
         paragraphs: [
           "Prüfungstermine allein ergeben noch keinen Lernplan. Hausaufgaben, verfügbare Nachmittage, bereits sichere Themen und offene Grundlagen gehören ebenfalls dazu. Erst wenn diese Informationen verbunden werden, lässt sich einschätzen, was heute sinnvoll und bis wann notwendig ist.",
-          "Eine Lern-App sollte deshalb nicht nur sammeln. Sie muss Zusammenhänge herstellen: Welche Aufgabe gehört zu welchem Ziel? Wie viel Zeit ist verfügbar? Was wurde bereits bearbeitet und wo braucht es einen weiteren Versuch?",
+          "Eine Lern-App sollte mehr leisten als sammeln. Sie muss Zusammenhänge herstellen: Welche Aufgabe gehört zu welchem Ziel? Wie viel Zeit ist verfügbar? Was wurde bereits bearbeitet und wo braucht es einen weiteren Versuch?",
         ],
       },
       {
@@ -153,7 +153,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       {
         title: "Was Dayova anders verbinden will",
         paragraphs: [
-          "Dayova entsteht als persönlicher Lernbegleiter, nicht als weitere digitale Ablage. Die App verbindet Aufgaben, Prüfungen und Lernzeiten mit dem tatsächlichen Lernstand. Daraus entsteht ein Plan, der zeigt, was als Nächstes wichtig ist und warum.",
+          "Dayova entsteht als persönlicher Lernbegleiter, nicht als weitere digitale Ablage. Die App verbindet Aufgaben, Prüfungen und Lernzeiten mit dem aktuellen Lernstand. Daraus entsteht ein Plan, der zeigt, was als Nächstes wichtig ist und warum.",
           "Schüler gewinnen einen klareren Einstieg. Eltern müssen weniger erinnern und organisieren. Lehrkräfte können Lernbedarf konkreter einordnen. Die Technik bleibt dabei im Hintergrund und übernimmt genau die Verbindungen, die im Alltag sonst immer wieder neu hergestellt werden müssen.",
         ],
       },
@@ -162,8 +162,8 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       "Eine gute Lern-App macht Lernen nicht komplizierter. Sie verbindet verstreute Informationen, reduziert Entscheidungen und zeigt einen nächsten Schritt, der zum Ziel, zum Lernstand und zum verfügbaren Alltag passt.",
   },
   {
-    slug: "feedback-das-dich-wirklich-weiterbringt",
-    title: "Feedback, das dich wirklich weiterbringt",
+    slug: "feedback-das-dich-weiterbringt",
+    title: "Feedback, das dich weiterbringt",
     excerpt:
       "Warum richtig oder falsch nicht genügt und gute Rückmeldung immer eine nächste Handlung eröffnet.",
     category: "Lernmethoden",
@@ -195,20 +195,20 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         title: "Der nächste Versuch gehört zum Feedback dazu",
         paragraphs: [
           "Eine Erklärung kann einleuchten, ohne später verfügbar zu sein. Deshalb endet Rückmeldung nicht beim Lesen der Musterlösung. Erst ein erneuter eigener Versuch zeigt, ob die fehlende Verbindung entstanden ist.",
-          "Die Folgeaufgabe sollte nah genug am ursprünglichen Problem liegen, damit die Rückmeldung angewendet werden kann. Gleichzeitig braucht sie eine kleine Veränderung, damit nicht nur die vorherige Lösung kopiert wird.",
+          "Die Folgeaufgabe sollte nah genug am ursprünglichen Problem liegen, damit die Rückmeldung angewendet werden kann. Gleichzeitig braucht sie eine kleine Veränderung, damit die vorherige Lösung nicht bloß kopiert wird.",
         ],
       },
       {
         title: "Rückmeldung braucht den richtigen Zeitpunkt",
         paragraphs: [
-          "Direktes Feedback ist sinnvoll, wenn eine falsche Vorstellung sonst weitere Schritte blockiert. Ein kurzer Abstand kann dagegen nützlich sein, wenn der eigene Abruf geprüft werden soll. Entscheidend ist, dass zwischen Versuch und Auswertung noch erkennbar bleibt, wie du gedacht hast.",
+          "Direktes Feedback ist sinnvoll, wenn eine falsche Vorstellung sonst weitere Schritte blockiert. Ein kurzer Abstand kann dagegen nützlich sein, wenn der eigene Abruf geprüft werden soll. Zwischen Versuch und Auswertung sollte noch erkennbar bleiben, wie du gedacht hast.",
           "Wer nur die korrekte Lösung anschaut, verliert diese Spur schnell. Eine kurze Notiz zum eigenen Ansatz macht es leichter, Fehlerursachen zu unterscheiden und später zu sehen, ob sich der Lösungsweg verändert hat.",
         ],
       },
       {
         title: "Wie Dayova Rückmeldung in Planung übersetzt",
         paragraphs: [
-          "Dayova soll Antworten nicht nur bewerten, sondern als Signal für den weiteren Lernweg nutzen. Zeigt sich eine unsichere Grundlage, kann eine passende Einheit früher eingeplant werden. Gelingt die Anwendung sicher, entsteht Raum für schwierigere Aufgaben oder größere Wiederholungsabstände.",
+          "Dayova soll Antworten als Signal für den weiteren Lernweg nutzen, statt sie bloß zu bewerten. Zeigt sich eine unsichere Grundlage, kann eine passende Einheit früher eingeplant werden. Gelingt die Anwendung sicher, entsteht Raum für schwierigere Aufgaben oder größere Wiederholungsabstände.",
           "Damit bleibt Feedback nicht in einer einzelnen Aufgabe stecken. Es verändert den Plan und beantwortet die Frage, die nach jeder Auswertung zählt: Was ist jetzt der sinnvollste nächste Schritt?",
         ],
       },
@@ -220,19 +220,19 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
     slug: "ein-lernplan-der-in-deinen-alltag-passt",
     title: "Ein Lernplan, der in deinen Alltag passt",
     excerpt:
-      "Wie aus Prüfungen, Aufgaben und verfügbaren Zeiten ein Plan wird, den du tatsächlich umsetzen kannst.",
+      "Wie aus Prüfungen, Aufgaben und verfügbaren Zeiten ein Plan wird, den du im Alltag umsetzen kannst.",
     category: "Lernplanung",
     readingTime: "8 Min.",
     publishedAt: "13. Juli 2026",
     publishedAtISO: "2026-07-13T10:00:00+02:00",
     intro:
-      "Ein perfekter Lernplan auf dem Papier kann im Alltag schon am ersten Nachmittag scheitern. Unterricht, Hausaufgaben, Freizeit und unerwartete Termine konkurrieren um dieselbe Zeit. Planung hilft deshalb nicht, wenn sie nur Aufgaben verteilt. Sie muss berücksichtigen, wann Lernen wirklich möglich ist und welcher Schritt bis zum Ziel den größten Unterschied macht.",
+      "Ein perfekter Lernplan auf dem Papier kann im Alltag schon am ersten Nachmittag scheitern. Unterricht, Hausaufgaben, Freizeit und unerwartete Termine konkurrieren um dieselbe Zeit. Planung hilft deshalb nicht, wenn sie nur Aufgaben verteilt. Sie muss berücksichtigen, wann Zeit zum Lernen ist und welcher Schritt bis zum Ziel den größten Unterschied macht.",
     sections: [
       {
         title: "Beginne mit deiner verfügbaren Zeit",
         paragraphs: [
-          "Viele Pläne starten mit einer langen Themenliste und verteilen sie anschließend auf ideal gedachte Tage. Realistischer ist die umgekehrte Reihenfolge: Zuerst werden feste Termine und tatsächlich freie Lernfenster sichtbar. Danach erhalten die wichtigsten Aufgaben einen Platz.",
-          "Dabei zählt nicht nur die Zahl freier Minuten. Eine kurze Einheit zwischen zwei Terminen eignet sich für einen Abruf oder eine Wiederholung. Ein neues, komplexes Thema braucht eher einen längeren Block mit Ruhe und anschließendem Puffer.",
+          "Viele Pläne starten mit einer langen Themenliste und verteilen sie anschließend auf ideal gedachte Tage. Realistischer ist die umgekehrte Reihenfolge: Zuerst werden feste Termine und freie Lernfenster sichtbar. Danach erhalten die wichtigsten Aufgaben einen Platz.",
+          "Die Zahl freier Minuten reicht als Maß nicht aus. Eine kurze Einheit zwischen zwei Terminen eignet sich für einen Abruf oder eine Wiederholung. Ein neues, komplexes Thema braucht eher einen längeren Block mit Ruhe und anschließendem Puffer.",
         ],
       },
       {
@@ -259,14 +259,14 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         title: "Puffer gehören in jeden guten Plan",
         paragraphs: [
           "Aufgaben dauern länger, Termine ändern sich und manche Erklärungen brauchen einen zweiten Versuch. Ohne freie Stellen wird jede Abweichung zum Beweis, dass der Plan gescheitert sei. Mit kleinen Puffern kann er reagieren, ohne das Ziel aus den Augen zu verlieren.",
-          "Ein beweglicher Plan wird nicht jeden Tag vollständig erfüllt. Er wird regelmäßig aktualisiert. Entscheidend ist, dass wichtige Schritte weiterhin rechtzeitig stattfinden und Belastung nicht einfach auf den nächsten Tag gestapelt wird.",
+          "Ein beweglicher Plan wird nicht jeden Tag vollständig erfüllt. Er wird regelmäßig aktualisiert. Wichtige Schritte sollen weiterhin rechtzeitig stattfinden, ohne die Belastung einfach auf den nächsten Tag zu verschieben.",
         ],
       },
       {
         title: "Wie Dayova aus Alltag einen Lernweg macht",
         paragraphs: [
           "Dayova verbindet Prüfungstermine, Aufgaben und verfügbare Lernzeiten an einem Ort. Die kommende App soll daraus Einheiten erstellen, deren Reihenfolge und Umfang zum Alltag passen. Neue Rückmeldungen können den Plan verändern, wenn ein Thema sicherer ist oder mehr Unterstützung benötigt.",
-          "So musst du nicht jeden Nachmittag erneut entscheiden, womit du anfangen solltest. Der Plan bleibt verständlich, aber beweglich – und zeigt nicht nur alles, was offen ist, sondern den Schritt, der jetzt machbar und wichtig ist.",
+          "So musst du nicht jeden Nachmittag erneut entscheiden, womit du anfangen solltest. Der Plan bleibt verständlich, aber beweglich – und zeigt alle offenen Aufgaben sowie den Schritt, der jetzt machbar und wichtig ist.",
         ],
       },
     ],
@@ -289,7 +289,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         title: "Wenn Lernen keine Rückmeldung gibt",
         paragraphs: [
           "Beim Konsumieren liegt die Information vor dir. Dadurch entsteht flüssiges Wiedererkennen, aber kaum ein verlässliches Signal für späteren Abruf. Ohne eigene Antwort bleibt verborgen, welche Teile du selbst erzeugen kannst.",
-          "Hilfreiches Feedback beschreibt deshalb nicht nur richtig oder falsch. Es zeigt, was das Ziel war, wo der Denkweg abwich und welche Übung danach weiterführt.",
+          "Hilfreiches Feedback geht über richtig oder falsch hinaus. Es zeigt, was das Ziel war, wo der Denkweg abwich und welche Übung danach weiterführt.",
         ],
       },
       {
@@ -340,14 +340,14 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         ],
         bullets: [
           "Aufgaben so klein formulieren, dass ein Abschluss sichtbar ist",
-          "nicht nur Zeit, sondern gelöste Hürden notieren",
+          "gelöste Hürden statt nur Zeit notieren",
           "ältere Antworten gelegentlich mit neuen vergleichen",
         ],
       },
       {
         title: "Was Dayova sichtbar macht",
         paragraphs: [
-          "Dayova teilt größere Ziele in Einheiten und verbindet sie mit deinem Lernstand. Dadurch siehst du nicht nur offene Themen, sondern auch absolvierte Schritte und Veränderungen in deinen Antworten.",
+          "Dayova teilt größere Ziele in Einheiten und verbindet sie mit deinem Lernstand. Dadurch siehst du offene Themen, absolvierte Schritte und Veränderungen in deinen Antworten.",
           "Eltern und Lehrkräfte können diese Entwicklung benennen, ohne ständig die Endnote vorwegzunehmen. Das stärkt Ausdauer, weil Leistung nicht erst am Prüfungstag wahrgenommen wird.",
         ],
       },
@@ -394,7 +394,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Ein Plan spart nicht nur Zeit. Er entlastet das Arbeitsgedächtnis, weil die nächste Aufgabe nicht jedes Mal neu ausgehandelt werden muss.",
+      "Ein Plan spart Zeit und entlastet das Arbeitsgedächtnis, weil die nächste Aufgabe nicht jedes Mal neu ausgehandelt werden muss.",
   },
   {
     slug: "wiederholen-allein-reicht-nicht",
@@ -406,7 +406,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
     publishedAt: "15. Juni 2026",
     publishedAtISO: "2026-06-15T10:00:00+02:00",
     intro:
-      "Sonntagabend, dieselben Heftseiten zum dritten Mal: Jeder Satz wirkt bekannt, doch eine Frage ohne Vorlage bringt dich ins Stocken. Wiederholung ist nicht nutzlos. Entscheidend ist, was du bei der Wiederholung tust.",
+      "Sonntagabend, dieselben Heftseiten zum dritten Mal: Jeder Satz wirkt bekannt, doch eine Frage ohne Vorlage bringt dich ins Stocken. Wiederholung ist nicht nutzlos. Ihr Nutzen hängt davon ab, was du dabei tust.",
     sections: [
       {
         title: "Lesefluss kann täuschen",
@@ -652,7 +652,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
     publishedAt: "4. Mai 2026",
     publishedAtISO: "2026-05-04T10:00:00+02:00",
     intro:
-      "Vor einer vollen Lernwoche wird Bewegung oft zuerst gestrichen. Mehr Zeit am Schreibtisch scheint automatisch mehr Vorbereitung zu bedeuten. Doch Lernen hängt nicht nur von verfügbaren Minuten ab, sondern auch davon, in welchem Zustand du sie nutzt.",
+      "Vor einer vollen Lernwoche wird Bewegung oft zuerst gestrichen. Mehr Zeit am Schreibtisch scheint automatisch mehr Vorbereitung zu bedeuten. Doch Lernen hängt von den verfügbaren Minuten und dem Zustand ab, in dem du sie nutzt.",
     sections: [
       {
         title: "Bewegung wirkt über mehrere Wege",
@@ -693,7 +693,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
     publishedAt: "27. April 2026",
     publishedAtISO: "2026-04-27T10:00:00+02:00",
     intro:
-      "Kurz vor Mitternacht wirkt Schlaf wie verlorene Lernzeit. Noch ein Kapitel, noch eine Zusammenfassung, dann ins Bett. Am nächsten Morgen sind Konzentration und Abruf schwächer, obwohl die Nacht länger genutzt wurde. Lernen braucht nicht nur Aufnahme, sondern auch Erholung.",
+      "Kurz vor Mitternacht wirkt Schlaf wie verlorene Lernzeit. Noch ein Kapitel, noch eine Zusammenfassung, dann ins Bett. Am nächsten Morgen sind Konzentration und Abruf schwächer, obwohl die Nacht länger genutzt wurde. Lernen braucht Aufnahme und Erholung.",
     sections: [
       {
         title: "Schlaf ist Teil der Verarbeitung",
@@ -828,7 +828,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       {
         title: "Eine Fehleranalyse in vier Fragen",
         paragraphs: [
-          "Die Analyse bleibt kurz, wenn sie auf Handlung zielt. Entscheidend ist nicht, sich lange mit dem Fehler zu beschäftigen, sondern eine bessere nächste Übung auszuwählen.",
+          "Die Analyse bleibt kurz, wenn sie auf Handlung zielt. Statt sich lange mit dem Fehler zu beschäftigen, wählst du eine bessere nächste Übung aus.",
         ],
         bullets: [
           "Was wollte die Aufgabe prüfen?",

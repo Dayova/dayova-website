@@ -89,6 +89,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/blog/feedback-das-dich-wirklich-weiterbringt",
+        destination: "/blog/feedback-das-dich-weiterbringt",
+        permanent: true,
+      },
+      {
         source: "/umbaupage",
         destination: "/",
         permanent: true,

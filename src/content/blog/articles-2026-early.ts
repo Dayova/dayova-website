@@ -93,7 +93,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "16. März 2026",
     publishedAtISO: "2026-03-16T10:00:00+01:00",
     intro:
-      "Mathematik, Chatnachrichten und ein Video laufen nebeneinander. Es fühlt sich an, als würdest du mehrere Dinge gleichzeitig schaffen. Tatsächlich wechselt deine Aufmerksamkeit – und jeder Wechsel hinterlässt eine kleine Unterbrechung im Denkprozess.",
+      "Mathematik, Chatnachrichten und ein Video laufen nebeneinander. Es fühlt sich an, als würdest du mehrere Dinge gleichzeitig schaffen. Deine Aufmerksamkeit wechselt jedoch – und jeder Wechsel hinterlässt eine kleine Unterbrechung im Denkprozess.",
     sections: [
       {
         title: "Das Gehirn schaltet Aufgaben um",
@@ -221,7 +221,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       {
         title: "Warum Beispiele beim Verstehen helfen",
         paragraphs: [
-          "Ein Beispiel zeigt, wie ein Prinzip in einer konkreten Situation arbeitet. Es reduziert nicht nur Schwierigkeit, sondern macht Beziehungen zwischen Größen, Handlungen und Folgen sichtbar.",
+          "Ein Beispiel zeigt, wie ein Prinzip in einer konkreten Situation arbeitet. Es reduziert die Schwierigkeit und macht Beziehungen zwischen Größen, Handlungen und Folgen sichtbar.",
           "Ein einzelnes Beispiel kann jedoch zu eng werden. Lernende erinnern dann die Geschichte, aber nicht die Regel, die auch in anderen Fällen gilt.",
         ],
       },
@@ -240,7 +240,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Beispiele als Diagnose",
         paragraphs: [
           "Wenn du ein Beispiel selbst erzeugst, wird sichtbar, welche Merkmale du für wesentlich hältst. Dayova kann solche Antworten auswerten und passende Folgefragen anbieten.",
-          "Lehrkräfte und Eltern sollten nicht nur das passende Beispiel liefern, sondern die Verbindung zum Prinzip erfragen.",
+          "Lehrkräfte und Eltern sollten das passende Beispiel liefern und die Verbindung zum Prinzip erfragen.",
         ],
       },
     ],
@@ -281,7 +281,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Nicht jedes Thema braucht dasselbe Bild",
         paragraphs: [
           "Ein Zeitstrahl passt zu Geschichte, ein Ablaufdiagramm zu Prozessen und eine beschriftete Skizze zu Anatomie. Die Form folgt der Beziehung, die verstanden werden soll.",
-          "Dayova kann unterschiedliche Darstellungen in Aufgaben einbinden und über Antworten prüfen, ob nicht nur das Aussehen, sondern der Zusammenhang verstanden wurde.",
+          "Dayova kann unterschiedliche Darstellungen in Aufgaben einbinden und über Antworten prüfen, ob der Zusammenhang statt bloß des Aussehens verstanden wurde.",
         ],
       },
     ],
@@ -345,7 +345,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Warum Fragen Lernen verändern",
         paragraphs: [
           "Eine Frage nimmt die Vorlage weg. Dein Gehirn muss Informationen suchen, ordnen und als Antwort erzeugen. Dieser Vorgang stärkt späteren Abruf stärker als ein weiterer Lesedurchgang.",
-          "Das gilt auch dann, wenn der erste Versuch misslingt. Entscheidend ist, dass danach eine korrekte und verständliche Rückmeldung folgt.",
+          "Das gilt auch dann, wenn der erste Versuch misslingt. Danach sollte eine korrekte und verständliche Rückmeldung folgen.",
         ],
       },
       {
@@ -362,7 +362,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       {
         title: "Fragen als Teil des Lernwegs",
         paragraphs: [
-          "Dayova nutzt Antworten nicht nur als Punktestand. Die Auswertung beeinflusst, welche Inhalte wiederkehren und welche nächste Aufgabe geeignet ist.",
+          "Dayova behandelt Antworten nicht als bloßen Punktestand. Die Auswertung beeinflusst, welche Inhalte wiederkehren und welche nächste Aufgabe geeignet ist.",
           "Lehrkräfte können kurze Abrufphasen ohne Benotung einbauen. Eltern helfen, indem sie sich Erklärungen geben lassen, ohne jeden Fehler sofort zu beantworten.",
         ],
       },
@@ -445,7 +445,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       {
         title: "Ergebnis vor Minuten",
         paragraphs: [
-          "Dayova verbindet Zeitfenster mit einer benannten Lernaufgabe. So zählt nicht nur, dass der Timer abgelaufen ist, sondern was innerhalb des Fensters bearbeitet wurde.",
+          "Dayova verbindet Zeitfenster mit einer benannten Lernaufgabe. So zählt, was innerhalb des Fensters bearbeitet wurde, statt nur der abgelaufene Timer.",
           "Eltern und Lehrkräfte sollten Zeitmethoden als Experiment behandeln. Wenn ein Rhythmus nicht passt, wird er angepasst, nicht als Disziplinproblem gewertet.",
         ],
       },
@@ -469,7 +469,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Weniger Reize, weniger Möglichkeiten",
         paragraphs: [
           "Ein Buch unterbricht sich nicht mit Nachrichten. Diese Reizarmut erleichtert längere Phasen bei einer Aufgabe. Sie garantiert aber weder wirksame Methoden noch gutes Verständnis.",
-          "Digitale Angebote können Beispiele, Feedback und Barrierefreiheit verbessern. Entscheidend ist, ob das Gerät als Werkzeug für eine benannte Aufgabe oder als offener Strom von Reizen genutzt wird.",
+          "Digitale Angebote können Beispiele, Feedback und Barrierefreiheit verbessern. Der Nutzen hängt davon ab, ob das Gerät als Werkzeug für eine benannte Aufgabe oder als offener Strom von Reizen dient.",
         ],
       },
       {
@@ -528,7 +528,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Rückmeldung ohne Bloßstellung",
         paragraphs: [
           "Lehrkräfte sollten Fehleinschätzungen als Lerninformation behandeln. Beschämung verteidigt das Selbstbild eher, als dass sie Reflexion fördert.",
-          "Dayova verbindet Antworten und Selbsteinschätzung mit kommenden Übungen. So kann metakognitives Wissen wachsen: Du lernst nicht nur den Stoff, sondern auch deinen eigenen Lernstand besser einzuschätzen.",
+          "Dayova verbindet Antworten und Selbsteinschätzung mit kommenden Übungen. So kann metakognitives Wissen wachsen: Du lernst den Stoff und schätzt deinen eigenen Lernstand besser ein.",
         ],
       },
     ],

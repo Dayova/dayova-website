@@ -49,7 +49,7 @@ const schoolBenefits = [
   {
     icon: ChartHistogramIcon,
     title: "Förderung gezielter machen",
-    text: "Lernstände werden nachvollziehbar, damit Unterstützung dort ankommt, wo sie fachlich wirklich gebraucht wird.",
+    text: "Lernstände werden nachvollziehbar, damit Unterstützung dort ankommt, wo sie fachlich gebraucht wird.",
   },
 ] as const;
 
@@ -333,7 +333,7 @@ export default function SchoolsPage() {
               </span>
               <h2 id="schools-cta-title" className="dayova-section-title">
                 Lassen Sie uns gemeinsam zeigen, wie digitale Lernbegleitung
-                Schule wirklich entlasten kann.
+                Schule im Alltag entlasten kann.
               </h2>
               <p>
                 Erzählen Sie uns von Ihrer Schule. Wir melden uns persönlich

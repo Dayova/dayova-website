@@ -28,7 +28,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
         bullets: [
           "ähnliche Aufgabentypen bewusst mischen",
           "vor dem Rechnen den gewählten Lösungsweg benennen",
-          "nach jeder Aufgabe prüfen, welches Merkmal entscheidend war",
+          "nach jeder Aufgabe prüfen, welches Merkmal den Lösungsweg bestimmt hat",
         ],
       },
       {
@@ -40,13 +40,13 @@ export const blogArticles2025: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Gemischtes Üben fühlt sich anspruchsvoller an, weil es mehr verlangt. Genau darin liegt sein Wert: Du trainierst nicht nur das Rechnen, sondern auch die Wahl der passenden Strategie.",
+      "Gemischtes Üben fühlt sich anspruchsvoller an, weil es mehr verlangt. Genau darin liegt sein Wert: Du trainierst das Rechnen und die Wahl der passenden Strategie.",
   },
   {
     slug: "selbsttests-staerken-das-lernen",
     title: "Warum Selbsttests das Lernen stärken",
     excerpt:
-      "Prüfungsfragen sind nicht nur zur Bewertung da. Richtig eingesetzt werden sie selbst zur Lernmethode.",
+      "Prüfungsfragen dienen der Bewertung und können selbst zur Lernmethode werden.",
     category: "Lernmethoden",
     readingTime: "6 Min.",
     publishedAt: "15. Dezember 2025",
@@ -81,7 +81,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Ein Selbsttest sagt nicht nur, was du kannst. Der Abruf selbst trainiert dein Gedächtnis und zeigt, welche Aufgabe als Nächstes sinnvoll ist.",
+      "Ein Selbsttest zeigt, was du kannst. Der Abruf trainiert dein Gedächtnis und zeigt, welche Aufgabe als Nächstes sinnvoll ist.",
   },
   {
     slug: "lernpause-macht-wissen-haltbarer",
@@ -116,7 +116,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Wie Planung die Abstände schützt",
         paragraphs: [
-          "Im Alltag verschwinden Wiederholungen leicht hinter neuen Hausaufgaben. Ein Lernplan hält deshalb nicht nur Termine fest, sondern reserviert auch spätere Kontakte mit bereits bearbeiteten Themen.",
+          "Im Alltag verschwinden Wiederholungen leicht hinter neuen Hausaufgaben. Ein Lernplan hält Termine fest und reserviert spätere Kontakte mit bereits bearbeiteten Themen.",
           "Dayova kann solche Wiederholungen mit Prüfungen und verfügbaren Zeiten verbinden. Eltern und Lehrkräfte unterstützen, indem sie frühe kurze Termine ermöglichen, statt nur die letzte große Sitzung einzufordern.",
         ],
       },
@@ -128,7 +128,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
     slug: "gute-noten-und-verstaendnis",
     title: "Wenn gute Noten Verständnis vortäuschen",
     excerpt:
-      "Eine erfolgreiche Leistung kann trotzdem auf schmalem Wissen beruhen. Entscheidend ist, was später noch anwendbar bleibt.",
+      "Eine erfolgreiche Leistung kann trotzdem auf schmalem Wissen beruhen. Wichtig ist, was später noch anwendbar bleibt.",
     category: "Prüfungen",
     readingTime: "6 Min.",
     publishedAt: "1. Dezember 2025",
@@ -146,7 +146,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Verständnis braucht neue Situationen",
         paragraphs: [
-          "Bitte dich nach einer guten Note nicht nur um dieselbe Aufgabe noch einmal. Erkläre das Prinzip, verändere Bedingungen oder übertrage es auf ein neues Beispiel. So erkennst du, ob du den Weg verstanden oder ein Muster nachgebaut hast.",
+          "Bitte dich nach einer guten Note um mehr als dieselbe Aufgabe. Erkläre das Prinzip, verändere Bedingungen oder übertrage es auf ein neues Beispiel. So erkennst du, ob du den Weg verstanden oder ein Muster nachgebaut hast.",
         ],
         bullets: [
           "eine Lösung ohne Fachsprache erklären",
@@ -169,7 +169,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
     slug: "uebungszeit-allein-genuegt-nicht",
     title: "Warum Übungszeit allein nicht genügt",
     excerpt:
-      "Viele Stunden führen nicht automatisch zu besseren Ergebnissen. Entscheidend ist, was während dieser Zeit geschieht.",
+      "Viele Stunden führen nicht automatisch zu besseren Ergebnissen. Der Inhalt dieser Zeit bestimmt den Lernerfolg.",
     category: "Lernmethoden",
     readingTime: "6 Min.",
     publishedAt: "24. November 2025",
@@ -198,7 +198,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Qualität planbar machen",
         paragraphs: [
-          "Dayova verbindet Lernzeit mit Aufgaben und Erkenntnissen aus Antworten. So wird nicht nur festgehalten, wie lange du gearbeitet hast, sondern auch, welcher Bereich Aufmerksamkeit braucht.",
+          "Dayova verbindet Lernzeit mit Aufgaben und Erkenntnissen aus Antworten. So siehst du die Arbeitsdauer und den Bereich, der Aufmerksamkeit braucht.",
           "Für Erwachsene bedeutet das: weniger Lob für bloße Dauer und mehr Interesse an Strategie, Verbesserung und Pausen. Aus Zeit wird dann gezieltes Training.",
         ],
       },
@@ -310,7 +310,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Die Arbeit als Datensatz lesen",
         paragraphs: [
-          "Sortiere Fehler nicht nur nach Fachthema. Frage zusätzlich nach der Ursache: fehlte Wissen, wurde die Aufgabe falsch gelesen, war der Rechenweg unsicher oder lief die Zeit davon? Unterschiedliche Ursachen brauchen unterschiedliche Übungen.",
+          "Sortiere Fehler nach Fachthema und Ursache: Fehlte Wissen, wurde die Aufgabe falsch gelesen, war der Rechenweg unsicher oder lief die Zeit davon? Unterschiedliche Ursachen brauchen unterschiedliche Übungen.",
         ],
         bullets: [
           "Wissenslücken mit gezieltem Abruf bearbeiten",

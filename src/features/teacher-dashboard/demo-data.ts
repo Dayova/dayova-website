@@ -518,7 +518,7 @@ export const lessonRecommendations: LessonRecommendation[] = [
     advancedActivities: ["Fehlerdiagnose und eigene Transferaufgabe formulieren"],
     homeworkFollowUp: "Kurze App-Wiederholung zu Bruchgleichungen, fällig am 5. August.",
     classReadinessSummary:
-      "Die Klasse ist grundsätzlich arbeitsfähig, aber 14 Schüler:innen benötigen vor der Klassenarbeit gezielte Wiederholung.",
+      "Die Klasse kann arbeiten, aber 14 Schüler:innen benötigen vor der Klassenarbeit gezielte Wiederholung.",
     whyThisMattersNow:
       "Die Klassenarbeit findet am Freitag statt; Bruchgleichungen sind aktuell das schwächste prüfungsrelevante Thema.",
     signalsUsed: [

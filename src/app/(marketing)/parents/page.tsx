@@ -204,7 +204,7 @@ export default function ParentsPage() {
               Was sich für dich im Familienalltag verändert
             </h2>
             <p>
-              Du begleitest, wenn es wirklich zählt. Dayova übernimmt die
+              Du begleitest, wenn es darauf ankommt. Dayova übernimmt die
               Lernorganisation, die im Alltag Zeit und Energie kostet.
             </p>
           </div>
