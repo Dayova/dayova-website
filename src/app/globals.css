@@ -7351,10 +7351,6 @@ img {
   align-content: start;
 }
 
-.parents-benefit-card > .dayova-icon-card {
-  margin-inline: auto;
-}
-
 .parents-relief {
   scroll-margin-top: 128px;
 }
@@ -7541,8 +7537,6 @@ img {
 
   .parents-benefit-card:last-child {
     min-height: 0;
-    justify-items: center;
-    text-align: center;
   }
 
   .parents-benefit-card:last-child > p {
