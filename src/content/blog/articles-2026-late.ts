@@ -106,6 +106,174 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       "Rückmeldung ist dann wertvoll, wenn sie eine Entscheidung ermöglicht. Aus dem aktuellen Lernstand wird so eine Aufgabe, die heute sinnvoll bearbeitet werden kann.",
   },
   {
+    slug: "eine-lern-app-sollte-dir-arbeit-abnehmen",
+    title: "Eine Lern-App sollte dir Arbeit abnehmen",
+    excerpt:
+      "Warum digitale Lernbegleitung nicht mehr Aufgaben sammelt, sondern Termine, Lernstand und nächste Schritte verbindet.",
+    category: "Lernplanung",
+    readingTime: "8 Min.",
+    publishedAt: "27. Juli 2026",
+    publishedAtISO: "2026-07-27T10:00:00+02:00",
+    intro:
+      "Viele digitale Werkzeuge versprechen Übersicht und erzeugen trotzdem neue Arbeit. Aufgaben müssen übertragen, Termine an mehreren Stellen gepflegt und Fortschritte selbst gedeutet werden. Eine Lern-App hilft erst dann wirklich, wenn sie Entscheidungen vereinfacht und aus verstreuten Informationen einen verständlichen nächsten Schritt macht.",
+    sections: [
+      {
+        title: "Mehr Funktionen bedeuten nicht automatisch mehr Orientierung",
+        paragraphs: [
+          "Eine lange Funktionsliste kann beeindruckend wirken. Im Lernalltag zählt jedoch, ob du schnell erkennst, was ansteht und womit du beginnen solltest. Wenn jedes Fach ein eigenes Menü, jede Aufgabe ein anderes Format und jede Auswertung eine neue Interpretation verlangt, wird das Werkzeug selbst zur Organisationsaufgabe.",
+          "Gute digitale Lernbegleitung ordnet Informationen, bevor sie sie zeigt. Sie hebt Wichtiges hervor, hält Unnötiges im Hintergrund und führt von einem Ziel zu einer bearbeitbaren Handlung.",
+        ],
+      },
+      {
+        title: "Ein Ort für Termine, Aufgaben und Lernzeiten",
+        paragraphs: [
+          "Prüfungstermine allein ergeben noch keinen Lernplan. Hausaufgaben, verfügbare Nachmittage, bereits sichere Themen und offene Grundlagen gehören ebenfalls dazu. Erst wenn diese Informationen verbunden werden, lässt sich einschätzen, was heute sinnvoll und bis wann notwendig ist.",
+          "Eine Lern-App sollte deshalb nicht nur sammeln. Sie muss Zusammenhänge herstellen: Welche Aufgabe gehört zu welchem Ziel? Wie viel Zeit ist verfügbar? Was wurde bereits bearbeitet und wo braucht es einen weiteren Versuch?",
+        ],
+      },
+      {
+        title: "Der nächste Schritt muss sofort verständlich sein",
+        paragraphs: [
+          "Wer eine App öffnet, sollte nicht zuerst den gesamten Lernprozess neu planen müssen. Ein guter Start zeigt eine konkrete Einheit mit einem erkennbaren Ziel und einem realistischen Umfang. Dadurch wird aus der Frage „Was soll ich alles lernen?“ die kleinere Frage „Was bearbeite ich jetzt?“.",
+        ],
+        bullets: [
+          "eine klar benannte Aufgabe statt einer offenen Themenliste",
+          "ein sichtbarer Bezug zum Lernziel oder Prüfungstermin",
+          "eine Dauer, die zur verfügbaren Lernzeit passt",
+          "eine Rückmeldung, die den nächsten Versuch vorbereitet",
+        ],
+      },
+      {
+        title: "Fortschritt sollte den Plan verändern",
+        paragraphs: [
+          "Ein abgehakter Punkt zeigt, dass etwas bearbeitet wurde. Er zeigt noch nicht, ob der Inhalt sicher ist. Eine Lernbegleitung muss Antworten, Fehler und benötigte Hilfen berücksichtigen. Erst dann kann sie entscheiden, ob ein Thema wiederholt, vereinfacht oder anspruchsvoller angewendet werden sollte.",
+          "So bleibt der Plan beweglich. Sichere Inhalte erhalten mehr Abstand, hartnäckige Lücken werden früher aufgegriffen und neue Termine verändern die Reihenfolge, ohne dass alles von Hand neu sortiert werden muss.",
+        ],
+      },
+      {
+        title: "Was Dayova anders verbinden will",
+        paragraphs: [
+          "Dayova entsteht als persönlicher Lernbegleiter, nicht als weitere digitale Ablage. Die App verbindet Aufgaben, Prüfungen und Lernzeiten mit dem tatsächlichen Lernstand. Daraus entsteht ein Plan, der zeigt, was als Nächstes wichtig ist und warum.",
+          "Schüler gewinnen einen klareren Einstieg. Eltern müssen weniger erinnern und organisieren. Lehrkräfte können Lernbedarf konkreter einordnen. Die Technik bleibt dabei im Hintergrund und übernimmt genau die Verbindungen, die im Alltag sonst immer wieder neu hergestellt werden müssen.",
+        ],
+      },
+    ],
+    takeaway:
+      "Eine gute Lern-App macht Lernen nicht komplizierter. Sie verbindet verstreute Informationen, reduziert Entscheidungen und zeigt einen nächsten Schritt, der zum Ziel, zum Lernstand und zum verfügbaren Alltag passt.",
+  },
+  {
+    slug: "feedback-das-dich-wirklich-weiterbringt",
+    title: "Feedback, das dich wirklich weiterbringt",
+    excerpt:
+      "Warum richtig oder falsch nicht genügt und gute Rückmeldung immer eine nächste Handlung eröffnet.",
+    category: "Lernmethoden",
+    readingTime: "8 Min.",
+    publishedAt: "20. Juli 2026",
+    publishedAtISO: "2026-07-20T10:00:00+02:00",
+    intro:
+      "Eine Antwort wird markiert, die Lösung erscheint und die nächste Aufgabe beginnt. Trotzdem bleibt oft unklar, was genau gelernt werden sollte. Rückmeldung hilft nicht allein dadurch, dass sie ein Ergebnis bewertet. Sie wird wertvoll, wenn sie den Denkweg sichtbar macht und einen passenden nächsten Versuch vorbereitet.",
+    sections: [
+      {
+        title: "Richtig und falsch sind erst der Anfang",
+        paragraphs: [
+          "Zwei falsche Antworten können völlig unterschiedliche Ursachen haben. Vielleicht fehlt ein Grundbegriff, eine Regel wurde verwechselt oder ein richtiger Ansatz endete in einem Rechenfehler. Dieselbe Markierung führt deshalb nicht automatisch zur selben Übung.",
+          "Auch richtige Antworten brauchen Einordnung. Wer geraten, einen Hinweis genutzt oder nur ein bekanntes Muster wiedererkannt hat, verfügt noch nicht über dieselbe Sicherheit wie jemand, der den Zusammenhang erklären und übertragen kann.",
+        ],
+      },
+      {
+        title: "Gute Rückmeldung beantwortet drei Fragen",
+        paragraphs: [
+          "Hilfreiches Feedback verbindet Ziel, aktuellen Stand und nächste Handlung. Es beschreibt, was die Aufgabe prüfen sollte, an welcher Stelle der eigene Denkweg davon abwich und was beim nächsten Versuch anders gemacht werden kann.",
+        ],
+        bullets: [
+          "Was sollte ich bei dieser Aufgabe verstehen oder anwenden?",
+          "Welche Entscheidung in meinem Lösungsweg war hilfreich oder falsch?",
+          "Welche kleine Übung prüft, ob ich die Rückmeldung nutzen kann?",
+        ],
+      },
+      {
+        title: "Der nächste Versuch gehört zum Feedback dazu",
+        paragraphs: [
+          "Eine Erklärung kann einleuchten, ohne später verfügbar zu sein. Deshalb endet Rückmeldung nicht beim Lesen der Musterlösung. Erst ein erneuter eigener Versuch zeigt, ob die fehlende Verbindung entstanden ist.",
+          "Die Folgeaufgabe sollte nah genug am ursprünglichen Problem liegen, damit die Rückmeldung angewendet werden kann. Gleichzeitig braucht sie eine kleine Veränderung, damit nicht nur die vorherige Lösung kopiert wird.",
+        ],
+      },
+      {
+        title: "Rückmeldung braucht den richtigen Zeitpunkt",
+        paragraphs: [
+          "Direktes Feedback ist sinnvoll, wenn eine falsche Vorstellung sonst weitere Schritte blockiert. Ein kurzer Abstand kann dagegen nützlich sein, wenn der eigene Abruf geprüft werden soll. Entscheidend ist, dass zwischen Versuch und Auswertung noch erkennbar bleibt, wie du gedacht hast.",
+          "Wer nur die korrekte Lösung anschaut, verliert diese Spur schnell. Eine kurze Notiz zum eigenen Ansatz macht es leichter, Fehlerursachen zu unterscheiden und später zu sehen, ob sich der Lösungsweg verändert hat.",
+        ],
+      },
+      {
+        title: "Wie Dayova Rückmeldung in Planung übersetzt",
+        paragraphs: [
+          "Dayova soll Antworten nicht nur bewerten, sondern als Signal für den weiteren Lernweg nutzen. Zeigt sich eine unsichere Grundlage, kann eine passende Einheit früher eingeplant werden. Gelingt die Anwendung sicher, entsteht Raum für schwierigere Aufgaben oder größere Wiederholungsabstände.",
+          "Damit bleibt Feedback nicht in einer einzelnen Aufgabe stecken. Es verändert den Plan und beantwortet die Frage, die nach jeder Auswertung zählt: Was ist jetzt der sinnvollste nächste Schritt?",
+        ],
+      },
+    ],
+    takeaway:
+      "Feedback ist mehr als eine Bewertung. Es erklärt einen Denkweg, macht eine konkrete Veränderung möglich und führt zu einem neuen Versuch, der zeigt, ob Lernen stattgefunden hat.",
+  },
+  {
+    slug: "ein-lernplan-der-in-deinen-alltag-passt",
+    title: "Ein Lernplan, der in deinen Alltag passt",
+    excerpt:
+      "Wie aus Prüfungen, Aufgaben und verfügbaren Zeiten ein Plan wird, den du tatsächlich umsetzen kannst.",
+    category: "Lernplanung",
+    readingTime: "8 Min.",
+    publishedAt: "13. Juli 2026",
+    publishedAtISO: "2026-07-13T10:00:00+02:00",
+    intro:
+      "Ein perfekter Lernplan auf dem Papier kann im Alltag schon am ersten Nachmittag scheitern. Unterricht, Hausaufgaben, Freizeit und unerwartete Termine konkurrieren um dieselbe Zeit. Planung hilft deshalb nicht, wenn sie nur Aufgaben verteilt. Sie muss berücksichtigen, wann Lernen wirklich möglich ist und welcher Schritt bis zum Ziel den größten Unterschied macht.",
+    sections: [
+      {
+        title: "Beginne mit deiner verfügbaren Zeit",
+        paragraphs: [
+          "Viele Pläne starten mit einer langen Themenliste und verteilen sie anschließend auf ideal gedachte Tage. Realistischer ist die umgekehrte Reihenfolge: Zuerst werden feste Termine und tatsächlich freie Lernfenster sichtbar. Danach erhalten die wichtigsten Aufgaben einen Platz.",
+          "Dabei zählt nicht nur die Zahl freier Minuten. Eine kurze Einheit zwischen zwei Terminen eignet sich für einen Abruf oder eine Wiederholung. Ein neues, komplexes Thema braucht eher einen längeren Block mit Ruhe und anschließendem Puffer.",
+        ],
+      },
+      {
+        title: "Große Ziele brauchen bearbeitbare Einheiten",
+        paragraphs: [
+          "„Für die Mathearbeit lernen“ beschreibt ein Ziel, aber noch keine Handlung. Ein umsetzbarer Plan übersetzt es in Schritte wie Grundlagen prüfen, zwei Aufgabentypen lösen, Fehler auswerten und eine gemischte Übung ohne Hilfe bearbeiten.",
+          "Jede Einheit sollte ein sichtbares Ergebnis haben. So erkennst du, ob sie abgeschlossen ist und welche Information daraus für die weitere Planung entsteht.",
+        ],
+        bullets: [
+          "mit einem konkreten Verb formulieren: erklären, lösen, vergleichen",
+          "nur so viel einplanen, wie im Lernfenster erreichbar ist",
+          "nach jeder Einheit eine kurze Auswertung vorsehen",
+          "den nächsten Schritt nicht von der Tagesform erraten lassen",
+        ],
+      },
+      {
+        title: "Prioritäten schützen vor übervollen Tagen",
+        paragraphs: [
+          "Nicht jede offene Aufgabe ist gleich wichtig. Prüfungstermin, vorhandene Wissenslücken und benötigte Vorbereitungszeit bestimmen, was zuerst bearbeitet werden sollte. Ein Plan wird klarer, wenn er zwischen notwendig, sinnvoll und verschiebbar unterscheidet.",
+          "Diese Reihenfolge verhindert, dass leichte Kleinigkeiten den gesamten Nachmittag füllen, während eine wichtige Grundlage liegen bleibt. Sie schafft außerdem eine bewusste Grenze: Was heute nicht realistisch ist, wird neu eingeplant statt spät am Abend angehängt.",
+        ],
+      },
+      {
+        title: "Puffer gehören in jeden guten Plan",
+        paragraphs: [
+          "Aufgaben dauern länger, Termine ändern sich und manche Erklärungen brauchen einen zweiten Versuch. Ohne freie Stellen wird jede Abweichung zum Beweis, dass der Plan gescheitert sei. Mit kleinen Puffern kann er reagieren, ohne das Ziel aus den Augen zu verlieren.",
+          "Ein beweglicher Plan wird nicht jeden Tag vollständig erfüllt. Er wird regelmäßig aktualisiert. Entscheidend ist, dass wichtige Schritte weiterhin rechtzeitig stattfinden und Belastung nicht einfach auf den nächsten Tag gestapelt wird.",
+        ],
+      },
+      {
+        title: "Wie Dayova aus Alltag einen Lernweg macht",
+        paragraphs: [
+          "Dayova verbindet Prüfungstermine, Aufgaben und verfügbare Lernzeiten an einem Ort. Die kommende App soll daraus Einheiten erstellen, deren Reihenfolge und Umfang zum Alltag passen. Neue Rückmeldungen können den Plan verändern, wenn ein Thema sicherer ist oder mehr Unterstützung benötigt.",
+          "So musst du nicht jeden Nachmittag erneut entscheiden, womit du anfangen solltest. Der Plan bleibt verständlich, aber beweglich – und zeigt nicht nur alles, was offen ist, sondern den Schritt, der jetzt machbar und wichtig ist.",
+        ],
+      },
+    ],
+    takeaway:
+      "Ein realistischer Lernplan beginnt nicht mit einer perfekten Themenliste. Er verbindet verfügbare Zeit, klare Prioritäten und bearbeitbare Schritte zu einem Weg, der auch dann weiterführt, wenn der Alltag anders läuft als gedacht.",
+  },
+  {
     slug: "vertraut-ist-noch-nicht-verstanden",
     title: "Vertraut ist noch nicht verstanden",
     excerpt:

@@ -29,6 +29,50 @@ export const articlePracticeSections: Readonly<
       ],
     },
   ],
+  "eine-lern-app-sollte-dir-arbeit-abnehmen": [
+    {
+      title: "Der Werkzeug-Check für deinen Lernalltag",
+      paragraphs: [
+        "Notiere eine Woche lang, an welchen Stellen du Informationen doppelt überträgst, Aufgaben suchst oder dieselbe Entscheidung wiederholt triffst. Markiere außerdem, welche Ansicht dir tatsächlich hilft, den nächsten Schritt zu erkennen. So wird sichtbar, ob ein Werkzeug Orientierung schafft oder lediglich eine weitere Ablage ist.",
+        "Eine hilfreiche App sollte mindestens einen dieser Wege verkürzen: Termine sammeln, Aufgaben priorisieren, Lernzeit passend verteilen oder Rückmeldung in eine Folgeaufgabe übersetzen. Funktionen ohne klaren Beitrag dürfen im Hintergrund bleiben.",
+      ],
+      bullets: [
+        "Welche Information trage ich mehrfach ein?",
+        "Welche Entscheidung kostet mich vor jeder Einheit Zeit?",
+        "Wo sehe ich nur Aktivität, aber keinen Lernfortschritt?",
+        "Was müsste eine App verbinden, damit ein Schritt entfällt?",
+      ],
+    },
+  ],
+  "feedback-das-dich-wirklich-weiterbringt": [
+    {
+      title: "Die Vier-Schritte-Feedbackschleife",
+      paragraphs: [
+        "Wähle eine falsche oder unsichere Antwort und beschreibe zuerst deinen ursprünglichen Gedankengang. Vergleiche ihn anschließend mit dem Ziel der Aufgabe. Benenne genau eine Stelle, die du verändern willst, und prüfe diese Veränderung an einer ähnlichen Aufgabe. So bleibt Feedback klein genug, um sofort angewendet zu werden.",
+      ],
+      bullets: [
+        "Versuch rekonstruieren, ohne ihn nachträglich schöner zu machen.",
+        "Abweichung zwischen Ziel und Denkweg konkret benennen.",
+        "Eine veränderbare Handlung für den nächsten Versuch auswählen.",
+        "Mit einer leicht veränderten Aufgabe erneut selbst antworten.",
+      ],
+    },
+  ],
+  "ein-lernplan-der-in-deinen-alltag-passt": [
+    {
+      title: "Die 15-Minuten-Wochenplanung",
+      paragraphs: [
+        "Trage zuerst Prüfungen, Abgaben und feste Termine ein. Markiere danach drei bis fünf realistische Lernfenster und ordne ihnen jeweils nur einen klaren ersten Schritt zu. Beginne mit Grundlagen, von denen spätere Aufgaben abhängen, und lasse mindestens ein Zeitfenster als Puffer frei.",
+        "Am Ende jedes Lerntages genügen zwei Fragen: Was ist jetzt sicherer als vorher und was muss im Plan angepasst werden? Dadurch bleibt die Woche beweglich, ohne dass jeden Abend alles neu organisiert werden muss.",
+      ],
+      bullets: [
+        "Feste Termine und verfügbare Zeiten sichtbar machen.",
+        "Aufgaben nach Bedeutung statt nach Bequemlichkeit ordnen.",
+        "Jede Einheit mit einem überprüfbaren Ergebnis formulieren.",
+        "Puffer bewusst frei lassen und nicht vorab füllen.",
+      ],
+    },
+  ],
   "vertraut-ist-noch-nicht-verstanden": [
     {
       title: "Ein Transfer-Test für jedes Schulfach",

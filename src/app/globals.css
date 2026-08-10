@@ -7494,6 +7494,39 @@ img {
   }
 }
 
+/* Tablet polish: keep portrait layouts spacious without losing density. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .parents-benefit-grid,
+  .schools-benefit-grid,
+  .schools-partnership-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .parents-benefit-card:last-child,
+  .schools-benefit-card:last-child,
+  .schools-partnership-step:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .parents-benefit-card:last-child {
+    min-height: 0;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .parents-benefit-card:last-child > p {
+    max-width: 640px;
+  }
+
+  .blog-topic-filter-row {
+    justify-content: center;
+  }
+
+  .blog-topic-filter {
+    width: min(100%, 420px);
+  }
+}
+
 @media (hover: hover) {
   .parents-benefit-card,
   .parents-comparison {

@@ -42,6 +42,54 @@ export const articleDeepDives: Readonly<
       ],
     },
   ],
+  "eine-lern-app-sollte-dir-arbeit-abnehmen": [
+    {
+      title: "Weniger Entscheidungen entlasten den Lernstart",
+      paragraphs: [
+        "Vor dem Lernen fallen viele kleine Entscheidungen an: Welches Fach zuerst? Welche Unterlagen? Wie lange? Reicht Wiederholen oder braucht es eine neue Aufgabe? Jede einzelne wirkt harmlos, zusammen können sie den Einstieg verzögern. Eine Lern-App entlastet, wenn sie diese Entscheidungen nicht nur digital abbildet, sondern sinnvoll vorbereitet.",
+        "Dazu braucht sie klare Prioritäten und eine begrenzte Auswahl. Statt zehn gleich wichtigen Aufgaben zeigt sie, welche Einheit aufgrund von Termin, Lernstand und verfügbarer Zeit jetzt passt. Die Entscheidung bleibt nachvollziehbar, muss aber nicht jedes Mal vollständig neu getroffen werden.",
+      ],
+    },
+    {
+      title: "Unterschiedliche Perspektiven, gemeinsamer Lernweg",
+      paragraphs: [
+        "Schüler brauchen eine konkrete nächste Aufgabe. Eltern möchten wissen, ob Termine und Belastung im Blick bleiben, ohne jede Einheit zu kontrollieren. Lehrkräfte benötigen Hinweise auf fachliche Muster statt einer weiteren Liste erledigter Klicks. Eine gute Lernbegleitung zeigt jeder Person die Information, die für ihre Rolle nützlich ist.",
+        "Dayova verbindet diese Perspektiven über denselben Lernweg. Dadurch muss Fortschritt nicht mehrfach dokumentiert und Lernbedarf nicht aus verschiedenen Werkzeugen zusammengesucht werden.",
+      ],
+    },
+  ],
+  "feedback-das-dich-wirklich-weiterbringt": [
+    {
+      title: "Feedback beschreibt Verhalten, nicht die Person",
+      paragraphs: [
+        "Rückmeldungen wie „unaufmerksam“ oder „nicht gut in Mathe“ erklären keinen Lösungsweg und lassen sich kaum in eine Übung übersetzen. Hilfreicher ist eine beobachtbare Beschreibung: Beim Umformen wurde das Vorzeichen nicht auf beide Seiten übertragen oder die Begründung nennt ein Ergebnis, aber keinen Zusammenhang.",
+        "Diese Sprache hält Fehler veränderbar. Sie zeigt, welche Handlung angepasst werden kann, ohne aus einem einzelnen Versuch ein Urteil über Fähigkeit oder Fleiß zu machen. Das erleichtert einen neuen Versuch und macht Fortschritt später vergleichbar.",
+      ],
+    },
+    {
+      title: "Nicht jede Lücke braucht dieselbe Antwort",
+      paragraphs: [
+        "Fehlt ein Begriff, hilft eine kurze Erklärung mit Beispiel. Wird eine Regel zwar erinnert, aber falsch angewendet, braucht es einen Vergleich ähnlicher Fälle. Gelingt eine Aufgabe nur mit Hinweis, ist ein erneuter Abruf mit weniger Unterstützung sinnvoll. Feedback sollte deshalb nicht möglichst ausführlich, sondern passend zur Ursache sein.",
+        "Digitale Lernbegleitung kann diese Unterschiede nutzen, um Folgeaufgaben gezielter auszuwählen. Entscheidend bleibt, dass Lernende verstehen, weshalb dieser nächste Schritt vorgeschlagen wird.",
+      ],
+    },
+  ],
+  "ein-lernplan-der-in-deinen-alltag-passt": [
+    {
+      title: "Nicht jede Lernminute ist gleich nutzbar",
+      paragraphs: [
+        "Ein freier Zeitraum im Kalender sagt noch wenig darüber aus, welche Aufgabe dort sinnvoll ist. Nach einem langen Schultag kann ein kurzer Abruf realistischer sein als der Einstieg in ein neues Kapitel. An einem ruhigen Vormittag lässt sich dagegen eine komplexe Aufgabe mit mehreren Zwischenschritten besser bearbeiten.",
+        "Ein alltagstauglicher Plan verbindet deshalb Dauer und Anspruch. Er reserviert konzentrierte Zeiten für neue oder schwierige Inhalte und nutzt kleine Fenster für Wiederholung, Vorbereitung oder die Auswertung früherer Fehler.",
+      ],
+    },
+    {
+      title: "Ein Plan ist erfolgreich, wenn er Orientierung gibt",
+      paragraphs: [
+        "Ein vollständig abgehakter Wochenplan kann trotzdem am Lernziel vorbeigehen, wenn Aufgaben nur oberflächlich erledigt wurden. Umgekehrt kann ein angepasster Plan erfolgreich sein, obwohl Einheiten verschoben wurden. Entscheidend ist, ob wichtige Grundlagen rechtzeitig sicherer werden und der nächste Schritt klar bleibt.",
+        "Dayova soll Planung deshalb mit Rückmeldung verbinden. Nicht nur erledigte Zeit, sondern Veränderungen im Lernstand bestimmen, wie der weitere Weg aussieht.",
+      ],
+    },
+  ],
   "vertraut-ist-noch-nicht-verstanden": [
     {
       title: "Warum Vertrautheit so überzeugend wirkt",
