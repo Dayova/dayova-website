@@ -158,6 +158,101 @@ const nextConfig: NextConfig = {
         destination: "/blog/gemischtes-ueben-statt-blocklernen",
         permanent: true,
       },
+      {
+        source: "/ich-kann-das-einfach-nicht-wie-negative-gedanken-dein-lernen-sabotieren",
+        destination: "/blog/ich-kann-das-nicht",
+        permanent: true,
+      },
+      {
+        source: "/dein-lernplatz-als-heimlicher-mitspieler-wie-deine-umgebung-deine-konzentration-sabotiert",
+        destination: "/blog/wie-dein-lernplatz-mitentscheidet",
+        permanent: true,
+      },
+      {
+        source: "/die-vergleichsfalle-warum-dich-die-noten-der-anderen-klein-machen",
+        destination: "/blog/raus-aus-der-vergleichsfalle",
+        permanent: true,
+      },
+      {
+        source: "/bewegung-im-kopf-warum-sport-dein-lernen-leichter-macht",
+        destination: "/blog/bewegung-bringt-denken-in-gang",
+        permanent: true,
+      },
+      {
+        source: "/schlaf-statt-nachtschicht-warum-ausreichender-schlaf-bessere-noten-bringt",
+        destination: "/blog/warum-schlaf-beim-lernen-gewinnt",
+        permanent: true,
+      },
+      {
+        source: "/warum-lerngewohnheiten-wichtiger-sind-als-motivation",
+        destination: "/blog/gewohnheiten-tragen-weiter-als-motivation",
+        permanent: true,
+      },
+      {
+        source: "/selbstbild-mindset",
+        destination: "/blog/wie-dein-selbstbild-lernen-praegt",
+        permanent: true,
+      },
+      {
+        source: "/fehlerkultur-aus-tests-werden-werkzeuge",
+        destination: "/blog/fehler-als-werkzeuge-nutzen",
+        permanent: true,
+      },
+      {
+        source: "/was-noten-wirklich-messen-und-was-nicht",
+        destination: "/blog/was-noten-zeigen-und-verschweigen",
+        permanent: true,
+      },
+      {
+        source: "/kleine-siege-warum-mini-erfolge-deine-lernmotivation-retten-koennen",
+        destination: "/blog/kleine-erfolge-halten-dich-im-lernen",
+        permanent: true,
+      },
+      {
+        source: "/der-fokus-fehler-warum-multitasking-dein-gehirn-austrickst",
+        destination: "/blog/multitasking-kostet-fokus",
+        permanent: true,
+      },
+      {
+        source: "/eltern-als-lernpartner-wie-du-dein-kind-unterstuetzt-ohne-druck-zu-machen",
+        destination: "/blog/eltern-begleiten-ohne-druck",
+        permanent: true,
+      },
+      {
+        source: "/motivation-statt-selbstvorwurf-warum-ich-hab-einfach-keine-lust-oft-ein-schutzmechanismus-ist",
+        destination: "/blog/fehlende-lust-als-schutz",
+        permanent: true,
+      },
+      {
+        source: "/konkrete-beispiele-so-machst-du-abstrakte-ideen-greifbar",
+        destination: "/blog/abstrakten-lernstoff-greifbar-machen",
+        permanent: true,
+      },
+      {
+        source: "/dual-coding-warum-bilder-woerter-dein-gedaechtnis-verdoppeln",
+        destination: "/blog/bilder-und-woerter-gemeinsam-nutzen",
+        permanent: true,
+      },
+      {
+        source: "/die-feynman-technik-wie-ein-nobelpreistraeger-komplexe-themen-simplifizierte",
+        destination: "/blog/feynman-technik-komplexes-erklaeren",
+        permanent: true,
+      },
+      {
+        source: "/der-pomodoro-mythen-warum-25-minuten-nicht-fuer-jeden-optimal-sind",
+        destination: "/blog/pomodoro-25-minuten-passen-nicht-immer",
+        permanent: true,
+      },
+      {
+        source: "/die-generationen-luecke-warum-deine-grosseltern-besser-lernen-konnten",
+        destination: "/blog/was-fruehere-generationen-anders-machten",
+        permanent: true,
+      },
+      {
+        source: "/der-dunning-kruger-effekt-im-klassenzimmer-warum-schlechte-schueler-ihre-leistung-ueberschaetzen",
+        destination: "/blog/wenn-selbstvertrauen-wissen-vortaeuscht",
+        permanent: true,
+      },
     ];
   },
 };
