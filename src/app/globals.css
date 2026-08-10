@@ -345,22 +345,49 @@
 .marketing-legal > div {
   display: grid;
   justify-items: start;
-  gap: var(--space-4);
+  gap: var(--space-8);
+}
+
+.marketing-legal section {
+  display: grid;
+  gap: var(--space-3);
+  width: 100%;
 }
 
 .marketing-legal h2,
-.marketing-legal p {
+.marketing-legal p,
+.marketing-legal ul {
   margin: 0;
 }
 
 .marketing-legal h2 {
-  font-size: var(--type-h1);
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
 }
 
-.marketing-legal p {
+.marketing-legal p,
+.marketing-legal li {
   max-width: 860px;
   color: var(--dayova-muted);
   line-height: 1.8;
+}
+
+.marketing-legal ul {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 860px;
+  padding-left: var(--space-6);
+}
+
+.marketing-legal a {
+  color: var(--dayova-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.marketing-legal code {
+  color: var(--dayova-ink);
 }
 
 @media (max-width: 767px) {

@@ -9,13 +9,23 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
+const address = (
+  <>
+    Hohe Straße 54
+    <br />
+    01187 Dresden
+    <br />
+    Deutschland
+  </>
+);
+
 export default function ImprintPage() {
   return (
     <>
       <PageHero
         eyebrow="Rechtliches"
         title="Impressum"
-        description="Die vollständigen rechtlich geprüften Anbieterangaben werden vor der Veröffentlichung ergänzt."
+        description="Anbieterkennzeichnung nach § 5 Digitale-Dienste-Gesetz (DDG)."
       />
       <section className="section marketing-legal-section">
         <div className="dayova-container marketing-legal">
@@ -23,20 +33,48 @@ export default function ImprintPage() {
             <span className="home-classic-section-eyebrow">
               Anbieterangaben
             </span>
-            <h2 className="dayova-section-title">Kontakt</h2>
-            <p className="mt-4 text-dayova-body text-muted">
-              E-Mail:{" "}
-              <a className="font-medium text-ink underline" href={`mailto:${siteConfig.links.email}`}>
-                {siteConfig.links.email}
-              </a>
-            </p>
-            <p className="mt-6 text-sm text-muted">
-              Hinweis: Unternehmensform, vertretungsberechtigte Person,
-              Anschrift und gegebenenfalls Registerangaben dürfen nicht
-              erfunden werden. Der bereits vorgesehene, rechtlich geprüfte Text
-              wird hier eingesetzt, sobald diese Angaben vollständig
-              vorliegen.
-            </p>
+
+            <section aria-labelledby="imprint-provider">
+              <h2 id="imprint-provider">Diensteanbieter</h2>
+              <p>
+                Dayova
+                <br />
+                Inhaber: Julius Dietrich
+                <br />
+                {address}
+              </p>
+            </section>
+
+            <section aria-labelledby="imprint-contact">
+              <h2 id="imprint-contact">Kontakt</h2>
+              <p>
+                E-Mail:{" "}
+                <a href={`mailto:${siteConfig.links.email}`}>
+                  {siteConfig.links.email}
+                </a>
+              </p>
+            </section>
+
+            <section aria-labelledby="imprint-editorial">
+              <h2 id="imprint-editorial">
+                Verantwortlich für journalistisch-redaktionelle Inhalte
+              </h2>
+              <p>
+                Verantwortlich nach § 18 Abs. 2 Medienstaatsvertrag (MStV):
+                <br />
+                Julius Dietrich
+                <br />
+                {address}
+              </p>
+            </section>
+
+            <section aria-labelledby="imprint-dispute">
+              <h2 id="imprint-dispute">Verbraucherstreitbeilegung</h2>
+              <p>
+                Julius Dietrich ist nicht bereit, an Streitbeilegungsverfahren
+                vor einer Verbraucherschlichtungsstelle teilzunehmen.
+              </p>
+            </section>
           </div>
         </div>
       </section>

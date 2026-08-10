@@ -102,8 +102,9 @@ export function AnalyticsConsent({ measurementId }: { measurementId: string }) {
           <div className="analytics-consent__copy">
             <strong>Hilf uns, Dayova weiterzuentwickeln.</strong>
             <p>
-              Mit deiner Zustimmung messen wir anonymisiert, welche Seiten
-              genutzt werden. Notwendige Funktionen laufen auch ohne Analyse.
+              Mit deiner Zustimmung messen wir mit Google Analytics, welche
+              Seiten genutzt werden. Google erhält dabei pseudonyme
+              Nutzungsdaten. Notwendige Funktionen laufen auch ohne Analyse.
             </p>
           </div>
           <div className="analytics-consent__actions">
