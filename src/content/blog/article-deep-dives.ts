@@ -5,6 +5,22 @@ type ArticleSection = BlogArticle["sections"][number];
 export const articleDeepDives: Readonly<
   Record<string, readonly ArticleSection[]>
 > = {
+  "die-richtige-schwierigkeit-beim-lernen": [
+    {
+      title: "Die passende Schwierigkeit verändert sich",
+      paragraphs: [
+        "Dieselbe Aufgabe kann an zwei Tagen unterschiedlich anspruchsvoll sein. Neues Vorwissen, ein längerer zeitlicher Abstand oder mehr Sicherheit im Aufgabenformat verschieben die Lernzone. Auch Müdigkeit und Zeitdruck beeinflussen, wie viele Schritte gleichzeitig verarbeitet werden können. Schwierigkeit ist deshalb keine feste Eigenschaft einer Aufgabe, sondern entsteht im Zusammenspiel mit der lernenden Person.",
+        "Ein guter Plan prüft diese Passung immer wieder. Wird ein Inhalt sicher, vergrößert sich der Abstand zwischen Wiederholungen oder der Transfer wird anspruchsvoller. Häufen sich Fehler ohne erkennbaren Fortschritt, braucht es kleinere Schritte oder eine andere Erklärung. So bleibt Herausforderung beweglich, statt Lernende dauerhaft in eine feste Leistungsstufe einzuordnen.",
+      ],
+    },
+    {
+      title: "Fehler müssen auswertbar bleiben",
+      paragraphs: [
+        "Fehler unterstützen Lernen nur dann, wenn ihre Ursache erkennbar wird. Eine Aufgabe mit zehn unbekannten Schritten erzeugt viele mögliche Fehlerquellen. Eine gezielt gewählte Herausforderung zeigt dagegen, ob etwa ein Begriff fehlt, eine Regel verwechselt oder ein bekannter Zusammenhang nicht übertragen wurde.",
+        "Hilfreiche Rückmeldung beantwortet deshalb nicht nur, was falsch war. Sie macht sichtbar, welche Denkentscheidung verändert werden sollte und welche nächste Aufgabe genau das erprobt. Dadurch wird Schwierigkeit zu einem Steuerungsinstrument für den Lernweg.",
+      ],
+    },
+  ],
   "vom-lernstand-zum-naechsten-schritt": [
     {
       title: "Ein Lernstand braucht eine zeitliche Perspektive",

@@ -5,6 +5,21 @@ type ArticleSection = BlogArticle["sections"][number];
 export const articlePracticeSections: Readonly<
   Record<string, readonly ArticleSection[]>
 > = {
+  "die-richtige-schwierigkeit-beim-lernen": [
+    {
+      title: "Der Drei-Versuche-Check",
+      paragraphs: [
+        "Bearbeite drei ähnliche Aufgaben und notiere nach jedem Versuch, ob du ohne Hilfe beginnen konntest, an welcher Stelle du gestockt hast und welcher Hinweis geholfen hätte. Sind alle drei Lösungen sofort klar, erhöhe die Anforderung leicht. Fehlt bei jedem Versuch schon der Einstieg, gehe einen Schritt zurück und kläre die gemeinsame Grundlage.",
+        "Liegt mindestens ein eigener Lösungsansatz vor und wird dein Vorgehen durch die Auswertung genauer, befindest du dich wahrscheinlich in einer produktiven Lernzone. Entscheidend ist nicht eine bestimmte Fehlerquote, sondern ob deine Versuche verwertbare Rückmeldung erzeugen und zunehmend selbstständiger werden.",
+      ],
+      bullets: [
+        "Zu leicht: Bedingungen verändern oder Hilfen entfernen.",
+        "Passend: einen ähnlichen Versuch mit etwas Abstand wiederholen.",
+        "Zu schwer: fehlende Grundlage bestimmen und separat üben.",
+        "Danach erneut prüfen, ob der Einstieg nun ohne Hilfe gelingt.",
+      ],
+    },
+  ],
   "vom-lernstand-zum-naechsten-schritt": [
     {
       title: "Was Schüler, Eltern und Lehrkräfte jeweils sehen sollten",

@@ -2,6 +2,62 @@ import type { BlogArticle } from "./types";
 
 export const blogArticlesLate2026: readonly BlogArticle[] = [
   {
+    slug: "die-richtige-schwierigkeit-beim-lernen",
+    title: "Die richtige Schwierigkeit beim Lernen",
+    excerpt:
+      "Warum Aufgaben weder zu leicht noch zu schwer sein sollten und wie du die produktive Lernzone erkennst.",
+    category: "Lernpsychologie",
+    readingTime: "8 Min.",
+    publishedAt: "10. August 2026",
+    publishedAtISO: "2026-08-10T10:00:00+02:00",
+    intro:
+      "Manche Aufgaben laufen so flüssig, dass Lernen kaum noch spürbar ist. Andere wirken wie eine Wand: Du probierst etwas, findest aber keinen Ansatz und weißt anschließend nicht mehr als vorher. Zwischen diesen beiden Extremen liegt eine Schwierigkeit, die anstrengend genug für Entwicklung und klar genug für hilfreiche Rückmeldung ist.",
+    sections: [
+      {
+        title: "Zu leicht fühlt sich besser an, als es wirkt",
+        paragraphs: [
+          "Bekannte Aufgaben geben schnelle Erfolgserlebnisse. Das kann motivieren und eignet sich zum Einstieg. Bleibt die Anforderung jedoch dauerhaft gleich, wird vor allem eine bereits sichere Routine wiederholt. Der Lernfortschritt verlangsamt sich, obwohl viele richtige Antworten entstehen.",
+          "Ein sinnvoller nächster Schritt verändert deshalb nicht sofort das gesamte Thema. Oft genügt eine kleine Steigerung: weniger Hinweise, eine neue Fragestellung oder eine Aufgabe, bei der das bekannte Prinzip selbst erkannt werden muss.",
+        ],
+      },
+      {
+        title: "Zu schwer liefert kaum Orientierung",
+        paragraphs: [
+          "Überforderung zeigt sich nicht nur an Fehlern. Entscheidend ist, ob du aus einem Versuch etwas ableiten kannst. Wenn Grundlagen fehlen, mehrere neue Schritte gleichzeitig nötig sind oder die Aufgabenstellung unklar bleibt, entsteht kein brauchbares Feedback. Du weißt lediglich, dass es nicht funktioniert hat.",
+          "Dann hilft nicht automatisch mehr Anstrengung. Die Aufgabe muss zerlegt, ein fehlender Begriff geklärt oder ein einfacherer Zwischenschritt eingefügt werden. Erst wenn der nächste Versuch erreichbar wird, kann ein Fehler wieder Orientierung geben.",
+        ],
+      },
+      {
+        title: "Die produktive Lernzone erkennen",
+        paragraphs: [
+          "Eine passende Aufgabe verlangt Konzentration und führt möglicherweise zu Fehlern, lässt aber einen Einstieg zu. Du kannst eine Vermutung formulieren, einen Teil lösen oder nach einem gezielten Hinweis weiterarbeiten. Das Ergebnis ist nicht sicher, doch der Denkweg bleibt nachvollziehbar.",
+        ],
+        bullets: [
+          "Du kannst ohne vollständige Lösungshilfe beginnen.",
+          "Ein Fehler lässt sich einer konkreten Stelle zuordnen.",
+          "Ein kurzer Hinweis bringt den Denkweg wieder in Bewegung.",
+          "Nach der Auswertung gelingt ein ähnlicher Versuch selbstständiger.",
+        ],
+      },
+      {
+        title: "Schwierigkeit gezielt verändern",
+        paragraphs: [
+          "Schwierigkeit hängt nicht nur vom Inhalt ab. Auch Zeitdruck, Sprache, Anzahl der Schritte, verfügbare Hilfen und Vertrautheit mit dem Format verändern die Anforderung. Deshalb muss nicht immer ein neues Kapitel begonnen werden, um anspruchsvoller zu lernen.",
+          "Du kannst eine bekannte Aufgabe ohne Unterlagen erklären, Zahlen oder Bedingungen verändern, einen Lösungsweg begründen oder zwei ähnliche Fälle vergleichen. Wird es zu schwer, gehst du den umgekehrten Weg: Problem aufteilen, Beispiel ergänzen, Vorwissen aktivieren und erst danach erneut selbst lösen.",
+        ],
+      },
+      {
+        title: "Wie Dayova den nächsten Schritt anpasst",
+        paragraphs: [
+          "Dayova verbindet deine Antworten mit Lernzielen, Terminen und bisherigen Versuchen. Wiederkehrende Fehler können auf eine fehlende Grundlage hinweisen, sichere Antworten auf eine mögliche Steigerung. So bleibt der Plan nicht bei einer starren Reihenfolge, sondern reagiert auf deinen tatsächlichen Lernstand.",
+          "Für Schüler wird der Einstieg klarer, weil nicht jede Aufgabe selbst ausgewählt werden muss. Eltern sehen Fortschritt, ohne nur die Zahl richtiger Antworten zu betrachten. Lehrkräfte erhalten Hinweise darauf, ob mehr Übung, eine andere Erklärung oder ein anspruchsvollerer Transfer sinnvoll ist.",
+        ],
+      },
+    ],
+    takeaway:
+      "Gute Lernaufgaben sind nicht möglichst leicht oder möglichst schwer. Sie fordern dich so, dass ein eigener Versuch möglich bleibt und jede Rückmeldung einen konkreten nächsten Schritt eröffnet.",
+  },
+  {
     slug: "vom-lernstand-zum-naechsten-schritt",
     title: "Vom Lernstand zum nächsten Schritt",
     excerpt:
