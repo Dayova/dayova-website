@@ -33,6 +33,22 @@ export const metadata: Metadata = {
     "Schüler",
     "Prüfungsvorbereitung",
   ],
+  icons: {
+    icon: [
+      {
+        url: "/favicon-light.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon-dark.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+    shortcut: "/favicon-light.png",
+    apple: "/favicon-light.png",
+  },
   openGraph: {
     title: "Dayova – Wisse, was als Nächstes zählt.",
     description:
