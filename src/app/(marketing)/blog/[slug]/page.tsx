@@ -4,8 +4,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ReadingProgress } from "@/components/blog/reading-progress";
+import { JsonLd } from "@/components/seo/json-ld";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { blogArticles, getBlogArticle } from "@/content/blog";
+import { defaultOgImage, siteName, siteUrl } from "@/lib/seo";
 
 type BlogArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -28,13 +30,28 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${article.title} – Dayova Blog`,
+    title: article.title,
     description: article.excerpt,
+    alternates: {
+      canonical: `/blog/${article.slug}`,
+    },
     openGraph: {
       type: "article",
       title: article.title,
       description: article.excerpt,
+      url: `/blog/${article.slug}`,
+      siteName,
+      locale: "de_DE",
       publishedTime: article.publishedAtISO,
+      authors: ["Dayova Redaktion"],
+      section: article.category,
+      images: [defaultOgImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [defaultOgImage.url],
     },
   };
 }
@@ -49,8 +66,42 @@ export default async function BlogArticlePage({
     notFound();
   }
 
+  const articleUrl = `${siteUrl}/blog/${article.slug}`;
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${articleUrl}#article`,
+    headline: article.title,
+    description: article.excerpt,
+    datePublished: article.publishedAtISO,
+    dateModified: article.publishedAtISO,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": articleUrl,
+    },
+    author: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: siteName,
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: siteName,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/favicon-light.png`,
+      },
+    },
+    image: `${siteUrl}${defaultOgImage.url}`,
+    articleSection: article.category,
+    inLanguage: "de-DE",
+  };
+
   return (
     <>
+      <JsonLd data={articleStructuredData} />
       <section className="blog-article-hero" aria-labelledby="article-title">
         <div className="dayova-container">
           <div className="blog-article-hero__inner">

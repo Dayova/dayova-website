@@ -19,12 +19,16 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dayova.com"),
+  applicationName: "Dayova",
   title: {
     default: "Dayova – Dein persönlicher Lernbegleiter",
     template: "%s | Dayova",
   },
   description:
-    "Dayova zeigt dir, was als Nächstes zählt, erstellt einen realistischen Lernplan und macht Stärken und Wissenslücken sichtbar.",
+    "Dayova ist dein persönlicher Lernbegleiter: Die App erstellt Lernpläne, erkennt Wissenslücken und zeigt dir den nächsten sinnvollen Lernschritt.",
+  authors: [{ name: "Dayova", url: "https://dayova.com" }],
+  creator: "Dayova",
+  publisher: "Dayova",
   keywords: [
     "Dayova",
     "Lernbegleiter",
@@ -50,19 +54,39 @@ export const metadata: Metadata = {
     apple: "/favicon-light.png",
   },
   openGraph: {
-    title: "Dayova – Wisse, was als Nächstes zählt.",
+    title: "Dayova – Dein persönlicher Lernbegleiter",
     description:
-      "Dein persönlicher Lernbegleiter für einen klaren Plan, verständliches Feedback und den nächsten sinnvollen Schritt.",
+      "Dayova erstellt Lernpläne, erkennt Wissenslücken und zeigt dir den nächsten sinnvollen Lernschritt.",
     url: "https://dayova.com",
     siteName: "Dayova",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "/images/dayova-hero-phones.png",
+        width: 4269,
+        height: 2400,
+        alt: "Dayova – persönlicher Lernbegleiter mit Lernplan und Wissensanalyse",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Dayova – Dein persönlicher Lernbegleiter",
     description:
-      "Wisse, was als Nächstes zählt. Mit einem Lernplan, der zu deinem Alltag passt.",
+      "Dayova erstellt Lernpläne, erkennt Wissenslücken und zeigt dir den nächsten sinnvollen Lernschritt.",
+    images: ["/images/dayova-hero-phones.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 

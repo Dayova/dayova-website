@@ -4,8 +4,9 @@ import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
 export const metadata: Metadata = {
-  title: "Bezahlvorgang abgebrochen – Dayova",
+  title: "Bezahlvorgang abgebrochen",
   description: "Kehre zu den Dayova-Abos zurück und wähle deinen Tarif.",
+  robots: { index: false, follow: false },
 };
 
 export default function CheckoutCancelPage() {

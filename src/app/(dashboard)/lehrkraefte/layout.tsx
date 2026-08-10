@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: "Lehrkräfte-Dashboard",
   description:
     "Dayova für Lehrkräfte: Unterrichtsgruppen, Lernstände und Empfehlungen im Blick.",
+  robots: { index: false, follow: false },
 };
 
 const teacherDashboardEnabled =

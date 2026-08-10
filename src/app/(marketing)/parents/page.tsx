@@ -15,12 +15,14 @@ import { StoreDownloadLink } from "@/components/store-download-link";
 import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { IconBadge } from "@/components/ui/icon-badge";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Dayova für Eltern",
+export const metadata: Metadata = createPageMetadata({
+  title: "Für Eltern: Weniger Lernstress im Familienalltag",
   description:
     "Dayova entlastet Eltern bei der Lernorganisation, stärkt die Selbstständigkeit ihrer Kinder und schafft mehr Ruhe im Familienalltag.",
-};
+  path: "/parents",
+});
 
 const parentBenefits = [
   {

@@ -8,12 +8,14 @@ import { DayovaIcon } from "@/components/ui/huge-icon";
 import { PageHero } from "@/components/ui/page-hero";
 import { siteConfig } from "@/config/site";
 import { blogArticles } from "@/content/blog";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog – Lernen mit Plan und Rückmeldung",
+export const metadata: Metadata = createPageMetadata({
+  title: "Blog: Lernmethoden, Lernplanung & Motivation",
   description:
     "Fundierte Beiträge zu Lernplanung, Lernpsychologie, Prüfungsvorbereitung und dem Schulalltag von Schülern, Eltern und Lehrkräften.",
-};
+  path: "/blog",
+});
 
 export default function BlogPage() {
   return (

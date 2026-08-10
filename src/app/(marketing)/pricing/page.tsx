@@ -5,12 +5,14 @@ import { SchoolPricingCard } from "@/components/pricing/school-pricing-card";
 import { StudentPricingCard } from "@/components/pricing/student-pricing-card";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { pricingFaqs } from "@/content/pricing";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Preise – Dayova für Schüler und Schulen",
+export const metadata: Metadata = createPageMetadata({
+  title: "Preise für Schüler und Schulen",
   description:
     "Dayova im Jahresabo für 12,99 € pro Monat, im Monatsabo für 14,99 € und mit individuellen Angeboten für Schulen.",
-};
+  path: "/pricing",
+});
 
 const checkoutMessages = {
   "invalid-plan": "Bitte wähle ein gültiges Monats- oder Jahresabo aus.",

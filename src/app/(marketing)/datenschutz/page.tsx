@@ -4,6 +4,9 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
+  description:
+    "Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten auf der Dayova Website.",
+  alternates: { canonical: "/datenschutz" },
   robots: { index: false, follow: true },
 };
 

@@ -17,12 +17,14 @@ import Image from "next/image";
 import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { siteConfig } from "@/config/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Dayova für Schulen – Lernbegleitung und Lehrkräfte-System",
+export const metadata: Metadata = createPageMetadata({
+  title: "Für Schulen: Lernbegleitung und Lehrkräfte-System",
   description:
     "Dayova verbindet einen persönlichen Lernbegleiter für Schülerinnen und Schüler mit einem übersichtlichen Management- und Unterrichtssystem für Lehrkräfte.",
-};
+  path: "/schools",
+});
 
 const studentBenefits = [
   "Persönliche Lernpläne aus Aufgaben, Prüfungen und Lernzeiten",

@@ -4,6 +4,8 @@ import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Impressum",
+  description: "Anbieterangaben und Kontaktinformationen von Dayova.",
+  alternates: { canonical: "/impressum" },
   robots: { index: false, follow: true },
 };
 
