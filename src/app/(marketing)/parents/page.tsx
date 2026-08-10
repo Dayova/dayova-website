@@ -322,12 +322,8 @@ export default function ParentsPage() {
               Häufige Fragen von Eltern
             </h2>
             <div className="home-classic-faq__list">
-              {parentFaqItems.map((item, index) => (
-                <details
-                  key={item.question}
-                  name="parents-faq"
-                  open={index === 0}
-                >
+              {parentFaqItems.map((item) => (
+                <details key={item.question} name="parents-faq">
                   <summary>
                     <span>{item.question}</span>
                     <DayovaIcon

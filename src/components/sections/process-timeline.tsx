@@ -1,37 +1,67 @@
 "use client";
 
 import {
+  Calendar03Icon,
   CalendarAdd02Icon,
   PlayCircle02Icon,
+  School01Icon,
   SmartPhone01Icon,
+  TaskDone01Icon,
 } from "@hugeicons/core-free-icons";
 import { useEffect, useRef, useState } from "react";
 
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
-const processSteps = [
-  {
-    number: "01",
-    title: "App herunterladen",
-    description:
-      "Lade Dayova herunter und richte dein Profil ein. Danach ist dein persönlicher Lernbegleiter startklar.",
-    icon: SmartPhone01Icon,
-  },
-  {
-    number: "02",
-    title: "Termine und Lernzeiten eintragen",
-    description:
-      "Füge Prüfungen, Aufgaben und die Zeiten hinzu, an denen du lernen kannst. So weiß Dayova, was wann wichtig ist.",
-    icon: CalendarAdd02Icon,
-  },
-  {
-    number: "03",
-    title: "Mit deinem Lernplan loslegen",
-    description:
-      "Dayova teilt deine Ziele in klare Lerneinheiten. Du arbeitest Schritt für Schritt und dein Plan passt sich deinem Fortschritt an.",
-    icon: PlayCircle02Icon,
-  },
-] as const;
+type ProcessTimelineVariant = "home" | "schools";
+
+const processStepsByVariant = {
+  home: [
+    {
+      number: "01",
+      title: "App herunterladen",
+      description:
+        "Lade Dayova herunter und richte dein Profil ein. Danach ist dein persönlicher Lernbegleiter startklar.",
+      icon: SmartPhone01Icon,
+    },
+    {
+      number: "02",
+      title: "Termine und Lernzeiten eintragen",
+      description:
+        "Füge Prüfungen, Aufgaben und die Zeiten hinzu, an denen du lernen kannst. So weiß Dayova, was wann wichtig ist.",
+      icon: CalendarAdd02Icon,
+    },
+    {
+      number: "03",
+      title: "Mit deinem Lernplan loslegen",
+      description:
+        "Dayova teilt deine Ziele in klare Lerneinheiten. Du arbeitest Schritt für Schritt und dein Plan passt sich deinem Fortschritt an.",
+      icon: PlayCircle02Icon,
+    },
+  ],
+  schools: [
+    {
+      number: "01",
+      title: "Bedarf Ihrer Schule verstehen",
+      description:
+        "Wir besprechen Klassenstufen, Fachbereiche, bestehende Abläufe und die Ziele, die Sie mit Dayova erreichen möchten.",
+      icon: School01Icon,
+    },
+    {
+      number: "02",
+      title: "Mit einem Pilot starten",
+      description:
+        "Eine ausgewählte Gruppe testet Lernbegleiter und Lehrkräfte-System in einem klar abgegrenzten, begleiteten Einsatz.",
+      icon: TaskDone01Icon,
+    },
+    {
+      number: "03",
+      title: "Gemeinsam weiterentwickeln",
+      description:
+        "Wir werten Erfahrungen aus, passen den Einsatz an und schaffen die Grundlage für eine nachhaltige Zusammenarbeit.",
+      icon: Calendar03Icon,
+    },
+  ],
+} as const;
 
 type LineMetrics = {
   height: number;
@@ -41,7 +71,13 @@ type LineMetrics = {
 
 const emptyLineMetrics: LineMetrics = { height: 0, progress: 0, top: 0 };
 
-export function ProcessTimeline() {
+export function ProcessTimeline({
+  variant = "home",
+}: {
+  variant?: ProcessTimelineVariant;
+}) {
+  const processSteps = processStepsByVariant[variant];
+  const processStepCount = processSteps.length;
   const [activeIndex, setActiveIndex] = useState(0);
   const [lineMetrics, setLineMetrics] = useState(emptyLineMetrics);
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -117,13 +153,13 @@ export function ProcessTimeline() {
       });
       window.removeEventListener("resize", updateActiveStep);
     };
-  }, []);
+  }, [variant]);
 
   useEffect(() => {
     const timeline = timelineRef.current;
     const firstNode = nodeRefs.current[0];
     const activeNode = nodeRefs.current[activeIndex];
-    const lastNode = nodeRefs.current[processSteps.length - 1];
+    const lastNode = nodeRefs.current[processStepCount - 1];
 
     if (!timeline || !firstNode || !activeNode || !lastNode) return;
 
@@ -153,7 +189,7 @@ export function ProcessTimeline() {
       observer.disconnect();
       window.removeEventListener("resize", updateLine);
     };
-  }, [activeIndex]);
+  }, [activeIndex, processStepCount, variant]);
 
   return (
     <div className="home-classic-process-timeline" ref={timelineRef}>

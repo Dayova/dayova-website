@@ -93,12 +93,8 @@ export default async function PricingPage({
               Häufige Fragen zu den Preisen
             </h2>
             <div className="home-classic-faq__list">
-              {pricingFaqs.map((faq, index) => (
-                <details
-                  key={faq.question}
-                  name="pricing-faq"
-                  open={index === 0}
-                >
+              {pricingFaqs.map((faq) => (
+                <details key={faq.question} name="pricing-faq">
                   <summary>
                     <span>{faq.question}</span>
                     <DayovaIcon

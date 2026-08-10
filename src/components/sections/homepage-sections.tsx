@@ -383,12 +383,8 @@ export function HomeFaqSection() {
             Häufige Fragen
           </h2>
           <div className="home-classic-faq__list">
-            {faqItems.map((item, index) => (
-              <details
-                key={item.question}
-                name="home-faq"
-                open={index === 0}
-              >
+            {faqItems.map((item) => (
+              <details key={item.question} name="home-faq">
                 <summary>
                   <span>{item.question}</span>
                   <DayovaIcon

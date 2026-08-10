@@ -1,19 +1,16 @@
 import {
-  AiLearningIcon,
-  BookOpen01Icon,
-  Calendar03Icon,
+  ArrowDown01Icon,
   ChartHistogramIcon,
   CheckmarkCircle01Icon,
   DashboardSquare01Icon,
-  School01Icon,
   SmartPhone01Icon,
   SparklesIcon,
-  TaskDone01Icon,
   UserGroupIcon,
 } from "@hugeicons/core-free-icons";
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { siteConfig } from "@/config/site";
@@ -56,27 +53,6 @@ const schoolBenefits = [
   },
 ] as const;
 
-const partnershipSteps = [
-  {
-    icon: School01Icon,
-    number: "01",
-    title: "Bedarf Ihrer Schule verstehen",
-    text: "Wir besprechen Klassenstufen, Fachbereiche, bestehende Abläufe und die Ziele, die Sie mit Dayova erreichen möchten.",
-  },
-  {
-    icon: TaskDone01Icon,
-    number: "02",
-    title: "Mit einem Pilot starten",
-    text: "Eine ausgewählte Gruppe testet Lernbegleiter und Lehrkräfte-System in einem klar abgegrenzten, begleiteten Einsatz.",
-  },
-  {
-    icon: Calendar03Icon,
-    number: "03",
-    title: "Gemeinsam weiterentwickeln",
-    text: "Wir werten Erfahrungen aus, passen den Einsatz an und schaffen die Grundlage für eine nachhaltige Zusammenarbeit.",
-  },
-] as const;
-
 const schoolFaq = [
   {
     question: "Was erhalten Schülerinnen und Schüler?",
@@ -103,14 +79,14 @@ export default function SchoolsPage() {
   )}`;
 
   return (
-    <>
+    <div className="schools-page">
       <section
         className="home-classic-hero schools-hero"
         aria-labelledby="schools-hero-title"
       >
         <div className="dayova-container schools-hero__inner">
           <div className="schools-hero__copy">
-            <span className="home-classic-section-eyebrow">
+                <span className="home-classic-section-eyebrow home-classic-section-eyebrow--inverse">
               Dayova für Schulen
             </span>
             <h1 id="schools-hero-title" className="dayova-hero-claim">
@@ -130,52 +106,30 @@ export default function SchoolsPage() {
             </div>
           </div>
 
-          <div className="schools-hero__visual" aria-label="Dayova für Schüler und Lehrkräfte">
-            <div className="schools-hero-dashboard" aria-hidden="true">
-              <div className="schools-hero-dashboard__topbar">
-                <span className="schools-hero-dashboard__brand">dayova.</span>
-                <span>für Lehrkräfte</span>
-              </div>
-              <div className="schools-hero-dashboard__body">
-                <div className="schools-hero-dashboard__nav">
-                  <span className="is-active">
-                    <DayovaIcon icon={DashboardSquare01Icon} size={15} />
-                    Startseite
-                  </span>
-                  <span>
-                    <DayovaIcon icon={UserGroupIcon} size={15} />
-                    Klassen
-                  </span>
-                  <span>
-                    <DayovaIcon icon={TaskDone01Icon} size={15} />
-                    Aufgaben
-                  </span>
-                </div>
-                <div className="schools-hero-dashboard__content">
-                  <span className="schools-preview-kicker">Für morgen empfohlen</span>
-                  <strong>Bruchgleichungen festigen</strong>
-                  <p>Klasse 8A · Mathematik · 45 Min.</p>
-                  <div className="schools-preview-progress">
-                    <span />
-                  </div>
-                  <div className="schools-preview-actions">
-                    <span>Stunde vorbereiten</span>
-                    <span>Lernstand</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="schools-hero-phone">
+          <div
+            className="schools-hero__visual schools-hero__visual--macbook"
+            role="img"
+            aria-label="Dayova für Lehrkräfte mit Unterrichtsempfehlung und Stundenplan auf einem MacBook"
+          >
+            <div className="schools-hero-macbook">
               <Image
-                src="/images/dayova-home-phone.png"
-                alt="Dayova Lernbegleiter mit persönlichem Lernplan"
-                width={872}
-                height={1080}
+                src="/images/schools/teacher-dashboard-macbook-transparent-light.png"
+                alt=""
+                width={1364}
+                height={768}
                 priority
-                sizes="(max-width: 767px) 46vw, 280px"
+                sizes="(max-width: 1100px) 92vw, 56vw"
+                className="schools-hero-macbook__image schools-hero-macbook__image--light"
               />
-              <span>für Schüler:innen</span>
+              <Image
+                src="/images/schools/teacher-dashboard-macbook-transparent-dark.png"
+                alt=""
+                width={1364}
+                height={768}
+                priority
+                sizes="(max-width: 1100px) 92vw, 56vw"
+                className="schools-hero-macbook__image schools-hero-macbook__image--dark"
+              />
             </div>
           </div>
         </div>
@@ -188,7 +142,7 @@ export default function SchoolsPage() {
       >
         <div className="dayova-container schools-solution">
           <div className="home-classic-advantages__intro">
-            <span className="home-classic-section-eyebrow">
+                <span className="home-classic-section-eyebrow home-classic-section-eyebrow--inverse">
               Zwei Perspektiven. Ein Lernweg.
             </span>
             <h2 id="schools-solution-title" className="dayova-section-title">
@@ -224,15 +178,6 @@ export default function SchoolsPage() {
                   ))}
                 </ul>
               </div>
-              <div className="schools-product-card__student-visual">
-                <Image
-                  src="/images/dayova-screen-collage.png"
-                  alt="Mehrere Ansichten des Dayova Lernbegleiters"
-                  width={964}
-                  height={883}
-                  sizes="(max-width: 767px) 88vw, 520px"
-                />
-              </div>
             </article>
 
             <article className="schools-product-card schools-product-card--teachers">
@@ -262,34 +207,6 @@ export default function SchoolsPage() {
                 </ButtonLink>
               </div>
 
-              <div className="schools-teacher-preview" aria-hidden="true">
-                <div className="schools-teacher-preview__header">
-                  <span>Guten Morgen, Frau Müller</span>
-                  <span className="schools-teacher-preview__avatar">FM</span>
-                </div>
-                <div className="schools-teacher-preview__recommendation">
-                  <span className="schools-preview-kicker">Nächste Klasse</span>
-                  <strong>Klasse 8A vorbereiten</strong>
-                  <p>Bruchgleichungen · 14 Schüler:innen benötigen Wiederholung</p>
-                  <span className="schools-teacher-preview__button">
-                    Unterricht vorbereiten
-                  </span>
-                </div>
-                <div className="schools-teacher-preview__tiles">
-                  <span>
-                    <DayovaIcon icon={BookOpen01Icon} size={20} />
-                    Klassen &amp; Klassenbuch
-                  </span>
-                  <span>
-                    <DayovaIcon icon={TaskDone01Icon} size={20} />
-                    Aufgaben &amp; Tests
-                  </span>
-                  <span>
-                    <DayovaIcon icon={ChartHistogramIcon} size={20} />
-                    Lernstände
-                  </span>
-                </div>
-              </div>
             </article>
           </div>
         </div>
@@ -326,36 +243,31 @@ export default function SchoolsPage() {
       </section>
 
       <section
-        className="home-classic-section schools-partnership-section"
+        className="home-classic-section home-classic-process"
         aria-labelledby="schools-partnership-title"
       >
-        <div className="dayova-container schools-partnership">
-          <div className="home-classic-advantages__intro">
-            <span className="home-classic-section-eyebrow">Gemeinsam starten</span>
-            <h2 id="schools-partnership-title" className="dayova-section-title">
-              Von der ersten Idee zu einer Partnerschaft, die zu Ihrer Schule passt.
-            </h2>
-            <p>
-              Wir führen Dayova nicht einfach ein. Wir lernen Ihren Alltag
-              kennen, starten fokussiert und entwickeln den Einsatz gemeinsam
-              mit Ihrer Schule weiter.
-            </p>
-          </div>
+        <div className="dayova-container">
+          <div className="home-classic-process__panel">
+            <div className="home-classic-process__intro">
+              <span className="home-classic-section-eyebrow">
+                Gemeinsam starten
+              </span>
+              <h2
+                id="schools-partnership-title"
+                className="dayova-section-title"
+              >
+                Von der ersten Idee zu einer Partnerschaft, die zu Ihrer Schule
+                passt.
+              </h2>
+              <p>
+                Wir führen Dayova nicht einfach ein. Wir lernen Ihren Alltag
+                kennen, starten fokussiert und entwickeln den Einsatz gemeinsam
+                mit Ihrer Schule weiter.
+              </p>
+            </div>
 
-          <ol className="schools-partnership-steps">
-            {partnershipSteps.map((step) => (
-              <li className="schools-partnership-step" key={step.number}>
-                <span className="schools-partnership-step__number">
-                  {step.number}
-                </span>
-                <span className="schools-partnership-step__icon">
-                  <DayovaIcon icon={step.icon} size={28} />
-                </span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </li>
-            ))}
-          </ol>
+            <ProcessTimeline variant="schools" />
+          </div>
         </div>
       </section>
 
@@ -363,26 +275,48 @@ export default function SchoolsPage() {
         className="home-classic-section"
         aria-labelledby="schools-faq-title"
       >
-        <div className="dayova-container schools-faq">
-          <div className="schools-faq__intro">
+        <div className="dayova-container home-classic-faq">
+          <article className="home-classic-faq__visual schools-faq__visual">
+            <h3>Bereit für Dayova an Ihrer Schule?</h3>
+            <Image
+              src="/images/schools/teacher-dashboard-macbook-light.png"
+              alt="Dayova für Lehrkräfte auf einem MacBook"
+              width={1364}
+              height={768}
+              sizes="(max-width: 767px) 88vw, 520px"
+              className="schools-faq__image schools-faq__image--light"
+            />
+            <Image
+              src="/images/schools/teacher-dashboard-macbook-dark.png"
+              alt=""
+              width={1364}
+              height={768}
+              sizes="(max-width: 767px) 88vw, 520px"
+              className="schools-faq__image schools-faq__image--dark"
+            />
+          </article>
+          <div className="home-classic-faq__content">
             <span className="home-classic-section-eyebrow">Gut zu wissen</span>
             <h2 id="schools-faq-title" className="dayova-section-title">
-              Fragen zur Zusammenarbeit mit Schulen
+              Häufige Fragen
             </h2>
-            <p>
-              Der passende Einsatz hängt von Schulgröße, Zielgruppe und
-              Ausgangslage ab. Diese Antworten geben eine erste Orientierung.
-            </p>
-          </div>
-          <div className="schools-faq__list">
-            {schoolFaq.map((item, index) => (
-              <details key={item.question} name="schools-faq" open={index === 0}>
-                <summary>
-                  <span>{item.question}</span>
-                </summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
+            <div className="home-classic-faq__list">
+              {schoolFaq.map((item) => (
+                <details key={item.question} name="schools-faq">
+                  <summary>
+                    <span>{item.question}</span>
+                    <DayovaIcon
+                      className="home-classic-faq__icon"
+                      icon={ArrowDown01Icon}
+                      size={24}
+                      strokeWidth={2}
+                      aria-hidden="true"
+                    />
+                  </summary>
+                  <p>{item.answer}</p>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -412,15 +346,19 @@ export default function SchoolsPage() {
                   Informationen anfordern
                 </ButtonLink>
               </div>
-            </div>
-            <div className="schools-cta__seal" aria-hidden="true">
-              <DayovaIcon icon={AiLearningIcon} size={44} />
-              <strong>Ein Lernweg</strong>
-              <span>für Schüler:innen, Lehrkräfte und Schulen</span>
-            </div>
+              </div>
+              <div className="schools-cta__visual">
+                <Image
+                  src="/images/dayova-screen-collage.png"
+                  alt="Mehrere Ansichten der Dayova App"
+                  width={964}
+                  height={883}
+                  sizes="(max-width: 1023px) 90vw, 520px"
+                />
+              </div>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

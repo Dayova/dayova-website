@@ -93,18 +93,11 @@ export const metadata: Metadata = {
 const themeInitializer = `
 (() => {
   const root = document.documentElement;
-  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  let savedTheme = null;
-
-  try {
-    savedTheme = window.localStorage.getItem("dayova-theme");
-  } catch {}
-
-  const isDark =
-    savedTheme === "dark" || (savedTheme !== "light" && systemPrefersDark);
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   root.classList.toggle("dark", isDark);
   root.dataset.theme = isDark ? "dark" : "light";
+  root.dataset.themeSource = "system";
 })();
 `;
 

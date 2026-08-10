@@ -695,6 +695,43 @@
   box-shadow: var(--dayova-shadow);
 }
 
+.schools-hero__visual.schools-hero__visual--macbook {
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.schools-hero-macbook {
+  position: relative;
+  display: block;
+  width: min(100%, 900px);
+}
+
+.schools-hero-macbook__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.schools-hero-macbook__image--dark {
+  display: none;
+}
+
+.dark .schools-hero-macbook__image--light {
+  display: none;
+}
+
+.dark .schools-hero-macbook__image--dark {
+  display: block;
+}
+
 .schools-hero-dashboard {
   position: relative;
   z-index: 1;
@@ -780,8 +817,7 @@
   letter-spacing: -0.035em;
 }
 
-.schools-hero-dashboard__content p,
-.schools-teacher-preview p {
+.schools-hero-dashboard__content p {
   margin: 0;
   color: var(--dayova-muted);
 }
@@ -809,8 +845,7 @@
   margin-top: var(--space-2);
 }
 
-.schools-preview-actions span,
-.schools-teacher-preview__button {
+.schools-preview-actions span {
   min-height: 36px;
   display: inline-flex;
   align-items: center;
@@ -821,8 +856,7 @@
   font-weight: 700;
 }
 
-.schools-preview-actions span:first-child,
-.schools-teacher-preview__button {
+.schools-preview-actions span:first-child {
   border-color: transparent;
   background: var(--dayova-brand-gradient);
   color: white;
@@ -858,7 +892,6 @@
 .schools-solution,
 .schools-benefits-section .dayova-container,
 .schools-partnership,
-.schools-faq,
 .schools-cta {
   display: grid;
   gap: clamp(40px, 7vw, 88px);
@@ -875,9 +908,8 @@
 }
 
 .schools-product-card {
-  min-height: 780px;
   display: grid;
-  grid-template-rows: auto minmax(300px, 1fr);
+  align-content: start;
   overflow: hidden;
   border: 1px solid var(--dayova-line);
   border-radius: var(--dayova-radius-card);
@@ -928,8 +960,7 @@
 
 .schools-product-card__copy > p,
 .schools-benefit-card p,
-.schools-partnership-step p,
-.schools-faq__intro p {
+.schools-partnership-step p {
   margin: 0;
   color: var(--dayova-muted);
   font-size: var(--type-body);
@@ -958,95 +989,12 @@
   color: var(--dayova-brand);
 }
 
-.schools-product-card__student-visual {
-  min-height: 340px;
-  display: grid;
-  place-items: end center;
-  overflow: hidden;
-  padding: var(--space-6) var(--space-6) 0;
-  background: color-mix(in srgb, var(--dayova-brand-soft) 68%, var(--dayova-elevated));
-}
-
-.schools-product-card__student-visual img {
-  width: min(100%, 520px);
-  height: auto;
-  align-self: end;
-}
-
-.schools-teacher-preview {
-  align-self: end;
-  margin: 0 clamp(20px, 3vw, var(--space-8));
-  padding: clamp(var(--space-6), 3vw, var(--space-8));
-  display: grid;
-  gap: 20px;
-  border: 1px solid var(--dayova-line);
-  border-bottom: 0;
-  border-radius: 28px 28px 0 0;
-  background: color-mix(in srgb, var(--dayova-subtle) 72%, var(--dayova-elevated));
-}
-
-.schools-teacher-preview__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3);
-  font-size: 17px;
-  font-weight: 750;
-}
-
-.schools-teacher-preview__avatar {
-  width: 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--dayova-brand-gradient);
-  color: white;
-  font-size: 12px;
-}
-
-.schools-teacher-preview__recommendation {
-  display: grid;
-  justify-items: start;
-  gap: var(--space-3);
-  padding: 20px;
-  border: 1px solid color-mix(in srgb, var(--dayova-brand) 32%, var(--dayova-line));
-  border-radius: 22px;
-  background: var(--dayova-elevated);
-}
-
-.schools-teacher-preview__recommendation strong {
-  font-size: 22px;
-  line-height: 1.12;
-}
-
-.schools-teacher-preview__tiles {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-2);
-}
-
-.schools-teacher-preview__tiles span {
-  min-height: 94px;
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  gap: 8px;
-  padding: var(--space-3);
-  border: 1px solid var(--dayova-line);
-  border-radius: 18px;
-  background: var(--dayova-elevated);
-  text-align: center;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.schools-teacher-preview__tiles svg {
-  color: var(--dayova-brand);
+.schools-page {
+  background: var(--dayova-page);
 }
 
 .schools-benefits-section {
-  background: color-mix(in srgb, var(--dayova-subtle) 46%, transparent);
+  background: transparent;
 }
 
 .schools-benefit-grid,
@@ -1090,85 +1038,18 @@
   letter-spacing: 0.08em;
 }
 
-.schools-faq {
-  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
-  align-items: start;
-}
-
-.schools-faq__intro {
-  display: grid;
-  justify-items: start;
-  gap: 20px;
-  position: sticky;
-  top: 180px;
-}
-
-.schools-faq__intro .home-classic-section-eyebrow {
-  margin: 0;
-}
-
-.schools-faq__list {
-  display: grid;
-  gap: var(--space-3);
-}
-
-.schools-faq__list details {
-  overflow: hidden;
-  border: 1px solid var(--dayova-line);
-  border-radius: var(--dayova-radius-card);
-  corner-shape: var(--dayova-corner-shape);
-  background: var(--dayova-elevated);
-  box-shadow: var(--dayova-shadow);
-}
-
-.schools-faq__list summary {
-  min-height: 88px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  padding: var(--space-6) clamp(var(--space-6), 3vw, var(--space-8));
-  cursor: pointer;
-  color: var(--dayova-ink);
-  font-size: clamp(18px, 1.5vw, 22px);
-  font-weight: 700;
-  list-style: none;
-}
-
-.schools-faq__list summary::-webkit-details-marker {
-  display: none;
-}
-
-.schools-faq__list summary::after {
-  content: "+";
-  flex: 0 0 auto;
-  color: var(--dayova-brand);
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.schools-faq__list details[open] summary::after {
-  content: "–";
-}
-
-.schools-faq__list details p {
-  margin: 0;
-  padding: 0 clamp(var(--space-6), 3vw, var(--space-8)) 28px;
-  color: var(--dayova-muted);
-  font-size: var(--type-body);
-  line-height: 1.65;
-}
-
 .schools-cta-section {
   padding-top: 0;
 }
 
 .schools-cta {
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: stretch;
+  gap: 0;
+  min-height: 520px;
   overflow: hidden;
-  padding: clamp(var(--space-8), 6vw, 88px);
-  border-radius: var(--dayova-radius-card);
+  padding: 0;
+  border-radius: var(--dayova-radius-3xl);
   corner-shape: var(--dayova-corner-shape);
   background: var(--dayova-brand-gradient);
   color: white;
@@ -1177,16 +1058,15 @@
 
 .schools-cta__copy {
   display: grid;
+  align-content: center;
   justify-items: start;
-  gap: 20px;
-  max-width: 860px;
+  gap: var(--space-4);
+  max-width: none;
+  padding: var(--space-12);
 }
 
 .schools-cta__copy .home-classic-section-eyebrow {
   margin: 0;
-  border-color: color-mix(in srgb, white 44%, transparent);
-  background: color-mix(in srgb, white 17%, transparent);
-  color: white;
 }
 
 .schools-cta__copy h2 {
@@ -1219,15 +1099,22 @@
   color: white;
 }
 
-.schools-cta__seal {
-  width: clamp(150px, 16vw, 230px);
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border: 1px solid color-mix(in srgb, white 38%, transparent);
-  border-radius: 50%;
-  background: color-mix(in srgb, white 14%, transparent);
-  color: white;
+.schools-cta__visual {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.schools-cta__visual img {
+  position: absolute;
+  inset-block: 0;
+  left: 50%;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 1100px) {
@@ -1248,9 +1135,6 @@
     grid-template-columns: 1fr;
   }
 
-  .schools-product-card {
-    min-height: auto;
-  }
 }
 
 @media (max-width: 900px) {
@@ -1264,20 +1148,16 @@
     min-height: auto;
   }
 
-  .schools-faq {
-    grid-template-columns: 1fr;
-  }
-
-  .schools-faq__intro {
-    position: static;
-  }
-
   .schools-cta {
     grid-template-columns: 1fr;
   }
 
-  .schools-cta__seal {
-    display: none;
+  .schools-cta__copy {
+    padding: var(--space-8);
+  }
+
+  .schools-cta__visual {
+    min-height: 420px;
   }
 }
 
@@ -1297,6 +1177,29 @@
   .schools-cta__actions,
   .schools-cta__actions > * {
     width: 100%;
+  }
+
+  .schools-hero__copy {
+    margin-inline: auto;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .schools-hero .dayova-hero-claim,
+  .schools-hero .home-classic-hero__description {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .schools-hero__copy .home-classic-actions {
+    max-width: 420px;
+    margin-inline: auto;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .schools-hero__copy .home-classic-actions > * {
+    text-align: center;
   }
 
   .schools-hero__visual {
@@ -1330,13 +1233,8 @@
   .schools-solution,
   .schools-benefits-section .dayova-container,
   .schools-partnership,
-  .schools-faq,
   .schools-cta {
     gap: 36px;
-  }
-
-  .schools-product-card {
-    grid-template-rows: auto auto;
   }
 
   .schools-product-card__copy {
@@ -1355,43 +1253,45 @@
     border-radius: 19px;
   }
 
-  .schools-product-card__student-visual {
-    min-height: 280px;
-    padding-inline: var(--space-3);
-  }
-
-  .schools-teacher-preview {
-    margin-inline: var(--space-3);
-    padding: var(--space-4);
-  }
-
-  .schools-teacher-preview__tiles {
-    grid-template-columns: 1fr;
-  }
-
-  .schools-teacher-preview__tiles span {
-    min-height: 70px;
-    grid-template-columns: auto 1fr;
-    justify-items: start;
-    text-align: left;
-  }
-
   .schools-benefit-card,
   .schools-partnership-step {
     padding: var(--space-6);
   }
 
-  .schools-faq__list summary {
-    min-height: 76px;
-    padding: 20px;
+  .schools-benefit-card {
+    justify-items: center;
+    text-align: center;
   }
 
-  .schools-faq__list details p {
-    padding: 0 20px var(--space-6);
+  .schools-benefit-card p {
+    margin-inline: auto;
   }
 
   .schools-cta {
+    gap: 0;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .schools-cta__copy {
+    justify-items: center;
     padding: 28px;
+    text-align: center;
+  }
+
+  .schools-cta__copy .home-classic-section-eyebrow,
+  .schools-cta__copy p {
+    margin-inline: auto;
+  }
+
+  .schools-cta__actions {
+    max-width: 420px;
+    margin-inline: auto;
+    justify-content: center;
+  }
+
+  .schools-cta__visual {
+    display: none;
   }
 }
 
@@ -2708,6 +2608,23 @@
   transform: translateX(-50%);
 }
 
+.schools-faq__visual .schools-faq__image {
+  top: 150px;
+  width: min(620px, calc(100% + 110px));
+}
+
+.schools-faq__visual .schools-faq__image--dark {
+  display: none;
+}
+
+.dark .schools-faq__visual .schools-faq__image--light {
+  display: none;
+}
+
+.dark .schools-faq__visual .schools-faq__image--dark {
+  display: block;
+}
+
 .home-classic-faq__content {
   display: grid;
   align-content: start;
@@ -2879,6 +2796,11 @@
   .home-classic-faq__visual img {
     top: 104px;
     width: min(calc(100% - 48px), 360px);
+  }
+
+  .schools-faq__visual .schools-faq__image {
+    top: 132px;
+    width: min(560px, calc(100% + 80px));
   }
 
   .home-classic-faq summary {
@@ -7583,5 +7505,272 @@ img {
   .parents-benefit-card:hover {
     transform: translateY(-2px);
     box-shadow: var(--dayova-shadow-strong);
+  }
+}
+
+/* Mobile polish based on the August 2026 device review */
+.blog-article > .button-secondary {
+  margin-bottom: clamp(var(--space-8), 5vw, var(--space-16));
+}
+
+@media (max-width: 767px) {
+  .home-classic-hero__inner {
+    overflow: visible;
+  }
+
+  .home-classic-hero__copy {
+    max-width: none;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .home-classic-hero__description {
+    margin-inline: auto;
+  }
+
+  .home-classic-actions {
+    max-width: 420px;
+    margin-inline: auto;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .home-classic-hero__visual {
+    width: 100vw;
+    min-height: min(167vw, 720px);
+    margin-inline: calc(50% - 50vw);
+  }
+
+  .home-classic-hero__visual img {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    max-height: none;
+  }
+
+  .home-classic-heading-group,
+  .home-classic-about__content {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .home-classic-about__content p {
+    margin-inline: auto;
+  }
+
+  .home-classic-metrics {
+    width: 100%;
+  }
+
+  .home-classic-about__visual {
+    min-height: 0;
+    padding-bottom: var(--space-6);
+    text-align: center;
+  }
+
+  .home-classic-about__visual img {
+    margin-bottom: 0;
+  }
+
+  .home-classic-advantage__copy {
+    max-width: none;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .home-classic-advantage__label {
+    gap: 0;
+    font-size: 0;
+  }
+
+  .home-classic-advantage__copy p {
+    margin-inline: auto;
+  }
+
+  .home-classic-process-step__button {
+    gap: var(--space-6);
+  }
+
+  .home-classic-download {
+    min-height: 0;
+  }
+
+  .home-classic-download__copy {
+    justify-items: center;
+    padding: var(--space-8) var(--space-6);
+    text-align: center;
+  }
+
+  .home-classic-download__copy p {
+    margin-inline: auto;
+  }
+
+  .home-classic-download__button {
+    width: min(100%, 360px);
+  }
+
+  .home-classic-download__visual {
+    display: none;
+  }
+
+  .home-classic-faq__content {
+    order: 1;
+  }
+
+  .home-classic-faq__visual {
+    order: 2;
+  }
+
+  .parents-benefit-card {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .marketing-page-hero__copy,
+  .marketing-section-heading,
+  .home-classic-section-heading,
+  .home-classic-contact__intro,
+  .home-classic-faq__content,
+  .pricing-page__intro {
+    margin-inline: auto;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .marketing-page-hero__copy > p,
+  .marketing-section-heading > p,
+  .home-classic-section-heading > p,
+  .home-classic-contact__intro > p,
+  .home-classic-faq__content > p,
+  .pricing-page__intro > p {
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .marketing-page-hero__actions,
+  .parents-download__actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .marketing-page-hero__actions > *,
+  .parents-download__actions > * {
+    text-align: center;
+  }
+
+  .home-classic-faq__list,
+  .home-classic-contact__form {
+    text-align: left;
+  }
+
+  .parents-comparison-section .marketing-section-heading {
+    margin-inline: auto;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .parents-comparison__column {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .parents-comparison__label {
+    display: none;
+  }
+
+  .parents-comparison__list {
+    width: 100%;
+  }
+
+  .parents-comparison__list li {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .parents-comparison__list svg {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .pricing-plan-card {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .pricing-plan-card__badge {
+    justify-self: center;
+  }
+
+  .pricing-plan-card__heading,
+  .pricing-plan-card__price {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .pricing-plan-card__price-row {
+    justify-content: center;
+  }
+
+  .pricing-plan-card__benefits {
+    width: min(100%, 340px);
+    margin-inline: auto;
+    text-align: left;
+  }
+
+  .pricing-plan-card--student {
+    justify-items: end;
+    text-align: right;
+  }
+
+  .pricing-plan-card--student .pricing-plan-card__heading,
+  .pricing-plan-card--student .pricing-plan-card__price {
+    width: 100%;
+    justify-items: end;
+    text-align: right;
+  }
+
+  .pricing-plan-card--student .pricing-plan-card__price-row {
+    justify-content: flex-end;
+  }
+
+  .pricing-plan-card--student .pricing-plan-card__benefits {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+  }
+
+  .pricing-plan-card--student .pricing-plan-card__benefits li {
+    grid-template-columns: minmax(0, 1fr) 24px;
+  }
+
+  .pricing-plan-card--student .pricing-plan-card__benefits li > span:first-child {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .pricing-plan-card--student .pricing-plan-card__benefits li > span:last-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .pricing-plan-card--student .pricing-plan-card__actions {
+    width: min(100%, 340px);
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .pricing-cycle-toggle__option {
+    min-height: 48px;
+    flex-direction: row;
+    gap: 4px;
+    padding: 8px 5px;
+    line-height: 1;
+  }
+
+  .pricing-cycle-toggle__badge {
+    padding: 3px 5px;
+    font-size: 9px;
   }
 }
