@@ -12,6 +12,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { StoreDownloadLink } from "@/components/store-download-link";
+import { ScrollActiveAdvantages } from "@/components/sections/scroll-active-advantages";
 import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { IconBadge } from "@/components/ui/icon-badge";
@@ -173,7 +174,10 @@ export default function ParentsPage() {
             </p>
           </div>
 
-          <div className="marketing-feature-grid parents-benefit-grid">
+          <ScrollActiveAdvantages
+            className="marketing-feature-grid parents-benefit-grid"
+            itemSelector=".parents-benefit-card"
+          >
             {parentBenefits.map((benefit) => (
               <article
                 className="section-card marketing-feature-card parents-benefit-card"
@@ -186,7 +190,7 @@ export default function ParentsPage() {
                 <p>{benefit.text}</p>
               </article>
             ))}
-          </div>
+          </ScrollActiveAdvantages>
         </div>
       </section>
 

@@ -7771,6 +7771,26 @@ img {
 
   .parents-benefit-card > .dayova-icon-card {
     margin-inline: auto;
+    transition:
+      transform 240ms var(--dayova-ease),
+      border-color 240ms var(--dayova-ease),
+      background-color 240ms var(--dayova-ease),
+      color 240ms var(--dayova-ease);
+  }
+
+  .parents-benefit-grid[data-scroll-active-index="0"]
+    > .parents-benefit-card:nth-child(1)
+    > .dayova-icon-card,
+  .parents-benefit-grid[data-scroll-active-index="1"]
+    > .parents-benefit-card:nth-child(2)
+    > .dayova-icon-card,
+  .parents-benefit-grid[data-scroll-active-index="2"]
+    > .parents-benefit-card:nth-child(3)
+    > .dayova-icon-card {
+    border-color: transparent;
+    background: var(--dayova-dark-panel);
+    color: white;
+    transform: scale(1.1);
   }
 
   .marketing-page-hero__copy,
