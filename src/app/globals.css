@@ -7600,10 +7600,10 @@ img {
   }
 
   .home-classic-hero__visual img {
-    width: 100%;
-    max-width: none;
-    height: auto;
-    max-height: none;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
   }
 
   .home-classic-heading-group,
@@ -7830,5 +7830,74 @@ img {
   .pricing-cycle-toggle__badge {
     padding: 3px 5px;
     font-size: 9px;
+  }
+}
+
+/* Keep the homepage hero stable while a desktop window narrows toward tablet. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .home-classic-hero:not(.parents-hero):not(.schools-hero) {
+    padding-block: var(--space-6) var(--space-12);
+  }
+
+  .home-classic-hero:not(.parents-hero):not(.schools-hero)
+    .home-classic-hero__inner {
+    width: min(calc(100% - (var(--space-6) * 2)), var(--dayova-container));
+    max-width: var(--dayova-container);
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: var(--space-8);
+    margin-inline: auto;
+    padding: clamp(var(--space-8), 5vw, var(--space-12)) 0 0;
+  }
+
+  .home-classic-hero:not(.parents-hero):not(.schools-hero)
+    .home-classic-hero__copy {
+    width: 100%;
+    max-width: 760px;
+    align-content: center;
+    justify-items: center;
+    justify-self: center;
+    gap: var(--space-5);
+    padding: 0 var(--space-4);
+    text-align: center;
+  }
+
+  .home-classic-hero:not(.parents-hero):not(.schools-hero)
+    .dayova-hero-claim {
+    max-width: 720px;
+    font-size: clamp(42px, 6vw, 56px);
+    text-wrap: balance;
+  }
+
+  .home-classic-hero:not(.parents-hero):not(.schools-hero)
+    .home-classic-hero__description {
+    max-width: 640px;
+    margin-inline: auto;
+    font-size: clamp(16px, 2.1vw, 18px);
+  }
+
+  .home-classic-hero:not(.parents-hero):not(.schools-hero)
+    .home-classic-actions {
+    justify-content: center;
+  }
+
+  .home-classic-hero:not(.parents-hero):not(.schools-hero)
+    .home-classic-hero__visual {
+    width: 100%;
+    min-height: clamp(420px, 52vw, 540px);
+  }
+
+  .home-classic-hero:not(.parents-hero):not(.schools-hero)
+    .home-classic-hero__visual
+    img {
+    right: auto;
+    bottom: 0;
+    left: 50%;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    transform: translateX(-50%);
   }
 }
