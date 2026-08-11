@@ -15,7 +15,7 @@ export function StudentPricingCard() {
     studentPricing.defaultCycle,
   );
   const option = studentPricing.options[billingCycle];
-  const checkoutHref = `/checkout?plan=${option.id}`;
+  const checkoutHref = `/kasse?plan=${option.id}`;
 
   return (
     <article className="pricing-plan-card pricing-plan-card--student">

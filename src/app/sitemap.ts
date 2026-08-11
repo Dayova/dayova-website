@@ -10,9 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     { path: "", priority: 1, changeFrequency: "weekly" as const },
     { path: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
-    { path: "/parents", priority: 0.8, changeFrequency: "monthly" as const },
-    { path: "/schools", priority: 0.8, changeFrequency: "monthly" as const },
-    { path: "/pricing", priority: 0.9, changeFrequency: "monthly" as const },
+    { path: "/eltern", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/schulen", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/preise", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/ueber-uns", priority: 0.8, changeFrequency: "monthly" as const },
   ];
 

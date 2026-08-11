@@ -43,12 +43,42 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/warteliste",
-        destination: "/pricing",
+        destination: "/preise",
         permanent: true,
       },
       {
         source: "/pricingpage",
-        destination: "/pricing",
+        destination: "/preise",
+        permanent: true,
+      },
+      {
+        source: "/parents",
+        destination: "/eltern",
+        permanent: true,
+      },
+      {
+        source: "/schools",
+        destination: "/schulen",
+        permanent: true,
+      },
+      {
+        source: "/pricing",
+        destination: "/preise",
+        permanent: true,
+      },
+      {
+        source: "/checkout/success",
+        destination: "/kasse/erfolgreich",
+        permanent: true,
+      },
+      {
+        source: "/checkout/cancel",
+        destination: "/kasse/abgebrochen",
+        permanent: true,
+      },
+      {
+        source: "/checkout",
+        destination: "/kasse",
         permanent: true,
       },
       {

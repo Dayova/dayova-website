@@ -11,7 +11,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Preise für Schüler und Schulen",
   description:
     "Dayova im Jahresabo für 12,99 € pro Monat, im Monatsabo für 14,99 € und mit individuellen Angeboten für Schulen.",
-  path: "/pricing",
+  path: "/preise",
 });
 
 const checkoutMessages = {
@@ -24,7 +24,9 @@ const checkoutMessages = {
 
 export default async function PricingPage({
   searchParams,
-}: PageProps<"/pricing">) {
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const query = await searchParams;
   const checkoutState = Array.isArray(query.checkout)
     ? query.checkout[0]

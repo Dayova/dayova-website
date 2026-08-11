@@ -22,7 +22,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Für Eltern: Weniger Lernstress im Familienalltag",
   description:
     "Dayova entlastet Eltern bei der Lernorganisation, stärkt die Selbstständigkeit ihrer Kinder und schafft mehr Ruhe im Familienalltag.",
-  path: "/parents",
+  path: "/eltern",
 });
 
 const parentBenefits = [
@@ -135,7 +135,7 @@ export default function ParentsPage() {
               <ButtonLink href="#eltern-vorteile">
                 So entlastet Dayova
               </ButtonLink>
-              <ButtonLink href="/pricing" variant="secondary">
+              <ButtonLink href="/preise" variant="secondary">
                 Preise ansehen
               </ButtonLink>
             </div>
@@ -369,7 +369,7 @@ export default function ParentsPage() {
                 >
                   Dayova herunterladen
                 </StoreDownloadLink>
-                <ButtonLink href="/pricing" variant="secondary">
+                <ButtonLink href="/preise" variant="secondary">
                   Abos ansehen
                 </ButtonLink>
               </div>

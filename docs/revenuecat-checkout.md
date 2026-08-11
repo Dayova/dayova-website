@@ -15,10 +15,10 @@ the production purchase link remain server-side environment variables.
    marketing website has a real learner login and also supports the approved
    parent-payer flow.
 4. Set the success redirect to
-   `https://dayova.com/checkout/success`. RevenueCat appends `redeem_url` for an
+   `https://dayova.com/kasse/erfolgreich`. RevenueCat appends `redeem_url` for an
    anonymous purchase; the success page presents that secure link to the buyer.
 5. Set the cancel/back destination to
-   `https://dayova.com/checkout/cancel` or `https://dayova.com/pricing`.
+   `https://dayova.com/kasse/abgebrochen` or `https://dayova.com/preise`.
 6. Configure the Customer Portal in RevenueCat so subscribers can manage and
    cancel their web subscription.
 7. Verify that the iOS and Android apps use the same RevenueCat project,

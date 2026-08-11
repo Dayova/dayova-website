@@ -6,17 +6,17 @@ export type NavigationItem = {
 
 export const primaryNavigation = [
   {
-    href: "/parents",
+    href: "/eltern",
     label: "Für Eltern",
     description: "Orientierung für Familien",
   },
   {
-    href: "/schools",
+    href: "/schulen",
     label: "Für Schulen",
     description: "Dayova im schulischen Umfeld",
   },
   {
-    href: "/pricing",
+    href: "/preise",
     label: "Preise",
     description: "Abos und Schulangebote",
   },
@@ -36,9 +36,9 @@ export const footerNavigation = [
   {
     title: "Seiten",
     links: [
-      { href: "/parents", label: "Eltern" },
-      { href: "/schools", label: "Schulen" },
-      { href: "/pricing", label: "Preise" },
+      { href: "/eltern", label: "Eltern" },
+      { href: "/schulen", label: "Schulen" },
+      { href: "/preise", label: "Preise" },
       { href: "/ueber-uns", label: "Über uns" },
       { href: "/blog", label: "Blog" },
     ],

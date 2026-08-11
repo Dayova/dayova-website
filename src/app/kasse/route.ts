@@ -12,7 +12,7 @@ export function GET(request: NextRequest) {
 
   if (!isBillingCycle(billingCycle)) {
     return NextResponse.redirect(
-      new URL("/pricing?checkout=invalid-plan", request.url),
+      new URL("/preise?checkout=invalid-plan", request.url),
     );
   }
 
@@ -25,7 +25,7 @@ export function GET(request: NextRequest) {
         : "unavailable";
 
     return NextResponse.redirect(
-      new URL(`/pricing?checkout=${reason}`, request.url),
+      new URL(`/preise?checkout=${reason}`, request.url),
     );
   }
 

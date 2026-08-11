@@ -20,7 +20,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Für Schulen: Lernbegleitung und Lehrkräfte-System",
   description:
     "Dayova verbindet einen persönlichen Lernbegleiter für Schülerinnen und Schüler mit einem übersichtlichen Management- und Unterrichtssystem für Lehrkräfte.",
-  path: "/schools",
+  path: "/schulen",
 });
 
 const studentBenefits = [
@@ -117,7 +117,7 @@ export default function SchoolsPage() {
                 alt=""
                 width={1364}
                 height={768}
-                priority
+                loading="eager"
                 sizes="(max-width: 1100px) 92vw, 56vw"
                 className="schools-hero-macbook__image schools-hero-macbook__image--light"
               />
@@ -126,7 +126,7 @@ export default function SchoolsPage() {
                 alt=""
                 width={1364}
                 height={768}
-                priority
+                loading="eager"
                 sizes="(max-width: 1100px) 92vw, 56vw"
                 className="schools-hero-macbook__image schools-hero-macbook__image--dark"
               />

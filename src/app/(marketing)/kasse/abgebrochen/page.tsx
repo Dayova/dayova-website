@@ -25,7 +25,7 @@ export default function CheckoutCancelPage() {
           später fortsetzen.
         </p>
         <div className="checkout-result-page__actions">
-          <ButtonLink href="/pricing" variant="primary">
+          <ButtonLink href="/preise" variant="primary">
             <span className="checkout-result-page__button-label">
               <DayovaIcon icon={ArrowLeft02Icon} size={20} />
               Zurück zu den Preisen
