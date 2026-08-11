@@ -7769,6 +7769,10 @@ img {
     text-align: center;
   }
 
+  .parents-benefit-card > .dayova-icon-card {
+    margin-inline: auto;
+  }
+
   .marketing-page-hero__copy,
   .marketing-section-heading,
   .home-classic-section-heading,
