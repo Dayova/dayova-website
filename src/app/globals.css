@@ -7930,7 +7930,7 @@ img {
   }
 
   .schools-hero {
-    padding-block: var(--space-6) var(--space-10);
+    padding-block: var(--space-6) var(--space-16);
   }
 
   .schools-hero .schools-hero__inner {
@@ -7938,7 +7938,7 @@ img {
     max-width: none;
     min-height: 0;
     grid-template-columns: minmax(0, 1fr);
-    gap: clamp(36px, 5vw, 56px);
+    gap: clamp(56px, 7vw, 76px);
     margin-inline: 0;
     padding: clamp(40px, 6vw, 64px) 0 0;
   }
@@ -7948,7 +7948,7 @@ img {
     max-width: 780px;
     justify-items: center;
     justify-self: center;
-    gap: var(--space-5);
+    gap: clamp(var(--space-6), 3.2vw, var(--space-8));
     text-align: center;
   }
 
@@ -7973,6 +7973,10 @@ img {
     width: min(96vw, 920px);
     margin-right: 0;
     margin-left: auto;
+  }
+
+  .schools-page > .home-classic-section {
+    padding-block: clamp(var(--space-16), 8vw, var(--space-20));
   }
 
   .home-classic-about {
@@ -8078,6 +8082,7 @@ img {
   .schools-hero .schools-hero__copy {
     max-width: 600px;
     gap: var(--space-4);
+    padding-left: clamp(var(--space-6), 2.7vw, var(--space-8));
   }
 
   .schools-hero .schools-hero__copy .dayova-hero-claim {
