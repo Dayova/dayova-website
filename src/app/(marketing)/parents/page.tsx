@@ -124,8 +124,7 @@ export default function ParentsPage() {
           <div className="home-classic-hero__copy">
             <span className="home-classic-section-eyebrow">Für Eltern</span>
             <h1 id="parents-hero-title" className="dayova-hero-claim">
-              Weniger Lernorganisation für dich. Mehr Selbstständigkeit für
-              dein Kind.
+              Weniger organisieren. Mehr Selbstständigkeit für dein Kind.
             </h1>
             <p className="dayova-body home-classic-hero__description">
               <strong>Dayova bringt Ruhe in euren Lernalltag:</strong> Die App
