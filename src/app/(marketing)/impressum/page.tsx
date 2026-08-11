@@ -26,6 +26,7 @@ export default function ImprintPage() {
         eyebrow="Rechtliches"
         title="Impressum"
         description="Anbieterkennzeichnung nach § 5 Digitale-Dienste-Gesetz (DDG)."
+        className="legal-page-hero"
       />
       <section className="section marketing-legal-section">
         <div className="dayova-container marketing-legal">

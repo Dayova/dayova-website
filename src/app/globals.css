@@ -391,6 +391,91 @@
 }
 
 @media (max-width: 767px) {
+  .marketing-page-hero.legal-page-hero {
+    padding-block: var(--space-5) var(--space-8);
+  }
+
+  .legal-page-hero .marketing-page-hero__inner,
+  .legal-page-hero .marketing-page-hero__copy {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .legal-page-hero .marketing-page-hero__copy {
+    gap: var(--space-3);
+  }
+
+  .legal-page-hero .marketing-page-hero__copy h1 {
+    max-width: 100%;
+    font-size: clamp(1.9rem, 8.8vw, 3rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  .legal-page-hero .marketing-page-hero__copy > p {
+    max-width: 34rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .marketing-legal-section {
+    padding-block: var(--space-2) var(--space-16);
+  }
+
+  .marketing-legal {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .marketing-legal > div {
+    align-items: stretch;
+    justify-items: stretch;
+    gap: var(--space-4);
+  }
+
+  .marketing-legal > div > .home-classic-section-eyebrow {
+    justify-self: center;
+    margin-bottom: var(--space-2);
+  }
+
+  .marketing-legal section {
+    min-width: 0;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    border: 1px solid var(--dayova-line);
+    border-radius: var(--dayova-radius-card);
+    background: var(--dayova-elevated);
+    box-shadow: var(--dayova-shadow);
+  }
+
+  .marketing-legal h2 {
+    max-width: 100%;
+    font-size: clamp(1.2rem, 5.6vw, 1.45rem);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  .marketing-legal p,
+  .marketing-legal li {
+    max-width: 100%;
+    font-size: 0.975rem;
+    line-height: 1.7;
+  }
+
+  .marketing-legal ul {
+    max-width: 100%;
+    padding-left: var(--space-5);
+  }
+
+  .marketing-legal a,
+  .marketing-legal code {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
   .marketing-page-hero {
     padding-block: var(--space-6) var(--space-12);
   }

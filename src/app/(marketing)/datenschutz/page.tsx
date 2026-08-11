@@ -17,6 +17,7 @@ export default function PrivacyPage() {
         eyebrow="Rechtliches"
         title="Datenschutzerklärung"
         description="Hier erfährst du, welche Daten beim Besuch der Dayova Website verarbeitet werden und welche Rechte du hast."
+        className="legal-page-hero"
       />
       <section className="section marketing-legal-section">
         <div className="dayova-container marketing-legal">
