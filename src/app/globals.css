@@ -2035,6 +2035,10 @@
   line-height: 1.65;
 }
 
+.home-classic-about__link {
+  margin-block: var(--space-2) var(--space-3);
+}
+
 .home-classic-metrics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2526,6 +2530,26 @@
   color: var(--dayova-muted);
 }
 
+.home-classic-process-timeline--about .home-classic-process-step__button {
+  min-height: 170px;
+}
+
+.home-classic-process-timeline--about .home-classic-process-step__copy h3 {
+  font-size: 20px;
+}
+
+.home-classic-process-timeline--about
+  .home-classic-process-step--active
+  .home-classic-process-step__copy
+  h3 {
+  font-size: 22px;
+}
+
+.home-classic-process-timeline--about .home-classic-process-step__copy p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 .home-classic-process-step__node {
   position: relative;
   z-index: 5;
@@ -2899,6 +2923,22 @@
 
   .home-classic-process-step--active .home-classic-process-step__copy h3 {
     font-size: 22px;
+  }
+
+  .home-classic-process-timeline--about .home-classic-process-step__copy h3 {
+    font-size: 18px;
+  }
+
+  .home-classic-process-timeline--about
+    .home-classic-process-step--active
+    .home-classic-process-step__copy
+    h3 {
+    font-size: 20px;
+  }
+
+  .home-classic-process-timeline--about .home-classic-process-step__copy p {
+    font-size: 14px;
+    line-height: 1.55;
   }
 
   .home-classic-process-step__icon,

@@ -160,6 +160,13 @@ export function HomeAboutSection() {
               auf einmal, kein klarer Plan und zu wenig Feedback. Genau das macht
               Lernen anstrengend und unübersichtlich.
             </p>
+            <ButtonLink
+              className="home-classic-about__link"
+              href="/ueber-uns"
+              variant="secondary"
+            >
+              Unsere Geschichte
+            </ButtonLink>
           </div>
 
           <div className="home-classic-metrics" aria-label="Dayova in Zahlen">

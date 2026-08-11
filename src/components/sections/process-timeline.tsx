@@ -3,7 +3,12 @@
 import {
   Calendar03Icon,
   CalendarAdd02Icon,
+  ComputerPhoneSyncIcon,
+  Idea01Icon,
+  LaptopVideoIcon,
   PlayCircle02Icon,
+  PuzzleIcon,
+  Rocket01Icon,
   School01Icon,
   SmartPhone01Icon,
   TaskDone01Icon,
@@ -12,9 +17,60 @@ import { useEffect, useRef, useState } from "react";
 
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
-type ProcessTimelineVariant = "home" | "schools";
+type ProcessTimelineVariant = "about" | "home" | "schools";
 
 const processStepsByVariant = {
+  about: [
+    {
+      number: "Sommer 2023",
+      title: "Der Anfang als VonSchülerZuSchüler",
+      description:
+        "Julius Dietrich und Philipp Schossig entwickelten aus ihrer Nachhilfe ein 16-Wochen-Programm für wichtige schulische Grundlagenskills.",
+      icon: Idea01Icon,
+    },
+    {
+      number: "Ende 2023",
+      title: "Der erste eigene Campus",
+      description:
+        "Ein erster Campus bündelte Lernvideos und Aufgaben für das 16-Punkte-Programm.",
+      icon: LaptopVideoIcon,
+    },
+    {
+      number: "Sommer 2024",
+      title: "Unterricht in ganz Deutschland",
+      description:
+        "Neue Lernvideos und Online-Unterricht machten das Programm für Schülerinnen und Schüler in ganz Deutschland zugänglich.",
+      icon: ComputerPhoneSyncIcon,
+    },
+    {
+      number: "Anfang 2025",
+      title: "Die erste App-Idee nimmt Form an",
+      description:
+        "Aus der Lernplattform entstand die Idee für eine eigene App – die ersten Grundsteine von Dayova.",
+      icon: SmartPhone01Icon,
+    },
+    {
+      number: "Spätsommer 2025",
+      title: "Dayova bekommt einen Namen",
+      description:
+        "Mit dem Namen Dayova, einem neuen Design und einem neuen Campus kamen Quizze, Lernvideos und Online-Stunden an einen Ort.",
+      icon: PuzzleIcon,
+    },
+    {
+      number: "Anfang bis April 2026",
+      title: "Messenger, Team und erste Testphase",
+      description:
+        "Anfang 2026 erschien der erste Messenger. Im April verstärkten Fabius Schurig und Jakob Rössner das Team und führten die App von der Testphase zum MVP.",
+      icon: TaskDone01Icon,
+    },
+    {
+      number: "17. August 2026",
+      title: "Der offizielle Start von Dayova",
+      description:
+        "Aus dem 16-Punkte-Programm wird ein Lernbegleiter für alle: Dayova startet offiziell.",
+      icon: Rocket01Icon,
+    },
+  ],
   home: [
     {
       number: "01",
@@ -192,7 +248,10 @@ export function ProcessTimeline({
   }, [activeIndex, processStepCount, variant]);
 
   return (
-    <div className="home-classic-process-timeline" ref={timelineRef}>
+    <div
+      className={`home-classic-process-timeline home-classic-process-timeline--${variant}`}
+      ref={timelineRef}
+    >
       <span
         className="home-classic-process-timeline__track"
         style={{ top: lineMetrics.top, height: lineMetrics.height }}

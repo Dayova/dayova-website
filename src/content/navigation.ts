@@ -21,6 +21,11 @@ export const primaryNavigation = [
     description: "Abos und Schulangebote",
   },
   {
+    href: "/ueber-uns",
+    label: "Über uns",
+    description: "Die Geschichte von Dayova",
+  },
+  {
     href: "/blog",
     label: "Blog",
     description: "Lernen verständlich gemacht",
@@ -34,6 +39,7 @@ export const footerNavigation = [
       { href: "/parents", label: "Eltern" },
       { href: "/schools", label: "Schulen" },
       { href: "/pricing", label: "Preise" },
+      { href: "/ueber-uns", label: "Über uns" },
       { href: "/blog", label: "Blog" },
     ],
   },
