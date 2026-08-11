@@ -332,13 +332,12 @@ export default function SchoolsPage() {
                 Dayova an Ihrer Schule
               </span>
               <h2 id="schools-cta-title" className="dayova-section-title">
-                Lassen Sie uns gemeinsam zeigen, wie digitale Lernbegleitung
-                Schule im Alltag entlasten kann.
+                Gemeinsam Schule im Alltag entlasten.
               </h2>
               <p>
-                Erzählen Sie uns von Ihrer Schule. Wir melden uns persönlich
-                und besprechen einen sinnvollen nächsten Schritt – unverbindlich
-                und ohne fertiges Standardpaket.
+                Erzählen Sie uns von Ihrer Schule. Wir besprechen persönlich den
+                passenden nächsten Schritt – unverbindlich und ohne
+                Standardpaket.
               </p>
               <div className="schools-cta__actions">
                 <ButtonLink href={offerHref}>Gespräch vereinbaren</ButtonLink>
