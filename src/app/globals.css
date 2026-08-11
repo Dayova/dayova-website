@@ -2308,6 +2308,22 @@
   transform: scale(1.12);
 }
 
+.dark
+  .home-classic-advantages__list[data-scroll-active-index="0"]
+  > .home-classic-advantage:nth-child(1)
+  .home-classic-advantage__icon,
+.dark
+  .home-classic-advantages__list[data-scroll-active-index="1"]
+  > .home-classic-advantage:nth-child(2)
+  .home-classic-advantage__icon,
+.dark
+  .home-classic-advantages__list[data-scroll-active-index="2"]
+  > .home-classic-advantage:nth-child(3)
+  .home-classic-advantage__icon {
+  background: var(--dayova-ink);
+  color: var(--dayova-dark-panel);
+}
+
 .home-classic-advantages__list[data-scroll-active-index="0"]
   > .home-classic-advantage:nth-child(1)
   .home-classic-advantage__label,
