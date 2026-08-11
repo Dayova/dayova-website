@@ -8212,3 +8212,31 @@ img {
     width: min(100%, 760px);
   }
 }
+
+/* Desktop school hero: use the same inset and vertical rhythm as the home hero. */
+@media (min-width: 1200px) {
+  .schools-hero .schools-hero__inner {
+    width: 100%;
+    max-width: none;
+    min-height: 600px;
+    grid-template-columns: minmax(0, 0.9fr) minmax(560px, 1.1fr);
+    align-items: stretch;
+    gap: 0;
+    margin-inline: 0;
+    padding: var(--space-16) 0 0;
+  }
+
+  .schools-hero .schools-hero__copy {
+    width: 100%;
+    max-width: 820px;
+    align-content: start;
+    justify-self: start;
+    padding: var(--space-8) var(--space-6) var(--space-16)
+      clamp(var(--space-8), 7vw, 112px);
+  }
+
+  .schools-hero .schools-hero__visual--macbook {
+    min-height: 560px;
+    justify-content: flex-end;
+  }
+}
