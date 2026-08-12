@@ -7919,67 +7919,62 @@ img {
 @media (max-width: 639px) {
   .pricing-plan-card {
     padding: var(--space-6) var(--space-4);
+    align-items: stretch;
+    justify-items: initial;
+    text-align: left;
   }
 
   .pricing-plan-card__badge {
-    justify-self: center;
+    justify-self: start;
   }
 
   .pricing-plan-card__heading,
   .pricing-plan-card__price {
-    justify-items: center;
-    text-align: center;
+    width: 100%;
+    justify-items: start;
+    text-align: left;
   }
 
   .pricing-plan-card__price-row {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .pricing-plan-card__benefits {
-    width: min(100%, 340px);
-    margin-inline: auto;
+    width: 100%;
+    margin-inline: 0;
     text-align: left;
   }
 
   .pricing-plan-card--student {
-    justify-items: end;
-    text-align: right;
+    align-items: stretch;
+    justify-items: initial;
+    text-align: left;
   }
 
   .pricing-plan-card--student .pricing-plan-card__heading,
   .pricing-plan-card--student .pricing-plan-card__price {
     width: 100%;
-    justify-items: end;
-    text-align: right;
+    justify-items: start;
+    text-align: left;
   }
 
   .pricing-plan-card--student .pricing-plan-card__price-row {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   .pricing-plan-card--student .pricing-plan-card__benefits {
-    margin-left: auto;
-    margin-right: 0;
-    text-align: right;
+    margin-inline: 0;
+    text-align: left;
   }
 
   .pricing-plan-card--student .pricing-plan-card__benefits li {
-    grid-template-columns: minmax(0, 1fr) 24px;
+    grid-template-columns: 24px minmax(0, 1fr);
   }
 
-  .pricing-plan-card--student .pricing-plan-card__benefits li > span:first-child {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .pricing-plan-card--student .pricing-plan-card__benefits li > span:last-child {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
+  .pricing-plan-card__actions,
   .pricing-plan-card--student .pricing-plan-card__actions {
     width: min(100%, 340px);
-    margin-left: auto;
+    margin-inline: auto;
   }
 }
 

@@ -173,10 +173,7 @@ export default function ParentsPage() {
             </p>
           </div>
 
-          <ScrollActiveAdvantages
-            className="marketing-feature-grid parents-benefit-grid"
-            itemSelector=".parents-benefit-card"
-          >
+          <div className="marketing-feature-grid parents-benefit-grid">
             {parentBenefits.map((benefit) => (
               <article
                 className="section-card marketing-feature-card parents-benefit-card"
@@ -189,7 +186,7 @@ export default function ParentsPage() {
                 <p>{benefit.text}</p>
               </article>
             ))}
-          </ScrollActiveAdvantages>
+          </div>
         </div>
       </section>
 
@@ -212,7 +209,7 @@ export default function ParentsPage() {
             </p>
           </div>
 
-          <div className="home-classic-advantages__list">
+          <ScrollActiveAdvantages>
             {parentRelief.map((item) => (
               <article
                 className={`home-classic-advantage ${item.className}`}
@@ -245,7 +242,7 @@ export default function ParentsPage() {
                 </div>
               </article>
             ))}
-          </div>
+          </ScrollActiveAdvantages>
         </div>
       </section>
 
