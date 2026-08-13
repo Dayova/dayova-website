@@ -35,10 +35,9 @@ export default function DownloadsPage() {
             Gerät. Danach ist dein persönlicher Lernbegleiter nur noch wenige
             Schritte entfernt.
           </p>
-          <StoreDownloadLink
-            className="download-page__store-button"
-            showStoreName
-          />
+          <StoreDownloadLink className="download-page__store-button">
+            App herunterladen
+          </StoreDownloadLink>
           <span className="download-page-hero__hint">
             Kostenlos herunterladen · Für iOS und Android
           </span>
@@ -87,9 +86,10 @@ export default function DownloadsPage() {
             </p>
             <StoreDownloadLink
               variant="secondary"
-              className="download-page__store-button"
-              showStoreName
-            />
+              className="download-page__store-button home-classic-download__button"
+            >
+              App herunterladen
+            </StoreDownloadLink>
           </div>
         </div>
       </section>
