@@ -4,6 +4,7 @@ import {
   Calendar03Icon,
   CalendarAdd02Icon,
   ComputerPhoneSyncIcon,
+  DownloadCircle02Icon,
   Idea01Icon,
   LaptopVideoIcon,
   PlayCircle02Icon,
@@ -17,7 +18,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
-type ProcessTimelineVariant = "about" | "home" | "schools";
+type ProcessTimelineVariant = "about" | "download" | "home" | "schools";
 
 const processStepsByVariant = {
   about: [
@@ -69,6 +70,29 @@ const processStepsByVariant = {
       description:
         "Aus dem 16-Punkte-Programm wird ein Lernbegleiter für alle: Dayova startet offiziell.",
       icon: Rocket01Icon,
+    },
+  ],
+  download: [
+    {
+      number: "01",
+      title: "Passenden Store öffnen",
+      description:
+        "Dayova erkennt dein Gerät und führt dich automatisch zum App Store oder zu Google Play.",
+      icon: SmartPhone01Icon,
+    },
+    {
+      number: "02",
+      title: "Dayova installieren",
+      description:
+        "Tippe im Store auf Laden oder Installieren. Die App wird direkt auf deinem Gerät eingerichtet.",
+      icon: DownloadCircle02Icon,
+    },
+    {
+      number: "03",
+      title: "App öffnen und starten",
+      description:
+        "Öffne Dayova, richte dein Profil ein und erstelle deinen persönlichen Lernplan.",
+      icon: PlayCircle02Icon,
     },
   ],
   home: [

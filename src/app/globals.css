@@ -1881,6 +1881,87 @@
   color: var(--dayova-ink);
 }
 
+.download-page-hero {
+  padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+  color: var(--dayova-ink);
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      color-mix(in srgb, var(--dayova-brand) 14%, transparent),
+      transparent 42%
+    ),
+    var(--dayova-page);
+}
+
+.download-page-hero__inner {
+  min-height: min(680px, calc(100svh - 150px));
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.download-page-hero .dayova-hero-claim {
+  max-width: 920px;
+  margin: 0;
+  font-size: var(--type-hero);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.download-page-hero p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--dayova-muted);
+  font-size: var(--type-body-lg);
+  line-height: 1.7;
+}
+
+.download-page__store-button {
+  min-width: min(100%, 320px);
+  margin-top: var(--space-2);
+}
+
+.download-page-hero__hint {
+  color: var(--dayova-muted);
+  font-size: var(--type-small);
+}
+
+.download-page-process {
+  background: color-mix(in srgb, var(--dayova-surface) 74%, var(--dayova-page));
+}
+
+.download-page-finish {
+  padding-bottom: clamp(var(--space-16), 9vw, var(--space-24));
+}
+
+.download-page-finish__panel {
+  min-height: 460px;
+  padding: clamp(var(--space-8), 7vw, var(--space-16));
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: var(--space-5);
+  border-radius: var(--dayova-radius-3xl);
+  background: var(--dayova-brand-gradient);
+  color: white;
+  text-align: center;
+  box-shadow: var(--dayova-shadow-strong);
+}
+
+.download-page-finish__panel .dayova-section-title {
+  max-width: 720px;
+  color: white;
+}
+
+.download-page-finish__panel p {
+  max-width: 650px;
+  margin: 0;
+  color: color-mix(in srgb, white 88%, transparent);
+}
+
 .home-classic-hero {
   overflow: clip;
   padding-block: var(--space-6) var(--space-12);
