@@ -3455,7 +3455,7 @@
 }
 
 .checkout-page__price strong {
-  font-size: clamp(42px, 4vw, 52px);
+  font-size: clamp(32px, 4vw, 42px);
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -3480,7 +3480,7 @@
 
 .checkout-page__price span,
 .checkout-page__price p {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .checkout-page__actions {
