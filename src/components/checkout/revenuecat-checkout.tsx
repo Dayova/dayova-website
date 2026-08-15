@@ -174,16 +174,27 @@ export function RevenueCatCheckout({
 
         {pricingOption ? (
           <article className="checkout-page__summary">
-            <div>
-              <span>Ausgewählter Tarif</span>
-              <h2>
-                {billingCycle === "annual" ? "Dayova Jahresabo" : "Dayova Monatsabo"}
-              </h2>
-            </div>
-            <div className="checkout-page__price">
-              <strong>{pricingOption.price}</strong>
-              <span>{pricingOption.period}</span>
-              <p>{pricingOption.supportingPrice}</p>
+            <div className="checkout-page__plan">
+              <div className="checkout-page__plan-name">
+                <span>Ausgewählter Tarif</span>
+                <h2>
+                  {billingCycle === "annual"
+                    ? "Dayova Jahresabo"
+                    : "Dayova Monatsabo"}
+                </h2>
+                <p>
+                  {billingCycle === "annual"
+                    ? "Einmal jährlich abgerechnet"
+                    : "Monatlich abgerechnet"}
+                </p>
+              </div>
+              <div className="checkout-page__price">
+                <div>
+                  <strong>{pricingOption.price}</strong>
+                  <span>{pricingOption.period}</span>
+                </div>
+                <p>{pricingOption.supportingPrice}</p>
+              </div>
             </div>
 
             {errorMessage ? (
@@ -192,36 +203,38 @@ export function RevenueCatCheckout({
               </p>
             ) : null}
 
-            <label className="checkout-page__terms">
-              <input
-                checked={acceptedTerms}
-                onChange={(event) => setAcceptedTerms(event.target.checked)}
-                type="checkbox"
-              />
-              <span>
-                Ich stimme den{" "}
-                <Link href="/nutzungsbedingungen">Nutzungsbedingungen</Link> zu.
-              </span>
-            </label>
+            <div className="checkout-page__actions">
+              <label className="checkout-page__terms">
+                <input
+                  checked={acceptedTerms}
+                  onChange={(event) => setAcceptedTerms(event.target.checked)}
+                  type="checkbox"
+                />
+                <span>
+                  Ich stimme den{" "}
+                  <Link href="/nutzungsbedingungen">Nutzungsbedingungen</Link>{" "}
+                  zu.
+                </span>
+              </label>
 
-            <button
-              className="button-primary checkout-page__pay-button"
-              disabled={checkoutState !== "ready" || !acceptedTerms}
-              onClick={() => void startPurchase()}
-              type="button"
-            >
-              {checkoutState === "loading"
-                ? "Sichere Zahlung wird geladen …"
-                : checkoutState === "purchasing"
-                  ? "Bezahlvorgang geöffnet …"
-                  : "Weiter zur sicheren Zahlung"}
-            </button>
+              <button
+                className="button-primary checkout-page__pay-button"
+                disabled={checkoutState !== "ready" || !acceptedTerms}
+                onClick={() => void startPurchase()}
+                type="button"
+              >
+                {checkoutState === "loading"
+                  ? "Sichere Zahlung wird geladen …"
+                  : checkoutState === "purchasing"
+                    ? "Bezahlvorgang geöffnet …"
+                    : "Weiter zur sicheren Zahlung"}
+              </button>
 
-            <p className="checkout-page__legal">
-              Vor dem Kauf werden Gesamtpreis, Laufzeit und Verlängerung noch
-              einmal angezeigt. Die Zahlung wird sicher von RevenueCat mit
-              Stripe verarbeitet.
-            </p>
+              <p className="checkout-page__legal">
+                Gesamtpreis, Laufzeit und Verlängerung werden vor dem Kauf noch
+                einmal angezeigt. Sichere Abwicklung über RevenueCat und Stripe.
+              </p>
+            </div>
           </article>
         ) : (
           <article className="checkout-page__summary checkout-page__summary--error">

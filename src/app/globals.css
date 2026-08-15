@@ -3353,80 +3353,110 @@
 }
 
 .checkout-page {
-  min-height: min(820px, calc(100svh - 120px));
-  display: grid;
-  align-items: center;
-  padding-block: clamp(var(--space-12), 7vw, var(--space-20));
+  min-height: calc(100svh - 104px);
+  padding-block: clamp(var(--space-12), 6vw, var(--space-20));
 }
 
-.checkout-page__inner {
-  width: min(100%, 820px);
+.checkout-page > .dayova-container.checkout-page__inner {
+  width: min(calc(100% - (var(--space-6) * 2)), 780px);
   display: grid;
-  gap: clamp(var(--space-8), 5vw, var(--space-12));
+  gap: clamp(var(--space-8), 4vw, var(--space-10));
 }
 
 .checkout-page__intro {
   display: grid;
   justify-items: center;
-  gap: var(--space-4);
+  gap: var(--space-3);
   text-align: center;
 }
 
+.checkout-page__intro .checkout-result-page__icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-2);
+}
+
 .checkout-page__intro .dayova-hero-claim {
-  margin: var(--space-2) 0 0;
-  font-size: var(--type-hero);
+  margin: var(--space-1) 0 0;
+  font-size: clamp(40px, 5vw, 58px);
   font-weight: 600;
-  line-height: 1.06;
+  line-height: 1.02;
   letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 
 .checkout-page__intro > p {
-  max-width: 650px;
+  max-width: 610px;
   margin: 0;
   color: var(--dayova-muted);
-  font-size: clamp(16px, 1.5vw, 18px);
-  line-height: 1.7;
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.65;
+  text-wrap: balance;
 }
 
 .checkout-page__summary {
   display: grid;
-  gap: var(--space-6);
-  padding: clamp(var(--space-6), 5vw, var(--space-10));
+  gap: 0;
+  overflow: hidden;
   border: 1px solid var(--dayova-line);
   border-radius: var(--dayova-radius-2xl);
   background: var(--dayova-surface);
   box-shadow: var(--dayova-shadow-strong);
 }
 
-.checkout-page__summary > div:first-child {
+.checkout-page__plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-8);
+  padding: clamp(var(--space-6), 4vw, var(--space-8));
+}
+
+.checkout-page__plan-name {
   display: grid;
   gap: var(--space-2);
 }
 
-.checkout-page__summary > div:first-child span {
+.checkout-page__plan-name > span {
   color: var(--dayova-muted);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
 .checkout-page__summary h2 {
   margin: 0;
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: clamp(25px, 3vw, 32px);
+  line-height: 1.15;
   letter-spacing: -0.03em;
+}
+
+.checkout-page__plan-name > p {
+  margin: 0;
+  color: var(--dayova-muted);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .checkout-page__price {
   display: grid;
-  gap: var(--space-1);
-  padding-block: var(--space-5);
-  border-block: 1px solid var(--dayova-line);
+  justify-items: end;
+  gap: var(--space-2);
+  text-align: right;
+}
+
+.checkout-page__price > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: var(--space-2);
 }
 
 .checkout-page__price strong {
-  font-size: clamp(32px, 5vw, 48px);
+  font-size: clamp(32px, 4vw, 42px);
   font-weight: 600;
+  line-height: 1;
   letter-spacing: -0.04em;
 }
 
@@ -3443,10 +3473,25 @@
   line-height: 1.6;
 }
 
+.checkout-page__price span,
+.checkout-page__price p {
+  font-size: 13px;
+}
+
+.checkout-page__actions {
+  display: grid;
+  gap: var(--space-4);
+  padding: clamp(var(--space-5), 3vw, var(--space-6))
+    clamp(var(--space-6), 4vw, var(--space-8));
+  border-top: 1px solid var(--dayova-line);
+  background: color-mix(in srgb, var(--dayova-elevated) 45%, transparent);
+}
+
 .checkout-page__pay-button {
   width: 100%;
-  min-height: 52px;
+  min-height: 54px;
   border: 0;
+  border-radius: var(--dayova-radius-xl);
   cursor: pointer;
   font: inherit;
   font-weight: 700;
@@ -3459,7 +3504,7 @@
 
 .checkout-page__terms {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--space-3);
   color: var(--dayova-ink);
   font-size: 14px;
@@ -3469,7 +3514,8 @@
 .checkout-page__terms input {
   width: 18px;
   height: 18px;
-  margin: 2px 0 0;
+  margin: 0;
+  flex: 0 0 auto;
   accent-color: var(--dayova-brand);
 }
 
@@ -3481,6 +3527,8 @@
 }
 
 .checkout-page__legal {
+  max-width: 580px;
+  margin-inline: auto;
   font-size: 13px;
   text-align: center;
 }
@@ -3501,7 +3549,91 @@
 
 .checkout-page__summary--error {
   justify-items: center;
+  gap: var(--space-5);
+  padding: clamp(var(--space-6), 5vw, var(--space-8));
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .checkout-page {
+    min-height: 0;
+    padding-block: var(--space-20) var(--space-12);
+  }
+
+  .checkout-page > .dayova-container.checkout-page__inner {
+    width: min(calc(100% - (var(--space-4) * 2)), 560px);
+    gap: var(--space-8);
+  }
+
+  .checkout-page__intro .checkout-result-page__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .checkout-page__intro .dayova-hero-claim {
+    font-size: clamp(34px, 10vw, 44px);
+  }
+
+  .checkout-page__intro > p {
+    max-width: 36ch;
+    font-size: 15px;
+  }
+
+  .checkout-page__summary {
+    border-radius: var(--dayova-radius-xl);
+  }
+
+  .checkout-page__plan {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+    padding: var(--space-6);
+  }
+
+  .checkout-page__price {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .checkout-page__price > div {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .checkout-page__price strong {
+    font-size: 36px;
+  }
+
+  .checkout-page__actions {
+    padding: var(--space-5) var(--space-6) var(--space-6);
+  }
+
+  .checkout-page__terms {
+    align-items: flex-start;
+  }
+
+  .checkout-page__terms input {
+    margin-top: 2px;
+  }
+
+  .checkout-page__legal {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .checkout-page > .dayova-container.checkout-page__inner {
+    width: min(calc(100% - (var(--space-6) * 2)), 720px);
+  }
+
+  .checkout-page__plan {
+    gap: var(--space-6);
+  }
+
+  .checkout-page__price > div {
+    display: grid;
+    justify-items: end;
+    gap: var(--space-1);
+  }
 }
 
 .pricing-plans-layout {
