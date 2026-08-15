@@ -1,8 +1,9 @@
 # RevenueCat web checkout
 
-The pricing page starts a server-validated RevenueCat Web Purchase Link. The
-browser only submits the stable plan IDs `annual` and `monthly`; package IDs and
-the production purchase link remain server-side environment variables.
+The pricing page opens a Dayova-hosted checkout powered by the official
+RevenueCat Web SDK. The browser only submits the stable plan IDs `annual` and
+`monthly`; package IDs remain server-side environment variables. The SDK
+purchase flow explicitly uses `de` as both selected and fallback locale.
 
 ## RevenueCat dashboard setup
 
@@ -16,15 +17,15 @@ offering maps the RevenueCat Billing products to the standard package IDs
    RevenueCat Billing.
 2. Create monthly and annual packages for the entitlement used by the Dayova
    mobile apps.
-3. Create a **production** Web Purchase Link that permits anonymous purchases
-   and enable Redemption Links. Anonymous checkout is required until the
-   marketing website has a real learner login and also supports the approved
-   parent-payer flow.
-4. Set the success redirect to
-   `https://dayova.com/kasse/erfolgreich`. RevenueCat appends `redeem_url` for an
-   anonymous purchase; the success page presents that secure link to the buyer.
-5. Set the cancel/back destination to
-   `https://dayova.com/kasse/abgebrochen` or `https://dayova.com/preise`.
+3. Enable Redemption Links. Anonymous checkout is required until the marketing
+   website has a real learner login and also supports the approved parent-payer
+   flow.
+4. Copy the RevenueCat Billing public Web API key into the public Web SDK
+   environment variable. This is an intentionally public `rcb_` key, not a
+   secret REST API key.
+5. After a successful SDK purchase, pass `PurchaseResult.redemptionInfo.redeemUrl`
+   to `https://dayova.com/kasse/erfolgreich`; the success page validates the URL
+   against the configured RevenueCat custom scheme.
 6. RevenueCat includes the subscription-management link in its transactional
    purchase and receipt emails. Keep the Dayova support address configured as a
    second cancellation route.
@@ -37,26 +38,25 @@ offering maps the RevenueCat Billing products to the standard package IDs
 ## Environment variables
 
 ```text
-REVENUECAT_WEB_PURCHASE_LINK=https://pay.rev.cat/production-token
+NEXT_PUBLIC_REVENUECAT_WEB_API_KEY=rcb_your-public-web-key
 REVENUECAT_ANNUAL_PACKAGE_ID=annual-package-id
 REVENUECAT_MONTHLY_PACKAGE_ID=monthly-package-id
 REVENUECAT_REDEMPTION_SCHEME=rc-your-config-id
 ```
 
-Never deploy a sandbox purchase link as the production value. The route rejects
-non-HTTPS and non-`pay.rev.cat` purchase links.
+Never deploy the `rcb_sb_` sandbox key as the production value.
 
 ## Account and entitlement boundary
 
-The current website has no production learner authentication. It therefore does
-not accept a browser-provided RevenueCat App User ID, because that could assign
-a purchase to the wrong account. Instead, RevenueCat issues a short-lived
-Redemption Link after payment. The learner opens it on the device and associates
-the entitlement with the authenticated Dayova app account.
+The current website has no production learner authentication. It therefore
+creates and persists a RevenueCat anonymous App User ID in local storage rather
+than accepting an ID from the URL. RevenueCat issues a short-lived Redemption
+Link after payment. The learner opens it on the device and associates the
+entitlement with the authenticated Dayova app account.
 
 Once a shared learner login exists on the website, checkout can use an
-identified Web Purchase Link generated from the server-authenticated Dayova user
-ID. Do not add an `app_user_id` query parameter controlled by the browser.
+an identified Web SDK customer generated from the server-authenticated Dayova
+user ID. Do not add an `app_user_id` query parameter controlled by the browser.
 
 ## Webhooks
 

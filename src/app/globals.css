@@ -3352,6 +3352,135 @@
   font-size: 13px !important;
 }
 
+.checkout-page {
+  min-height: min(820px, calc(100svh - 120px));
+  display: grid;
+  align-items: center;
+  padding-block: clamp(var(--space-12), 7vw, var(--space-20));
+}
+
+.checkout-page__inner {
+  width: min(100%, 820px);
+  display: grid;
+  gap: clamp(var(--space-8), 5vw, var(--space-12));
+}
+
+.checkout-page__intro {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.checkout-page__intro .dayova-hero-claim {
+  margin: var(--space-2) 0 0;
+  font-size: var(--type-hero);
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.checkout-page__intro > p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--dayova-muted);
+  font-size: clamp(16px, 1.5vw, 18px);
+  line-height: 1.7;
+}
+
+.checkout-page__summary {
+  display: grid;
+  gap: var(--space-6);
+  padding: clamp(var(--space-6), 5vw, var(--space-10));
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-2xl);
+  background: var(--dayova-surface);
+  box-shadow: var(--dayova-shadow-strong);
+}
+
+.checkout-page__summary > div:first-child {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.checkout-page__summary > div:first-child span {
+  color: var(--dayova-muted);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.checkout-page__summary h2 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 34px);
+  letter-spacing: -0.03em;
+}
+
+.checkout-page__price {
+  display: grid;
+  gap: var(--space-1);
+  padding-block: var(--space-5);
+  border-block: 1px solid var(--dayova-line);
+}
+
+.checkout-page__price strong {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.checkout-page__price span,
+.checkout-page__price p,
+.checkout-page__legal {
+  color: var(--dayova-muted);
+}
+
+.checkout-page__price p,
+.checkout-page__legal,
+.checkout-page__error {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.checkout-page__pay-button {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.checkout-page__pay-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.checkout-page__legal {
+  font-size: 13px;
+  text-align: center;
+}
+
+.checkout-page__legal a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.checkout-page__error {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid color-mix(in srgb, #c33 35%, var(--dayova-line));
+  border-radius: var(--dayova-radius-lg);
+  background: color-mix(in srgb, #c33 8%, var(--dayova-surface));
+  color: var(--dayova-ink);
+}
+
+.checkout-page__summary--error {
+  justify-items: center;
+  text-align: center;
+}
+
 .pricing-plans-layout {
   width: min(100%, 1360px);
   margin-inline: auto;
