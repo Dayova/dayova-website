@@ -159,12 +159,10 @@ export function RevenueCatCheckout({
     >
       <div className="dayova-container checkout-page__inner">
         <div className="checkout-page__intro">
-          <div className="checkout-page__trust">
-            <div className="checkout-result-page__icon" aria-hidden="true">
-              <DayovaIcon icon={LockKeyIcon} size={24} strokeWidth={2} />
-            </div>
-            <span className="home-classic-section-eyebrow">Sicher bezahlen</span>
+          <div className="checkout-result-page__icon" aria-hidden="true">
+            <DayovaIcon icon={LockKeyIcon} size={30} strokeWidth={2} />
           </div>
+          <span className="home-classic-section-eyebrow">Sicher bezahlen</span>
           <h1 className="dayova-hero-claim" id="checkout-title">
             Dein Dayova-Abo
           </h1>
