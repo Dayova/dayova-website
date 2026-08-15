@@ -11,7 +11,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/dayova/",
     appStore:
       process.env.NEXT_PUBLIC_APP_STORE_URL ||
-      "https://apps.apple.com/de/search?term=Dayova",
+      "https://apps.apple.com/de/app/dayova-messenger/id6759319542",
     googlePlay:
       process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ||
       "https://play.google.com/store/search?q=Dayova&c=apps",

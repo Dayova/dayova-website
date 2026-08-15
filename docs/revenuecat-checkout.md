@@ -6,6 +6,12 @@ the production purchase link remain server-side environment variables.
 
 ## RevenueCat dashboard setup
 
+The production dashboard is configured with RevenueCat Billing, the Dayova
+Stripe account, EUR as the default currency, mandatory terms consent, yearly
+renewal emails, and Redemption Links for production and sandbox. The active
+offering maps the RevenueCat Billing products to the standard package IDs
+`$rc_monthly` and `$rc_annual`.
+
 1. Configure RevenueCat Web Billing and connect the payment gateway required by
    RevenueCat Billing.
 2. Create monthly and annual packages for the entitlement used by the Dayova
@@ -19,8 +25,9 @@ the production purchase link remain server-side environment variables.
    anonymous purchase; the success page presents that secure link to the buyer.
 5. Set the cancel/back destination to
    `https://dayova.com/kasse/abgebrochen` or `https://dayova.com/preise`.
-6. Configure the Customer Portal in RevenueCat so subscribers can manage and
-   cancel their web subscription.
+6. RevenueCat includes the subscription-management link in its transactional
+   purchase and receipt emails. Keep the Dayova support address configured as a
+   second cancellation route.
 7. Verify that the iOS and Android apps use the same RevenueCat project,
    entitlement and app-user identity, and support Redemption Links.
 8. Copy the generated RevenueCat custom URL scheme from the web billing config

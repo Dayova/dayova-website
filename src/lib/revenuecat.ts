@@ -54,7 +54,11 @@ export function getSafeRevenueCatRedemptionUrl(
     .replace(/:$/, "");
   const rawValue = Array.isArray(value) ? value[0] : value;
 
-  if (!redemptionScheme || !rawValue || !/^rc-[a-z0-9]+$/.test(redemptionScheme)) {
+  if (
+    !redemptionScheme ||
+    !rawValue ||
+    !/^rc-[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(redemptionScheme)
+  ) {
     return null;
   }
 

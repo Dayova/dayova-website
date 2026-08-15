@@ -48,6 +48,7 @@ export const footerNavigation = [
     links: [
       { href: "/impressum", label: "Impressum" },
       { href: "/datenschutz", label: "Datenschutz" },
+      { href: "/nutzungsbedingungen", label: "Nutzungsbedingungen" },
     ],
   },
 ] as const;
