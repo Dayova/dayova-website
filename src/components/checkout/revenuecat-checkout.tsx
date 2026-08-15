@@ -79,10 +79,8 @@ export function RevenueCatCheckout({
 
       try {
         const purchases = getPurchases(apiKey);
-        const [offerings] = await Promise.all([
-          purchases.getOfferings({ currency: "EUR" }),
-          purchases.preload(),
-        ]);
+        void purchases.preload().catch(() => undefined);
+        const offerings = await purchases.getOfferings({ currency: "EUR" });
         const rcPackage =
           offerings.current?.packagesById[packageId] ??
           offerings.current?.availablePackages.find(
