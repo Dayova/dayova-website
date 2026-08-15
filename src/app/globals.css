@@ -3453,8 +3453,31 @@
 }
 
 .checkout-page__pay-button:disabled {
-  cursor: wait;
+  cursor: not-allowed;
   opacity: 0.65;
+}
+
+.checkout-page__terms {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  color: var(--dayova-ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.checkout-page__terms input {
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--dayova-brand);
+}
+
+.checkout-page__terms a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .checkout-page__legal {

@@ -58,6 +58,7 @@ export function RevenueCatCheckout({
   const [checkoutState, setCheckoutState] = useState<CheckoutState>("loading");
   const [selectedPackage, setSelectedPackage] = useState<Package | null>(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
 
   useEffect(() => {
     let isCurrent = true;
@@ -191,9 +192,21 @@ export function RevenueCatCheckout({
               </p>
             ) : null}
 
+            <label className="checkout-page__terms">
+              <input
+                checked={acceptedTerms}
+                onChange={(event) => setAcceptedTerms(event.target.checked)}
+                type="checkbox"
+              />
+              <span>
+                Ich stimme den{" "}
+                <Link href="/nutzungsbedingungen">Nutzungsbedingungen</Link> zu.
+              </span>
+            </label>
+
             <button
               className="button-primary checkout-page__pay-button"
-              disabled={checkoutState !== "ready"}
+              disabled={checkoutState !== "ready" || !acceptedTerms}
               onClick={() => void startPurchase()}
               type="button"
             >
@@ -206,8 +219,8 @@ export function RevenueCatCheckout({
 
             <p className="checkout-page__legal">
               Vor dem Kauf werden Gesamtpreis, Laufzeit und Verlängerung noch
-              einmal angezeigt. Es gelten unsere{" "}
-              <Link href="/nutzungsbedingungen">Nutzungsbedingungen</Link>.
+              einmal angezeigt. Die Zahlung wird sicher von RevenueCat mit
+              Stripe verarbeitet.
             </p>
           </article>
         ) : (
