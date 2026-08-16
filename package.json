@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
+    "smoke": "node scripts/smoke-test.mjs",
     "lint": "eslint",
     "typecheck": "tsc --noEmit"
   },
@@ -18,6 +19,7 @@
     "react-dom": "19.2.4"
   },
   "overrides": {
+    "nanoid": "3.3.18",
     "postcss": "8.5.23",
     "sharp": "0.35.3"
   },
