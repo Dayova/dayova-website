@@ -3354,7 +3354,8 @@
 
 .checkout-page {
   min-height: calc(100svh - 104px);
-  padding-block: clamp(var(--space-16), 6vw, var(--space-20));
+  padding-top: clamp(var(--space-16), 6vw, var(--space-20));
+  padding-bottom: clamp(var(--space-20), 8vw, 128px);
 }
 
 .checkout-page > .dayova-container.checkout-page__inner {
@@ -3410,12 +3411,12 @@
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: var(--space-8);
-  padding: 0 0 var(--space-6);
+  padding: 0 0 var(--space-8);
 }
 
 .checkout-page__plan-name {
   display: grid;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
 .checkout-page__plan-name > span {
@@ -3443,7 +3444,7 @@
 .checkout-page__price {
   display: grid;
   justify-items: end;
-  gap: var(--space-2);
+  gap: var(--space-3);
   text-align: right;
 }
 
@@ -3485,8 +3486,8 @@
 
 .checkout-page__actions {
   display: grid;
-  gap: var(--space-4);
-  padding: var(--space-6) 0 0;
+  gap: var(--space-6);
+  padding: var(--space-8) 0 0;
   border-top: 1px solid var(--dayova-line);
   background: transparent;
 }
@@ -3561,7 +3562,7 @@
 @media (max-width: 767px) {
   .checkout-page {
     min-height: 0;
-    padding-block: var(--space-16) var(--space-12);
+    padding-block: var(--space-16) var(--space-20);
   }
 
   .checkout-page > .dayova-container.checkout-page__inner {
@@ -3609,7 +3610,8 @@
   }
 
   .checkout-page__actions {
-    padding: var(--space-5) 0 0;
+    gap: var(--space-5);
+    padding: var(--space-6) 0 0;
   }
 
   .checkout-page__terms {
