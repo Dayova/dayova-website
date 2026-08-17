@@ -2,6 +2,72 @@ import type { BlogArticle } from "./types";
 
 export const blogArticlesLate2026: readonly BlogArticle[] = [
   {
+    slug: "wenn-der-lernstand-den-unterricht-mitplant",
+    title: "Wenn der Lernstand den Unterricht mitplant",
+    excerpt:
+      "Wie aus den Stärken und Unsicherheiten einer Klasse konkrete nächste Schritte für Unterricht, Hausaufgaben und individuelle Förderung entstehen.",
+    category: "Lernplanung",
+    readingTime: "10 Min.",
+    publishedAt: "17. August 2026",
+    publishedAtISO: "2026-08-17T10:00:00+02:00",
+    intro:
+      "In einer Klasse arbeiten alle am selben Thema und stehen trotzdem an unterschiedlichen Punkten. Einige Schüler haben eine Grundlage sicher verstanden, andere wenden sie nur in bekannten Aufgaben an und wieder andere scheitern noch an einer früheren Vorstellung. Für Lehrkräfte besteht die eigentliche Herausforderung deshalb nicht darin, möglichst viele Daten zu sammeln. Sie müssen rechtzeitig erkennen, welche nächste Handlung der Klasse und jedem einzelnen Schüler wirklich weiterhilft.",
+    sections: [
+      {
+        title: "Eine Klasse hat nie nur einen Lernstand",
+        paragraphs: [
+          "Noten und Klassendurchschnitte verdichten viele Unterschiede zu einer einzigen Zahl. Das schafft einen schnellen Überblick, erklärt aber selten, warum eine Aufgabe gelungen oder misslungen ist. Zwei Schüler mit demselben Ergebnis können völlig verschiedene Unterstützung benötigen: Einer hat einen Fachbegriff verwechselt, der andere versteht den Zusammenhang, verliert aber den Überblick über mehrere Rechenschritte.",
+          "Auch richtige Antworten bedeuten nicht immer dasselbe. Manche entstehen sicher und ohne Hilfe, andere durch Raten, einen Hinweis oder das Wiedererkennen eines vertrauten Musters. Unterricht lässt sich genauer planen, wenn diese Unterschiede sichtbar werden, ohne dass eine Lehrkraft jede einzelne Antwort von Hand auswerten muss.",
+        ],
+      },
+      {
+        title: "Aus Lernaktivitäten werden verständliche Signale",
+        paragraphs: [
+          "Wenn Schüler regelmäßig mit Dayova lernen, entsteht aus ihren Antworten ein fortlaufendes Bild. Dabei zählt nicht nur richtig oder falsch. Benötigte Hilfen, wiederkehrende Fehler, die Sicherheit bei späteren Wiederholungen und der Transfer auf eine neue Aufgabe zeigen, wie belastbar ein Verständnis bereits ist.",
+          "Diese Informationen sollen kein zusätzliches Datenarchiv erzeugen. Sie müssen so zusammengeführt werden, dass Lehrkräfte schnell erkennen, welche Grundlagen sitzen, welche Fehlvorstellung häufiger vorkommt und wo eine kurze Erklärung genügt. Der Lernstand bleibt dabei beweglich: Jeder neue Versuch kann die Einordnung verändern.",
+        ],
+      },
+      {
+        title: "Eine Analyse ist erst nützlich, wenn sie eine Handlung auslöst",
+        paragraphs: [
+          "Ein Diagramm kann auffällig sein und trotzdem offenlassen, was am nächsten Morgen geschehen soll. Wertvoll wird eine Wissensanalyse erst, wenn sie aus Beobachtungen eine pädagogisch nachvollziehbare Empfehlung ableitet. Die Lehrkraft behält die Entscheidung, erhält aber einen vorbereiteten Ausgangspunkt für die Planung.",
+          "Eine gute Empfehlung beantwortet deshalb konkrete Fragen:",
+        ],
+        bullets: [
+          "Welches Lernziel sollte in der nächsten Stunde Priorität haben?",
+          "Welche Fehlvorstellung sollte gemeinsam geklärt werden?",
+          "Wer braucht eine zusätzliche Grundlage, Festigung oder anspruchsvollere Anwendung?",
+          "Welche Aufgabe eignet sich für Einstieg, Übung und Abschluss?",
+          "Welche Hausaufgabe oder kurze Lernkontrolle prüft den Fortschritt sinnvoll?",
+        ],
+      },
+      {
+        title: "Individuell bedeutet nicht dreißig verschiedene Unterrichtsstunden",
+        paragraphs: [
+          "Gezielte Förderung muss nicht bedeuten, für jeden Schüler eine vollständig eigene Stunde zu entwerfen. Häufig reicht eine gemeinsame Struktur mit wenigen passenden Abzweigungen. Nach einem kurzen Einstieg arbeitet eine Gruppe an einer fehlenden Grundlage, eine zweite festigt das aktuelle Verfahren und eine dritte überträgt es auf eine anspruchsvollere Situation.",
+          "Eine datenbasierte Handlungsempfehlung kann diese Gruppen, passende Aufgaben und einen realistischen Zeitrahmen vorschlagen. Dadurch beginnt die Lehrkraft nicht bei einer leeren Seite. Sie passt einen vorbereiteten Ablauf an ihre Klasse, ihren Unterrichtsstil und die Situation des Tages an.",
+        ],
+      },
+      {
+        title: "Unterricht, Hausaufgaben und Tests gehören in einen Kreislauf",
+        paragraphs: [
+          "Gute Planung endet nicht mit der fertigen Unterrichtsstunde. Eine kurze Abschlussfrage kann zeigen, ob die zentrale Vorstellung verstanden wurde. Die anschließende Hausaufgabe festigt genau diesen Schritt, und ein kleiner Wissenstest prüft mit Abstand, ob das Wissen noch verfügbar ist. Die Ergebnisse fließen wieder in den Lernstand ein.",
+          "So entsteht ein Kreislauf statt einer Folge voneinander getrennter Aufgaben: Lernstand erkennen, nächste Handlung planen, unterrichten, den Fortschritt prüfen und die Planung anpassen. Lehrkräfte sehen nicht nur, was erledigt wurde, sondern ob die gewählte Maßnahme tatsächlich geholfen hat.",
+        ],
+      },
+      {
+        title: "Eine gemeinsame Lernwelt reduziert Organisation",
+        paragraphs: [
+          "Schüler verlieren viel Energie, wenn Termine, Materialien, Rückmeldungen und Lernstände über verschiedene Systeme verteilt sind. Lehrkräfte müssen Informationen mehrfach eintragen und Schulen erhalten nur schwer ein gemeinsames Bild. Die Organisation wird dann selbst zu einer Aufgabe, bevor Lernen überhaupt beginnen kann.",
+          "Dayova will diese Ebenen in einer einfachen Lernwelt verbinden. Schüler sehen, was als Nächstes ansteht und wie sicher sie in einem Fach bereits sind. Lehrkräfte planen Unterricht, Hausaufgaben und Lernkontrollen auf Grundlage derselben Lernziele. Schulen schaffen einen verlässlichen Rahmen, ohne pädagogische Entscheidungen zu zentralisieren.",
+          "Der größte Vorteil liegt damit nicht in einem weiteren Verwaltungssystem. Er entsteht aus der Verbindung: Was ein Schüler beim Lernen zeigt, kann die nächste Unterrichtsentscheidung verbessern. Was im Unterricht geschieht, macht wiederum den persönlichen Lernweg genauer.",
+        ],
+      },
+    ],
+    takeaway:
+      "Individuelle Wissensanalyse ersetzt keine pädagogische Entscheidung. Sie macht sichtbar, wo eine Klasse steht, und übersetzt verstreute Lerndaten in einen klaren nächsten Schritt für Schüler und Lehrkräfte.",
+  },
+  {
     slug: "die-richtige-schwierigkeit-beim-lernen",
     title: "Die richtige Schwierigkeit beim Lernen",
     excerpt:
