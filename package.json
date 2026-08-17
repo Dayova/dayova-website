@@ -8,6 +8,7 @@
     "start": "next start",
     "smoke": "node scripts/smoke-test.mjs",
     "seo:audit": "node scripts/seo-audit.mjs",
+    "responsive:audit": "node scripts/responsive-audit.mjs",
     "lint": "eslint",
     "typecheck": "tsc --noEmit"
   },

@@ -577,6 +577,10 @@
 }
 
 .footer-cookie-settings {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding-block: 10px;
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;

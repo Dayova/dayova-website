@@ -38,7 +38,7 @@ export function Footer() {
                   {group.links.map((link) => (
                     <li key={link.href}>
                       <Link
-                        className="text-sm text-white/65 transition hover:text-white"
+                        className="inline-flex min-h-11 items-center py-2 text-sm text-white/65 transition hover:text-white"
                         href={link.href}
                       >
                         {link.label}

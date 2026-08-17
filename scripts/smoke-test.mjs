@@ -1,5 +1,6 @@
 const baseUrl = new URL(process.env.SMOKE_BASE_URL ?? "http://127.0.0.1:3101");
 const includeDashboard = process.env.SMOKE_INCLUDE_DASHBOARD !== "false";
+const allowDemoSession = process.env.SMOKE_ALLOW_DEMO_SESSION === "true";
 
 const dashboardHeaders = {
   "x-dayova-user-id": "teacher-mueller",
@@ -220,7 +221,7 @@ async function expectApi(path, expectedStatus, options = {}) {
 }
 
 async function checkApis() {
-  await expectApi("/api/auth/me", 401);
+  await expectApi("/api/auth/me", allowDemoSession ? 200 : 401);
 
   const authenticatedRequests = [
     "/api/auth/me",
