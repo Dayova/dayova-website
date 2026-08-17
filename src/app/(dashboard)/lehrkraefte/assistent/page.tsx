@@ -8,9 +8,22 @@ import {
   getTopicAnalyses,
 } from "@/features/teacher-dashboard/service";
 
-export default function TeacherAssistantPage() {
+type TeacherAssistantPageProps = {
+  searchParams: Promise<{ gruppe?: string | string[] }>;
+};
+
+export default async function TeacherAssistantPage({
+  searchParams,
+}: TeacherAssistantPageProps) {
   const session = getDemoDashboardSession();
   const groups = getTeachingGroupsForSession(session);
+  const requestedGroup = (await searchParams).gruppe;
+  const requestedGroupId = Array.isArray(requestedGroup)
+    ? requestedGroup[0]
+    : requestedGroup;
+  const initialGroupId = groups.some((group) => group.id === requestedGroupId)
+    ? requestedGroupId
+    : groups[0]?.id;
   const data = groups.map((group) => ({
     group,
     topics: getTopicAnalyses(session, group.id),
@@ -25,7 +38,11 @@ export default function TeacherAssistantPage() {
         title="Ihre nächste Unterrichtsstunde – vorbereitet mit Ihren Klassendaten"
         description="Planen Sie schneller, differenzieren Sie gezielter und behalten Sie die Schüler:innen im Blick, die gerade Unterstützung benötigen."
       />
-      <TeacherAssistant data={data} />
+      <TeacherAssistant
+        data={data}
+        initialGroupId={initialGroupId}
+        key={initialGroupId}
+      />
     </>
   );
 }

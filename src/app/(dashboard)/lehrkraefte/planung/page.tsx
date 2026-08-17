@@ -14,13 +14,27 @@ import {
 export default async function PlanningPage({
   searchParams,
 }: {
-  searchParams: Promise<{ bereich?: string }>;
+  searchParams: Promise<{
+    bereich?: string;
+    gruppe?: string | string[];
+    neu?: string;
+  }>;
 }) {
   const query = await searchParams;
   const active = query.bereich === "tests" ? "tests" : "aufgaben";
   const session = getDemoDashboardSession();
   const classes = getClassesForSession(session);
   const groups = getTeachingGroupsForSession(session);
+  const requestedGroup = Array.isArray(query.gruppe)
+    ? query.gruppe[0]
+    : query.gruppe;
+  const presetGroupId = groups.some((group) => group.id === requestedGroup)
+    ? requestedGroup
+    : undefined;
+  const groupQuery = presetGroupId
+    ? `&gruppe=${encodeURIComponent(presetGroupId)}`
+    : "";
+  const startFlow = query.neu === "1";
 
   return (
     <>
@@ -30,11 +44,22 @@ export default async function PlanningPage({
         description="Erstellen Sie Aufgaben und Leistungsnachweise an einem Ort – ohne zwischen mehreren Bereichen zu wechseln."
         actions={
           active === "aufgaben" ? (
-            <HomeworkPlanningFlow groups={groups} />
+            <HomeworkPlanningFlow
+              groups={groups}
+              presetGroupId={presetGroupId}
+              startOpen={startFlow}
+            />
           ) : (
             <>
-              <AiTestTemplateFlow groups={groups} />
-              <TestPlanningFlow groups={groups} />
+              <AiTestTemplateFlow
+                groups={groups}
+                presetGroupId={presetGroupId}
+              />
+              <TestPlanningFlow
+                groups={groups}
+                presetGroupId={presetGroupId}
+                startOpen={startFlow}
+              />
             </>
           )
         }
@@ -45,12 +70,12 @@ export default async function PlanningPage({
         items={[
           {
             label: "Aufgaben",
-            href: "/lehrkraefte/planung?bereich=aufgaben",
+            href: `/lehrkraefte/planung?bereich=aufgaben${groupQuery}`,
             active: active === "aufgaben",
           },
           {
             label: "Tests",
-            href: "/lehrkraefte/planung?bereich=tests",
+            href: `/lehrkraefte/planung?bereich=tests${groupQuery}`,
             active: active === "tests",
           },
         ]}

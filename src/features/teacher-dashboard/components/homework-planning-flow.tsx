@@ -13,9 +13,19 @@ type Draft = {
   knowledgeCheck: boolean;
 };
 
-export function HomeworkPlanningFlow({ groups, presetGroupId, compact = false }: { groups: TeachingGroup[]; presetGroupId?: string; compact?: boolean }) {
+export function HomeworkPlanningFlow({
+  groups,
+  presetGroupId,
+  compact = false,
+  startOpen = false,
+}: {
+  groups: TeachingGroup[];
+  presetGroupId?: string;
+  compact?: boolean;
+  startOpen?: boolean;
+}) {
   const { addHomework } = useTeacherDashboard();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(startOpen);
   const [step, setStep] = useState(1);
   const [saved, setSaved] = useState<Draft | null>(null);
   const [draft, setDraft] = useState<Draft>({ groupId: presetGroupId ?? groups[0]?.id ?? "", title: "", description: "", dueDate: "2026-08-07", topics: "", knowledgeCheck: false });
