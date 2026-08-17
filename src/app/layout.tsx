@@ -21,22 +21,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dayova.com"),
   applicationName: "Dayova",
   title: {
-    default: "Dayova – Lernplan-App und persönlicher Lernbegleiter",
+    default: "Lernplan-App für Schüler – Lernen mit System | Dayova",
     template: "%s | Dayova",
   },
   description:
-    "Dayova ist dein persönlicher Lernbegleiter: Die App erstellt Lernpläne, erkennt Wissenslücken und zeigt dir den nächsten sinnvollen Lernschritt.",
+    "Dayova ist die Lernplan-App für Schüler: Sie plant Prüfungen, erkennt Wissenslücken und zeigt den nächsten sinnvollen Lernschritt.",
   authors: [{ name: "Dayova", url: "https://dayova.com" }],
   creator: "Dayova",
   publisher: "Dayova",
-  keywords: [
-    "Dayova",
-    "Lernbegleiter",
-    "Lernplan",
-    "Lernapp",
-    "Schüler",
-    "Prüfungsvorbereitung",
-  ],
+  category: "education",
   icons: {
     icon: [
       {
@@ -54,9 +47,9 @@ export const metadata: Metadata = {
     apple: "/favicon-light.png",
   },
   openGraph: {
-    title: "Dayova – Lernplan-App und persönlicher Lernbegleiter",
+    title: "Lernplan-App für Schüler – Lernen mit System | Dayova",
     description:
-      "Dayova erstellt Lernpläne, erkennt Wissenslücken und zeigt dir den nächsten sinnvollen Lernschritt.",
+      "Dayova plant Prüfungen, erkennt Wissenslücken und zeigt Schülern den nächsten sinnvollen Lernschritt.",
     url: "https://dayova.com",
     siteName: "Dayova",
     locale: "de_DE",
@@ -72,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dayova – Lernplan-App und persönlicher Lernbegleiter",
+    title: "Lernplan-App für Schüler – Lernen mit System | Dayova",
     description:
-      "Dayova erstellt Lernpläne, erkennt Wissenslücken und zeigt dir den nächsten sinnvollen Lernschritt.",
+      "Dayova plant Prüfungen, erkennt Wissenslücken und zeigt Schülern den nächsten sinnvollen Lernschritt.",
     images: ["/images/dayova-hero-phones.png"],
   },
   robots: {

@@ -2,16 +2,29 @@ import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { SchoolPricingCard } from "@/components/pricing/school-pricing-card";
+import { JsonLd } from "@/components/seo/json-ld";
 import { StudentPricingCard } from "@/components/pricing/student-pricing-card";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { pricingFaqs } from "@/content/pricing";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
+
+const pricingDescription =
+  "Dayova Preise für Schüler und Schulen: 14 Tage kostenlos testen, danach ab 12,99 € pro Monat oder ein individuelles Schulangebot anfragen.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Preise für Schüler und Schulen",
-  description:
-    "Dayova im Jahresabo für 12,99 € pro Monat, im Monatsabo für 14,99 € und mit individuellen Angeboten für Schulen.",
+  title: "Dayova Preise: Lern-App für Schüler und Schulen",
+  description: pricingDescription,
   path: "/preise",
+});
+
+const pricingStructuredData = createPageStructuredData({
+  name: "Dayova Preise für Schüler und Schulen",
+  description: pricingDescription,
+  path: "/preise",
+  breadcrumbs: [
+    { name: "Dayova", path: "/" },
+    { name: "Preise", path: "/preise" },
+  ],
 });
 
 const checkoutMessages = {
@@ -38,6 +51,7 @@ export default async function PricingPage({
 
   return (
     <>
+      <JsonLd data={pricingStructuredData} />
       <section
         className="home-classic-section pricing-page"
         id="abos"
@@ -46,7 +60,7 @@ export default async function PricingPage({
         <div className="dayova-container">
           <div className="pricing-page__intro">
             <h1 id="pricing-hero-title" className="dayova-hero-claim">
-              Ein klarer Preis. Ein Lernplan, der zu dir passt.
+              Dayova Preise für Schüler und Schulen.
             </h1>
             <p>
               Teste Dayova 14 Tage kostenlos und wähle danach das Abo, das zu

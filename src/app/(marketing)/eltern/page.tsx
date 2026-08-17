@@ -11,18 +11,31 @@ import {
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { JsonLd } from "@/components/seo/json-ld";
 import { StoreDownloadLink } from "@/components/store-download-link";
 import { ScrollActiveAdvantages } from "@/components/sections/scroll-active-advantages";
 import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { IconBadge } from "@/components/ui/icon-badge";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
+
+const parentsDescription =
+  "Dayova ist die Lernplan-App für Schüler und Familien: weniger Lernstress, mehr Selbstständigkeit und klare nächste Schritte im Schulalltag.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Für Eltern: Weniger Lernstress im Familienalltag",
-  description:
-    "Dayova entlastet Eltern bei der Lernorganisation, stärkt die Selbstständigkeit ihrer Kinder und schafft mehr Ruhe im Familienalltag.",
+  title: "Lernplan-App für Schüler: Weniger Lernstress",
+  description: parentsDescription,
   path: "/eltern",
+});
+
+const parentsStructuredData = createPageStructuredData({
+  name: "Dayova für Eltern – weniger Lernstress im Familienalltag",
+  description: parentsDescription,
+  path: "/eltern",
+  breadcrumbs: [
+    { name: "Dayova", path: "/" },
+    { name: "Für Eltern", path: "/eltern" },
+  ],
 });
 
 const parentBenefits = [
@@ -116,6 +129,7 @@ const parentFaqItems = [
 export default function ParentsPage() {
   return (
     <>
+      <JsonLd data={parentsStructuredData} />
       <section
         className="home-classic-hero parents-hero"
         aria-labelledby="parents-hero-title"
@@ -124,7 +138,7 @@ export default function ParentsPage() {
           <div className="home-classic-hero__copy">
             <span className="home-classic-section-eyebrow">Für Eltern</span>
             <h1 id="parents-hero-title" className="dayova-hero-claim">
-              Weniger organisieren. Mehr Selbstständigkeit für dein Kind.
+              Weniger Lernstress. Mehr Selbstständigkeit für dein Kind.
             </h1>
             <p className="dayova-body home-classic-hero__description">
               <strong>Dayova bringt Ruhe in euren Lernalltag:</strong> Die App

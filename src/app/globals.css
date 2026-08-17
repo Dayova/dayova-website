@@ -1772,6 +1772,66 @@
   line-height: 1.65;
 }
 
+.blog-article-related {
+  display: grid;
+  gap: var(--space-5);
+  padding-top: var(--space-2);
+}
+
+.blog-article-related > div {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.blog-article-related > div > span,
+.blog-article-related li a > span {
+  color: var(--dayova-brand-deep);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.blog-article-related ul {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.blog-article-related li a {
+  min-height: 100%;
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-xl);
+  background: var(--dayova-elevated);
+  color: var(--dayova-ink);
+  text-decoration: none;
+  transition:
+    border-color 180ms var(--dayova-ease),
+    transform 180ms var(--dayova-ease),
+    box-shadow 180ms var(--dayova-ease);
+}
+
+.blog-article-related li a:hover {
+  border-color: color-mix(in srgb, var(--dayova-brand) 44%, var(--dayova-line));
+  box-shadow: var(--dayova-shadow);
+  transform: translateY(-2px);
+}
+
+.blog-article-related li strong {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.blog-article-related li small {
+  color: var(--dayova-muted);
+  font-size: 13px;
+}
+
 .blog-article > .button-secondary {
   width: max-content;
 }
@@ -1855,6 +1915,10 @@
 
   .blog-article__takeaway {
     padding-left: var(--space-4);
+  }
+
+  .blog-article-related ul {
+    grid-template-columns: 1fr;
   }
 
   .blog-reading-progress {

@@ -84,6 +84,33 @@ const dayovaAdvantages = [
   },
 ] as const;
 
+const audiencePaths = [
+  {
+    eyebrow: "Für Schüler",
+    title: "Lernen organisieren, ohne jeden Tag neu anzufangen.",
+    description:
+      "Dayova verbindet Prüfungen, Aufgaben und Lernzeiten zu einem persönlichen Lernplan und zeigt dir, was heute wirklich wichtig ist.",
+    href: "/preise",
+    cta: "Lern-App und Preise ansehen",
+  },
+  {
+    eyebrow: "Für Eltern",
+    title: "Weniger erinnern, mehr Selbstständigkeit ermöglichen.",
+    description:
+      "Eltern gewinnen Ruhe, während ihr Kind mit klaren nächsten Schritten zunehmend Verantwortung für den eigenen Lernalltag übernimmt.",
+    href: "/eltern",
+    cta: "Dayova für Eltern",
+  },
+  {
+    eyebrow: "Für Schulen und Lehrkräfte",
+    title: "Lernstände in konkrete Unterrichtsschritte übersetzen.",
+    description:
+      "Schulen verbinden eine einheitliche Lernwelt für Schüler mit Planung, Analysen und Handlungsempfehlungen für Lehrkräfte.",
+    href: "/schulen",
+    cta: "Dayova für Schulen",
+  },
+] as const;
+
 const faqItems = [
   {
     question: "Wie kann ich mich anmelden?",
@@ -108,7 +135,7 @@ export function HomeHeroSection() {
       <div className="dayova-container home-classic-hero__inner">
         <div className="home-classic-hero__copy">
           <h1 id="home-hero-title" className="dayova-hero-claim">
-            Dein Lernbegleiter. Dein nächster Schritt.
+            Deine Lernplan-App. Dein nächster Schritt.
           </h1>
           <p className="dayova-body home-classic-hero__description">
             <strong>Dayova ist dein Lernbegleiter:</strong> Du lernst direkt in
@@ -134,6 +161,45 @@ export function HomeHeroSection() {
             priority
             sizes="(max-width: 767px) 88vw, (max-width: 1199px) 48vw, 620px"
           />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function HomeAudienceSection() {
+  return (
+    <section
+      className="home-classic-section"
+      aria-labelledby="home-audiences-title"
+    >
+      <div className="dayova-container">
+        <div className="marketing-section-heading marketing-section-heading--centered">
+          <span className="home-classic-section-eyebrow">
+            Eine Lernwelt für alle
+          </span>
+          <h2 id="home-audiences-title" className="dayova-section-title">
+            Dayova verbindet Schüler, Eltern, Lehrkräfte und Schulen.
+          </h2>
+          <p>
+            Alle arbeiten mit demselben Lernstand – aber jede Zielgruppe sieht
+            genau die nächsten Schritte, die sie im Alltag braucht.
+          </p>
+        </div>
+
+        <div className="marketing-feature-grid">
+          {audiencePaths.map((audience) => (
+            <article className="section-card marketing-feature-card" key={audience.title}>
+              <span className="home-classic-section-eyebrow">
+                {audience.eyebrow}
+              </span>
+              <h3>{audience.title}</h3>
+              <p>{audience.description}</p>
+              <ButtonLink href={audience.href} variant="secondary">
+                {audience.cta}
+              </ButtonLink>
+            </article>
+          ))}
         </div>
       </div>
     </section>

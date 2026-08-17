@@ -11,16 +11,29 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { ProcessTimeline } from "@/components/sections/process-timeline";
+import { JsonLd } from "@/components/seo/json-ld";
 import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { siteConfig } from "@/config/site";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
+
+const schoolsDescription =
+  "Dayova ist die Lernplattform für Schulen: persönliche Lernpläne für Schüler, Lernstandsanalysen und konkrete Unterrichtsempfehlungen für Lehrkräfte.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Für Schulen: Lernbegleitung und Lehrkräfte-System",
-  description:
-    "Dayova verbindet einen persönlichen Lernbegleiter für Schülerinnen und Schüler mit einem übersichtlichen Management- und Unterrichtssystem für Lehrkräfte.",
+  title: "Lernplattform für Schulen und Lehrkräfte",
+  description: schoolsDescription,
   path: "/schulen",
+});
+
+const schoolsStructuredData = createPageStructuredData({
+  name: "Dayova – Lernplattform für Schulen und Lehrkräfte",
+  description: schoolsDescription,
+  path: "/schulen",
+  breadcrumbs: [
+    { name: "Dayova", path: "/" },
+    { name: "Für Schulen", path: "/schulen" },
+  ],
 });
 
 const studentBenefits = [
@@ -80,6 +93,7 @@ export default function SchoolsPage() {
 
   return (
     <div className="schools-page">
+      <JsonLd data={schoolsStructuredData} />
       <section
         className="home-classic-hero schools-hero"
         aria-labelledby="schools-hero-title"
@@ -90,7 +104,7 @@ export default function SchoolsPage() {
               Dayova für Schulen
             </span>
             <h1 id="schools-hero-title" className="dayova-hero-claim">
-              Lernen begleiten. Unterricht entlasten.
+              Lernstände verstehen. Unterricht gezielt planen.
             </h1>
             <p className="dayova-body home-classic-hero__description">
               <strong>Eine Lösung für die ganze Schulgemeinschaft:</strong>{" "}

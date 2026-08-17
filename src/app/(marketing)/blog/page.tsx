@@ -3,27 +3,60 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 import { ArticleFilter } from "@/components/blog/article-filter";
+import { JsonLd } from "@/components/seo/json-ld";
 import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { PageHero } from "@/components/ui/page-hero";
 import { siteConfig } from "@/config/site";
 import { blogArticles } from "@/content/blog";
-import { createPageMetadata } from "@/lib/seo";
+import {
+  createPageMetadata,
+  createPageStructuredData,
+  siteUrl,
+} from "@/lib/seo";
+
+const blogDescription =
+  "Der Dayova Lernblog für Schüler, Eltern und Lehrkräfte: fundierte Lernmethoden, Lernplanung, Motivation und Prüfungsvorbereitung für den Schulalltag.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Blog: Lernmethoden, Lernplanung & Motivation",
-  description:
-    "Fundierte Beiträge zu Lernplanung, Lernpsychologie, Prüfungsvorbereitung und dem Schulalltag von Schülern, Eltern und Lehrkräften.",
+  title: "Lernblog: Methoden, Planung und Motivation",
+  description: blogDescription,
   path: "/blog",
 });
+
+const blogPageStructuredData = createPageStructuredData({
+  type: "CollectionPage",
+  name: "Dayova Lernblog",
+  description: blogDescription,
+  path: "/blog",
+  breadcrumbs: [
+    { name: "Dayova", path: "/" },
+    { name: "Lernblog", path: "/blog" },
+  ],
+});
+
+const blogListStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Aktuelle Beiträge im Dayova Lernblog",
+  numberOfItems: blogArticles.length,
+  itemListElement: blogArticles.map((article, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: `${siteUrl}/blog/${article.slug}`,
+    name: article.title,
+  })),
+};
 
 export default function BlogPage() {
   return (
     <>
+      <JsonLd data={blogPageStructuredData} />
+      <JsonLd data={blogListStructuredData} />
       <PageHero
         className="blog-overview-hero"
         eyebrow="Dayova Blog"
-        title="Lernen mit Plan und Rückmeldung."
+        title="Lernmethoden, die im Schulalltag funktionieren."
         description="Jeden Montag erscheinen fundierte Beiträge zu Lernmethoden, Motivation und Prüfungsvorbereitung – für Schülerinnen, Schüler, Eltern und Lehrkräfte."
       />
 

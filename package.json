@@ -7,6 +7,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "smoke": "node scripts/smoke-test.mjs",
+    "seo:audit": "node scripts/seo-audit.mjs",
     "lint": "eslint",
     "typecheck": "tsc --noEmit"
   },
