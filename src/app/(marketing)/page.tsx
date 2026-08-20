@@ -5,7 +5,6 @@ import { JsonLd } from "@/components/seo/json-ld";
 import {
   HomeAboutSection,
   HomeAdvantagesSection,
-  HomeAudienceSection,
   HomeCompanionSection,
   HomeDownloadSection,
   HomeFaqSection,
@@ -78,7 +77,6 @@ export default function Home() {
       <JsonLd data={homeStructuredData} />
       <HomeHeroSection />
       <HomeAboutSection />
-      <HomeAudienceSection />
       <HomeCompanionSection />
       <HomeAdvantagesSection />
       <HomeProcessSection />
