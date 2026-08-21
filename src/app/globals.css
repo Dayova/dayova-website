@@ -3271,6 +3271,13 @@
   font-size: 13px !important;
 }
 
+.checkout-result-page__share-status {
+  margin: 0 !important;
+  color: var(--dayova-brand-deep) !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+}
+
 .pricing-plans-layout {
   width: min(100%, 1360px);
   margin-inline: auto;
