@@ -1,5 +1,6 @@
-import { CheckmarkCircle02Icon, LinkSquare02Icon } from "@hugeicons/core-free-icons";
+import { CheckmarkCircle02Icon } from "@hugeicons/core-free-icons";
 import type { Metadata } from "next";
+import { RedemptionLinkActions } from "@/components/redemption-link-actions";
 import { StoreDownloadLink } from "@/components/store-download-link";
 import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
@@ -35,28 +36,24 @@ export default async function CheckoutSuccessPage({
         </h1>
         <p>
           {redeemUrl
-            ? "Verbinde den Kauf jetzt sicher mit deinem Dayova-Konto. Der persönliche Einlöse-Link ist 60 Minuten gültig."
+            ? "Verbinde den Kauf mit deinem Dayova-Konto oder sende den persönlichen Link an die Person, die das Abo nutzen soll. Der Link ist 60 Minuten gültig."
             : "Öffne Dayova und melde dich mit deinem Lernkonto an. Dein Abo wird dort über RevenueCat bereitgestellt."}
         </p>
-        <div className="checkout-result-page__actions">
-          {redeemUrl ? (
-            <a className="button-primary" href={redeemUrl}>
-              <span className="checkout-result-page__button-label">
-                Abo mit Dayova verbinden
-                <DayovaIcon icon={LinkSquare02Icon} size={20} />
-              </span>
-            </a>
-          ) : (
+        {redeemUrl ? (
+          <RedemptionLinkActions redeemUrl={redeemUrl} />
+        ) : (
+          <div className="checkout-result-page__actions">
             <StoreDownloadLink variant="primary">Dayova öffnen</StoreDownloadLink>
-          )}
-          <ButtonLink href="/" variant="secondary">
-            Zur Startseite
-          </ButtonLink>
-        </div>
+            <ButtonLink href="/" variant="secondary">
+              Zur Startseite
+            </ButtonLink>
+          </div>
+        )}
         {redeemUrl ? (
           <p className="checkout-result-page__note">
-            Teile diesen Link nicht. Er ordnet das gekaufte Abo dem Konto zu, in
-            dem du ihn öffnest.
+            Der Link kann einmal eingelöst werden und ordnet das Abo dem
+            Dayova-Konto zu, das beim Öffnen angemeldet ist. Teile ihn nur mit
+            der vorgesehenen Person.
           </p>
         ) : null}
       </div>
