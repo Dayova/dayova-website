@@ -36,7 +36,7 @@ export default async function CheckoutSuccessPage({
         <p>
           {redeemUrl
             ? "Nur noch ein Schritt: Entscheide, wer das Abo mit einem Dayova-Konto verbinden soll."
-            : "Öffne Dayova und melde dich mit deinem Lernkonto an. Dein Abo wird dort über RevenueCat bereitgestellt."}
+            : "Öffne Dayova und melde dich mit deinem Lernkonto an. Dein Abo ist anschließend direkt in der App verfügbar."}
         </p>
         {redeemUrl ? (
           <RedemptionActions redeemUrl={redeemUrl} />
