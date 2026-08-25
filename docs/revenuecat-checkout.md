@@ -17,6 +17,9 @@ the production purchase link remain server-side environment variables.
 4. Set the success redirect to
    `https://dayova.com/kasse/erfolgreich`. RevenueCat appends `redeem_url` for an
    anonymous purchase; the success page presents that secure link to the buyer.
+   The buyer can either open the link on their own device or share the same link
+   with the intended learner through the platform share sheet. Browsers without
+   a share sheet copy the link to the clipboard instead.
 5. Set the cancel/back destination to
    `https://dayova.com/kasse/abgebrochen` or `https://dayova.com/preise`.
 6. Configure the Customer Portal in RevenueCat so subscribers can manage and
@@ -46,6 +49,11 @@ not accept a browser-provided RevenueCat App User ID, because that could assign
 a purchase to the wrong account. Instead, RevenueCat issues a short-lived
 Redemption Link after payment. The learner opens it on the device and associates
 the entitlement with the authenticated Dayova app account.
+
+The post-purchase page makes this ownership choice explicit: the buyer can
+activate the subscription for their own Dayova account or send the Redemption
+Link to the intended learner. Both actions use the same 60-minute link. Never
+persist it, expose it to analytics, or send it to an unintended recipient.
 
 Once a shared learner login exists on the website, checkout can use an
 identified Web Purchase Link generated from the server-authenticated Dayova user
