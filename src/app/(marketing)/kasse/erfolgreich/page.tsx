@@ -1,7 +1,7 @@
-import { CheckmarkCircle02Icon, LinkSquare02Icon } from "@hugeicons/core-free-icons";
+import { CheckmarkCircle02Icon } from "@hugeicons/core-free-icons";
 import type { Metadata } from "next";
+import { RedemptionActions } from "@/components/checkout/redemption-actions";
 import { StoreDownloadLink } from "@/components/store-download-link";
-import { ButtonLink } from "@/components/ui/button-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { getSafeRevenueCatRedemptionUrl } from "@/lib/revenuecat";
 
@@ -22,7 +22,7 @@ export default async function CheckoutSuccessPage({
 
   return (
     <section
-      className="home-classic-section checkout-result-page"
+      className="home-classic-section checkout-result-page checkout-result-page--success"
       aria-labelledby="checkout-success-title"
     >
       <div className="dayova-container checkout-result-page__inner">
@@ -35,28 +35,24 @@ export default async function CheckoutSuccessPage({
         </h1>
         <p>
           {redeemUrl
-            ? "Verbinde den Kauf jetzt sicher mit deinem Dayova-Konto. Der persönliche Einlöse-Link ist 60 Minuten gültig."
-            : "Öffne Dayova und melde dich mit deinem Lernkonto an. Dein Abo wird dort über RevenueCat bereitgestellt."}
+            ? "Nur noch ein Schritt: Entscheide, wer das Abo mit einem Dayova-Konto verbinden soll."
+            : "Öffne Dayova und melde dich mit deinem Lernkonto an. Dein Abo ist anschließend direkt in der App verfügbar."}
         </p>
-        <div className="checkout-result-page__actions">
-          {redeemUrl ? (
-            <a className="button-primary" href={redeemUrl}>
-              <span className="checkout-result-page__button-label">
-                Abo mit Dayova verbinden
-                <DayovaIcon icon={LinkSquare02Icon} size={20} />
-              </span>
-            </a>
-          ) : (
-            <StoreDownloadLink variant="primary">Dayova öffnen</StoreDownloadLink>
-          )}
-          <ButtonLink href="/" variant="secondary">
-            Zur Startseite
-          </ButtonLink>
-        </div>
         {redeemUrl ? (
-          <p className="checkout-result-page__note">
-            Teile diesen Link nicht. Er ordnet das gekaufte Abo dem Konto zu, in
-            dem du ihn öffnest.
+          <RedemptionActions redeemUrl={redeemUrl} />
+        ) : (
+          <div className="checkout-result-page__actions">
+            <StoreDownloadLink variant="primary">Dayova öffnen</StoreDownloadLink>
+          </div>
+        )}
+        {redeemUrl ? (
+          <p
+            className="checkout-result-page__note"
+            id="checkout-redemption-expiry"
+          >
+            Der persönliche Link ist 60 Minuten gültig und aktiviert das Abo
+            für das Dayova-Konto, in dem er geöffnet wird. Teile ihn nur mit der
+            vorgesehenen Person.
           </p>
         ) : null}
       </div>
