@@ -7,6 +7,7 @@ import {
 import { useState } from "react";
 
 import { DayovaIcon } from "@/components/ui/huge-icon";
+import { getShareableRedemptionUrl } from "@/lib/redemption-share-url";
 
 type ShareStatus = "idle" | "shared" | "copied" | "error";
 
@@ -27,10 +28,20 @@ export function RedemptionActions({ redeemUrl }: RedemptionActionsProps) {
   async function shareWithStudent() {
     setShareStatus("idle");
 
+    const shareUrl = getShareableRedemptionUrl({
+      currentPageUrl: window.location.href,
+      redeemUrl,
+    });
+
+    if (!shareUrl) {
+      setShareStatus("error");
+      return;
+    }
+
     const shareData: ShareData = {
       title: "Dein Dayova-Abo",
       text: "Öffne diesen Link auf deinem Gerät, um das Dayova-Abo mit deinem Konto zu verbinden.",
-      url: redeemUrl,
+      url: shareUrl,
     };
 
     if (
@@ -49,7 +60,7 @@ export function RedemptionActions({ redeemUrl }: RedemptionActionsProps) {
     }
 
     try {
-      await navigator.clipboard.writeText(redeemUrl);
+      await navigator.clipboard.writeText(shareUrl);
       setShareStatus("copied");
     } catch {
       setShareStatus("error");

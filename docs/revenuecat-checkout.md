@@ -17,9 +17,12 @@ the production purchase link remain server-side environment variables.
 4. Set the success redirect to
    `https://dayova.com/kasse/erfolgreich`. RevenueCat appends `redeem_url` for an
    anonymous purchase; the success page presents that secure link to the buyer.
-   The buyer can either open the link on their own device or share the same link
-   with the intended learner through the platform share sheet. Browsers without
-   a share sheet copy the link to the clipboard instead.
+   The buyer can either open the Redemption Link on their own device or share
+   the HTTPS success-page URL with the intended learner through the platform
+   share sheet. The learner opens that normal, tappable web link and then uses
+   the validated Redemption Link button on the page. Do not share or copy the
+   custom `rc-…://` scheme directly because messaging apps may render it as
+   plain text. Browsers without a share sheet copy the HTTPS page URL instead.
 5. Set the cancel/back destination to
    `https://dayova.com/kasse/abgebrochen` or `https://dayova.com/preise`.
 6. Configure the Customer Portal in RevenueCat so subscribers can manage and
