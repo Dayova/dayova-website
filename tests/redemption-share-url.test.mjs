@@ -14,7 +14,8 @@ const transpiled = ts.transpileModule(source, {
   },
 }).outputText;
 const moduleUrl = `data:text/javascript;base64,${Buffer.from(transpiled).toString("base64")}`;
-const { getShareableRedemptionUrl } = await import(moduleUrl);
+const { getRedemptionShareData, getShareableRedemptionUrl } =
+  await import(moduleUrl);
 
 const redeemUrl =
   "rc-27a39b9faa://redeem_web_purchase?redemption_token=test-token";
@@ -70,4 +71,14 @@ test("removes unrelated checkout identifiers from the shared page URL", () => {
     getShareableRedemptionUrl({ currentPageUrl, redeemUrl }),
     "https://staging.dayova.com/abo-aktivieren?redeem_url=rc-27a39b9faa%3A%2F%2Fredeem_web_purchase%3Fredemption_token%3Dtest-token",
   );
+});
+
+test("shares the recipient URL as the primary item so iOS Copy keeps the link", () => {
+  const shareUrl =
+    "https://staging.dayova.com/abo-aktivieren?redeem_url=test-token";
+
+  assert.deepEqual(getRedemptionShareData(shareUrl), {
+    title: "Dein Dayova-Abo",
+    url: shareUrl,
+  });
 });
