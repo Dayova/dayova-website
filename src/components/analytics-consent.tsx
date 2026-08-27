@@ -4,6 +4,8 @@ import Script from "next/script";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
+import { getSafeAnalyticsPageLocation } from "@/lib/analytics-page-location";
+
 const consentStorageKey = "dayova-analytics-consent";
 
 type ConsentState = "granted" | "denied" | null;
@@ -22,12 +24,15 @@ function AnalyticsPageView({ enabled }: { enabled: boolean }) {
   useEffect(() => {
     if (!enabled || typeof window.gtag !== "function") return;
 
-    const query = searchParams.toString();
-    const pagePath = query ? `${pathname}?${query}` : pathname;
+    const analyticsLocation = getSafeAnalyticsPageLocation(
+      window.location.href,
+    );
+
+    if (!analyticsLocation) return;
 
     window.gtag("event", "page_view", {
-      page_location: window.location.href,
-      page_path: pagePath,
+      page_location: analyticsLocation.pageLocation,
+      page_path: analyticsLocation.pagePath,
       page_title: document.title,
     });
   }, [enabled, pathname, searchParams]);

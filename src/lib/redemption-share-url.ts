@@ -25,6 +25,7 @@ export function getShareableRedemptionUrl({
     return null;
   }
 
+  pageUrl.pathname = "/abo-aktivieren";
   pageUrl.search = new URLSearchParams({ redeem_url: redeemUrl }).toString();
   pageUrl.hash = "";
 
