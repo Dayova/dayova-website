@@ -18,11 +18,13 @@ the production purchase link remain server-side environment variables.
    `https://dayova.com/kasse/erfolgreich`. RevenueCat appends `redeem_url` for an
    anonymous purchase; the success page presents that secure link to the buyer.
    The buyer can either open the Redemption Link on their own device or share
-   the HTTPS success-page URL with the intended learner through the platform
-   share sheet. The learner opens that normal, tappable web link and then uses
-   the validated Redemption Link button on the page. Do not share or copy the
-   custom `rc-…://` scheme directly because messaging apps may render it as
-   plain text. Browsers without a share sheet copy the HTTPS page URL instead.
+   a dedicated HTTPS `/abo-aktivieren` URL with the intended learner through
+   the platform share sheet. The learner opens that normal, tappable web link
+   and sees a recipient-only page with one primary action into Dayova; the
+   buyer's ownership choice is not repeated. Do not share or copy the custom
+   `rc-…://` scheme directly because messaging apps may render it as plain
+   text. Browsers without a share sheet copy the same HTTPS activation URL
+   instead.
 5. Set the cancel/back destination to
    `https://dayova.com/kasse/abgebrochen` or `https://dayova.com/preise`.
 6. Configure the Customer Portal in RevenueCat so subscribers can manage and
@@ -55,8 +57,12 @@ the entitlement with the authenticated Dayova app account.
 
 The post-purchase page makes this ownership choice explicit: the buyer can
 activate the subscription for their own Dayova account or send the Redemption
-Link to the intended learner. Both actions use the same 60-minute link. Never
-persist it, expose it to analytics, or send it to an unintended recipient.
+Link to the intended learner. The learner receives a dedicated activation page
+that removes the ownership question and offers only the forward action into the
+app plus a store-download fallback. Both actions use the same 60-minute link.
+Never persist it, expose it to analytics, or send it to an unintended recipient.
+The analytics page-view helper removes redemption and checkout-ownership query
+parameters before reporting either the page path or page location.
 
 Once a shared learner login exists on the website, checkout can use an
 identified Web Purchase Link generated from the server-authenticated Dayova user

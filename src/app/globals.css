@@ -3372,6 +3372,51 @@
   text-align: center;
 }
 
+.checkout-activation-panel {
+  width: min(100%, 520px);
+  display: grid;
+  justify-items: stretch;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  padding: clamp(var(--space-6), 4vw, var(--space-8));
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-2xl);
+  background: var(--dayova-elevated);
+  box-shadow: var(--dayova-shadow);
+  text-align: center;
+}
+
+.checkout-activation-panel .button-primary,
+.checkout-activation-panel .button-secondary {
+  width: 100%;
+  min-height: 52px;
+}
+
+.checkout-activation-panel__description,
+.checkout-activation-panel__label {
+  margin: 0;
+}
+
+.checkout-activation-panel__description {
+  color: var(--dayova-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.checkout-activation-panel__divider {
+  width: 100%;
+  height: 1px;
+  margin-block: var(--space-2);
+  background: var(--dayova-line);
+}
+
+.checkout-activation-panel__label {
+  color: var(--dayova-ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 @media (max-width: 639px) {
   .checkout-result-page--success {
     padding-block: var(--space-12);
@@ -3379,6 +3424,11 @@
 
   .checkout-redemption-panel {
     gap: var(--space-5);
+    padding: var(--space-5);
+    border-radius: var(--dayova-radius-xl);
+  }
+
+  .checkout-activation-panel {
     padding: var(--space-5);
     border-radius: var(--dayova-radius-xl);
   }

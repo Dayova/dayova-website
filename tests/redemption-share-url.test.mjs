@@ -19,13 +19,16 @@ const { getShareableRedemptionUrl } = await import(moduleUrl);
 const redeemUrl =
   "rc-27a39b9faa://redeem_web_purchase?redemption_token=test-token";
 
-test("shares the HTTPS success page so messaging apps create a tappable link", () => {
+test("shares a dedicated HTTPS recipient page so messaging apps create a tappable link", () => {
   const currentPageUrl =
     "https://staging.dayova.com/kasse/erfolgreich?redeem_url=rc-27a39b9faa%3A%2F%2Fredeem_web_purchase%3Fredemption_token%3Dtest-token";
 
   const shareUrl = getShareableRedemptionUrl({ currentPageUrl, redeemUrl });
 
-  assert.equal(shareUrl, currentPageUrl);
+  assert.equal(
+    shareUrl,
+    "https://staging.dayova.com/abo-aktivieren?redeem_url=rc-27a39b9faa%3A%2F%2Fredeem_web_purchase%3Fredemption_token%3Dtest-token",
+  );
   assert.match(shareUrl, /^https:\/\//);
 });
 
@@ -55,7 +58,7 @@ test("allows localhost HTTP for browser-level development checks", () => {
 
   assert.equal(
     getShareableRedemptionUrl({ currentPageUrl, redeemUrl }),
-    currentPageUrl,
+    "http://localhost:3010/abo-aktivieren?redeem_url=rc-27a39b9faa%3A%2F%2Fredeem_web_purchase%3Fredemption_token%3Dtest-token",
   );
 });
 
@@ -65,6 +68,6 @@ test("removes unrelated checkout identifiers from the shared page URL", () => {
 
   assert.equal(
     getShareableRedemptionUrl({ currentPageUrl, redeemUrl }),
-    "https://staging.dayova.com/kasse/erfolgreich?redeem_url=rc-27a39b9faa%3A%2F%2Fredeem_web_purchase%3Fredemption_token%3Dtest-token",
+    "https://staging.dayova.com/abo-aktivieren?redeem_url=rc-27a39b9faa%3A%2F%2Fredeem_web_purchase%3Fredemption_token%3Dtest-token",
   );
 });
