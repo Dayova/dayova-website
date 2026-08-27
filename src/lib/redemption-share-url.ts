@@ -31,3 +31,10 @@ export function getShareableRedemptionUrl({
 
   return pageUrl.toString();
 }
+
+export function getRedemptionShareData(shareUrl: string): ShareData {
+  return {
+    title: "Dein Dayova-Abo",
+    url: shareUrl,
+  };
+}

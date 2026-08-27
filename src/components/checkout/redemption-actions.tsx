@@ -7,7 +7,10 @@ import {
 import { useState } from "react";
 
 import { DayovaIcon } from "@/components/ui/huge-icon";
-import { getShareableRedemptionUrl } from "@/lib/redemption-share-url";
+import {
+  getRedemptionShareData,
+  getShareableRedemptionUrl,
+} from "@/lib/redemption-share-url";
 
 type ShareStatus = "idle" | "shared" | "copied" | "error";
 
@@ -38,11 +41,7 @@ export function RedemptionActions({ redeemUrl }: RedemptionActionsProps) {
       return;
     }
 
-    const shareData: ShareData = {
-      title: "Dein Dayova-Abo",
-      text: "Öffne diesen Link auf deinem Gerät, um das Dayova-Abo mit deinem Konto zu verbinden.",
-      url: shareUrl,
-    };
+    const shareData = getRedemptionShareData(shareUrl);
 
     if (
       typeof navigator.share === "function" &&
