@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 
 import { BlueCtaSection } from "@/components/sections/blue-cta-section";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
-import { StoreDownloadLink } from "@/components/store-download-link";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Dayova herunterladen",
+  title: "Dayova mit TestFlight testen",
   description:
-    "Lade Dayova in drei einfachen Schritten auf dein Smartphone und starte deinen persönlichen Lernplan.",
+    "Installiere die aktuelle Dayova-Testversion über TestFlight auf deinem iPhone oder iPad.",
   alternates: {
     canonical: "/downloads",
   },
@@ -26,21 +26,23 @@ export default function DownloadsPage() {
       >
         <div className="dayova-container download-page-hero__inner">
           <span className="home-classic-section-eyebrow">
-            Dein Download
+            Dayova testen
           </span>
           <h1 id="download-page-title" className="dayova-hero-claim">
-            Dayova herunterladen und direkt loslegen.
+            Dayova über TestFlight installieren.
           </h1>
           <p>
-            Ein Klick bringt dich automatisch in den passenden Store für dein
-            Gerät. Danach ist dein persönlicher Lernbegleiter nur noch wenige
-            Schritte entfernt.
+            Über unsere öffentliche TestFlight-Einladung installierst du die
+            aktuelle Testversion direkt auf deinem iPhone oder iPad.
           </p>
-          <StoreDownloadLink className="download-page__store-button">
-            App herunterladen
-          </StoreDownloadLink>
+          <a
+            className="button-primary download-page__store-button"
+            href={siteConfig.links.testFlight}
+          >
+            TestFlight-Einladung öffnen
+          </a>
           <span className="download-page-hero__hint">
-            Kostenlos herunterladen · Für iOS und Android
+            Kostenlos · Für iPhone und iPad
           </span>
         </div>
       </section>
@@ -53,14 +55,13 @@ export default function DownloadsPage() {
           <div className="home-classic-process__panel">
             <div className="home-classic-process__intro">
               <span className="home-classic-section-eyebrow">
-                So funktioniert der Download
+                So installierst du Dayova
               </span>
               <h2 id="download-process-title" className="dayova-section-title">
-                In 3 Schritten zu Dayova
+                In 3 Schritten zur Testversion
               </h2>
               <p>
-                Vom QR-Code bis zur geöffneten App: So kommt Dayova schnell und
-                sicher auf dein Smartphone.
+                Du brauchst nur dein Apple-Gerät und wenige Minuten Zeit.
               </p>
             </div>
 
@@ -71,12 +72,14 @@ export default function DownloadsPage() {
 
       <BlueCtaSection
         id="download-finish"
-        eyebrow="Bereit für deinen Lernplan?"
-        title="Jetzt Dayova herunterladen"
-        description="Starte mit einem klaren Plan, verständlichen nächsten Schritten und mehr Orientierung beim Lernen."
+        eyebrow="Bereit zum Testen?"
+        title="Öffne die Einladung auf deinem Apple-Gerät"
+        description="Nach der Installation kannst du Dayova direkt öffnen und dich mit deinem Konto anmelden."
         sectionClassName="download-page-finish"
       >
-        <StoreDownloadLink variant="secondary">App herunterladen</StoreDownloadLink>
+        <a className="button-secondary" href={siteConfig.links.testFlight}>
+          Dayova in TestFlight öffnen
+        </a>
       </BlueCtaSection>
     </>
   );
