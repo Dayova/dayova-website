@@ -9,7 +9,7 @@ import { footerNavigation } from "@/content/navigation";
 export function Footer() {
   return (
     <footer className="bg-dark-panel text-white">
-      <div className="dayova-container py-12 lg:py-16">
+      <div className="dayova-container site-footer__container py-12 lg:py-16">
         <div className="section-inner border-b border-white/12 pb-8 lg:grid-cols-[1.35fr_0.65fr]">
           <div>
             <Link href="/" aria-label="Dayova Startseite">
@@ -38,7 +38,7 @@ export function Footer() {
                   {group.links.map((link) => (
                     <li key={link.href}>
                       <Link
-                        className="text-sm text-white/65 transition hover:text-white"
+                        className="inline-flex min-h-11 items-center py-2 text-sm text-white/65 transition hover:text-white"
                         href={link.href}
                       >
                         {link.label}

@@ -2,6 +2,137 @@ import type { BlogArticle } from "./types";
 
 export const blogArticlesLate2026: readonly BlogArticle[] = [
   {
+    slug: "wenn-ki-unterricht-vorbereitet-aber-nicht-entscheidet",
+    title: "Wenn KI Unterricht vorbereitet, aber nicht entscheidet",
+    excerpt:
+      "Wie künstliche Intelligenz Lehrkräfte bei Analyse und Planung entlasten kann, während pädagogische Entscheidungen nachvollziehbar und menschlich bleiben.",
+    category: "Lernplanung",
+    readingTime: "9 Min.",
+    publishedAt: "24. August 2026",
+    publishedAtISO: "2026-08-24T10:00:00+02:00",
+    intro:
+      "Künstliche Intelligenz kann in wenigen Augenblicken Aufgaben entwerfen, Antworten ordnen und Unterrichtsabläufe vorschlagen. Das klingt nach Entlastung, wirft aber eine entscheidende Frage auf: Welche Aufgaben darf ein System vorbereiten und welche Entscheidungen müssen bei der Lehrkraft bleiben? Gute Unterstützung entsteht nicht durch einen digitalen Autopiloten. Sie entsteht, wenn Technik Informationen sinnvoll verbindet, Vorschläge verständlich macht und der Lehrkraft mehr Zeit für ihre eigentliche pädagogische Arbeit gibt.",
+    sections: [
+      {
+        title: "Entlastung beginnt vor der Entscheidung",
+        paragraphs: [
+          "Im Schulalltag entsteht viel Arbeit, bevor eine Unterrichtsstunde überhaupt geplant werden kann. Ergebnisse müssen gesichtet, wiederkehrende Fehler erkannt, Materialien ausgewählt und unterschiedliche Lernstände berücksichtigt werden. Genau an dieser vorbereitenden Arbeit kann künstliche Intelligenz ansetzen: Sie kann Informationen bündeln, Muster sichtbar machen und einen ersten Vorschlag formulieren.",
+          "Die Entscheidung über Lernziel, Methode und Anspruch folgt jedoch nicht automatisch aus den Daten. Eine Lehrkraft kennt die Dynamik der Klasse, den bisherigen Unterricht und die Situation einzelner Schüler. KI kann den Ausgangspunkt verbessern, aber nicht den gesamten pädagogischen Kontext besitzen.",
+        ],
+      },
+      {
+        title: "Ein Vorschlag braucht eine nachvollziehbare Begründung",
+        paragraphs: [
+          "Eine Empfehlung hilft wenig, wenn nur ihr Ergebnis sichtbar ist. Schlägt ein System eine Wiederholung, eine neue Lerngruppe oder eine schwierigere Aufgabe vor, sollte die Lehrkraft erkennen können, worauf diese Empfehlung beruht. Erst dann lässt sie sich fachlich prüfen und sinnvoll anpassen.",
+          "Nachvollziehbarkeit bedeutet dabei keine technische Detailansicht. Entscheidend sind pädagogisch verständliche Gründe: Mehrere Schüler verwechseln denselben Begriff, eine Grundlage ist auch nach Wiederholung unsicher oder ein Inhalt gelingt bereits in neuen Aufgabenformaten. Solche Hinweise eröffnen eine Entscheidung, statt sie zu verstecken.",
+        ],
+        bullets: [
+          "Welches Lernziel steht hinter dem Vorschlag?",
+          "Welche Beobachtungen aus den Lernaktivitäten sind dafür relevant?",
+          "Für welche Schüler gilt die Empfehlung und wo bestehen Ausnahmen?",
+          "Woran lässt sich nach der Stunde erkennen, ob die Maßnahme geholfen hat?",
+        ],
+      },
+      {
+        title: "Gute KI zeigt Unsicherheit, statt Sicherheit vorzutäuschen",
+        paragraphs: [
+          "Lerndaten sind nie vollständig. Eine falsche Antwort kann auf fehlendes Verständnis, Zeitdruck, eine missverständliche Formulierung oder einen Flüchtigkeitsfehler zurückgehen. Aus einem einzelnen Ergebnis sollte deshalb kein festes Urteil über einen Schüler entstehen.",
+          "Ein verantwortungsvolles System unterscheidet zwischen einem klaren Muster und einer vorsichtigen Vermutung. Es zeigt, wenn nur wenige Beobachtungen vorliegen, und schlägt eine kurze Überprüfung vor, bevor weitreichende Maßnahmen folgen. Dadurch bleibt der Lernstand beweglich und Schüler werden nicht durch frühe Einordnungen auf eine vermeintliche Leistungsstufe festgelegt.",
+        ],
+      },
+      {
+        title: "Die Lehrkraft bleibt Autorin des Unterrichts",
+        paragraphs: [
+          "Ein vorbereiteter Stundenentwurf kann Zeit sparen. Er wird aber erst durch Auswahl, Anpassung und Erfahrung zu Unterricht. Vielleicht braucht die Klasse an diesem Morgen einen ruhigeren Einstieg, ein Beispiel aus dem letzten Gespräch oder mehr Zeit für eine Frage, die im Plan nicht vorgesehen war. Solche Entscheidungen entstehen in der Beziehung zu den Lernenden.",
+          "Deshalb sollte KI Varianten anbieten, statt einen einzigen Ablauf als richtig darzustellen. Die Lehrkraft kann Schwerpunkte verschieben, Aufgaben austauschen und Empfehlungen verwerfen. Je leichter ein Vorschlag bearbeitet werden kann, desto eher bleibt die Technik ein Werkzeug und wird nicht zur Vorgabe.",
+        ],
+      },
+      {
+        title: "Automatisieren, wo Wiederholung entsteht",
+        paragraphs: [
+          "Besonders sinnvoll ist Unterstützung bei Aufgaben, die häufig wiederkehren: ähnliche Ergebnisse zusammenfassen, passende Übungsvarianten erstellen, einen Zeitrahmen vorschlagen oder eine kurze Lernkontrolle aus dem aktuellen Ziel ableiten. Hier kann Automatisierung Freiraum schaffen, ohne die pädagogische Verantwortung zu verschieben.",
+          "Nicht jede mögliche Automatisierung ist jedoch eine gute. Bewertungen mit Folgen, sensible Gespräche oder Entscheidungen über individuelle Förderung brauchen eine menschliche Prüfung. Je stärker eine Entscheidung den Lernweg oder das Selbstbild eines Schülers beeinflusst, desto wichtiger sind Kontext, Begründung und persönliche Verantwortung.",
+        ],
+      },
+      {
+        title: "Wie Dayova Assistenz versteht",
+        paragraphs: [
+          "Dayova will Lernaktivitäten, Termine und Lernziele so verbinden, dass daraus ein verständlicher nächster Schritt entsteht. Lehrkräfte können sehen, wo eine Klasse sicher arbeitet, welche Fehlvorstellungen häufiger auftreten und welche Unterrichtsmaßnahme dazu passen könnte. Ein Vorschlag soll immer zeigen, warum er gemacht wird und wie sein Erfolg überprüft werden kann.",
+          "Für Schüler bedeutet das gezieltere Aufgaben statt einer starren Abfolge. Lehrkräfte beginnen ihre Planung nicht auf einer leeren Seite und behalten trotzdem die Kontrolle. Schulen erhalten einen gemeinsamen Rahmen, in dem Technik entlastet, ohne pädagogische Entscheidungen unsichtbar zu automatisieren.",
+          "Der Maßstab für gute KI im Unterricht ist damit nicht, wie viel sie allein erledigt. Entscheidend ist, ob sie Menschen hilft, schneller zu einer besseren, nachvollziehbaren Entscheidung zu kommen.",
+        ],
+      },
+    ],
+    takeaway:
+      "KI kann Unterricht vorbereiten, Muster sichtbar machen und passende nächste Schritte vorschlagen. Pädagogisch wertvoll wird sie dort, wo ihre Empfehlungen nachvollziehbar bleiben und Lehrkräfte bewusst über Ziele, Maßnahmen und Ausnahmen entscheiden.",
+  },
+  {
+    slug: "wenn-der-lernstand-den-unterricht-mitplant",
+    title: "Wenn der Lernstand den Unterricht mitplant",
+    excerpt:
+      "Wie aus den Stärken und Unsicherheiten einer Klasse konkrete nächste Schritte für Unterricht, Hausaufgaben und individuelle Förderung entstehen.",
+    category: "Lernplanung",
+    readingTime: "10 Min.",
+    publishedAt: "17. August 2026",
+    publishedAtISO: "2026-08-17T10:00:00+02:00",
+    intro:
+      "In einer Klasse arbeiten alle am selben Thema und stehen trotzdem an unterschiedlichen Punkten. Einige Schüler haben eine Grundlage sicher verstanden, andere wenden sie nur in bekannten Aufgaben an und wieder andere scheitern noch an einer früheren Vorstellung. Für Lehrkräfte besteht die eigentliche Herausforderung deshalb nicht darin, möglichst viele Daten zu sammeln. Sie müssen rechtzeitig erkennen, welche nächste Handlung der Klasse und jedem einzelnen Schüler wirklich weiterhilft.",
+    sections: [
+      {
+        title: "Eine Klasse hat nie nur einen Lernstand",
+        paragraphs: [
+          "Noten und Klassendurchschnitte verdichten viele Unterschiede zu einer einzigen Zahl. Das schafft einen schnellen Überblick, erklärt aber selten, warum eine Aufgabe gelungen oder misslungen ist. Zwei Schüler mit demselben Ergebnis können völlig verschiedene Unterstützung benötigen: Einer hat einen Fachbegriff verwechselt, der andere versteht den Zusammenhang, verliert aber den Überblick über mehrere Rechenschritte.",
+          "Auch richtige Antworten bedeuten nicht immer dasselbe. Manche entstehen sicher und ohne Hilfe, andere durch Raten, einen Hinweis oder das Wiedererkennen eines vertrauten Musters. Unterricht lässt sich genauer planen, wenn diese Unterschiede sichtbar werden, ohne dass eine Lehrkraft jede einzelne Antwort von Hand auswerten muss.",
+        ],
+      },
+      {
+        title: "Aus Lernaktivitäten werden verständliche Signale",
+        paragraphs: [
+          "Wenn Schüler regelmäßig mit Dayova lernen, entsteht aus ihren Antworten ein fortlaufendes Bild. Dabei zählt nicht nur richtig oder falsch. Benötigte Hilfen, wiederkehrende Fehler, die Sicherheit bei späteren Wiederholungen und der Transfer auf eine neue Aufgabe zeigen, wie belastbar ein Verständnis bereits ist.",
+          "Diese Informationen sollen kein zusätzliches Datenarchiv erzeugen. Sie müssen so zusammengeführt werden, dass Lehrkräfte schnell erkennen, welche Grundlagen sitzen, welche Fehlvorstellung häufiger vorkommt und wo eine kurze Erklärung genügt. Der Lernstand bleibt dabei beweglich: Jeder neue Versuch kann die Einordnung verändern.",
+        ],
+      },
+      {
+        title: "Eine Analyse ist erst nützlich, wenn sie eine Handlung auslöst",
+        paragraphs: [
+          "Ein Diagramm kann auffällig sein und trotzdem offenlassen, was am nächsten Morgen geschehen soll. Wertvoll wird eine Wissensanalyse erst, wenn sie aus Beobachtungen eine pädagogisch nachvollziehbare Empfehlung ableitet. Die Lehrkraft behält die Entscheidung, erhält aber einen vorbereiteten Ausgangspunkt für die Planung.",
+          "Eine gute Empfehlung beantwortet deshalb konkrete Fragen:",
+        ],
+        bullets: [
+          "Welches Lernziel sollte in der nächsten Stunde Priorität haben?",
+          "Welche Fehlvorstellung sollte gemeinsam geklärt werden?",
+          "Wer braucht eine zusätzliche Grundlage, Festigung oder anspruchsvollere Anwendung?",
+          "Welche Aufgabe eignet sich für Einstieg, Übung und Abschluss?",
+          "Welche Hausaufgabe oder kurze Lernkontrolle prüft den Fortschritt sinnvoll?",
+        ],
+      },
+      {
+        title: "Individuell bedeutet nicht dreißig verschiedene Unterrichtsstunden",
+        paragraphs: [
+          "Gezielte Förderung muss nicht bedeuten, für jeden Schüler eine vollständig eigene Stunde zu entwerfen. Häufig reicht eine gemeinsame Struktur mit wenigen passenden Abzweigungen. Nach einem kurzen Einstieg arbeitet eine Gruppe an einer fehlenden Grundlage, eine zweite festigt das aktuelle Verfahren und eine dritte überträgt es auf eine anspruchsvollere Situation.",
+          "Eine datenbasierte Handlungsempfehlung kann diese Gruppen, passende Aufgaben und einen realistischen Zeitrahmen vorschlagen. Dadurch beginnt die Lehrkraft nicht bei einer leeren Seite. Sie passt einen vorbereiteten Ablauf an ihre Klasse, ihren Unterrichtsstil und die Situation des Tages an.",
+        ],
+      },
+      {
+        title: "Unterricht, Hausaufgaben und Tests gehören in einen Kreislauf",
+        paragraphs: [
+          "Gute Planung endet nicht mit der fertigen Unterrichtsstunde. Eine kurze Abschlussfrage kann zeigen, ob die zentrale Vorstellung verstanden wurde. Die anschließende Hausaufgabe festigt genau diesen Schritt, und ein kleiner Wissenstest prüft mit Abstand, ob das Wissen noch verfügbar ist. Die Ergebnisse fließen wieder in den Lernstand ein.",
+          "So entsteht ein Kreislauf statt einer Folge voneinander getrennter Aufgaben: Lernstand erkennen, nächste Handlung planen, unterrichten, den Fortschritt prüfen und die Planung anpassen. Lehrkräfte sehen nicht nur, was erledigt wurde, sondern ob die gewählte Maßnahme tatsächlich geholfen hat.",
+        ],
+      },
+      {
+        title: "Eine gemeinsame Lernwelt reduziert Organisation",
+        paragraphs: [
+          "Schüler verlieren viel Energie, wenn Termine, Materialien, Rückmeldungen und Lernstände über verschiedene Systeme verteilt sind. Lehrkräfte müssen Informationen mehrfach eintragen und Schulen erhalten nur schwer ein gemeinsames Bild. Die Organisation wird dann selbst zu einer Aufgabe, bevor Lernen überhaupt beginnen kann.",
+          "Dayova will diese Ebenen in einer einfachen Lernwelt verbinden. Schüler sehen, was als Nächstes ansteht und wie sicher sie in einem Fach bereits sind. Lehrkräfte planen Unterricht, Hausaufgaben und Lernkontrollen auf Grundlage derselben Lernziele. Schulen schaffen einen verlässlichen Rahmen, ohne pädagogische Entscheidungen zu zentralisieren.",
+          "Der größte Vorteil liegt damit nicht in einem weiteren Verwaltungssystem. Er entsteht aus der Verbindung: Was ein Schüler beim Lernen zeigt, kann die nächste Unterrichtsentscheidung verbessern. Was im Unterricht geschieht, macht wiederum den persönlichen Lernweg genauer.",
+        ],
+      },
+    ],
+    takeaway:
+      "Individuelle Wissensanalyse ersetzt keine pädagogische Entscheidung. Sie macht sichtbar, wo eine Klasse steht, und übersetzt verstreute Lerndaten in einen klaren nächsten Schritt für Schüler und Lehrkräfte.",
+  },
+  {
     slug: "die-richtige-schwierigkeit-beim-lernen",
     title: "Die richtige Schwierigkeit beim Lernen",
     excerpt:

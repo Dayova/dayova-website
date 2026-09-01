@@ -4,6 +4,7 @@ import {
   Calendar03Icon,
   CalendarAdd02Icon,
   ComputerPhoneSyncIcon,
+  DownloadCircle02Icon,
   Idea01Icon,
   LaptopVideoIcon,
   PlayCircle02Icon,
@@ -17,7 +18,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
-type ProcessTimelineVariant = "about" | "home" | "schools";
+type ProcessTimelineVariant = "about" | "download" | "home" | "schools";
 
 const processStepsByVariant = {
   about: [
@@ -69,6 +70,29 @@ const processStepsByVariant = {
       description:
         "Aus dem 16-Punkte-Programm wird ein Lernbegleiter für alle: Dayova startet offiziell.",
       icon: Rocket01Icon,
+    },
+  ],
+  download: [
+    {
+      number: "01",
+      title: "TestFlight-Einladung öffnen",
+      description:
+        "Tippe auf den Einladungsbutton. Falls TestFlight noch fehlt, führt Apple dich zuerst zur kostenlosen Installation.",
+      icon: SmartPhone01Icon,
+    },
+    {
+      number: "02",
+      title: "Einladung annehmen",
+      description:
+        "Öffne die Einladung in TestFlight und tippe auf „Akzeptieren“, um am Dayova-Test teilzunehmen.",
+      icon: TaskDone01Icon,
+    },
+    {
+      number: "03",
+      title: "Dayova installieren",
+      description:
+        "Tippe auf „Installieren“ und öffne Dayova anschließend direkt aus TestFlight oder über deinen Home-Bildschirm.",
+      icon: DownloadCircle02Icon,
     },
   ],
   home: [

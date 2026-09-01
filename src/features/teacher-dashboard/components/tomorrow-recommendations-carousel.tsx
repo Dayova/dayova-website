@@ -111,10 +111,10 @@ export function TomorrowRecommendationsCarousel({
                   <strong>{recommendation.primaryTopic}</strong>
                 </p>
                 <div className="teacher-tomorrow-actions">
-                  <PrimaryAction href={`/lehrkraefte/assistent?gruppe=${recommendation.teachingGroupId}`}>
+                  <PrimaryAction href={`/teachers/assistant?group=${recommendation.teachingGroupId}`}>
                     Stunde vorbereiten
                   </PrimaryAction>
-                  <SecondaryAction href={`/lehrkraefte/analysen/${recommendation.teachingGroupId}`}>
+                  <SecondaryAction href={`/teachers/analytics/${recommendation.teachingGroupId}`}>
                     Lernstand
                   </SecondaryAction>
                 </div>

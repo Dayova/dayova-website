@@ -2395,6 +2395,115 @@
   padding: var(--space-8);
 }
 
+.teacher-assistant-plan-context {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.teacher-assistant-rationale,
+.teacher-assistant-preparation,
+.teacher-assistant-feedback {
+  border: 1px solid #e3e9ec;
+  border-radius: var(--dayova-radius-lg);
+  background: #fafcfc;
+}
+
+.teacher-assistant-rationale,
+.teacher-assistant-preparation {
+  padding: var(--space-5);
+}
+
+.teacher-assistant-rationale {
+  display: grid;
+  align-content: start;
+  gap: var(--space-4);
+  border-color: #cdeef8;
+  background: #f1fbfe;
+}
+
+.teacher-assistant-section-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.teacher-assistant-section-heading > div {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.teacher-assistant-section-heading span,
+.teacher-assistant-preparation > div > span {
+  color: #008dbb;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.teacher-assistant-section-heading h3,
+.teacher-assistant-section-heading p,
+.teacher-assistant-rationale > p,
+.teacher-assistant-preparation ul {
+  margin: 0;
+}
+
+.teacher-assistant-section-heading h3 {
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.teacher-assistant-section-heading > p,
+.teacher-assistant-rationale > p,
+.teacher-assistant-preparation li {
+  color: #6f7880;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.teacher-assistant-section-heading > p {
+  max-width: 360px;
+  text-align: right;
+}
+
+.teacher-assistant-signal-list,
+.teacher-assistant-materials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.teacher-assistant-signal-list span,
+.teacher-assistant-materials small {
+  border: 1px solid #d9e8ed;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #fff;
+  color: #526069;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.teacher-assistant-preparation {
+  display: grid;
+  align-content: start;
+  gap: var(--space-5);
+}
+
+.teacher-assistant-preparation > div {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.teacher-assistant-preparation ul {
+  display: grid;
+  gap: var(--space-2);
+  padding-left: var(--space-5);
+}
+
 .teacher-lesson-workflow {
   position: relative;
   display: grid;
@@ -2492,7 +2601,10 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-3);
-  margin-top: var(--space-6);
+}
+
+.teacher-assistant-learning-heading {
+  margin: var(--space-8) 0 var(--space-4);
 }
 
 .teacher-assistant-differentiation article {
@@ -2511,11 +2623,83 @@
   font-weight: 700;
 }
 
+.teacher-assistant-differentiation strong {
+  font-size: 13px;
+  font-weight: 650;
+}
+
 .teacher-assistant-differentiation p {
   margin: 0;
   color: #6f7880;
   font-size: 12px;
   line-height: 1.6;
+}
+
+.teacher-assistant-differentiation small {
+  border-top: 1px solid #e7ecee;
+  padding-top: var(--space-3);
+  color: #7b848a;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.teacher-assistant-feedback {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+}
+
+.teacher-assistant-feedback-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.teacher-assistant-feedback-steps article {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  border-left: 2px solid #bfeefa;
+  padding: var(--space-2) var(--space-4);
+}
+
+.teacher-assistant-feedback-steps span {
+  color: #00a8df;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.teacher-assistant-feedback-steps strong {
+  font-size: 13px;
+}
+
+.teacher-assistant-feedback-steps p,
+.teacher-assistant-next-actions p {
+  margin: 0;
+  color: #6f7880;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.teacher-assistant-next-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border-top: 1px solid #e4e9eb;
+  padding-top: var(--space-5);
+}
+
+.teacher-assistant-next-actions > p {
+  max-width: 520px;
+}
+
+.teacher-assistant-next-actions > div {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: var(--space-2);
 }
 
 .teacher-field {
@@ -2624,6 +2808,11 @@
 .dark .teacher-muted-copy,
 .dark .teacher-assistant-intro p,
 .dark .teacher-assistant-differentiation p,
+.dark .teacher-assistant-section-heading > p,
+.dark .teacher-assistant-rationale > p,
+.dark .teacher-assistant-preparation li,
+.dark .teacher-assistant-feedback-steps p,
+.dark .teacher-assistant-next-actions p,
 .dark .teacher-tomorrow-carousel-header p,
 .dark .teacher-tomorrow-slide-content > p,
 .dark .teacher-notification-item p,
@@ -2760,11 +2949,31 @@
 .dark .teacher-week-grid article,
 .dark .teacher-detail-card,
 .dark .teacher-assistant-differentiation article,
+.dark .teacher-assistant-preparation,
+.dark .teacher-assistant-feedback,
 .dark .teacher-attendance-summary span,
 .dark .teacher-row-action,
 .dark .teacher-flow-hint {
   border-color: #343d42;
   background: #252c30;
+}
+
+.dark .teacher-assistant-rationale {
+  border-color: rgba(80, 211, 255, 0.24);
+  background: #153945;
+}
+
+.dark .teacher-assistant-signal-list span,
+.dark .teacher-assistant-materials small {
+  border-color: #3a464c;
+  background: #20272b;
+  color: #c2cbd0;
+}
+
+.dark .teacher-assistant-differentiation small,
+.dark .teacher-assistant-next-actions {
+  border-color: #394247;
+  color: #9fa9ae;
 }
 
 .dark .teacher-metric[data-tone="brand"],
@@ -2938,6 +3147,18 @@
   .teacher-assistant-plan {
     grid-column: auto;
   }
+
+  .teacher-assistant-plan > .teacher-panel-header {
+    display: grid;
+  }
+
+  .teacher-assistant-plan > .teacher-panel-header .teacher-heading-actions {
+    justify-content: start;
+  }
+
+  .teacher-assistant-plan-context {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 899px) {
@@ -3028,6 +3249,10 @@
   }
 
   .teacher-assistant-differentiation {
+    grid-template-columns: 1fr;
+  }
+
+  .teacher-assistant-feedback-steps {
     grid-template-columns: 1fr;
   }
 }
@@ -3219,6 +3444,30 @@
 
   .teacher-assistant-plan {
     padding: var(--space-4);
+  }
+
+  .teacher-assistant-rationale,
+  .teacher-assistant-preparation,
+  .teacher-assistant-feedback {
+    padding: var(--space-4);
+  }
+
+  .teacher-assistant-section-heading,
+  .teacher-assistant-next-actions {
+    display: grid;
+  }
+
+  .teacher-assistant-section-heading > p {
+    max-width: none;
+    text-align: left;
+  }
+
+  .teacher-assistant-next-actions > div {
+    display: grid;
+  }
+
+  .teacher-assistant-next-actions .teacher-button {
+    width: 100%;
   }
 
   .teacher-lesson-workflow article {

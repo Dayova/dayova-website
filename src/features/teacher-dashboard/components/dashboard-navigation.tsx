@@ -42,7 +42,7 @@ export function DashboardNavigation({ role }: DashboardNavigationProps) {
         {items.map((item) => {
           const activePaths = item.activePaths ?? [item.href];
           const isActive = activePaths.some((path) =>
-            path === "/lehrkraefte"
+            path === "/teachers"
               ? pathname === path
               : pathname === path || pathname.startsWith(`${path}/`),
           );
