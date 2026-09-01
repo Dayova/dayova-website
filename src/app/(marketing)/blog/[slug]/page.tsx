@@ -7,7 +7,14 @@ import { ReadingProgress } from "@/components/blog/reading-progress";
 import { JsonLd } from "@/components/seo/json-ld";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { blogArticles, getBlogArticle } from "@/content/blog";
-import { defaultOgImage, siteName, siteUrl } from "@/lib/seo";
+import {
+  createBreadcrumbStructuredData,
+  defaultOgImage,
+  organizationId,
+  siteName,
+  siteUrl,
+  websiteId,
+} from "@/lib/seo";
 
 type BlogArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -67,36 +74,70 @@ export default async function BlogArticlePage({
   }
 
   const articleUrl = `${siteUrl}/blog/${article.slug}`;
+  const articleBreadcrumb = createBreadcrumbStructuredData(
+    `/blog/${article.slug}`,
+    [
+      { name: "Dayova", path: "/" },
+      { name: "Lernblog", path: "/blog" },
+      { name: article.title, path: `/blog/${article.slug}` },
+    ],
+  );
+  const relatedArticles = [
+    ...blogArticles.filter(
+      (candidate) =>
+        candidate.slug !== article.slug && candidate.category === article.category,
+    ),
+    ...blogArticles.filter(
+      (candidate) =>
+        candidate.slug !== article.slug && candidate.category !== article.category,
+    ),
+  ].slice(0, 3);
   const articleStructuredData = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "@id": `${articleUrl}#article`,
-    headline: article.title,
-    description: article.excerpt,
-    datePublished: article.publishedAtISO,
-    dateModified: article.publishedAtISO,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": articleUrl,
-    },
-    author: {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: siteName,
-      url: siteUrl,
-    },
-    publisher: {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: siteName,
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteUrl}/favicon-light.png`,
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${articleUrl}#article`,
+        headline: article.title,
+        description: article.excerpt,
+        datePublished: article.publishedAtISO,
+        dateModified: article.publishedAtISO,
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${articleUrl}#webpage`,
+        },
+        isPartOf: { "@id": websiteId },
+        author: {
+          "@type": "Organization",
+          "@id": organizationId,
+          name: siteName,
+          url: `${siteUrl}/about`,
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": organizationId,
+          name: siteName,
+          logo: {
+            "@type": "ImageObject",
+            url: `${siteUrl}/favicon-light.png`,
+          },
+        },
+        image: `${siteUrl}${defaultOgImage.url}`,
+        articleSection: article.category,
+        inLanguage: "de-DE",
       },
-    },
-    image: `${siteUrl}${defaultOgImage.url}`,
-    articleSection: article.category,
-    inLanguage: "de-DE",
+      {
+        "@type": "WebPage",
+        "@id": `${articleUrl}#webpage`,
+        url: articleUrl,
+        name: article.title,
+        description: article.excerpt,
+        inLanguage: "de-DE",
+        isPartOf: { "@id": websiteId },
+        breadcrumb: { "@id": articleBreadcrumb["@id"] },
+      },
+      articleBreadcrumb,
+    ],
   };
 
   return (
@@ -152,6 +193,27 @@ export default async function BlogArticlePage({
               <span>Das Wichtigste</span>
               <p>{article.takeaway}</p>
             </aside>
+
+            <section
+              className="blog-article-related"
+              aria-labelledby="related-articles-title"
+            >
+              <div>
+                <span>Weiterlernen</span>
+                <h2 id="related-articles-title">Passende nächste Beiträge</h2>
+              </div>
+              <ul>
+                {relatedArticles.map((relatedArticle) => (
+                  <li key={relatedArticle.slug}>
+                    <Link href={`/blog/${relatedArticle.slug}`}>
+                      <span>{relatedArticle.category}</span>
+                      <strong>{relatedArticle.title}</strong>
+                      <small>{relatedArticle.readingTime} Lesezeit</small>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
 
             <Link className="button-secondary" href="/blog">
               Weitere Beiträge entdecken

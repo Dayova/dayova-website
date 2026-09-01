@@ -6,22 +6,22 @@ export type NavigationItem = {
 
 export const primaryNavigation = [
   {
-    href: "/eltern",
+    href: "/parents",
     label: "Für Eltern",
     description: "Orientierung für Familien",
   },
   {
-    href: "/schulen",
+    href: "/schools",
     label: "Für Schulen",
     description: "Dayova im schulischen Umfeld",
   },
   {
-    href: "/preise",
+    href: "/pricing",
     label: "Preise",
     description: "Abos und Schulangebote",
   },
   {
-    href: "/ueber-uns",
+    href: "/about",
     label: "Über uns",
     description: "Die Geschichte von Dayova",
   },
@@ -36,18 +36,19 @@ export const footerNavigation = [
   {
     title: "Seiten",
     links: [
-      { href: "/eltern", label: "Eltern" },
-      { href: "/schulen", label: "Schulen" },
-      { href: "/preise", label: "Preise" },
-      { href: "/ueber-uns", label: "Über uns" },
+      { href: "/parents", label: "Eltern" },
+      { href: "/schools", label: "Schulen" },
+      { href: "/pricing", label: "Preise" },
+      { href: "/about", label: "Über uns" },
       { href: "/blog", label: "Blog" },
     ],
   },
   {
     title: "Rechtliches",
     links: [
-      { href: "/impressum", label: "Impressum" },
-      { href: "/datenschutz", label: "Datenschutz" },
+      { href: "/legal-notice", label: "Impressum" },
+      { href: "/privacy", label: "Datenschutz" },
+      { href: "/terms", label: "Nutzungsbedingungen" },
     ],
   },
 ] as const;

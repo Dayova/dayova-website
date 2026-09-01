@@ -577,6 +577,10 @@
 }
 
 .footer-cookie-settings {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding-block: 10px;
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -585,6 +589,22 @@
 
 .footer-cookie-settings:hover {
   color: white;
+}
+
+.dayova-container.site-footer__container {
+  width: min(calc(100% - 48px), 1600px);
+}
+
+@media (min-width: 768px) {
+  .dayova-container.site-footer__container {
+    width: min(calc(100% - 96px), 1600px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .dayova-container.site-footer__container {
+    width: min(calc(100% - 128px), 1600px);
+  }
 }
 
 @media (max-width: 639px) {
@@ -1772,6 +1792,66 @@
   line-height: 1.65;
 }
 
+.blog-article-related {
+  display: grid;
+  gap: var(--space-5);
+  padding-top: var(--space-2);
+}
+
+.blog-article-related > div {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.blog-article-related > div > span,
+.blog-article-related li a > span {
+  color: var(--dayova-brand-deep);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.blog-article-related ul {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.blog-article-related li a {
+  min-height: 100%;
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-xl);
+  background: var(--dayova-elevated);
+  color: var(--dayova-ink);
+  text-decoration: none;
+  transition:
+    border-color 180ms var(--dayova-ease),
+    transform 180ms var(--dayova-ease),
+    box-shadow 180ms var(--dayova-ease);
+}
+
+.blog-article-related li a:hover {
+  border-color: color-mix(in srgb, var(--dayova-brand) 44%, var(--dayova-line));
+  box-shadow: var(--dayova-shadow);
+  transform: translateY(-2px);
+}
+
+.blog-article-related li strong {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.blog-article-related li small {
+  color: var(--dayova-muted);
+  font-size: 13px;
+}
+
 .blog-article > .button-secondary {
   width: max-content;
 }
@@ -1857,6 +1937,10 @@
     padding-left: var(--space-4);
   }
 
+  .blog-article-related ul {
+    grid-template-columns: 1fr;
+  }
+
   .blog-reading-progress {
     top: 128px;
     right: 8px;
@@ -1879,6 +1963,87 @@
 .home-classic-hero,
 .home-classic-section {
   color: var(--dayova-ink);
+}
+
+.download-page-hero {
+  padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+  color: var(--dayova-ink);
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      color-mix(in srgb, var(--dayova-brand) 14%, transparent),
+      transparent 42%
+    ),
+    var(--dayova-page);
+}
+
+.download-page-hero__inner {
+  min-height: min(680px, calc(100svh - 150px));
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.download-page-hero .dayova-hero-claim {
+  max-width: 920px;
+  margin: 0;
+  font-size: var(--type-hero);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.download-page-hero p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--dayova-muted);
+  font-size: var(--type-body-lg);
+  line-height: 1.7;
+}
+
+.download-page__store-button {
+  min-width: min(100%, 320px);
+  margin-top: var(--space-2);
+}
+
+.download-page-hero__hint {
+  color: var(--dayova-muted);
+  font-size: var(--type-small);
+}
+
+.download-page-process {
+  background: color-mix(in srgb, var(--dayova-surface) 74%, var(--dayova-page));
+}
+
+.download-page-finish {
+  padding-bottom: clamp(var(--space-16), 9vw, var(--space-24));
+}
+
+.download-page-finish__panel {
+  min-height: 460px;
+  padding: clamp(var(--space-8), 7vw, var(--space-16));
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: var(--space-5);
+  border-radius: var(--dayova-radius-3xl);
+  background: var(--dayova-brand-gradient);
+  color: white;
+  text-align: center;
+  box-shadow: var(--dayova-shadow-strong);
+}
+
+.download-page-finish__panel .dayova-section-title {
+  max-width: 720px;
+  color: white;
+}
+
+.download-page-finish__panel p {
+  max-width: 650px;
+  margin: 0;
+  color: color-mix(in srgb, white 88%, transparent);
 }
 
 .home-classic-hero {
@@ -2011,14 +2176,14 @@
 
 .home-classic-about {
   display: grid;
-  gap: var(--space-6);
+  gap: clamp(var(--space-8), 4vw, var(--space-16));
 }
 
 .home-classic-about__content {
   display: grid;
-  gap: var(--space-6);
+  gap: var(--space-8);
   grid-template-rows: auto auto;
-  align-content: end;
+  align-content: center;
 }
 
 .home-classic-heading-group {
@@ -2216,6 +2381,10 @@
   gap: clamp(var(--space-12), 6vw, var(--space-20));
 }
 
+.home-classic-advantages-section {
+  scroll-margin-top: 128px;
+}
+
 .home-classic-advantages__intro {
   width: min(100%, 980px);
   margin-inline: auto;
@@ -2238,7 +2407,7 @@
 
 .home-classic-advantages__list {
   display: grid;
-  gap: clamp(var(--space-12), 7vw, var(--space-20));
+  gap: clamp(72px, 8vw, 112px);
 }
 
 .home-classic-advantage {
@@ -2252,6 +2421,7 @@
   display: grid;
   justify-items: start;
   gap: 0;
+  padding-inline: clamp(0px, 1.5vw, var(--space-6));
 }
 
 .home-classic-advantage__label {
@@ -2359,9 +2529,11 @@
 .home-classic-advantage__visual {
   min-height: 360px;
   display: grid;
-  place-items: center;
+  align-items: end;
+  justify-items: center;
   overflow: hidden;
-  padding: clamp(var(--space-6), 4vw, var(--space-12));
+  padding: clamp(var(--space-6), 4vw, var(--space-12))
+    clamp(var(--space-6), 4vw, var(--space-12)) 0;
   border: 1px solid var(--dayova-line);
   border-radius: var(--dayova-radius-3xl);
   background: var(--dayova-elevated);
@@ -2376,21 +2548,29 @@
   object-fit: contain;
 }
 
-.home-classic-advantage--app .home-classic-advantage__visual {
-  background: color-mix(
-    in srgb,
-    var(--dayova-brand-soft) 56%,
-    var(--dayova-elevated)
-  );
+.home-classic-advantage--overview .home-classic-advantage__visual {
+  background: var(--dayova-elevated);
 }
 
-.home-classic-advantage--app .home-classic-advantage__visual img {
-  width: min(100%, 560px);
+.home-classic-advantage__visual img.home-classic-advantage__theme-image {
+  grid-area: 1 / 1;
+  align-self: end;
+  width: min(92%, 520px);
+  max-height: 440px;
 }
 
-.home-classic-advantage--planning .home-classic-advantage__visual img,
-.home-classic-advantage--analysis .home-classic-advantage__visual img {
-  width: min(100%, 340px);
+.home-classic-advantage__theme-image--dark {
+  display: none;
+}
+
+.dark .home-classic-advantage__theme-image--light {
+  display: none;
+}
+
+.dark
+  .home-classic-advantage__visual
+  img.home-classic-advantage__theme-image--dark {
+  display: block;
 }
 
 .home-classic-process {
@@ -2641,6 +2821,25 @@
 .home-classic-download__copy p {
   margin: 0;
   max-width: 620px;
+}
+
+.home-classic-download__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.home-classic-download__actions > :first-child {
+  border-color: transparent !important;
+  background: var(--dayova-elevated) !important;
+  color: var(--dayova-ink) !important;
+}
+
+.home-classic-download__actions > :not(:first-child) {
+  border-color: color-mix(in srgb, white 72%, transparent) !important;
+  background: transparent !important;
+  color: white !important;
 }
 
 .home-classic-download__button {
@@ -3269,6 +3468,297 @@
 .checkout-result-page__note {
   margin-top: var(--space-3) !important;
   font-size: 13px !important;
+}
+
+.checkout-page {
+  min-height: calc(100svh - 104px);
+  padding-top: clamp(var(--space-16), 6vw, var(--space-20));
+  padding-bottom: clamp(var(--space-20), 8vw, 128px);
+}
+
+.checkout-page > .dayova-container.checkout-page__inner {
+  width: min(calc(100% - (var(--space-6) * 2)), 780px);
+  display: grid;
+  gap: clamp(var(--space-12), 6vw, var(--space-16));
+}
+
+.checkout-page__intro {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.checkout-page__intro .checkout-result-page__icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-2);
+}
+
+.checkout-page__intro .dayova-hero-claim {
+  margin: var(--space-1) 0 0;
+  font-size: clamp(40px, 5vw, 58px);
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.checkout-page__intro > p {
+  max-width: 610px;
+  margin: 0;
+  color: var(--dayova-muted);
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.65;
+  text-wrap: balance;
+}
+
+.checkout-page__summary {
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+  padding: clamp(var(--space-6), 3vw, var(--space-8));
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-3xl);
+  background: var(--dayova-elevated);
+  box-shadow: var(--dayova-shadow);
+}
+
+.checkout-page__plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 0 0 var(--space-8);
+}
+
+.checkout-page__plan-name {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.checkout-page__plan-name > span {
+  color: var(--dayova-muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.checkout-page__summary h2 {
+  margin: 0;
+  font-size: clamp(25px, 3vw, 32px);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.checkout-page__plan-name > p {
+  margin: 0;
+  color: var(--dayova-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.checkout-page__price {
+  display: grid;
+  justify-items: end;
+  gap: var(--space-3);
+  text-align: right;
+}
+
+.checkout-page__price > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.checkout-page__price strong {
+  font-size: clamp(32px, 4vw, 42px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.checkout-page__price span,
+.checkout-page__legal {
+  color: var(--dayova-muted);
+}
+
+.checkout-page__price p {
+  color: var(--dayova-brand-deep);
+  font-weight: 600;
+}
+
+.checkout-page__price p,
+.checkout-page__legal,
+.checkout-page__error {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.checkout-page__price span,
+.checkout-page__price p {
+  font-size: 13px;
+}
+
+.checkout-page__actions {
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-8) 0 0;
+  border-top: 1px solid var(--dayova-line);
+  background: transparent;
+}
+
+.checkout-page__pay-button {
+  width: 100%;
+  min-height: 54px;
+  border: 0;
+  border-radius: var(--dayova-radius-xl);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.checkout-page__pay-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.checkout-page__terms {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--dayova-ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.checkout-page__terms input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex: 0 0 auto;
+  accent-color: var(--dayova-brand);
+}
+
+.checkout-page__terms a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.checkout-page__legal {
+  max-width: 580px;
+  margin-inline: auto;
+  font-size: 13px;
+  text-align: center;
+}
+
+.checkout-page__legal a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.checkout-page__error {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid color-mix(in srgb, #c33 35%, var(--dayova-line));
+  border-radius: var(--dayova-radius-lg);
+  background: color-mix(in srgb, #c33 8%, var(--dayova-surface));
+  color: var(--dayova-ink);
+}
+
+.checkout-page__summary--error {
+  justify-items: center;
+  gap: var(--space-5);
+  padding: clamp(var(--space-6), 5vw, var(--space-8));
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .checkout-page {
+    min-height: 0;
+    padding-block: var(--space-16) var(--space-20);
+  }
+
+  .checkout-page > .dayova-container.checkout-page__inner {
+    width: min(calc(100% - (var(--space-4) * 2)), 560px);
+    gap: var(--space-12);
+  }
+
+  .checkout-page__intro .checkout-result-page__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .checkout-page__intro .dayova-hero-claim {
+    font-size: clamp(34px, 10vw, 44px);
+  }
+
+  .checkout-page__intro > p {
+    max-width: 36ch;
+    font-size: 15px;
+  }
+
+  .checkout-page__summary {
+    padding: var(--space-6);
+    border-radius: var(--dayova-radius-xl);
+  }
+
+  .checkout-page__plan {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-6);
+    padding: 0 0 var(--space-6);
+  }
+
+  .checkout-page__price {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .checkout-page__price > div {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .checkout-page__price strong {
+    font-size: 36px;
+  }
+
+  .checkout-page__actions {
+    gap: var(--space-5);
+    padding: var(--space-6) 0 0;
+  }
+
+  .checkout-page__terms {
+    align-items: flex-start;
+  }
+
+  .checkout-page__terms input {
+    margin-top: 2px;
+  }
+
+  .checkout-page__legal {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .checkout-page > .dayova-container.checkout-page__inner {
+    width: min(calc(100% - (var(--space-6) * 2)), 720px);
+  }
+
+  .checkout-page__plan {
+    gap: var(--space-6);
+  }
+
+  .checkout-page__price > div {
+    display: grid;
+    justify-items: end;
+    gap: var(--space-1);
+  }
 }
 
 .pricing-plans-layout {
@@ -7919,67 +8409,62 @@ img {
 @media (max-width: 639px) {
   .pricing-plan-card {
     padding: var(--space-6) var(--space-4);
+    align-items: stretch;
+    justify-items: initial;
+    text-align: left;
   }
 
   .pricing-plan-card__badge {
-    justify-self: center;
+    justify-self: start;
   }
 
   .pricing-plan-card__heading,
   .pricing-plan-card__price {
-    justify-items: center;
-    text-align: center;
+    width: 100%;
+    justify-items: start;
+    text-align: left;
   }
 
   .pricing-plan-card__price-row {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .pricing-plan-card__benefits {
-    width: min(100%, 340px);
-    margin-inline: auto;
+    width: 100%;
+    margin-inline: 0;
     text-align: left;
   }
 
   .pricing-plan-card--student {
-    justify-items: end;
-    text-align: right;
+    align-items: stretch;
+    justify-items: initial;
+    text-align: left;
   }
 
   .pricing-plan-card--student .pricing-plan-card__heading,
   .pricing-plan-card--student .pricing-plan-card__price {
     width: 100%;
-    justify-items: end;
-    text-align: right;
+    justify-items: start;
+    text-align: left;
   }
 
   .pricing-plan-card--student .pricing-plan-card__price-row {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 
   .pricing-plan-card--student .pricing-plan-card__benefits {
-    margin-left: auto;
-    margin-right: 0;
-    text-align: right;
+    margin-inline: 0;
+    text-align: left;
   }
 
   .pricing-plan-card--student .pricing-plan-card__benefits li {
-    grid-template-columns: minmax(0, 1fr) 24px;
+    grid-template-columns: 24px minmax(0, 1fr);
   }
 
-  .pricing-plan-card--student .pricing-plan-card__benefits li > span:first-child {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .pricing-plan-card--student .pricing-plan-card__benefits li > span:last-child {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
+  .pricing-plan-card__actions,
   .pricing-plan-card--student .pricing-plan-card__actions {
     width: min(100%, 340px);
-    margin-left: auto;
+    margin-inline: auto;
   }
 }
 
@@ -8161,38 +8646,45 @@ img {
   }
 }
 
-/* Tablet landscape: all three heroes fit the viewport in a compact two-column layout. */
-@media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) {
-  .home-classic-hero:not(.schools-hero) {
-    padding-block: var(--space-4) 0;
+/* Narrow desktop/tablet: center the hero once the full-width desktop
+   composition no longer has enough room. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .home-classic-hero {
+    padding-block: var(--space-6) var(--space-10);
   }
 
-  .home-classic-hero:not(.schools-hero) .home-classic-hero__inner {
-    width: 100%;
-    max-width: none;
-    min-height: min(600px, calc(100svh - 120px));
-    grid-template-columns: minmax(0, 1fr) clamp(330px, 36vw, 430px);
-    align-items: stretch;
-    gap: 0;
-    margin-inline: 0;
-    padding: var(--space-5) 0 0;
+  .home-classic-hero:not(.schools-hero) .home-classic-hero__inner,
+  .schools-hero .schools-hero__inner {
+    width: min(calc(100% - 96px), 980px);
+    max-width: 980px;
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(72px, 8vw, 104px);
+    margin-inline: auto;
+    padding: clamp(40px, 5vw, 56px) 0 0;
   }
 
-  .home-classic-hero:not(.schools-hero) .home-classic-hero__copy {
-    width: 100%;
-    max-width: 720px;
+  .home-classic-hero:not(.schools-hero) .home-classic-hero__copy,
+  .schools-hero .schools-hero__copy {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 760px);
+    max-width: 760px;
     align-content: center;
-    justify-items: start;
-    justify-self: start;
-    gap: var(--space-4);
-    padding: var(--space-6) var(--space-5) var(--space-8)
-      clamp(var(--space-6), 5vw, 64px);
-    text-align: left;
+    justify-items: center;
+    justify-self: center;
+    gap: var(--space-5);
+    padding: 0;
+    text-align: center;
   }
 
-  .home-classic-hero:not(.schools-hero) .dayova-hero-claim {
-    max-width: 660px;
-    font-size: clamp(42px, 4.7vw, 56px);
+  .home-classic-hero:not(.schools-hero) .dayova-hero-claim,
+  .schools-hero .schools-hero__copy .dayova-hero-claim {
+    width: 100%;
+    max-width: 700px;
+    margin-inline: auto;
+    font-size: clamp(42px, 5vw, 56px);
     line-height: 1.01;
     text-wrap: balance;
   }
@@ -8201,71 +8693,54 @@ img {
     font-size: clamp(40px, 4.25vw, 52px);
   }
 
-  .home-classic-hero:not(.schools-hero) .home-classic-hero__description {
-    max-width: 650px;
-    font-size: clamp(15px, 1.55vw, 18px);
-    line-height: 1.55;
+  .home-classic-hero:not(.schools-hero) .home-classic-hero__description,
+  .schools-hero .schools-hero__description {
+    max-width: 680px;
+    margin-inline: auto;
+    font-size: clamp(16px, 1.7vw, 19px);
+    line-height: 1.6;
   }
 
-  .home-classic-hero:not(.schools-hero) .home-classic-actions {
-    justify-content: flex-start;
+  .home-classic-hero .home-classic-actions {
+    justify-content: center;
   }
 
   .home-classic-hero:not(.schools-hero) .home-classic-hero__visual {
+    z-index: 0;
     width: 100%;
-    min-height: 0;
-    height: 100%;
-    align-self: stretch;
+    min-height: clamp(430px, 52vw, 590px);
+    height: auto;
+    align-self: auto;
+    margin-inline: auto;
   }
 
-  .home-classic-hero:not(.schools-hero) .home-classic-hero__visual img {
-    right: 0;
+  .home-classic-hero.home-classic-hero--homepage
+    .home-classic-hero__visual
+    img.home-classic-hero__theme-image {
+    right: auto;
     bottom: 0;
-    left: auto;
-    width: auto;
+    left: 50%;
+    width: min(100%, 820px);
     max-width: none;
-    height: 100%;
-    max-height: 100%;
-    transform: none;
+    height: auto;
+    max-height: none;
+    transform: translateX(-50%);
   }
 
   .schools-hero {
-    padding-block: var(--space-4) var(--space-6);
-  }
-
-  .schools-hero .schools-hero__inner {
-    width: min(calc(100% - 48px), 1190px);
-    max-width: 1190px;
-    min-height: min(600px, calc(100svh - 128px));
-    grid-template-columns: minmax(0, 0.88fr) minmax(440px, 1.12fr);
-    align-items: center;
-    gap: clamp(24px, 3vw, 40px);
-    margin-inline: auto;
-    padding: var(--space-6) 0;
-  }
-
-  .schools-hero .schools-hero__copy {
-    max-width: 600px;
-    gap: var(--space-4);
-    padding-left: clamp(var(--space-6), 2.7vw, var(--space-8));
-  }
-
-  .schools-hero .schools-hero__copy .dayova-hero-claim {
-    font-size: clamp(40px, 4.3vw, 54px);
-    line-height: 1.01;
-  }
-
-  .schools-hero .schools-hero__description {
-    font-size: clamp(15px, 1.5vw, 18px);
-    line-height: 1.55;
+    padding-bottom: var(--space-12);
   }
 
   .schools-hero .schools-hero__visual--macbook {
+    width: 100%;
     min-height: 0;
+    justify-content: center;
+    margin-inline: auto;
   }
 
   .schools-hero .schools-hero-macbook {
-    width: min(100%, 760px);
+    width: min(100%, 900px);
+    margin-inline: auto;
   }
 }
 
@@ -8295,4 +8770,264 @@ img {
     min-height: 560px;
     justify-content: flex-end;
   }
+}
+
+/* Homepage hero artwork: responsive light/dark three-screen composition. */
+.home-classic-hero--homepage
+  .home-classic-hero__visual
+  .home-classic-hero__theme-image {
+  top: auto;
+  right: auto;
+  bottom: 0;
+  left: 50%;
+  width: min(100%, 820px);
+  max-width: none;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: bottom center;
+  transform: translateX(-50%);
+}
+
+.home-classic-hero--homepage
+  .home-classic-hero__visual
+  .home-classic-hero__theme-image--dark {
+  display: none;
+}
+
+.dark
+  .home-classic-hero--homepage
+  .home-classic-hero__visual
+  .home-classic-hero__theme-image--light {
+  display: none;
+}
+
+.dark
+  .home-classic-hero--homepage
+  .home-classic-hero__visual
+  .home-classic-hero__theme-image--dark {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .home-classic-hero.home-classic-hero--homepage
+    .home-classic-hero__visual {
+    min-height: min(90vw, 420px);
+  }
+
+  .home-classic-hero--homepage
+    .home-classic-hero__visual
+    .home-classic-hero__theme-image {
+    width: min(128vw, 620px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: portrait) {
+  .home-classic-hero.home-classic-hero--homepage
+    .home-classic-hero__visual {
+    min-height: clamp(520px, 70vw, 660px);
+  }
+
+  .home-classic-hero.home-classic-hero--homepage
+    .home-classic-hero__visual
+    img.home-classic-hero__theme-image {
+    right: auto;
+    left: 50%;
+    width: min(112vw, 980px);
+    max-width: none;
+    height: auto;
+    max-height: none;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) and (orientation: landscape) {
+  .home-classic-hero.home-classic-hero--homepage
+    .home-classic-hero__visual
+    img.home-classic-hero__theme-image {
+    right: auto;
+    left: 50%;
+    width: min(145%, 650px);
+    max-width: none;
+    height: auto;
+    max-height: none;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-classic-hero--homepage .home-classic-hero__inner {
+    grid-template-columns: minmax(0, 0.9fr) minmax(560px, 1.1fr);
+  }
+
+  .home-classic-hero--homepage
+    .home-classic-hero__visual
+    .home-classic-hero__theme-image {
+    bottom: clamp(64px, 5vw, 88px);
+  }
+}
+
+/* Theme-aware artwork in the homepage About card. */
+.home-classic-about__visual img.home-classic-about__theme-image {
+  width: min(100%, 620px);
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+}
+
+.home-classic-about__visual img.home-classic-about__theme-image--dark {
+  display: none;
+}
+
+.dark .home-classic-about__theme-image--light {
+  display: none;
+}
+
+.dark
+  .home-classic-about__visual
+  img.home-classic-about__theme-image--dark {
+  display: block;
+}
+
+.home-classic-about__visual--learning-path {
+  min-height: 520px;
+  display: grid;
+  place-items: end center;
+  padding: var(--space-8) var(--space-8) 0;
+}
+
+.home-classic-about__visual--learning-path
+  img.home-classic-about__theme-image {
+  grid-area: 1 / 1;
+  align-self: end;
+  width: min(112%, 560px);
+  max-height: 520px;
+  margin: 0;
+  object-position: bottom center;
+}
+
+@media (max-width: 767px) {
+  .home-classic-about__visual--learning-path {
+    min-height: 420px;
+    padding: var(--space-6) var(--space-4) 0;
+  }
+
+  .home-classic-about__visual--learning-path
+    img.home-classic-about__theme-image {
+    width: min(118%, 520px);
+    max-height: 420px;
+  }
+}
+
+/* Theme-aware product screens in the three "Alles an einem Ort" cards. */
+.home-classic-companion .home-classic-feature-card {
+  min-height: 0;
+  gap: var(--space-8);
+  padding: var(--space-8) var(--space-6) 0;
+}
+
+.home-classic-companion .home-classic-feature-card__visual {
+  min-height: 0;
+  aspect-ratio: 10 / 9;
+  align-items: start;
+  padding: 0;
+}
+
+.home-classic-companion
+  .home-classic-feature-card__visual
+  img.home-classic-feature-card__theme-image {
+  grid-area: 1 / 1;
+  align-self: start;
+  width: min(100%, 420px);
+  height: auto;
+  max-height: none;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: top center;
+}
+
+.home-classic-feature-card__theme-image--dark {
+  display: none;
+}
+
+.dark .home-classic-feature-card__theme-image--light {
+  display: none;
+}
+
+.dark .home-classic-feature-card__theme-image--dark {
+  display: block;
+}
+
+/* Light/dark artwork inside the blue download box. */
+.home-classic-download__theme-image--dark {
+  display: none;
+}
+
+.dark .home-classic-download__theme-image--light {
+  display: none;
+}
+
+.dark .home-classic-download__theme-image--dark {
+  display: block;
+}
+
+/* Light/dark artwork in the homepage FAQ card. */
+.home-classic-faq__visual img.home-classic-faq__theme-image--dark {
+  display: none;
+}
+
+.dark .home-classic-faq__theme-image--light {
+  display: none;
+}
+
+.dark .home-classic-faq__visual img.home-classic-faq__theme-image--dark {
+  display: block;
+}
+
+/* Calm, image-free FAQ layout on the homepage. */
+.dayova-container.home-classic-faq--text-only {
+  width: min(calc(100% - (var(--space-6) * 2)), 980px);
+  grid-template-columns: minmax(0, 1fr);
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.home-classic-faq--text-only .home-classic-faq__content {
+  width: 100%;
+  justify-items: center;
+  text-align: center;
+}
+
+.home-classic-faq--text-only .home-classic-faq__list {
+  text-align: left;
+}
+
+@media (max-width: 1199px) {
+  .home-classic-download__actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-classic-download__actions,
+  .home-classic-download__actions > * {
+    width: 100%;
+  }
+}
+
+/* Give a final blue CTA enough breathing room before the footer. */
+.site-blue-cta-section:last-child {
+  padding-bottom: clamp(120px, 12vw, 180px);
+}
+
+@media (max-width: 767px) {
+  .site-blue-cta-section:last-child {
+    padding-bottom: clamp(96px, 24vw, 128px);
+  }
+}
+
+/* Preserve enough room for umlauts and descenders in the parent hero title. */
+.parents-hero .dayova-hero-claim {
+  line-height: 1.18;
 }
