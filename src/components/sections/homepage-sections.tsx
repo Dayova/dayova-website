@@ -53,7 +53,7 @@ const faqItems = [
   {
     question: "Wie kann ich mich anmelden?",
     answer:
-      "Trag dich einfach auf die Warteliste ein und sichere dir deinen Platz zum Start von Dayova.",
+      "Installiere Dayova über unsere öffentliche TestFlight-Einladung und melde dich anschließend direkt in der App an.",
   },
   {
     question: "Was kostet Dayova?",
