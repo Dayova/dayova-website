@@ -11,7 +11,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "30. März 2026",
     publishedAtISO: "2026-03-30T10:00:00+02:00",
     intro:
-      "In einer Note steckt viel Bedeutung: Freude, Enttäuschung, Erwartungen und manchmal die Sorge um die Zukunft. Dabei ist sie zunächst das Ergebnis ausgewählter Aufgaben in einer bestimmten Situation. Sie enthält Informationen, aber nicht die ganze Geschichte des Lernens.",
+      "Eine 3 kann Erleichterung, Enttäuschung oder Streit auslösen. Auf dem Papier ist sie zunächst etwas Nüchterneres: die Zusammenfassung ausgewählter Antworten unter bestimmten Bedingungen. Das ist wichtige Information. Zur ganzen Geschichte des Lernens wird die Zahl dadurch noch nicht.",
     sections: [
       {
         title: "Was eine Note abbildet",
@@ -34,13 +34,13 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       {
         title: "Ein breiteres Bild vom Lernen",
         paragraphs: [
-          "Dayova betrachtet Antworten über mehrere Einheiten hinweg. Dadurch werden Entwicklungen und wiederkehrende Hürden sichtbar, die eine einzelne Arbeit nicht zeigen kann.",
+          "Dayova betrachtet Antworten über mehrere Lernschritte hinweg. Dadurch werden Entwicklungen und wiederkehrende Hürden sichtbar, die eine einzelne Arbeit nicht zeigen kann.",
           "Eltern und Lehrkräfte können Noten weiterhin ernst nehmen, ohne sie mit Fähigkeit oder Wert gleichzusetzen. Das schafft Raum für Analyse und Handlung.",
         ],
       },
     ],
     takeaway:
-      "Noten sind verdichtete Rückmeldungen, keine vollständigen Persönlichkeits- oder Lernprofile. Ihr größter Nutzen entsteht, wenn daraus gute Fragen folgen.",
+      "Nimm die Note ernst, aber nicht persönlich. Schau dahinter: Welche Aufgaben gelangen, welches Muster steckt in den Fehlern und was soll beim nächsten Versuch konkret anders laufen?",
   },
   {
     slug: "kleine-erfolge-halten-dich-im-lernen",
@@ -52,7 +52,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "23. März 2026",
     publishedAtISO: "2026-03-23T10:00:00+01:00",
     intro:
-      "Eine Prüfung in vier Wochen belohnt dich heute noch nicht. Wenn du nur auf das Endergebnis schaust, kann selbst eine produktive Lerneinheit unbedeutend wirken. Kleine Erfolge verkürzen die Strecke zwischen Anstrengung und Rückmeldung.",
+      "Die Prüfung ist noch vier Wochen entfernt. Heute hast du endlich eine Aufgabensorte ohne Hilfe gelöst – und trotzdem fühlt sich das große Ziel kaum näher an. Wer Fortschritt nur an der Endnote misst, übersieht genau solche Veränderungen. Kleine, überprüfbare Erfolge machen sie sichtbar.",
     sections: [
       {
         title: "Warum entfernte Ziele wenig zurückgeben",
@@ -75,13 +75,13 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       {
         title: "Fortschritt ohne Dauerbelohnung",
         paragraphs: [
-          "Dayova macht erledigte Einheiten und Veränderungen im Lernstand sichtbar. Das unterstützt Motivation, ohne jede Aufgabe mit einer äußeren Belohnung zu verbinden.",
+          "Dayova macht erledigte Lernschritte und Veränderungen im Lernstand sichtbar. Das unterstützt Motivation, ohne jede Aufgabe mit einer äußeren Belohnung zu verbinden.",
           "Eltern können Fortschritt konkret spiegeln. Lehrkräfte schaffen durch Zwischenziele frühere Gelegenheiten für Erfolg und Rückmeldung.",
         ],
       },
     ],
     takeaway:
-      "Kleine Erfolge ersetzen das große Ziel nicht. Sie machen den Weg dorthin sichtbar und geben dem nächsten Versuch einen Grund.",
+      "Markiere nicht bloß erledigte Zeit. Halte fest, was heute ohne Hilfe gelang, was verständlicher wurde oder welchen Fehler du nicht mehr machst. So bekommt Fortschritt einen sichtbaren Beleg.",
   },
   {
     slug: "multitasking-kostet-fokus",
@@ -93,7 +93,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "16. März 2026",
     publishedAtISO: "2026-03-16T10:00:00+01:00",
     intro:
-      "Mathematik, Chatnachrichten und ein Video laufen nebeneinander. Es fühlt sich an, als würdest du mehrere Dinge gleichzeitig schaffen. Tatsächlich wechselt deine Aufmerksamkeit – und jeder Wechsel hinterlässt eine kleine Unterbrechung im Denkprozess.",
+      "Die Matheaufgabe ist offen, daneben läuft ein Video und auf dem Handy erscheint eine Nachricht. Nichts davon dauert lange. Teuer ist der Weg zurück: Nach jedem Wechsel musst du Ziel, Regel und letzten Zwischenschritt der Aufgabe erneut finden.",
     sections: [
       {
         title: "Das Gehirn schaltet Aufgaben um",
@@ -108,7 +108,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
           "Nicht jede Unterbrechung lässt sich verhindern. Du kannst aber ihre Zahl senken und Orte für später auftauchende Aufgaben schaffen.",
         ],
         bullets: [
-          "Benachrichtigungen für die Einheit deaktivieren",
+          "Benachrichtigungen für den Lernschritt deaktivieren",
           "nur Material der aktuellen Aufgabe öffnen",
           "Gedanken an andere Aufgaben kurz notieren statt wechseln",
         ],
@@ -116,13 +116,13 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       {
         title: "Eine Aufgabe pro Lernfenster",
         paragraphs: [
-          "Dayova teilt den Lernweg in benannte Einheiten. Damit steht vor dem Start fest, welches Ergebnis in diesem Zeitfenster zählt.",
+          "Dayova teilt den Lernweg in benannte Lernschritte. Damit steht vor dem Start fest, welches Ergebnis in diesem Zeitfenster zählt.",
           "Lehrkräfte können längere Arbeitsphasen mit sichtbaren Zwischenzielen strukturieren. Eltern helfen durch vereinbarte störungsarme Zeiten, ohne den ganzen Nachmittag zu kontrollieren.",
         ],
       },
     ],
     takeaway:
-      "Multitasking spart beim Lernen selten Zeit. Weniger Wechsel lassen mehr Aufmerksamkeit für den Zusammenhang, den du gerade aufbauen willst.",
+      "Schütze nicht den ganzen Nachmittag, sondern den nächsten Lernschritt. Eine Aufgabe, das nötige Material und stumme Benachrichtigungen reichen oft, um weniger Zeit mit dem Zurückfinden zu verlieren.",
   },
   {
     slug: "eltern-begleiten-ohne-druck",
@@ -134,7 +134,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "9. März 2026",
     publishedAtISO: "2026-03-09T10:00:00+01:00",
     intro:
-      "„Hast du schon gelernt?“ ist meist als Hilfe gemeint. Beim Kind kann die Frage trotzdem wie Kontrolle ankommen, besonders wenn es selbst den Überblick verloren hat. Gute Begleitung beginnt deshalb nicht mit mehr Druck, sondern mit Interesse an der konkreten Hürde.",
+      "„Hast du schon gelernt?“ dauert drei Sekunden. Trotzdem kann die Frage einen ganzen Konflikt öffnen – vor allem, wenn das Kind selbst nicht weiß, womit es anfangen soll. Hilfreicher ist eine Frage, die das Hindernis sichtbar macht, ohne die Verantwortung sofort zu übernehmen.",
     sections: [
       {
         title: "Vom Kontrollieren zum Verstehen",
@@ -163,7 +163,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Hilfreiche Begleitung gibt Orientierung, ohne den Lernweg zu übernehmen. Sie reduziert Druck und stärkt schrittweise die Selbststeuerung.",
+      "Fragen Sie nicht zuerst nach Minuten oder Seiten. Fragen Sie: „Woran hängt es gerade?“ Helfen Sie beim Sortieren und vereinbaren Sie, wann Unterstützung wieder gebraucht wird. Die Aufgabe bleibt beim Kind.",
   },
   {
     slug: "fehlende-lust-als-schutz",
@@ -199,12 +199,12 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Motivation darf nach dem Start kommen",
         paragraphs: [
           "Handlung folgt nicht immer auf Motivation. Manchmal entsteht Interesse erst, wenn eine Aufgabe verständlicher wird und der erste Teilerfolg eintritt.",
-          "Dayova senkt die Startfrage, indem die nächste Einheit bereits feststeht. Eltern und Lehrkräfte können dann den Einstieg unterstützen, ohne Gefühle wegzudiskutieren.",
+          "Dayova senkt die Startfrage, indem der nächste Lernschritt bereits feststeht. Eltern und Lehrkräfte können dann den Einstieg unterstützen, ohne Gefühle wegzudiskutieren.",
         ],
       },
     ],
     takeaway:
-      "Fehlende Lust ist nicht immer die Ursache. Sie kann ein Schutz vor Überforderung oder Misserfolg sein – und braucht dann einen kleineren Einstieg statt Vorwürfe.",
+      "Streite nicht darüber, ob du genug Lust haben solltest. Finde heraus, welcher Teil der Aufgabe unangenehm ist. Ein kleiner, klarer Versuch liefert mehr als ein weiterer Vorwurf gegen deine Motivation.",
   },
   {
     slug: "abstrakten-lernstoff-greifbar-machen",
@@ -216,12 +216,12 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "23. Februar 2026",
     publishedAtISO: "2026-02-23T10:00:00+01:00",
     intro:
-      "Wahrscheinlichkeit, Demokratie oder elektrische Spannung bestehen zunächst aus Begriffen und Regeln. Ohne Erfahrung dazu bleiben sie leicht sprachliche Hüllen. Beispiele verbinden das Abstrakte mit Situationen, die sich vorstellen und prüfen lassen.",
+      "„Elektrische Spannung ist die Potenzialdifferenz zwischen zwei Punkten.“ Der Satz kann korrekt sein und trotzdem kein Bild im Kopf auslösen. Ein gutes Beispiel gibt dem Begriff eine Situation. Der entscheidende Lernschritt folgt danach: zurück vom Einzelfall zur allgemeinen Regel.",
     sections: [
       {
         title: "Warum Beispiele beim Verstehen helfen",
         paragraphs: [
-          "Ein Beispiel zeigt, wie ein Prinzip in einer konkreten Situation arbeitet. Es reduziert nicht nur Schwierigkeit, sondern macht Beziehungen zwischen Größen, Handlungen und Folgen sichtbar.",
+          "Ein Beispiel zeigt, wie ein Prinzip in einer konkreten Situation arbeitet. Es reduziert die Schwierigkeit und macht Beziehungen zwischen Größen, Handlungen und Folgen sichtbar.",
           "Ein einzelnes Beispiel kann jedoch zu eng werden. Lernende erinnern dann die Geschichte, aber nicht die Regel, die auch in anderen Fällen gilt.",
         ],
       },
@@ -240,12 +240,12 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Beispiele als Diagnose",
         paragraphs: [
           "Wenn du ein Beispiel selbst erzeugst, wird sichtbar, welche Merkmale du für wesentlich hältst. Dayova kann solche Antworten auswerten und passende Folgefragen anbieten.",
-          "Lehrkräfte und Eltern sollten nicht nur das passende Beispiel liefern, sondern die Verbindung zum Prinzip erfragen.",
+          "Lehrkräfte und Eltern sollten das passende Beispiel liefern und die Verbindung zum Prinzip erfragen.",
         ],
       },
     ],
     takeaway:
-      "Beispiele machen abstrakte Ideen zugänglich. Lernen vertieft sich, wenn du anschließend erkennst, welches Prinzip mehrere Beispiele verbindet.",
+      "Nutze ein Beispiel als Tür, nicht als Endpunkt. Erkläre anschließend, welches Merkmal entscheidend ist und warum dasselbe Prinzip auch in einem zweiten, anders aussehenden Fall gilt.",
   },
   {
     slug: "bilder-und-woerter-gemeinsam-nutzen",
@@ -257,7 +257,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "16. Februar 2026",
     publishedAtISO: "2026-02-16T10:00:00+01:00",
     intro:
-      "Du liest eine Erklärung zur Zellteilung und kannst jeden Satz nachvollziehen. Später fehlen Reihenfolge und Beziehungen. Eine passende Skizze kann helfen, weil sie räumlich zeigt, was Text nacheinander beschreibt.",
+      "Im Text zur Zellteilung steht jeder Schritt sauber unter dem vorherigen. Beim Abrufen verschwimmen Reihenfolge und Beziehungen. Eine Skizze kann zeigen, was der Fließtext nur nacheinander beschreibt – sofern du sie zum Denken nutzt und nicht bloß abschreibst.",
     sections: [
       {
         title: "Zwei Darstellungen, ein Zusammenhang",
@@ -281,12 +281,12 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Nicht jedes Thema braucht dasselbe Bild",
         paragraphs: [
           "Ein Zeitstrahl passt zu Geschichte, ein Ablaufdiagramm zu Prozessen und eine beschriftete Skizze zu Anatomie. Die Form folgt der Beziehung, die verstanden werden soll.",
-          "Dayova kann unterschiedliche Darstellungen in Aufgaben einbinden und über Antworten prüfen, ob nicht nur das Aussehen, sondern der Zusammenhang verstanden wurde.",
+          "Dayova kann unterschiedliche Darstellungen in Aufgaben einbinden und über Antworten prüfen, ob der Zusammenhang statt bloß des Aussehens verstanden wurde.",
         ],
       },
     ],
     takeaway:
-      "Dual Coding verdoppelt nicht automatisch dein Gedächtnis. Es schafft ergänzende Darstellungen, wenn Bild und Wort denselben Zusammenhang sinnvoll tragen.",
+      "Ein Bild hilft nicht, weil es bunt ist. Es hilft, wenn es eine Beziehung sichtbar macht. Zeichne deshalb nur das, was du erklären willst, und beschrifte die Verbindung zwischen Bild und Begriff.",
   },
   {
     slug: "mit-lernplanung-pruefungsdruck-senken",
@@ -298,7 +298,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "9. Februar 2026",
     publishedAtISO: "2026-02-09T10:00:00+01:00",
     intro:
-      "Zwei Wochen vor der Klassenarbeit wirkt der Stoff noch weit weg. Drei Tage vorher wird aus derselben Liste ein Berg. Ein Lernplan verändert nicht den Umfang, aber er verteilt Entscheidungen und Arbeit über mehr als einen angespannten Abend.",
+      "Zwei Wochen vor der Arbeit passt der Stoff auf eine harmlose Liste. Drei Tage vorher fühlt sich dieselbe Liste wie ein Berg an. Der Umfang ist nicht plötzlich gewachsen. Gefehlt haben frühe Entscheidungen: Was zuerst, wie lange und wann bleibt Zeit für einen zweiten Versuch?",
     sections: [
       {
         title: "Zuerst Umfang und Zeit sichtbar machen",
@@ -315,7 +315,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         bullets: [
           "Prüfungstermin und freie Lernfenster eintragen",
           "Grundlagen vor darauf aufbauenden Themen planen",
-          "Puffer für ausgefallene Einheiten lassen",
+          "Puffer für ausgefallene Lernschritte lassen",
         ],
       },
       {
@@ -327,7 +327,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Ein Lernplan nimmt der Prüfung nicht jede Anspannung. Er macht den Umfang bearbeitbar und schafft Zeit, aus Rückmeldungen noch Konsequenzen zu ziehen.",
+      "Ein Plan verspricht keine stressfreie Prüfung. Er sorgt dafür, dass du Unsicherheiten entdeckst, solange noch Zeit für eine weitere Erklärung oder Aufgabe bleibt.",
   },
   {
     slug: "abrufen-statt-passiv-lesen",
@@ -339,13 +339,13 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "2. Februar 2026",
     publishedAtISO: "2026-02-02T10:00:00+01:00",
     intro:
-      "Nach mehrmaligem Lesen wirkt eine Seite vertraut. Deckst du sie ab und sollst den Inhalt wiedergeben, bleiben Lücken. Aktives Abrufen macht diese Lücken sichtbar und trainiert zugleich den Zugriff auf Wissen.",
+      "Beim dritten Lesen nickst du an fast jedem Satz. Dann deckst du die Seite ab und suchst nach dem ersten Begriff. Diese Lücke ist kein Beweis, dass du schlecht gelernt hast. Sie zeigt, dass Wiedererkennen und selbstständiges Abrufen zwei verschiedene Leistungen sind.",
     sections: [
       {
         title: "Warum Fragen Lernen verändern",
         paragraphs: [
           "Eine Frage nimmt die Vorlage weg. Dein Gehirn muss Informationen suchen, ordnen und als Antwort erzeugen. Dieser Vorgang stärkt späteren Abruf stärker als ein weiterer Lesedurchgang.",
-          "Das gilt auch dann, wenn der erste Versuch misslingt. Entscheidend ist, dass danach eine korrekte und verständliche Rückmeldung folgt.",
+          "Das gilt auch dann, wenn der erste Versuch misslingt. Danach sollte eine korrekte und verständliche Rückmeldung folgen.",
         ],
       },
       {
@@ -362,13 +362,13 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       {
         title: "Fragen als Teil des Lernwegs",
         paragraphs: [
-          "Dayova nutzt Antworten nicht nur als Punktestand. Die Auswertung beeinflusst, welche Inhalte wiederkehren und welche nächste Aufgabe geeignet ist.",
+          "Dayova behandelt Antworten nicht als bloßen Punktestand. Die Auswertung beeinflusst, welche Inhalte wiederkehren und welche nächste Aufgabe geeignet ist.",
           "Lehrkräfte können kurze Abrufphasen ohne Benotung einbauen. Eltern helfen, indem sie sich Erklärungen geben lassen, ohne jeden Fehler sofort zu beantworten.",
         ],
       },
     ],
     takeaway:
-      "Lesen bringt Informationen zu dir. Abrufen verlangt, dass du sie selbst hervorholst – und trainiert damit genau den Zugriff, den du später brauchst.",
+      "Lies, um etwas zu verstehen. Schließe danach die Unterlagen und rufe es ab, um zu prüfen, ob du selbst darauf zugreifen kannst. Erst der Vergleich zeigt, wo die nächste Runde ansetzen sollte.",
   },
   {
     slug: "feynman-technik-komplexes-erklaeren",
@@ -410,7 +410,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Wenn du etwas verständlich erklären kannst, hast du Beziehungen aufgebaut. Der Abgleich danach schützt davor, eine flüssige, aber falsche Geschichte zu lernen.",
+      "Erkläre das Thema ohne Unterlagen so, dass eine andere Person folgen könnte. Markiere jede Stelle, an der du ausweichst oder Fachbegriffe stapelst. Vergleiche deine Erklärung danach mit einer verlässlichen Quelle.",
   },
   {
     slug: "pomodoro-25-minuten-passen-nicht-immer",
@@ -422,7 +422,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "19. Januar 2026",
     publishedAtISO: "2026-01-19T10:00:00+01:00",
     intro:
-      "Ein Timer läuft 25 Minuten, danach folgen fünf Minuten Pause. Dieses Pomodoro-Muster hilft vielen beim Einstieg. Es wird problematisch, wenn die Zahl wichtiger wird als die Aufgabe und eine gute Konzentrationsphase mitten im Gedankengang endet.",
+      "Der Timer klingelt nach 25 Minuten – mitten in der Herleitung, die gerade endlich Sinn ergibt. Pomodoro kann den Start erleichtern. Die Zahl ist aber kein Naturgesetz. Ein guter Arbeitsblock endet an einem sinnvollen Punkt der Aufgabe, nicht blind an Minute 25.",
     sections: [
       {
         title: "Was ein Zeitblock leisten kann",
@@ -445,13 +445,13 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       {
         title: "Ergebnis vor Minuten",
         paragraphs: [
-          "Dayova verbindet Zeitfenster mit einer benannten Lernaufgabe. So zählt nicht nur, dass der Timer abgelaufen ist, sondern was innerhalb des Fensters bearbeitet wurde.",
+          "Dayova verbindet Zeitfenster mit einer benannten Lernaufgabe. So zählt, was innerhalb des Fensters bearbeitet wurde, statt nur der abgelaufene Timer.",
           "Eltern und Lehrkräfte sollten Zeitmethoden als Experiment behandeln. Wenn ein Rhythmus nicht passt, wird er angepasst, nicht als Disziplinproblem gewertet.",
         ],
       },
     ],
     takeaway:
-      "25 Minuten können den Einstieg erleichtern, sind aber kein universeller Takt. Gute Zeitblöcke folgen Aufgabe, Aufmerksamkeit und einem sinnvollen Abschluss.",
+      "Nutze 25 Minuten als Testwert, nicht als Vorschrift. Beobachte, wann deine Aufmerksamkeit abfällt und an welchem Punkt du die Aufgabe sauber unterbrechen kannst. Passe den nächsten Block daran an.",
   },
   {
     slug: "was-fruehere-generationen-anders-machten",
@@ -469,7 +469,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Weniger Reize, weniger Möglichkeiten",
         paragraphs: [
           "Ein Buch unterbricht sich nicht mit Nachrichten. Diese Reizarmut erleichtert längere Phasen bei einer Aufgabe. Sie garantiert aber weder wirksame Methoden noch gutes Verständnis.",
-          "Digitale Angebote können Beispiele, Feedback und Barrierefreiheit verbessern. Entscheidend ist, ob das Gerät als Werkzeug für eine benannte Aufgabe oder als offener Strom von Reizen genutzt wird.",
+          "Digitale Angebote können Beispiele, Feedback und Barrierefreiheit verbessern. Der Nutzen hängt davon ab, ob das Gerät als Werkzeug für eine benannte Aufgabe oder als offener Strom von Reizen dient.",
         ],
       },
       {
@@ -478,7 +478,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
           "Aus früheren Lernumgebungen lässt sich die Begrenzung übernehmen, ohne digitale Hilfe abzulehnen. Ein Gerät kann für eine Aufgabe eingerichtet und danach wieder geschlossen werden.",
         ],
         bullets: [
-          "Benachrichtigungen während der Einheit ausschalten",
+          "Benachrichtigungen während des Lernschritts ausschalten",
           "nur benötigte Anwendungen öffnen",
           "handschriftliche und digitale Arbeit nach Zweck kombinieren",
         ],
@@ -487,12 +487,12 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Keine Generation braucht Beschämung",
         paragraphs: [
           "Vergleiche zwischen Generationen übersehen veränderte Anforderungen und Lebenswelten. Jugendliche lernen Mediensteuerung nicht durch Vorwürfe, sondern durch nachvollziehbare Regeln und Übung.",
-          "Dayova nutzt digitale Vorteile für Planung und Rückmeldung, während einzelne Einheiten begrenzt bleiben. So dient Technik dem Lernweg statt umgekehrt.",
+          "Dayova nutzt digitale Vorteile für Planung und Rückmeldung, während einzelne Lernschritte begrenzt bleiben. So dient Technik dem Lernweg statt umgekehrt.",
         ],
       },
     ],
     takeaway:
-      "Früher gab es weniger digitale Unterbrechungen, aber nicht automatisch besseres Lernen. Heute können wir Reizbegrenzung mit nützlicher digitaler Unterstützung verbinden.",
+      "Der Vergleich mit früher löst keine heutige Lernaufgabe. Übernimm, was weiterhin nützt – weniger Unterbrechungen und klare Zeiten – und behalte digitale Werkzeuge dort, wo sie erklären, planen oder Rückmeldung geben.",
   },
   {
     slug: "wenn-selbstvertrauen-wissen-vortaeuscht",
@@ -528,11 +528,11 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
         title: "Rückmeldung ohne Bloßstellung",
         paragraphs: [
           "Lehrkräfte sollten Fehleinschätzungen als Lerninformation behandeln. Beschämung verteidigt das Selbstbild eher, als dass sie Reflexion fördert.",
-          "Dayova verbindet Antworten und Selbsteinschätzung mit kommenden Übungen. So kann metakognitives Wissen wachsen: Du lernst nicht nur den Stoff, sondern auch deinen eigenen Lernstand besser einzuschätzen.",
+          "Dayova verbindet Antworten und Selbsteinschätzung mit kommenden Übungen. So kann metakognitives Wissen wachsen: Du lernst den Stoff und schätzt deinen eigenen Lernstand besser ein.",
         ],
       },
     ],
     takeaway:
-      "Selbstvertrauen und Wissen sind verschiedene Größen. Regelmäßiger Abruf mit Rückmeldung hilft, die eigene Einschätzung genauer an die Leistung anzupassen.",
+      "Frage nicht nur: „Wie sicher fühle ich mich?“ Beantworte zuerst eine Aufgabe ohne Hilfe und vergleiche Sicherheit und Ergebnis. Mit mehreren solchen Checks wird deine Selbsteinschätzung genauer.",
   },
 ];

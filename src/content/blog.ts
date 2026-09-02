@@ -1,8 +1,10 @@
 import { blogArticles2025 } from "./blog/articles-2025";
 import { blogArticlesEarly2026 } from "./blog/articles-2026-early";
 import { blogArticlesLate2026 } from "./blog/articles-2026-late";
+import { blogArticlesSeptember2026 } from "./blog/articles-2026-september";
 import { articleDeepDives } from "./blog/article-deep-dives";
 import { articlePracticeSections } from "./blog/article-practice";
+import { articleSources } from "./blog/sources";
 import type { BlogArticle } from "./blog/types";
 
 export type { BlogArticle } from "./blog/types";
@@ -30,6 +32,7 @@ function calculateReadingTime(article: BlogArticle) {
 }
 
 export const blogArticles: readonly BlogArticle[] = [
+  ...blogArticlesSeptember2026,
   ...blogArticlesLate2026,
   ...blogArticlesEarly2026,
   ...blogArticles2025,
@@ -37,6 +40,7 @@ export const blogArticles: readonly BlogArticle[] = [
   .map((article): BlogArticle => {
     const enrichedArticle: BlogArticle = {
       ...article,
+      sources: articleSources[article.slug] ?? [],
       sections: [
         ...article.sections,
         ...(articleDeepDives[article.slug] ?? []),

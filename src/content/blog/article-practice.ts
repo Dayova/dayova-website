@@ -5,12 +5,71 @@ type ArticleSection = BlogArticle["sections"][number];
 export const articlePracticeSections: Readonly<
   Record<string, readonly ArticleSection[]>
 > = {
+  "die-richtige-schwierigkeit-beim-lernen": [
+    {
+      title: "Der Drei-Versuche-Check",
+      paragraphs: [
+        "Bearbeite drei ähnliche Aufgaben und notiere nach jedem Versuch, ob du ohne Hilfe beginnen konntest, an welcher Stelle du gestockt hast und welcher Hinweis geholfen hätte. Sind alle drei Lösungen sofort klar, erhöhe die Anforderung leicht. Fehlt bei jedem Versuch schon der Einstieg, gehe einen Schritt zurück und kläre die gemeinsame Grundlage.",
+        "Liegt mindestens ein eigener Lösungsansatz vor und wird dein Vorgehen durch die Auswertung genauer, befindest du dich wahrscheinlich in einer produktiven Lernzone. Eine feste Fehlerquote ist weniger wichtig als verwertbare Rückmeldung und zunehmend selbstständige Versuche.",
+      ],
+      bullets: [
+        "Zu leicht: Bedingungen verändern oder Hilfen entfernen.",
+        "Passend: einen ähnlichen Versuch mit etwas Abstand wiederholen.",
+        "Zu schwer: fehlende Grundlage bestimmen und separat üben.",
+        "Danach erneut prüfen, ob der Einstieg nun ohne Hilfe gelingt.",
+      ],
+    },
+  ],
   "vom-lernstand-zum-naechsten-schritt": [
     {
       title: "Was Schüler, Eltern und Lehrkräfte jeweils sehen sollten",
       paragraphs: [
         "Schüler brauchen eine nächste Aufgabe, die weder unter- noch überfordert. Eltern benötigen keine lückenlose Kontrolle, sondern ein verlässliches Signal, dass Termine, Belastung und Fortschritt berücksichtigt werden. Lehrkräfte profitieren von einer Beschreibung konkreter Fehlermuster. Werden diese drei Perspektiven getrennt dargestellt, kann dieselbe Lernstandsanalyse Orientierung geben, ohne Lernende auf eine Punktzahl oder ein Defizit zu reduzieren.",
-        "In Dayova bleibt die Auswertung deshalb mit dem Plan verbunden. Eine erkannte Lücke verändert kommende Einheiten, ein sicherer Inhalt erhält größere Abstände und neue Termine verschieben Prioritäten. Der Lernweg reagiert auf Entwicklung, statt einen einmal erstellten Plan nur abzuarbeiten.",
+        "In Dayova bleibt die Auswertung deshalb mit dem Plan verbunden. Eine erkannte Lücke verändert kommende Lernschritte, ein sicherer Inhalt erhält größere Abstände und neue Termine verschieben Prioritäten. Der Lernweg reagiert auf Entwicklung, statt einen einmal erstellten Plan nur abzuarbeiten.",
+      ],
+    },
+  ],
+  "eine-lern-app-sollte-dir-arbeit-abnehmen": [
+    {
+      title: "Der Werkzeug-Check für deinen Lernalltag",
+      paragraphs: [
+        "Notiere eine Woche lang, an welchen Stellen du Informationen doppelt überträgst, Aufgaben suchst oder dieselbe Entscheidung wiederholt triffst. Markiere außerdem, welche Ansicht dir den nächsten Schritt zeigt. So wird sichtbar, ob ein Werkzeug Orientierung schafft oder lediglich eine weitere Ablage ist.",
+        "Eine hilfreiche App sollte mindestens einen dieser Wege verkürzen: Termine sammeln, Aufgaben priorisieren, Lernzeit passend verteilen oder Rückmeldung in eine Folgeaufgabe übersetzen. Funktionen ohne klaren Beitrag dürfen im Hintergrund bleiben.",
+      ],
+      bullets: [
+        "Welche Information trage ich mehrfach ein?",
+        "Welche Entscheidung kostet mich vor jedem Lernschritt Zeit?",
+        "Wo sehe ich nur Aktivität, aber keinen Lernfortschritt?",
+        "Was müsste eine App verbinden, damit ein Schritt entfällt?",
+      ],
+    },
+  ],
+  "feedback-das-dich-weiterbringt": [
+    {
+      title: "Die Vier-Schritte-Feedbackschleife",
+      paragraphs: [
+        "Wähle eine falsche oder unsichere Antwort und beschreibe zuerst deinen ursprünglichen Gedankengang. Vergleiche ihn anschließend mit dem Ziel der Aufgabe. Benenne genau eine Stelle, die du verändern willst, und prüfe diese Veränderung an einer ähnlichen Aufgabe. So bleibt Feedback klein genug, um sofort angewendet zu werden.",
+      ],
+      bullets: [
+        "Versuch rekonstruieren, ohne ihn nachträglich schöner zu machen.",
+        "Abweichung zwischen Ziel und Denkweg konkret benennen.",
+        "Eine veränderbare Handlung für den nächsten Versuch auswählen.",
+        "Mit einer leicht veränderten Aufgabe erneut selbst antworten.",
+      ],
+    },
+  ],
+  "ein-lernplan-der-in-deinen-alltag-passt": [
+    {
+      title: "Die 15-Minuten-Wochenplanung",
+      paragraphs: [
+        "Trage zuerst Prüfungen, Abgaben und feste Termine ein. Markiere danach drei bis fünf realistische Lernfenster und ordne ihnen jeweils nur einen klaren ersten Schritt zu. Beginne mit Grundlagen, von denen spätere Aufgaben abhängen, und lasse mindestens ein Zeitfenster als Puffer frei.",
+        "Am Ende jedes Lerntages genügen zwei Fragen: Was ist jetzt sicherer als vorher und was muss im Plan angepasst werden? Dadurch bleibt die Woche beweglich, ohne dass jeden Abend alles neu organisiert werden muss.",
+      ],
+      bullets: [
+        "Feste Termine und verfügbare Zeiten sichtbar machen.",
+        "Aufgaben nach Bedeutung statt nach Bequemlichkeit ordnen.",
+        "Jeden Lernschritt mit einem überprüfbaren Ergebnis formulieren.",
+        "Puffer bewusst frei lassen und nicht vorab füllen.",
       ],
     },
   ],
@@ -28,7 +87,7 @@ export const articlePracticeSections: Readonly<
       title: "Warum Rückschritte zum Lernverlauf gehören",
       paragraphs: [
         "Nach einer Pause kann der Abruf schlechter ausfallen als am Vortag. Das bedeutet nicht, dass die vorherige Arbeit wertlos war. Der zeitliche Abstand zeigt vielmehr, welche Verbindung noch nicht stabil ist. Auch der Wechsel zu schwierigeren Aufgaben lässt die Trefferquote zunächst sinken. Fortschritt sollte deshalb über mehrere Messpunkte und vergleichbare Bedingungen betrachtet werden.",
-        "Dayova kann solche Verläufe bündeln: nicht nur erledigte Einheiten, sondern Veränderungen in Antworten, benötigten Hilfen und wiederkehrenden Lücken. So bleibt Entwicklung sichtbar, auch wenn einzelne Tage schwanken.",
+        "Dayova kann erledigte Lernschritte mit Veränderungen in Antworten, benötigten Hilfen und wiederkehrenden Lücken bündeln. So bleibt Entwicklung sichtbar, auch wenn einzelne Tage schwanken.",
       ],
     },
   ],
@@ -45,8 +104,8 @@ export const articlePracticeSections: Readonly<
     {
       title: "Rückmeldung entscheidet über den nächsten Durchgang",
       paragraphs: [
-        "Nach einem Abruf sollte die Lösung nicht nur gelesen, sondern mit dem eigenen Denkweg verglichen werden. Welche Information fehlte? Welche falsche Annahme führte zur Antwort? Wurde die richtige Regel zu spät erkannt? Diese Diagnose bestimmt, ob als Nächstes eine Erklärung, ein einfacheres Beispiel oder eine weitere Anwendung gebraucht wird.",
-        "Ohne diese Entscheidung wird Wiederholen schnell mechanisch. Mit ihr entsteht eine Folge gezielter Versuche, deren Abstand und Schwierigkeit sich am tatsächlichen Stand orientieren.",
+        "Nach einem Abruf solltest du die Lösung mit dem eigenen Denkweg vergleichen. Welche Information fehlte? Welche falsche Annahme führte zur Antwort? Wurde die richtige Regel zu spät erkannt? Diese Diagnose bestimmt, ob als Nächstes eine Erklärung, ein einfacheres Beispiel oder eine weitere Anwendung gebraucht wird.",
+        "Ohne diese Entscheidung wird Wiederholen schnell mechanisch. Mit ihr entsteht eine Folge gezielter Versuche, deren Abstand und Schwierigkeit sich am aktuellen Stand orientieren.",
       ],
     },
   ],
@@ -82,7 +141,7 @@ export const articlePracticeSections: Readonly<
       title: "Gemeinsame Räume brauchen Absprachen",
       paragraphs: [
         "Am Küchentisch oder in einem geteilten Zimmer lassen sich Störungen nicht vollständig entfernen. Dann helfen sichtbare Signale und feste Zeitfenster: Kopfhörer bedeuten zwanzig Minuten Ruhe, Gespräche werden auf die Pause verschoben und benötigtes Material liegt in einer transportablen Tasche bereit.",
-        "Eltern können den Rahmen mitgestalten, ohne einen perfekten Lernort vorauszusetzen. Entscheidend ist eine wiederholbare Vereinbarung, die konzentrierte Phasen wahrscheinlicher macht und anschließend wieder gemeinsame Nutzung erlaubt.",
+        "Eltern können den Rahmen mitgestalten, ohne einen perfekten Lernort vorauszusetzen. Eine wiederholbare Vereinbarung erleichtert konzentrierte Phasen und erlaubt anschließend wieder die gemeinsame Nutzung.",
       ],
     },
   ],
@@ -117,8 +176,8 @@ export const articlePracticeSections: Readonly<
     {
       title: "Eine Gewohnheit braucht sichtbaren Abschluss",
       paragraphs: [
-        "Ein kurzer Abschluss erleichtert die Wiederholung am nächsten Tag. Markiere die bearbeitete Einheit, räume das Material für die nächste Aufgabe zurecht und notiere einen Satz zum Einstieg. Dadurch endet Lernen nicht in einem offenen Zustand, der beim nächsten Mal erneut sortiert werden muss.",
-        "Dayova kann diesen Übergang unterstützen, indem erledigte Schritte und die nächste geplante Einheit nebeneinanderstehen. Der Fortschritt wird sichtbar, während der neue Start bereits vorbereitet ist.",
+        "Ein kurzer Abschluss erleichtert die Wiederholung am nächsten Tag. Markiere den bearbeiteten Lernschritt, räume das Material für die nächste Aufgabe zurecht und notiere einen Satz zum Einstieg. Dadurch endet Lernen nicht in einem offenen Zustand, der beim nächsten Mal erneut sortiert werden muss.",
+        "Dayova kann diesen Übergang unterstützen, indem erledigte Schritte und der nächste geplante Lernschritt nebeneinanderstehen. Der Fortschritt wird sichtbar, während der neue Start bereits vorbereitet ist.",
       ],
     },
   ],
@@ -145,7 +204,7 @@ export const articlePracticeSections: Readonly<
       title: "Noten sinnvoll in Gespräche einordnen",
       paragraphs: [
         "Eine Note darf Freude oder Enttäuschung auslösen. Danach sollte das Gespräch jedoch zu den Informationen zurückkehren, die eine nächste Handlung ermöglichen. Eltern können fragen, was überraschend war und welche Vorbereitung geholfen hat. Lehrkräfte können Anforderungen und Fehlerschwerpunkte benennen.",
-        "So bleibt die Note ein wichtiges Ergebnis, wird aber nicht zur vollständigen Beschreibung von Fähigkeit, Einsatz oder Zukunft. Genau diese Trennung schützt Motivation und ermöglicht zugleich anspruchsvolle Rückmeldung.",
+        "So bleibt die Note ein wichtiges Ergebnis, wird aber nicht zur vollständigen Beschreibung von Fähigkeit, Einsatz oder Zukunft. Diese Trennung schützt Motivation und lässt zugleich anspruchsvolle Rückmeldung zu.",
       ],
     },
   ],
@@ -162,7 +221,7 @@ export const articlePracticeSections: Readonly<
     {
       title: "Musik, Videos und individuelle Unterschiede",
       paragraphs: [
-        "Instrumentale Hintergrundmusik kann bei routinierten Aufgaben für manche Lernende angenehm sein. Sprache konkurriert dagegen besonders bei Lesen, Schreiben und Auswendiglernen mit der Aufgabe. Entscheidend ist nicht das Gefühl allein, sondern der Vergleich von Fehlern, Tempo und Erinnerung nach der Einheit.",
+        "Instrumentale Hintergrundmusik kann bei routinierten Aufgaben für manche Lernende angenehm sein. Sprache konkurriert dagegen besonders bei Lesen, Schreiben und Auswendiglernen mit der Aufgabe. Vergleiche Fehler, Tempo und Erinnerung nach dem Lernschritt, statt dich nur auf dein Gefühl zu verlassen.",
         "Wer Musik nutzen möchte, kann dieselbe Aufgabe einmal mit und einmal ohne Hintergrund bearbeiten. Diese kleine Messung ersetzt pauschale Regeln durch eine Entscheidung, die zum Aufgabentyp und zur Person passt.",
       ],
     },
@@ -216,8 +275,8 @@ export const articlePracticeSections: Readonly<
     {
       title: "Warum schwieriges Abrufen produktiv sein kann",
       paragraphs: [
-        "Eine Antwort, die mühsam aus dem Gedächtnis entsteht, fühlt sich schlechter an als flüssiges Lesen. Gerade dieser Aufwand kann den späteren Zugriff stärken. Voraussetzung ist, dass die Aufgabe grundsätzlich erreichbar bleibt und eine Korrektur folgt.",
-        "Wenn keinerlei Ansatz vorhanden ist, hilft ein kleiner Hinweis besser als sofort die vollständige Lösung. Danach wird der Hinweis entfernt und der Abruf erneut versucht. So bleibt die entscheidende Denkarbeit bei der lernenden Person.",
+        "Eine Antwort, die mühsam aus dem Gedächtnis entsteht, fühlt sich schlechter an als flüssiges Lesen. Gerade dieser Aufwand kann den späteren Zugriff stärken. Voraussetzung ist, dass die Aufgabe erreichbar bleibt und eine Korrektur folgt.",
+        "Wenn keinerlei Ansatz vorhanden ist, hilft ein kleiner Hinweis besser als sofort die vollständige Lösung. Danach wird der Hinweis entfernt und der Abruf erneut versucht. So bleibt die Denkarbeit bei der lernenden Person.",
       ],
     },
   ],
@@ -235,7 +294,7 @@ export const articlePracticeSections: Readonly<
       title: "Pausen sollen Aufmerksamkeit erneuern",
       paragraphs: [
         "Eine Pause voller Kurzvideos oder Nachrichten liefert dem Gehirn viele neue Reize und kann den Rückweg zur Aufgabe erschweren. Erholsamer sind Tätigkeiten mit einem eindeutigen Ende: Wasser holen, lüften, kurz gehen oder den Blick in die Ferne richten.",
-        "Auch die Pause darf zum Aufgabentyp passen. Nach intensiver Problemlösung kann sie länger sein als nach einer kurzen Vokabeleinheit. Entscheidend ist, dass Beginn und Rückkehr bewusst bleiben.",
+        "Auch die Pause darf zum Aufgabentyp passen. Nach intensiver Problemlösung kann sie länger sein als nach einer kurzen Vokabeleinheit. Beginn und Rückkehr sollten bewusst bleiben.",
       ],
     },
   ],
@@ -253,7 +312,7 @@ export const articlePracticeSections: Readonly<
       title: "Selbsteinschätzung lässt sich trainieren",
       paragraphs: [
         "Nach mehreren Runden aus Vorhersage, Antwort und Rückmeldung werden Einschätzungen genauer. Lernende erkennen beispielsweise, dass bekannte Überschriften bei ihnen zu viel Sicherheit erzeugen oder dass Nervosität nicht automatisch eine schlechte Antwort bedeutet.",
-        "Eine bessere Kalibrierung hilft bei der Planung: Zeit fließt nicht nur in Themen, die sich schwierig anfühlen, sondern in Inhalte, deren tatsächlicher Abruf unsicher ist.",
+        "Eine bessere Kalibrierung hilft bei der Planung: Zeit fließt in Inhalte, deren Abruf unsicher ist, statt nur in Themen, die sich schwierig anfühlen.",
       ],
     },
   ],
@@ -271,7 +330,7 @@ export const articlePracticeSections: Readonly<
       title: "Fragen selbst schreiben vertieft die Vorbereitung",
       paragraphs: [
         "Wer eine gute Frage formuliert, muss entscheiden, welche Idee zentral ist, welche falschen Antworten plausibel wären und woran eine vollständige Lösung erkennbar ist. Dieser Prozess verarbeitet den Stoff tiefer als das bloße Markieren wichtiger Sätze.",
-        "Tausche Fragen mit Mitschülern und besprecht anschließend nicht nur die Lösung, sondern auch die Qualität der Frage. So entsteht zusätzlich ein Blick für typische Prüfungsanforderungen.",
+        "Tausche Fragen mit Mitschülern und besprecht anschließend die Lösung sowie die Qualität der Frage. So entsteht zusätzlich ein Blick für typische Prüfungsanforderungen.",
       ],
     },
   ],
@@ -297,7 +356,7 @@ export const articlePracticeSections: Readonly<
     {
       title: "Gezielte Übung braucht eine passende Schwierigkeit",
       paragraphs: [
-        "Zu leichte Aufgaben liefern viele richtige Antworten, verändern aber wenig. Zu schwere Aufgaben erzeugen ohne Hilfen kaum verwertbare Versuche. Die produktive Zone liegt dort, wo ein Lösungsansatz vorhanden ist und Rückmeldung eine konkrete Verbesserung ermöglicht.",
+        "Zu leichte Aufgaben liefern viele richtige Antworten, verändern aber wenig. Zu schwere Aufgaben erzeugen ohne Hilfen kaum verwertbare Versuche. Die produktive Zone liegt dort, wo ein Lösungsansatz vorhanden ist und Rückmeldung zu einer konkreten Verbesserung führt.",
         "Dayova kann Aufgaben anhand bisheriger Antworten auswählen und die Schwierigkeit anpassen. Damit wird nicht einfach mehr geübt, sondern an der Hürde gearbeitet, die den nächsten Fortschritt begrenzt.",
       ],
     },
@@ -313,10 +372,10 @@ export const articlePracticeSections: Readonly<
   ],
   "warum-lernen-erst-spaet-beginnt": [
     {
-      title: "Frühe Einheiten dürfen sehr kurz sein",
+      title: "Frühe Lernschritte dürfen sehr kurz sein",
       paragraphs: [
         "Ein früher Start muss nicht wie die intensive letzte Prüfungswoche aussehen. Zehn Minuten für Themenübersicht und zwei Abruffragen können genügen. Ihr Wert liegt in der Information: Welche Bereiche sind bereits sicher und welche brauchen mehrere Begegnungen?",
-        "Dayova kann aus diesem frühen Stand kleine Einheiten verteilen. Dadurch wächst die Vorbereitung im Alltag, statt erst durch akuten Zeitdruck sichtbar zu werden.",
+        "Dayova kann aus diesem frühen Stand kleine Lernschritte verteilen. Dadurch wächst die Vorbereitung im Alltag, statt erst durch akuten Zeitdruck sichtbar zu werden.",
       ],
     },
   ],

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { AnalyticsConsent } from "@/components/analytics-consent";
 import "./tokens.css";
 import "./globals.css";
 import "./typography.css";
@@ -18,54 +21,79 @@ const poppins = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dayova.com"),
+  applicationName: "Dayova",
   title: {
-    default: "Dayova – Dein persönlicher Lernbegleiter",
+    default: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
     template: "%s | Dayova",
   },
   description:
-    "Dayova zeigt dir, was als Nächstes zählt, erstellt einen realistischen Lernplan und macht Stärken und Wissenslücken sichtbar.",
-  keywords: [
-    "Dayova",
-    "Lernbegleiter",
-    "Lernplan",
-    "Lernapp",
-    "Schüler",
-    "Prüfungsvorbereitung",
-  ],
+    "Dayova macht aus Prüfungen, freien Zeiten und deinem Wissen einen Lernplan. Öffne die App und sieh, was heute dran ist.",
+  authors: [{ name: "Dayova", url: "https://dayova.com" }],
+  creator: "Dayova",
+  publisher: "Dayova",
+  category: "education",
+  icons: {
+    icon: {
+      url: "/favicon.png",
+      type: "image/png",
+      sizes: "512x512",
+    },
+    apple: {
+      url: "/favicon.png",
+      type: "image/png",
+      sizes: "512x512",
+    },
+  },
   openGraph: {
-    title: "Dayova – Wisse, was als Nächstes zählt.",
+    title: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
     description:
-      "Dein persönlicher Lernbegleiter für einen klaren Plan, verständliches Feedback und den nächsten sinnvollen Schritt.",
+      "Dayova teilt deinen Prüfungsstoff in Lernschritte und zeigt dir, was heute dran ist.",
     url: "https://dayova.com",
     siteName: "Dayova",
     locale: "de_DE",
     type: "website",
+    images: [
+      {
+        url: "/images/dayova-hero-app-light.png",
+        width: 1800,
+        height: 1200,
+        alt: "Dayova – persönlicher Lernbegleiter mit Lernplan und Wissensanalyse",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dayova – Dein persönlicher Lernbegleiter",
+    title: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
     description:
-      "Wisse, was als Nächstes zählt. Mit einem Lernplan, der zu deinem Alltag passt.",
+      "Dayova teilt deinen Prüfungsstoff in Lernschritte und zeigt dir, was heute dran ist.",
+    images: ["/images/dayova-hero-app-light.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
 const themeInitializer = `
 (() => {
   const root = document.documentElement;
-  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  let savedTheme = null;
-
-  try {
-    savedTheme = window.localStorage.getItem("dayova-theme");
-  } catch {}
-
-  const isDark =
-    savedTheme === "dark" || (savedTheme !== "light" && systemPrefersDark);
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   root.classList.toggle("dark", isDark);
   root.dataset.theme = isDark ? "dark" : "light";
+  root.dataset.themeSource = "system";
 })();
 `;
+
+const googleAnalyticsId =
+  process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? "G-039JN6DY6L";
 
 export default function RootLayout({
   children,
@@ -81,6 +109,9 @@ export default function RootLayout({
     >
       <body>
         {children}
+        <AnalyticsConsent measurementId={googleAnalyticsId} />
+        <VercelAnalytics />
+        <SpeedInsights />
         <Script id="dayova-theme" strategy="beforeInteractive">
           {themeInitializer}
         </Script>

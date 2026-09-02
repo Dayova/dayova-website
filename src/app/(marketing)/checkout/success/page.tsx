@@ -6,9 +6,10 @@ import { DayovaIcon } from "@/components/ui/huge-icon";
 import { getSafeRevenueCatRedemptionUrl } from "@/lib/revenuecat";
 
 export const metadata: Metadata = {
-  title: "Abo erfolgreich abgeschlossen – Dayova",
+  title: "Abo erfolgreich abgeschlossen",
   description:
     "Schließe die Einrichtung deines Dayova-Abos ab und starte mit deinem persönlichen Lernplan.",
+  robots: { index: false, follow: false },
 };
 
 export default async function CheckoutSuccessPage({

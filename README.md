@@ -54,7 +54,7 @@ npm run start
 - `/parents` — parent-focused marketing page
 - `/schools` — school offer
 - `/pricing` — student subscriptions and custom school pricing
-- `/impressum` and `/datenschutz` — legal pages
+- `/legal-notice` and `/privacy` — legal pages
 
 A future protected teacher experience will be implemented as a separate
 product surface and will not be mixed into the public marketing routes.

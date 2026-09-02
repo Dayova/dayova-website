@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Brand } from "@/components/brand";
 import { DashboardNavigation } from "./dashboard-navigation";
 import { DashboardNotificationLink } from "./dashboard-notification-link";
+import { DashboardSettingsMenu } from "./dashboard-settings-menu";
 import {
   GlobalDashboardSearch,
   type DashboardSearchItem,
@@ -20,15 +21,20 @@ export function DashboardShell({ session, children, searchItems }: DashboardShel
     <div className="teacher-app-shell">
       <aside className="teacher-sidebar">
         <div className="teacher-sidebar-brand">
-          <Link href="/lehrkraefte" aria-label="Dayova Lehrkräfte Startseite">
+          <Link href="/teachers" aria-label="Dayova Lehrkräfte Startseite">
             <Brand />
           </Link>
           <span className="teacher-product-label">für Lehrkräfte</span>
         </div>
 
+        <div className="teacher-mobile-header-actions">
+          <DashboardNotificationLink />
+          <DashboardSettingsMenu />
+        </div>
+
         <DashboardNavigation role={session.role} />
 
-        <Link className="teacher-sidebar-profile" href="/lehrkraefte/profil">
+        <Link className="teacher-sidebar-profile" href="/teachers/profile">
           <span className="teacher-avatar" aria-hidden="true">
             FM
           </span>
@@ -43,6 +49,7 @@ export function DashboardShell({ session, children, searchItems }: DashboardShel
         <header className="teacher-topbar">
           <GlobalDashboardSearch items={searchItems} />
           <DashboardNotificationLink />
+          <DashboardSettingsMenu />
           <span className="teacher-topbar-school">Albert-Einstein-Schule</span>
         </header>
 

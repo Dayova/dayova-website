@@ -6,13 +6,13 @@ import { schoolPricing } from "@/content/pricing";
 
 export function SchoolPricingCard() {
   const schoolOfferHref = `mailto:${siteConfig.links.schoolEmail}?subject=${encodeURIComponent(
-    "Individuelles Dayova Schulangebot",
+    "Dayova Pilotprojekt für unsere Schule",
   )}`;
 
   return (
     <article className="pricing-plan-card pricing-plan-card--school">
       <span className="home-classic-section-eyebrow pricing-plan-card__badge">
-        Für Schulen
+        Begleiteter Pilot
       </span>
 
       <div className="pricing-plan-card__heading">

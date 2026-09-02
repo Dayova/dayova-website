@@ -1,12 +1,12 @@
 import { ArrowDown01Icon, CheckmarkCircle02Icon } from "@hugeicons/core-free-icons";
-import { ButtonLink } from "@/components/ui/button-link";
+import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { faqs } from "@/content/home";
 
 const reasons = [
   "A plan shaped around your real week",
   "Clear priorities instead of another task list",
-  "14 days free when Dayova launches",
+  "Try every feature free for 14 days",
 ] as const;
 
 export function FaqSection() {
@@ -17,8 +17,8 @@ export function FaqSection() {
           <div className="stack-md">
             <h2>Still deciding?</h2>
             <p>
-              Join the first students who will turn exam pressure into a plan
-              they can actually follow.
+              Download Dayova from the App Store or Google Play and turn exam
+              pressure into a plan you can actually follow.
             </p>
           </div>
           <ul>
@@ -29,12 +29,12 @@ export function FaqSection() {
               </li>
             ))}
           </ul>
-          <ButtonLink href="#waitlist">Join the waitlist</ButtonLink>
+          <StoreDownloadLink>Download Dayova</StoreDownloadLink>
         </article>
 
         <div>
           <h2 className="dayova-section-title faq-title" id="faq-title">
-            Questions before you join
+            Questions before you start
           </h2>
           <div className="faq-list">
             {faqs.map((faq) => (

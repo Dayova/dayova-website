@@ -1,37 +1,147 @@
 "use client";
 
 import {
+  Calendar03Icon,
   CalendarAdd02Icon,
+  ComputerPhoneSyncIcon,
+  DownloadCircle02Icon,
+  Idea01Icon,
+  LaptopVideoIcon,
   PlayCircle02Icon,
+  PuzzleIcon,
+  Rocket01Icon,
+  School01Icon,
   SmartPhone01Icon,
+  TaskDone01Icon,
 } from "@hugeicons/core-free-icons";
 import { useEffect, useRef, useState } from "react";
 
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
-const processSteps = [
-  {
-    number: "01",
-    title: "App herunterladen",
-    description:
-      "Lade Dayova herunter und richte dein Profil ein. Danach ist dein persönlicher Lernbegleiter startklar.",
-    icon: SmartPhone01Icon,
-  },
-  {
-    number: "02",
-    title: "Termine und Lernzeiten eintragen",
-    description:
-      "Füge Prüfungen, Aufgaben und die Zeiten hinzu, an denen du lernen kannst. So weiß Dayova, was wann wichtig ist.",
-    icon: CalendarAdd02Icon,
-  },
-  {
-    number: "03",
-    title: "Mit deinem Lernplan loslegen",
-    description:
-      "Dayova teilt deine Ziele in klare Lerneinheiten. Du arbeitest Schritt für Schritt und dein Plan passt sich deinem Fortschritt an.",
-    icon: PlayCircle02Icon,
-  },
-] as const;
+type ProcessTimelineVariant = "about" | "download" | "home" | "schools";
+
+const processStepsByVariant = {
+  about: [
+    {
+      number: "Sommer 2023",
+      title: "Der Anfang als VonSchülerZuSchüler",
+      description:
+        "Julius Dietrich und Philipp Schossig machten aus ihrer Nachhilfe ein 16-Wochen-Programm für grundlegende Fähigkeiten im Schulalltag.",
+      icon: Idea01Icon,
+    },
+    {
+      number: "Ende 2023",
+      title: "Der erste eigene Campus",
+      description:
+        "Ein erster Campus bündelte Lernvideos und Aufgaben für das 16-Punkte-Programm.",
+      icon: LaptopVideoIcon,
+    },
+    {
+      number: "Sommer 2024",
+      title: "Unterricht in ganz Deutschland",
+      description:
+        "Neue Lernvideos und Online-Unterricht machten das Programm für Schülerinnen und Schüler in ganz Deutschland zugänglich.",
+      icon: ComputerPhoneSyncIcon,
+    },
+    {
+      number: "Anfang 2025",
+      title: "Die erste App-Idee nimmt Form an",
+      description:
+        "Die Arbeit mit dem Campus zeigte, was noch fehlte: eine App, die den nächsten Lernschritt vorbereitet.",
+      icon: SmartPhone01Icon,
+    },
+    {
+      number: "Spätsommer 2025",
+      title: "Dayova bekommt einen Namen",
+      description:
+        "Mit dem Namen Dayova, einem neuen Design und einem neuen Campus kamen Quizze, Lernvideos und Online-Stunden an einen Ort.",
+      icon: PuzzleIcon,
+    },
+    {
+      number: "Anfang bis April 2026",
+      title: "Messenger, Team und erste Testphase",
+      description:
+        "Anfang 2026 kam der erste Messenger. Im April stießen Fabius Schurig und Jakob Rössner zum Team und arbeiteten mit uns am ersten nutzbaren App-Stand.",
+      icon: TaskDone01Icon,
+    },
+    {
+      number: "17. August 2026",
+      title: "Der offizielle Start von Dayova",
+      description:
+        "Dayova erscheint als App und führt die Erfahrungen aus drei Jahren Lernbegleitung in einem Lernplan zusammen.",
+      icon: Rocket01Icon,
+    },
+  ],
+  download: [
+    {
+      number: "01",
+      title: "TestFlight-Einladung öffnen",
+      description:
+        "Tippe auf den Einladungsbutton. Falls TestFlight noch fehlt, führt Apple dich zuerst zur kostenlosen Installation.",
+      icon: SmartPhone01Icon,
+    },
+    {
+      number: "02",
+      title: "Einladung annehmen",
+      description:
+        "Öffne die Einladung in TestFlight und tippe auf „Akzeptieren“, um am Dayova-Test teilzunehmen.",
+      icon: TaskDone01Icon,
+    },
+    {
+      number: "03",
+      title: "Dayova installieren",
+      description:
+        "Tippe auf „Installieren“ und öffne Dayova anschließend direkt aus TestFlight oder über deinen Home-Bildschirm.",
+      icon: DownloadCircle02Icon,
+    },
+  ],
+  home: [
+    {
+      number: "01",
+      title: "Dayova herunterladen",
+      description:
+        "Installiere die App und richte dein Profil ein. Danach kannst du deine erste Prüfung anlegen.",
+      icon: SmartPhone01Icon,
+    },
+    {
+      number: "02",
+      title: "Prüfung und Lernzeiten eintragen",
+      description:
+        "Trage den Termin, die Themen und deine freien Zeiten ein. Daraus baut Dayova deinen Plan bis zur Prüfung.",
+      icon: CalendarAdd02Icon,
+    },
+    {
+      number: "03",
+      title: "Ersten Lernschritt starten",
+      description:
+        "Öffne den nächsten Lernschritt und leg los. Deine Antworten beeinflussen, welche Themen danach folgen.",
+      icon: PlayCircle02Icon,
+    },
+  ],
+  schools: [
+    {
+      number: "01",
+      title: "Ziel und Lerngruppe festlegen",
+      description:
+        "Wir besprechen, welche Lerngruppe teilnimmt, welche Funktionen sie testet und woran wir den Pilot auswerten.",
+      icon: School01Icon,
+    },
+    {
+      number: "02",
+      title: "Pilot durchführen",
+      description:
+        "Schüler:innen und Lehrkräfte nutzen die vereinbarten Funktionen im Schulalltag. Wir begleiten feste Zwischenstände.",
+      icon: TaskDone01Icon,
+    },
+    {
+      number: "03",
+      title: "Ergebnisse auswerten",
+      description:
+        "Wir halten fest, was geholfen hat, wo Fragen offen sind und ob ein weiterer Einsatz für Ihre Schule sinnvoll ist.",
+      icon: Calendar03Icon,
+    },
+  ],
+} as const;
 
 type LineMetrics = {
   height: number;
@@ -41,7 +151,13 @@ type LineMetrics = {
 
 const emptyLineMetrics: LineMetrics = { height: 0, progress: 0, top: 0 };
 
-export function ProcessTimeline() {
+export function ProcessTimeline({
+  variant = "home",
+}: {
+  variant?: ProcessTimelineVariant;
+}) {
+  const processSteps = processStepsByVariant[variant];
+  const processStepCount = processSteps.length;
   const [activeIndex, setActiveIndex] = useState(0);
   const [lineMetrics, setLineMetrics] = useState(emptyLineMetrics);
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -117,13 +233,13 @@ export function ProcessTimeline() {
       });
       window.removeEventListener("resize", updateActiveStep);
     };
-  }, []);
+  }, [variant]);
 
   useEffect(() => {
     const timeline = timelineRef.current;
     const firstNode = nodeRefs.current[0];
     const activeNode = nodeRefs.current[activeIndex];
-    const lastNode = nodeRefs.current[processSteps.length - 1];
+    const lastNode = nodeRefs.current[processStepCount - 1];
 
     if (!timeline || !firstNode || !activeNode || !lastNode) return;
 
@@ -153,10 +269,13 @@ export function ProcessTimeline() {
       observer.disconnect();
       window.removeEventListener("resize", updateLine);
     };
-  }, [activeIndex]);
+  }, [activeIndex, processStepCount, variant]);
 
   return (
-    <div className="home-classic-process-timeline" ref={timelineRef}>
+    <div
+      className={`home-classic-process-timeline home-classic-process-timeline--${variant}`}
+      ref={timelineRef}
+    >
       <span
         className="home-classic-process-timeline__track"
         style={{ top: lineMetrics.top, height: lineMetrics.height }}

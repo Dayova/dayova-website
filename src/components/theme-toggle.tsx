@@ -4,11 +4,10 @@ import { Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
 import { useEffect } from "react";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
-const themeStorageKey = "dayova-theme";
-
-function applyTheme(isDark: boolean) {
+function applyTheme(isDark: boolean, source: "manual" | "system") {
   document.documentElement.classList.toggle("dark", isDark);
   document.documentElement.dataset.theme = isDark ? "dark" : "light";
+  document.documentElement.dataset.themeSource = source;
 }
 
 export function ThemeToggle() {
@@ -16,11 +15,7 @@ export function ThemeToggle() {
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
     function syncWithSystemTheme(event: MediaQueryListEvent | MediaQueryList) {
-      try {
-        if (localStorage.getItem(themeStorageKey)) return;
-      } catch {}
-
-      applyTheme(event.matches);
+      applyTheme(event.matches, "system");
     }
 
     syncWithSystemTheme(systemTheme);
@@ -31,11 +26,7 @@ export function ThemeToggle() {
 
   function toggleTheme() {
     const nextIsDark = !document.documentElement.classList.contains("dark");
-    applyTheme(nextIsDark);
-
-    try {
-      localStorage.setItem(themeStorageKey, nextIsDark ? "dark" : "light");
-    } catch {}
+    applyTheme(nextIsDark, "manual");
   }
 
   return (

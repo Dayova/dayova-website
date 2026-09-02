@@ -7,6 +7,7 @@ import {
   DownloadCircle01Icon,
 } from "@hugeicons/core-free-icons";
 import { ButtonLink } from "@/components/ui/button-link";
+import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
 export function HeroSection() {
@@ -24,14 +25,14 @@ export function HeroSection() {
           </p>
 
           <div className="dayova-hero-actions">
-            <ButtonLink href="#waitlist" variant="primary">
+            <StoreDownloadLink variant="primary">
               <DayovaIcon
                 aria-hidden="true"
                 icon={DownloadCircle01Icon}
                 size={19}
               />
-              Join the waitlist
-            </ButtonLink>
+              Download Dayova
+            </StoreDownloadLink>
             <ButtonLink href="#how-it-works" variant="secondary">
               How Dayova works
             </ButtonLink>

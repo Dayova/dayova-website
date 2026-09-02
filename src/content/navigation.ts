@@ -8,22 +8,27 @@ export const primaryNavigation = [
   {
     href: "/parents",
     label: "Für Eltern",
-    description: "Orientierung für Familien",
+    description: "Wie dein Kind selbst anfangen kann",
   },
   {
     href: "/schools",
     label: "Für Schulen",
-    description: "Dayova im schulischen Umfeld",
+    description: "Pilot mit einer Lerngruppe",
   },
   {
     href: "/pricing",
     label: "Preise",
-    description: "Abos und Schulangebote",
+    description: "Testphase, Abos und Pilotpreise",
+  },
+  {
+    href: "/about",
+    label: "Über uns",
+    description: "Von der Lernbegleitung zur App",
   },
   {
     href: "/blog",
     label: "Blog",
-    description: "Lernen verständlich gemacht",
+    description: "Gedanken zum Lernen und zur Schule",
   },
 ] as const satisfies readonly NavigationItem[];
 
@@ -34,14 +39,16 @@ export const footerNavigation = [
       { href: "/parents", label: "Eltern" },
       { href: "/schools", label: "Schulen" },
       { href: "/pricing", label: "Preise" },
+      { href: "/about", label: "Über uns" },
       { href: "/blog", label: "Blog" },
     ],
   },
   {
     title: "Rechtliches",
     links: [
-      { href: "/impressum", label: "Impressum" },
-      { href: "/datenschutz", label: "Datenschutz" },
+      { href: "/legal-notice", label: "Impressum" },
+      { href: "/privacy", label: "Datenschutz" },
+      { href: "/terms", label: "Nutzungsbedingungen" },
     ],
   },
 ] as const;

@@ -4,7 +4,7 @@ import { ArrowLeft01Icon } from "@hugeicons/core-free-icons";
 import { useRouter } from "next/navigation";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
-export function BackButton({ fallback = "/lehrkraefte" }: { fallback?: string }) {
+export function BackButton({ fallback = "/teachers" }: { fallback?: string }) {
   const router = useRouter();
 
   return (

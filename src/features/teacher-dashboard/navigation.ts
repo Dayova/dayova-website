@@ -1,8 +1,7 @@
 import {
   Analytics01Icon,
   AiMagicIcon,
-  BookOpen01Icon,
-  Calendar01Icon,
+  Calendar03Icon,
   Home01Icon,
   SchoolIcon,
   Task01Icon,
@@ -14,53 +13,56 @@ export type DashboardNavigationItem = {
   label: string;
   href: string;
   icon: IconSvgElement;
+  activePaths?: string[];
   adminOnly?: boolean;
 };
 
 export const dashboardNavigation: DashboardNavigationItem[] = [
   {
     label: "Startseite",
-    href: "/lehrkraefte",
+    href: "/teachers",
     icon: Home01Icon,
   },
   {
     label: "Unterrichtsassistent",
-    href: "/lehrkraefte/assistent",
+    href: "/teachers/assistant",
     icon: AiMagicIcon,
   },
   {
-    label: "Klassen",
-    href: "/lehrkraefte/klassen",
+    label: "Stundenplan",
+    href: "/teachers/timetable",
+    icon: Calendar03Icon,
+  },
+  {
+    label: "Klassen & Klassenbuch",
+    href: "/teachers/classes",
     icon: UserGroupIcon,
+    activePaths: [
+      "/teachers/classes",
+      "/teachers/classbook",
+      "/teachers/grades",
+      "/teachers/class-teacher",
+      "/teachers/students",
+    ],
   },
   {
-    label: "Hausaufgaben",
-    href: "/lehrkraefte/hausaufgaben",
+    label: "Aufgaben & Tests",
+    href: "/teachers/planning",
     icon: Task01Icon,
+    activePaths: [
+      "/teachers/planning",
+      "/teachers/homework",
+      "/teachers/tests",
+    ],
   },
   {
-    label: "Tests",
-    href: "/lehrkraefte/tests",
-    icon: Calendar01Icon,
-  },
-  {
-    label: "Notenbuch",
-    href: "/lehrkraefte/noten",
-    icon: BookOpen01Icon,
-  },
-  {
-    label: "Analysen",
-    href: "/lehrkraefte/analysen",
+    label: "Lernstände",
+    href: "/teachers/analytics",
     icon: Analytics01Icon,
   },
   {
-    label: "Digitales Klassenbuch",
-    href: "/lehrkraefte/klassenbuch",
-    icon: BookOpen01Icon,
-  },
-  {
     label: "Schulverwaltung",
-    href: "/lehrkraefte/schulverwaltung",
+    href: "/teachers/school-administration",
     icon: SchoolIcon,
     adminOnly: true,
   },

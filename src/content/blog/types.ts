@@ -6,6 +6,12 @@ export type BlogCategory =
   | "Für Eltern"
   | "Gesund lernen";
 
+export type BlogSource = {
+  title: string;
+  publisher: string;
+  url: string;
+};
+
 export type BlogArticle = {
   slug: string;
   title: string;
@@ -21,4 +27,5 @@ export type BlogArticle = {
     bullets?: readonly string[];
   }[];
   takeaway: string;
+  sources?: readonly BlogSource[];
 };

@@ -34,6 +34,21 @@ export type TeachingGroup = {
   isActive: boolean;
 };
 
+export type TimetableEntry = {
+  id: string;
+  weekday: 1 | 2 | 3 | 4 | 5;
+  startTime: string;
+  endTime: string;
+  room: string;
+  kind: "unterricht" | "aufsicht" | "konferenz";
+  teachingGroupId?: string;
+  label?: string;
+};
+
+export type ResolvedTimetableEntry = TimetableEntry & {
+  teachingGroup?: TeachingGroup;
+};
+
 export type Student = {
   id: string;
   schoolId: string;

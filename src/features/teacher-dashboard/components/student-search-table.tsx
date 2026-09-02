@@ -28,7 +28,7 @@ export function StudentSearchTable({ students }: { students: Student[] }) {
         <label>Sortierung<select value={sort} onChange={(event) => setSort(event.target.value as SortKey)}><option value="name">Name</option><option value="average">Notendurchschnitt</option><option value="risk">Unterstützungsbedarf</option></select></label>
       </div>
       <p className="teacher-result-count" aria-live="polite">{visible.length} von {students.length} Schüler:innen</p>
-      <div className="teacher-table-wrap"><table className="teacher-table"><thead><tr><th>Name</th><th>Durchschnitt</th><th>Wissen</th><th>Hausaufgaben</th><th>Status</th></tr></thead><tbody>{visible.map((student) => <tr key={student.id}><td><TextAction href={`/lehrkraefte/schueler/${student.id}`}>{student.firstName} {student.lastName}</TextAction></td><td>{student.averageGrade}</td><td><ProgressBar value={student.knowledgeScore} /></td><td>{student.homeworkCompletionRate} %</td><td><RiskBadge risk={student.riskLevel} /></td></tr>)}</tbody></table></div>
+      <div className="teacher-table-wrap"><table className="teacher-table"><thead><tr><th>Name</th><th>Durchschnitt</th><th>Wissen</th><th>Hausaufgaben</th><th>Status</th></tr></thead><tbody>{visible.map((student) => <tr key={student.id}><td><TextAction href={`/teachers/students/${student.id}`}>{student.firstName} {student.lastName}</TextAction></td><td>{student.averageGrade}</td><td><ProgressBar value={student.knowledgeScore} /></td><td>{student.homeworkCompletionRate} %</td><td><RiskBadge risk={student.riskLevel} /></td></tr>)}</tbody></table></div>
       {!visible.length ? <div className="teacher-empty-state"><strong>Keine Treffer</strong><p>Passen Sie den Suchbegriff an.</p></div> : null}
     </>
   );

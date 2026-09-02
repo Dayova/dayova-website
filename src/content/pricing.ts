@@ -21,9 +21,9 @@ export const studentPricing = {
   title: "Dayova für Schüler",
   defaultCycle: "annual",
   benefits: [
-    "14 Tage vollständig testen",
-    "Persönliche Lernpläne",
-    "Stärken und Wissenslücken erkennen",
+    "14 Tage ohne Zahlungsdaten testen",
+    "Lernplan aus Prüfungen und freien Zeiten",
+    "Nächster Lernschritt passend zu deinen Antworten",
   ],
   options: {
     annual: {
@@ -48,14 +48,14 @@ export const studentPricing = {
 } satisfies StudentPricingConfig;
 
 export const schoolPricing = {
-  title: "Dayova für Schulen",
-  supportingText: "Preis nach Schulgröße und gewünschtem Umfang.",
+  title: "Pilotprojekt für Schulen",
+  supportingText: "Preis nach Lerngruppe, Laufzeit und vereinbartem Umfang.",
   benefits: [
-    "Individuell kalkuliertes Angebot",
-    "Persönliche Einführung",
-    "Passender Umfang für eure Schule",
+    "Lerngruppe und Funktionen vorab festgelegt",
+    "Einführung für die beteiligten Personen",
+    "Auswertung an vereinbarten Zielen",
   ],
-  ctaLabel: "Individuelles Angebot anfragen",
+  ctaLabel: "Pilotprojekt anfragen",
 } as const;
 
 export const pricingFaqs = [
@@ -65,13 +65,13 @@ export const pricingFaqs = [
       "Die 14-tägige Testphase funktioniert ohne Zahlungsdaten und endet automatisch. Erst wenn du danach bewusst ein Abo auswählst und den Kauf bestätigst, beginnt die Zahlung.",
   },
   {
-    question: "Kann ich später den Tarif wechseln?",
+    question: "Wie unterscheiden sich Monats- und Jahresabo?",
     answer:
-      "Ja. Der Wechsel zwischen Monats- und Jahresabo wird in der Tarifverwaltung möglich sein.",
+      "Das Monatsabo ist monatlich kündbar. Beim Jahresabo zahlst du einmal für zwölf Monate und der monatliche Preis ist niedriger. Vor dem Kauf siehst du Laufzeit und Gesamtpreis.",
   },
   {
     question: "Wie funktioniert das Angebot für Schulen?",
     answer:
-      "Schulen erhalten ein individuelles Angebot nach Umfang und Schülerzahl.",
+      "Vor dem Start legen wir Lerngruppe, Laufzeit, Funktionen und Ziele fest. Auf dieser Grundlage erhält die Schule ein Angebot für den Pilot.",
   },
 ] as const;

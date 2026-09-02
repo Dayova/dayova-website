@@ -11,7 +11,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
     publishedAt: "22. Dezember 2025",
     publishedAtISO: "2025-12-22T10:00:00+01:00",
     intro:
-      "Zehn Aufgaben desselben Typs fühlen sich oft produktiv an. Nach den ersten Beispielen erkennt dein Gehirn das Muster und arbeitet zügig weiter. In einer Prüfung fehlt diese Sortierung jedoch: Dort musst du zuerst erkennen, welcher Lösungsweg überhaupt passt.",
+      "Die ersten beiden Gleichungen kosten noch Mühe. Bei Nummer acht läuft der Lösungsweg fast von allein. Das fühlt sich nach sicherem Können an – bis in der Klassenarbeit verschiedene Aufgabentypen durcheinanderstehen. Dann musst du nicht nur rechnen, sondern zuerst entscheiden, welches Verfahren passt.",
     sections: [
       {
         title: "Warum Blocklernen so überzeugend wirkt",
@@ -28,31 +28,31 @@ export const blogArticles2025: readonly BlogArticle[] = [
         bullets: [
           "ähnliche Aufgabentypen bewusst mischen",
           "vor dem Rechnen den gewählten Lösungsweg benennen",
-          "nach jeder Aufgabe prüfen, welches Merkmal entscheidend war",
+          "nach jeder Aufgabe prüfen, welches Merkmal den Lösungsweg bestimmt hat",
         ],
       },
       {
         title: "So bleibt die Mischung dosiert",
         paragraphs: [
-          "Neue Verfahren dürfen zunächst einzeln eingeübt werden. Sobald die Grundschritte sitzen, mischst du bekannte und neue Aufgaben. Dayova kann solche Wechsel über mehrere Lerneinheiten verteilen, damit nicht alles gleichzeitig auf deinem Tisch landet.",
+          "Neue Verfahren dürfen zunächst einzeln eingeübt werden. Sobald die Grundschritte sitzen, mischst du bekannte und neue Aufgaben. Dayova kann solche Wechsel über mehrere Lernschritte verteilen, damit nicht alles gleichzeitig auf deinem Tisch landet.",
           "Lehrkräfte können gemischte Übungssets nutzen, um Diagnose und Anwendung zu verbinden. Eltern helfen eher durch die Frage nach dem gewählten Weg als durch vorschnelles Vorsagen.",
         ],
       },
     ],
     takeaway:
-      "Gemischtes Üben fühlt sich anspruchsvoller an, weil es mehr verlangt. Genau darin liegt sein Wert: Du trainierst nicht nur das Rechnen, sondern auch die Wahl der passenden Strategie.",
+      "Mische Aufgaben erst, wenn du die einzelnen Verfahren grundsätzlich verstanden hast. Dann trainierst du genau die Entscheidung, die dir in der Prüfung niemand abnimmt: Welcher Lösungsweg passt hier?",
   },
   {
     slug: "selbsttests-staerken-das-lernen",
     title: "Warum Selbsttests das Lernen stärken",
     excerpt:
-      "Prüfungsfragen sind nicht nur zur Bewertung da. Richtig eingesetzt werden sie selbst zur Lernmethode.",
+      "Prüfungsfragen dienen der Bewertung und können selbst zur Lernmethode werden.",
     category: "Lernmethoden",
     readingTime: "6 Min.",
     publishedAt: "15. Dezember 2025",
     publishedAtISO: "2025-12-15T10:00:00+01:00",
     intro:
-      "Viele testen sich erst, wenn die Vorbereitung abgeschlossen scheint. Dabei kann das Abrufen von Wissen schon während des Lernens helfen. Jeder Versuch zeigt, welche Inhalte verfügbar sind und welche nur vertraut aussehen.",
+      "Du hast die Seite dreimal gelesen und erkennst jeden Satz. Dann klappst du das Buch zu – und bekommst die Erklärung nicht mehr zusammen. Ein kurzer Selbsttest deckt diesen Unterschied früh auf. Er prüft dein Lernen nicht erst am Ende, sondern wird selbst zum Lernen.",
     sections: [
       {
         title: "Abrufen ist mehr als Kontrollieren",
@@ -75,13 +75,13 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Selbsttests ohne Prüfungsdruck",
         paragraphs: [
-          "Kurze Abrufrunden reichen: drei Fragen nach einer Lerneinheit, eine Erklärung aus dem Kopf oder eine Beispielaufgabe ohne Vorlage. Die Ergebnisse dienen der Planung, nicht der Selbstbewertung.",
+          "Kurze Abrufrunden reichen: drei Fragen nach einem Lernschritt, eine Erklärung aus dem Kopf oder eine Beispielaufgabe ohne Vorlage. Die Ergebnisse dienen der Planung, nicht der Selbstbewertung.",
           "Dayova wertet Antworten aus und kann unsichere Inhalte erneut einplanen. Dadurch verbindet sich der Selbsttest mit dem weiteren Lernweg, statt als isolierte Punktzahl stehen zu bleiben.",
         ],
       },
     ],
     takeaway:
-      "Ein Selbsttest sagt nicht nur, was du kannst. Der Abruf selbst trainiert dein Gedächtnis und zeigt, welche Aufgabe als Nächstes sinnvoll ist.",
+      "Schließe die Unterlagen und versuche eine Antwort. Erst danach vergleichst du. Dieser eine Wechsel vom Wiedererkennen zum Abrufen zeigt dir ehrlicher, was schon sitzt und was noch eine Runde braucht.",
   },
   {
     slug: "lernpause-macht-wissen-haltbarer",
@@ -93,7 +93,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
     publishedAt: "8. Dezember 2025",
     publishedAtISO: "2025-12-08T10:00:00+01:00",
     intro:
-      "Am Abend vor der Arbeit scheint jede Minute kostbar. Mehrere Stunden am Stück wirken dann vernünftig. Für den langfristigen Abruf ist es jedoch oft günstiger, denselben Stoff über mehrere Termine zu verteilen.",
+      "Am Abend vor der Arbeit wirkt jede Pause wie verlorene Zeit. Also bleibt das Heft offen, bis alles vertraut aussieht. Das Problem zeigt sich erst später: Vertraut am Sonntag heißt nicht automatisch abrufbar am Montag. Mehrere kürzere Kontakte geben deinem Gedächtnis mehr als eine einzige lange Sitzung.",
     sections: [
       {
         title: "Warum Abstand beim Erinnern hilft",
@@ -108,7 +108,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
           "Verteiltes Lernen bedeutet nicht, jeden Tag stundenlang zu arbeiten. Mehrere kurze Kontakte können reichen, wenn sie Abruf, Anwendung und Rückmeldung enthalten.",
         ],
         bullets: [
-          "früh mit kleinen Einheiten beginnen",
+          "früh mit kleinen Lernschritten beginnen",
           "ein Thema nach einem und nach mehreren Tagen erneut aufgreifen",
           "sich beim Wiedersehen zuerst ohne Unterlagen testen",
         ],
@@ -116,25 +116,25 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Wie Planung die Abstände schützt",
         paragraphs: [
-          "Im Alltag verschwinden Wiederholungen leicht hinter neuen Hausaufgaben. Ein Lernplan hält deshalb nicht nur Termine fest, sondern reserviert auch spätere Kontakte mit bereits bearbeiteten Themen.",
+          "Im Alltag verschwinden Wiederholungen leicht hinter neuen Hausaufgaben. Ein Lernplan hält Termine fest und reserviert spätere Kontakte mit bereits bearbeiteten Themen.",
           "Dayova kann solche Wiederholungen mit Prüfungen und verfügbaren Zeiten verbinden. Eltern und Lehrkräfte unterstützen, indem sie frühe kurze Termine ermöglichen, statt nur die letzte große Sitzung einzufordern.",
         ],
       },
     ],
     takeaway:
-      "Pausen unterbrechen das Lernen nicht. Richtig eingeplant sorgen sie dafür, dass Wissen mehrfach abgerufen wird und länger verfügbar bleibt.",
+      "Plane nicht nur Lernzeit, sondern auch Abstand ein. Wenn du Wissen nach einer Pause erneut hervorholen musst, siehst du, was geblieben ist – und stärkst genau diesen späteren Zugriff.",
   },
   {
     slug: "gute-noten-und-verstaendnis",
     title: "Wenn gute Noten Verständnis vortäuschen",
     excerpt:
-      "Eine erfolgreiche Leistung kann trotzdem auf schmalem Wissen beruhen. Entscheidend ist, was später noch anwendbar bleibt.",
+      "Eine erfolgreiche Leistung kann trotzdem auf schmalem Wissen beruhen. Wichtig ist, was später noch anwendbar bleibt.",
     category: "Prüfungen",
     readingTime: "6 Min.",
     publishedAt: "1. Dezember 2025",
     publishedAtISO: "2025-12-01T10:00:00+01:00",
     intro:
-      "Eine gute Note ist erfreulich, aber sie beantwortet nicht jede Frage über den Lernstand. Vielleicht passten die geübten Aufgaben genau zur Prüfung. Vielleicht war das Wissen kurzfristig verfügbar. Verstehen zeigt sich erst, wenn Inhalte erklärt, übertragen und später erneut genutzt werden.",
+      "Die Eins steht auf der Arbeit. Zwei Wochen später fühlt sich das Kapitel trotzdem erstaunlich fern an. Das macht die Note nicht wertlos. Sie zeigt nur eine Leistung zu einem bestimmten Zeitpunkt und in einem bestimmten Format. Belastbares Verständnis muss auch eine neue Aufgabe und etwas Abstand aushalten.",
     sections: [
       {
         title: "Leistung ist eine Momentaufnahme",
@@ -146,7 +146,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Verständnis braucht neue Situationen",
         paragraphs: [
-          "Bitte dich nach einer guten Note nicht nur um dieselbe Aufgabe noch einmal. Erkläre das Prinzip, verändere Bedingungen oder übertrage es auf ein neues Beispiel. So erkennst du, ob du den Weg verstanden oder ein Muster nachgebaut hast.",
+          "Bitte dich nach einer guten Note um mehr als dieselbe Aufgabe. Erkläre das Prinzip, verändere Bedingungen oder übertrage es auf ein neues Beispiel. So erkennst du, ob du den Weg verstanden oder ein Muster nachgebaut hast.",
         ],
         bullets: [
           "eine Lösung ohne Fachsprache erklären",
@@ -163,19 +163,19 @@ export const blogArticles2025: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Eine Note beschreibt eine Leistung in einer bestimmten Situation. Ob Wissen trägt, zeigt sich beim Erklären, Übertragen und späteren Abrufen.",
+      "Freu dich über die gute Note – und prüfe das Wissen trotzdem noch einmal anders. Kannst du das Prinzip erklären, auf einen neuen Fall übertragen und einige Tage später abrufen? Dann trägt mehr als nur das Prüfungsergebnis.",
   },
   {
     slug: "uebungszeit-allein-genuegt-nicht",
     title: "Warum Übungszeit allein nicht genügt",
     excerpt:
-      "Viele Stunden führen nicht automatisch zu besseren Ergebnissen. Entscheidend ist, was während dieser Zeit geschieht.",
+      "Viele Stunden führen nicht automatisch zu besseren Ergebnissen. Der Inhalt dieser Zeit bestimmt den Lernerfolg.",
     category: "Lernmethoden",
     readingTime: "6 Min.",
     publishedAt: "24. November 2025",
     publishedAtISO: "2025-11-24T10:00:00+01:00",
     intro:
-      "Die Idee von 10.000 Stunden klingt verführerisch: Wer lange genug übt, wird zwangsläufig sehr gut. Lernen funktioniert jedoch nicht wie ein Zeitzähler. Zwei Personen können gleich lange arbeiten und dabei sehr unterschiedliche Fortschritte machen.",
+      "Zwei Schüler sitzen jeweils eine Stunde an Mathematik. Einer rechnet Aufgaben, die seine Fehler treffen. Der andere liest Lösungen, die er bereits kennt. Auf der Uhr steht dieselbe Zeit; gelernt wurde nicht dasselbe. Übungsdauer ist deshalb eine Information, aber kein Beweis für Qualität.",
     sections: [
       {
         title: "Beschäftigung ist noch kein Training",
@@ -187,7 +187,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Üben braucht ein Ziel",
         paragraphs: [
-          "Eine nützliche Einheit benennt, was danach besser gehen soll. Statt sechzig Minuten Mathematik vorzunehmen, kannst du drei Bruchgleichungen lösen, Fehler einordnen und eine Aufgabe ohne Hilfe erklären.",
+          "Ein nützlicher Lernschritt benennt, was danach besser gehen soll. Statt sechzig Minuten Mathematik vorzunehmen, kannst du drei Bruchgleichungen lösen, Fehler einordnen und eine Aufgabe ohne Hilfe erklären.",
         ],
         bullets: [
           "eine konkrete Fähigkeit auswählen",
@@ -198,13 +198,13 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Qualität planbar machen",
         paragraphs: [
-          "Dayova verbindet Lernzeit mit Aufgaben und Erkenntnissen aus Antworten. So wird nicht nur festgehalten, wie lange du gearbeitet hast, sondern auch, welcher Bereich Aufmerksamkeit braucht.",
+          "Dayova verbindet Lernzeit mit Aufgaben und Erkenntnissen aus Antworten. So siehst du die Arbeitsdauer und den Bereich, der Aufmerksamkeit braucht.",
           "Für Erwachsene bedeutet das: weniger Lob für bloße Dauer und mehr Interesse an Strategie, Verbesserung und Pausen. Aus Zeit wird dann gezieltes Training.",
         ],
       },
     ],
     takeaway:
-      "Die Zahl der Stunden erzählt nur einen Teil. Fortschritt entsteht durch passende Herausforderungen, Rückmeldung und eine bewusste Anpassung des nächsten Versuchs.",
+      "Miss einen Lernschritt nicht nur in Minuten. Frage danach: Was konnte ich selbst versuchen, welche Rückmeldung habe ich bekommen und was mache ich beim nächsten Durchgang anders?",
   },
   {
     slug: "warum-gute-vorsaetze-scheitern",
@@ -240,12 +240,12 @@ export const blogArticles2025: readonly BlogArticle[] = [
         title: "Nach Rückschlägen weiterplanen",
         paragraphs: [
           "Ein ausgelassener Termin ist kein Beweis gegen die eigene Disziplin. Er liefert Daten: War die Zeit ungünstig, die Aufgabe zu groß oder das Material nicht bereit? Die Antwort verbessert den nächsten Plan.",
-          "Dayova kann ausgefallene Einheiten neu verteilen. Eltern helfen, wenn sie nach Hindernissen fragen und nicht aus einem verpassten Termin ein Urteil über die Person machen.",
+          "Dayova kann ausgefallene Lernschritte neu verteilen. Eltern helfen, wenn sie nach Hindernissen fragen und nicht aus einem verpassten Termin ein Urteil über die Person machen.",
         ],
       },
     ],
     takeaway:
-      "Gute Vorsätze brauchen einen Ort im Alltag, eine vorbereitete erste Handlung und einen Plan für Tage, an denen etwas dazwischenkommt.",
+      "„Früher anfangen“ ist ein Wunsch. „Montag nach dem Essen öffne ich den ersten Lernschritt für zehn Minuten“ ist ein Start. Lege zusätzlich fest, wann du einen ausgefallenen Termin neu einplanst.",
   },
   {
     slug: "warum-lernen-erst-spaet-beginnt",
@@ -286,7 +286,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Der späte Start ist oft eine Reaktion auf unangenehme Gefühle. Eine kleine vorbereitete Aufgabe senkt die Hürde, bevor Zeitdruck die Kontrolle übernimmt.",
+      "Bekämpfe Aufschieben nicht mit einem Vortrag über Disziplin. Benenne, was am Einstieg unangenehm ist, und mache die erste Handlung so klein und eindeutig, dass du sie beginnen kannst, bevor der Zeitdruck übernimmt.",
   },
   {
     slug: "wenn-lernen-nicht-zur-note-passt",
@@ -310,7 +310,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       {
         title: "Die Arbeit als Datensatz lesen",
         paragraphs: [
-          "Sortiere Fehler nicht nur nach Fachthema. Frage zusätzlich nach der Ursache: fehlte Wissen, wurde die Aufgabe falsch gelesen, war der Rechenweg unsicher oder lief die Zeit davon? Unterschiedliche Ursachen brauchen unterschiedliche Übungen.",
+          "Sortiere Fehler nach Fachthema und Ursache: Fehlte Wissen, wurde die Aufgabe falsch gelesen, war der Rechenweg unsicher oder lief die Zeit davon? Unterschiedliche Ursachen brauchen unterschiedliche Übungen.",
         ],
         bullets: [
           "Wissenslücken mit gezieltem Abruf bearbeiten",
@@ -327,6 +327,6 @@ export const blogArticles2025: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Eine enttäuschende Note widerlegt deinen Aufwand nicht. Sie zeigt, dass Lernmethode, Abruf oder Aufgabenwahl angepasst werden sollten.",
+      "Mehr vom Gleichen ist nach einer enttäuschenden Note selten die beste Antwort. Vergleiche Prüfung und Vorbereitung: Was wurde verlangt, was hast du tatsächlich geübt und an welcher Stelle brach dein Lösungsweg ab?",
   },
 ];

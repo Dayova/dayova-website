@@ -4,10 +4,14 @@ import { type ReactNode, useEffect, useRef, useState } from "react";
 
 type ScrollActiveAdvantagesProps = {
   children: ReactNode;
+  className?: string;
+  itemSelector?: string;
 };
 
 export function ScrollActiveAdvantages({
   children,
+  className = "home-classic-advantages__list",
+  itemSelector = ".home-classic-advantage",
 }: ScrollActiveAdvantagesProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const listRef = useRef<HTMLDivElement>(null);
@@ -17,7 +21,7 @@ export function ScrollActiveAdvantages({
     if (!list) return;
 
     const items = Array.from(
-      list.querySelectorAll<HTMLElement>(".home-classic-advantage"),
+      list.querySelectorAll<HTMLElement>(itemSelector),
     );
     let animationFrame = 0;
 
@@ -62,11 +66,11 @@ export function ScrollActiveAdvantages({
       window.removeEventListener("scroll", updateActiveItem);
       window.removeEventListener("resize", updateActiveItem);
     };
-  }, []);
+  }, [itemSelector]);
 
   return (
     <div
-      className="home-classic-advantages__list"
+      className={className}
       data-scroll-active-index={activeIndex}
       ref={listRef}
     >

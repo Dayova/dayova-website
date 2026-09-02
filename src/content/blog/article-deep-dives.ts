@@ -5,24 +5,88 @@ type ArticleSection = BlogArticle["sections"][number];
 export const articleDeepDives: Readonly<
   Record<string, readonly ArticleSection[]>
 > = {
+  "die-richtige-schwierigkeit-beim-lernen": [
+    {
+      title: "Die passende Schwierigkeit verändert sich",
+      paragraphs: [
+        "Dieselbe Aufgabe kann an zwei Tagen unterschiedlich anspruchsvoll sein. Neues Vorwissen, ein längerer zeitlicher Abstand oder mehr Sicherheit im Aufgabenformat verschieben die Lernzone. Auch Müdigkeit und Zeitdruck beeinflussen, wie viele Schritte gleichzeitig verarbeitet werden können. Schwierigkeit ist deshalb keine feste Eigenschaft einer Aufgabe, sondern entsteht im Zusammenspiel mit der lernenden Person.",
+        "Ein guter Plan prüft diese Passung immer wieder. Wird ein Inhalt sicher, vergrößert sich der Abstand zwischen Wiederholungen oder der Transfer wird anspruchsvoller. Häufen sich Fehler ohne erkennbaren Fortschritt, braucht es kleinere Schritte oder eine andere Erklärung. So bleibt Herausforderung beweglich, statt Lernende dauerhaft in eine feste Leistungsstufe einzuordnen.",
+      ],
+    },
+    {
+      title: "Fehler müssen auswertbar bleiben",
+      paragraphs: [
+        "Fehler unterstützen Lernen nur dann, wenn ihre Ursache erkennbar wird. Eine Aufgabe mit zehn unbekannten Schritten erzeugt viele mögliche Fehlerquellen. Eine gezielt gewählte Herausforderung zeigt dagegen, ob etwa ein Begriff fehlt, eine Regel verwechselt oder ein bekannter Zusammenhang nicht übertragen wurde.",
+        "Hilfreiche Rückmeldung beschreibt, was falsch war, welche Denkentscheidung verändert werden sollte und welche nächste Aufgabe genau das erprobt. Dadurch wird Schwierigkeit zu einem Steuerungsinstrument für den Lernweg.",
+      ],
+    },
+  ],
   "vom-lernstand-zum-naechsten-schritt": [
     {
       title: "Ein Lernstand braucht eine zeitliche Perspektive",
       paragraphs: [
         "Eine einzelne Antwort ist immer eine Momentaufnahme. Müdigkeit, Aufgabenformat und Vorwissen beeinflussen, wie sie ausfällt. Aussagekräftiger wird der Lernstand, wenn mehrere Versuche betrachtet werden: Taucht derselbe Fehler wiederholt auf? Gelingt die Lösung mit einem Hinweis? Bleibt das Wissen nach einigen Tagen verfügbar? Erst der Verlauf zeigt, ob eine Fähigkeit stabiler wird.",
-        "Für die Planung ist außerdem entscheidend, wann das Wissen gebraucht wird. Eine Lücke drei Wochen vor einer Prüfung erlaubt andere Schritte als dieselbe Lücke am Vorabend. Gute Lernbegleitung verbindet deshalb Diagnose und Zeit: Sie priorisiert Grundlagen früh, plant später den Transfer und lässt vor dem Termin Raum für einen erneuten Abruf unter prüfungsähnlichen Bedingungen.",
+        "Für die Planung zählt auch, wann das Wissen gebraucht wird. Eine Lücke drei Wochen vor einer Prüfung erlaubt andere Schritte als dieselbe Lücke am Vorabend. Gute Lernbegleitung verbindet deshalb Diagnose und Zeit: Sie priorisiert Grundlagen früh, plant später den Transfer und lässt vor dem Termin Raum für einen erneuten Abruf unter prüfungsähnlichen Bedingungen.",
       ],
     },
     {
       title: "Eine kleine Standortbestimmung für zu Hause",
       paragraphs: [
-        "Wähle nach einer Lerneinheit drei Fragen mit unterschiedlichem Anspruch: eine zu einem Grundbegriff, eine zur Anwendung und eine zur Begründung. Beantworte sie ohne Unterlagen und markiere nicht nur richtig oder falsch, sondern auch, wie sicher du warst. Dadurch werden Wissenslücken und bloßes Raten voneinander unterscheidbar.",
+        "Wähle nach einem Lernschritt drei Fragen mit unterschiedlichem Anspruch: eine zu einem Grundbegriff, eine zur Anwendung und eine zur Begründung. Beantworte sie ohne Unterlagen und markiere das Ergebnis sowie deine Sicherheit. Dadurch werden Wissenslücken und bloßes Raten voneinander unterscheidbar.",
       ],
       bullets: [
         "Unsichere richtige Antworten später noch einmal ohne Hilfe abrufen.",
-        "Wiederkehrende Fehler nach Ursache und nicht nur nach Fach sammeln.",
+        "Wiederkehrende Fehler nach Ursache statt bloß nach Fach sammeln.",
         "Aus jeder Auswertung genau eine nächste Übung ableiten.",
         "Nach einer Woche prüfen, ob die frühere Hürde noch besteht.",
+      ],
+    },
+  ],
+  "eine-lern-app-sollte-dir-arbeit-abnehmen": [
+    {
+      title: "Weniger Entscheidungen entlasten den Lernstart",
+      paragraphs: [
+        "Vor dem Lernen fallen viele kleine Entscheidungen an: Welches Fach zuerst? Welche Unterlagen? Wie lange? Reicht Wiederholen oder braucht es eine neue Aufgabe? Jede einzelne wirkt harmlos, zusammen können sie den Einstieg verzögern. Eine Lern-App entlastet, wenn sie diese Entscheidungen sinnvoll vorbereitet, statt sie bloß digital abzubilden.",
+        "Dazu braucht sie klare Prioritäten und eine begrenzte Auswahl. Statt zehn gleich wichtigen Aufgaben zeigt sie, welcher Lernschritt aufgrund von Termin, Lernstand und verfügbarer Zeit jetzt passt. Die Entscheidung bleibt nachvollziehbar, muss aber nicht jedes Mal vollständig neu getroffen werden.",
+      ],
+    },
+    {
+      title: "Unterschiedliche Perspektiven, gemeinsamer Lernweg",
+      paragraphs: [
+        "Schüler brauchen eine konkrete nächste Aufgabe. Eltern möchten wissen, ob Termine und Belastung im Blick bleiben, ohne jeden Lernschritt zu kontrollieren. Lehrkräfte benötigen Hinweise auf fachliche Muster statt einer weiteren Liste erledigter Klicks. Eine gute Lernbegleitung zeigt jeder Person die Information, die für ihre Rolle nützlich ist.",
+        "Dayova verbindet diese Perspektiven über denselben Lernweg. Dadurch muss Fortschritt nicht mehrfach dokumentiert und Lernbedarf nicht aus verschiedenen Werkzeugen zusammengesucht werden.",
+      ],
+    },
+  ],
+  "feedback-das-dich-weiterbringt": [
+    {
+      title: "Feedback beschreibt Verhalten, nicht die Person",
+      paragraphs: [
+        "Rückmeldungen wie „unaufmerksam“ oder „nicht gut in Mathe“ erklären keinen Lösungsweg und lassen sich kaum in eine Übung übersetzen. Hilfreicher ist eine beobachtbare Beschreibung: Beim Umformen wurde das Vorzeichen nicht auf beide Seiten übertragen oder die Begründung nennt ein Ergebnis, aber keinen Zusammenhang.",
+        "Diese Sprache hält Fehler veränderbar. Sie zeigt, welche Handlung angepasst werden kann, ohne aus einem einzelnen Versuch ein Urteil über Fähigkeit oder Fleiß zu machen. Das erleichtert einen neuen Versuch und macht Fortschritt später vergleichbar.",
+      ],
+    },
+    {
+      title: "Nicht jede Lücke braucht dieselbe Antwort",
+      paragraphs: [
+        "Fehlt ein Begriff, hilft eine kurze Erklärung mit Beispiel. Wird eine Regel zwar erinnert, aber falsch angewendet, braucht es einen Vergleich ähnlicher Fälle. Gelingt eine Aufgabe nur mit Hinweis, ist ein erneuter Abruf mit weniger Unterstützung sinnvoll. Feedback sollte deshalb nicht möglichst ausführlich, sondern passend zur Ursache sein.",
+        "Digitale Lernbegleitung kann diese Unterschiede nutzen, um Folgeaufgaben gezielter auszuwählen. Lernende sollten verstehen, weshalb dieser nächste Schritt vorgeschlagen wird.",
+      ],
+    },
+  ],
+  "ein-lernplan-der-in-deinen-alltag-passt": [
+    {
+      title: "Nicht jede Lernminute ist gleich nutzbar",
+      paragraphs: [
+        "Ein freier Zeitraum im Kalender sagt noch wenig darüber aus, welche Aufgabe dort sinnvoll ist. Nach einem langen Schultag kann ein kurzer Abruf realistischer sein als der Einstieg in ein neues Kapitel. An einem ruhigen Vormittag lässt sich dagegen eine komplexe Aufgabe mit mehreren Zwischenschritten besser bearbeiten.",
+        "Ein alltagstauglicher Plan verbindet deshalb Dauer und Anspruch. Er reserviert konzentrierte Zeiten für neue oder schwierige Inhalte und nutzt kleine Fenster für Wiederholung, Vorbereitung oder die Auswertung früherer Fehler.",
+      ],
+    },
+    {
+      title: "Ein Plan ist erfolgreich, wenn er Orientierung gibt",
+      paragraphs: [
+        "Ein vollständig abgehakter Wochenplan kann trotzdem am Lernziel vorbeigehen, wenn Aufgaben nur oberflächlich erledigt wurden. Umgekehrt kann ein angepasster Plan erfolgreich sein, obwohl Lernschritte verschoben wurden. Der Plan hilft, wenn wichtige Grundlagen rechtzeitig sicherer werden und der nächste Schritt klar bleibt.",
+        "Dayova soll Planung deshalb mit Rückmeldung verbinden. Erledigte Zeit und Veränderungen im Lernstand bestimmen gemeinsam, wie der weitere Weg aussieht.",
       ],
     },
   ],
@@ -49,7 +113,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Wie Erwachsene hilfreiche Rückmeldung geben",
       paragraphs: [
-        "Eltern können nach dem Gedankengang fragen, ohne selbst zur prüfenden Instanz zu werden: „Wie bist du darauf gekommen?“ oder „Woran würdest du das in einer neuen Aufgabe erkennen?“ Lehrkräfte unterstützen Verständnis, wenn Korrekturen nicht beim Ergebnis enden, sondern einen nächsten Versuch ermöglichen. Entscheidend ist, dass Rückmeldung wieder in eine Handlung führt.",
+        "Eltern können nach dem Gedankengang fragen, ohne selbst zur prüfenden Instanz zu werden: „Wie bist du darauf gekommen?“ oder „Woran würdest du das in einer neuen Aufgabe erkennen?“ Lehrkräfte unterstützen Verständnis, wenn Korrekturen nicht beim Ergebnis enden, sondern einen nächsten Versuch anstoßen. Rückmeldung sollte wieder in eine Handlung führen.",
       ],
     },
   ],
@@ -64,7 +128,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Ein Fortschrittsprotokoll, das nicht nervt",
       paragraphs: [
-        "Nach jeder Einheit genügen zwei Sätze. Notiere, was heute ohne Hilfe gelungen ist und welche Hürde beim nächsten Mal zuerst bearbeitet wird. Einmal pro Woche vergleichst du diese Notizen mit einer älteren Antwort. Damit entsteht eine Entwicklungsgeschichte, die mehr aussagt als die Stimmung direkt nach dem Lernen.",
+        "Nach jedem Lernschritt genügen zwei Sätze. Notiere, was heute ohne Hilfe gelungen ist und welche Hürde beim nächsten Mal zuerst bearbeitet wird. Einmal pro Woche vergleichst du diese Notizen mit einer älteren Antwort. Damit entsteht eine Entwicklungsgeschichte, die mehr aussagt als die Stimmung direkt nach dem Lernen.",
       ],
       bullets: [
         "Fähigkeiten statt bloßer Lernminuten festhalten.",
@@ -87,7 +151,7 @@ export const articleDeepDives: Readonly<
         "Sammle zunächst alle festen Termine und Abgaben. Schätze danach nicht die perfekte Gesamtzeit, sondern verteile die ersten bearbeitbaren Schritte. Für eine Klassenarbeit kann das etwa bedeuten: Themenliste prüfen, zwei Grundlagen testen, Fehler auswerten und erst danach umfangreiche Prüfungsaufgaben lösen.",
       ],
       bullets: [
-        "Jede Einheit mit einem sichtbaren Ergebnis formulieren.",
+        "Jeden Lernschritt mit einem sichtbaren Ergebnis formulieren.",
         "Anspruchsvolle Aufgaben in Zeiten mit mehr Energie legen.",
         "Zwischenpuffer für Unerwartetes einplanen.",
         "Den nächsten Einstieg schon am Ende vorbereiten.",
@@ -130,14 +194,14 @@ export const articleDeepDives: Readonly<
       ],
     },
     {
-      title: "Sprache, die Entwicklung ermöglicht",
+      title: "Sprache, die Entwicklung unterstützt",
       paragraphs: [
         "Erwachsene sollten negative Aussagen weder bestätigen noch sofort wegreden. Zuerst lohnt sich die Frage, welche Erfahrung dahintersteht. Anschließend wird die Aussage verkleinert und mit einer Handlung verbunden.",
       ],
       bullets: [
         "Statt „Du bist gut“ eine gelungene Strategie benennen.",
         "Statt „Streng dich mehr an“ die konkrete Hürde untersuchen.",
-        "Aufgaben wählen, bei denen Fortschritt innerhalb einer Einheit sichtbar wird.",
+        "Aufgaben wählen, bei denen Fortschritt innerhalb eines Lernschritts sichtbar wird.",
         "Auch den sinnvollen Umgang mit Fehlern würdigen.",
       ],
     },
@@ -158,8 +222,8 @@ export const articleDeepDives: Readonly<
       bullets: [
         "Die unangenehme Empfindung vor dem Aufschieben benennen.",
         "Den Einstieg so klein wählen, dass er sofort ausführbar ist.",
-        "Ablenkungen räumlich erschweren, nicht nur verbieten.",
-        "Nach dem Versuch prüfen, welche Hürde tatsächlich bestand.",
+        "Ablenkungen räumlich erschweren statt sie bloß zu verbieten.",
+        "Nach dem Versuch die konkrete Hürde prüfen.",
       ],
     },
   ],
@@ -195,18 +259,18 @@ export const articleDeepDives: Readonly<
       title: "Die Umgebung steuert den ersten Impuls",
       paragraphs: [
         "Willenskraft ist nicht in jedem Moment gleich verfügbar. Sichtbare Benachrichtigungen, ein offener Spiele-Tab oder herumliegende Aufgaben setzen deshalb kleine Handlungsangebote. Jedes davon muss ignoriert werden. Eine vorbereitete Umgebung spart diese wiederholte Entscheidung und macht den geplanten Start wahrscheinlicher.",
-        "Auch positive Reize lassen sich nutzen. Ein aufgeschlagenes Heft, eine bereitgelegte Karteikarte oder Kopfhörer neben dem Lernmaterial können als Auslöser dienen. Entscheidend ist nicht, dass der Platz leer aussieht, sondern dass er die nächste Handlung unterstützt und unnötige Unterbrechungen reduziert.",
+        "Auch positive Reize lassen sich nutzen. Ein aufgeschlagenes Heft, eine bereitgelegte Karteikarte oder Kopfhörer neben dem Lernmaterial können als Auslöser dienen. Der Platz sollte die nächste Handlung unterstützen und unnötige Unterbrechungen reduzieren; leer aussehen muss er nicht.",
       ],
     },
     {
       title: "Ein Lernplatz-Test über fünf Tage",
       paragraphs: [
-        "Verändere nicht alles gleichzeitig. Beobachte fünf Tage lang, wodurch du unterbrochen wirst, und passe jeweils nur einen Faktor an. So erkennst du, welche Veränderung tatsächlich wirkt und welche nur ordentlich aussieht.",
+        "Verändere nicht alles gleichzeitig. Beobachte fünf Tage lang, wodurch du unterbrochen wirst, und passe jeweils nur einen Faktor an. So erkennst du, welche Veränderung wirkt und welche nur ordentlich aussieht.",
       ],
       bullets: [
         "Tag eins: Unterbrechungen ohne Bewertung notieren.",
         "Tag zwei: das häufigste digitale Signal entfernen.",
-        "Tag drei: Material vor der Einheit bereitlegen.",
+        "Tag drei: Material vor dem Lernschritt bereitlegen.",
         "Tag vier und fünf: Dauer bis zum ersten Fokusverlust vergleichen.",
       ],
     },
@@ -242,7 +306,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Bewegung passend zur Aufgabe einsetzen",
       paragraphs: [
-        "Vor einer konzentrierten Einheit kann ein kurzer Spaziergang den Übergang aus einem vollen Schultag erleichtern. Zwischen zwei Lernblöcken genügt oft Aufstehen und einige Minuten Bewegung. Sehr intensives Training direkt vor dem Schlafen oder auf Kosten von Erholung kann dagegen unpassend sein.",
+        "Vor einem konzentrierten Lernschritt kann ein kurzer Spaziergang den Übergang aus einem vollen Schultag erleichtern. Zwischen zwei Lernblöcken genügt oft Aufstehen und einige Minuten Bewegung. Sehr intensives Training direkt vor dem Schlafen oder auf Kosten von Erholung kann dagegen unpassend sein.",
       ],
       bullets: [
         "Feste Sporttermine zuerst in die Wochenplanung übernehmen.",
@@ -262,7 +326,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Eine lernfreundliche letzte Stunde am Abend",
       paragraphs: [
-        "Kurz vor dem Schlafen eignen sich eher überschaubare Abrufaufgaben als ein neues, umfangreiches Kapitel. Beende die Einheit zu einer festgelegten Zeit und notiere den nächsten Schritt. So muss der Kopf die offenen Aufgaben nicht weiter verwalten.",
+        "Kurz vor dem Schlafen eignen sich eher überschaubare Abrufaufgaben als ein neues, umfangreiches Kapitel. Beende den Lernschritt zu einer festgelegten Zeit und notiere den nächsten Schritt. So muss der Kopf die offenen Aufgaben nicht weiter verwalten.",
       ],
       bullets: [
         "Lernmaterial und Bildschirm rechtzeitig schließen.",
@@ -274,7 +338,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Wann Erwachsene gegensteuern sollten",
       paragraphs: [
-        "Wenn Jugendliche regelmäßig bis tief in die Nacht arbeiten, sollte nicht nur über schnelleres Lernen gesprochen werden. Umfang, Beginn, Termine und Erwartungen gehören gemeinsam geprüft. Eltern können eine Endzeit schützen; Lehrkräfte helfen durch rechtzeitige Aufgabenstellungen und transparente Prüfungsschwerpunkte.",
+        "Wenn Jugendliche regelmäßig bis tief in die Nacht arbeiten, gehören Umfang, Beginn, Termine und Erwartungen gemeinsam geprüft. Eltern können eine Endzeit schützen; Lehrkräfte helfen durch rechtzeitige Aufgabenstellungen und transparente Prüfungsschwerpunkte.",
       ],
     },
   ],
@@ -303,7 +367,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Selbstbilder filtern Erfahrungen",
       paragraphs: [
-        "Wer sich für unbegabt in einem Fach hält, bemerkt Fehler besonders stark und erklärt Erfolge eher mit Glück oder einer leichten Aufgabe. Dadurch wirkt jede neue Erfahrung wie eine Bestätigung des alten Urteils. Das Selbstbild bleibt stabil, obwohl die tatsächliche Leistung wechselhaft und veränderbar ist.",
+        "Wer sich für unbegabt in einem Fach hält, bemerkt Fehler besonders stark und erklärt Erfolge eher mit Glück oder einer leichten Aufgabe. Dadurch wirkt jede neue Erfahrung wie eine Bestätigung des alten Urteils. Das Selbstbild bleibt stabil, obwohl die gezeigte Leistung wechselhaft und veränderbar ist.",
         "Ein entwicklungsorientierter Blick ignoriert Unterschiede nicht. Er trennt den aktuellen Stand von einer dauerhaften Eigenschaft. Die Frage lautet dann nicht, ob jemand ein Mathetyp ist, sondern welche Vorstellungen vorhanden sind, welche Strategie fehlt und unter welchen Bedingungen Lernen bisher besser gelungen ist.",
       ],
     },
@@ -373,13 +437,13 @@ export const articleDeepDives: Readonly<
       title: "Mini-Erfolge sind Rückmeldung, keine Belohnungstricks",
       paragraphs: [
         "Ein kleiner Erfolg zeigt dem Gehirn, dass eine Handlung Wirkung hatte. Das kann eine korrekt erklärte Regel, ein selbstständig gefundener Ansatz oder eine vollständig bearbeitete Teilaufgabe sein. Solche Signale sind besonders wichtig, wenn das große Ziel noch Wochen entfernt liegt und lange keine Note folgt.",
-        "Damit Mini-Erfolge nicht beliebig werden, müssen sie an eine Fähigkeit gebunden sein. Fünfzehn Minuten am Schreibtisch sind ein Anfang, sagen aber wenig über Lernen. Aussagekräftiger ist: „Ich konnte drei Begriffe ohne Hilfe unterscheiden.“ Der Erfolg bleibt klein, beschreibt aber eine tatsächliche Veränderung.",
+        "Damit Mini-Erfolge nicht beliebig werden, müssen sie an eine Fähigkeit gebunden sein. Fünfzehn Minuten am Schreibtisch sind ein Anfang, sagen aber wenig über Lernen. Aussagekräftiger ist: „Ich konnte drei Begriffe ohne Hilfe unterscheiden.“ Der Erfolg bleibt klein, beschreibt aber eine messbare Veränderung.",
       ],
     },
     {
       title: "Erfolge so dokumentieren, dass sie nützlich bleiben",
       paragraphs: [
-        "Notiere nach der Einheit einen gelungenen Schritt und die nächste Hürde. So entsteht weder eine reine Positivliste noch ein Fehlerprotokoll. Beide Seiten gehören zusammen und machen den nächsten Einstieg leichter.",
+        "Notiere nach dem Lernschritt einen gelungenen Schritt und die nächste Hürde. So entsteht weder eine reine Positivliste noch ein Fehlerprotokoll. Beide Seiten gehören zusammen und machen den nächsten Einstieg leichter.",
       ],
       bullets: [
         "Erfolg als beobachtbare Handlung formulieren.",
@@ -394,13 +458,13 @@ export const articleDeepDives: Readonly<
       title: "Das Gehirn wechselt, statt parallel zu arbeiten",
       paragraphs: [
         "Bei zwei anspruchsvollen Tätigkeiten springt die Aufmerksamkeit meist hin und her. Nach einer Nachricht muss das Ziel der Lernaufgabe erneut aktiviert werden: Wo war ich? Welche Regel galt? Was wollte ich als Nächstes prüfen? Diese Wiederaufnahme kostet Zeit und erhöht die Wahrscheinlichkeit, Zwischenschritte zu verlieren.",
-        "Selbst kurze Unterbrechungen hinterlassen einen Rest Aufmerksamkeit bei der vorherigen Tätigkeit. Deshalb kann sich eine Lerneinheit zerfasert anfühlen, obwohl nur wenige Minuten sichtbar am Handy verbracht wurden. Die eigentlichen Kosten liegen in den vielen erneuten Anläufen.",
+        "Selbst kurze Unterbrechungen hinterlassen einen Rest Aufmerksamkeit bei der vorherigen Tätigkeit. Deshalb kann sich ein Lernschritt zerfasert anfühlen, obwohl nur wenige Minuten sichtbar am Handy verbracht wurden. Die eigentlichen Kosten liegen in den vielen erneuten Anläufen.",
       ],
     },
     {
       title: "Ein realistisches Fokus-Experiment",
       paragraphs: [
-        "Vergleiche zwei gleich lange Einheiten mit ähnlichen Aufgaben. In der ersten bleibt das Handy sichtbar und erreichbar, in der zweiten liegt es außerhalb des Raums oder im Flugmodus. Notiere Unterbrechungen, bearbeitete Aufgaben und Fehler. Der eigene Vergleich wirkt oft überzeugender als ein allgemeines Verbot.",
+        "Vergleiche zwei gleich lange Lernschritte mit ähnlichen Aufgaben. Im ersten bleibt das Handy sichtbar und erreichbar, im zweiten liegt es außerhalb des Raums oder im Flugmodus. Notiere Unterbrechungen, bearbeitete Aufgaben und Fehler. Der eigene Vergleich wirkt oft überzeugender als ein allgemeines Verbot.",
       ],
       bullets: [
         "Vor Beginn ein einziges Arbeitsziel festlegen.",
@@ -488,7 +552,7 @@ export const articleDeepDives: Readonly<
       ],
     },
     {
-      title: "Dual Coding in einer Lerneinheit anwenden",
+      title: "Dual Coding in einem Lernschritt anwenden",
       paragraphs: [
         "Lies einen kurzen Abschnitt und schließe anschließend die Vorlage. Zeichne aus dem Gedächtnis eine einfache Struktur und ergänze wenige Begriffe. Vergleiche erst danach mit dem Material. Fehlende Verbindungen werden auf diese Weise deutlicher als beim bloßen Abschreiben einer fertigen Grafik.",
       ],
@@ -504,7 +568,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Druck entsteht oft aus unsichtbaren Entscheidungen",
       paragraphs: [
-        "Vor einer Klassenarbeit ist nicht nur die Stoffmenge belastend. Offen bleibt auch, was prüfungsrelevant ist, wie gut einzelne Themen sitzen und ob die verbleibende Zeit reicht. Solange diese Fragen gleichzeitig im Kopf liegen, wirkt die Prüfung größer als jede einzelne Aufgabe.",
+        "Vor einer Klassenarbeit belasten die Stoffmenge und offene Fragen: Was ist prüfungsrelevant, wie gut sitzen einzelne Themen und reicht die verbleibende Zeit? Solange diese Fragen gleichzeitig im Kopf liegen, wirkt die Prüfung größer als jede einzelne Aufgabe.",
         "Ein Lernplan macht diese Entscheidungen sichtbar. Er beginnt mit dem Termin und arbeitet rückwärts: Welche Fähigkeiten sollen am Ende unter Prüfungsbedingungen verfügbar sein? Welche Grundlagen brauchen Abstand und mehrere Versuche? Welche Aufgaben dienen nur noch der Kontrolle? Daraus entsteht eine Reihenfolge statt einer bloßen Liste.",
       ],
     },
@@ -518,7 +582,7 @@ export const articleDeepDives: Readonly<
         "Themen mit kurzen Abruffragen diagnostizieren.",
         "Grundlagen vor Anwendungen und Prüfungssets einplanen.",
         "Puffer und einen vollständigen Probedurchlauf vorsehen.",
-        "Nach jeder Einheit die nächste Priorität aktualisieren.",
+        "Nach jedem Lernschritt die nächste Priorität aktualisieren.",
       ],
     },
     {
@@ -532,7 +596,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Abrufen verändert die Gedächtnisspur",
       paragraphs: [
-        "Beim Abrufen wird Wissen nicht nur kontrolliert. Der Versuch, eine Information ohne Vorlage zu erzeugen, stärkt den späteren Zugriff und zeigt zugleich, was fehlt. Das gilt auch dann, wenn die erste Antwort unvollständig ist – vorausgesetzt, anschließend folgt eine verlässliche Rückmeldung.",
+        "Beim Abrufen wird Wissen geprüft und gefestigt. Der Versuch, eine Information ohne Vorlage zu erzeugen, stärkt den späteren Zugriff und zeigt zugleich, was fehlt. Das gilt auch dann, wenn die erste Antwort unvollständig ist – vorausgesetzt, anschließend folgt eine verlässliche Rückmeldung.",
         "Passives Lesen kann als Vorbereitung sinnvoll sein. Problematisch wird es, wenn die gesamte Lernzeit dort bleibt. Schon kurze Unterbrechungen mit Fragen erhöhen den diagnostischen Wert: Nach einem Absatz das Buch schließen, die Kernaussage formulieren und ein Beispiel nennen.",
       ],
     },
@@ -553,7 +617,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Einfach erklären heißt nicht vereinfachen bis es falsch wird",
       paragraphs: [
-        "Die Feynman-Technik verlangt, einen Zusammenhang ohne unnötige Fachsprache zu erklären. Dabei dürfen entscheidende Bedingungen nicht verschwinden. Eine gute einfache Erklärung bewahrt Ursache, Ablauf und Grenzen. Genau an den Stellen, an denen nur noch ein Fachwort als Platzhalter dient, liegt häufig eine Verständnislücke.",
+        "Die Feynman-Technik verlangt, einen Zusammenhang ohne unnötige Fachsprache zu erklären. Dabei dürfen wichtige Bedingungen nicht verschwinden. Eine gute einfache Erklärung bewahrt Ursache, Ablauf und Grenzen. Genau an den Stellen, an denen nur noch ein Fachwort als Platzhalter dient, liegt häufig eine Verständnislücke.",
         "Das gedachte Publikum ist wichtig. Eine Erklärung für ein jüngeres Kind zwingt zu Beispielen und Alltagssprache. Eine Erklärung für einen Mitschüler darf Fachbegriffe enthalten, muss sie aber verbinden. Der Wechsel zwischen beiden Perspektiven zeigt, ob das Wissen flexibel oder nur auswendig gelernt ist.",
       ],
     },
@@ -581,7 +645,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Die eigene Fokuslänge beobachten",
       paragraphs: [
-        "Teste über eine Woche verschiedene Intervalle mit ähnlichen Aufgaben. Notiere nicht nur die Dauer, sondern auch Einstieg, Unterbrechungen, Fehler und das Gefühl am Ende. Daraus entsteht ein persönlicher Bereich statt einer magischen Zahl.",
+        "Teste über eine Woche verschiedene Intervalle mit ähnlichen Aufgaben. Notiere Dauer, Einstieg, Unterbrechungen, Fehler und das Gefühl am Ende. Daraus entsteht ein persönlicher Bereich statt einer magischen Zahl.",
       ],
       bullets: [
         "Block vorab mit einem Ergebnisziel versehen.",
@@ -595,19 +659,19 @@ export const articleDeepDives: Readonly<
     {
       title: "Weniger Ablenkung bedeutete nicht automatisch besseres Lernen",
       paragraphs: [
-        "Frühere Generationen hatten weniger digitale Unterbrechungen, aber auch weniger Zugang zu Erklärungen, Übungen und individueller Unterstützung. Ein nostalgischer Vergleich greift deshalb zu kurz. Entscheidend ist, welche Bedingungen konzentriertes Arbeiten begünstigten und wie sie heute bewusst hergestellt werden können.",
+        "Frühere Generationen hatten weniger digitale Unterbrechungen, aber auch weniger Zugang zu Erklärungen, Übungen und individueller Unterstützung. Ein nostalgischer Vergleich greift deshalb zu kurz. Hilfreich ist der Blick auf Bedingungen, die konzentriertes Arbeiten begünstigten und sich heute bewusst herstellen lassen.",
         "Viele damalige Routinen waren stärker an feste Orte und Zeiten gebunden. Diese äußere Struktur reduzierte Entscheidungen. Digitale Werkzeuge bieten dagegen Anpassung und unmittelbare Rückmeldung. Ihr Vorteil entsteht, wenn sie für einen festgelegten Lernzweck genutzt werden und Benachrichtigungen oder parallele Unterhaltung nicht denselben Raum besetzen.",
       ],
     },
     {
       title: "Das Beste aus beiden Lernwelten verbinden",
       paragraphs: [
-        "Übernimm nicht alte Methoden ungeprüft, sondern die hilfreichen Prinzipien dahinter: ungestörte Zeit, wiederkehrende Abläufe und aktives Üben. Ergänze sie durch adaptive Aufgaben, schnelle Rückmeldung und einen Plan, der den tatsächlichen Lernstand berücksichtigt.",
+        "Übernimm nicht alte Methoden ungeprüft, sondern die hilfreichen Prinzipien dahinter: ungestörte Zeit, wiederkehrende Abläufe und aktives Üben. Ergänze sie durch adaptive Aufgaben, schnelle Rückmeldung und einen Plan, der den aktuellen Lernstand berücksichtigt.",
       ],
       bullets: [
-        "Digitale Geräte für die Einheit auf eine Funktion begrenzen.",
+        "Digitale Geräte für den Lernschritt auf eine Funktion begrenzen.",
         "Feste Lernfenster mit anpassbaren Inhalten verbinden.",
-        "Information nicht nur suchen, sondern anschließend abrufen.",
+        "Information suchen und anschließend abrufen.",
         "Fortschritt durch Antworten statt durch Bildschirmzeit prüfen.",
       ],
     },
@@ -617,7 +681,7 @@ export const articleDeepDives: Readonly<
       title: "Sicherheit und Leistung sind zwei verschiedene Signale",
       paragraphs: [
         "Menschen schätzen ihr Wissen nicht direkt, sondern über Hinweise wie Vertrautheit, Leichtigkeit und vergangene Ergebnisse ein. Diese Hinweise können täuschen. Wer eine Erklärung oft gelesen hat, fühlt sich sicher, obwohl der eigene Abruf schwach ist. Umgekehrt können gewissenhafte Lernende trotz guter Antworten unsicher bleiben.",
-        "Metakognition wird besser, wenn Einschätzung und Ergebnis regelmäßig verglichen werden. Vor einer Antwort notierst du, wie sicher du bist. Danach prüfst du nicht nur das Ergebnis, sondern auch die Passung der Einschätzung. Mit der Zeit lernst du, welche inneren Signale bei dir verlässlich sind.",
+        "Metakognition wird besser, wenn Einschätzung und Ergebnis regelmäßig verglichen werden. Vor einer Antwort notierst du, wie sicher du bist. Danach prüfst du das Ergebnis und die Passung deiner Einschätzung. Mit der Zeit lernst du, welche inneren Signale bei dir verlässlich sind.",
       ],
     },
     {
@@ -659,7 +723,7 @@ export const articleDeepDives: Readonly<
       title: "Ein Selbsttest ist Übung und Diagnose zugleich",
       paragraphs: [
         "Der Begriff Test klingt nach Bewertung, doch beim Lernen hat er eine andere Funktion. Eine Frage ohne Vorlage zwingt zum Abruf und liefert eine Information über den aktuellen Stand. Fehler sind in diesem Moment erwünscht, weil sie vor der eigentlichen Prüfung auftreten und die nächste Wiederholung steuern können.",
-        "Entscheidend ist die Auswertung. Ein Häkchen oder Kreuz reicht nicht, wenn unklar bleibt, warum eine Antwort falsch war. Vergleiche den eigenen Denkweg mit einer Lösung, ergänze fehlende Verbindungen und stelle später eine ähnliche Frage. Erst dieser zweite Versuch zeigt, ob die Rückmeldung verarbeitet wurde.",
+        "Die Auswertung zählt. Ein Häkchen oder Kreuz reicht nicht, wenn unklar bleibt, warum eine Antwort falsch war. Vergleiche den eigenen Denkweg mit einer Lösung, ergänze fehlende Verbindungen und stelle später eine ähnliche Frage. Erst dieser zweite Versuch zeigt, ob die Rückmeldung verarbeitet wurde.",
       ],
     },
     {
@@ -677,9 +741,9 @@ export const articleDeepDives: Readonly<
   ],
   "lernpause-macht-wissen-haltbarer": [
     {
-      title: "Vergessen ist nicht nur ein Verlust",
+      title: "Vergessen hat auch einen Nutzen",
       paragraphs: [
-        "Wenn zwischen zwei Lerneinheiten Zeit liegt, wird der nächste Abruf anstrengender. Genau diese Anstrengung kann nützlich sein: Das Wissen muss wiederhergestellt werden, statt noch im kurzfristigen Arbeitsgedächtnis verfügbar zu sein. Eine erfolgreiche Erinnerung nach Abstand stärkt den späteren Zugriff.",
+        "Wenn zwischen zwei Lernschritten Zeit liegt, wird der nächste Abruf anstrengender. Genau diese Anstrengung kann nützlich sein: Das Wissen muss wiederhergestellt werden, statt noch im kurzfristigen Arbeitsgedächtnis verfügbar zu sein. Eine erfolgreiche Erinnerung nach Abstand stärkt den späteren Zugriff.",
         "Der Abstand darf weder zu kurz noch so lang sein, dass keinerlei Ansatz mehr vorhanden ist. Die passende Länge hängt von Vorwissen, Schwierigkeit und Prüfungstermin ab. Unsichere Grundlagen kehren früher zurück, sichere Inhalte später. Deshalb ist ein einheitlicher Wiederholungsplan für alle Themen selten optimal.",
       ],
     },
@@ -726,9 +790,9 @@ export const articleDeepDives: Readonly<
       ],
     },
     {
-      title: "Qualität einer Lerneinheit prüfen",
+      title: "Qualität eines Lernschritts prüfen",
       paragraphs: [
-        "Bewerte am Ende nicht nur, wie lange du gearbeitet hast. Vier kurze Fragen zeigen, ob die Zeit eine Veränderung erzeugt hat und wie die nächste Einheit aussehen sollte.",
+        "Bewerte am Ende die Arbeitsdauer und die entstandene Veränderung. Vier kurze Fragen zeigen, wie der nächste Lernschritt aussehen sollte.",
       ],
       bullets: [
         "Welche Fähigkeit wurde ohne Vorlage geübt?",
@@ -764,13 +828,13 @@ export const articleDeepDives: Readonly<
       title: "Nähe macht Folgen spürbar",
       paragraphs: [
         "Eine Prüfung in drei Wochen konkurriert mit Nachrichten, Hausaufgaben und Freizeit, deren Wirkung sofort spürbar ist. Erst wenn der Termin nahe rückt, wird die mögliche Folge des Nichtlernens emotional bedeutsam. Der entstehende Druck liefert kurzfristig Energie – allerdings zu einem Zeitpunkt, an dem Abstand und Wiederholung kaum noch möglich sind.",
-        "Früher zu beginnen bedeutet deshalb nicht, wochenlang intensiv für einen Test zu arbeiten. Schon ein kurzer Lernstandscheck verändert die Situation. Er zeigt Umfang und Lücken, sodass spätere Einheiten gezielt verteilt werden können. Der frühe Schritt dient zunächst der Orientierung, nicht der vollständigen Beherrschung.",
+        "Früher zu beginnen bedeutet deshalb nicht, wochenlang intensiv für einen Test zu arbeiten. Schon ein kurzer Lernstandscheck verändert die Situation. Er zeigt Umfang und Lücken, sodass spätere Lernschritte gezielt verteilt werden können. Der frühe Schritt dient zunächst der Orientierung, nicht der vollständigen Beherrschung.",
       ],
     },
     {
       title: "Den Starttermin vom Prüfungstermin trennen",
       paragraphs: [
-        "Trage bei jeder Prüfung zwei Termine ein: den eigentlichen Prüfungstag und einen frühen Startpunkt für eine zwanzigminütige Standortbestimmung. Danach wird nur das eingeplant, was der Test tatsächlich als unsicher gezeigt hat.",
+        "Trage bei jeder Prüfung zwei Termine ein: den eigentlichen Prüfungstag und einen frühen Startpunkt für eine zwanzigminütige Standortbestimmung. Danach wird nur das eingeplant, was der Test als unsicher gezeigt hat.",
       ],
       bullets: [
         "Anforderungen und Materialien früh sammeln.",

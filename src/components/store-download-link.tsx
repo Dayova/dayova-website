@@ -5,10 +5,11 @@ import { useSyncExternalStore } from "react";
 import { siteConfig } from "@/config/site";
 
 type StoreDownloadLinkProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark";
   onClick?: () => void;
+  showStoreName?: boolean;
 };
 
 const variants = {
@@ -18,23 +19,29 @@ const variants = {
 } as const;
 
 export function resolveStoreHref(userAgent: string) {
-  const { appStore, googlePlay } = siteConfig.links;
+  const { googlePlay, testFlight } = siteConfig.links;
+  const store = resolveStore(userAgent);
+
+  return store === "apple" ? testFlight : googlePlay;
+}
+
+function resolveStore(userAgent: string) {
   const isAppleDevice = /iPhone|iPad|iPod|Macintosh/i.test(userAgent);
   const isAndroidDevice = /Android/i.test(userAgent);
 
   if (isAppleDevice) {
-    return appStore;
+    return "apple";
   }
 
   if (isAndroidDevice) {
-    return googlePlay;
+    return "android";
   }
 
-  return googlePlay;
+  return "android";
 }
 
-function getStoreHref() {
-  return resolveStoreHref(navigator.userAgent);
+function getStore() {
+  return resolveStore(navigator.userAgent);
 }
 
 function subscribe() {
@@ -46,12 +53,13 @@ export function StoreDownloadLink({
   className = "",
   variant = "primary",
   onClick,
+  showStoreName = false,
 }: StoreDownloadLinkProps) {
-  const href = useSyncExternalStore(
-    subscribe,
-    getStoreHref,
-    () => siteConfig.links.googlePlay,
-  );
+  const store = useSyncExternalStore(subscribe, getStore, () => "android");
+  const href =
+    store === "apple"
+      ? siteConfig.links.testFlight
+      : siteConfig.links.googlePlay;
 
   return (
     <a
@@ -59,7 +67,11 @@ export function StoreDownloadLink({
       href={href}
       onClick={onClick}
     >
-      {children}
+      {showStoreName
+        ? store === "apple"
+          ? "Über TestFlight installieren"
+          : "Bei Google Play herunterladen"
+        : children}
     </a>
   );
 }

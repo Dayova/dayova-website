@@ -10,9 +10,9 @@ The current public routes are:
 
 - `/` — student-focused homepage
 - `/blog` — editorial shell; article data starts in `src/content/blog.ts`
-- `/parents` — parent audience
-- `/schools` — institutional audience and offer request
-- `/pricing` — student subscriptions and custom school pricing
+- `/eltern` — parent audience
+- `/schulen` — institutional audience and offer request
+- `/preise` — student subscriptions and custom school pricing
 - `/impressum` and `/datenschutz` — legal content
 
 The next editorial step can add `src/app/(marketing)/blog/[slug]/page.tsx`
@@ -23,7 +23,7 @@ without changing the shared layout or navigation.
 A teacher or school access product is intentionally not implemented yet. When
 approved, it should use a separate route group such as
 `src/app/(school-access)` with its own authenticated layout. Public school
-marketing remains under `/schools`; authenticated application screens should
+marketing remains under `/schulen`; authenticated application screens should
 not be placed inside that marketing route.
 
 ## Checkout boundary
@@ -40,7 +40,7 @@ Checkout follows these boundaries:
 
 1. Keep the billing IDs and unified student pricing card unchanged.
 2. Resolve RevenueCat package IDs only on the server.
-3. Validate the billing cycle in the `/checkout` route handler before redirecting.
+3. Validate the billing cycle in the `/kasse` route handler before redirecting.
 4. Validate prices on the server; never trust the browser plan price.
 5. Configure production and sandbox purchase links separately and complete the
    privacy-policy review before launch.
