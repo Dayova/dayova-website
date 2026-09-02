@@ -53,7 +53,7 @@ const faqItems = [
   {
     question: "Wie kann ich Dayova nutzen?",
     answer:
-      "Lade Dayova im App Store oder bei Google Play herunter und erstelle dein Konto direkt in der App. Danach kannst du Dayova 14 Tage kostenlos testen.",
+      "Installiere Dayova auf Android über Google Play oder auf dem iPhone und iPad über unsere öffentliche TestFlight-Einladung. Danach kannst du direkt in der App dein Konto erstellen.",
   },
   {
     question: "Was kostet Dayova?",
@@ -285,7 +285,7 @@ export function HomeDownloadSection() {
       id="download"
       eyebrow="Dein erster Plan"
       title="Hol dir Dayova und leg los."
-      description="Lade Dayova im App Store oder bei Google Play herunter. Du kannst alle Funktionen 14 Tage ohne Zahlungsdaten ausprobieren."
+      description="Installiere Dayova auf Android über Google Play oder teste die iOS-Version über TestFlight. Du kannst alle Funktionen 14 Tage ohne Zahlungsdaten ausprobieren."
     >
       <StoreDownloadLink variant="secondary">App herunterladen</StoreDownloadLink>
     </BlueCtaSection>

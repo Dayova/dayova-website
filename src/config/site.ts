@@ -9,9 +9,7 @@ export const siteConfig = {
   },
   links: {
     instagram: "https://www.instagram.com/dayova.de/",
-    appStore:
-      process.env.NEXT_PUBLIC_APP_STORE_URL ||
-      "https://apps.apple.com/app/id6768416097",
+    testFlight: "https://testflight.apple.com/join/vs7HjcmR",
     googlePlay:
       process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ||
       "https://play.google.com/store/apps/details?id=com.dayova",

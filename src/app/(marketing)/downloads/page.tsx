@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import {
+  PlayStoreIcon,
+  SmartPhone01Icon,
+} from "@hugeicons/core-free-icons";
 
-import { BlueCtaSection } from "@/components/sections/blue-cta-section";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
-import { StoreDownloadLink } from "@/components/store-download-link";
+import { DayovaIcon } from "@/components/ui/huge-icon";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Dayova herunterladen",
+  title: "Dayova herunterladen – iOS & Android",
   description:
-    "Lade Dayova im App Store oder bei Google Play herunter, trage deine erste Prüfung ein und starte deinen Lernplan.",
+    "Installiere Dayova auf Android über Google Play oder teste die iOS-App über TestFlight.",
   alternates: {
     canonical: "/downloads",
   },
@@ -26,22 +30,72 @@ export default function DownloadsPage() {
       >
         <div className="dayova-container download-page-hero__inner">
           <span className="home-classic-section-eyebrow">
-            Dein Download
+            Dayova herunterladen
           </span>
           <h1 id="download-page-title" className="dayova-hero-claim">
-            App laden. Erste Prüfung eintragen. Loslernen.
+            Dayova auf deinem Gerät installieren.
           </h1>
-          <p>
-            Der Button öffnet den passenden Store für dein Gerät. Nach dem
-            Download kannst du alle Funktionen 14 Tage ohne Zahlungsdaten
-            ausprobieren.
+          <p className="download-page-hero__lead">
+            Auf Android bekommst du Dayova regulär über Google Play. Auf dem
+            iPhone und iPad kannst du die aktuelle Version über TestFlight
+            testen.
           </p>
-          <StoreDownloadLink className="download-page__store-button">
-            App herunterladen
-          </StoreDownloadLink>
-          <span className="download-page-hero__hint">
-            14 Tage kostenlos testen · Für iOS und Android
-          </span>
+
+          <div className="download-platform-grid">
+            <article className="download-platform-card download-platform-card--ios">
+              <div className="download-platform-card__header">
+                <span className="download-platform-card__icon" aria-hidden="true">
+                  <DayovaIcon icon={SmartPhone01Icon} size={28} />
+                </span>
+                <span className="download-platform-card__status">
+                  Testversion
+                </span>
+              </div>
+              <div className="download-platform-card__copy">
+                <span className="download-platform-card__eyebrow">
+                  iOS und iPadOS
+                </span>
+                <h2>iPhone &amp; iPad</h2>
+                <p>
+                  Die iOS-App ist noch nicht regulär im App Store verfügbar.
+                  Installiere die aktuelle Testversion über Apples TestFlight.
+                </p>
+              </div>
+              <a className="button-primary" href={siteConfig.links.testFlight}>
+                Über TestFlight installieren
+              </a>
+              <span className="download-platform-card__hint">
+                Öffnet die öffentliche TestFlight-Einladung
+              </span>
+            </article>
+
+            <article className="download-platform-card download-platform-card--android">
+              <div className="download-platform-card__header">
+                <span className="download-platform-card__icon" aria-hidden="true">
+                  <DayovaIcon icon={PlayStoreIcon} size={28} />
+                </span>
+                <span className="download-platform-card__status download-platform-card__status--available">
+                  Verfügbar
+                </span>
+              </div>
+              <div className="download-platform-card__copy">
+                <span className="download-platform-card__eyebrow">
+                  Android
+                </span>
+                <h2>Google Play</h2>
+                <p>
+                  Die Android-App ist regulär im Google Play Store verfügbar
+                  und kann direkt installiert werden.
+                </p>
+              </div>
+              <a className="button-primary" href={siteConfig.links.googlePlay}>
+                Bei Google Play installieren
+              </a>
+              <span className="download-platform-card__hint">
+                Öffnet den offiziellen Dayova-Eintrag
+              </span>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -53,31 +107,26 @@ export default function DownloadsPage() {
           <div className="home-classic-process__panel">
             <div className="home-classic-process__intro">
               <span className="home-classic-section-eyebrow">
-                So funktioniert der Download
+                Für iPhone &amp; iPad
               </span>
               <h2 id="download-process-title" className="dayova-section-title">
-                So kommt Dayova auf dein Smartphone.
+                Dayova über TestFlight installieren
               </h2>
               <p>
-                Store öffnen, App installieren und Profil anlegen. Danach kannst
-                du direkt deine erste Prüfung eintragen.
+                Die Installation unterscheidet sich nur beim ersten Schritt
+                vom App Store und dauert wenige Minuten.
               </p>
             </div>
 
             <ProcessTimeline variant="download" />
+            <div className="download-page-process__action">
+              <a className="button-secondary" href={siteConfig.links.testFlight}>
+                TestFlight-Einladung öffnen
+              </a>
+            </div>
           </div>
         </div>
       </section>
-
-      <BlueCtaSection
-        id="download-finish"
-        eyebrow="Bereit zum Loslernen?"
-        title="Dein erster Lernplan beginnt in der App."
-        description="Lade Dayova herunter und probiere 14 Tage ohne Zahlungsdaten aus, wie aus deiner Prüfung ein Plan für jeden Lerntag wird."
-        sectionClassName="download-page-finish"
-      >
-        <StoreDownloadLink variant="secondary">App herunterladen</StoreDownloadLink>
-      </BlueCtaSection>
     </>
   );
 }
