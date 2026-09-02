@@ -63,6 +63,7 @@
   .home-classic-download,
   .home-classic-contact__panel,
   .home-classic-faq__visual,
+  .download-platform-card,
   .pricing-plan-card,
   .dayova-benefits-panel,
   .section-card,
@@ -1978,11 +1979,10 @@
 }
 
 .download-page-hero__inner {
-  min-height: min(680px, calc(100svh - 150px));
   display: grid;
   align-content: center;
   justify-items: center;
-  gap: var(--space-5);
+  gap: var(--space-6);
   text-align: center;
 }
 
@@ -1995,7 +1995,7 @@
   text-wrap: balance;
 }
 
-.download-page-hero p {
+.download-page-hero__lead {
   max-width: 680px;
   margin: 0;
   color: var(--dayova-muted);
@@ -2003,47 +2003,121 @@
   line-height: 1.7;
 }
 
-.download-page__store-button {
-  min-width: min(100%, 320px);
-  margin-top: var(--space-2);
+.download-platform-grid {
+  width: min(100%, 960px);
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-3);
+  text-align: left;
 }
 
-.download-page-hero__hint {
+.download-platform-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: clamp(var(--space-6), 4vw, var(--space-8));
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-3xl);
+  background: var(--dayova-elevated);
+  box-shadow: var(--dayova-shadow);
+}
+
+.download-platform-card--ios {
+  background: color-mix(
+    in srgb,
+    var(--dayova-brand-soft) 46%,
+    var(--dayova-elevated)
+  );
+}
+
+.download-platform-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.download-platform-card__icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--dayova-line);
+  border-radius: var(--dayova-radius-lg);
+  background: var(--dayova-surface);
+  color: var(--dayova-ink);
+}
+
+.download-platform-card__status,
+.download-platform-card__eyebrow {
+  font-size: var(--type-label);
+  font-weight: 600;
+}
+
+.download-platform-card__status {
+  padding: 8px 12px;
+  border-radius: var(--dayova-radius-pill);
+  background: var(--dayova-brand-soft);
+  color: var(--dayova-brand-deep);
+}
+
+.download-platform-card__status--available {
+  background: color-mix(in srgb, var(--dayova-positive) 18%, transparent);
+  color: var(--dayova-positive);
+}
+
+.download-platform-card__copy {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.download-platform-card__eyebrow {
+  color: var(--dayova-brand-deep);
+}
+
+.download-platform-card h2 {
+  margin: 0;
+  color: var(--dayova-ink);
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.download-platform-card p {
+  margin: 0;
+  color: var(--dayova-muted);
+  font-size: var(--type-body);
+  line-height: 1.65;
+}
+
+.download-platform-card .button-primary {
+  width: 100%;
+  margin-top: auto;
+}
+
+.download-platform-card__hint {
   color: var(--dayova-muted);
   font-size: var(--type-small);
+  text-align: center;
 }
 
 .download-page-process {
   background: color-mix(in srgb, var(--dayova-surface) 74%, var(--dayova-page));
 }
 
-.download-page-finish {
-  padding-bottom: clamp(var(--space-16), 9vw, var(--space-24));
+.download-page-process__action {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
 }
 
-.download-page-finish__panel {
-  min-height: 460px;
-  padding: clamp(var(--space-8), 7vw, var(--space-16));
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  gap: var(--space-5);
-  border-radius: var(--dayova-radius-3xl);
-  background: var(--dayova-brand-gradient);
-  color: white;
-  text-align: center;
-  box-shadow: var(--dayova-shadow-strong);
-}
-
-.download-page-finish__panel .dayova-section-title {
-  max-width: 720px;
-  color: white;
-}
-
-.download-page-finish__panel p {
-  max-width: 650px;
-  margin: 0;
-  color: color-mix(in srgb, white 88%, transparent);
+@media (min-width: 760px) {
+  .download-platform-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .home-classic-hero {
