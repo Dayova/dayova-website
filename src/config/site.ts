@@ -10,12 +10,9 @@ export const siteConfig = {
   links: {
     instagram: "https://www.instagram.com/dayova.de/",
     testFlight: "https://testflight.apple.com/join/vs7HjcmR",
-    appStore:
-      process.env.NEXT_PUBLIC_APP_STORE_URL ||
-      "https://apps.apple.com/de/app/dayova-messenger/id6759319542",
     googlePlay:
       process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ||
-      "https://play.google.com/store/search?q=Dayova&c=apps",
+      "https://play.google.com/store/apps/details?id=com.dayova",
     linkedin: "https://www.linkedin.com/company/109756945/",
     discord:
       process.env.NEXT_PUBLIC_DISCORD_URL ||
