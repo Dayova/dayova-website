@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AnalyticsConsent } from "@/components/analytics-consent";
 import "./tokens.css";
 import "./globals.css";
@@ -21,54 +23,50 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dayova.com"),
   applicationName: "Dayova",
   title: {
-    default: "Lernplan-App für Schüler – Lernen mit System | Dayova",
+    default: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
     template: "%s | Dayova",
   },
   description:
-    "Dayova ist die Lernplan-App für Schüler: Sie plant Prüfungen, erkennt Wissenslücken und zeigt den nächsten sinnvollen Lernschritt.",
+    "Dayova macht aus Prüfungen, freien Zeiten und deinem Wissen einen Lernplan. Öffne die App und sieh, was heute dran ist.",
   authors: [{ name: "Dayova", url: "https://dayova.com" }],
   creator: "Dayova",
   publisher: "Dayova",
   category: "education",
   icons: {
-    icon: [
-      {
-        url: "/favicon-light.png",
-        type: "image/png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/favicon-dark.png",
-        type: "image/png",
-        media: "(prefers-color-scheme: dark)",
-      },
-    ],
-    shortcut: "/favicon-light.png",
-    apple: "/favicon-light.png",
+    icon: {
+      url: "/favicon.png",
+      type: "image/png",
+      sizes: "512x512",
+    },
+    apple: {
+      url: "/favicon.png",
+      type: "image/png",
+      sizes: "512x512",
+    },
   },
   openGraph: {
-    title: "Lernplan-App für Schüler – Lernen mit System | Dayova",
+    title: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
     description:
-      "Dayova plant Prüfungen, erkennt Wissenslücken und zeigt Schülern den nächsten sinnvollen Lernschritt.",
+      "Dayova teilt deinen Prüfungsstoff in Lernschritte und zeigt dir, was heute dran ist.",
     url: "https://dayova.com",
     siteName: "Dayova",
     locale: "de_DE",
     type: "website",
     images: [
       {
-        url: "/images/dayova-hero-phones.png",
-        width: 4269,
-        height: 2400,
+        url: "/images/dayova-hero-app-light.png",
+        width: 1800,
+        height: 1200,
         alt: "Dayova – persönlicher Lernbegleiter mit Lernplan und Wissensanalyse",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lernplan-App für Schüler – Lernen mit System | Dayova",
+    title: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
     description:
-      "Dayova plant Prüfungen, erkennt Wissenslücken und zeigt Schülern den nächsten sinnvollen Lernschritt.",
-    images: ["/images/dayova-hero-phones.png"],
+      "Dayova teilt deinen Prüfungsstoff in Lernschritte und zeigt dir, was heute dran ist.",
+    images: ["/images/dayova-hero-app-light.png"],
   },
   robots: {
     index: true,
@@ -112,6 +110,8 @@ export default function RootLayout({
       <body>
         {children}
         <AnalyticsConsent measurementId={googleAnalyticsId} />
+        <VercelAnalytics />
+        <SpeedInsights />
         <Script id="dayova-theme" strategy="beforeInteractive">
           {themeInitializer}
         </Script>

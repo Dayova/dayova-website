@@ -9,17 +9,17 @@ export function ClassWorkspaceTabs({ active }: { active: ClassWorkspace }) {
       items={[
         {
           label: "Klassen",
-          href: "/lehrkraefte/klassen",
+          href: "/teachers/classes",
           active: active === "klassen",
         },
         {
           label: "Klassenbuch",
-          href: "/lehrkraefte/klassenbuch",
+          href: "/teachers/classbook",
           active: active === "klassenbuch",
         },
         {
           label: "Noten",
-          href: "/lehrkraefte/noten",
+          href: "/teachers/grades",
           active: active === "noten",
         },
       ]}

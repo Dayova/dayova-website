@@ -26,7 +26,7 @@ const processStepsByVariant = {
       number: "Sommer 2023",
       title: "Der Anfang als VonSchülerZuSchüler",
       description:
-        "Julius Dietrich und Philipp Schossig entwickelten aus ihrer Nachhilfe ein 16-Wochen-Programm für wichtige schulische Grundlagenskills.",
+        "Julius Dietrich und Philipp Schossig machten aus ihrer Nachhilfe ein 16-Wochen-Programm für grundlegende Fähigkeiten im Schulalltag.",
       icon: Idea01Icon,
     },
     {
@@ -47,7 +47,7 @@ const processStepsByVariant = {
       number: "Anfang 2025",
       title: "Die erste App-Idee nimmt Form an",
       description:
-        "Aus der Lernplattform entstand die Idee für eine eigene App – die ersten Grundsteine von Dayova.",
+        "Die Arbeit mit dem Campus zeigte, was noch fehlte: eine App, die den nächsten Lernschritt vorbereitet.",
       icon: SmartPhone01Icon,
     },
     {
@@ -61,14 +61,14 @@ const processStepsByVariant = {
       number: "Anfang bis April 2026",
       title: "Messenger, Team und erste Testphase",
       description:
-        "Anfang 2026 erschien der erste Messenger. Im April verstärkten Fabius Schurig und Jakob Rössner das Team und führten die App von der Testphase zum MVP.",
+        "Anfang 2026 kam der erste Messenger. Im April stießen Fabius Schurig und Jakob Rössner zum Team und arbeiteten mit uns am ersten nutzbaren App-Stand.",
       icon: TaskDone01Icon,
     },
     {
       number: "17. August 2026",
       title: "Der offizielle Start von Dayova",
       description:
-        "Aus dem 16-Punkte-Programm wird ein Lernbegleiter für alle: Dayova startet offiziell.",
+        "Dayova erscheint als App und führt die Erfahrungen aus drei Jahren Lernbegleitung in einem Lernplan zusammen.",
       icon: Rocket01Icon,
     },
   ],
@@ -91,53 +91,53 @@ const processStepsByVariant = {
       number: "03",
       title: "App öffnen und starten",
       description:
-        "Öffne Dayova, richte dein Profil ein und erstelle deinen persönlichen Lernplan.",
+        "Öffne Dayova, richte dein Profil ein und lege deinen ersten Lernplan an.",
       icon: PlayCircle02Icon,
     },
   ],
   home: [
     {
       number: "01",
-      title: "App herunterladen",
+      title: "Dayova herunterladen",
       description:
-        "Lade Dayova herunter und richte dein Profil ein. Danach ist dein persönlicher Lernbegleiter startklar.",
+        "Installiere die App und richte dein Profil ein. Danach kannst du deine erste Prüfung anlegen.",
       icon: SmartPhone01Icon,
     },
     {
       number: "02",
-      title: "Termine und Lernzeiten eintragen",
+      title: "Prüfung und Lernzeiten eintragen",
       description:
-        "Füge Prüfungen, Aufgaben und die Zeiten hinzu, an denen du lernen kannst. So weiß Dayova, was wann wichtig ist.",
+        "Trage den Termin, die Themen und deine freien Zeiten ein. Daraus baut Dayova deinen Plan bis zur Prüfung.",
       icon: CalendarAdd02Icon,
     },
     {
       number: "03",
-      title: "Mit deinem Lernplan loslegen",
+      title: "Ersten Lernschritt starten",
       description:
-        "Dayova teilt deine Ziele in klare Lerneinheiten. Du arbeitest Schritt für Schritt und dein Plan passt sich deinem Fortschritt an.",
+        "Öffne den nächsten Lernschritt und leg los. Deine Antworten beeinflussen, welche Themen danach folgen.",
       icon: PlayCircle02Icon,
     },
   ],
   schools: [
     {
       number: "01",
-      title: "Bedarf Ihrer Schule verstehen",
+      title: "Ziel und Lerngruppe festlegen",
       description:
-        "Wir besprechen Klassenstufen, Fachbereiche, bestehende Abläufe und die Ziele, die Sie mit Dayova erreichen möchten.",
+        "Wir besprechen, welche Lerngruppe teilnimmt, welche Funktionen sie testet und woran wir den Pilot auswerten.",
       icon: School01Icon,
     },
     {
       number: "02",
-      title: "Mit einem Pilot starten",
+      title: "Pilot durchführen",
       description:
-        "Eine ausgewählte Gruppe testet Lernbegleiter und Lehrkräfte-System in einem klar abgegrenzten, begleiteten Einsatz.",
+        "Schüler:innen und Lehrkräfte nutzen die vereinbarten Funktionen im Schulalltag. Wir begleiten feste Zwischenstände.",
       icon: TaskDone01Icon,
     },
     {
       number: "03",
-      title: "Gemeinsam weiterentwickeln",
+      title: "Ergebnisse auswerten",
       description:
-        "Wir werten Erfahrungen aus, passen den Einsatz an und schaffen die Grundlage für eine nachhaltige Zusammenarbeit.",
+        "Wir halten fest, was geholfen hat, wo Fragen offen sind und ob ein weiterer Einsatz für Ihre Schule sinnvoll ist.",
       icon: Calendar03Icon,
     },
   ],

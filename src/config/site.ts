@@ -2,24 +2,26 @@ export const siteConfig = {
   name: "Dayova",
   url: "https://dayova.com",
   description:
-    "Dein Lernbegleiter für einen klaren, persönlichen Weg durch Prüfungen und Aufgaben.",
+    "Die Lern-App, die Prüfungsstoff in machbare Lernschritte teilt und zeigt, was heute dran ist.",
   launch: {
     date: "2026-08-17T00:00:00+02:00",
     displayDate: "17. August 2026",
   },
   links: {
-    instagram: "https://www.instagram.com/dayova/",
+    instagram: "https://www.instagram.com/dayova.de/",
     appStore:
       process.env.NEXT_PUBLIC_APP_STORE_URL ||
-      "https://apps.apple.com/de/app/dayova-messenger/id6759319542",
+      "https://apps.apple.com/app/id6768416097",
     googlePlay:
       process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ||
-      "https://play.google.com/store/search?q=Dayova&c=apps",
-    linkedin: "https://www.linkedin.com/company/dayova",
+      "https://play.google.com/store/apps/details?id=com.dayova",
+    linkedin: "https://www.linkedin.com/company/109756945/",
     discord:
-      process.env.NEXT_PUBLIC_DISCORD_URL || "https://discord.gg/dayova",
+      process.env.NEXT_PUBLIC_DISCORD_URL ||
+      "https://discord.com/channels/1086939783374315530/1507048041666838759",
     facebook:
-      process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/dayova",
+      process.env.NEXT_PUBLIC_FACEBOOK_URL ||
+      "https://www.facebook.com/61559712444806/",
     youtube:
       process.env.NEXT_PUBLIC_YOUTUBE_URL || "https://www.youtube.com/@dayova",
     email: "kontakt@dayova.de",

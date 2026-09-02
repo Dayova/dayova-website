@@ -32,7 +32,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Eine kleine Standortbestimmung für zu Hause",
       paragraphs: [
-        "Wähle nach einer Lerneinheit drei Fragen mit unterschiedlichem Anspruch: eine zu einem Grundbegriff, eine zur Anwendung und eine zur Begründung. Beantworte sie ohne Unterlagen und markiere das Ergebnis sowie deine Sicherheit. Dadurch werden Wissenslücken und bloßes Raten voneinander unterscheidbar.",
+        "Wähle nach einem Lernschritt drei Fragen mit unterschiedlichem Anspruch: eine zu einem Grundbegriff, eine zur Anwendung und eine zur Begründung. Beantworte sie ohne Unterlagen und markiere das Ergebnis sowie deine Sicherheit. Dadurch werden Wissenslücken und bloßes Raten voneinander unterscheidbar.",
       ],
       bullets: [
         "Unsichere richtige Antworten später noch einmal ohne Hilfe abrufen.",
@@ -47,13 +47,13 @@ export const articleDeepDives: Readonly<
       title: "Weniger Entscheidungen entlasten den Lernstart",
       paragraphs: [
         "Vor dem Lernen fallen viele kleine Entscheidungen an: Welches Fach zuerst? Welche Unterlagen? Wie lange? Reicht Wiederholen oder braucht es eine neue Aufgabe? Jede einzelne wirkt harmlos, zusammen können sie den Einstieg verzögern. Eine Lern-App entlastet, wenn sie diese Entscheidungen sinnvoll vorbereitet, statt sie bloß digital abzubilden.",
-        "Dazu braucht sie klare Prioritäten und eine begrenzte Auswahl. Statt zehn gleich wichtigen Aufgaben zeigt sie, welche Einheit aufgrund von Termin, Lernstand und verfügbarer Zeit jetzt passt. Die Entscheidung bleibt nachvollziehbar, muss aber nicht jedes Mal vollständig neu getroffen werden.",
+        "Dazu braucht sie klare Prioritäten und eine begrenzte Auswahl. Statt zehn gleich wichtigen Aufgaben zeigt sie, welcher Lernschritt aufgrund von Termin, Lernstand und verfügbarer Zeit jetzt passt. Die Entscheidung bleibt nachvollziehbar, muss aber nicht jedes Mal vollständig neu getroffen werden.",
       ],
     },
     {
       title: "Unterschiedliche Perspektiven, gemeinsamer Lernweg",
       paragraphs: [
-        "Schüler brauchen eine konkrete nächste Aufgabe. Eltern möchten wissen, ob Termine und Belastung im Blick bleiben, ohne jede Einheit zu kontrollieren. Lehrkräfte benötigen Hinweise auf fachliche Muster statt einer weiteren Liste erledigter Klicks. Eine gute Lernbegleitung zeigt jeder Person die Information, die für ihre Rolle nützlich ist.",
+        "Schüler brauchen eine konkrete nächste Aufgabe. Eltern möchten wissen, ob Termine und Belastung im Blick bleiben, ohne jeden Lernschritt zu kontrollieren. Lehrkräfte benötigen Hinweise auf fachliche Muster statt einer weiteren Liste erledigter Klicks. Eine gute Lernbegleitung zeigt jeder Person die Information, die für ihre Rolle nützlich ist.",
         "Dayova verbindet diese Perspektiven über denselben Lernweg. Dadurch muss Fortschritt nicht mehrfach dokumentiert und Lernbedarf nicht aus verschiedenen Werkzeugen zusammengesucht werden.",
       ],
     },
@@ -85,7 +85,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Ein Plan ist erfolgreich, wenn er Orientierung gibt",
       paragraphs: [
-        "Ein vollständig abgehakter Wochenplan kann trotzdem am Lernziel vorbeigehen, wenn Aufgaben nur oberflächlich erledigt wurden. Umgekehrt kann ein angepasster Plan erfolgreich sein, obwohl Einheiten verschoben wurden. Der Plan hilft, wenn wichtige Grundlagen rechtzeitig sicherer werden und der nächste Schritt klar bleibt.",
+        "Ein vollständig abgehakter Wochenplan kann trotzdem am Lernziel vorbeigehen, wenn Aufgaben nur oberflächlich erledigt wurden. Umgekehrt kann ein angepasster Plan erfolgreich sein, obwohl Lernschritte verschoben wurden. Der Plan hilft, wenn wichtige Grundlagen rechtzeitig sicherer werden und der nächste Schritt klar bleibt.",
         "Dayova soll Planung deshalb mit Rückmeldung verbinden. Erledigte Zeit und Veränderungen im Lernstand bestimmen gemeinsam, wie der weitere Weg aussieht.",
       ],
     },
@@ -128,7 +128,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Ein Fortschrittsprotokoll, das nicht nervt",
       paragraphs: [
-        "Nach jeder Einheit genügen zwei Sätze. Notiere, was heute ohne Hilfe gelungen ist und welche Hürde beim nächsten Mal zuerst bearbeitet wird. Einmal pro Woche vergleichst du diese Notizen mit einer älteren Antwort. Damit entsteht eine Entwicklungsgeschichte, die mehr aussagt als die Stimmung direkt nach dem Lernen.",
+        "Nach jedem Lernschritt genügen zwei Sätze. Notiere, was heute ohne Hilfe gelungen ist und welche Hürde beim nächsten Mal zuerst bearbeitet wird. Einmal pro Woche vergleichst du diese Notizen mit einer älteren Antwort. Damit entsteht eine Entwicklungsgeschichte, die mehr aussagt als die Stimmung direkt nach dem Lernen.",
       ],
       bullets: [
         "Fähigkeiten statt bloßer Lernminuten festhalten.",
@@ -151,7 +151,7 @@ export const articleDeepDives: Readonly<
         "Sammle zunächst alle festen Termine und Abgaben. Schätze danach nicht die perfekte Gesamtzeit, sondern verteile die ersten bearbeitbaren Schritte. Für eine Klassenarbeit kann das etwa bedeuten: Themenliste prüfen, zwei Grundlagen testen, Fehler auswerten und erst danach umfangreiche Prüfungsaufgaben lösen.",
       ],
       bullets: [
-        "Jede Einheit mit einem sichtbaren Ergebnis formulieren.",
+        "Jeden Lernschritt mit einem sichtbaren Ergebnis formulieren.",
         "Anspruchsvolle Aufgaben in Zeiten mit mehr Energie legen.",
         "Zwischenpuffer für Unerwartetes einplanen.",
         "Den nächsten Einstieg schon am Ende vorbereiten.",
@@ -201,7 +201,7 @@ export const articleDeepDives: Readonly<
       bullets: [
         "Statt „Du bist gut“ eine gelungene Strategie benennen.",
         "Statt „Streng dich mehr an“ die konkrete Hürde untersuchen.",
-        "Aufgaben wählen, bei denen Fortschritt innerhalb einer Einheit sichtbar wird.",
+        "Aufgaben wählen, bei denen Fortschritt innerhalb eines Lernschritts sichtbar wird.",
         "Auch den sinnvollen Umgang mit Fehlern würdigen.",
       ],
     },
@@ -270,7 +270,7 @@ export const articleDeepDives: Readonly<
       bullets: [
         "Tag eins: Unterbrechungen ohne Bewertung notieren.",
         "Tag zwei: das häufigste digitale Signal entfernen.",
-        "Tag drei: Material vor der Einheit bereitlegen.",
+        "Tag drei: Material vor dem Lernschritt bereitlegen.",
         "Tag vier und fünf: Dauer bis zum ersten Fokusverlust vergleichen.",
       ],
     },
@@ -306,7 +306,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Bewegung passend zur Aufgabe einsetzen",
       paragraphs: [
-        "Vor einer konzentrierten Einheit kann ein kurzer Spaziergang den Übergang aus einem vollen Schultag erleichtern. Zwischen zwei Lernblöcken genügt oft Aufstehen und einige Minuten Bewegung. Sehr intensives Training direkt vor dem Schlafen oder auf Kosten von Erholung kann dagegen unpassend sein.",
+        "Vor einem konzentrierten Lernschritt kann ein kurzer Spaziergang den Übergang aus einem vollen Schultag erleichtern. Zwischen zwei Lernblöcken genügt oft Aufstehen und einige Minuten Bewegung. Sehr intensives Training direkt vor dem Schlafen oder auf Kosten von Erholung kann dagegen unpassend sein.",
       ],
       bullets: [
         "Feste Sporttermine zuerst in die Wochenplanung übernehmen.",
@@ -326,7 +326,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Eine lernfreundliche letzte Stunde am Abend",
       paragraphs: [
-        "Kurz vor dem Schlafen eignen sich eher überschaubare Abrufaufgaben als ein neues, umfangreiches Kapitel. Beende die Einheit zu einer festgelegten Zeit und notiere den nächsten Schritt. So muss der Kopf die offenen Aufgaben nicht weiter verwalten.",
+        "Kurz vor dem Schlafen eignen sich eher überschaubare Abrufaufgaben als ein neues, umfangreiches Kapitel. Beende den Lernschritt zu einer festgelegten Zeit und notiere den nächsten Schritt. So muss der Kopf die offenen Aufgaben nicht weiter verwalten.",
       ],
       bullets: [
         "Lernmaterial und Bildschirm rechtzeitig schließen.",
@@ -443,7 +443,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Erfolge so dokumentieren, dass sie nützlich bleiben",
       paragraphs: [
-        "Notiere nach der Einheit einen gelungenen Schritt und die nächste Hürde. So entsteht weder eine reine Positivliste noch ein Fehlerprotokoll. Beide Seiten gehören zusammen und machen den nächsten Einstieg leichter.",
+        "Notiere nach dem Lernschritt einen gelungenen Schritt und die nächste Hürde. So entsteht weder eine reine Positivliste noch ein Fehlerprotokoll. Beide Seiten gehören zusammen und machen den nächsten Einstieg leichter.",
       ],
       bullets: [
         "Erfolg als beobachtbare Handlung formulieren.",
@@ -458,13 +458,13 @@ export const articleDeepDives: Readonly<
       title: "Das Gehirn wechselt, statt parallel zu arbeiten",
       paragraphs: [
         "Bei zwei anspruchsvollen Tätigkeiten springt die Aufmerksamkeit meist hin und her. Nach einer Nachricht muss das Ziel der Lernaufgabe erneut aktiviert werden: Wo war ich? Welche Regel galt? Was wollte ich als Nächstes prüfen? Diese Wiederaufnahme kostet Zeit und erhöht die Wahrscheinlichkeit, Zwischenschritte zu verlieren.",
-        "Selbst kurze Unterbrechungen hinterlassen einen Rest Aufmerksamkeit bei der vorherigen Tätigkeit. Deshalb kann sich eine Lerneinheit zerfasert anfühlen, obwohl nur wenige Minuten sichtbar am Handy verbracht wurden. Die eigentlichen Kosten liegen in den vielen erneuten Anläufen.",
+        "Selbst kurze Unterbrechungen hinterlassen einen Rest Aufmerksamkeit bei der vorherigen Tätigkeit. Deshalb kann sich ein Lernschritt zerfasert anfühlen, obwohl nur wenige Minuten sichtbar am Handy verbracht wurden. Die eigentlichen Kosten liegen in den vielen erneuten Anläufen.",
       ],
     },
     {
       title: "Ein realistisches Fokus-Experiment",
       paragraphs: [
-        "Vergleiche zwei gleich lange Einheiten mit ähnlichen Aufgaben. In der ersten bleibt das Handy sichtbar und erreichbar, in der zweiten liegt es außerhalb des Raums oder im Flugmodus. Notiere Unterbrechungen, bearbeitete Aufgaben und Fehler. Der eigene Vergleich wirkt oft überzeugender als ein allgemeines Verbot.",
+        "Vergleiche zwei gleich lange Lernschritte mit ähnlichen Aufgaben. Im ersten bleibt das Handy sichtbar und erreichbar, im zweiten liegt es außerhalb des Raums oder im Flugmodus. Notiere Unterbrechungen, bearbeitete Aufgaben und Fehler. Der eigene Vergleich wirkt oft überzeugender als ein allgemeines Verbot.",
       ],
       bullets: [
         "Vor Beginn ein einziges Arbeitsziel festlegen.",
@@ -552,7 +552,7 @@ export const articleDeepDives: Readonly<
       ],
     },
     {
-      title: "Dual Coding in einer Lerneinheit anwenden",
+      title: "Dual Coding in einem Lernschritt anwenden",
       paragraphs: [
         "Lies einen kurzen Abschnitt und schließe anschließend die Vorlage. Zeichne aus dem Gedächtnis eine einfache Struktur und ergänze wenige Begriffe. Vergleiche erst danach mit dem Material. Fehlende Verbindungen werden auf diese Weise deutlicher als beim bloßen Abschreiben einer fertigen Grafik.",
       ],
@@ -582,7 +582,7 @@ export const articleDeepDives: Readonly<
         "Themen mit kurzen Abruffragen diagnostizieren.",
         "Grundlagen vor Anwendungen und Prüfungssets einplanen.",
         "Puffer und einen vollständigen Probedurchlauf vorsehen.",
-        "Nach jeder Einheit die nächste Priorität aktualisieren.",
+        "Nach jedem Lernschritt die nächste Priorität aktualisieren.",
       ],
     },
     {
@@ -669,7 +669,7 @@ export const articleDeepDives: Readonly<
         "Übernimm nicht alte Methoden ungeprüft, sondern die hilfreichen Prinzipien dahinter: ungestörte Zeit, wiederkehrende Abläufe und aktives Üben. Ergänze sie durch adaptive Aufgaben, schnelle Rückmeldung und einen Plan, der den aktuellen Lernstand berücksichtigt.",
       ],
       bullets: [
-        "Digitale Geräte für die Einheit auf eine Funktion begrenzen.",
+        "Digitale Geräte für den Lernschritt auf eine Funktion begrenzen.",
         "Feste Lernfenster mit anpassbaren Inhalten verbinden.",
         "Information suchen und anschließend abrufen.",
         "Fortschritt durch Antworten statt durch Bildschirmzeit prüfen.",
@@ -743,7 +743,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Vergessen hat auch einen Nutzen",
       paragraphs: [
-        "Wenn zwischen zwei Lerneinheiten Zeit liegt, wird der nächste Abruf anstrengender. Genau diese Anstrengung kann nützlich sein: Das Wissen muss wiederhergestellt werden, statt noch im kurzfristigen Arbeitsgedächtnis verfügbar zu sein. Eine erfolgreiche Erinnerung nach Abstand stärkt den späteren Zugriff.",
+        "Wenn zwischen zwei Lernschritten Zeit liegt, wird der nächste Abruf anstrengender. Genau diese Anstrengung kann nützlich sein: Das Wissen muss wiederhergestellt werden, statt noch im kurzfristigen Arbeitsgedächtnis verfügbar zu sein. Eine erfolgreiche Erinnerung nach Abstand stärkt den späteren Zugriff.",
         "Der Abstand darf weder zu kurz noch so lang sein, dass keinerlei Ansatz mehr vorhanden ist. Die passende Länge hängt von Vorwissen, Schwierigkeit und Prüfungstermin ab. Unsichere Grundlagen kehren früher zurück, sichere Inhalte später. Deshalb ist ein einheitlicher Wiederholungsplan für alle Themen selten optimal.",
       ],
     },
@@ -790,9 +790,9 @@ export const articleDeepDives: Readonly<
       ],
     },
     {
-      title: "Qualität einer Lerneinheit prüfen",
+      title: "Qualität eines Lernschritts prüfen",
       paragraphs: [
-        "Bewerte am Ende die Arbeitsdauer und die entstandene Veränderung. Vier kurze Fragen zeigen, wie die nächste Einheit aussehen sollte.",
+        "Bewerte am Ende die Arbeitsdauer und die entstandene Veränderung. Vier kurze Fragen zeigen, wie der nächste Lernschritt aussehen sollte.",
       ],
       bullets: [
         "Welche Fähigkeit wurde ohne Vorlage geübt?",
@@ -828,7 +828,7 @@ export const articleDeepDives: Readonly<
       title: "Nähe macht Folgen spürbar",
       paragraphs: [
         "Eine Prüfung in drei Wochen konkurriert mit Nachrichten, Hausaufgaben und Freizeit, deren Wirkung sofort spürbar ist. Erst wenn der Termin nahe rückt, wird die mögliche Folge des Nichtlernens emotional bedeutsam. Der entstehende Druck liefert kurzfristig Energie – allerdings zu einem Zeitpunkt, an dem Abstand und Wiederholung kaum noch möglich sind.",
-        "Früher zu beginnen bedeutet deshalb nicht, wochenlang intensiv für einen Test zu arbeiten. Schon ein kurzer Lernstandscheck verändert die Situation. Er zeigt Umfang und Lücken, sodass spätere Einheiten gezielt verteilt werden können. Der frühe Schritt dient zunächst der Orientierung, nicht der vollständigen Beherrschung.",
+        "Früher zu beginnen bedeutet deshalb nicht, wochenlang intensiv für einen Test zu arbeiten. Schon ein kurzer Lernstandscheck verändert die Situation. Er zeigt Umfang und Lücken, sodass spätere Lernschritte gezielt verteilt werden können. Der frühe Schritt dient zunächst der Orientierung, nicht der vollständigen Beherrschung.",
       ],
     },
     {

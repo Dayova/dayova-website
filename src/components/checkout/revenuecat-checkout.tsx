@@ -128,7 +128,7 @@ export function RevenueCatCheckout({
         defaultLocale: "de",
         skipSuccessPage: true,
       });
-      const successUrl = new URL("/kasse/erfolgreich", window.location.origin);
+      const successUrl = new URL("/checkout/success", window.location.origin);
       const redeemUrl = purchaseResult.redemptionInfo?.redeemUrl;
 
       if (redeemUrl) {
@@ -212,7 +212,7 @@ export function RevenueCatCheckout({
                 />
                 <span>
                   Ich stimme den{" "}
-                  <Link href="/nutzungsbedingungen">Nutzungsbedingungen</Link>{" "}
+                  <Link href="/terms">Nutzungsbedingungen</Link>{" "}
                   zu.
                 </span>
               </label>
@@ -241,7 +241,7 @@ export function RevenueCatCheckout({
             <p className="checkout-page__error" role="alert">
               {errorMessage || "Bitte wähle zuerst einen gültigen Tarif aus."}
             </p>
-            <Link className="button-primary checkout-page__pay-button" href="/preise">
+            <Link className="button-primary checkout-page__pay-button" href="/pricing">
               Zurück zu den Preisen
             </Link>
           </article>

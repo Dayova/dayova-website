@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack --disable-source-maps",
     "build": "next build --webpack",
     "start": "next start",
     "smoke": "node scripts/smoke-test.mjs",
@@ -16,6 +16,8 @@
     "@hugeicons/core-free-icons": "^4.2.3",
     "@hugeicons/react": "^1.1.9",
     "@revenuecat/purchases-js": "^1.14.1",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "next": "16.2.12",
     "react": "19.2.4",
     "react-dom": "19.2.4"

@@ -60,7 +60,7 @@ export function ClassSearchGrid({ classes }: { classes: ClassCard[] }) {
               value={Math.max(0, 100 - item.riskStudentCount * 8)}
               label="Stabiler Lernstand"
             />
-            <TextAction href={`/lehrkraefte/klassen/${item.id}`}>
+            <TextAction href={`/teachers/classes/${item.id}`}>
               Klasse öffnen
             </TextAction>
           </article>

@@ -9,15 +9,15 @@ import { footerNavigation } from "@/content/navigation";
 export function Footer() {
   return (
     <footer className="bg-dark-panel text-white">
-      <div className="dayova-container py-12 lg:py-16">
+      <div className="dayova-container site-footer__container py-12 lg:py-16">
         <div className="section-inner border-b border-white/12 pb-8 lg:grid-cols-[1.35fr_0.65fr]">
           <div>
             <Link href="/" aria-label="Dayova Startseite">
               <Brand inverse />
             </Link>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/65">
-              Dein persönlicher Lernbegleiter für einen klaren Plan, verständliche
-              nächste Schritte und mehr Orientierung beim Lernen.
+              Einfach loslernen: Dayova macht aus deinen Prüfungen und freien
+              Zeiten einen Plan für heute.
             </p>
             <div className="mt-6">
               <p className="mb-3 text-sm font-medium text-white/70">Folge uns</p>
@@ -70,7 +70,7 @@ export function Footer() {
           <span>Copyright © 2026 Dayova</span>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <CookieSettingsButton />
-            <span>Mit Klarheit für Schülerinnen und Schüler entwickelt.</span>
+            <span>Aus echter Lernbegleitung entstanden.</span>
           </div>
         </div>
       </div>

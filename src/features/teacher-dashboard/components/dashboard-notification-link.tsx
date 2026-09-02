@@ -11,7 +11,7 @@ export function DashboardNotificationLink() {
 
   return (
     <Link
-      href="/lehrkraefte/benachrichtigungen"
+      href="/teachers/notifications"
       className="teacher-icon-button"
       aria-label={
         unreadCount > 0

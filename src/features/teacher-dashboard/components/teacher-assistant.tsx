@@ -567,13 +567,13 @@ export function TeacherAssistant({
               <div>
                 <Link
                   className="teacher-button teacher-button-secondary"
-                  href={`/lehrkraefte/planung?bereich=aufgaben&gruppe=${groupId}&neu=1`}
+                  href={`/teachers/planning?section=assignments&group=${groupId}&new=1`}
                 >
                   Hausaufgabe planen
                 </Link>
                 <Link
                   className="teacher-button teacher-button-secondary"
-                  href={`/lehrkraefte/planung?bereich=tests&gruppe=${groupId}&neu=1`}
+                  href={`/teachers/planning?section=tests&group=${groupId}&new=1`}
                 >
                   Wissenscheck planen
                 </Link>

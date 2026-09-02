@@ -5,9 +5,9 @@ export const siteName = "Dayova";
 export const organizationId = `${siteUrl}/#organization`;
 export const websiteId = `${siteUrl}/#website`;
 export const defaultOgImage = {
-  url: "/images/dayova-hero-phones.png",
-  width: 4269,
-  height: 2400,
+  url: "/images/dayova-hero-app-light.png",
+  width: 1800,
+  height: 1200,
   alt: "Dayova – persönlicher Lernbegleiter mit Lernplan und Wissensanalyse",
 };
 

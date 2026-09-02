@@ -23,7 +23,7 @@ export function TodayTimetable({
           <p>{dayLabel}</p>
           <h2 id="today-schedule-heading">{heading}</h2>
         </div>
-        <TextAction href="/lehrkraefte/stundenplan">Ganze Woche</TextAction>
+        <TextAction href="/teachers/timetable">Ganze Woche</TextAction>
       </header>
 
       {entries.length > 0 ? (
@@ -50,7 +50,7 @@ export function TodayTimetable({
                 {entry.teachingGroupId ? (
                   <Link
                     className="teacher-today-slot-action"
-                    href={`/lehrkraefte/assistent?gruppe=${entry.teachingGroupId}`}
+                    href={`/teachers/assistant?group=${entry.teachingGroupId}`}
                   >
                     Vorbereiten
                   </Link>

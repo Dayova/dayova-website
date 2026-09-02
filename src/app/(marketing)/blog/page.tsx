@@ -1,9 +1,9 @@
 import { InstagramIcon } from "@hugeicons/core-free-icons";
 import type { Metadata } from "next";
-import Image from "next/image";
 
 import { ArticleFilter } from "@/components/blog/article-filter";
 import { JsonLd } from "@/components/seo/json-ld";
+import { BlueCtaSection } from "@/components/sections/blue-cta-section";
 import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { PageHero } from "@/components/ui/page-hero";
@@ -76,58 +76,23 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section
-        className="blog-overview-cta-section"
-        aria-labelledby="blog-download-title"
+      <BlueCtaSection
+        id="blog-download"
+        eyebrow="Dein nächster Schritt"
+        title="Jetzt Dayova herunterladen"
+        description="Hol dir deinen persönlichen Lernbegleiter und starte mit einem Lernplan, der zu deinem Alltag passt."
       >
-        <div className="dayova-container">
-          <div className="blog-overview-cta">
-            <div className="blog-overview-cta__copy">
-              <span className="home-classic-section-eyebrow home-classic-section-eyebrow--inverse">
-                Dein nächster Schritt
-              </span>
-              <h2 id="blog-download-title" className="dayova-section-title">
-                Jetzt Dayova herunterladen
-              </h2>
-              <p>
-                Hol dir deinen persönlichen Lernbegleiter und starte mit einem
-                Lernplan, der zu deinem Alltag passt.
-              </p>
-              <div className="blog-overview-cta__actions">
-                <StoreDownloadLink
-                  variant="secondary"
-                  className="blog-overview-cta__download"
-                >
-                  Dayova herunterladen
-                </StoreDownloadLink>
-                <a
-                  className="blog-overview-cta__instagram"
-                  href={siteConfig.links.instagram}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <DayovaIcon
-                    icon={InstagramIcon}
-                    size={20}
-                    aria-hidden="true"
-                  />
-                  Auf Instagram folgen
-                </a>
-              </div>
-            </div>
-
-            <div className="blog-overview-cta__visual" aria-hidden="true">
-              <Image
-                src="/images/dayova-screen-collage.png"
-                alt=""
-                width={964}
-                height={883}
-                sizes="(max-width: 767px) 90vw, (max-width: 1023px) 44vw, 520px"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+        <StoreDownloadLink variant="secondary">Dayova herunterladen</StoreDownloadLink>
+        <a
+          className="blog-overview-cta__instagram"
+          href={siteConfig.links.instagram}
+          rel="noreferrer"
+          target="_blank"
+        >
+          <DayovaIcon icon={InstagramIcon} size={20} aria-hidden="true" />
+          Auf Instagram folgen
+        </a>
+      </BlueCtaSection>
     </>
   );
 }

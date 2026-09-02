@@ -5,7 +5,6 @@ import { JsonLd } from "@/components/seo/json-ld";
 import {
   HomeAboutSection,
   HomeAdvantagesSection,
-  HomeCompanionSection,
   HomeDownloadSection,
   HomeFaqSection,
   HomeHeroSection,
@@ -15,10 +14,10 @@ import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/seo";
 
 const homeDescription =
-  "Dayova ist die Lernplan-App für Schüler: Sie plant Prüfungen, erkennt Wissenslücken und zeigt den nächsten sinnvollen Lernschritt.";
+  "Dayova macht aus Prüfungen, freien Zeiten und deinem Wissen einen Lernplan. Öffne die App und sieh, was heute dran ist.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Lernplan-App für Schüler – Lernen mit System | Dayova",
+  title: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
   description: homeDescription,
   path: "/",
   absoluteTitle: true,
@@ -36,7 +35,7 @@ const homeStructuredData = {
       areaServed: "DE",
       logo: {
         "@type": "ImageObject",
-        url: "https://dayova.com/favicon-light.png",
+        url: "https://dayova.com/favicon.png",
         width: 512,
         height: 512,
       },
@@ -62,7 +61,7 @@ const homeStructuredData = {
       "@type": "WebPage",
       "@id": "https://dayova.com/#webpage",
       url: "https://dayova.com/",
-      name: "Lernplan-App für Schüler – Lernen mit System | Dayova",
+      name: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
       description: homeDescription,
       isPartOf: { "@id": "https://dayova.com/#website" },
       about: { "@id": "https://dayova.com/#organization" },
@@ -77,7 +76,6 @@ export default function Home() {
       <JsonLd data={homeStructuredData} />
       <HomeHeroSection />
       <HomeAboutSection />
-      <HomeCompanionSection />
       <HomeAdvantagesSection />
       <HomeProcessSection />
       <HomeDownloadSection />

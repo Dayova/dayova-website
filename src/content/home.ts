@@ -86,13 +86,13 @@ export const faqs = [
       "A typical tool answers an individual question. Dayova supports the full learning process: planning around your real schedule, identifying gaps, and keeping your next step clear.",
   },
   {
-    question: "When can I use Dayova?",
+    question: "Where can I download Dayova?",
     answer:
-      "The first Dayova launch is planned for August 17, 2026. Join the waitlist to receive the launch details and early-access information first.",
+      "Download Dayova from the App Store or Google Play. The download button automatically takes you to the right store for your device.",
   },
   {
-    question: "What happens after I join the waitlist?",
+    question: "Can I try Dayova for free?",
     answer:
-      "We will contact you with essential launch updates and instructions for accessing Dayova. You will also receive 14 days of free access when the app goes live.",
+      "Yes. You can try Dayova free for 14 days without entering payment details. After that, you decide whether to choose a monthly or annual plan.",
   },
 ] as const;

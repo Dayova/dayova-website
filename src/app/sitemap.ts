@@ -13,22 +13,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       path: "",
       priority: 1,
       changeFrequency: "weekly" as const,
-      images: [`${siteUrl}/images/dayova-hero-hand.png`],
+      images: [`${siteUrl}/images/dayova-hero-app-light.png`],
     },
     {
       path: "/blog",
       priority: 0.8,
       changeFrequency: "weekly" as const,
-      images: [`${siteUrl}/images/dayova-screen-collage.png`],
+      images: [`${siteUrl}/images/dayova-bluebox-light.png`],
     },
     {
-      path: "/eltern",
+      path: "/parents",
       priority: 0.8,
       changeFrequency: "monthly" as const,
-      images: [`${siteUrl}/images/dayova-hero-hand.png`],
+      images: [`${siteUrl}/images/dayova-hero-app-light.png`],
     },
     {
-      path: "/schulen",
+      path: "/schools",
       priority: 0.8,
       changeFrequency: "monthly" as const,
       images: [
@@ -36,16 +36,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     {
-      path: "/preise",
+      path: "/pricing",
       priority: 0.9,
       changeFrequency: "monthly" as const,
-      images: [`${siteUrl}/images/dayova-home-phone.png`],
+      images: [`${siteUrl}/images/dayova-bluebox-light.png`],
     },
     {
-      path: "/ueber-uns",
+      path: "/about",
       priority: 0.8,
       changeFrequency: "monthly" as const,
-      images: [`${siteUrl}/images/dayova-learning-path.png`],
+      images: [`${siteUrl}/images/dayova-about-app-light.png`],
     },
   ];
 

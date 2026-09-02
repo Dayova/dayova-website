@@ -111,7 +111,7 @@ export default async function BlogArticlePage({
           "@type": "Organization",
           "@id": organizationId,
           name: siteName,
-          url: `${siteUrl}/ueber-uns`,
+          url: `${siteUrl}/about`,
         },
         publisher: {
           "@type": "Organization",
@@ -119,11 +119,12 @@ export default async function BlogArticlePage({
           name: siteName,
           logo: {
             "@type": "ImageObject",
-            url: `${siteUrl}/favicon-light.png`,
+            url: `${siteUrl}/favicon.png`,
           },
         },
         image: `${siteUrl}${defaultOgImage.url}`,
         articleSection: article.category,
+        citation: article.sources?.map((source) => source.url),
         inLanguage: "de-DE",
       },
       {
@@ -193,6 +194,31 @@ export default async function BlogArticlePage({
               <span>Das Wichtigste</span>
               <p>{article.takeaway}</p>
             </aside>
+
+            {article.sources?.length ? (
+              <details className="blog-article__sources">
+                <summary>Quellen und Studien</summary>
+                <p>
+                  Diese Quellen stützen die zentralen Aussagen des Artikels.
+                  Die Übertragung auf den Lernalltag stammt von der Dayova
+                  Redaktion.
+                </p>
+                <ol>
+                  {article.sources.map((source) => (
+                    <li key={source.url}>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        {source.title}
+                      </a>
+                      <span>{source.publisher}</span>
+                    </li>
+                  ))}
+                </ol>
+              </details>
+            ) : null}
 
             <section
               className="blog-article-related"

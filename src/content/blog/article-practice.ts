@@ -25,7 +25,7 @@ export const articlePracticeSections: Readonly<
       title: "Was Schüler, Eltern und Lehrkräfte jeweils sehen sollten",
       paragraphs: [
         "Schüler brauchen eine nächste Aufgabe, die weder unter- noch überfordert. Eltern benötigen keine lückenlose Kontrolle, sondern ein verlässliches Signal, dass Termine, Belastung und Fortschritt berücksichtigt werden. Lehrkräfte profitieren von einer Beschreibung konkreter Fehlermuster. Werden diese drei Perspektiven getrennt dargestellt, kann dieselbe Lernstandsanalyse Orientierung geben, ohne Lernende auf eine Punktzahl oder ein Defizit zu reduzieren.",
-        "In Dayova bleibt die Auswertung deshalb mit dem Plan verbunden. Eine erkannte Lücke verändert kommende Einheiten, ein sicherer Inhalt erhält größere Abstände und neue Termine verschieben Prioritäten. Der Lernweg reagiert auf Entwicklung, statt einen einmal erstellten Plan nur abzuarbeiten.",
+        "In Dayova bleibt die Auswertung deshalb mit dem Plan verbunden. Eine erkannte Lücke verändert kommende Lernschritte, ein sicherer Inhalt erhält größere Abstände und neue Termine verschieben Prioritäten. Der Lernweg reagiert auf Entwicklung, statt einen einmal erstellten Plan nur abzuarbeiten.",
       ],
     },
   ],
@@ -38,7 +38,7 @@ export const articlePracticeSections: Readonly<
       ],
       bullets: [
         "Welche Information trage ich mehrfach ein?",
-        "Welche Entscheidung kostet mich vor jeder Einheit Zeit?",
+        "Welche Entscheidung kostet mich vor jedem Lernschritt Zeit?",
         "Wo sehe ich nur Aktivität, aber keinen Lernfortschritt?",
         "Was müsste eine App verbinden, damit ein Schritt entfällt?",
       ],
@@ -68,7 +68,7 @@ export const articlePracticeSections: Readonly<
       bullets: [
         "Feste Termine und verfügbare Zeiten sichtbar machen.",
         "Aufgaben nach Bedeutung statt nach Bequemlichkeit ordnen.",
-        "Jede Einheit mit einem überprüfbaren Ergebnis formulieren.",
+        "Jeden Lernschritt mit einem überprüfbaren Ergebnis formulieren.",
         "Puffer bewusst frei lassen und nicht vorab füllen.",
       ],
     },
@@ -87,7 +87,7 @@ export const articlePracticeSections: Readonly<
       title: "Warum Rückschritte zum Lernverlauf gehören",
       paragraphs: [
         "Nach einer Pause kann der Abruf schlechter ausfallen als am Vortag. Das bedeutet nicht, dass die vorherige Arbeit wertlos war. Der zeitliche Abstand zeigt vielmehr, welche Verbindung noch nicht stabil ist. Auch der Wechsel zu schwierigeren Aufgaben lässt die Trefferquote zunächst sinken. Fortschritt sollte deshalb über mehrere Messpunkte und vergleichbare Bedingungen betrachtet werden.",
-        "Dayova kann erledigte Einheiten mit Veränderungen in Antworten, benötigten Hilfen und wiederkehrenden Lücken bündeln. So bleibt Entwicklung sichtbar, auch wenn einzelne Tage schwanken.",
+        "Dayova kann erledigte Lernschritte mit Veränderungen in Antworten, benötigten Hilfen und wiederkehrenden Lücken bündeln. So bleibt Entwicklung sichtbar, auch wenn einzelne Tage schwanken.",
       ],
     },
   ],
@@ -176,8 +176,8 @@ export const articlePracticeSections: Readonly<
     {
       title: "Eine Gewohnheit braucht sichtbaren Abschluss",
       paragraphs: [
-        "Ein kurzer Abschluss erleichtert die Wiederholung am nächsten Tag. Markiere die bearbeitete Einheit, räume das Material für die nächste Aufgabe zurecht und notiere einen Satz zum Einstieg. Dadurch endet Lernen nicht in einem offenen Zustand, der beim nächsten Mal erneut sortiert werden muss.",
-        "Dayova kann diesen Übergang unterstützen, indem erledigte Schritte und die nächste geplante Einheit nebeneinanderstehen. Der Fortschritt wird sichtbar, während der neue Start bereits vorbereitet ist.",
+        "Ein kurzer Abschluss erleichtert die Wiederholung am nächsten Tag. Markiere den bearbeiteten Lernschritt, räume das Material für die nächste Aufgabe zurecht und notiere einen Satz zum Einstieg. Dadurch endet Lernen nicht in einem offenen Zustand, der beim nächsten Mal erneut sortiert werden muss.",
+        "Dayova kann diesen Übergang unterstützen, indem erledigte Schritte und der nächste geplante Lernschritt nebeneinanderstehen. Der Fortschritt wird sichtbar, während der neue Start bereits vorbereitet ist.",
       ],
     },
   ],
@@ -221,7 +221,7 @@ export const articlePracticeSections: Readonly<
     {
       title: "Musik, Videos und individuelle Unterschiede",
       paragraphs: [
-        "Instrumentale Hintergrundmusik kann bei routinierten Aufgaben für manche Lernende angenehm sein. Sprache konkurriert dagegen besonders bei Lesen, Schreiben und Auswendiglernen mit der Aufgabe. Vergleiche Fehler, Tempo und Erinnerung nach der Einheit, statt dich nur auf dein Gefühl zu verlassen.",
+        "Instrumentale Hintergrundmusik kann bei routinierten Aufgaben für manche Lernende angenehm sein. Sprache konkurriert dagegen besonders bei Lesen, Schreiben und Auswendiglernen mit der Aufgabe. Vergleiche Fehler, Tempo und Erinnerung nach dem Lernschritt, statt dich nur auf dein Gefühl zu verlassen.",
         "Wer Musik nutzen möchte, kann dieselbe Aufgabe einmal mit und einmal ohne Hintergrund bearbeiten. Diese kleine Messung ersetzt pauschale Regeln durch eine Entscheidung, die zum Aufgabentyp und zur Person passt.",
       ],
     },
@@ -372,10 +372,10 @@ export const articlePracticeSections: Readonly<
   ],
   "warum-lernen-erst-spaet-beginnt": [
     {
-      title: "Frühe Einheiten dürfen sehr kurz sein",
+      title: "Frühe Lernschritte dürfen sehr kurz sein",
       paragraphs: [
         "Ein früher Start muss nicht wie die intensive letzte Prüfungswoche aussehen. Zehn Minuten für Themenübersicht und zwei Abruffragen können genügen. Ihr Wert liegt in der Information: Welche Bereiche sind bereits sicher und welche brauchen mehrere Begegnungen?",
-        "Dayova kann aus diesem frühen Stand kleine Einheiten verteilen. Dadurch wächst die Vorbereitung im Alltag, statt erst durch akuten Zeitdruck sichtbar zu werden.",
+        "Dayova kann aus diesem frühen Stand kleine Lernschritte verteilen. Dadurch wächst die Vorbereitung im Alltag, statt erst durch akuten Zeitdruck sichtbar zu werden.",
       ],
     },
   ],

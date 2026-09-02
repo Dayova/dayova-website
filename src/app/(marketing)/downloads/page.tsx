@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 
+import { BlueCtaSection } from "@/components/sections/blue-cta-section";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { StoreDownloadLink } from "@/components/store-download-link";
 
 export const metadata: Metadata = {
   title: "Dayova herunterladen",
   description:
-    "Lade Dayova in drei einfachen Schritten auf dein Smartphone und starte deinen persönlichen Lernplan.",
+    "Lade Dayova im App Store oder bei Google Play herunter, trage deine erste Prüfung ein und starte deinen Lernplan.",
   alternates: {
     canonical: "/downloads",
   },
@@ -28,18 +29,18 @@ export default function DownloadsPage() {
             Dein Download
           </span>
           <h1 id="download-page-title" className="dayova-hero-claim">
-            Dayova herunterladen und direkt loslegen.
+            App laden. Erste Prüfung eintragen. Loslernen.
           </h1>
           <p>
-            Ein Klick bringt dich automatisch in den passenden Store für dein
-            Gerät. Danach ist dein persönlicher Lernbegleiter nur noch wenige
-            Schritte entfernt.
+            Der Button öffnet den passenden Store für dein Gerät. Nach dem
+            Download kannst du alle Funktionen 14 Tage ohne Zahlungsdaten
+            ausprobieren.
           </p>
           <StoreDownloadLink className="download-page__store-button">
             App herunterladen
           </StoreDownloadLink>
           <span className="download-page-hero__hint">
-            Kostenlos herunterladen · Für iOS und Android
+            14 Tage kostenlos testen · Für iOS und Android
           </span>
         </div>
       </section>
@@ -55,11 +56,11 @@ export default function DownloadsPage() {
                 So funktioniert der Download
               </span>
               <h2 id="download-process-title" className="dayova-section-title">
-                In 3 Schritten zu Dayova
+                So kommt Dayova auf dein Smartphone.
               </h2>
               <p>
-                Vom QR-Code bis zur geöffneten App: So kommt Dayova schnell und
-                sicher auf dein Smartphone.
+                Store öffnen, App installieren und Profil anlegen. Danach kannst
+                du direkt deine erste Prüfung eintragen.
               </p>
             </div>
 
@@ -68,31 +69,15 @@ export default function DownloadsPage() {
         </div>
       </section>
 
-      <section
-        className="home-classic-section download-page-finish"
-        aria-labelledby="download-finish-title"
+      <BlueCtaSection
+        id="download-finish"
+        eyebrow="Bereit zum Loslernen?"
+        title="Dein erster Lernplan beginnt in der App."
+        description="Lade Dayova herunter und probiere 14 Tage ohne Zahlungsdaten aus, wie aus deiner Prüfung ein Plan für jeden Lerntag wird."
+        sectionClassName="download-page-finish"
       >
-        <div className="dayova-container">
-          <div className="download-page-finish__panel">
-            <span className="home-classic-section-eyebrow home-classic-section-eyebrow--inverse">
-              Bereit für deinen Lernplan?
-            </span>
-            <h2 id="download-finish-title" className="dayova-section-title">
-              Jetzt Dayova herunterladen
-            </h2>
-            <p>
-              Starte mit einem klaren Plan, verständlichen nächsten Schritten
-              und mehr Orientierung beim Lernen.
-            </p>
-            <StoreDownloadLink
-              variant="secondary"
-              className="download-page__store-button home-classic-download__button"
-            >
-              App herunterladen
-            </StoreDownloadLink>
-          </div>
-        </div>
-      </section>
+        <StoreDownloadLink variant="secondary">App herunterladen</StoreDownloadLink>
+      </BlueCtaSection>
     </>
   );
 }

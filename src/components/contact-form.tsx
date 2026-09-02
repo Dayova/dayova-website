@@ -34,15 +34,14 @@ export function ContactForm() {
         <div className="home-classic-contact__panel theme-panel">
           <div className="home-classic-contact__intro">
             <span className="home-classic-section-eyebrow">
-              Wir sind für dich da
+              Fragen zu Dayova?
             </span>
             <h2 className="dayova-section-title text-ink" id="contact-title">
-              Wir helfen dir gerne weiter.
+              Schreib uns, was du wissen möchtest.
             </h2>
             <p className="max-w-lg text-dayova-body text-muted">
-              Eine kurze Nachricht genügt. Beim Absenden öffnet sich dein
-              E-Mail-Programm; deine Angaben werden nicht auf dieser Website
-              gespeichert.
+              Beim Absenden öffnet sich dein E-Mail-Programm mit der
+              vorbereiteten Nachricht. Deine Angaben bleiben auf deinem Gerät.
             </p>
           </div>
 
