@@ -47,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       images: [`${siteUrl}/images/dayova-about-app-light.png`],
     },
+    {
+      path: "/support",
+      priority: 0.6,
+      changeFrequency: "monthly" as const,
+      images: [] as string[],
+    },
   ];
 
   return [

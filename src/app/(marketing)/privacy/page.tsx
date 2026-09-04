@@ -5,10 +5,16 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Datenschutz",
   description:
-    "Informationen zum Datenschutz und zur Verarbeitung personenbezogener Daten auf der Dayova Website.",
+    "Datenschutzhinweise für die Dayova App und Website, einschließlich Benutzerkonto, Lerninhalten, KI-Funktionen und Abonnements.",
   alternates: { canonical: "/privacy" },
   robots: { index: false, follow: true },
 };
+
+function PrivacyEmailLink() {
+  return (
+    <a href={`mailto:${siteConfig.links.email}`}>{siteConfig.links.email}</a>
+  );
+}
 
 export default function PrivacyPage() {
   return (
@@ -16,7 +22,7 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Rechtliches"
         title="Datenschutzerklärung"
-        description="Hier erfährst du, welche Daten beim Besuch der Dayova Website verarbeitet werden und welche Rechte du hast."
+        description="Hier erfährst du, welche Daten in der Dayova App und auf unserer Website verarbeitet werden, wofür wir sie benötigen und welche Rechte du hast."
         className="legal-page-hero"
       />
       <section className="section marketing-legal-section">
@@ -29,8 +35,8 @@ export default function PrivacyPage() {
             <section aria-labelledby="privacy-controller">
               <h2 id="privacy-controller">1. Verantwortlicher</h2>
               <p>
-                Verantwortlich für die Verarbeitung personenbezogener Daten auf
-                dieser Website ist:
+                Verantwortlich für die Verarbeitung personenbezogener Daten in
+                der Dayova App und auf der Dayova Website ist:
               </p>
               <p>
                 Julius Dietrich, Dayova
@@ -41,156 +47,218 @@ export default function PrivacyPage() {
                 <br />
                 Deutschland
                 <br />
-                E-Mail:{" "}
-                <a href={`mailto:${siteConfig.links.email}`}>
-                  {siteConfig.links.email}
-                </a>
+                E-Mail: <PrivacyEmailLink />
               </p>
             </section>
 
-            <section aria-labelledby="privacy-hosting">
-              <h2 id="privacy-hosting">2. Hosting und Server-Protokolle</h2>
+            <section aria-labelledby="privacy-scope">
+              <h2 id="privacy-scope">2. Geltungsbereich</h2>
               <p>
-                Die Website wird bei Vercel Inc. in den USA gehostet. Beim
-                Aufruf der Website werden technisch erforderliche
-                Verbindungsdaten verarbeitet. Dazu können IP-Adresse, Datum und
-                Uhrzeit, aufgerufene Adresse, übertragene Datenmenge, Referrer,
-                Browser, Betriebssystem und HTTP-Status gehören.
+                Diese Datenschutzerklärung gilt für die mobile Dayova App und
+                die Website dayova.com. Die App unterstützt dich bei der
+                Planung und Durchführung von Lernaufgaben. Dafür verarbeitet
+                sie Konto-, Lern-, Nutzungs- und gegebenenfalls Kaufdaten.
+              </p>
+            </section>
+
+            <section aria-labelledby="privacy-account">
+              <h2 id="privacy-account">3. Benutzerkonto und Profildaten</h2>
+              <p>
+                Für Registrierung, Anmeldung und Kontoverwaltung verarbeiten
+                wir insbesondere deine E-Mail-Adresse, eine interne
+                Benutzerkennung und Anmeldedaten. Freiwillig oder im Rahmen des
+                Onboardings können außerdem Name, Telefonnummer, Geburtsdatum,
+                Klassenstufe, Schulart, Bundesland und Profilbild verarbeitet
+                werden. Passwörter werden nicht im Klartext von Dayova
+                gespeichert.
               </p>
               <p>
-                Die Verarbeitung dient der sicheren und zuverlässigen
-                Bereitstellung der Website sowie der Erkennung technischer
-                Fehler und missbräuchlicher Zugriffe. Rechtsgrundlage ist Art.
-                6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt im
-                sicheren Betrieb der Website. Mit Vercel besteht eine
-                Vereinbarung zur Auftragsverarbeitung. Soweit Daten in den USA
-                verarbeitet werden, stützt Vercel die Übermittlung auf
-                anerkannte Garantien, insbesondere Standardvertragsklauseln und
-                – soweit anwendbar – das EU-US Data Privacy Framework. Daten
-                werden nur so lange gespeichert, wie dies für Betrieb,
-                Sicherheit und gesetzliche Pflichten erforderlich ist.
+                Für die Authentifizierung nutzen wir Clerk, Inc. Die
+                Anwendungs- und Profildaten werden über Convex, Inc. verarbeitet
+                und gespeichert. Die Verarbeitung ist erforderlich, um dein
+                Konto und die vereinbarten App-Funktionen bereitzustellen. Ihre
+                Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Sicherheits- und
+                Missbrauchsschutzmaßnahmen beruhen zusätzlich auf Art. 6 Abs. 1
+                lit. f DSGVO.
               </p>
               <p>
-                Weitere Informationen findest du in der{" "}
+                Weitere Informationen findest du in den
+                Datenschutzhinweisen von{" "}
                 <a
-                  href="https://vercel.com/legal/privacy-policy"
+                  href="https://clerk.com/legal/privacy"
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Datenschutzerklärung von Vercel
+                  Clerk
+                </a>{" "}
+                und{" "}
+                <a
+                  href="https://www.convex.dev/legal/privacy"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Convex
                 </a>
                 .
               </p>
             </section>
 
-            <section aria-labelledby="privacy-contact">
-              <h2 id="privacy-contact">3. Kontaktaufnahme</h2>
+            <section aria-labelledby="privacy-learning-data">
+              <h2 id="privacy-learning-data">4. Lern- und Planungsdaten</h2>
               <p>
-                Das Kontaktformular auf der Website überträgt keine Eingaben an
-                einen Dayova-Webserver. Es öffnet dein eingerichtetes
-                E-Mail-Programm. Wenn du uns eine E-Mail sendest, verarbeiten
-                wir deine E-Mail-Adresse, deinen Namen, den Inhalt deiner
-                Nachricht und weitere von dir mitgeteilte Angaben, um dein
-                Anliegen zu beantworten.
+                Zur Erstellung und Nutzung deiner Lernpläne verarbeiten wir
+                unter anderem Prüfungsfach und -termin, Lernziele, verfügbare
+                Lernzeiten, Aufgaben, Notizen, Antworten auf Diagnosefragen,
+                Lernfortschritt, Ergebnisse einzelner Lerneinheiten und Angaben
+                dazu, warum eine Einheit verschoben oder nicht abgeschlossen
+                wurde. Diese Daten sind deinem Konto zugeordnet.
               </p>
               <p>
-                Geht es um einen Vertrag oder vorvertragliche Maßnahmen, ist
-                Art. 6 Abs. 1 lit. b DSGVO die Rechtsgrundlage. Bei allgemeinen
-                Anfragen beruht die Verarbeitung auf Art. 6 Abs. 1 lit. f
-                DSGVO. Unser berechtigtes Interesse ist die Bearbeitung deiner
-                Anfrage. Wir löschen die Daten, wenn das Anliegen erledigt ist
-                und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+                Die Verarbeitung dient der Erstellung, Anpassung und Anzeige
+                deines persönlichen Lernplans sowie der Lernanalyse. Grundlage
+                ist Art. 6 Abs. 1 lit. b DSGVO. Bitte trage keine besonders
+                sensiblen personenbezogenen Daten über dich oder andere
+                Personen ein, die für den Lernzweck nicht erforderlich sind.
               </p>
             </section>
 
-            <section aria-labelledby="privacy-storage">
-              <h2 id="privacy-storage">
-                4. Erforderliche Speicherung im Browser
+            <section aria-labelledby="privacy-uploads-ai">
+              <h2 id="privacy-uploads-ai">
+                5. Hochgeladene Materialien und KI-Verarbeitung
               </h2>
               <p>
-                Wir speichern deine Entscheidung zur Reichweitenmessung im
-                lokalen Speicher deines Browsers. Dadurch wird deine Auswahl
-                bei einem späteren Besuch berücksichtigt. Diese Speicherung ist
-                für die von dir gewählte Datenschutzeinstellung erforderlich.
-                Rechtsgrundlagen sind § 25 Abs. 2 Nr. 2 TDDDG und Art. 6 Abs. 1
-                lit. f DSGVO.
+                Du kannst Lernmaterialien wie PDFs, Office-Dokumente, Bilder
+                und Textdateien hochladen. Dabei verarbeiten wir Dateiinhalt,
+                Dateiname, Dateityp und Dateigröße. Die Dateien werden in einem
+                geschützten Speicher von Cloudflare R2 oder Convex gespeichert
+                und sind dem jeweiligen Lernplan zugeordnet.
               </p>
               <p>
-                Im Lehrerdashboard werden Demo-Daten, Einstellungen und
-                Einladungen lokal im Browser gespeichert. Auch die gewählte
-                Farbdarstellung kann auf deinem Gerät gespeichert werden. Diese
-                Daten werden nicht an einen Dayova-Server übertragen. Du kannst
-                sie über die Einstellungen deines Browsers entfernen.
-              </p>
-            </section>
-
-            <section aria-labelledby="privacy-analytics">
-              <h2 id="privacy-analytics">5. Google Analytics 4</h2>
-              <p>
-                Wenn du ausdrücklich zustimmst, verwenden wir Google Analytics
-                4 zur Reichweitenmessung. Anbieter ist Google Ireland Limited,
-                Gordon House, Barrow Street, Dublin 4, Irland. Eine Verarbeitung
-                durch Google LLC in den USA kann nicht ausgeschlossen werden.
-                Google Analytics wird vor deiner Zustimmung nicht geladen.
+                Zur Erstellung von Diagnosefragen, Lernplänen und Lerninhalten
+                werden erforderliche Inhalte aus den hochgeladenen Materialien,
+                deine lernbezogenen Angaben und Antworten über Google Cloud
+                Vertex AI verarbeitet. Dabei kann eine automatisierte Ausgabe
+                entstehen. Die KI-Ausgabe dient der Lernunterstützung und kann
+                Fehler enthalten; sie ersetzt keine fachliche oder schulische
+                Bewertung. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
               </p>
               <p>
-                Dabei können aufgerufene Seiten, Herkunftsseite, Interaktionen,
-                Zeitpunkt, ungefähre Region, Geräte- und Browserinformationen
-                sowie pseudonyme Kennungen verarbeitet und Cookies wie
-                <code>_ga</code> und <code>_ga_*</code> gesetzt werden. Google
-                verwendet die IP-Adresse bei der Erfassung zur Bestimmung einer
-                ungefähren Region und speichert sie nach eigenen Angaben in
-                Google Analytics 4 nicht dauerhaft.
-              </p>
-              <p>
-                Rechtsgrundlagen sind deine Einwilligung nach Art. 6 Abs. 1 lit.
-                a DSGVO und § 25 Abs. 1 TDDDG. Du kannst deine Einwilligung
-                jederzeit mit Wirkung für die Zukunft über
-                „Cookie-Einstellungen“ im Footer widerrufen. Die
-                Aufbewahrungsdauer für nutzerbezogene Ereignisdaten richtet sich
-                nach der im Google-Analytics-Konto gewählten Frist von zwei oder
-                vierzehn Monaten. Zusammengefasste Standardberichte können
-                länger bestehen.
-              </p>
-              <p>
-                Für Übermittlungen in die USA nutzt Google anerkannte
-                Übermittlungsmechanismen, darunter – soweit anwendbar – das
-                EU-US Data Privacy Framework und Standardvertragsklauseln. Mehr
-                erfährst du in der{" "}
+                Lade nur Materialien hoch, die du verwenden darfst, und
+                entferne Namen oder andere personenbezogene Daten Dritter,
+                sofern sie nicht erforderlich sind. Informationen zum
+                Datenschutz findest du bei{" "}
                 <a
-                  href="https://policies.google.com/privacy?hl=de"
+                  href="https://cloud.google.com/privacy"
                   rel="noreferrer"
                   target="_blank"
                 >
-                  Datenschutzerklärung von Google
+                  Google Cloud
+                </a>{" "}
+                und{" "}
+                <a
+                  href="https://www.cloudflare.com/privacypolicy/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Cloudflare
+                </a>
+                .
+              </p>
+            </section>
+
+            <section aria-labelledby="privacy-device-access">
+              <h2 id="privacy-device-access">
+                6. Kamera, Fotos, Dateien und Sprache
+              </h2>
+              <p>
+                Mit deiner vorherigen Gerätefreigabe kann Dayova auf Kamera,
+                Fotomediathek, Dateiauswahl, Mikrofon und Spracherkennung
+                zugreifen. Der Zugriff erfolgt nur, wenn du die jeweilige
+                Funktion verwendest, etwa um Lernmaterial zu fotografieren,
+                eine Datei auszuwählen oder eine Antwort einzusprechen. Du
+                kannst Berechtigungen jederzeit in den Systemeinstellungen
+                deines Geräts ändern.
+              </p>
+              <p>
+                Ausgewählte Dateien und Bilder werden wie in Abschnitt 5
+                beschrieben verarbeitet. Bei der Spracheingabe wird Sprache in
+                Text umgewandelt; der daraus entstehende Text kann als
+                Lernantwort gespeichert und verarbeitet werden.
+              </p>
+            </section>
+
+            <section aria-labelledby="privacy-notifications">
+              <h2 id="privacy-notifications">
+                7. Erinnerungen und Mitteilungen
+              </h2>
+              <p>
+                Wenn du Mitteilungen erlaubst, plant Dayova auf deinem Gerät
+                Erinnerungen an Lernzeiten, Prüfungen und Aufgaben. Wir
+                verarbeiten dafür deine Benachrichtigungseinstellungen,
+                geplante Zeitpunkte und den Zustell- beziehungsweise Lesestatus.
+                Die Systemberechtigung ist freiwillig und kann jederzeit in den
+                Geräteeinstellungen widerrufen werden.
+              </p>
+            </section>
+
+            <section aria-labelledby="privacy-app-analytics">
+              <h2 id="privacy-app-analytics">8. App-Analyse mit PostHog</h2>
+              <p>
+                Zur Verbesserung der App kann Dayova PostHog auf europäischen
+                Servern einsetzen. Nach der Anmeldung werden dabei eine
+                pseudonyme Benutzerkennung, App- und Geräteinformationen sowie
+                ausgewählte Nutzungsereignisse verarbeitet, beispielsweise ob
+                das Onboarding abgeschlossen, ein Lernplan erstellt oder eine
+                Lerneinheit begonnen wurde. Rohinhalte hochgeladener Dateien,
+                Namen, E-Mail-Adressen, Geburtsdaten, Notizen und Antworten
+                werden nicht als Analyse-Ereignisse übermittelt.
+              </p>
+              <p>
+                Die Verarbeitung beruht auf Art. 6 Abs. 1 lit. f DSGVO. Unser
+                berechtigtes Interesse ist die sichere, stabile und
+                nutzerfreundliche Weiterentwicklung der App. Mehr erfährst du
+                in der{" "}
+                <a
+                  href="https://posthog.com/privacy"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Datenschutzerklärung von PostHog
                 </a>
                 .
               </p>
             </section>
 
             <section aria-labelledby="privacy-payment">
-              <h2 id="privacy-payment">6. Abonnements und Bezahlung</h2>
+              <h2 id="privacy-payment">9. Abonnements und Bezahlung</h2>
               <p>
-                Wenn du auf der Preisseite ein Abonnement auswählst, wirst du zu
-                einem von RevenueCat bereitgestellten Bezahlvorgang
-                weitergeleitet. Anbieter ist RevenueCat, Inc., 1032 E Brandon
-                Blvd #3003, Brandon, FL 33511, USA. RevenueCat setzt für die
-                Zahlungsabwicklung Stripe ein.
+                Käufe in der iOS-App werden über Apple In-App Purchase
+                abgewickelt. Apple verarbeitet dabei die Zahlungs- und
+                Apple-Account-Daten nach eigener Verantwortlichkeit. Dayova
+                erhält keine vollständigen Zahlungsdaten, sondern insbesondere
+                Produkt, Kaufstatus, Laufzeit und eine technische
+                Transaktionskennung. Für die Verwaltung des Abo-Status und der
+                Zugriffsberechtigung nutzen wir RevenueCat.
               </p>
               <p>
-                Dabei können technische Verbindungsdaten, die gewählte Leistung,
-                Kontakt- und Rechnungsangaben, Zahlungsstatus und für die
-                Zahlung erforderliche Daten verarbeitet werden. Dayova erhält
-                keine vollständigen Kartenangaben. Die Verarbeitung ist für
-                Vertragsabschluss und Zahlung erforderlich und beruht auf Art.
-                6 Abs. 1 lit. b DSGVO. Gesetzlich aufzubewahrende Rechnungs- und
-                Buchungsdaten verarbeiten wir auf Grundlage von Art. 6 Abs. 1
-                lit. c DSGVO. Bei einer Verarbeitung in den USA nutzen die
-                Anbieter die jeweils anwendbaren Garantien für
-                Drittlandübermittlungen.
+                Bei einem Kauf über die Website wird der von RevenueCat
+                bereitgestellte Bezahlvorgang verwendet; RevenueCat setzt dort
+                Stripe ein. Dabei können technische Verbindungsdaten, gewählte
+                Leistung, Kontakt- und Rechnungsangaben sowie Zahlungsstatus
+                verarbeitet werden. Rechtsgrundlagen sind Art. 6 Abs. 1 lit. b
+                und, für gesetzlich aufzubewahrende Buchungsdaten, Art. 6 Abs. 1
+                lit. c DSGVO.
               </p>
               <p>
                 Weitere Informationen findest du bei{" "}
+                <a
+                  href="https://www.apple.com/legal/privacy/de-ww/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Apple
+                </a>
+                ,{" "}
                 <a
                   href="https://www.revenuecat.com/privacy-policy/"
                   rel="noreferrer"
@@ -210,31 +278,133 @@ export default function PrivacyPage() {
               </p>
             </section>
 
-            <section aria-labelledby="privacy-external-links">
-              <h2 id="privacy-external-links">7. Externe Links</h2>
+            <section aria-labelledby="privacy-hosting">
+              <h2 id="privacy-hosting">
+                10. Website-Hosting und Server-Protokolle
+              </h2>
               <p>
-                Die Website enthält Links zu sozialen Netzwerken, App-Stores
-                und weiteren externen Angeboten. Erst wenn du einen solchen
-                Link öffnest, erhält der jeweilige Anbieter Verbindungsdaten und
-                verarbeitet sie nach seinen eigenen Datenschutzbestimmungen.
-                Auf diese Verarbeitung haben wir keinen Einfluss.
+                Die Website wird bei Vercel Inc. gehostet. Beim Aufruf werden
+                technisch erforderliche Verbindungsdaten verarbeitet. Dazu
+                können IP-Adresse, Datum und Uhrzeit, aufgerufene Adresse,
+                Referrer, Browser, Betriebssystem und HTTP-Status gehören. Die
+                Verarbeitung dient dem sicheren und zuverlässigen Betrieb der
+                Website und beruht auf Art. 6 Abs. 1 lit. f DSGVO.
+              </p>
+              <p>
+                Weitere Informationen findest du in der{" "}
+                <a
+                  href="https://vercel.com/legal/privacy-policy"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Datenschutzerklärung von Vercel
+                </a>
+                .
+              </p>
+            </section>
+
+            <section aria-labelledby="privacy-contact">
+              <h2 id="privacy-contact">11. Kontaktaufnahme und Support</h2>
+              <p>
+                Wenn du uns kontaktierst, verarbeiten wir deine E-Mail-Adresse,
+                deinen Namen, den Inhalt deiner Nachricht und weitere von dir
+                mitgeteilte Angaben, um dein Anliegen zu bearbeiten. Bei
+                Vertrags- und Supportanfragen ist Art. 6 Abs. 1 lit. b DSGVO
+                die Rechtsgrundlage; bei allgemeinen Anfragen Art. 6 Abs. 1
+                lit. f DSGVO. Wir löschen die Daten, sobald das Anliegen
+                erledigt ist und keine Aufbewahrungspflichten entgegenstehen.
+              </p>
+            </section>
+
+            <section aria-labelledby="privacy-website-storage">
+              <h2 id="privacy-website-storage">
+                12. Website-Speicherung und Google Analytics 4
+              </h2>
+              <p>
+                Die Website speichert deine Entscheidung zur Reichweitenmessung
+                im lokalen Speicher des Browsers. Im Lehrerdashboard werden
+                Demo-Daten und Einstellungen lokal gespeichert. Diese
+                erforderliche Speicherung beruht auf § 25 Abs. 2 Nr. 2 TDDDG
+                und Art. 6 Abs. 1 lit. f DSGVO.
+              </p>
+              <p>
+                Nur nach deiner ausdrücklichen Einwilligung verwenden wir auf
+                der Website Google Analytics 4. Dabei können Seitenaufrufe,
+                Interaktionen, ungefähre Region, Geräte- und
+                Browserinformationen sowie pseudonyme Kennungen verarbeitet
+                werden. Rechtsgrundlagen sind Art. 6 Abs. 1 lit. a DSGVO und §
+                25 Abs. 1 TDDDG. Du kannst deine Einwilligung über
+                „Cookie-Einstellungen“ im Footer widerrufen.
+              </p>
+              <p>
+                Weitere Informationen findest du in der{" "}
+                <a
+                  href="https://policies.google.com/privacy?hl=de"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Datenschutzerklärung von Google
+                </a>
+                .
+              </p>
+            </section>
+
+            <section aria-labelledby="privacy-transfers">
+              <h2 id="privacy-transfers">13. Empfänger und Drittländer</h2>
+              <p>
+                Wir geben Daten nur weiter, wenn dies für die beschriebenen
+                Funktionen, zur Vertragserfüllung, aufgrund einer gesetzlichen
+                Pflicht oder mit deiner Einwilligung erforderlich ist. Unsere
+                technischen Dienstleister erhalten nur die für ihre jeweilige
+                Aufgabe notwendigen Daten und werden vertraglich verpflichtet.
+              </p>
+              <p>
+                Soweit Anbieter Daten außerhalb des Europäischen
+                Wirtschaftsraums verarbeiten, stützen wir die Übermittlung auf
+                einen Angemessenheitsbeschluss, das EU-US Data Privacy
+                Framework oder Standardvertragsklauseln und ergänzende
+                Schutzmaßnahmen, soweit erforderlich.
               </p>
             </section>
 
             <section aria-labelledby="privacy-retention">
-              <h2 id="privacy-retention">8. Speicherdauer</h2>
+              <h2 id="privacy-retention">14. Speicherdauer und Löschung</h2>
               <p>
-                Soweit in dieser Erklärung keine konkrete Frist genannt ist,
-                speichern wir personenbezogene Daten nur so lange, wie sie für
-                den jeweiligen Zweck benötigt werden. Anschließend löschen wir
-                sie, sofern keine gesetzlichen Aufbewahrungspflichten oder die
-                Sicherung und Durchsetzung von Ansprüchen eine weitere
-                Speicherung erfordern.
+                Konto- und Lerninhalte speichern wir grundsätzlich so lange,
+                wie dein Konto besteht und die jeweilige Funktion genutzt wird.
+                Hochgeladene Materialien werden gelöscht, wenn du das
+                zugehörige Material oder den Lernplan entfernst beziehungsweise
+                dein Konto gelöscht wird, soweit keine gesetzlichen Pflichten
+                entgegenstehen. Technische Protokolle und Analysedaten werden
+                nur so lange vorgehalten, wie sie für Sicherheit, Fehleranalyse
+                und Produktverbesserung erforderlich sind.
+              </p>
+              <p>
+                Die vollständige Löschung deines Kontos kannst du über unseren
+                Support unter <PrivacyEmailLink /> verlangen. Gesetzlich
+                aufzubewahrende Vertrags-, Steuer- und Zahlungsnachweise werden
+                erst nach Ablauf der jeweiligen Fristen gelöscht. Daten können
+                außerdem vorübergehend in technisch erforderlichen Sicherungen
+                verbleiben und werden dort nach dem regulären Löschzyklus
+                entfernt.
+              </p>
+            </section>
+
+            <section aria-labelledby="privacy-minors">
+              <h2 id="privacy-minors">15. Minderjährige</h2>
+              <p>
+                Dayova richtet sich auch an Schülerinnen und Schüler. Soweit
+                für Registrierung, Einwilligung oder Vertragsschluss die
+                Zustimmung einer sorgeberechtigten Person erforderlich ist,
+                darf die App nur mit dieser Zustimmung verwendet werden. Wir
+                verwenden Daten Minderjähriger nicht für personalisierte
+                Werbung und bitten darum, keine unnötigen Daten über andere
+                Schülerinnen, Schüler oder Lehrkräfte hochzuladen.
               </p>
             </section>
 
             <section aria-labelledby="privacy-rights">
-              <h2 id="privacy-rights">9. Deine Rechte</h2>
+              <h2 id="privacy-rights">16. Deine Rechte</h2>
               <p>Du hast nach der DSGVO insbesondere das Recht auf:</p>
               <ul>
                 <li>Auskunft über deine personenbezogenen Daten (Art. 15),</li>
@@ -246,29 +416,23 @@ export default function PrivacyPage() {
                   Widerspruch gegen Verarbeitungen auf Grundlage von Art. 6
                   Abs. 1 lit. e oder f DSGVO (Art. 21),
                 </li>
-                <li>
-                  Widerruf einer Einwilligung für die Zukunft (Art. 7 Abs. 3)
-                  sowie
-                </li>
+                <li>Widerruf einer Einwilligung für die Zukunft sowie</li>
                 <li>
                   Beschwerde bei einer Datenschutzaufsichtsbehörde (Art. 77).
                 </li>
               </ul>
               <p>
                 Zur Ausübung deiner Rechte genügt eine Nachricht an{" "}
-                <a href={`mailto:${siteConfig.links.email}`}>
-                  {siteConfig.links.email}
-                </a>
-                .
+                <PrivacyEmailLink />.
               </p>
             </section>
 
             <section aria-labelledby="privacy-authority">
-              <h2 id="privacy-authority">10. Datenschutzaufsicht</h2>
+              <h2 id="privacy-authority">17. Datenschutzaufsicht</h2>
               <p>
                 Zuständige Aufsichtsbehörde ist die Sächsische Datenschutz- und
                 Transparenzbeauftragte, Maternistraße 17, 01067 Dresden. Weitere
-                Informationen und das Beschwerdeformular findest du unter{" "}
+                Informationen findest du unter{" "}
                 <a
                   href="https://www.datenschutz.sachsen.de/"
                   rel="noreferrer"
@@ -281,8 +445,8 @@ export default function PrivacyPage() {
             </section>
 
             <section aria-labelledby="privacy-update">
-              <h2 id="privacy-update">11. Stand dieser Erklärung</h2>
-              <p>Stand: 10. August 2026</p>
+              <h2 id="privacy-update">18. Stand dieser Erklärung</h2>
+              <p>Stand: 4. September 2026</p>
             </section>
           </div>
         </div>

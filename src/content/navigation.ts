@@ -46,6 +46,7 @@ export const footerNavigation = [
   {
     title: "Rechtliches",
     links: [
+      { href: "/support", label: "Support" },
       { href: "/legal-notice", label: "Impressum" },
       { href: "/privacy", label: "Datenschutz" },
       { href: "/terms", label: "Nutzungsbedingungen" },
