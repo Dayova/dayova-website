@@ -42,9 +42,10 @@ export default function SupportPage() {
               <h2 id="support-account">Anmeldung und Benutzerkonto</h2>
               <p>
                 Prüfe zunächst deine Internetverbindung und ob du die richtige
-                E-Mail-Adresse verwendest. Wenn du keinen Zugriff mehr auf dein
-                Konto hast oder dein Konto vollständig löschen lassen möchtest,
-                kontaktiere uns über die oben genannte Support-Adresse.
+                E-Mail-Adresse verwendest. Dein Konto kannst du in der App unter
+                Einstellungen → Konto → Konto löschen vollständig entfernen.
+                Wenn du keinen Zugriff mehr auf die App hast, kontaktiere uns
+                über die oben genannte Support-Adresse.
               </p>
             </section>
 
@@ -91,7 +92,9 @@ export default function SupportPage() {
                 Löschung kannst du an{" "}
                 <a href={supportEmail}>{siteConfig.links.email}</a> senden.
                 Einzelne Lernpläne und hochgeladene Materialien kannst du in
-                der App entfernen. Weitere Informationen findest du in unserer{" "}
+                der App entfernen; dein vollständiges Konto löschst du unter
+                Einstellungen → Konto → Konto löschen. Weitere Informationen
+                findest du in unserer{" "}
                 <a href="/privacy">Datenschutzerklärung</a>.
               </p>
             </section>
