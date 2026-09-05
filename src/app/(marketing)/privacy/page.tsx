@@ -66,11 +66,18 @@ export default function PrivacyPage() {
               <p>
                 Für Registrierung, Anmeldung und Kontoverwaltung verarbeiten
                 wir insbesondere deine E-Mail-Adresse, eine interne
-                Benutzerkennung und Anmeldedaten. Freiwillig oder im Rahmen des
-                Onboardings können außerdem Name, Telefonnummer, Geburtsdatum,
-                Klassenstufe, Schulart, Bundesland und Profilbild verarbeitet
-                werden. Passwörter werden nicht im Klartext von Dayova
-                gespeichert.
+                Benutzerkennung und Anmeldedaten. Im Onboarding verarbeiten wir
+                außerdem deinen Namen, deine Klassenstufe, deine Schulart und
+                dein Bundesland. Ein genaues Geburtsdatum fragen wir in der
+                aktuellen App nicht ab. Passwörter werden nicht im Klartext von
+                Dayova gespeichert.
+              </p>
+              <p>
+                Bei älteren Konten können freiwillig hinterlegte Profildaten,
+                etwa eine Telefonnummer, ein Geburtsdatum oder ein Profilbild,
+                bis zu ihrer gesonderten Löschung oder Kontolöschung weiterhin
+                gespeichert sein. Die aktuelle App erhebt diese Angaben nicht
+                neu.
               </p>
               <p>
                 Für die Authentifizierung nutzen wir Clerk, Inc. Die
@@ -134,13 +141,39 @@ export default function PrivacyPage() {
                 und sind dem jeweiligen Lernplan zugeordnet.
               </p>
               <p>
-                Zur Erstellung von Diagnosefragen, Lernplänen und Lerninhalten
-                werden erforderliche Inhalte aus den hochgeladenen Materialien,
-                deine lernbezogenen Angaben und Antworten über Google Cloud
-                Vertex AI verarbeitet. Dabei kann eine automatisierte Ausgabe
-                entstehen. Die KI-Ausgabe dient der Lernunterstützung und kann
-                Fehler enthalten; sie ersetzt keine fachliche oder schulische
-                Bewertung. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
+                Bevor Dayova erstmals Daten für eine KI-gestützte Funktion
+                übermittelt, zeigen wir dir in der App den Empfänger, die
+                betroffenen Datenkategorien und den Verwendungszweck. Erst wenn
+                du dort ausdrücklich zustimmst, übermittelt Dayova die für die
+                gewählte Funktion erforderlichen Inhalte an Google Cloud Vertex
+                AI. Google Cloud ist dabei ein externer KI-Dienstleister. Je
+                nach Funktion können Inhalte und Dateinamen deiner
+                Lernmaterialien und Stundenpläne, Prüfungsfach, Prüfungsart und
+                -termin, Themen, Notizen, Lernzeiten, deine Antworten und dein
+                bisheriger Lernfortschritt übermittelt werden. Die Daten
+                übermittelt Dayova ausschließlich, um Diagnosefragen,
+                Lernpläne, Lerninhalte oder die Stundenplan-Erkennung
+                bereitzustellen.
+              </p>
+              <p>
+                Dabei kann eine automatisierte Ausgabe entstehen. Die
+                KI-Ausgabe kann Fehler enthalten und ersetzt keine fachliche
+                oder schulische Bewertung. Rechtsgrundlage für die
+                Übermittlung an Google Cloud Vertex AI ist deine Einwilligung
+                nach Art. 6 Abs. 1 lit. a DSGVO. Ohne deine Einwilligung findet
+                diese Übermittlung nicht statt; die betroffene KI-Funktion kann
+                dann nicht ausgeführt werden. Andere Funktionen der App kannst
+                du weiterhin verwenden.
+              </p>
+              <p>
+                Du kannst deine Einwilligung jederzeit in der App unter
+                „Einstellungen → KI &amp; Datenschutz“ mit Wirkung für die
+                Zukunft widerrufen. Die Rechtmäßigkeit der Verarbeitung bis
+                zum Widerruf bleibt unberührt. Damit wir deine Auswahl
+                zuverlässig berücksichtigen und bei geänderten Hinweisen
+                erneut fragen können, speichern wir den Einwilligungsstatus,
+                die Version des angezeigten Hinweises sowie die Zeitpunkte der
+                Erteilung, Änderung oder des Widerrufs.
               </p>
               <p>
                 Lade nur Materialien hoch, die du verwenden darfst, und
@@ -168,22 +201,20 @@ export default function PrivacyPage() {
 
             <section aria-labelledby="privacy-device-access">
               <h2 id="privacy-device-access">
-                6. Kamera, Fotos, Dateien und Sprache
+                6. Kamera, Fotos und Dateien
               </h2>
               <p>
                 Mit deiner vorherigen Gerätefreigabe kann Dayova auf Kamera,
-                Fotomediathek, Dateiauswahl, Mikrofon und Spracherkennung
-                zugreifen. Der Zugriff erfolgt nur, wenn du die jeweilige
-                Funktion verwendest, etwa um Lernmaterial zu fotografieren,
-                eine Datei auszuwählen oder eine Antwort einzusprechen. Du
-                kannst Berechtigungen jederzeit in den Systemeinstellungen
-                deines Geräts ändern.
+                Fotomediathek und die von dir über die Dateiauswahl gewählten
+                Dateien zugreifen. Der Zugriff erfolgt nur, wenn du die
+                jeweilige Funktion verwendest, etwa um Lernmaterial zu
+                fotografieren oder eine Datei auszuwählen. Du kannst erteilte
+                Geräteberechtigungen jederzeit in den Systemeinstellungen
+                ändern.
               </p>
               <p>
                 Ausgewählte Dateien und Bilder werden wie in Abschnitt 5
-                beschrieben verarbeitet. Bei der Spracheingabe wird Sprache in
-                Text umgewandelt; der daraus entstehende Text kann als
-                Lernantwort gespeichert und verarbeitet werden.
+                beschrieben verarbeitet.
               </p>
             </section>
 
@@ -210,8 +241,8 @@ export default function PrivacyPage() {
                 ausgewählte Nutzungsereignisse verarbeitet, beispielsweise ob
                 das Onboarding abgeschlossen, ein Lernplan erstellt oder eine
                 Lerneinheit begonnen wurde. Rohinhalte hochgeladener Dateien,
-                Namen, E-Mail-Adressen, Geburtsdaten, Notizen und Antworten
-                werden nicht als Analyse-Ereignisse übermittelt.
+                Namen, E-Mail-Adressen, Notizen und Antworten werden nicht als
+                Analyse-Ereignisse übermittelt.
               </p>
               <p>
                 Die Verarbeitung beruht auf Art. 6 Abs. 1 lit. f DSGVO. Unser
@@ -380,13 +411,22 @@ export default function PrivacyPage() {
                 und Produktverbesserung erforderlich sind.
               </p>
               <p>
-                Die vollständige Löschung deines Kontos kannst du über unseren
-                Support unter <PrivacyEmailLink /> verlangen. Gesetzlich
-                aufzubewahrende Vertrags-, Steuer- und Zahlungsnachweise werden
-                erst nach Ablauf der jeweiligen Fristen gelöscht. Daten können
-                außerdem vorübergehend in technisch erforderlichen Sicherungen
-                verbleiben und werden dort nach dem regulären Löschzyklus
-                entfernt.
+                Du kannst die vollständige Löschung direkt in der App unter
+                Einstellungen → Konto → Konto löschen veranlassen. Dabei werden
+                dein Dayova-Konto, deine Lern- und Planungsdaten sowie deine
+                hochgeladenen Materialien gelöscht. Wenn du keinen Zugriff auf
+                die App hast, kannst du dich alternativ an <PrivacyEmailLink />
+                wenden.
+              </p>
+              <p>
+                Die Kontolöschung beendet ein über Apple oder Google
+                abgeschlossenes Abonnement nicht automatisch. Ein aktives
+                Store-Abonnement musst du zusätzlich in deinem App-Store-Konto
+                kündigen. Gesetzlich aufzubewahrende Vertrags-, Steuer- und
+                Zahlungsnachweise werden erst nach Ablauf der jeweiligen
+                Fristen gelöscht. Daten können außerdem vorübergehend in
+                technisch erforderlichen Sicherungen verbleiben und werden
+                dort nach dem regulären Löschzyklus entfernt.
               </p>
             </section>
 
@@ -446,7 +486,7 @@ export default function PrivacyPage() {
 
             <section aria-labelledby="privacy-update">
               <h2 id="privacy-update">18. Stand dieser Erklärung</h2>
-              <p>Stand: 4. September 2026</p>
+              <p>Stand: 5. September 2026</p>
             </section>
           </div>
         </div>
