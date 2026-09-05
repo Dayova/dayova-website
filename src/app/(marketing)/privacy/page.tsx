@@ -141,22 +141,39 @@ export default function PrivacyPage() {
                 und sind dem jeweiligen Lernplan zugeordnet.
               </p>
               <p>
-                Wenn du eine KI-gestützte Funktion zur Erstellung von
-                Diagnosefragen, Lernplänen oder Lerninhalten nutzt, übermittelt
-                Dayova die dafür erforderlichen Inhalte an Google Cloud Vertex
+                Bevor Dayova erstmals Daten für eine KI-gestützte Funktion
+                übermittelt, zeigen wir dir in der App den Empfänger, die
+                betroffenen Datenkategorien und den Verwendungszweck. Erst wenn
+                du dort ausdrücklich zustimmst, übermittelt Dayova die für die
+                gewählte Funktion erforderlichen Inhalte an Google Cloud Vertex
                 AI. Google Cloud ist dabei ein externer KI-Dienstleister. Je
-                nach Funktion können Auszüge aus deinen hochgeladenen
-                Materialien, Prüfungsfach und -termin, Lernziele, verfügbare
-                Lernzeiten sowie deine Antworten übermittelt werden. Die Daten
-                übermittelt Dayova ausschließlich, um die von dir angeforderte
-                Lernunterstützung zu erzeugen.
+                nach Funktion können Inhalte und Dateinamen deiner
+                Lernmaterialien und Stundenpläne, Prüfungsfach, Prüfungsart und
+                -termin, Themen, Notizen, Lernzeiten, deine Antworten und dein
+                bisheriger Lernfortschritt übermittelt werden. Die Daten
+                übermittelt Dayova ausschließlich, um Diagnosefragen,
+                Lernpläne, Lerninhalte oder die Stundenplan-Erkennung
+                bereitzustellen.
               </p>
               <p>
                 Dabei kann eine automatisierte Ausgabe entstehen. Die
                 KI-Ausgabe kann Fehler enthalten und ersetzt keine fachliche
-                oder schulische Bewertung. Die Verarbeitung ist zur
-                Bereitstellung der von dir angeforderten KI-Funktion
-                erforderlich und beruht auf Art. 6 Abs. 1 lit. b DSGVO.
+                oder schulische Bewertung. Rechtsgrundlage für die
+                Übermittlung an Google Cloud Vertex AI ist deine Einwilligung
+                nach Art. 6 Abs. 1 lit. a DSGVO. Ohne deine Einwilligung findet
+                diese Übermittlung nicht statt; die betroffene KI-Funktion kann
+                dann nicht ausgeführt werden. Andere Funktionen der App kannst
+                du weiterhin verwenden.
+              </p>
+              <p>
+                Du kannst deine Einwilligung jederzeit in der App unter
+                „Einstellungen → KI &amp; Datenschutz“ mit Wirkung für die
+                Zukunft widerrufen. Die Rechtmäßigkeit der Verarbeitung bis
+                zum Widerruf bleibt unberührt. Damit wir deine Auswahl
+                zuverlässig berücksichtigen und bei geänderten Hinweisen
+                erneut fragen können, speichern wir den Einwilligungsstatus,
+                die Version des angezeigten Hinweises sowie die Zeitpunkte der
+                Erteilung, Änderung oder des Widerrufs.
               </p>
               <p>
                 Lade nur Materialien hoch, die du verwenden darfst, und
