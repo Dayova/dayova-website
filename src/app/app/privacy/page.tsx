@@ -126,17 +126,15 @@ export default function AppPrivacyPage() {
             </section>
 
             <section aria-labelledby="app-privacy-analytics">
-              <h2 id="app-privacy-analytics">7. App-Analyse mit PostHog</h2>
+              <h2 id="app-privacy-analytics">
+                7. Keine optionale Nutzungsanalyse unter iOS
+              </h2>
               <p>
-                Zur sicheren und nutzerfreundlichen Verbesserung der App kann
-                Dayova PostHog auf europäischen Servern einsetzen. Nach der
-                Anmeldung werden eine pseudonyme Benutzerkennung, App- und
-                Geräteinformationen sowie ausgewählte Nutzungsereignisse
-                verarbeitet. Rohinhalte hochgeladener Dateien, Namen,
-                E-Mail-Adressen, Notizen und Antworten werden nicht als
-                Analyse-Ereignisse übermittelt. Grundlage ist Art. 6 Abs. 1
-                lit. f DSGVO. Du kannst dieser Verarbeitung unter{" "}
-                <PrivacyEmailLink /> widersprechen.
+                Die über den Apple App Store bereitgestellte iOS-Version sendet
+                keine optionalen Nutzungsereignisse an PostHog. Technisch
+                notwendige Protokolle können weiterhin bei den oben genannten
+                Dienstleistern entstehen, um Anmeldung, Datenspeicherung,
+                Käufe, Sicherheit und Fehlerbehebung bereitzustellen.
               </p>
             </section>
 
@@ -180,9 +178,8 @@ export default function AppPrivacyPage() {
                 Hochgeladene Materialien werden entfernt, wenn du das
                 zugehörige Material, den Lernplan oder dein Konto löschst,
                 soweit keine gesetzlichen Pflichten entgegenstehen.
-                Technische Protokolle und Analysedaten bewahren wir nur so lange
-                auf, wie sie für Sicherheit, Fehleranalyse und
-                Produktverbesserung erforderlich sind.
+                Technische Protokolle bewahren wir nur so lange auf, wie sie für
+                Sicherheit und Fehleranalyse erforderlich sind.
               </p>
               <p>
                 Dein vollständiges Konto kannst du direkt in der App unter
