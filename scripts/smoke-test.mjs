@@ -11,6 +11,8 @@ const dashboardHeaders = {
 
 const publicEntryPaths = [
   "/",
+  "/app/privacy",
+  "/app/support",
   "/blog",
   "/datenschutz",
   "/downloads",
