@@ -2,6 +2,89 @@ import type { BlogArticle } from "./types";
 
 export const blogArticlesSeptember2026: readonly BlogArticle[] = [
   {
+    slug: "mehrere-pruefungen-gleichzeitig-was-lerne-ich-zuerst",
+    title: "Mehrere Prüfungen gleichzeitig: Was lerne ich zuerst?",
+    excerpt:
+      "Drei Prüfungen, ein Nachmittag: So setzt du Prioritäten, ohne das nächste Fach zu ignorieren oder ständig zwischen Aufgaben zu wechseln.",
+    category: "Prüfungen",
+    readingTime: "11 Min.",
+    publishedAt: "7. September 2026",
+    publishedAtISO: "2026-09-07T10:00:00+02:00",
+    intro:
+      "Am Donnerstag schreibst du Chemie, am Freitag Deutsch und am Montag Mathematik. Für jedes Fach gibt es offene Themen. Wenn du nur auf den nächsten Termin schaust, bleibt Mathe bis zum Wochenende liegen. Wenn du ständig wechselst, kommst du in keinem Fach weit. Du brauchst deshalb keine perfekte Rangliste aller Aufgaben, sondern eine Priorität für heute und einen kleinen Platz für das, was als Nächstes wichtig wird.",
+    sections: [
+      {
+        title: "Der nächste Termin ist wichtig, aber nicht allein entscheidend",
+        paragraphs: [
+          "Eine Prüfung, die morgen stattfindet, braucht meistens mehr Aufmerksamkeit als eine Prüfung in zwei Wochen. Der Kalender beantwortet aber nur, wann du etwas können musst. Er zeigt nicht, wie groß deine Lücke ist, wie viel Stoff noch offen ist oder ob ein Thema die Grundlage für weitere Aufgaben bildet.",
+          "Deshalb kann eine Mathematikprüfung am Montag schon heute einen Lernschritt brauchen, obwohl vorher noch Deutsch ansteht. Umgekehrt musst du für ein nahes Fach nicht den ganzen Nachmittag reservieren, wenn du die prüfungsrelevanten Aufgaben bereits sicher lösen kannst. Priorität entsteht aus Termin und Lernstand zusammen.",
+        ],
+      },
+      {
+        title: "Verschaffe dir in zehn Minuten einen ehrlichen Überblick",
+        paragraphs: [
+          "Schreibe jede Prüfung mit Termin und Themen auf eine Seite. Notiere nicht nur „Chemie“, sondern zum Beispiel „Redoxreaktionen erklären“, „Oxidationszahlen bestimmen“ und „Reaktionsgleichungen ausgleichen“. Erst konkrete Themen lassen sich vergleichen und in Lernschritte übersetzen.",
+          "Markiere anschließend pro Thema deinen Stand. Ein kurzer Versuch ohne Unterlagen ist verlässlicher als das Gefühl, den Stoff schon einmal gesehen zu haben. Drei Markierungen reichen:",
+        ],
+        bullets: [
+          "Sicher: Du kannst eine typische Aufgabe ohne Hilfe lösen oder den Zusammenhang verständlich erklären.",
+          "Unsicher: Du findest einen Ansatz, brauchst aber Hinweise oder wiederholst einen bestimmten Fehler.",
+          "Offen: Dir fehlt eine Grundlage oder du weißt nicht, wie du anfangen sollst.",
+        ],
+      },
+      {
+        title: "Bewerte Wirkung statt Lautstärke",
+        paragraphs: [
+          "Das Fach, das am meisten Druck auslöst, ist nicht automatisch das Fach mit dem wichtigsten nächsten Lernschritt. Angst, eine lange Themenliste oder ein dicker Ordner machen eine Prüfung laut. Für die Planung zählt, welche begrenzte Aufgabe deine Vorbereitung heute am stärksten verbessert.",
+          "Stelle für jede offene Lücke vier Fragen. Du brauchst daraus keine komplizierte Punktzahl zu berechnen. Die Antworten sollen Unterschiede sichtbar machen:",
+        ],
+        bullets: [
+          "Wie bald brauche ich dieses Wissen?",
+          "Wie unsicher war mein letzter eigener Versuch?",
+          "Wie häufig oder zentral ist das Thema in der Prüfung?",
+          "Blockiert diese Lücke weitere Aufgaben?",
+        ],
+      },
+      {
+        title: "Wähle ein Hauptfach und sichere die übrigen ab",
+        paragraphs: [
+          "Für einen Lernnachmittag hilft eine klare Rollenverteilung. Das Hauptfach erhält den längsten konzentrierten Block. Dort bearbeitest du die Lücke mit der höchsten Wirkung. Ein zweites Fach bekommt einen kürzeren Erhaltungsblock, damit Bekanntes abrufbar bleibt oder du früh erkennst, ob doch mehr Zeit nötig ist.",
+          "Ein Beispiel: Du arbeitest 50 Minuten an offenen Chemie-Grundlagen, prüfst danach 15 Minuten lang Deutschbegriffe ohne Unterlagen und löst zum Abschluss zwei Mathematikaufgaben, die du am Vortag nicht konntest. Die genaue Dauer hängt von deinem Alltag ab. Entscheidend ist, dass nicht drei Fächer um dieselbe Aufmerksamkeit kämpfen.",
+        ],
+      },
+      {
+        title: "Wechsle in Blöcken, nicht bei jeder Unsicherheit",
+        paragraphs: [
+          "Zwischen Chemieformeln, Gedichtanalyse und Bruchtermen hin und her zu springen kostet Orientierung. Nach jedem Wechsel musst du Material, Begriffe und Denkweise neu aktivieren. Bearbeite deshalb einen klaren Lernschritt bis zu einem sinnvollen Haltepunkt, bevor du das Fach wechselst.",
+          "Schreibe am Ende eines Blocks einen kurzen Anschluss auf: welche Aufgabe du geschafft hast, wo der Fehler lag und womit du beim nächsten Mal beginnst. So bleibt die offene Frage auf dem Papier statt im Kopf. Ein geplanter Wechsel zwischen abgeschlossenen Blöcken ist etwas anderes als der Versuch, mehrere Fächer gleichzeitig zu bearbeiten.",
+        ],
+      },
+      {
+        title: "Plane rückwärts und lasse den letzten Tag frei beweglich",
+        paragraphs: [
+          "Verteile die wichtigen Lernschritte vom Prüfungstermin aus rückwärts. Grundlagen und große Unsicherheiten brauchen einen frühen Platz, weil nach dem ersten Versuch noch Zeit für Korrektur und Wiederholung bleiben muss. Kurz vor der Prüfung eignen sich gemischte Aufgaben, Abruf ohne Unterlagen und ein prüfungsnaher Probedurchlauf.",
+          "Belege nicht jede freie Minute. Ein Puffer vor jeder Prüfung fängt Aufgaben auf, die länger dauern, oder einen Tag, an dem weniger gelingt. Bleibt er frei, kannst du sichere Themen mit Abstand noch einmal abrufen. Ein realistischer Plan rechnet damit, dass die erste Schätzung nicht überall stimmt.",
+        ],
+      },
+      {
+        title: "Entscheide jeden Tag mit neuen Informationen",
+        paragraphs: [
+          "Die Reihenfolge für Montag muss am Dienstag nicht mehr stimmen. Vielleicht ist die vermeintlich große Chemielücke nach zwei Aufgaben geklärt. Vielleicht zeigt der Deutsch-Probeaufsatz ein Problem, das vorher nicht sichtbar war. Passe die nächsten Blöcke an solche Ergebnisse an, statt einen alten Plan nur vollständig abhaken zu wollen.",
+          "Halte nach jedem Lernschritt knapp fest: Was gelingt ohne Hilfe? Welcher Fehler wiederholt sich? Was muss vor der Prüfung noch einmal geprüft werden? Diese Rückmeldung verhindert, dass du aus Gewohnheit weiter Zeit in sichere Inhalte steckst, während eine wichtigere Lücke offen bleibt.",
+        ],
+      },
+      {
+        title: "Wie Dayova mehrere Prüfungen in einen Plan bringt",
+        paragraphs: [
+          "Dayova verbindet Prüfungstermine, Themen, freie Zeiten und deine bisherigen Antworten. Daraus entsteht nicht für jedes Fach ein eigener Plan, der denselben Nachmittag verplant. Die Lernschritte werden gemeinsam priorisiert und auf deine verfügbaren Zeiten verteilt.",
+          "Beim Öffnen siehst du, welches Fach jetzt im Mittelpunkt steht und welche begrenzte Aufgabe folgt. Sichere Antworten können später oder mit größerem Abstand wiederkommen. Offene Grundlagen erhalten früher Zeit. Ändert sich dein Lernstand, passt sich auch die Reihenfolge an, ohne dass du alle Prüfungen jeden Abend neu gegeneinander abwägen musst.",
+        ],
+      },
+    ],
+    takeaway:
+      "Wähle nicht einfach das lauteste Fach. Verbinde Termin, Unsicherheit, Prüfungsrelevanz und Abhängigkeiten. Gib einem Fach den Hauptblock, halte ein weiteres mit einem kurzen Abruf aktiv und entscheide nach jedem Lernschritt neu.",
+  },
+  {
     slug: "was-soll-ich-heute-fuer-die-pruefung-lernen",
     title: "Was soll ich heute für die Prüfung lernen?",
     excerpt:
