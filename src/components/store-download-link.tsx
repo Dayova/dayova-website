@@ -19,10 +19,10 @@ const variants = {
 } as const;
 
 export function resolveStoreHref(userAgent: string) {
-  const { googlePlay, testFlight } = siteConfig.links;
+  const { appStore, googlePlay } = siteConfig.links;
   const store = resolveStore(userAgent);
 
-  return store === "apple" ? testFlight : googlePlay;
+  return store === "apple" ? appStore : googlePlay;
 }
 
 function resolveStore(userAgent: string) {
@@ -58,7 +58,7 @@ export function StoreDownloadLink({
   const store = useSyncExternalStore(subscribe, getStore, () => "android");
   const href =
     store === "apple"
-      ? siteConfig.links.testFlight
+      ? siteConfig.links.appStore
       : siteConfig.links.googlePlay;
 
   return (
@@ -69,7 +69,7 @@ export function StoreDownloadLink({
     >
       {showStoreName
         ? store === "apple"
-          ? "Über TestFlight installieren"
+          ? "Im App Store herunterladen"
           : "Bei Google Play herunterladen"
         : children}
     </a>
