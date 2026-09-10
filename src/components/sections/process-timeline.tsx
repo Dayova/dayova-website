@@ -75,23 +75,23 @@ const processStepsByVariant = {
   download: [
     {
       number: "01",
-      title: "TestFlight-Einladung öffnen",
+      title: "App Store öffnen",
       description:
-        "Tippe auf den Einladungsbutton. Falls TestFlight noch fehlt, führt Apple dich zuerst zur kostenlosen Installation.",
+        "Tippe auf den App-Store-Button, um den offiziellen Dayova-Eintrag zu öffnen.",
       icon: SmartPhone01Icon,
     },
     {
       number: "02",
-      title: "Einladung annehmen",
+      title: "Dayova laden",
       description:
-        "Öffne die Einladung in TestFlight und tippe auf „Akzeptieren“, um am Dayova-Test teilzunehmen.",
+        "Tippe im App Store auf „Laden“ und bestätige die Installation mit deiner Apple-ID.",
       icon: TaskDone01Icon,
     },
     {
       number: "03",
-      title: "Dayova installieren",
+      title: "Dayova öffnen",
       description:
-        "Tippe auf „Installieren“ und öffne Dayova anschließend direkt aus TestFlight oder über deinen Home-Bildschirm.",
+        "Öffne Dayova nach der Installation und erstelle deinen ersten persönlichen Lernplan.",
       icon: DownloadCircle02Icon,
     },
   ],

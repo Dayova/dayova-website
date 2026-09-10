@@ -11,7 +11,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Dayova herunterladen – iOS & Android",
   description:
-    "Installiere Dayova auf Android über Google Play oder teste die iOS-App über TestFlight.",
+    "Installiere Dayova auf iPhone und iPad über den App Store oder auf Android über Google Play.",
   alternates: {
     canonical: "/downloads",
   },
@@ -37,8 +37,7 @@ export default function DownloadsPage() {
           </h1>
           <p className="download-page-hero__lead">
             Auf Android bekommst du Dayova regulär über Google Play. Auf dem
-            iPhone und iPad kannst du die aktuelle Version über TestFlight
-            testen.
+            iPhone und iPad kannst du Dayova direkt aus dem App Store laden.
           </p>
 
           <div className="download-platform-grid">
@@ -47,8 +46,8 @@ export default function DownloadsPage() {
                 <span className="download-platform-card__icon" aria-hidden="true">
                   <DayovaIcon icon={SmartPhone01Icon} size={28} />
                 </span>
-                <span className="download-platform-card__status">
-                  Testversion
+                <span className="download-platform-card__status download-platform-card__status--available">
+                  Verfügbar
                 </span>
               </div>
               <div className="download-platform-card__copy">
@@ -57,15 +56,15 @@ export default function DownloadsPage() {
                 </span>
                 <h2>iPhone &amp; iPad</h2>
                 <p>
-                  Die iOS-App ist noch nicht regulär im App Store verfügbar.
-                  Installiere die aktuelle Testversion über Apples TestFlight.
+                  Die iOS-App ist regulär im App Store verfügbar und kann
+                  direkt auf deinem iPhone oder iPad installiert werden.
                 </p>
               </div>
-              <a className="button-primary" href={siteConfig.links.testFlight}>
-                Über TestFlight installieren
+              <a className="button-primary" href={siteConfig.links.appStore}>
+                Im App Store installieren
               </a>
               <span className="download-platform-card__hint">
-                Öffnet die öffentliche TestFlight-Einladung
+                Öffnet den offiziellen Dayova-Eintrag
               </span>
             </article>
 
@@ -110,18 +109,18 @@ export default function DownloadsPage() {
                 Für iPhone &amp; iPad
               </span>
               <h2 id="download-process-title" className="dayova-section-title">
-                Dayova über TestFlight installieren
+                Dayova über den App Store installieren
               </h2>
               <p>
-                Die Installation unterscheidet sich nur beim ersten Schritt
-                vom App Store und dauert wenige Minuten.
+                Öffne den Store-Eintrag, lade die App und starte direkt mit
+                deinem ersten Lernplan.
               </p>
             </div>
 
             <ProcessTimeline variant="download" />
             <div className="download-page-process__action">
-              <a className="button-secondary" href={siteConfig.links.testFlight}>
-                TestFlight-Einladung öffnen
+              <a className="button-secondary" href={siteConfig.links.appStore}>
+                App Store öffnen
               </a>
             </div>
           </div>
