@@ -8,11 +8,7 @@ import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { PageHero } from "@/components/ui/page-hero";
 import { siteConfig } from "@/config/site";
-import {
-  blogArticles,
-  getBlogArticleDescription,
-  getBlogArticleTitle,
-} from "@/content/blog";
+import { blogArticles } from "@/content/blog";
 import {
   createPageMetadata,
   createPageStructuredData,
@@ -48,7 +44,7 @@ const blogListStructuredData = {
     "@type": "ListItem",
     position: index + 1,
     url: `${siteUrl}/blog/${article.slug}`,
-    name: getBlogArticleTitle(article),
+    name: article.title,
   })),
 };
 
@@ -69,12 +65,12 @@ export default function BlogPage() {
           <ArticleFilter
             articles={blogArticles.map((article) => ({
               category: article.category,
-              excerpt: getBlogArticleDescription(article),
+              excerpt: article.excerpt,
               publishedAt: article.publishedAt,
               publishedAtISO: article.publishedAtISO,
               readingTime: article.readingTime,
               slug: article.slug,
-              title: getBlogArticleTitle(article),
+              title: article.title,
             }))}
           />
         </div>

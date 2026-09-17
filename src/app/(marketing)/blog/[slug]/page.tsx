@@ -9,9 +9,7 @@ import { DayovaIcon } from "@/components/ui/huge-icon";
 import {
   blogArticles,
   getBlogArticle,
-  getBlogArticleDescription,
   getBlogArticleModifiedAt,
-  getBlogArticleTitle,
   getRelatedBlogArticles,
 } from "@/content/blog";
 import {
@@ -43,19 +41,16 @@ export async function generateMetadata({
     return {};
   }
 
-  const title = getBlogArticleTitle(article);
-  const description = getBlogArticleDescription(article);
-
   return {
-    title,
-    description,
+    title: article.title,
+    description: article.excerpt,
     alternates: {
       canonical: `/blog/${article.slug}`,
     },
     openGraph: {
       type: "article",
-      title,
-      description,
+      title: article.title,
+      description: article.excerpt,
       url: `/blog/${article.slug}`,
       siteName,
       locale: "de_DE",
@@ -66,8 +61,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: article.title,
+      description: article.excerpt,
       images: [defaultOgImage.url],
     },
   };
@@ -84,14 +79,12 @@ export default async function BlogArticlePage({
   }
 
   const articleUrl = `${siteUrl}/blog/${article.slug}`;
-  const articleTitle = getBlogArticleTitle(article);
-  const articleDescription = getBlogArticleDescription(article);
   const articleBreadcrumb = createBreadcrumbStructuredData(
     `/blog/${article.slug}`,
     [
       { name: "Dayova", path: "/" },
       { name: "Lernblog", path: "/blog" },
-      { name: articleTitle, path: `/blog/${article.slug}` },
+      { name: article.title, path: `/blog/${article.slug}` },
     ],
   );
   const relatedArticles = getRelatedBlogArticles(article);
@@ -101,8 +94,8 @@ export default async function BlogArticlePage({
       {
         "@type": "BlogPosting",
         "@id": `${articleUrl}#article`,
-        headline: articleTitle,
-        description: articleDescription,
+        headline: article.title,
+        description: article.excerpt,
         datePublished: article.publishedAtISO,
         dateModified: getBlogArticleModifiedAt(article),
         mainEntityOfPage: {
@@ -134,8 +127,8 @@ export default async function BlogArticlePage({
         "@type": "WebPage",
         "@id": `${articleUrl}#webpage`,
         url: articleUrl,
-        name: articleTitle,
-        description: articleDescription,
+        name: article.title,
+        description: article.excerpt,
         inLanguage: "de-DE",
         isPartOf: { "@id": websiteId },
         breadcrumb: { "@id": articleBreadcrumb["@id"] },
@@ -166,8 +159,8 @@ export default async function BlogArticlePage({
               </time>
               <span>{article.readingTime} Lesezeit</span>
             </div>
-            <h1 id="article-title">{articleTitle}</h1>
-            <p>{articleDescription}</p>
+            <h1 id="article-title">{article.title}</h1>
+            <p>{article.excerpt}</p>
           </div>
         </div>
       </section>
@@ -236,7 +229,7 @@ export default async function BlogArticlePage({
                   <li key={relatedArticle.slug}>
                     <Link href={`/blog/${relatedArticle.slug}`}>
                       <span>{relatedArticle.category}</span>
-                      <strong>{getBlogArticleTitle(relatedArticle)}</strong>
+                      <strong>{relatedArticle.title}</strong>
                       <small>{relatedArticle.readingTime} Lesezeit</small>
                     </Link>
                   </li>

@@ -4,10 +4,7 @@ import { blogArticlesLate2026 } from "./blog/articles-2026-late";
 import { blogArticlesSeptember2026 } from "./blog/articles-2026-september";
 import { articleDeepDives } from "./blog/article-deep-dives";
 import { articlePracticeSections } from "./blog/article-practice";
-import {
-  blogSeoPriorities,
-  strategicRelatedArticleSlugs,
-} from "./blog/seo-priorities";
+import { strategicRelatedArticleSlugs } from "./blog/seo-priorities";
 import { articleSources } from "./blog/sources";
 import type { BlogArticle } from "./blog/types";
 
@@ -67,12 +64,6 @@ const blogArticlesBySlug = new Map(
   blogArticles.map((article) => [article.slug, article]),
 );
 
-for (const slug of Object.keys(blogSeoPriorities)) {
-  if (!blogArticlesBySlug.has(slug)) {
-    throw new Error(`SEO priority references unknown blog article "${slug}".`);
-  }
-}
-
 for (const [slug, relatedSlugs] of Object.entries(
   strategicRelatedArticleSlugs,
 )) {
@@ -93,19 +84,8 @@ export function getBlogArticle(slug: string) {
   return blogArticlesBySlug.get(slug);
 }
 
-export function getBlogArticleTitle(article: BlogArticle) {
-  return blogSeoPriorities[article.slug]?.title ?? article.title;
-}
-
-export function getBlogArticleDescription(article: BlogArticle) {
-  return blogSeoPriorities[article.slug]?.description ?? article.excerpt;
-}
-
 export function getBlogArticleModifiedAt(article: BlogArticle) {
-  if (
-    blogSeoPriorities[article.slug] ||
-    strategicRelatedArticleSlugs[article.slug]
-  ) {
+  if (strategicRelatedArticleSlugs[article.slug]) {
     return "2026-09-17T17:30:00+02:00";
   }
 
