@@ -15,10 +15,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/downloads",
   },
-  robots: {
-    index: false,
-    follow: false,
-  },
 };
 
 export default function DownloadsPage() {
