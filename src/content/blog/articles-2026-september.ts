@@ -2,6 +2,99 @@ import type { BlogArticle } from "./types";
 
 export const blogArticlesSeptember2026: readonly BlogArticle[] = [
   {
+    slug: "wie-lange-sollte-ich-fuer-eine-pruefung-lernen",
+    title: "Wie lange sollte ich für eine Prüfung lernen?",
+    excerpt:
+      "Zwei Stunden oder zwei Wochen? So schätzt du deinen Lernaufwand realistisch ein und erkennst rechtzeitig, ob dein Plan noch passt.",
+    category: "Prüfungen",
+    readingTime: "11 Min.",
+    publishedAt: "14. September 2026",
+    publishedAtISO: "2026-09-14T10:00:00+02:00",
+    intro:
+      "Noch acht Tage bis zur Biologieprüfung. Im Klassenchat schreibt jemand, er habe schon zwölf Stunden gelernt. Eine andere Person will erst am Wochenende anfangen. Beides hilft dir kaum weiter. Denn die richtige Lernzeit steht weder im Kalender noch in der Stundenzahl der anderen. Sie hängt davon ab, was geprüft wird, was du bereits kannst und wie oft du dein Wissen noch selbstständig abrufen musst.",
+    sections: [
+      {
+        title: "Eine feste Stundenzahl gibt dir falsche Sicherheit",
+        paragraphs: [
+          "Für dieselbe Prüfung können zwei Menschen sehr unterschiedlich lange brauchen. Vielleicht kannst du Fachbegriffe sicher erklären, hast aber Schwierigkeiten mit Diagrammen. Jemand anderes kennt die Zusammenhänge, muss jedoch noch viele Begriffe lernen. Auch Vorwissen, Aufgabenart und verfügbare Konzentration verändern den Aufwand.",
+          "Darum ist „Lerne zehn Stunden“ keine verlässliche Antwort. Zeit ist nur der Rahmen. Entscheidend ist, welche prüfungsrelevanten Aufgaben du am Ende ohne Hilfe bewältigen kannst. Eine realistische Planung beginnt deshalb nicht mit Stunden, sondern mit einem kurzen Blick auf deinen aktuellen Stand.",
+        ],
+      },
+      {
+        title: "Prüfe zuerst, wo du wirklich stehst",
+        paragraphs: [
+          "Nimm die Themenübersicht und wähle zu jedem wichtigen Bereich eine typische Aufgabe. Erkläre einen Zusammenhang laut, zeichne ein Modell aus dem Gedächtnis oder löse eine Aufgabe ohne Musterlösung. Schon ein kurzer eigener Versuch zeigt dir mehr als das erneute Lesen markierter Seiten.",
+          "Ordne deine Ergebnisse danach in drei Bereiche. Bleib dabei konkret. „Genetik unsicher“ ist weniger hilfreich als „Ich kann einen Erbgang ablesen, verwechsle aber Genotyp und Phänotyp“.",
+        ],
+        bullets: [
+          "Sicher: Du kannst eine typische Aufgabe ohne Hilfe lösen und deinen Weg erklären.",
+          "Unsicher: Der Ansatz gelingt, aber du brauchst Hinweise oder wiederholst einen Fehler.",
+          "Offen: Eine Grundlage fehlt oder du weißt noch nicht, wie du beginnen sollst.",
+        ],
+      },
+      {
+        title: "Schätze Lernschritte statt Lernstunden",
+        paragraphs: [
+          "Übersetze jede wichtige Lücke in eine Tätigkeit mit einem sichtbaren Ergebnis. Aus „Ökologie lernen“ wird zum Beispiel: „Nahrungsnetz ohne Unterlagen zeichnen, drei Eingriffe erklären und falsche Verbindungen korrigieren.“ Erst solche Schritte lassen sich sinnvoll auf Tage verteilen.",
+          "Plane für offene Grundlagen mehr als einen Kontakt ein. Der erste Lernschritt dient zum Verstehen und Üben. Ein späterer Abruf zeigt, was davon noch verfügbar ist. Bei unsicheren Themen reicht vielleicht eine gezielte Fehlerkorrektur mit einem zweiten Versuch. Sichere Inhalte brauchen oft nur einen kurzen Kontrollabruf vor der Prüfung.",
+        ],
+      },
+      {
+        title: "Plane vom Prüfungstag rückwärts",
+        paragraphs: [
+          "Setze zuerst einen prüfungsnahen Probedurchlauf ein bis zwei Tage vor den Termin. Dort mischst du Aufgaben und arbeitest möglichst ohne Unterlagen. Davor liegen die Wiederholungen. Noch früher bearbeitest du offene Grundlagen, damit nach einem Fehler Zeit für einen neuen Versuch bleibt.",
+          "Lass außerdem einen Puffer frei. Vielleicht dauert ein Thema länger als erwartet, Hausaufgaben verschieben deinen Nachmittag oder der Probedurchlauf zeigt eine neue Lücke. Ein Plan, der jede freie Minute belegt, wird schon durch eine kleine Abweichung unbrauchbar.",
+        ],
+      },
+      {
+        title: "Ein Beispiel für acht Tage Vorbereitungszeit",
+        paragraphs: [
+          "Angenommen, in Biologie werden Zellatmung, Fotosynthese und Ökologie geprüft. Dein kurzer Starttest zeigt: Ökologie sitzt, bei der Fotosynthese fehlen einzelne Zusammenhänge und die Zellatmung ist noch offen. Dann könnte dein Plan so aussehen:",
+        ],
+        bullets: [
+          "Tag 1: Lernstand prüfen, Lücken benennen und Material zuordnen.",
+          "Tag 2: Zellatmung verstehen, Ablauf selbst zeichnen und erklären.",
+          "Tag 3: Fotosynthese an Aufgaben üben und typische Verwechslungen notieren.",
+          "Tag 4: Zellatmung ohne Unterlagen abrufen und Fehler gezielt korrigieren.",
+          "Tag 5: Gemischte Aufgaben zu allen drei Themen bearbeiten.",
+          "Tag 6: Einen prüfungsnahen Durchlauf machen und nur die sichtbaren Lücken auswerten.",
+          "Tag 7: Puffer oder kurze Wiederholung der Fehler aus dem Probedurchlauf.",
+          "Tag 8: Begrenzter Kontrollabruf, Material vorbereiten und rechtzeitig schlafen.",
+        ],
+      },
+      {
+        title: "Woran du erkennst, dass die Lernzeit reicht",
+        paragraphs: [
+          "Nicht das Ende eines Zeitblocks entscheidet, sondern dein Ergebnis. Du bist bei einem Thema gut vorbereitet, wenn du zentrale Fragen ohne Unterlagen beantworten, typische Aufgaben selbstständig lösen und deinen Weg verständlich erklären kannst. Eine leicht veränderte Aufgabe sollte dich nicht sofort aus dem Konzept bringen.",
+          "Wenn das noch nicht gelingt, brauchst du nicht automatisch einen längeren Abend. Prüfe zuerst den Fehler. Fehlt eine Grundlage, plane einen kleineren Lernschritt dazu. War die Aufgabe nur ungewohnt, übe eine ähnliche Übertragung. So wird zusätzliche Zeit gezielt eingesetzt, statt einfach an die bisherige Lernzeit angehängt zu werden.",
+        ],
+      },
+      {
+        title: "Wenn nur noch wenig Zeit bleibt",
+        paragraphs: [
+          "Kurz vor der Prüfung kannst du nicht jeden offenen Punkt gleich gründlich bearbeiten. Priorisiere Grundlagen, die mehrere Aufgaben ermöglichen, häufige Aufgabenformate und Fehler, die bei eigenen Versuchen wiederholt auftreten. Sichere Randthemen dürfen dann weniger Raum bekommen.",
+          "Verkürze zuerst den Umfang, nicht die Nacht. Schlaf gehört zur Vorbereitung, weil Lernen nicht nur während des Übens stattfindet. Ein erschöpfter zusätzlicher Block ist nicht automatisch wertvoller als ein klarer Abruf am nächsten Morgen. Eine knappe Planung sollte deshalb auch eine feste Schlusszeit haben.",
+        ],
+      },
+      {
+        title: "Passe die Schätzung nach jedem Lernschritt an",
+        paragraphs: [
+          "Deine erste Planung bleibt eine Schätzung. Vielleicht sitzt die Zellatmung schneller als gedacht. Vielleicht zeigt sich bei gemischten Aufgaben, dass zwei Begriffe noch nicht sauber getrennt sind. Nutze diese Information und verschiebe die folgenden Schritte entsprechend.",
+          "Notiere nach jedem Block drei kurze Antworten: Was gelingt ohne Hilfe? Wo stocke ich noch? Was ist mein nächster überprüfbarer Schritt? Damit wird der Plan von Tag zu Tag genauer. Du musst nicht am ersten Abend wissen, wie viele Stunden die gesamte Vorbereitung dauern wird.",
+        ],
+      },
+      {
+        title: "Wie Dayova deinen Lernaufwand plant",
+        paragraphs: [
+          "Dayova verbindet Prüfungstermin, Themen, freie Zeiten und deinen aktuellen Lernstand. Daraus entstehen begrenzte Lernschritte, die sich auf die verfügbaren Tage verteilen. Offene Grundlagen bekommen früher Platz. Sichere Inhalte können mit größerem Abstand wiederkommen.",
+          "Deine Antworten verändern den weiteren Plan. Wenn ein Thema sicher gelingt, rückt der nächste sinnvolle Schritt nach. Bleibt eine Lücke offen, wird sie erneut berücksichtigt. So musst du die Frage nach der richtigen Lernzeit nicht einmal pauschal beantworten. Der Plan wird genauer, während du lernst.",
+        ],
+      },
+    ],
+    takeaway:
+      "Die richtige Lernzeit ist keine feste Zahl. Prüfe deinen Stand, zerlege wichtige Lücken in konkrete Lernschritte und plane mehrere Abrufe mit Puffer. Ob der Aufwand reicht, zeigen deine eigenen Antworten und Aufgaben – nicht die Stundenzahl im Klassenchat.",
+  },
+  {
     slug: "mehrere-pruefungen-gleichzeitig-was-lerne-ich-zuerst",
     title: "Mehrere Prüfungen gleichzeitig: Was lerne ich zuerst?",
     excerpt:

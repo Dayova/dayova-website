@@ -6,7 +6,14 @@ import { notFound } from "next/navigation";
 import { ReadingProgress } from "@/components/blog/reading-progress";
 import { JsonLd } from "@/components/seo/json-ld";
 import { DayovaIcon } from "@/components/ui/huge-icon";
-import { blogArticles, getBlogArticle } from "@/content/blog";
+import {
+  blogArticles,
+  getBlogArticle,
+  getBlogArticleDescription,
+  getBlogArticleModifiedAt,
+  getBlogArticleTitle,
+  getRelatedBlogArticles,
+} from "@/content/blog";
 import {
   createBreadcrumbStructuredData,
   defaultOgImage,
@@ -36,16 +43,19 @@ export async function generateMetadata({
     return {};
   }
 
+  const title = getBlogArticleTitle(article);
+  const description = getBlogArticleDescription(article);
+
   return {
-    title: article.title,
-    description: article.excerpt,
+    title,
+    description,
     alternates: {
       canonical: `/blog/${article.slug}`,
     },
     openGraph: {
       type: "article",
-      title: article.title,
-      description: article.excerpt,
+      title,
+      description,
       url: `/blog/${article.slug}`,
       siteName,
       locale: "de_DE",
@@ -56,8 +66,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
-      description: article.excerpt,
+      title,
+      description,
       images: [defaultOgImage.url],
     },
   };
@@ -74,34 +84,27 @@ export default async function BlogArticlePage({
   }
 
   const articleUrl = `${siteUrl}/blog/${article.slug}`;
+  const articleTitle = getBlogArticleTitle(article);
+  const articleDescription = getBlogArticleDescription(article);
   const articleBreadcrumb = createBreadcrumbStructuredData(
     `/blog/${article.slug}`,
     [
       { name: "Dayova", path: "/" },
       { name: "Lernblog", path: "/blog" },
-      { name: article.title, path: `/blog/${article.slug}` },
+      { name: articleTitle, path: `/blog/${article.slug}` },
     ],
   );
-  const relatedArticles = [
-    ...blogArticles.filter(
-      (candidate) =>
-        candidate.slug !== article.slug && candidate.category === article.category,
-    ),
-    ...blogArticles.filter(
-      (candidate) =>
-        candidate.slug !== article.slug && candidate.category !== article.category,
-    ),
-  ].slice(0, 3);
+  const relatedArticles = getRelatedBlogArticles(article);
   const articleStructuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "BlogPosting",
         "@id": `${articleUrl}#article`,
-        headline: article.title,
-        description: article.excerpt,
+        headline: articleTitle,
+        description: articleDescription,
         datePublished: article.publishedAtISO,
-        dateModified: article.publishedAtISO,
+        dateModified: getBlogArticleModifiedAt(article),
         mainEntityOfPage: {
           "@type": "WebPage",
           "@id": `${articleUrl}#webpage`,
@@ -131,8 +134,8 @@ export default async function BlogArticlePage({
         "@type": "WebPage",
         "@id": `${articleUrl}#webpage`,
         url: articleUrl,
-        name: article.title,
-        description: article.excerpt,
+        name: articleTitle,
+        description: articleDescription,
         inLanguage: "de-DE",
         isPartOf: { "@id": websiteId },
         breadcrumb: { "@id": articleBreadcrumb["@id"] },
@@ -163,8 +166,8 @@ export default async function BlogArticlePage({
               </time>
               <span>{article.readingTime} Lesezeit</span>
             </div>
-            <h1 id="article-title">{article.title}</h1>
-            <p>{article.excerpt}</p>
+            <h1 id="article-title">{articleTitle}</h1>
+            <p>{articleDescription}</p>
           </div>
         </div>
       </section>
@@ -233,7 +236,7 @@ export default async function BlogArticlePage({
                   <li key={relatedArticle.slug}>
                     <Link href={`/blog/${relatedArticle.slug}`}>
                       <span>{relatedArticle.category}</span>
-                      <strong>{relatedArticle.title}</strong>
+                      <strong>{getBlogArticleTitle(relatedArticle)}</strong>
                       <small>{relatedArticle.readingTime} Lesezeit</small>
                     </Link>
                   </li>

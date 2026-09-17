@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { blogArticles } from "@/content/blog";
+import { blogArticles, getBlogArticleModifiedAt } from "@/content/blog";
 import { defaultOgImage, siteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -77,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...blogArticles.map((article) => ({
       url: `${siteUrl}/blog/${article.slug}`,
-      lastModified: new Date(article.publishedAtISO),
+      lastModified: new Date(getBlogArticleModifiedAt(article)),
       changeFrequency: "monthly" as const,
       priority: 0.65,
       images: [`${siteUrl}${defaultOgImage.url}`],

@@ -4,6 +4,10 @@ import { blogArticlesLate2026 } from "./blog/articles-2026-late";
 import { blogArticlesSeptember2026 } from "./blog/articles-2026-september";
 import { articleDeepDives } from "./blog/article-deep-dives";
 import { articlePracticeSections } from "./blog/article-practice";
+import {
+  blogSeoPriorities,
+  strategicRelatedArticleSlugs,
+} from "./blog/seo-priorities";
 import { articleSources } from "./blog/sources";
 import type { BlogArticle } from "./blog/types";
 
@@ -59,6 +63,70 @@ export const blogArticles: readonly BlogArticle[] = [
       new Date(articleA.publishedAtISO).getTime(),
   );
 
+const blogArticlesBySlug = new Map(
+  blogArticles.map((article) => [article.slug, article]),
+);
+
+for (const slug of Object.keys(blogSeoPriorities)) {
+  if (!blogArticlesBySlug.has(slug)) {
+    throw new Error(`SEO priority references unknown blog article "${slug}".`);
+  }
+}
+
+for (const [slug, relatedSlugs] of Object.entries(
+  strategicRelatedArticleSlugs,
+)) {
+  if (!blogArticlesBySlug.has(slug)) {
+    throw new Error(`Related-article map references unknown article "${slug}".`);
+  }
+
+  for (const relatedSlug of relatedSlugs ?? []) {
+    if (!blogArticlesBySlug.has(relatedSlug)) {
+      throw new Error(
+        `Blog article "${slug}" references unknown article "${relatedSlug}".`,
+      );
+    }
+  }
+}
+
 export function getBlogArticle(slug: string) {
-  return blogArticles.find((article) => article.slug === slug);
+  return blogArticlesBySlug.get(slug);
+}
+
+export function getBlogArticleTitle(article: BlogArticle) {
+  return blogSeoPriorities[article.slug]?.title ?? article.title;
+}
+
+export function getBlogArticleDescription(article: BlogArticle) {
+  return blogSeoPriorities[article.slug]?.description ?? article.excerpt;
+}
+
+export function getBlogArticleModifiedAt(article: BlogArticle) {
+  if (
+    blogSeoPriorities[article.slug] ||
+    strategicRelatedArticleSlugs[article.slug]
+  ) {
+    return "2026-09-17T17:30:00+02:00";
+  }
+
+  return article.publishedAtISO;
+}
+
+export function getRelatedBlogArticles(article: BlogArticle) {
+  const strategicSlugs = strategicRelatedArticleSlugs[article.slug];
+
+  if (strategicSlugs) {
+    return strategicSlugs.map((slug) => blogArticlesBySlug.get(slug)!);
+  }
+
+  return [
+    ...blogArticles.filter(
+      (candidate) =>
+        candidate.slug !== article.slug && candidate.category === article.category,
+    ),
+    ...blogArticles.filter(
+      (candidate) =>
+        candidate.slug !== article.slug && candidate.category !== article.category,
+    ),
+  ].slice(0, 3);
 }

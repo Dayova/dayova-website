@@ -121,6 +121,12 @@ const {
 } = sources;
 
 export const articleSources: Readonly<Record<string, readonly BlogSource[]>> = {
+  "wie-lange-sollte-ich-fuer-eine-pruefung-lernen": [
+    metacognition,
+    retrievalPractice,
+    spacing,
+    sleep,
+  ],
   "mehrere-pruefungen-gleichzeitig-was-lerne-ich-zuerst": [
     metacognition,
     retrievalPractice,
