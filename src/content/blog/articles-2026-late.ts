@@ -241,60 +241,110 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       "Eine Auswertung ohne nächste Aufgabe bleibt eine Diagnose. Übersetze jede Erkenntnis in eine Entscheidung: wiederholen, anders erklären, schwieriger anwenden oder mit Abstand erneut prüfen.",
   },
   {
-    slug: "eine-lern-app-sollte-dir-arbeit-abnehmen",
-    title: "Eine Lern-App sollte dir Arbeit abnehmen",
-    excerpt:
-      "Warum digitale Lernbegleitung nicht mehr Aufgaben sammelt, sondern Termine, Lernstand und nächste Schritte verbindet.",
-    category: "Lernplanung",
-    readingTime: "8 Min.",
-    publishedAt: "27. Juli 2026",
-    publishedAtISO: "2026-07-27T10:00:00+02:00",
-    intro:
-      "Du öffnest eine Lern-App und musst zuerst Termine übertragen, Fächer sortieren und selbst entscheiden, welche Aufgabe wichtig ist. Dann hat die App das Problem nur auf einen neuen Bildschirm verschoben. Nützlich wird sie, wenn nach dem Öffnen weniger Organisation vor dir liegt als vorher.",
-    sections: [
+    "slug": "eine-lern-app-sollte-dir-arbeit-abnehmen",
+    "title": "Eine Lern-App sollte dir Arbeit abnehmen",
+    "excerpt": "Kalender, Karteikarten, Lernvideos oder persönliche Nachhilfe? So wählst du nach deiner konkreten Lernhürde und prüfst eine App vor dem Abo.",
+    "seoTitle": "Lern-App oder Nachhilfe? Lernhilfen sinnvoll vergleichen",
+    "category": "Lernplanung",
+    "readingTime": "7 Min.",
+    "publishedAt": "27. Juli 2026",
+    "publishedAtISO": "2026-07-27T10:00:00+02:00",
+    "intro": "Du hast eine Zusammenfassung, einen Kalender und zwei Lern-Apps. Trotzdem weißt du am Nachmittag nicht, womit du anfangen sollst. Die nächste App hilft erst dann, wenn klar ist, welches Problem sie lösen soll: Fehlt eine Erklärung, regelmäßige Übung, eine Planung oder jemand, der deinen Denkweg mit dir durchgeht?",
+    "sections": [
       {
-        title: "Mehr Funktionen bedeuten nicht automatisch mehr Orientierung",
-        paragraphs: [
-          "Eine lange Funktionsliste kann beeindruckend wirken. Im Lernalltag zählt jedoch, ob du schnell erkennst, was ansteht und womit du beginnen solltest. Wenn jedes Fach ein eigenes Menü, jede Aufgabe ein anderes Format und jede Auswertung eine neue Interpretation verlangt, wird das Werkzeug selbst zur Organisationsaufgabe.",
-          "Gute digitale Lernbegleitung ordnet Informationen, bevor sie sie zeigt. Sie hebt Wichtiges hervor, hält Unnötiges im Hintergrund und führt von einem Ziel zu einer bearbeitbaren Handlung.",
+        "title": "Welche Lernhilfe passt zu welcher Aufgabe?",
+        "paragraphs": [
+          "Die folgende Übersicht vergleicht typische Einsatzweisen, keine getesteten Einzelprodukte. Funktionsumfang und Preise unterscheiden sich je Anbieter. Dayova ist selbst Anbieter einer Lern-App; die Entscheidungskriterien sind deshalb bewusst überprüfbar formuliert."
         ],
+        "table": {
+          "caption": "Lernhilfen nach Aufgabe statt nach Werbeversprechen auswählen",
+          "columns": [
+            "Lernhilfe",
+            "Sinnvoll, wenn …",
+            "Das bleibt bei dir"
+          ],
+          "rows": [
+            [
+              "Kalender oder Papierplan",
+              "du deinen Stoff kennst und vor allem Zeit reservieren willst.",
+              "Aufgaben auswählen, Wiederholungen einplanen und den Plan aktualisieren."
+            ],
+            [
+              "Karteikarten",
+              "du Begriffe oder Antworten aktiv abrufen möchtest.",
+              "Karten fachlich prüfen und auch Anwendung und Lösungswege üben."
+            ],
+            [
+              "Lernvideos und Erklärtexte",
+              "du eine erste Erklärung oder ein anderes Beispiel brauchst.",
+              "Danach ohne Vorlage erklären oder eine neue Aufgabe lösen."
+            ],
+            [
+              "Lernplan-App wie Dayova",
+              "du Prüfungen, freie Zeit und nächste Lernschritte verbinden möchtest.",
+              "Themen und Zeiten passend angeben und Rückmeldungen fachlich prüfen."
+            ],
+            [
+              "Persönliche Nachhilfe",
+              "du bei Grundlagen oder einem Denkweg wiederholt nicht weiterkommst.",
+              "Das konkrete Problem zeigen und zwischen Terminen selbst üben."
+            ]
+          ]
+        }
       },
       {
-        title: "Ein Ort für Termine, Aufgaben und Lernzeiten",
-        paragraphs: [
-          "Prüfungstermine allein ergeben noch keinen Lernplan. Hausaufgaben, verfügbare Nachmittage, bereits sichere Themen und offene Grundlagen gehören ebenfalls dazu. Erst wenn diese Informationen verbunden werden, lässt sich einschätzen, was heute sinnvoll und bis wann notwendig ist.",
-          "Eine Lern-App sollte mehr leisten als sammeln. Sie muss Zusammenhänge herstellen: Welche Aufgabe gehört zu welchem Ziel? Wie viel Zeit ist verfügbar? Was wurde bereits bearbeitet und wo braucht es einen weiteren Versuch?",
+        "title": "Ein realistischer Test vor jedem Abo",
+        "paragraphs": [
+          "Nimm einen echten Prüfungstermin, zwei Themen und ein freies Zeitfenster. Prüfe mit diesem kleinen Fall, ob die Lernhilfe dir eine Handlung ermöglicht. Ein schönes Dashboard allein beantwortet das nicht."
         ],
+        "bullets": [
+          "Kann ich nach dem Öffnen benennen, was ich als Nächstes tue?",
+          "Passt die Aufgabe zu meinem Unterricht und meinem Wissensstand?",
+          "Kann ich eine unklare oder falsche Antwort nachvollziehen und prüfen?",
+          "Erkenne ich Laufzeit, Gesamtpreis und den Weg zur Kündigung vor dem Kauf?",
+          "Brauche ich die Funktion tatsächlich, oder genügt mein vorhandenes Werkzeug?"
+        ]
       },
       {
-        title: "Der nächste Schritt muss sofort verständlich sein",
-        paragraphs: [
-          "Wer eine App öffnet, sollte nicht zuerst den gesamten Lernprozess neu planen müssen. Ein guter Start zeigt einen konkreten Lernschritt mit einem erkennbaren Ziel und einem realistischen Umfang. Dadurch wird aus der Frage „Was soll ich alles lernen?“ die kleinere Frage „Was bearbeite ich jetzt?“.",
-        ],
-        bullets: [
-          "eine klar benannte Aufgabe statt einer offenen Themenliste",
-          "ein sichtbarer Bezug zum Lernziel oder Prüfungstermin",
-          "eine Dauer, die zur verfügbaren Lernzeit passt",
-          "eine Rückmeldung, die den nächsten Versuch vorbereitet",
-        ],
+        "title": "Wann eine App nicht die passende Hilfe ist",
+        "paragraphs": [
+          "Wenn du eine Erklärung mehrfach liest und denselben Denkfehler weiter machst, kann ein Gespräch über deinen Lösungsweg mehr bringen als zusätzliche Aufgaben. Sprich deine Lehrkraft an oder prüfe persönliche Nachhilfe. Eine App kann beides ergänzen, ersetzt aber nicht automatisch die gemeinsame Fehlersuche.",
+          "Bei anhaltender Überforderung sollte die Lösung nicht nur aus mehr Lernzeit bestehen. Kläre zuerst Anforderungen, Grundlagen und erreichbare nächste Schritte."
+        ]
       },
       {
-        title: "Fortschritt sollte den Plan verändern",
-        paragraphs: [
-          "Ein abgehakter Punkt zeigt, dass etwas bearbeitet wurde. Er zeigt noch nicht, ob der Inhalt sicher ist. Eine Lernbegleitung muss Antworten, Fehler und benötigte Hilfen berücksichtigen. Erst dann kann sie entscheiden, ob ein Thema wiederholt, vereinfacht oder anspruchsvoller angewendet werden sollte.",
-          "So bleibt der Plan beweglich. Sichere Inhalte erhalten mehr Abstand, hartnäckige Lücken werden früher aufgegriffen und neue Termine verändern die Reihenfolge, ohne dass alles von Hand neu sortiert werden muss.",
+        "title": "Was Dayova heute anbietet – und was nicht",
+        "paragraphs": [
+          "Dayova ist als App verfügbar. Sie verbindet Prüfungsthemen und freie Zeiten zu Lernschritten. Für die App gibt es ein Monats- oder Jahresabo nach der Testphase.",
+          "Ein separater Elternzugang wird damit nicht versprochen. Für Schulen werden Lerngruppe, Ansichten und Funktionen in einem begleiteten Pilotprojekt vereinbart. Eine Lernstandsanzeige ist keine Notenprognose und KI-generierte Inhalte können Fehler enthalten."
         ],
+        "links": [
+          {
+            "href": "/blog/warum-fortschritt-unsichtbar-bleibt",
+            "label": "Lernfortschritte mit einer einfachen Vorlage prüfen"
+          },
+          {
+            "href": "/pricing",
+            "label": "Aktuelle Dayova-Preise und Testbedingungen"
+          }
+        ]
       },
       {
-        title: "Was Dayova anders verbinden will",
-        paragraphs: [
-          "Dayova entsteht als persönlicher Lernbegleiter, nicht als weitere digitale Ablage. Die App verbindet Aufgaben, Prüfungen und Lernzeiten mit dem aktuellen Lernstand. Daraus entsteht ein Plan, der zeigt, was als Nächstes wichtig ist und warum.",
-          "Schüler gewinnen einen klareren Einstieg. Eltern müssen weniger erinnern und organisieren. Lehrkräfte können Lernbedarf konkreter einordnen. Die Technik bleibt dabei im Hintergrund und übernimmt genau die Verbindungen, die im Alltag sonst immer wieder neu hergestellt werden müssen.",
+        "title": "Bevor du ein weiteres Werkzeug installierst",
+        "paragraphs": [
+          "Schreibe deine wichtigste Hürde in einem Satz auf: „Ich weiß nicht, wann ich üben soll“ ist etwas anderes als „Ich verstehe das Umformen nicht“. Wähle eine passende Hilfe und prüfe nach einigen Lernversuchen, ob genau diese Hürde kleiner geworden ist.",
+          "Für die reine Zeitaufteilung kannst du zuerst den kostenlosen Rechner nutzen. Er benötigt kein Konto und zeigt auch, wenn dein Stoff nicht in den Zeitraum passt."
         ],
-      },
+        "links": [
+          {
+            "href": "/tools/study-plan",
+            "label": "Kostenlosen Lernplan ohne Anmeldung erstellen"
+          }
+        ]
+      }
     ],
-    takeaway:
-      "Prüfe eine Lern-App an einer einfachen Frage: Kannst du nach dem Öffnen direkt sinnvoll anfangen? Wenn du erst alles selbst sortieren musst, ist sie eine Ablage. Wenn sie den nächsten begründeten Schritt zeigt, nimmt sie Arbeit ab.",
+    "takeaway": "Wähle nach deiner Lernhürde: Zeit ordnen, Wissen abrufen, etwas verstehen oder einen Denkweg gemeinsam prüfen. Teste diese Aufgabe mit der Lernhilfe, bevor du dich für ein Abo entscheidest.",
+    "updatedAtISO": "2026-09-18"
   },
   {
     slug: "feedback-das-dich-weiterbringt",
@@ -356,61 +406,98 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       "Gutes Feedback endet nicht bei „falsch“. Es benennt die Stelle im Denkweg, erklärt die nötige Veränderung und gibt dir eine neue Aufgabe, an der du sie sofort ausprobieren kannst.",
   },
   {
-    slug: "ein-lernplan-der-in-deinen-alltag-passt",
-    title: "Ein Lernplan, der in deinen Alltag passt",
-    excerpt:
-      "Wie aus Prüfungen, Aufgaben und verfügbaren Zeiten ein Plan wird, den du im Alltag umsetzen kannst.",
-    category: "Lernplanung",
-    readingTime: "8 Min.",
-    publishedAt: "13. Juli 2026",
-    publishedAtISO: "2026-07-13T10:00:00+02:00",
-    intro:
-      "Auf dem Papier beginnt der Lernschritt um 16 Uhr. In Wirklichkeit kommt der Bus später, die Hausaufgaben dauern länger und um 18 Uhr ist Training. Ein Plan ist nur so gut wie der Alltag, in dem er bestehen muss. Deshalb beginnt er mit verfügbarer Zeit, nicht mit einer perfekten Themenliste.",
-    sections: [
+    "slug": "ein-lernplan-der-in-deinen-alltag-passt",
+    "title": "Ein Lernplan, der in deinen Alltag passt",
+    "excerpt": "Erstelle einen realistischen Lernplan: freie Zeiten prüfen, Aufgaben schätzen und Wiederholung einplanen. Mit Beispielrechnung und kostenlosem Plan-Ersteller.",
+    "seoTitle": "Lernplan für Prüfungen: Anleitung mit Beispielrechnung",
+    "category": "Lernplanung",
+    "readingTime": "7 Min.",
+    "publishedAt": "13. Juli 2026",
+    "publishedAtISO": "2026-07-13T10:00:00+02:00",
+    "intro": "Auf dem Papier beginnt der Lernschritt um 16 Uhr. In Wirklichkeit kommt der Bus später und um 18 Uhr ist Training. Ein Plan muss zuerst in deinen Alltag passen. Erst dann lohnt es sich, den Prüfungsstoff auf die freien Tage zu verteilen.",
+    "sections": [
       {
-        title: "Beginne mit deiner verfügbaren Zeit",
-        paragraphs: [
-          "Viele Pläne starten mit einer langen Themenliste und verteilen sie anschließend auf ideal gedachte Tage. Realistischer ist die umgekehrte Reihenfolge: Zuerst werden feste Termine und freie Lernfenster sichtbar. Danach erhalten die wichtigsten Aufgaben einen Platz.",
-          "Die Zahl freier Minuten reicht als Maß nicht aus. Ein kurzer Lernschritt zwischen zwei Terminen eignet sich für einen Abruf oder eine Wiederholung. Ein neues, komplexes Thema braucht eher einen längeren Block mit Ruhe und anschließendem Puffer.",
-        ],
+        "title": "1. Freie Zeit von gewünschter Zeit unterscheiden",
+        "paragraphs": [
+          "Trage feste Termine, Wege, Hausaufgaben und Erholung ein. Was übrig bleibt, ist noch nicht automatisch konzentrierte Lernzeit. Prüfe zunächst mit einem kurzen Versuch, welche Aufgabe in ein Zeitfenster passt.",
+          "Plane einen Puffer für Aufgaben, die länger dauern. Wie groß er sein sollte, hängt von deinem Alltag ab. Wenn der Stoff nur ohne Pausen in den Plan passt, ist der Plan zu voll."
+        ]
       },
       {
-        title: "Große Ziele brauchen bearbeitbare Lernschritte",
-        paragraphs: [
-          "„Für die Mathearbeit lernen“ beschreibt ein Ziel, aber noch keine Handlung. Ein umsetzbarer Plan übersetzt es in Schritte wie Grundlagen prüfen, zwei Aufgabentypen lösen, Fehler auswerten und eine gemischte Übung ohne Hilfe bearbeiten.",
-          "Jeder Lernschritt sollte ein sichtbares Ergebnis haben. So erkennst du, ob er abgeschlossen ist und welche Information daraus für die weitere Planung entsteht.",
-        ],
-        bullets: [
-          "mit einem konkreten Verb formulieren: erklären, lösen, vergleichen",
-          "nur so viel einplanen, wie im Lernfenster erreichbar ist",
-          "nach jedem Lernschritt eine kurze Auswertung vorsehen",
-          "den nächsten Schritt nicht von der Tagesform erraten lassen",
-        ],
+        "title": "2. Aus Themen überprüfbare Aufgaben machen",
+        "paragraphs": [
+          "„Mathe lernen“ ist keine einzelne Aufgabe. Teile den Stoff so auf, dass du am Ende etwas zeigen kannst: eine Regel erklären, mehrere Aufgaben ohne Vorlage lösen oder zwei Verfahren vergleichen.",
+          "Bearbeite eine typische Aufgabe, bevor du den Aufwand schätzt. Die ersten Schätzungen dürfen ungenau sein. Wichtig ist, dass du sie nach den ersten Lernversuchen korrigierst."
+        ]
       },
       {
-        title: "Prioritäten schützen vor übervollen Tagen",
-        paragraphs: [
-          "Nicht jede offene Aufgabe ist gleich wichtig. Prüfungstermin, vorhandene Wissenslücken und benötigte Vorbereitungszeit bestimmen, was zuerst bearbeitet werden sollte. Ein Plan wird klarer, wenn er zwischen notwendig, sinnvoll und verschiebbar unterscheidet.",
-          "Diese Reihenfolge verhindert, dass leichte Kleinigkeiten den gesamten Nachmittag füllen, während eine wichtige Grundlage liegen bleibt. Sie schafft außerdem eine bewusste Grenze: Was heute nicht realistisch ist, wird neu eingeplant statt spät am Abend angehängt.",
+        "title": "3. Prüfen, ob Aufwand und Zeit zusammenpassen",
+        "paragraphs": [
+          "Beispielannahme: Du hast vor der Prüfung fünf Lerntage mit jeweils 45 Minuten frei. Das sind 225 Minuten. Wenn du pro Tag zehn Minuten für Pausen und Verzögerungen frei lässt, bleiben 175 Minuten zum Einplanen."
         ],
+        "table": {
+          "caption": "Illustrative Kapazitätsrechnung, keine empfohlene Standard-Lerndauer",
+          "columns": [
+            "Vorhaben",
+            "Geschätzte Zeit"
+          ],
+          "rows": [
+            [
+              "Grundlagen prüfen und Lücken klären",
+              "50 Minuten"
+            ],
+            [
+              "Neue Aufgaben lösen und Fehler auswerten",
+              "75 Minuten"
+            ],
+            [
+              "An späteren Tagen ohne Vorlage wiederholen",
+              "35 Minuten"
+            ],
+            [
+              "Gesamter geschätzter Aufwand",
+              "160 Minuten"
+            ],
+            [
+              "Verbleibender Spielraum zusätzlich zum Tagespuffer",
+              "15 Minuten"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/tools/study-plan",
+            "label": "Mit deinen eigenen Themen einen Lernplan berechnen"
+          }
+        ]
       },
       {
-        title: "Puffer gehören in jeden guten Plan",
-        paragraphs: [
-          "Aufgaben dauern länger, Termine ändern sich und manche Erklärungen brauchen einen zweiten Versuch. Ohne freie Stellen wird jede Abweichung zum Beweis, dass der Plan gescheitert sei. Mit kleinen Puffern kann er reagieren, ohne das Ziel aus den Augen zu verlieren.",
-          "Ein beweglicher Plan wird nicht jeden Tag vollständig erfüllt. Er wird regelmäßig aktualisiert. Wichtige Schritte sollen weiterhin rechtzeitig stattfinden, ohne die Belastung einfach auf den nächsten Tag zu verschieben.",
-        ],
+        "title": "4. Wiederholung mit Abstand einplanen",
+        "paragraphs": [
+          "Lass ein Thema nach dem ersten Üben nicht aus dem Plan verschwinden. Prüfe an einem späteren Tag mit einer neuen Aufgabe, was noch ohne Hilfe gelingt. Plane dabei auch Zeit für die Auswertung der Fehler ein.",
+          "Ein kurzer Abruf passt in ein anderes Zeitfenster als eine aufwendige neue Aufgabe. Wähle den Umfang passend zum Lernziel; es gibt keinen Zeitblock, der für alle Inhalte und Personen gleich gut passt."
+        ]
       },
       {
-        title: "Wie Dayova aus Alltag einen Lernweg macht",
-        paragraphs: [
-          "Dayova verbindet Prüfungstermine, Aufgaben und verfügbare Lernzeiten an einem Ort. Die kommende App soll daraus Lernschritte erstellen, deren Reihenfolge und Umfang zum Alltag passen. Neue Rückmeldungen können den Plan verändern, wenn ein Thema sicherer ist oder mehr Unterstützung benötigt.",
-          "So musst du nicht jeden Nachmittag erneut entscheiden, womit du anfangen solltest. Der Plan bleibt verständlich, aber beweglich – und zeigt alle offenen Aufgaben sowie den Schritt, der jetzt machbar und wichtig ist.",
+        "title": "5. Den Plan an neue Informationen anpassen",
+        "paragraphs": [
+          "Nach dem Lerntag genügen zwei Notizen: Was kann ich jetzt? Was war anders als geschätzt? Wenn eine Grundlage länger braucht, streiche oder verschiebe eine weniger dringliche Aufgabe, statt den nächsten Tag unbegrenzt zu füllen.",
+          "Bei mehreren Prüfungen reservierst du Zeit für alle Termine gemeinsam. Mehrere getrennte Pläne dürfen nicht dieselben Stunden belegen."
         ],
-      },
+        "links": [
+          {
+            "href": "/blog/mehrere-pruefungen-gleichzeitig-was-lerne-ich-zuerst",
+            "label": "Mehrere Prüfungen nach Termin und Lernbedarf priorisieren"
+          },
+          {
+            "href": "/tools/study-plan",
+            "label": "Einen Lernplan mit deinen verfügbaren Zeiten erstellen"
+          }
+        ]
+      }
     ],
-    takeaway:
-      "Plane zuerst die echten Zeitfenster. Verteile danach konkrete Aufgaben und lasse Puffer. Fällt ein Termin aus, priorisierst du neu, statt den gesamten Rest in den nächsten Tag zu drücken.",
+    "takeaway": "Ein brauchbarer Lernplan zeigt konkrete Aufgaben, realistische Zeit und offene Lücken. Wenn der Stoff nicht hineinpasst, ändere die Prioritäten oder den Start – nicht heimlich die Grenze deines Tages.",
+    "updatedAtISO": "2026-09-18"
   },
   {
     slug: "vertraut-ist-noch-nicht-verstanden",
@@ -458,45 +545,104 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       "Vertrautheit beantwortet die Frage „Habe ich das schon gesehen?“. Verständnis zeigt sich bei einer härteren Probe: Kannst du es ohne Vorlage erklären und in einer veränderten Aufgabe nutzen?",
   },
   {
-    slug: "warum-fortschritt-unsichtbar-bleibt",
-    title: "Warum Fortschritt oft unsichtbar bleibt",
-    excerpt:
-      "Kleine Lernschritte wirken unspektakulär, machen Entwicklung aber messbar und halten große Ziele in Bewegung.",
-    category: "Lernpsychologie",
-    readingTime: "6 Min.",
-    publishedAt: "29. Juni 2026",
-    publishedAtISO: "2026-06-29T10:00:00+02:00",
-    intro:
-      "Wer auf eine große Prüfung hinarbeitet, sieht oft nur die Strecke, die noch fehlt. Eine einzelne Aufgabe oder zehn Minuten Wiederholung erscheinen daneben bedeutungslos. So kann viel Entwicklung stattfinden, ohne dass sie sich nach Fortschritt anfühlt.",
-    sections: [
+    "slug": "warum-fortschritt-unsichtbar-bleibt",
+    "title": "Warum Fortschritt oft unsichtbar bleibt",
+    "excerpt": "Lernfortschritt messen heißt mehr als Minuten zählen. Mit einer einfachen Vorlage erkennst du, was ohne Hilfe gelingt und welche Übung als Nächstes sinnvoll ist.",
+    "seoTitle": "Lernfortschritt messen: Beispiele und einfache Vorlage",
+    "category": "Lernpsychologie",
+    "readingTime": "6 Min.",
+    "publishedAt": "29. Juni 2026",
+    "publishedAtISO": "2026-06-29T10:00:00+02:00",
+    "intro": "Gestern hast du eine halbe Stunde gelernt, heute wieder. Ob du nun mehr kannst, sagt die Uhr nicht. Sichtbar wird der Unterschied erst an einer vergleichbaren Aufgabe: Brauchst du weniger Hinweise? Kannst du deinen Weg erklären? Gelingt dir die Lösung auch nach einer Pause?",
+    "sections": [
       {
-        title: "Große Ziele geben spätes Feedback",
-        paragraphs: [
-          "„Mathe können“ oder „für die Prüfung bereit sein“ lässt sich heute kaum abhaken. Das Gehirn bekommt lange kein Erfolgssignal. Motivation hängt dann an einem Ergebnis, das erst Wochen später sichtbar wird.",
-          "Kleine, beobachtbare Ziele verkürzen diese Strecke. Sie zeigen nicht, dass alles geschafft ist, sondern dass sich eine konkrete Fähigkeit verändert hat.",
-        ],
+        "title": "Eine Fähigkeit statt die gesamte Prüfung beobachten",
+        "paragraphs": [
+          "Wähle etwas, das du heute tatsächlich zeigen kannst: zwei Brüche addieren, einen Vorgang erklären oder eine Regel in einem eigenen Satz anwenden. „Gut in Mathe werden“ ist dafür zu groß.",
+          "Notiere neben dem Ergebnis, welche Hilfe du gebraucht hast. Eine richtige Antwort mit offener Lösung ist etwas anderes als ein selbstständiger Lösungsweg."
+        ]
       },
       {
-        title: "Fortschritt beobachtbar machen",
-        paragraphs: [
-          "Ein sinnvoller Lernschritt beschreibt eine Handlung und ein Ergebnis. Statt „Chemie wiederholen“ kann er lauten: drei Reaktionsgleichungen ohne Vorlage ausgleichen und Fehler begründen.",
+        "title": "Vorlage: Lernfortschritt in fünf Spalten festhalten",
+        "paragraphs": [
+          "Die Zeilen zeigen ein erfundenes Beispiel zum Umformen von Gleichungen. Nutze dieselben Spalten für dein Thema. Es handelt sich um eine Beobachtungshilfe, nicht um einen standardisierten Test."
         ],
-        bullets: [
-          "Aufgaben so klein formulieren, dass ein Abschluss sichtbar ist",
-          "gelöste Hürden statt nur Zeit notieren",
-          "ältere Antworten gelegentlich mit neuen vergleichen",
-        ],
+        "table": {
+          "caption": "Beispielprotokoll für vergleichbare Aufgaben",
+          "columns": [
+            "Zeitpunkt",
+            "Aufgabe",
+            "Ergebnis",
+            "Benötigte Hilfe",
+            "Nächster Schritt"
+          ],
+          "rows": [
+            [
+              "Montag",
+              "Zwei Gleichungen umformen",
+              "Ein Vorzeichenfehler",
+              "Lösungsbeispiel angesehen",
+              "Regel erklären und neue Aufgabe lösen"
+            ],
+            [
+              "Mittwoch",
+              "Zwei ähnliche Gleichungen",
+              "Beide korrekt",
+              "Ein Hinweis auf die Rechenregel",
+              "Am Freitag ohne Hinweis versuchen"
+            ],
+            [
+              "Freitag",
+              "Zwei neue, ähnlich schwere Gleichungen",
+              "Beide korrekt und erklärt",
+              "Keine",
+              "Nächsten Aufgabentyp prüfen"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "href": "/tools/study-plan",
+            "label": "Zeit für Übung und spätere Wiederholung einplanen"
+          }
+        ]
       },
       {
-        title: "Was Dayova sichtbar macht",
-        paragraphs: [
-          "Dayova teilt größere Ziele in Lernschritte und verbindet sie mit deinem Lernstand. Dadurch siehst du offene Themen, absolvierte Schritte und Veränderungen in deinen Antworten.",
-          "Eltern und Lehrkräfte können diese Entwicklung benennen, ohne ständig die Endnote vorwegzunehmen. Das stärkt Ausdauer, weil Leistung nicht erst am Prüfungstag wahrgenommen wird.",
+        "title": "Wie du die Ergebnisse fair vergleichst",
+        "paragraphs": [
+          "Vergleiche Aufgaben mit ähnlichem Anspruch. Eine niedrigere Trefferquote bei deutlich schwereren Aufgaben zeigt nicht automatisch einen Rückschritt. Umgekehrt beweist ein wiedererkanntes Ergebnis noch keinen sicheren Transfer.",
+          "Beobachte mehrere Versuche über verschiedene Tage. Müdigkeit, Hinweise und das Aufgabenformat können eine einzelne Antwort beeinflussen. Wenn du deinen Lösungsweg nicht erklären kannst, notiere das offen."
         ],
+        "bullets": [
+          "Ergebnis und benötigte Hilfe getrennt notieren.",
+          "Neue Aufgaben desselben Typs statt nur identischer Wiederholungen verwenden.",
+          "Auch nach einem zeitlichen Abstand ohne Vorlage versuchen.",
+          "Aus jeder Beobachtung einen kleinen nächsten Schritt ableiten."
+        ]
       },
+      {
+        "title": "Was du daraus nicht ablesen kannst",
+        "paragraphs": [
+          "Aus diesem Protokoll lässt sich weder eine Note berechnen noch die gesamte Prüfungsreife feststellen. Dafür fehlen unter anderem die vollständigen Prüfungsanforderungen, weitere Themen und die spätere Prüfungssituation.",
+          "Wenn der Fehler trotz Übung bleibt, zeige einer Lehrkraft oder Lernbegleitung deinen Lösungsweg. Wiederhole nicht bloß dieselbe Aufgabe häufiger."
+        ]
+      },
+      {
+        "title": "Wie Dayova dabei unterstützt",
+        "paragraphs": [
+          "Mit Dayova planst du deine Prüfungsvorbereitung anhand deiner Themen und freien Zeiten. Ergänze deinen Plan durch die Beobachtungen aus der Vorlage: Was kannst du schon ohne Hilfe lösen, und was möchtest du als Nächstes üben? Planung ersetzt nicht dein eigenes Erklären und Anwenden.",
+          "Die Grundidee – das eigene Lernen planen, beobachten und auswerten – findet sich im EEF-Leitfaden zu selbstreguliertem Lernen. Die Vorlage hier ist eine praktische Übertragung der Dayova-Redaktion und kein Wirksamkeitsnachweis für die App."
+        ],
+        "links": [
+          {
+            "href": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition",
+            "label": "EEF-Leitfaden zu selbstreguliertem Lernen"
+          }
+        ]
+      }
     ],
-    takeaway:
-      "Schreibe nicht nur „Mathe gelernt“. Halte die Veränderung fest: drei Aufgaben ohne Hinweis gelöst, einen Fehler erklärt oder einen Begriff nach zwei Tagen abgerufen. So wird Fortschritt prüfbar.",
+    "takeaway": "Notiere nicht nur, wie lange du gelernt hast. Halte fest, welche vergleichbare Aufgabe dir mit welcher Hilfe gelingt, und prüfe sie später erneut. Daraus entsteht ein konkreter nächster Lernschritt.",
+    "updatedAtISO": "2026-09-18"
   },
   {
     slug: "lernen-ohne-plan-erzeugt-stress",

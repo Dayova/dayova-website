@@ -1,10 +1,11 @@
+import type { ReactNode } from "react";
 import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
 type FaqItem = {
   question: string;
-  answer: string;
+  answer: ReactNode;
 };
 
 type FaqAccordionSectionProps = {

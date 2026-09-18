@@ -5,11 +5,7 @@ export type NavigationItem = {
 };
 
 export const primaryNavigation = [
-  {
-    href: "/downloads",
-    label: "Downloads",
-    description: "iOS & Android",
-  },
+  { href: "/tools/study-plan", label: "Lernplan erstellen", description: "Kostenlos und ohne Anmeldung" },
   {
     href: "/parents",
     label: "Für Eltern",
@@ -41,7 +37,7 @@ export const footerNavigation = [
   {
     title: "Seiten",
     links: [
-      { href: "/downloads", label: "Downloads" },
+      { href: "/tools/study-plan", label: "Kostenloser Lernplan-Ersteller" },
       { href: "/parents", label: "Eltern" },
       { href: "/schools", label: "Schulen" },
       { href: "/pricing", label: "Preise" },

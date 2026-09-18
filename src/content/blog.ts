@@ -21,6 +21,8 @@ function calculateReadingTime(article: BlogArticle) {
       section.title,
       ...section.paragraphs,
       ...(section.bullets ?? []),
+      ...(section.table?.rows.flat() ?? []),
+      ...(section.links?.map((link) => link.label) ?? []),
     ]),
     article.takeaway,
   ].join(" ");

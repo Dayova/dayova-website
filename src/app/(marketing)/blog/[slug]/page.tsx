@@ -162,6 +162,7 @@ export default async function BlogArticlePage({
                 {article.publishedAt}
               </time>
               <span>{article.readingTime} Lesezeit</span>
+              {article.updatedAtISO ? <time dateTime={article.updatedAtISO}>Aktualisiert: {new Intl.DateTimeFormat("de-DE", { timeZone: "UTC" }).format(new Date(article.updatedAtISO))}</time> : null}
             </div>
             <h1 id="article-title">{article.title}</h1>
             <p>{article.excerpt}</p>
@@ -180,6 +181,16 @@ export default async function BlogArticlePage({
                 {section.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
+                {section.table ? (
+                  <div className="content-table-wrap" role="region" aria-label={section.table.caption} tabIndex={0}>
+                    <table className="content-table">
+                      <caption>{section.table.caption}</caption>
+                      <thead><tr>{section.table.columns.map((column) => <th scope="col" key={column}>{column}</th>)}</tr></thead>
+                      <tbody>{section.table.rows.map((row, index) => <tr key={index}>{row.map((cell, column) => column === 0 ? <th scope="row" key={column}>{cell}</th> : <td key={column}>{cell}</td>)}</tr>)}</tbody>
+                    </table>
+                  </div>
+                ) : null}
+                {section.links ? <ul>{section.links.map((link) => <li key={link.href}><Link href={link.href}>{link.label}</Link></li>)}</ul> : null}
                 {section.bullets ? (
                   <ul>
                     {section.bullets.map((bullet) => (

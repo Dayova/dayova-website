@@ -29,21 +29,6 @@ export const articlePracticeSections: Readonly<
       ],
     },
   ],
-  "eine-lern-app-sollte-dir-arbeit-abnehmen": [
-    {
-      title: "Der Werkzeug-Check für deinen Lernalltag",
-      paragraphs: [
-        "Notiere eine Woche lang, an welchen Stellen du Informationen doppelt überträgst, Aufgaben suchst oder dieselbe Entscheidung wiederholt triffst. Markiere außerdem, welche Ansicht dir den nächsten Schritt zeigt. So wird sichtbar, ob ein Werkzeug Orientierung schafft oder lediglich eine weitere Ablage ist.",
-        "Eine hilfreiche App sollte mindestens einen dieser Wege verkürzen: Termine sammeln, Aufgaben priorisieren, Lernzeit passend verteilen oder Rückmeldung in eine Folgeaufgabe übersetzen. Funktionen ohne klaren Beitrag dürfen im Hintergrund bleiben.",
-      ],
-      bullets: [
-        "Welche Information trage ich mehrfach ein?",
-        "Welche Entscheidung kostet mich vor jedem Lernschritt Zeit?",
-        "Wo sehe ich nur Aktivität, aber keinen Lernfortschritt?",
-        "Was müsste eine App verbinden, damit ein Schritt entfällt?",
-      ],
-    },
-  ],
   "feedback-das-dich-weiterbringt": [
     {
       title: "Die Vier-Schritte-Feedbackschleife",
@@ -58,36 +43,12 @@ export const articlePracticeSections: Readonly<
       ],
     },
   ],
-  "ein-lernplan-der-in-deinen-alltag-passt": [
-    {
-      title: "Die 15-Minuten-Wochenplanung",
-      paragraphs: [
-        "Trage zuerst Prüfungen, Abgaben und feste Termine ein. Markiere danach drei bis fünf realistische Lernfenster und ordne ihnen jeweils nur einen klaren ersten Schritt zu. Beginne mit Grundlagen, von denen spätere Aufgaben abhängen, und lasse mindestens ein Zeitfenster als Puffer frei.",
-        "Am Ende jedes Lerntages genügen zwei Fragen: Was ist jetzt sicherer als vorher und was muss im Plan angepasst werden? Dadurch bleibt die Woche beweglich, ohne dass jeden Abend alles neu organisiert werden muss.",
-      ],
-      bullets: [
-        "Feste Termine und verfügbare Zeiten sichtbar machen.",
-        "Aufgaben nach Bedeutung statt nach Bequemlichkeit ordnen.",
-        "Jeden Lernschritt mit einem überprüfbaren Ergebnis formulieren.",
-        "Puffer bewusst frei lassen und nicht vorab füllen.",
-      ],
-    },
-  ],
   "vertraut-ist-noch-nicht-verstanden": [
     {
       title: "Ein Transfer-Test für jedes Schulfach",
       paragraphs: [
         "In Mathematik kann eine bekannte Aufgabe neue Zahlen oder eine andere Fragestellung erhalten. In Geschichte wird ein Begriff auf eine zweite Epoche angewendet, in Biologie ein Ablauf an einer veränderten Bedingung erklärt. In Sprachen lässt sich eine Regel in einem eigenen Satz verwenden. Solche kleinen Veränderungen prüfen, ob das Prinzip verfügbar ist oder nur die ursprüngliche Vorlage wiedererkannt wird.",
         "Wer dabei stockt, kehrt nicht zum vollständigen Kapitel zurück. Es reicht, die fehlende Verbindung nachzuschlagen, die eigene Erklärung zu verbessern und den Transfer anschließend mit einer weiteren Aufgabe erneut zu versuchen.",
-      ],
-    },
-  ],
-  "warum-fortschritt-unsichtbar-bleibt": [
-    {
-      title: "Warum Rückschritte zum Lernverlauf gehören",
-      paragraphs: [
-        "Nach einer Pause kann der Abruf schlechter ausfallen als am Vortag. Das bedeutet nicht, dass die vorherige Arbeit wertlos war. Der zeitliche Abstand zeigt vielmehr, welche Verbindung noch nicht stabil ist. Auch der Wechsel zu schwierigeren Aufgaben lässt die Trefferquote zunächst sinken. Fortschritt sollte deshalb über mehrere Messpunkte und vergleichbare Bedingungen betrachtet werden.",
-        "Dayova kann erledigte Lernschritte mit Veränderungen in Antworten, benötigten Hilfen und wiederkehrenden Lücken bündeln. So bleibt Entwicklung sichtbar, auch wenn einzelne Tage schwanken.",
       ],
     },
   ],

@@ -65,6 +65,7 @@ export default async function PricingPage({
               du ein Monats- oder Jahresabo auswählen. Für Schulen planen wir
               den Preis passend zum Pilot.
             </p>
+            <p className="content-small">Die angezeigten Preise gelten auf dieser Website. Beim Kauf im App Store oder bei Google Play können Preise abweichen. Maßgeblich ist die jeweilige Kaufbestätigung.</p>
             {checkoutMessage ? (
               <p className="pricing-page__notice" role="alert">
                 {checkoutMessage}
