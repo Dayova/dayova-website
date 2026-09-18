@@ -9193,7 +9193,7 @@ img {
 .content-notice { border-left: 4px solid var(--dayova-brand-deep); padding: 16px 20px; background: var(--dayova-elevated); border-radius: 0 16px 16px 0; }
 .study-plan-inputs { display: grid; gap: 24px; padding: clamp(18px, 4vw, 32px); background: var(--dayova-elevated); border: 1px solid var(--dayova-line); border-radius: 24px; }
 .study-plan-inputs label { display: grid; gap: 8px; font-size: 14px; color: var(--dayova-ink); }
-.study-plan-inputs input, .study-plan-inputs select { width: 100%; min-width: 0; min-height: 48px; border-radius: 12px; padding: 12px; background: var(--dayova-page); border: 1px solid var(--dayova-line); color: var(--dayova-ink); font: inherit; }
+.study-plan-inputs input, .study-plan-inputs select, .study-plan-inputs textarea { width: 100%; min-width: 0; min-height: 48px; border-radius: 12px; padding: 12px; background: var(--dayova-page); border: 1px solid var(--dayova-line); color: var(--dayova-ink); font: inherit; }
 .study-plan-tool button:disabled { opacity: .5; cursor: not-allowed; }
 .study-plan-tool button { justify-self: start; }
 .study-plan-result:not(:empty) { margin-top: 32px; scroll-margin-top: 130px; }
@@ -9222,7 +9222,7 @@ img {
 @media print { .study-plan-page .content-table thead, .study-plan-page .content-notice { background: white !important; } }
 
 .study-plan-inputs .content-small { margin: 0; }
-.study-plan-inputs input:focus-visible, .study-plan-inputs select:focus-visible { outline: 2px solid var(--dayova-brand-deep); outline-offset: 3px; }
+.study-plan-inputs input:focus-visible, .study-plan-inputs select:focus-visible, .study-plan-inputs textarea:focus-visible { outline: 2px solid var(--dayova-brand-deep); outline-offset: 3px; }
 .content-section .study-plan-phases { display: grid; gap: 20px; padding: 0; margin: 24px 0; list-style: none; }
 .content-section .study-plan-phase { margin: 0; padding: clamp(18px, 3vw, 28px); border: 1px solid var(--dayova-line); border-radius: 20px; }
 .study-plan-phase-heading { display: flex; align-items: center; gap: 16px; }
@@ -9243,4 +9243,11 @@ img {
   .study-plan-page .study-plan-phase ul { margin: 10px 0 0; }
   .study-plan-page .study-plan-phase li { font-size: 10pt; line-height: 1.4; }
   .study-plan-page .study-plan-phase li + li { margin-top: 4px; }
+}
+
+.study-plan-inputs textarea { resize: vertical; }
+.study-plan-result p { overflow-wrap: anywhere; }
+@media print {
+  .study-plan-page .study-plan-result p { font-size: 10pt !important; line-height: 1.4; margin-block: 8px; }
+  .study-plan-page .study-plan-result h3 { margin-block: 8px; }
 }

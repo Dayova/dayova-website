@@ -3,7 +3,7 @@ import test from "node:test";
 import { createStudyPlan, studySubjects } from "../src/lib/study-plan.ts";
 
 const now = new Date(2026, 8, 18, 23, 59);
-const makePlan = (examDate, subjectId = "mathematics", date = now) => createStudyPlan({ subjectId, examDate }, date);
+const makePlan = (examDate, subjectId = "mathematics", date = now) => createStudyPlan({ subjectId, examDate, dailyMinutes: 60, topicDescription: "Gleichungen und Textaufgaben" }, date);
 const dayKey = (date) => new Date(date).toISOString().slice(0, 10);
 
 test("every subject produces subject-specific theory, practice and rehearsal", () => {
@@ -54,4 +54,26 @@ test("local start dates survive DST transitions, year changes and leap days", ()
 test("rejects missing subjects and invalid, past or same-day exams", () => {
   for (const subject of ["", "unknown", "Mathematik"]) assert.throws(() => makePlan("2026-10-01", subject));
   for (const date of ["", "2026-09-18", "2026-09-17", "2027-02-29", "2026-02-30", "2026-13-01", "01.10.2026", "2026-10-01T12:00:00Z"]) assert.throws(() => makePlan(date));
+});
+
+
+test("daily budgets stay within the selected limit even when phases share a day", () => {
+  for (const dailyMinutes of [15, 60, 135, 240]) for (const days of [1, 2, 3, 14]) {
+    const plan = createStudyPlan({ subjectId: "mathematics", examDate: dayKey(Date.UTC(2026, 8, 18 + days)), dailyMinutes, topicDescription: "  Bruchrechnung und Gleichungen  " }, now);
+    assert.equal(plan.topicDescription, "Bruchrechnung und Gleichungen");
+    assert.equal(plan.totalMinutes, dailyMinutes * days);
+    assert.equal(plan.phases.reduce((sum, phase) => sum + phase.totalMinutes, 0), plan.totalMinutes);
+    for (let day = 0; day < days; day++) {
+      const key = dayKey(Date.UTC(2026, 8, 18 + day));
+      const budget = plan.phases.filter((phase) => phase.startDate <= key && phase.endDate >= key).reduce((sum, phase) => sum + phase.minutesPerDay, 0);
+      assert.equal(budget, dailyMinutes);
+    }
+  }
+});
+
+test("rejects invalid time budgets and missing or oversized topic descriptions", () => {
+  const input = { subjectId: "mathematics", examDate: "2026-10-02", dailyMinutes: 60, topicDescription: "Gleichungen" };
+  for (const dailyMinutes of [0, 14, 16, 241, 300, NaN, Infinity, 60.5]) assert.throws(() => createStudyPlan({ ...input, dailyMinutes }, now));
+  for (const topicDescription of ["", "   ", "a".repeat(301)]) assert.throws(() => createStudyPlan({ ...input, topicDescription }, now));
+  assert.equal(createStudyPlan({ ...input, topicDescription: "<script>test</script>" }, now).topicDescription, "<script>test</script>");
 });
