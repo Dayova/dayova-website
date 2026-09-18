@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   devIndicators: false,
+  // Resolve legacy URLs before normalizing slashes to avoid redirect chains.
+  skipTrailingSlashRedirect: true,
   turbopack: {
     root: process.cwd(),
   },
@@ -30,15 +32,20 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
-    return [
+    const legacyRedirects = [
       {
         source: "/kontakt",
-        destination: "/#kontakt",
+        destination: "/support",
+        permanent: true,
+      },
+      {
+        source: "/kontakt-zu-dayova-schuelerfoerderung-fuer-leichteres-lernen",
+        destination: "/support",
         permanent: true,
       },
       {
         source: "/ueberuns",
-        destination: "/#about-title",
+        destination: "/about",
         permanent: true,
       },
       {
@@ -406,6 +413,18 @@ const nextConfig: NextConfig = {
       {
         source: "/der-dunning-kruger-effekt-im-klassenzimmer-warum-schlechte-schueler-ihre-leistung-ueberschaetzen",
         destination: "/blog/wenn-selbstvertrauen-wissen-vortaeuscht",
+        permanent: true,
+      },
+    ];
+
+    return [
+      ...legacyRedirects.flatMap((redirect) => [
+        { ...redirect, source: `${redirect.source}/` },
+        redirect,
+      ]),
+      {
+        source: "/:path+/",
+        destination: "/:path+",
         permanent: true,
       },
     ];

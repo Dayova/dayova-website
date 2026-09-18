@@ -6,6 +6,11 @@ export type NavigationItem = {
 
 export const primaryNavigation = [
   {
+    href: "/downloads",
+    label: "Downloads",
+    description: "iOS & Android",
+  },
+  {
     href: "/parents",
     label: "Für Eltern",
     description: "Wie dein Kind selbst anfangen kann",
@@ -36,6 +41,7 @@ export const footerNavigation = [
   {
     title: "Seiten",
     links: [
+      { href: "/downloads", label: "Downloads" },
       { href: "/parents", label: "Eltern" },
       { href: "/schools", label: "Schulen" },
       { href: "/pricing", label: "Preise" },

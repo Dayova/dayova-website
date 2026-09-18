@@ -40,8 +40,11 @@ thematisch verwandte nächste Beiträge.
 ## Technische Regeln
 
 - Nur kanonische, indexierbare URLs stehen in der Sitemap.
-- Checkout, Dashboard, Downloads und rechtliche Seiten bleiben bewusst
+- Checkout, Dashboard und rechtliche Seiten bleiben bewusst
   `noindex`, weil sie keine eigenständige organische Suchintention erfüllen.
+- `/downloads` und `/support` sind indexierbar und stehen in der Sitemap.
+- Neue URL-Pfade und technische Bezeichner bleiben Englisch. Bestehende
+  Blog-URLs werden beibehalten, damit vorhandene Links stabil bleiben.
 - Historische OAKLYN-URLs liefern entweder einen dauerhaften Redirect auf eine
   inhaltlich passende Dayova-Seite oder einen echten 404-Status, wenn kein
   passender Dayova-Inhalt existiert.
