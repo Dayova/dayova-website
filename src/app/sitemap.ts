@@ -4,7 +4,6 @@ import { blogArticles, getBlogArticleModifiedAt } from "@/content/blog";
 import { defaultOgImage, siteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const downloadsUpdatedAt = new Date("2026-09-17T14:30:00+02:00");
   const newestArticleDate = new Date(
     Math.max(
       ...blogArticles.map((article) =>
@@ -49,12 +48,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [`${siteUrl}/images/dayova-bluebox-light.png`],
     },
     {
-      path: "/downloads",
-      priority: 0.9,
-      changeFrequency: "monthly" as const,
-      images: [`${siteUrl}/images/dayova-bluebox-light.png`],
-    },
-    {
       path: "/about",
       priority: 0.8,
       changeFrequency: "monthly" as const,
@@ -72,13 +65,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...routes.map((route) => ({
       url: `${siteUrl}${route.path}`,
       lastModified:
-        route.path.startsWith("/features/") || route.path.startsWith("/tools/")
+        route.path.startsWith("/tools/")
           ? new Date("2026-09-18")
           : route.path === "/blog"
           ? newestArticleDate
-          : route.path === "/downloads"
-            ? downloadsUpdatedAt
-            : undefined,
+          : undefined,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
       images: route.images,

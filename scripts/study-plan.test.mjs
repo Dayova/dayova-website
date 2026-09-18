@@ -1,13 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { createStudyPlan, studyPlanAsText } from "../src/lib/study-plan.ts";
+import { createStudyPlan, createStudyPlanExample, studyPlanAsText } from "../src/lib/study-plan.ts";
 
 const base = { startDate: "2026-09-21", examDate: "2026-09-25", weekdays: [1, 2, 3, 4, 5], dailyMinutes: 30, topics: [{ name: "Gleichungen", minutes: 60 }] };
-test("the published example fits three study days and a later review", () => {
-  const result = createStudyPlan(base);
-  assert.equal(result.requestedMinutes, 75);
-  assert.deepEqual(result.days.map((day) => day.sessions.map((s) => [s.kind, s.minutes])), [[["study", 20]], [["study", 20]], [["study", 20]], [["review", 15]]]);
-  assert.deepEqual(result.days.map((day) => day.spareMinutes), [10, 10, 10, 15]);
+test("the published example fits two practice days and a third review day", () => {
+  const result = createStudyPlan({ ...base, examDate: "2026-09-24", topics: [{ name: "Gleichungen", minutes: 40 }] });
+  assert.equal(result.requestedMinutes, 50);
+  assert.deepEqual(result.days.map((day) => day.sessions.map((s) => [s.kind, s.minutes])), [[["study", 20]], [["study", 20]], [["review", 10]]]);
+  assert.deepEqual(result.days.map((day) => day.spareMinutes), [10, 10, 20]);
   assert.deepEqual(result.remaining, []);
 });
 test("never schedules on exam day, excluded weekdays or beyond the daily budget", () => {
@@ -61,4 +61,15 @@ test("text export preserves user text as plain text and reports unfinished work"
   assert.ok(text.includes("=SUM(A1) <script>"));
   assert.ok(text.includes("Noch nicht eingeplant"));
   assert.ok(text.includes("https://dayova.com/tools/study-plan"));
+});
+
+test("the interactive example always has exactly three days, including weekends", () => {
+  for (let day = 18; day < 25; day++) {
+    const input = createStudyPlanExample(new Date(2026, 8, day, 12));
+    const result = createStudyPlan(input);
+    assert.equal(result.days.length, 3);
+    assert.equal(result.requestedMinutes, 100);
+    assert.equal(result.scheduledMinutes, 100);
+    assert.deepEqual(result.remaining, []);
+  }
 });

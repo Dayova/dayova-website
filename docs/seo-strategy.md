@@ -47,7 +47,9 @@ thematisch verwandte nächste Beiträge.
 - Nur kanonische, indexierbare URLs stehen in der Sitemap.
 - Checkout, Dashboard und rechtliche Seiten bleiben bewusst
   `noindex`, weil sie keine eigenständige organische Suchintention erfüllen.
-- `/downloads` und `/support` sind indexierbar und stehen in der Sitemap.
+- `/support` ist indexierbar und steht in der Sitemap. `/downloads` bleibt als
+  direkt erreichbare QR-Code-Zielseite erhalten, ist jedoch nicht in der
+  Navigation oder Sitemap verlinkt und trägt `noindex, follow`.
 - Neue URL-Pfade und technische Bezeichner bleiben Englisch. Bestehende
   Blog-URLs werden beibehalten, damit vorhandene Links stabil bleiben.
 - Historische OAKLYN-URLs liefern entweder einen dauerhaften Redirect auf eine

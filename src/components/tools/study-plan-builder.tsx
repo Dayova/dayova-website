@@ -1,14 +1,10 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { createStudyPlan, formatPlanDate, studyPlanAsText, type StudyPlan, type StudyTopic } from "@/lib/study-plan";
+import { createStudyPlan, createStudyPlanExample, formatPlanDate, studyPlanAsText, type StudyPlan, type StudyTopic } from "@/lib/study-plan";
 
 const weekdays = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
-const initialTopics: StudyTopic[] = [
-  { name: "Bruchrechnung", minutes: 60 },
-  { name: "Gleichungen", minutes: 90 },
-  { name: "Textaufgaben", minutes: 60 },
-];
+const initialTopics: StudyTopic[] = [{ name: "", minutes: 30 }];
 
 export function StudyPlanBuilder() {
   const [startDate, setStartDate] = useState("");
@@ -25,15 +21,23 @@ export function StudyPlanBuilder() {
     setTopics((current) => current.map((topic, position) => position === index ? { ...topic, [key]: key === "minutes" ? Number(value) : value } : topic));
   }
   function loadExample() {
-    const now = new Date();
-    const localDate = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
-    setStartDate(localDate.toISOString().slice(0, 10));
-    localDate.setUTCDate(localDate.getUTCDate() + 14);
-    setExamDate(localDate.toISOString().slice(0, 10));
+    const example = createStudyPlanExample();
+    setStartDate(example.startDate);
+    setExamDate(example.examDate);
+    setTopics(example.topics);
+    setSelectedDays(example.weekdays);
+    setDailyMinutes(example.dailyMinutes);
+    setStale(!!plan);
+    setError("");
+  }
+  function resetPlan() {
+    setStartDate("");
+    setExamDate("");
     setTopics(initialTopics);
     setSelectedDays([1, 2, 3, 4, 5]);
     setDailyMinutes(60);
-    setStale(!!plan);
+    setPlan(null);
+    setStale(false);
     setError("");
   }
   function downloadPlan() {
@@ -59,8 +63,8 @@ export function StudyPlanBuilder() {
           setError(cause instanceof Error ? cause.message : "Bitte prüfe deine Angaben.");
         }
       }}>
-        <p>Die Mathe-Themen sind Beispiele. Ersetze sie durch deinen Prüfungsstoff und schätze die reine Übungszeit je Thema. Wiederholungen plant der Rechner zusätzlich ein.</p>
-        <button type="button" className="button-secondary" onClick={loadExample}>Beispiel für 14 Tage einsetzen</button>
+        <p>Probiere das Beispiel mit drei Lerntagen aus oder erstelle deinen eigenen Plan. Trage dazu deinen Prüfungsstoff und die geschätzte Übungszeit je Thema ein. Wiederholungen plant der Rechner zusätzlich ein.</p>
+        <div className="content-actions"><button type="button" className="button-secondary" onClick={loadExample}>Beispiel für 3 Tage einsetzen</button><button type="button" className="button-secondary" onClick={resetPlan}>Neuen Plan erstellen</button></div>
         <div className="content-grid">
           <label>Lernstart<input type="date" required value={startDate} onChange={(event) => setStartDate(event.target.value)} /></label>
           <label>Prüfungstag<input type="date" required value={examDate} onChange={(event) => setExamDate(event.target.value)} /></label>

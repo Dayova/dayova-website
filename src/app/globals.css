@@ -9218,7 +9218,7 @@ img {
   body:has(.study-plan-page) header, body:has(.study-plan-page) footer,
   body:has(.study-plan-page) .analytics-consent,
   .study-plan-page .marketing-page-hero, .study-plan-inputs, .study-plan-controls,
-  .study-plan-page .content-section:not(#builder), .study-plan-page noscript { display: none !important; }
+  .study-plan-page #questions, .study-plan-page .content-section:not(#builder), .study-plan-page noscript { display: none !important; }
   .study-plan-page, .study-plan-page .content-section, .study-plan-page .content-body { padding: 0; margin: 0; max-width: none; }
   .study-plan-page .content-table-wrap { overflow: visible; }
   .study-plan-page p, .study-plan-page td, .study-plan-page th, .study-plan-page li { color: black !important; }

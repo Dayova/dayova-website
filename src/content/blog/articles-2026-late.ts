@@ -320,10 +320,6 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         ],
         "links": [
           {
-            "href": "/downloads",
-            "label": "Dayova-App herunterladen"
-          },
-          {
             "href": "/blog/warum-fortschritt-unsichtbar-bleibt",
             "label": "Lernfortschritte mit einer einfachen Vorlage prüfen"
           },

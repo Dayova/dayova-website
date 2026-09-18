@@ -123,7 +123,7 @@ for (const path of ["/seo-audit-page-that-does-not-exist", "/blog/seo-audit-arti
   const { response } = await request(path);
   check(response.status === 404, `${path}: removed or unknown content must return a real 404.`);
 }
-for (const path of ["/privacy", "/terms", "/legal-notice", "/checkout", "/checkout/success", "/checkout/canceled", "/app/privacy", "/app/support"]) {
+for (const path of ["/downloads", "/privacy", "/terms", "/legal-notice", "/checkout", "/checkout/success", "/checkout/canceled", "/app/privacy", "/app/support"]) {
   const { response, markup } = await page(path);
   check(response.status === 200 && /<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/iu.test(markup), `${path}: utility page must retain noindex.`);
 }

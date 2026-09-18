@@ -50,4 +50,13 @@ Unscheduled practice and review remain visible. Input changes mark the result as
 - Before the scope reduction: SEO audit 56 pages / 0 errors; technical audit 60 internal targets and 32 legacy redirects / 0 failures; smoke test 75 pages and 14 images passes. Downloads and support retain their two existing optional structured-data notices.
 - Chrome: successful example calculation, insufficient-time warning, stale-result export protection, empty-weekday validation and adding/removing topics verified.
 - Chrome visual review: calculator at 390px and 1440px, learning-planning page and updated article at 390px; no horizontal document overflow. Corrected a nested date badge found during review. Text download verified on disk; two-page print preview inspected with repeated table header and assumptions intact, then cancelled without printing.
-- Final route count after removing the two feature pages: 54 indexable sitemap pages. No production deployment has been performed for this content package.
+- Final route count after removing the two feature pages and excluding the QR landing page: 53 indexable sitemap pages. No production deployment has been performed for this content package.
+
+## Requested refinements
+
+- Study-plan FAQ now reuses the homepage accordion component, including its styling and native details/summary behavior; inline links remain accessible.
+- The example uses exactly three consecutive learning days (weekends included), with shorter topic estimates that fit the available time. The explanatory static example also uses three days.
+- “Neuen Plan erstellen” clears dates, topics and results. Custom plans retain the existing 1–90 day range and editable weekdays.
+- `/downloads` remains a working direct/QR landing page with its existing canonical and store links. Removed from menu, footer, internal content links and sitemap; set to `noindex, follow`. Main app-download buttons continue linking directly to the appropriate store.
+- Validation: nine calculator tests, ESLint, production build and TypeScript pass. SEO audit: 53 pages, zero errors, one pre-existing support JSON-LD advisory. Technical audit: 57 internal targets, 32 redirects, zero failures, including the QR landing page's 200 response and canonical.
+- Chrome confirmed the three-day result (100/100 minutes), clearing the example, and the expanded FAQ in the shared homepage design.

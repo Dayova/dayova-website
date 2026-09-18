@@ -105,3 +105,20 @@ export function studyPlanAsText(plan: StudyPlan) {
     "https://dayova.com/tools/study-plan",
   ].join("\n\n");
 }
+
+export function createStudyPlanExample(now = new Date()): StudyPlanInput {
+  const start = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
+  const exam = new Date(start);
+  exam.setUTCDate(exam.getUTCDate() + 3);
+  return {
+    startDate: start.toISOString().slice(0, 10),
+    examDate: exam.toISOString().slice(0, 10),
+    weekdays: [0, 1, 2, 3, 4, 5, 6],
+    dailyMinutes: 60,
+    topics: [
+      { name: "Bruchrechnung", minutes: 20 },
+      { name: "Gleichungen", minutes: 30 },
+      { name: "Textaufgaben", minutes: 20 },
+    ],
+  };
+}
