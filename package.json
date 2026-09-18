@@ -9,6 +9,7 @@
     "smoke": "node scripts/smoke-test.mjs",
     "seo:audit": "node scripts/seo-audit.mjs",
     "seo:technical": "node scripts/technical-seo-audit.mjs",
+    "test:study-plan": "node --test scripts/study-plan.test.mjs",
     "responsive:audit": "node scripts/responsive-audit.mjs",
     "lint": "eslint",
     "typecheck": "tsc --noEmit"

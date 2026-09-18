@@ -1,6 +1,11 @@
 # Dayova SEO-Strategie
 
-Stand: 17. August 2026
+Stand: 18. September 2026
+
+Die aktuelle Suchintention-Zuordnung, Inhaltsüberarbeitung und Quellen stehen in
+[Content-SEO vom 18. September](content-seo-2026-09-18.md).
+Die folgenden historischen Ausgangswerte stammen vom August; sie sind keine
+aktuelle Erfolgsmessung.
 
 ## Ausgangslage
 
@@ -14,10 +19,10 @@ konkreten Problemen der Zielgruppen passen.
 
 | Zielgruppe | Kernproblem | Primäre Zielseite | Themenfelder |
 | --- | --- | --- | --- |
-| Schüler | Lernstoff organisieren und Prüfungen planen | `/` und `/preise` | Lernplan-App, Lernmethoden, Prüfungsvorbereitung, Wissenslücken |
-| Eltern | Lernstress reduzieren und Selbstständigkeit stärken | `/eltern` | Lernorganisation, Lernmotivation, Eltern als Lernbegleiter |
-| Lehrkräfte | Lernstände in Unterrichtsschritte übersetzen | `/schulen` | Unterrichtsplanung, Lernstandsanalyse, individuelle Förderung |
-| Schulen | Eine gemeinsame Lernwelt und weniger Einzellösungen | `/schulen` | Lernplattform Schule, Schulorganisation, Lehrkräfte entlasten |
+| Schüler | Lernstoff organisieren und Prüfungen planen | `/` und `/pricing` | Lernplan-App, Lernmethoden, Prüfungsvorbereitung, Wissenslücken |
+| Eltern | Lernstress reduzieren und Selbstständigkeit stärken | `/parents` | Lernorganisation, Lernmotivation, Eltern als Lernbegleiter |
+| Lehrkräfte | Lernstände in Unterrichtsschritte übersetzen | `/schools` | Unterrichtsplanung, Lernstandsanalyse, individuelle Förderung |
+| Schulen | Eine gemeinsame Lernwelt und weniger Einzellösungen | `/schools` | Lernplattform Schule, Schulorganisation, Lehrkräfte entlasten |
 
 Jede Zielseite beantwortet eine eigene Suchintention. Zusätzliche Seiten sollen
 nur entstehen, wenn sie einen eigenständigen Nutzen bieten; dünne oder nahezu

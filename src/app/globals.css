@@ -9161,3 +9161,69 @@ img {
 .parents-hero .dayova-hero-claim {
   line-height: 1.18;
 }
+
+/* Useful content pages and the browser-only study planner. */
+.content-page { padding-top: clamp(36px, 6vw, 80px); }
+.content-body { max-width: 1120px; padding-bottom: var(--space-16); }
+.content-section { padding-block: clamp(28px, 5vw, 60px); border-bottom: 1px solid var(--dayova-line); scroll-margin-top: 130px; }
+.content-section h2 { margin: 0 0 24px; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.22; text-wrap: balance; }
+.content-section h3 { margin: 24px 0 12px; font-size: clamp(18px, 2vw, 23px); line-height: 1.4; }
+.content-section p, .content-section li { color: var(--dayova-muted); line-height: 1.8; }
+.content-section p { margin-block: 14px; }
+.content-section ul, .content-section ol { padding-left: 24px; list-style: revert; }
+.content-section li + li { margin-top: 10px; }
+.content-section a:not([class*="button-"]), .content-link { color: var(--dayova-brand-deep); text-decoration: underline; text-underline-offset: 4px; }
+.content-toc, .content-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-block: 20px; }
+.content-toc { padding: 20px 0; border-bottom: 1px solid var(--dayova-line); }
+.content-toc a { color: var(--dayova-brand-deep); text-decoration: underline; text-underline-offset: 4px; }
+.content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+.content-card { border: 1px solid var(--dayova-line); background: var(--dayova-elevated); padding: 24px; border-radius: 24px; }
+.content-card h3 { margin-top: 0; }
+.content-product { max-width: 320px; margin: 0 auto; text-align: center; }
+.content-product img { width: 100%; height: auto; border-radius: 24px; }
+.content-product figcaption { color: var(--dayova-muted); font-size: 14px; line-height: 1.65; margin-top: 16px; }
+.content-small { font-size: 14px !important; line-height: 1.6; color: var(--dayova-muted); }
+.content-table-wrap { max-width: 100%; overflow-x: auto; margin-block: 24px; border: 1px solid var(--dayova-line); border-radius: 16px; }
+.content-table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.65; text-align: left; }
+.content-table caption { padding: 16px; text-align: left; color: var(--dayova-muted); }
+.content-table th, .content-table td { padding: 16px; vertical-align: top; border-top: 1px solid var(--dayova-line); overflow-wrap: anywhere; min-width: 100px; }
+.content-table thead { background: var(--dayova-elevated); }
+.content-table th { color: var(--dayova-ink); font-weight: 600; }
+.content-table td { color: var(--dayova-muted); }
+.content-notice { border-left: 4px solid var(--dayova-brand-deep); padding: 16px 20px; background: var(--dayova-elevated); border-radius: 0 16px 16px 0; }
+.study-plan-inputs { display: grid; gap: 24px; padding: clamp(18px, 4vw, 32px); background: var(--dayova-elevated); border: 1px solid var(--dayova-line); border-radius: 24px; }
+.study-plan-inputs label { display: grid; gap: 8px; font-size: 14px; color: var(--dayova-ink); }
+.study-plan-inputs input:not([type="checkbox"]) { width: 100%; min-width: 0; min-height: 48px; border-radius: 12px; padding: 12px; background: var(--dayova-page); border: 1px solid var(--dayova-line); color: var(--dayova-ink); font: inherit; }
+.study-plan-inputs legend { margin-bottom: 16px; font-weight: 600; }
+.study-plan-inputs fieldset { min-width: 0; }
+.study-plan-weekdays { display: flex; flex-wrap: wrap; gap: 12px; }
+.study-plan-weekdays label { display: flex; align-items: center; padding: 12px; gap: 8px; border: 1px solid var(--dayova-line); border-radius: 12px; }
+.study-plan-weekdays input { width: 18px; height: 18px; accent-color: var(--dayova-brand-deep); }
+.study-plan-topic { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto; align-items: end; gap: 16px; margin-bottom: 20px; }
+.study-plan-tool button:disabled { opacity: .5; cursor: not-allowed; }
+.study-plan-tool button { justify-self: start; }
+.study-plan-result:not(:empty) { margin-top: 32px; scroll-margin-top: 130px; }
+.study-plan-result:focus-visible, .content-table-wrap:focus-visible { outline: 2px solid var(--dayova-brand-deep); outline-offset: 5px; }
+.blog-article-layout > .blog-article { min-width: 0; }
+.content-page .button-primary, .content-page .button-secondary { white-space: normal; text-align: center; }
+@media (max-width: 767px) {
+  .content-grid { grid-template-columns: minmax(0, 1fr); }
+  .study-plan-topic { grid-template-columns: minmax(0, 1fr); border-bottom: 1px solid var(--dayova-line); padding-bottom: 20px; }
+  .content-actions { align-items: stretch; flex-direction: column; }
+  .content-section { overflow-wrap: anywhere; }
+  .content-product { max-width: 280px; }
+}
+@media print {
+  body:has(.study-plan-page) { background: white !important; color: black !important; }
+  body:has(.study-plan-page) header, body:has(.study-plan-page) footer,
+  body:has(.study-plan-page) .analytics-consent,
+  .study-plan-page .marketing-page-hero, .study-plan-inputs, .study-plan-controls,
+  .study-plan-page .content-section:not(#builder), .study-plan-page noscript { display: none !important; }
+  .study-plan-page, .study-plan-page .content-section, .study-plan-page .content-body { padding: 0; margin: 0; max-width: none; }
+  .study-plan-page .content-table-wrap { overflow: visible; }
+  .study-plan-page p, .study-plan-page td, .study-plan-page th, .study-plan-page li { color: black !important; }
+  .study-plan-page .content-table { font-size: 10pt; }
+  .study-plan-page tr { break-inside: avoid; }
+}
+
+@media print { .study-plan-page .content-table thead, .study-plan-page .content-notice { background: white !important; } }

@@ -57,7 +57,7 @@ export default function BlogPage() {
         className="blog-overview-hero"
         eyebrow="Dayova Blog"
         title="Lernmethoden und Lernplanung für deinen Schulalltag."
-        description="Jeden Montag erscheinen fundierte Beiträge zu Lernmethoden, Motivation und Prüfungsvorbereitung – für Schülerinnen, Schüler, Eltern und Lehrkräfte."
+        description="Anleitungen, Beispiele und Entscheidungshilfen zu Lernmethoden und Prüfungsvorbereitung. Bestehende Beiträge werden überarbeitet, wenn sich Inhalte oder Funktionen ändern."
       />
 
       <section className="section blog-overview" aria-label="Blogbeiträge">

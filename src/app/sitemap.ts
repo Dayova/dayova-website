@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   );
   const routes = [
+    ...["/features/study-planning", "/features/learning-progress", "/tools/study-plan"].map((path) => ({
+      path, priority: 0.8, changeFrequency: "monthly" as const, images: [] as string[],
+    })),
     {
       path: "",
       priority: 1,
@@ -69,7 +72,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...routes.map((route) => ({
       url: `${siteUrl}${route.path}`,
       lastModified:
-        route.path === "/blog"
+        route.path.startsWith("/features/") || route.path.startsWith("/tools/")
+          ? new Date("2026-09-18")
+          : route.path === "/blog"
           ? newestArticleDate
           : route.path === "/downloads"
             ? downloadsUpdatedAt

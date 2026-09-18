@@ -15,6 +15,8 @@ import { DayovaIcon } from "@/components/ui/huge-icon";
 
 const dayovaAdvantages = [
   {
+    href: "/features/study-planning",
+    linkLabel: "So entsteht dein Lernplan",
     label: "Dein Plan",
     title: "Aus deiner Prüfung wird ein Plan für jeden Lerntag.",
     description:
@@ -26,6 +28,8 @@ const dayovaAdvantages = [
     className: "home-classic-advantage--overview",
   },
   {
+    href: "/tools/study-plan",
+    linkLabel: "Einen Lernplan selbst erstellen",
     label: "Heute dran",
     title: "Beim Öffnen wartet dein nächster Lernschritt.",
     description:
@@ -37,6 +41,8 @@ const dayovaAdvantages = [
     className: "home-classic-advantage--planning",
   },
   {
+    href: "/features/learning-progress",
+    linkLabel: "Die Lernstandsanalyse kennenlernen",
     label: "Dein Wissen",
     title: "Was du antwortest, verändert deinen Plan.",
     description:
@@ -225,6 +231,7 @@ export function HomeAdvantagesSection() {
                 </span>
                 <h3>{advantage.title}</h3>
                 <p>{advantage.description}</p>
+                <ButtonLink href={advantage.href} variant="text">{advantage.linkLabel}</ButtonLink>
               </div>
 
               <div className="home-classic-advantage__visual">

@@ -28,6 +28,12 @@ export type BlogArticle = {
     title: string;
     paragraphs: readonly string[];
     bullets?: readonly string[];
+    table?: {
+      caption: string;
+      columns: readonly string[];
+      rows: readonly (readonly string[])[];
+    };
+    links?: readonly { href: string; label: string }[];
   }[];
   takeaway: string;
   sources?: readonly BlogSource[];

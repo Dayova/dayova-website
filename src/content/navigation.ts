@@ -5,6 +5,7 @@ export type NavigationItem = {
 };
 
 export const primaryNavigation = [
+  { href: "/tools/study-plan", label: "Lernplan erstellen", description: "Kostenlos und ohne Anmeldung" },
   {
     href: "/downloads",
     label: "Downloads",
@@ -41,6 +42,9 @@ export const footerNavigation = [
   {
     title: "Seiten",
     links: [
+      { href: "/tools/study-plan", label: "Kostenloser Lernplan-Ersteller" },
+      { href: "/features/study-planning", label: "Lernplanung mit Dayova" },
+      { href: "/features/learning-progress", label: "Lernstandsanalyse" },
       { href: "/downloads", label: "Downloads" },
       { href: "/parents", label: "Eltern" },
       { href: "/schools", label: "Schulen" },
