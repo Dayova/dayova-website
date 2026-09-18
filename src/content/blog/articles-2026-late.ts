@@ -333,7 +333,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         "title": "Bevor du ein weiteres Werkzeug installierst",
         "paragraphs": [
           "Schreibe deine wichtigste Hürde in einem Satz auf: „Ich weiß nicht, wann ich üben soll“ ist etwas anderes als „Ich verstehe das Umformen nicht“. Wähle eine passende Hilfe und prüfe nach einigen Lernversuchen, ob genau diese Hürde kleiner geworden ist.",
-          "Für die reine Zeitaufteilung kannst du zuerst den kostenlosen Rechner nutzen. Er benötigt kein Konto und zeigt auch, wenn dein Stoff nicht in den Zeitraum passt."
+          "Für einen ersten Überblick kannst du den kostenlosen Lernplan-Ersteller nutzen. Wähle dein Fach und deinen Prüfungstermin: Du bekommst einen Plan mit Theorie, Üben und Praxis, ganz ohne Konto."
         ],
         "links": [
           {
@@ -467,7 +467,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         "links": [
           {
             "href": "/tools/study-plan",
-            "label": "Mit deinen eigenen Themen einen Lernplan berechnen"
+            "label": "Einen Lernplan für dein Fach und deinen Prüfungstermin erstellen"
           }
         ]
       },
@@ -491,7 +491,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
           },
           {
             "href": "/tools/study-plan",
-            "label": "Einen Lernplan mit deinen verfügbaren Zeiten erstellen"
+            "label": "Kostenlosen Lernplan bis zu deiner Prüfung erstellen"
           }
         ]
       }

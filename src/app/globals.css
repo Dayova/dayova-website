@@ -9193,13 +9193,7 @@ img {
 .content-notice { border-left: 4px solid var(--dayova-brand-deep); padding: 16px 20px; background: var(--dayova-elevated); border-radius: 0 16px 16px 0; }
 .study-plan-inputs { display: grid; gap: 24px; padding: clamp(18px, 4vw, 32px); background: var(--dayova-elevated); border: 1px solid var(--dayova-line); border-radius: 24px; }
 .study-plan-inputs label { display: grid; gap: 8px; font-size: 14px; color: var(--dayova-ink); }
-.study-plan-inputs input:not([type="checkbox"]) { width: 100%; min-width: 0; min-height: 48px; border-radius: 12px; padding: 12px; background: var(--dayova-page); border: 1px solid var(--dayova-line); color: var(--dayova-ink); font: inherit; }
-.study-plan-inputs legend { margin-bottom: 16px; font-weight: 600; }
-.study-plan-inputs fieldset { min-width: 0; }
-.study-plan-weekdays { display: flex; flex-wrap: wrap; gap: 12px; }
-.study-plan-weekdays label { display: flex; align-items: center; padding: 12px; gap: 8px; border: 1px solid var(--dayova-line); border-radius: 12px; }
-.study-plan-weekdays input { width: 18px; height: 18px; accent-color: var(--dayova-brand-deep); }
-.study-plan-topic { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto; align-items: end; gap: 16px; margin-bottom: 20px; }
+.study-plan-inputs input, .study-plan-inputs select { width: 100%; min-width: 0; min-height: 48px; border-radius: 12px; padding: 12px; background: var(--dayova-page); border: 1px solid var(--dayova-line); color: var(--dayova-ink); font: inherit; }
 .study-plan-tool button:disabled { opacity: .5; cursor: not-allowed; }
 .study-plan-tool button { justify-self: start; }
 .study-plan-result:not(:empty) { margin-top: 32px; scroll-margin-top: 130px; }
@@ -9208,7 +9202,6 @@ img {
 .content-page .button-primary, .content-page .button-secondary { white-space: normal; text-align: center; }
 @media (max-width: 767px) {
   .content-grid { grid-template-columns: minmax(0, 1fr); }
-  .study-plan-topic { grid-template-columns: minmax(0, 1fr); border-bottom: 1px solid var(--dayova-line); padding-bottom: 20px; }
   .content-actions { align-items: stretch; flex-direction: column; }
   .content-section { overflow-wrap: anywhere; }
   .content-product { max-width: 280px; }
@@ -9227,3 +9220,27 @@ img {
 }
 
 @media print { .study-plan-page .content-table thead, .study-plan-page .content-notice { background: white !important; } }
+
+.study-plan-inputs .content-small { margin: 0; }
+.study-plan-inputs input:focus-visible, .study-plan-inputs select:focus-visible { outline: 2px solid var(--dayova-brand-deep); outline-offset: 3px; }
+.content-section .study-plan-phases { display: grid; gap: 20px; padding: 0; margin: 24px 0; list-style: none; }
+.content-section .study-plan-phase { margin: 0; padding: clamp(18px, 3vw, 28px); border: 1px solid var(--dayova-line); border-radius: 20px; }
+.study-plan-phase-heading { display: flex; align-items: center; gap: 16px; }
+.study-plan-phase-heading h4 { margin: 0; color: var(--dayova-ink); font-size: 22px; }
+.study-plan-phase-heading p { margin: 4px 0 0; }
+.study-plan-phase-number { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: var(--dayova-brand-deep); color: white; font-weight: 600; }
+.study-plan-phase > ul { margin-top: 20px; }
+.study-plan-method { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.study-plan-method h3 { margin-top: 0; }
+@media (max-width: 767px) { .study-plan-method { grid-template-columns: minmax(0, 1fr); gap: 12px; } }
+@media print {
+  .study-plan-page #builder > h2 { display: none; }
+  .study-plan-result:not(:empty) { margin-top: 0; }
+  .study-plan-page .study-plan-phase { break-inside: avoid; padding: 12px; border-color: #ccc; }
+  .study-plan-page .study-plan-phase h4 { color: black; font-size: 13pt; }
+  .study-plan-page .study-plan-phase-number { background: white; color: black; border: 1px solid #ccc; }
+  .study-plan-page .study-plan-phases { gap: 10px; margin: 12px 0; }
+  .study-plan-page .study-plan-phase ul { margin: 10px 0 0; }
+  .study-plan-page .study-plan-phase li { font-size: 10pt; line-height: 1.4; }
+  .study-plan-page .study-plan-phase li + li { margin-top: 4px; }
+}
