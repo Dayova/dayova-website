@@ -4,10 +4,13 @@ import { blogArticles, getBlogArticleModifiedAt } from "@/content/blog";
 import { defaultOgImage, siteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUpdatedAt = new Date("2026-08-17T14:00:00+02:00");
   const downloadsUpdatedAt = new Date("2026-09-17T14:30:00+02:00");
   const newestArticleDate = new Date(
-    blogArticles[0]?.publishedAtISO ?? "2026-08-10T00:00:00+02:00",
+    Math.max(
+      ...blogArticles.map((article) =>
+        new Date(getBlogArticleModifiedAt(article)).getTime(),
+      ),
+    ),
   );
   const routes = [
     {
@@ -70,7 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ? newestArticleDate
           : route.path === "/downloads"
             ? downloadsUpdatedAt
-            : siteUpdatedAt,
+            : undefined,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
       images: route.images,
