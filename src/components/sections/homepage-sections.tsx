@@ -93,8 +93,8 @@ export function HomeHeroSection() {
             <StoreDownloadLink variant="primary">
               14 Tage kostenlos testen
             </StoreDownloadLink>
-            <ButtonLink href="#so-funktioniert-dayova" variant="secondary">
-              So funktioniert Dayova
+            <ButtonLink href="/tools/study-plan" variant="secondary">
+              Kostenlosen Lernplan erstellen
             </ButtonLink>
           </div>
         </div>
