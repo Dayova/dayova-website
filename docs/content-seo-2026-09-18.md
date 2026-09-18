@@ -1,5 +1,9 @@
 # Dayova content SEO — 18 September 2026
 
+## Scope update
+
+At the user’s request, both proposed feature pages have been removed from the draft. The free study-plan calculator is the only new website route. Navigation, sitemap and contextual links now point to the calculator or existing pages. Nothing from this package has been released to production.
+
 ## Research and editorial decisions
 
 Research combines Dayova's Search Console query report with a qualitative review of public search results. The site's non-brand data is sparse. These are search-intent hypotheses, not keyword-volume estimates or a ranking forecast. Raw account metrics stay outside this public repository.
@@ -7,7 +11,6 @@ Research combines Dayova's Search Console query report with a qualitative review
 | Search cluster | Intent | Destination and distinct benefit |
 | --- | --- | --- |
 | Lernplan erstellen kostenlos, ohne Anmeldung | Complete a task immediately | `/tools/study-plan`: working calculator with editable topics, weekday selection, capacity limits, later review sessions, text export and printing |
-| Lernplan-App, automatischer Lernplan, Prüfungsvorbereitung planen | Evaluate a product | `/features/study-planning`: process, requirements, illustrative scenario, current website prices and limitations |
 | Lernplan für Prüfungen, Lernzeit einteilen | Learn a method | Existing `/blog/ein-lernplan-der-in-deinen-alltag-passt`: five-step guide and a checkable weekly-time calculation |
 | Lernfortschritt messen, nachvollziehbare Lernfortschritte | Evaluate learning independently | Existing `/blog/warum-fortschritt-unsichtbar-bleibt`: observation template and comparable-task examples; no grade predictions |
 | Lern-App oder Nachhilfe, passende Lernhilfe | Compare alternatives | Existing `/blog/eine-lern-app-sollte-dir-arbeit-abnehmen`: calendar, flashcards, videos, planner and personal help compared by need; vendor authorship disclosed |
@@ -22,7 +25,6 @@ New routes and code identifiers are English; editorial copy remains German. Exis
 - Product examples are explicitly illustrative, not documented customer outcomes.
 - No completed school pilot, before/after result or customer quotation is claimed without supplied evidence and permission.
 - App Store and website annual prices differ; copy identifies website prices and directs readers to the purchase confirmation for the actual store offer.
-- Product availability must be resolved before publishing the proposed learning-analysis feature page. It is not treated as confirmed solely because an older public listing mentions it.
 - Competitor pages inform intent classification, not unverified feature-by-feature superiority claims.
 
 ## Calculator design
@@ -45,7 +47,7 @@ Unscheduled practice and review remain visible. Input changes mark the result as
 
 - Production build, TypeScript and ESLint pass.
 - Eight calculator tests pass: example calculation, time bounds, weekday/examination exclusions, overflow accounting, later review, multiple-topic conservation, calendar edge cases, invalid input and plain-text export.
-- Current draft: SEO audit 56 pages / 0 errors; technical audit 60 internal targets and 32 legacy redirects / 0 failures; smoke test 75 pages and 14 images passes. Downloads and support retain their two existing optional structured-data notices.
+- Before the scope reduction: SEO audit 56 pages / 0 errors; technical audit 60 internal targets and 32 legacy redirects / 0 failures; smoke test 75 pages and 14 images passes. Downloads and support retain their two existing optional structured-data notices.
 - Chrome: successful example calculation, insufficient-time warning, stale-result export protection, empty-weekday validation and adding/removing topics verified.
 - Chrome visual review: calculator at 390px and 1440px, learning-planning page and updated article at 390px; no horizontal document overflow. Corrected a nested date badge found during review. Text download verified on disk; two-page print preview inspected with repeated table header and assumptions intact, then cancelled without printing.
-- Release and final route count pending product-availability clarification. No production deployment has been performed for this content package.
+- Final route count after removing the two feature pages: 54 indexable sitemap pages. No production deployment has been performed for this content package.

@@ -320,12 +320,12 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         ],
         "links": [
           {
-            "href": "/features/study-planning",
-            "label": "Ablauf und Grenzen der Dayova-Lernplanung"
+            "href": "/downloads",
+            "label": "Dayova-App herunterladen"
           },
           {
-            "href": "/features/learning-progress",
-            "label": "Die Lernstandsanalyse in Dayova ansehen"
+            "href": "/blog/warum-fortschritt-unsichtbar-bleibt",
+            "label": "Lernfortschritte mit einer einfachen Vorlage prüfen"
           },
           {
             "href": "/pricing",
@@ -494,8 +494,8 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
             "label": "Mehrere Prüfungen nach Termin und Lernbedarf priorisieren"
           },
           {
-            "href": "/features/study-planning",
-            "label": "So übernimmt Dayova die Planung deiner Lernschritte"
+            "href": "/tools/study-plan",
+            "label": "Einen Lernplan mit deinen verfügbaren Zeiten erstellen"
           }
         ]
       }
@@ -639,8 +639,8 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         ],
         "links": [
           {
-            "href": "/features/learning-progress",
-            "label": "Lernstandsanalyse: Funktionen, Voraussetzungen und Grenzen"
+            "href": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/metacognition",
+            "label": "EEF-Leitfaden zu selbstreguliertem Lernen"
           }
         ]
       }

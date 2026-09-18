@@ -15,8 +15,8 @@ import { DayovaIcon } from "@/components/ui/huge-icon";
 
 const dayovaAdvantages = [
   {
-    href: "/features/study-planning",
-    linkLabel: "So entsteht dein Lernplan",
+    href: "/blog/ein-lernplan-der-in-deinen-alltag-passt",
+    linkLabel: "Tipps für einen realistischen Lernplan",
     label: "Dein Plan",
     title: "Aus deiner Prüfung wird ein Plan für jeden Lerntag.",
     description:
@@ -41,8 +41,8 @@ const dayovaAdvantages = [
     className: "home-classic-advantage--planning",
   },
   {
-    href: "/features/learning-progress",
-    linkLabel: "Die Lernstandsanalyse kennenlernen",
+    href: "/blog/warum-fortschritt-unsichtbar-bleibt",
+    linkLabel: "Lernfortschritte selbst überprüfen",
     label: "Dein Wissen",
     title: "Was du antwortest, verändert deinen Plan.",
     description:

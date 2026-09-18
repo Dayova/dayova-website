@@ -43,8 +43,6 @@ export const footerNavigation = [
     title: "Seiten",
     links: [
       { href: "/tools/study-plan", label: "Kostenloser Lernplan-Ersteller" },
-      { href: "/features/study-planning", label: "Lernplanung mit Dayova" },
-      { href: "/features/learning-progress", label: "Lernstandsanalyse" },
       { href: "/downloads", label: "Downloads" },
       { href: "/parents", label: "Eltern" },
       { href: "/schools", label: "Schulen" },

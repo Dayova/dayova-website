@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   );
   const routes = [
-    ...["/features/study-planning", "/features/learning-progress", "/tools/study-plan"].map((path) => ({
+    ...["/tools/study-plan"].map((path) => ({
       path, priority: 0.8, changeFrequency: "monthly" as const, images: [] as string[],
     })),
     {
