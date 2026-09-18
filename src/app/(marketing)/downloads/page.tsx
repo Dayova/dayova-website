@@ -7,15 +7,14 @@ import {
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 import { siteConfig } from "@/config/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Dayova herunterladen – iOS & Android",
+export const metadata: Metadata = createPageMetadata({
+  title: "Lern-App herunterladen für iOS & Android",
   description:
-    "Installiere Dayova auf iPhone und iPad über den App Store oder auf Android über Google Play.",
-  alternates: {
-    canonical: "/downloads",
-  },
-};
+    "Lade die Dayova Lernplan-App für iPhone, iPad oder Android herunter. Hier findest du die offiziellen Store-Links und die Schritte zu deinem ersten Lernplan.",
+  path: "/downloads",
+});
 
 export default function DownloadsPage() {
   return (
@@ -29,7 +28,7 @@ export default function DownloadsPage() {
             Dayova herunterladen
           </span>
           <h1 id="download-page-title" className="dayova-hero-claim">
-            Dayova auf deinem Gerät installieren.
+            Dayova herunterladen für iOS und Android.
           </h1>
           <p className="download-page-hero__lead">
             Auf Android bekommst du Dayova regulär über Google Play. Auf dem
@@ -57,7 +56,7 @@ export default function DownloadsPage() {
                 </p>
               </div>
               <a className="button-primary" href={siteConfig.links.appStore}>
-                Im App Store installieren
+                Dayova im App Store installieren
               </a>
               <span className="download-platform-card__hint">
                 Öffnet den offiziellen Dayova-Eintrag
@@ -84,7 +83,7 @@ export default function DownloadsPage() {
                 </p>
               </div>
               <a className="button-primary" href={siteConfig.links.googlePlay}>
-                Bei Google Play installieren
+                Dayova bei Google Play installieren
               </a>
               <span className="download-platform-card__hint">
                 Öffnet den offiziellen Dayova-Eintrag
@@ -116,7 +115,7 @@ export default function DownloadsPage() {
             <ProcessTimeline variant="download" />
             <div className="download-page-process__action">
               <a className="button-secondary" href={siteConfig.links.appStore}>
-                App Store öffnen
+                Dayova im App Store öffnen
               </a>
             </div>
           </div>

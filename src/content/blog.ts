@@ -85,6 +85,8 @@ export function getBlogArticle(slug: string) {
 }
 
 export function getBlogArticleModifiedAt(article: BlogArticle) {
+  if (article.updatedAtISO) return article.updatedAtISO;
+
   if (strategicRelatedArticleSlugs[article.slug]) {
     return "2026-09-17T17:30:00+02:00";
   }

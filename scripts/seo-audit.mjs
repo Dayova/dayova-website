@@ -77,7 +77,7 @@ for (const sitemapUrl of sitemapUrls) {
     continue;
   }
 
-  const html = await response.text();
+  const html = (await response.text()).replace(/<script\b[^>]*>[\s\S]*?<\/script>/giu, (script) => script.includes('type="application/ld+json"') ? script : "");
   const titles = getText(html, "title");
   const descriptions = getMeta(html, "name", "description");
   const canonical = getLink(html, "canonical");
@@ -108,6 +108,39 @@ for (const sitemapUrl of sitemapUrls) {
       JSON.parse(script[1]);
     } catch {
       errors.push(`${label}: ungültiges JSON-LD gefunden.`);
+    }
+  }
+
+  // These checks use the rendered response, including dynamically generated metadata.
+  const ogUrl = getMeta(html, "property", "og:url");
+  if (ogUrl !== canonical) errors.push(`${label}: Open Graph URL must match the canonical URL.`);
+  if (ogDescription !== descriptions) errors.push(`${label}: Open Graph description differs from the page description.`);
+  if (getMeta(html, "name", "twitter:description") !== descriptions) {
+    errors.push(`${label}: Twitter description differs from the page description.`);
+  }
+  if (![ogTitle, `${ogTitle} | Dayova`].includes(titles[0])) {
+    errors.push(`${label}: Open Graph title differs from the page title.`);
+  }
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/iu)?.[1] ?? "";
+  let previousLevel = 0;
+  for (const heading of main.matchAll(/<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1>/giu)) {
+    const level = Number(heading[1]);
+    if (level > previousLevel + 1) errors.push(`${label}: heading jumps from H${previousLevel} to H${level}.`);
+    previousLevel = level;
+  }
+  const images = [...main.matchAll(/<img\b[^>]*>/giu)].map((match) => getAttributes(match[0]));
+  for (const img of images) {
+    if (!("alt" in img)) errors.push(`${label}: image is missing its alt attribute.`);
+    // Light/dark product screenshots are alternate informative images, not decoration.
+    if (/home-classic-(hero|about|advantage)__theme-image/u.test(img.class ?? "") && !img.alt) {
+      errors.push(`${label}: themed product image has no text alternative.`);
+    }
+  }
+  for (const link of main.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/giu)) {
+    const attrs = getAttributes(link[1]);
+    const text = attrs["aria-label"] ?? decodeHtml(link[2].replace(/<[^>]+>/gu, " ").replace(/\s+/gu, " ").trim());
+    if (!text || /^(hier klicken|mehr erfahren|beitrag lesen|click here|read more)$/iu.test(text)) {
+      errors.push(`${label}: link to ${attrs.href} needs a descriptive accessible name.`);
     }
   }
 

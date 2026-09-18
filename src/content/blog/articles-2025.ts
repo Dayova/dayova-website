@@ -3,6 +3,10 @@ import type { BlogArticle } from "./types";
 export const blogArticles2025: readonly BlogArticle[] = [
   {
     slug: "gemischtes-ueben-statt-blocklernen",
+    seoTitle: "Interleaving: Gemischtes Üben sinnvoll einsetzen",
+    seoDescription:
+      "Wann hilft Interleaving? Erfahre, wie du Aufgabentypen beim Lernen sinnvoll mischst und übst, in der Prüfung selbst den passenden Lösungsweg zu wählen.",
+    updatedAtISO: "2026-09-18",
     title: "Gemischtes Üben fordert und hilft",
     excerpt:
       "Warum der Wechsel zwischen Aufgabentypen anstrengender wirkt und Wissen zugleich vielseitiger nutzbar macht.",
@@ -21,7 +25,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
         ],
       },
       {
-        title: "Was gemischtes Üben verändert",
+        title: "Interleaving: Was gemischtes Üben verändert",
         paragraphs: [
           "Beim Interleaving wechseln sich Aufgabentypen oder Themen ab. Dadurch musst du jedes Mal Merkmale vergleichen und eine Strategie auswählen. Die einzelne Runde kann sich langsamer anfühlen, trainiert aber zusätzlich das Erkennen von Unterschieden.",
         ],
@@ -85,6 +89,10 @@ export const blogArticles2025: readonly BlogArticle[] = [
   },
   {
     slug: "lernpause-macht-wissen-haltbarer",
+    seoTitle: "Spaced Repetition: Mit Abständen wiederholen",
+    seoDescription:
+      "Verteile Wiederholungen über mehrere Tage: So nutzt du Spaced Repetition und passt die Abstände an deinen Lernstand und den Prüfungstermin an.",
+    updatedAtISO: "2026-09-18",
     title: "Warum Lernpausen Wissen haltbarer machen",
     excerpt:
       "Verteiltes Lernen nutzt Zeit als Teil der Methode und schützt vor der trügerischen Sicherheit langer Sitzungen.",
@@ -208,6 +216,10 @@ export const blogArticles2025: readonly BlogArticle[] = [
   },
   {
     slug: "warum-gute-vorsaetze-scheitern",
+    seoTitle: "Lernvorsätze umsetzen: Mit Wenn-dann-Plänen starten",
+    seoDescription:
+      "Früher lernen statt es nur vornehmen: So machst du aus einem Lernvorsatz einen konkreten Wenn-dann-Plan und findest nach Unterbrechungen zurück.",
+    updatedAtISO: "2026-09-18",
     title: "Warum gute Vorsätze oft scheitern",
     excerpt:
       "Mia will früher anfangen und landet trotzdem wieder am Abend vor der Arbeit. Dahinter steckt mehr als fehlender Wille.",
@@ -249,6 +261,10 @@ export const blogArticles2025: readonly BlogArticle[] = [
   },
   {
     slug: "warum-lernen-erst-spaet-beginnt",
+    seoTitle: "Früher mit dem Lernen anfangen: Den Einstieg planen",
+    seoDescription:
+      "Du beginnst erst am Abend vor der Prüfung? Erfahre, warum der Lernstart oft aufgeschoben wird und wie ein früher Lernstandscheck den Einstieg erleichtert.",
+    updatedAtISO: "2026-09-18",
     title: "Warum Lernen erst spät beginnt",
     excerpt:
       "Der Start um 23 Uhr ist selten eine bewusste Entscheidung. Meist wurde die unangenehme Aufgabe vorher mehrfach vertagt.",

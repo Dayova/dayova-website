@@ -16,6 +16,9 @@ export type BlogArticle = {
   slug: string;
   title: string;
   excerpt: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  updatedAtISO?: string;
   category: BlogCategory;
   readingTime: string;
   publishedAt: string;

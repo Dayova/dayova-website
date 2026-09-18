@@ -190,6 +190,10 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
   },
   {
     slug: "vom-lernstand-zum-naechsten-schritt",
+    seoTitle: "Adaptives Lernen: Vom Lernstand zur nächsten Aufgabe",
+    seoDescription:
+      "Wie funktioniert adaptives Lernen? Erfahre, wie Antworten und Wissenslücken den nächsten Lernschritt bestimmen und warum eine Punktzahl allein nicht reicht.",
+    updatedAtISO: "2026-09-18",
     title: "Vom Lernstand zum nächsten Schritt",
     excerpt:
       "Wie Rückmeldung aus Antworten einen Lernweg formt, der sich an deinem aktuellen Stand orientiert.",
@@ -201,7 +205,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       "Viele Lernende wissen, welche Prüfung ansteht, aber nicht, welche Aufgabe heute den größten Unterschied macht. Zwischen Themenlisten, Hausaufgaben und alten Fehlern fehlt eine Verbindung. Ein Lernstand wird erst nützlich, wenn daraus eine nächste Handlung entsteht.",
     sections: [
       {
-        title: "Eine Punktzahl reicht nicht",
+        title: "Adaptives Lernen braucht mehr als eine Punktzahl",
         paragraphs: [
           "Ein Ergebnis zeigt, wie viele Antworten gelungen sind. Für die weitere Planung braucht es mehr: Welche Vorstellung steckt hinter einem Fehler? Ist eine Grundlage unsicher oder wurde eine bekannte Regel nur übersehen? Erst diese Einordnung unterscheidet zwischen Wiederholen, Erklären und Anwenden.",
           "Auch eine richtige Antwort kann unsicher sein. Wer geraten oder einen Lösungsweg nur nachgebaut hat, benötigt eine andere Folgeaufgabe als jemand, der das Prinzip übertragen kann.",
@@ -294,6 +298,10 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
   },
   {
     slug: "feedback-das-dich-weiterbringt",
+    seoTitle: "Feedback beim Lernen: Vom Fehler zur nächsten Übung",
+    seoDescription:
+      "Gutes Feedback zeigt mehr als richtig oder falsch. Erfahre, wie du Rückmeldungen verstehst, Fehler bearbeitest und daraus die nächste Lernaufgabe ableitest.",
+    updatedAtISO: "2026-09-18",
     title: "Feedback, das dich weiterbringt",
     excerpt:
       "Warum richtig oder falsch nicht genügt und gute Rückmeldung immer eine nächste Handlung eröffnet.",
@@ -406,6 +414,10 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
   },
   {
     slug: "vertraut-ist-noch-nicht-verstanden",
+    seoTitle: "Lernstoff verstehen statt nur wiedererkennen",
+    seoDescription:
+      "Hast du den Lernstoff verstanden oder kommt er dir nur bekannt vor? Prüfe dein Wissen mit eigenen Erklärungen, neuen Aufgaben und Abruf ohne Vorlage.",
+    updatedAtISO: "2026-09-18",
     title: "Vertraut ist noch nicht verstanden",
     excerpt:
       "Warum sich gelesener Stoff sicher anfühlen kann und erst Abruf, Erklärung und Anwendung dein Verständnis zeigen.",

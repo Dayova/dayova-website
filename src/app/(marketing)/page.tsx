@@ -14,10 +14,10 @@ import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/seo";
 
 const homeDescription =
-  "Dayova macht aus Prüfungen, freien Zeiten und deinem Wissen einen Lernplan. Öffne die App und sieh, was heute dran ist.";
+  "Plane deine Prüfungsvorbereitung mit Dayova: Die Lernplan-App verteilt den Stoff auf deine freien Zeiten und zeigt den nächsten Schritt. 14 Tage testen.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
+  title: "Lernplan-App für Schüler: Prüfungen planen | Dayova",
   description: homeDescription,
   path: "/",
   absoluteTitle: true,
@@ -61,7 +61,7 @@ const homeStructuredData = {
       "@type": "WebPage",
       "@id": "https://dayova.com/#webpage",
       url: "https://dayova.com/",
-      name: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
+      name: "Lernplan-App für Schüler: Prüfungen planen | Dayova",
       description: homeDescription,
       isPartOf: { "@id": "https://dayova.com/#website" },
       about: { "@id": "https://dayova.com/#organization" },

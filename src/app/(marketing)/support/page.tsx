@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/page-hero";
 import { siteConfig } from "@/config/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Support",
+export const metadata: Metadata = createPageMetadata({
+  title: "Support: Hilfe zu Konto, Lernplan & Abo",
   description:
-    "Hilfe zu Dayova, Benutzerkonto, Lernplänen, Abonnements, Käufen und Datenschutz.",
-  alternates: { canonical: "/support" },
-};
+    "Probleme mit Dayova? Finde Hilfe zu Anmeldung, Lernplan, Uploads und Abonnements sowie den direkten Kontakt zum Support und Hinweise zur Kontolöschung.",
+  path: "/support",
+});
 
 const supportEmail = `mailto:${siteConfig.links.email}?subject=Dayova%20Support`;
 
@@ -16,7 +17,7 @@ export default function SupportPage() {
     <>
       <PageHero
         eyebrow="Dayova Support"
-        title="Wie können wir dir helfen?"
+        title="Dayova Support: Hilfe zu deiner Lern-App."
         description="Hier findest du Hilfe zu deinem Konto, Lernplänen, Abonnements und Datenschutz."
         className="legal-page-hero"
       />
@@ -28,7 +29,7 @@ export default function SupportPage() {
             </span>
 
             <section aria-labelledby="support-contact">
-              <h2 id="support-contact">Kontakt</h2>
+              <h2 id="support-contact">Den Dayova Support kontaktieren</h2>
               <p>
                 Schreib uns an{" "}
                 <a href={supportEmail}>{siteConfig.links.email}</a>. Beschreibe

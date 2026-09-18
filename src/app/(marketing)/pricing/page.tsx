@@ -7,10 +7,10 @@ import { pricingFaqs } from "@/content/pricing";
 import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
 
 const pricingDescription =
-  "Teste Dayova 14 Tage ohne Zahlungsdaten. Danach kostet die App ab 12,99 € pro Monat. Schulen erhalten ein Angebot für ihren Pilot.";
+  "Vergleiche Monats- und Jahresabo für die Dayova Lern-App. Teste alle Funktionen 14 Tage ohne Zahlungsdaten. Schulen erhalten ein individuelles Pilotangebot.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Dayova Preise: Lern-App für Schüler und Schulen",
+  title: "Preise & Abos für Schüler und Schulen",
   description: pricingDescription,
   path: "/pricing",
 });
@@ -58,7 +58,7 @@ export default async function PricingPage({
         <div className="dayova-container">
           <div className="pricing-page__intro">
             <h1 id="pricing-hero-title" className="dayova-hero-claim">
-              Erst ausprobieren. Dann entscheiden.
+              Dayova Preise: Erst testen, dann entscheiden.
             </h1>
             <p>
               Teste alle Funktionen 14 Tage ohne Zahlungsdaten. Danach kannst

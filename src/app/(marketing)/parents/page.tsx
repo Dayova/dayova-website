@@ -21,10 +21,10 @@ import { IconBadge } from "@/components/ui/icon-badge";
 import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
 
 const parentsDescription =
-  "Dayova plant Aufgaben, Prüfungen und Lernzeiten für dein Kind. Der nächste Lernschritt steht in der App bereit, damit dein Kind selbst anfangen kann.";
+  "Wie du dein Kind beim selbstständigen Lernen unterstützt: Dayova plant Prüfungen und Lernzeiten, damit der nächste Schritt klar ist. Für Eltern erklärt.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Lernplan-App für mehr Selbstständigkeit",
+  title: "Für Eltern: Selbstständig lernen mit einem Lernplan",
   description: parentsDescription,
   path: "/parents",
 });
@@ -66,7 +66,7 @@ const parentRelief = [
     icon: Calendar03Icon,
     imageLight: "/images/dayova-product-1-light.png",
     imageDark: "/images/dayova-product-1-dark.png",
-    alt: "Dayova zeigt Aufgaben und wichtige Benachrichtigungen übersichtlich an",
+    alt: "Dayova Startansicht mit nächstem Lernschritt und Wochenfortschritt",
     className: "home-classic-advantage--overview",
   },
   {
@@ -77,7 +77,7 @@ const parentRelief = [
     icon: Compass01Icon,
     imageLight: "/images/dayova-product-2-light.png",
     imageDark: "/images/dayova-product-2-dark.png",
-    alt: "Dayova Tagesansicht mit einem klar geplanten Lernschritt",
+    alt: "Dayova Lernplan mit Thema, Lernziel und Dauer einer Lerneinheit",
     className: "home-classic-advantage--planning",
   },
   {
@@ -88,7 +88,7 @@ const parentRelief = [
     icon: ChartHistogramIcon,
     imageLight: "/images/dayova-product-3-light.png",
     imageDark: "/images/dayova-product-3-dark.png",
-    alt: "Dayova zeigt eine verständliche Analyse einer Antwort",
+    alt: "Dayova Analyse mit Prüfungsthemen und dem Lernstand je Thema",
     className: "home-classic-advantage--analysis",
   },
 ] as const;
@@ -136,7 +136,7 @@ export default function ParentsPage() {
           <div className="home-classic-hero__copy">
             <span className="home-classic-section-eyebrow">Für Eltern</span>
             <h1 id="parents-hero-title" className="dayova-hero-claim">
-              Dein Kind findet den nächsten Schritt selbst.
+              Ein Lernplan, mit dem dein Kind selbst anfangen kann.
             </h1>
             <p className="dayova-body home-classic-hero__description">
               Dayova macht aus Aufgaben, Prüfungen und freien Zeiten einen Plan.
@@ -145,10 +145,10 @@ export default function ParentsPage() {
             </p>
             <div className="home-classic-actions" aria-label="Dayova für Eltern">
               <ButtonLink href="#eltern-vorteile">
-                So entlastet Dayova
+                So unterstützt Dayova dein Kind
               </ButtonLink>
               <ButtonLink href="/pricing" variant="secondary">
-                Preise ansehen
+                Dayova-Preise ansehen
               </ButtonLink>
             </div>
           </div>
@@ -166,7 +166,7 @@ export default function ParentsPage() {
             />
             <Image
               src="/images/dayova-hero-app-dark.png"
-              alt=""
+              alt="Drei Smartphones mit Lernplan, Tagesübersicht und Wissensanalyse in Dayova"
               width={1800}
               height={1200}
               loading="eager"
@@ -264,7 +264,7 @@ export default function ParentsPage() {
                   />
                   <Image
                     src={item.imageDark}
-                    alt=""
+                    alt={item.alt}
                     width={1200}
                     height={1200}
                     sizes="(max-width: 767px) 88vw, (max-width: 1023px) 44vw, 520px"
@@ -337,7 +337,7 @@ export default function ParentsPage() {
       >
         <StoreDownloadLink variant="secondary">Dayova herunterladen</StoreDownloadLink>
         <ButtonLink href="/pricing" variant="secondary">
-          Abos ansehen
+          Dayova-Preise und Abos ansehen
         </ButtonLink>
       </BlueCtaSection>
 

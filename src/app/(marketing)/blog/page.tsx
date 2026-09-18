@@ -16,7 +16,7 @@ import {
 } from "@/lib/seo";
 
 const blogDescription =
-  "Der Dayova Lernblog für Schüler, Eltern und Lehrkräfte: fundierte Lernmethoden, Lernplanung, Motivation und Prüfungsvorbereitung für den Schulalltag.";
+  "Finde Lernmethoden und Tipps zur Prüfungsvorbereitung: Der Dayova Lernblog erklärt Lernplanung, Motivation und Konzentration mit Beispielen für den Schulalltag.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Lernblog: Methoden, Planung und Motivation",
@@ -56,7 +56,7 @@ export default function BlogPage() {
       <PageHero
         className="blog-overview-hero"
         eyebrow="Dayova Blog"
-        title="Lernmethoden, die im Schulalltag funktionieren."
+        title="Lernmethoden und Lernplanung für deinen Schulalltag."
         description="Jeden Montag erscheinen fundierte Beiträge zu Lernmethoden, Motivation und Prüfungsvorbereitung – für Schülerinnen, Schüler, Eltern und Lehrkräfte."
       />
 

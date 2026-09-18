@@ -22,7 +22,7 @@ const dayovaAdvantages = [
     icon: SmartPhone01Icon,
     imageLight: "/images/dayova-product-1-light.png",
     imageDark: "/images/dayova-product-1-dark.png",
-    alt: "Dayova Startansicht mit Aufgaben, Prüfung und nächstem Lernschritt",
+    alt: "Dayova Startansicht mit nächstem Lernschritt und Wochenfortschritt",
     className: "home-classic-advantage--overview",
   },
   {
@@ -33,7 +33,7 @@ const dayovaAdvantages = [
     icon: Calendar03Icon,
     imageLight: "/images/dayova-product-2-light.png",
     imageDark: "/images/dayova-product-2-dark.png",
-    alt: "Dayova Lernplan mit dem nächsten sinnvollen Lernschritt",
+    alt: "Dayova Lernplan mit Thema, Lernziel und Dauer einer Lerneinheit",
     className: "home-classic-advantage--planning",
   },
   {
@@ -44,7 +44,7 @@ const dayovaAdvantages = [
     icon: ChartHistogramIcon,
     imageLight: "/images/dayova-product-3-light.png",
     imageDark: "/images/dayova-product-3-dark.png",
-    alt: "Dayova Wissensanalyse mit Prüfungsthemen, Stärken und Lernstand",
+    alt: "Dayova Analyse mit Prüfungsthemen und dem Lernstand je Thema",
     className: "home-classic-advantage--analysis",
   },
 ] as const;
@@ -79,8 +79,8 @@ export function HomeHeroSection() {
             Einfach loslernen. Der Plan steht schon.
           </h1>
           <p className="dayova-body home-classic-hero__description">
-            Dayova macht aus deinem Prüfungsstoff und deinen freien Zeiten einen
-            Plan für jeden Lerntag. Beim Öffnen siehst du, was heute dran ist.
+            Die Lernplan-App Dayova macht aus deinem Prüfungsstoff und deinen
+            freien Zeiten einen Plan für jeden Lerntag. Beim Öffnen siehst du, was heute dran ist.
             Deine Antworten legen fest, welcher Lernschritt danach folgt.
           </p>
           <div className="home-classic-actions" aria-label="Dayova entdecken">
@@ -144,7 +144,7 @@ export function HomeAboutSection() {
               href="/about"
               variant="secondary"
             >
-              Unsere Geschichte
+              Wie aus Lernbegleitung Dayova wurde
             </ButtonLink>
           </div>
 
@@ -171,7 +171,7 @@ export function HomeAboutSection() {
           />
           <Image
             src="/images/dayova-faq-dark.png"
-            alt=""
+            alt="Dayova verbindet Prüfung, Lernstand und verfügbare Zeit mit dem nächsten sinnvollen Schritt"
             width={1200}
             height={1200}
             sizes="(max-width: 1023px) 88vw, 560px"
@@ -238,7 +238,7 @@ export function HomeAdvantagesSection() {
                 />
                 <Image
                   src={advantage.imageDark}
-                  alt=""
+                  alt={advantage.alt}
                   width={1200}
                   height={1200}
                   sizes="(max-width: 767px) 88vw, (max-width: 1023px) 44vw, 520px"
@@ -296,7 +296,7 @@ export function HomeFaqSection() {
   return (
     <FaqAccordionSection
       id="faq"
-      title="Häufige Fragen"
+      title="Fragen zur Dayova Lernplan-App"
       items={faqItems}
       name="home-faq"
     />

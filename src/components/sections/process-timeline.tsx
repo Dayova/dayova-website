@@ -156,6 +156,7 @@ export function ProcessTimeline({
 }: {
   variant?: ProcessTimelineVariant;
 }) {
+  const StepHeading = variant === "about" ? "h2" : "h3";
   const processSteps = processStepsByVariant[variant];
   const processStepCount = processSteps.length;
   const [activeIndex, setActiveIndex] = useState(0);
@@ -308,7 +309,7 @@ export function ProcessTimeline({
               >
                 <div className="home-classic-process-step__copy">
                   <span aria-hidden="true">{step.number}</span>
-                  <h3>{step.title}</h3>
+                  <StepHeading>{step.title}</StepHeading>
                   <p>{step.description}</p>
                 </div>
 

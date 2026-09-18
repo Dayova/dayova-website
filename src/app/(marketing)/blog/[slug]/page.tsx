@@ -41,28 +41,32 @@ export async function generateMetadata({
     return {};
   }
 
+  const title = article.seoTitle ?? article.title;
+  const description = article.seoDescription ?? article.excerpt;
+
   return {
-    title: article.title,
-    description: article.excerpt,
+    title,
+    description,
     alternates: {
       canonical: `/blog/${article.slug}`,
     },
     openGraph: {
       type: "article",
-      title: article.title,
-      description: article.excerpt,
+      title,
+      description,
       url: `/blog/${article.slug}`,
       siteName,
       locale: "de_DE",
       publishedTime: article.publishedAtISO,
+      modifiedTime: getBlogArticleModifiedAt(article),
       authors: ["Dayova Redaktion"],
       section: article.category,
       images: [defaultOgImage],
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
-      description: article.excerpt,
+      title,
+      description,
       images: [defaultOgImage.url],
     },
   };
@@ -238,7 +242,7 @@ export default async function BlogArticlePage({
             </section>
 
             <Link className="button-secondary" href="/blog">
-              Weitere Beiträge entdecken
+              Alle Artikel im Lernblog
             </Link>
           </article>
         </div>

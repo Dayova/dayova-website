@@ -19,10 +19,10 @@ import { siteConfig } from "@/config/site";
 import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
 
 const schoolsDescription =
-  "Schulen erproben Dayova mit einer ausgewählten Lerngruppe. Ziele, Funktionen und Auswertung werden vor dem Pilot gemeinsam festgelegt.";
+  "Erproben Sie die Lern-App Dayova mit einer Lerngruppe Ihrer Schule. Pilotumfang, Begleitung und Auswertung stimmen wir gemeinsam ab. Jetzt informieren.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Dayova Pilotprojekt für Schulen und Lehrkräfte",
+  title: "Lern-App für Schulen: begleitetes Pilotprojekt",
   description: schoolsDescription,
   path: "/schools",
 });
@@ -105,7 +105,7 @@ export default function SchoolsPage() {
               Pilotprojekt für Schulen
             </span>
             <h1 id="schools-hero-title" className="dayova-hero-claim">
-              Dayova mit einer Lerngruppe erproben.
+              Eine Lern-App für Ihre Schule. Gemeinsam erproben.
             </h1>
             <p className="dayova-body home-classic-hero__description">
               Eine ausgewählte Gruppe nutzt die Schüler-App über einen
@@ -292,13 +292,13 @@ export default function SchoolsPage() {
       >
         <ButtonLink href={offerHref}>Pilotgespräch vereinbaren</ButtonLink>
         <ButtonLink href={offerHref} variant="secondary">
-          Informationen anfordern
+          Informationen zum Schul-Pilot anfordern
         </ButtonLink>
       </BlueCtaSection>
 
       <FaqAccordionSection
         id="schools-faq"
-        title="Häufige Fragen"
+        title="Fragen zum Pilotprojekt für Schulen"
         items={schoolFaq}
         name="schools-faq"
       />
