@@ -40,6 +40,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
       <div className="blog-overview-card__footer">
         <Link
           className="button-secondary blog-overview-card__button"
+          aria-label={`Beitrag lesen: ${article.title}`}
           href={`/blog/${article.slug}`}
         >
           Beitrag lesen

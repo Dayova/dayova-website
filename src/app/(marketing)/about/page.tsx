@@ -5,10 +5,10 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
 
 const aboutDescription =
-  "Bevor es Dayova als App gab, begleiteten wir Schüler beim Lernen. Hier zeigen wir den Weg von der Nachhilfe bis zum heutigen Lernplan.";
+  "Lerne die Geschichte von Dayova kennen: Wie aus der Lernbegleitung seit 2023 eine App für Lernplanung und Prüfungsvorbereitung entstand.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Wie aus Lernbegleitung Dayova wurde",
+  title: "Über uns: Von der Lernbegleitung zur Lern-App",
   description: aboutDescription,
   path: "/about",
 });

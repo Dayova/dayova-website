@@ -2825,13 +2825,13 @@
   letter-spacing: 0.08em;
 }
 
-.home-classic-process-step__copy h3 {
+.home-classic-process-step__copy :is(h2, h3) {
   margin: 0;
   font-size: 22px;
   transition: font-size 240ms var(--dayova-ease);
 }
 
-.home-classic-process-step--active .home-classic-process-step__copy h3 {
+.home-classic-process-step--active .home-classic-process-step__copy :is(h2, h3) {
   font-size: 24px;
 }
 
@@ -2844,14 +2844,14 @@
   min-height: 170px;
 }
 
-.home-classic-process-timeline--about .home-classic-process-step__copy h3 {
+.home-classic-process-timeline--about .home-classic-process-step__copy :is(h2, h3) {
   font-size: 20px;
 }
 
 .home-classic-process-timeline--about
   .home-classic-process-step--active
   .home-classic-process-step__copy
-  h3 {
+  :is(h2, h3) {
   font-size: 22px;
 }
 
@@ -3246,22 +3246,22 @@
     text-align: left;
   }
 
-  .home-classic-process-step__copy h3 {
+  .home-classic-process-step__copy :is(h2, h3) {
     font-size: 20px;
   }
 
-  .home-classic-process-step--active .home-classic-process-step__copy h3 {
+  .home-classic-process-step--active .home-classic-process-step__copy :is(h2, h3) {
     font-size: 22px;
   }
 
-  .home-classic-process-timeline--about .home-classic-process-step__copy h3 {
+  .home-classic-process-timeline--about .home-classic-process-step__copy :is(h2, h3) {
     font-size: 18px;
   }
 
   .home-classic-process-timeline--about
     .home-classic-process-step--active
     .home-classic-process-step__copy
-    h3 {
+    :is(h2, h3) {
     font-size: 20px;
   }
 
@@ -4140,7 +4140,7 @@
 
   .home-classic-process-timeline__progress,
   .home-classic-process-step__button,
-  .home-classic-process-step__copy h3,
+  .home-classic-process-step__copy :is(h2, h3),
   .home-classic-process-step__node,
   .home-classic-process-step__icon {
     transition: none;

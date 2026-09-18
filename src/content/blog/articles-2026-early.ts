@@ -167,6 +167,10 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
   },
   {
     slug: "fehlende-lust-als-schutz",
+    seoTitle: "Keine Lust zu lernen? Ursachen und erste Schritte",
+    seoDescription:
+      "Keine Lust zu lernen? Finde heraus, ob Überforderung, Unsicherheit oder Langeweile dahinterstecken und wie du mit einer kleinen Aufgabe beginnen kannst.",
+    updatedAtISO: "2026-09-18",
     title: "Wenn fehlende Lust dich schützen soll",
     excerpt:
       "Hinter „keine Lust“ können Unsicherheit, Überforderung oder die Erwartung eines Misserfolgs stehen.",
@@ -249,6 +253,10 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
   },
   {
     slug: "bilder-und-woerter-gemeinsam-nutzen",
+    seoTitle: "Dual Coding: Mit Bildern und Wörtern lernen",
+    seoDescription:
+      "Nutze Dual Coding beim Lernen: Verbinde Begriffe mit passenden Skizzen und erkläre Zusammenhänge in eigenen Worten, ohne dich in Gestaltung zu verlieren.",
+    updatedAtISO: "2026-09-18",
     title: "Bilder und Wörter gemeinsam nutzen",
     excerpt:
       "Dual Coding verbindet sprachliche und visuelle Darstellungen, ohne aus jeder Seite ein buntes Poster zu machen.",
@@ -331,6 +339,10 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
   },
   {
     slug: "abrufen-statt-passiv-lesen",
+    seoTitle: "Active Recall: Lernen durch aktives Abrufen",
+    seoDescription:
+      "Lerne mit Active Recall statt nur zu lesen: So formulierst du Abruffragen, erkennst Wissenslücken und übst den Stoff ohne Vorlage.",
+    updatedAtISO: "2026-09-18",
     title: "Abrufen schlägt passives Lesen",
     excerpt:
       "Fragen zwingen dein Gedächtnis zur Arbeit und zeigen früher als erneutes Lesen, welche Inhalte verfügbar sind.",
@@ -342,7 +354,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       "Beim dritten Lesen nickst du an fast jedem Satz. Dann deckst du die Seite ab und suchst nach dem ersten Begriff. Diese Lücke ist kein Beweis, dass du schlecht gelernt hast. Sie zeigt, dass Wiedererkennen und selbstständiges Abrufen zwei verschiedene Leistungen sind.",
     sections: [
       {
-        title: "Warum Fragen Lernen verändern",
+        title: "Active Recall: Warum Abruffragen das Lernen verändern",
         paragraphs: [
           "Eine Frage nimmt die Vorlage weg. Dein Gehirn muss Informationen suchen, ordnen und als Antwort erzeugen. Dieser Vorgang stärkt späteren Abruf stärker als ein weiterer Lesedurchgang.",
           "Das gilt auch dann, wenn der erste Versuch misslingt. Danach sollte eine korrekte und verständliche Rückmeldung folgen.",
@@ -414,6 +426,10 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
   },
   {
     slug: "pomodoro-25-minuten-passen-nicht-immer",
+    seoTitle: "Pomodoro beim Lernen: Wann 25 Minuten passen",
+    seoDescription:
+      "Die Pomodoro-Technik kann den Lernstart erleichtern. Erfahre, wie du Lernblöcke und Pausen an deine Aufgabe und Konzentration anpasst.",
+    updatedAtISO: "2026-09-18",
     title: "Warum 25 Minuten nicht immer passen",
     excerpt:
       "Pomodoro ist ein Rahmen, kein Naturgesetz. Aufgabe, Energie und Konzentrationsspanne sollten den Takt mitbestimmen.",
@@ -425,7 +441,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       "Der Timer klingelt nach 25 Minuten – mitten in der Herleitung, die gerade endlich Sinn ergibt. Pomodoro kann den Start erleichtern. Die Zahl ist aber kein Naturgesetz. Ein guter Arbeitsblock endet an einem sinnvollen Punkt der Aufgabe, nicht blind an Minute 25.",
     sections: [
       {
-        title: "Was ein Zeitblock leisten kann",
+        title: "Was ein Pomodoro-Lernblock leisten kann",
         paragraphs: [
           "Ein begrenzter Zeitraum macht den Start weniger bedrohlich und schützt eine Aufgabe vor endlosem Ausdehnen. Eine Pause erinnert daran, Aufmerksamkeit und Körperzustand zu prüfen.",
           "Die ideale Länge ist jedoch nicht für jede Person und Tätigkeit gleich. Vokabelabruf, Textanalyse und eine komplexe Herleitung benötigen unterschiedliche Rhythmen.",
@@ -455,6 +471,10 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
   },
   {
     slug: "was-fruehere-generationen-anders-machten",
+    seoTitle: "Lernen früher und heute: Was gegen Ablenkung hilft",
+    seoDescription:
+      "Was lässt sich aus früheren Lernroutinen übernehmen? Verbinde ungestörte Lernzeit mit digitalen Hilfen, ohne frühere Generationen zu idealisieren.",
+    updatedAtISO: "2026-09-18",
     title: "Was frühere Generationen anders machten",
     excerpt:
       "Weniger digitale Ablenkung war ein Vorteil. Daraus folgt trotzdem nicht, dass früher automatisch besser gelernt wurde.",

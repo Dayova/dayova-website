@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dayova.com"),
   applicationName: "Dayova",
   title: {
-    default: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
+    default: "Lernplan-App für Schüler: Prüfungen planen | Dayova",
     template: "%s | Dayova",
   },
   description:
-    "Dayova macht aus Prüfungen, freien Zeiten und deinem Wissen einen Lernplan. Öffne die App und sieh, was heute dran ist.",
+    "Plane deine Prüfungsvorbereitung mit Dayova: Die Lernplan-App verteilt den Stoff auf deine freien Zeiten und zeigt den nächsten Schritt. 14 Tage testen.",
   authors: [{ name: "Dayova", url: "https://dayova.com" }],
   creator: "Dayova",
   publisher: "Dayova",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
+    title: "Lernplan-App für Schüler: Prüfungen planen | Dayova",
     description:
       "Dayova teilt deinen Prüfungsstoff in Lernschritte und zeigt dir, was heute dran ist.",
     url: "https://dayova.com",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lernplan-App für Schüler – Einfach loslernen | Dayova",
+    title: "Lernplan-App für Schüler: Prüfungen planen | Dayova",
     description:
       "Dayova teilt deinen Prüfungsstoff in Lernschritte und zeigt dir, was heute dran ist.",
     images: ["/images/dayova-hero-app-light.png"],
