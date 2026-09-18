@@ -27,7 +27,10 @@ export type StudyPlan = {
   subject: string;
   examDate: string;
   dayCount: number;
-  phases: { id: StudyPhase; name: string; startDate: string; endDate: string; tasks: string[] }[];
+  topicDescription: string;
+  dailyMinutes: number;
+  totalMinutes: number;
+  phases: { id: StudyPhase; name: string; startDate: string; endDate: string; minutesPerDay: number; totalMinutes: number; tasks: string[] }[];
 };
 
 function parseDate(value: string) {
@@ -36,9 +39,16 @@ function parseDate(value: string) {
   return Number.isFinite(time) && new Date(time).toISOString().slice(0, 10) === value ? time : NaN;
 }
 
-export function createStudyPlan(input: { subjectId: string; examDate: string }, now = new Date()): StudyPlan {
+export function createStudyPlan(input: { subjectId: string; examDate: string; topicDescription: string; dailyMinutes: number }, now = new Date()): StudyPlan {
   const subject = studySubjects.find((item) => item.id === input.subjectId);
   if (!subject) throw new Error("Wähle ein Fach aus der Liste aus.");
+  const topicDescription = input.topicDescription.trim();
+  if (!topicDescription || topicDescription.length > 300) {
+    throw new Error("Beschreibe die Themen deiner Arbeit in 1 bis 300 Zeichen.");
+  }
+  if (!Number.isInteger(input.dailyMinutes) || input.dailyMinutes < 15 || input.dailyMinutes > 240 || input.dailyMinutes % 15 !== 0) {
+    throw new Error("Wähle eine tägliche Lernzeit von 15 Minuten bis 4 Stunden.");
+  }
   // Use the learner's local calendar date, then do date arithmetic in UTC to avoid DST shifts.
   const start = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
   const end = parseDate(input.examDate);
@@ -51,6 +61,14 @@ export function createStudyPlan(input: { subjectId: string; examDate: string }, 
   const ranges: [[number, number], [number, number], [number, number]] = dayCount < 3
     ? [[0, 0], [0, 0], [dayCount - 1, dayCount - 1]]
     : [[0, theoryDays - 1], [theoryDays, dayCount - rehearsalDays - 1], [dayCount - rehearsalDays, dayCount - 1]];
+  // Phases sharing a day share its budget, rather than each receiving a full day.
+  const theoryMinutes = Math.floor(input.dailyMinutes * 0.3);
+  const practiceMinutes = Math.floor(input.dailyMinutes * 0.45);
+  const minutesPerDay = dayCount === 1
+    ? [theoryMinutes, practiceMinutes, input.dailyMinutes - theoryMinutes - practiceMinutes] as const
+    : dayCount === 2
+      ? [theoryMinutes, input.dailyMinutes - theoryMinutes, input.dailyMinutes] as const
+      : [input.dailyMinutes, input.dailyMinutes, input.dailyMinutes] as const;
   const dateAt = (offset: number) => new Date(start + offset * 86_400_000).toISOString().slice(0, 10);
   const supportingTasks = [
     ["Sammle deine Prüfungsthemen und die passenden Unterlagen aus dem Unterricht.", "Erkläre die Grundlagen in eigenen Worten und markiere offene Fragen."],
@@ -61,11 +79,16 @@ export function createStudyPlan(input: { subjectId: string; examDate: string }, 
     subject: subject.name,
     examDate: input.examDate,
     dayCount,
+    topicDescription,
+    dailyMinutes: input.dailyMinutes,
+    totalMinutes: dayCount * input.dailyMinutes,
     phases: ([0, 1, 2] as const).map((index) => ({
       id: studyPhases[index].id,
       name: studyPhases[index].name,
       startDate: dateAt(ranges[index][0]),
       endDate: dateAt(ranges[index][1]),
+      minutesPerDay: minutesPerDay[index],
+      totalMinutes: minutesPerDay[index] * (ranges[index][1] - ranges[index][0] + 1),
       tasks: index === 0
         ? [supportingTasks[index][0], subject.tasks[index], supportingTasks[index][1]]
         : [subject.tasks[index], ...supportingTasks[index]],
@@ -75,4 +98,10 @@ export function createStudyPlan(input: { subjectId: string; examDate: string }, 
 
 export function formatPlanDate(date: string) {
   return new Intl.DateTimeFormat("de-DE", { weekday: "short", day: "2-digit", month: "2-digit", year: "numeric", timeZone: "UTC" }).format(new Date(`${date}T00:00:00Z`));
+}
+
+export function formatStudyDuration(minutes: number) {
+  const hours = Math.floor(minutes / 60);
+  const remainder = minutes % 60;
+  return [hours ? `${hours} Std.` : "", remainder ? `${remainder} Min.` : ""].filter(Boolean).join(" ");
 }
