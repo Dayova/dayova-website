@@ -315,7 +315,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       {
         "title": "Was Dayova heute anbietet – und was nicht",
         "paragraphs": [
-          "Dayova ist als App verfügbar. Sie verbindet Prüfungsthemen und freie Zeiten zu Lernschritten und bezieht Rückmeldungen aus Antworten in die weitere Planung ein. Für persönliche Lernplanung und Lernanalysen gibt es ein Monats- oder Jahresabo nach der Testphase.",
+          "Dayova ist als App verfügbar. Sie verbindet Prüfungsthemen und freie Zeiten zu Lernschritten. Für die App gibt es ein Monats- oder Jahresabo nach der Testphase.",
           "Ein separater Elternzugang wird damit nicht versprochen. Für Schulen werden Lerngruppe, Ansichten und Funktionen in einem begleiteten Pilotprojekt vereinbart. Eine Lernstandsanzeige ist keine Notenprognose und KI-generierte Inhalte können Fehler enthalten."
         ],
         "links": [
@@ -630,7 +630,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       {
         "title": "Wie Dayova dabei unterstützt",
         "paragraphs": [
-          "Dayova zeigt Prüfungsthemen und Hinweise zu deinem Lernstand auf Basis deiner Antworten. Das kann helfen, die nächste Übung einzuordnen. Eine Anzeige bleibt prüfbar und ersetzt nicht dein eigenes Erklären und Anwenden.",
+          "Mit Dayova planst du deine Prüfungsvorbereitung anhand deiner Themen und freien Zeiten. Ergänze deinen Plan durch die Beobachtungen aus der Vorlage: Was kannst du schon ohne Hilfe lösen, und was möchtest du als Nächstes üben? Planung ersetzt nicht dein eigenes Erklären und Anwenden.",
           "Die Grundidee – das eigene Lernen planen, beobachten und auswerten – findet sich im EEF-Leitfaden zu selbstreguliertem Lernen. Die Vorlage hier ist eine praktische Übertragung der Dayova-Redaktion und kein Wirksamkeitsnachweis für die App."
         ],
         "links": [
