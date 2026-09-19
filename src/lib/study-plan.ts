@@ -31,9 +31,13 @@ export type StudyPlan = {
   examDate: string;
   dayCount: number;
   topicDescription: string;
-  dailyMinutes: number;
+  sessionMinutes: number;
+  sessionsPerWeek: number;
   totalMinutes: number;
-  phases: { id: StudyPhase; name: string; startDate: string; endDate: string; minutesPerDay: number; totalMinutes: number; tasks: string[] }[];
+  sessions: {
+    date: string;
+    blocks: { id: StudyPhase; name: string; minutes: number; task: string }[];
+  }[];
 };
 
 function parseDate(value: string) {
@@ -42,7 +46,7 @@ function parseDate(value: string) {
   return Number.isFinite(time) && new Date(time).toISOString().slice(0, 10) === value ? time : NaN;
 }
 
-export function createStudyPlan(input: { subjectId: string; grade: string; examDate: string; topicDescription: string; dailyMinutes: number }, now = new Date()): StudyPlan {
+export function createStudyPlan(input: { subjectId: string; grade: string; examDate: string; topicDescription: string; sessionMinutes: number; sessionsPerWeek: number }, now = new Date()): StudyPlan {
   const subject = studySubjects.find((item) => item.id === input.subjectId);
   if (!subject) throw new Error("Wähle ein Fach aus der Liste aus.");
   if (!studyGrades.some((grade) => grade === input.grade)) {
@@ -52,8 +56,11 @@ export function createStudyPlan(input: { subjectId: string; grade: string; examD
   if (!topicDescription || topicDescription.length > 300) {
     throw new Error("Beschreibe die Themen deiner Arbeit in 1 bis 300 Zeichen.");
   }
-  if (!Number.isInteger(input.dailyMinutes) || input.dailyMinutes < 15 || input.dailyMinutes > 240 || input.dailyMinutes % 15 !== 0) {
-    throw new Error("Wähle eine tägliche Lernzeit von 15 Minuten bis 4 Stunden.");
+  if (!Number.isInteger(input.sessionMinutes) || input.sessionMinutes < 15 || input.sessionMinutes > 240 || input.sessionMinutes % 15 !== 0) {
+    throw new Error("Wähle eine Lernzeit von 15 Minuten bis 4 Stunden pro Einheit.");
+  }
+  if (!Number.isInteger(input.sessionsPerWeek) || input.sessionsPerWeek < 2 || input.sessionsPerWeek > 5) {
+    throw new Error("Wähle 2 bis 5 Lerneinheiten pro Woche.");
   }
   // Use the learner's local calendar date, then do date arithmetic in UTC to avoid DST shifts.
   const start = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
@@ -62,44 +69,60 @@ export function createStudyPlan(input: { subjectId: string; grade: string; examD
   if (!Number.isInteger(dayCount) || dayCount < 1) {
     throw new Error("Wähle einen gültigen Prüfungstermin ab morgen.");
   }
-  const theoryDays = Math.max(1, Math.floor(dayCount * 0.3));
-  const rehearsalDays = Math.max(1, Math.floor(dayCount * 0.25));
-  const ranges: [[number, number], [number, number], [number, number]] = dayCount < 3
-    ? [[0, 0], [0, 0], [dayCount - 1, dayCount - 1]]
-    : [[0, theoryDays - 1], [theoryDays, dayCount - rehearsalDays - 1], [dayCount - rehearsalDays, dayCount - 1]];
-  // Phases sharing a day share its budget, rather than each receiving a full day.
-  const theoryMinutes = Math.floor(input.dailyMinutes * 0.3);
-  const practiceMinutes = Math.floor(input.dailyMinutes * 0.45);
-  const minutesPerDay = dayCount === 1
-    ? [theoryMinutes, practiceMinutes, input.dailyMinutes - theoryMinutes - practiceMinutes] as const
-    : dayCount === 2
-      ? [theoryMinutes, input.dailyMinutes - theoryMinutes, input.dailyMinutes] as const
-      : [input.dailyMinutes, input.dailyMinutes, input.dailyMinutes] as const;
   const dateAt = (offset: number) => new Date(start + offset * 86_400_000).toISOString().slice(0, 10);
   const supportingTasks = [
     ["Sammle deine Prüfungsthemen und die passenden Unterlagen aus dem Unterricht.", "Erkläre die Grundlagen in eigenen Worten und markiere offene Fragen."],
     ["Arbeite deine Prüfungsthemen nacheinander durch und wiederhole bereits Geübtes ohne Vorlage.", "Vergleiche deine Lösungen und übe gezielt die Stellen, an denen du noch Fehler machst."],
     ["Orientiere dich an den erlaubten Hilfsmitteln und der vorgesehenen Prüfungszeit.", "Werte deinen Versuch aus und wiederhole die wichtigsten offenen Punkte."],
   ] as const;
+  const phaseTasks = {
+    theory: [supportingTasks[0][0], subject.tasks[0], supportingTasks[0][1]],
+    practice: [subject.tasks[1], supportingTasks[1][0], supportingTasks[1][1]],
+    rehearsal: [subject.tasks[2], supportingTasks[2][0], supportingTasks[2][1]],
+  } satisfies Record<StudyPhase, readonly string[]>;
+  const sessionCount = Math.min(dayCount, Math.max(1, Math.ceil(dayCount * input.sessionsPerWeek / 7)));
+  const offsets = sessionCount === 1
+    ? [0]
+    : Array.from({ length: sessionCount }, (_, index) => Math.round(index * (dayCount - 1) / (sessionCount - 1)));
+  const phaseUseCount: Record<StudyPhase, number> = { theory: 0, practice: 0, rehearsal: 0 };
+  const createBlock = (id: StudyPhase, minutes: number) => {
+    const tasks = phaseTasks[id];
+    const task = tasks[phaseUseCount[id] % tasks.length]!;
+    phaseUseCount[id] += 1;
+    return { id, name: studyPhases.find((phase) => phase.id === id)!.name, minutes, task };
+  };
+  const blocksForSession = (index: number) => {
+    if (sessionCount === 1) {
+      const theoryMinutes = Math.floor(input.sessionMinutes * 0.3);
+      const practiceMinutes = Math.floor(input.sessionMinutes * 0.45);
+      return [
+        createBlock("theory", theoryMinutes),
+        createBlock("practice", practiceMinutes),
+        createBlock("rehearsal", input.sessionMinutes - theoryMinutes - practiceMinutes),
+      ];
+    }
+    if (sessionCount === 2) {
+      if (index === 0) {
+        const theoryMinutes = Math.floor(input.sessionMinutes * 0.4);
+        return [createBlock("theory", theoryMinutes), createBlock("practice", input.sessionMinutes - theoryMinutes)];
+      }
+      const practiceMinutes = Math.floor(input.sessionMinutes * 0.6);
+      return [createBlock("practice", practiceMinutes), createBlock("rehearsal", input.sessionMinutes - practiceMinutes)];
+    }
+    const position = (index + 0.5) / sessionCount;
+    const phase: StudyPhase = position <= 0.3 ? "theory" : position <= 0.75 ? "practice" : "rehearsal";
+    return [createBlock(phase, input.sessionMinutes)];
+  };
   return {
     subject: subject.name,
     grade: input.grade,
     examDate: input.examDate,
     dayCount,
     topicDescription,
-    dailyMinutes: input.dailyMinutes,
-    totalMinutes: dayCount * input.dailyMinutes,
-    phases: ([0, 1, 2] as const).map((index) => ({
-      id: studyPhases[index].id,
-      name: studyPhases[index].name,
-      startDate: dateAt(ranges[index][0]),
-      endDate: dateAt(ranges[index][1]),
-      minutesPerDay: minutesPerDay[index],
-      totalMinutes: minutesPerDay[index] * (ranges[index][1] - ranges[index][0] + 1),
-      tasks: index === 0
-        ? [supportingTasks[index][0], subject.tasks[index], supportingTasks[index][1]]
-        : [subject.tasks[index], ...supportingTasks[index]],
-    })),
+    sessionMinutes: input.sessionMinutes,
+    sessionsPerWeek: input.sessionsPerWeek,
+    totalMinutes: sessionCount * input.sessionMinutes,
+    sessions: offsets.map((offset, index) => ({ date: dateAt(offset), blocks: blocksForSession(index) })),
   };
 }
 
