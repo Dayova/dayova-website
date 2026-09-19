@@ -9230,6 +9230,13 @@ img {
 .study-plan-phase-heading p { margin: 4px 0 0; }
 .study-plan-phase-number { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: var(--dayova-brand-deep); color: white; font-weight: 600; }
 .study-plan-phase > ul { margin-top: 20px; }
+.study-plan-session-blocks { display: grid; gap: 16px; margin-top: 20px; }
+.study-plan-session-blocks > div { padding-top: 16px; border-top: 1px solid var(--dayova-line); }
+.study-plan-session-blocks h5 { margin: 0 0 6px; color: var(--dayova-ink); font-size: 16px; }
+.study-plan-session-blocks p { margin: 0; }
+.study-plan-app-cta { margin-top: 32px; padding: clamp(20px, 4vw, 32px); border: 1px solid var(--dayova-line); border-radius: 24px; background: var(--dayova-elevated); }
+.study-plan-app-cta h4 { margin: 0 0 10px; color: var(--dayova-ink); font-size: clamp(20px, 2.5vw, 26px); }
+.study-plan-app-cta p { margin: 0 0 20px; }
 .study-plan-method { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .study-plan-method h3 { margin-top: 0; }
 @media (max-width: 767px) { .study-plan-method { grid-template-columns: minmax(0, 1fr); gap: 12px; } }
@@ -9243,6 +9250,7 @@ img {
   .study-plan-page .study-plan-phase ul { margin: 10px 0 0; }
   .study-plan-page .study-plan-phase li { font-size: 10pt; line-height: 1.4; }
   .study-plan-page .study-plan-phase li + li { margin-top: 4px; }
+  .study-plan-page .study-plan-app-cta { display: none !important; }
 }
 
 .study-plan-inputs textarea { resize: vertical; }
