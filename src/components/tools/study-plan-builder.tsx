@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { StoreDownloadLink } from "@/components/store-download-link";
 import { createStudyPlan, formatPlanDate, formatStudyDuration, studyGrades, studySubjects, type StudyPlan } from "@/lib/study-plan";
@@ -69,10 +70,19 @@ export function StudyPlanBuilder() {
           </ol>
           <p className="content-small">Dieser Vorschlag ordnet deine Prüfungsthemen in einen zeitlichen Rahmen ein. Wie viel Zeit du tatsächlich brauchst, hängt von deinem Lernstand und dem Umfang der Themen ab.</p>
           <div className="content-actions study-plan-controls"><button type="button" className="button-secondary" onClick={() => window.print()}>Lernplan drucken</button></div>
-          <aside className="study-plan-app-cta" aria-labelledby="study-plan-app-title">
-            <h4 id="study-plan-app-title">Du möchtest nicht selbst planen?</h4>
-            <p>In der Dayova-App musst du Lernzeiten und Aufgaben nicht jedes Mal selbst verteilen. Dayova berücksichtigt deine Prüfung, verfügbaren Lernzeiten, Wissensanalyse und Lernmaterialien und erstellt daraus deinen persönlichen Lernplan. Wenn sich etwas ändert, wird der Plan neu angepasst.</p>
-            <StoreDownloadLink variant="primary">Lernplan automatisch mit Dayova erstellen</StoreDownloadLink>
+          <aside className="home-classic-download study-plan-app-cta" aria-labelledby="study-plan-app-title">
+            <div className="home-classic-download__copy">
+              <span className="home-classic-section-eyebrow home-classic-section-eyebrow--inverse">Dein persönlicher Plan</span>
+              <h4 id="study-plan-app-title" className="dayova-section-title">Du möchtest nicht selbst planen?</h4>
+              <p>In der Dayova-App musst du Lernzeiten und Aufgaben nicht jedes Mal selbst verteilen. Dayova berücksichtigt deine Prüfung, verfügbaren Lernzeiten, Wissensanalyse und Lernmaterialien und erstellt daraus deinen persönlichen Lernplan. Wenn sich etwas ändert, wird der Plan neu angepasst.</p>
+              <div className="home-classic-download__actions">
+                <StoreDownloadLink variant="secondary">Lernplan automatisch mit Dayova erstellen</StoreDownloadLink>
+              </div>
+            </div>
+            <div className="home-classic-download__visual" aria-hidden="true">
+              <Image src="/images/dayova-bluebox-light.png" alt="" width={2217} height={1456} sizes="(max-width: 1023px) 90vw, 520px" className="home-classic-download__theme-image home-classic-download__theme-image--light" />
+              <Image src="/images/dayova-bluebox-dark.png" alt="" width={2217} height={1456} sizes="(max-width: 1023px) 90vw, 520px" className="home-classic-download__theme-image home-classic-download__theme-image--dark" />
+            </div>
           </aside>
         </>}
       </div>
