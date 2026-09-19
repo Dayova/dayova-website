@@ -17,6 +17,8 @@ export const studySubjects = [
   { id: "sport", name: "Sport", tasks: ["Wiederhole die Regeln, Bewegungsabläufe und theoretischen Grundlagen deiner Prüfungsthemen.", "Übe die geforderten Aufgaben oder Bewegungsabläufe nach den Vorgaben deiner Lehrkraft.", "Gehe das Prüfungsformat unter den vorgesehenen Bedingungen durch und prüfe die Bewertungskriterien."] },
 ] as const;
 
+export const studyGrades = ["6", "7", "8", "9", "10", "11", "12", "13"] as const;
+
 export const studyPhases = [
   { id: "theory", name: "Theorie", description: "Grundlagen verstehen und den Prüfungsstoff ordnen." },
   { id: "practice", name: "Üben", description: "Wissen festigen und an Aufgaben arbeiten." },
@@ -25,6 +27,7 @@ export const studyPhases = [
 
 export type StudyPlan = {
   subject: string;
+  grade: string;
   examDate: string;
   dayCount: number;
   topicDescription: string;
@@ -39,9 +42,12 @@ function parseDate(value: string) {
   return Number.isFinite(time) && new Date(time).toISOString().slice(0, 10) === value ? time : NaN;
 }
 
-export function createStudyPlan(input: { subjectId: string; examDate: string; topicDescription: string; dailyMinutes: number }, now = new Date()): StudyPlan {
+export function createStudyPlan(input: { subjectId: string; grade: string; examDate: string; topicDescription: string; dailyMinutes: number }, now = new Date()): StudyPlan {
   const subject = studySubjects.find((item) => item.id === input.subjectId);
   if (!subject) throw new Error("Wähle ein Fach aus der Liste aus.");
+  if (!studyGrades.some((grade) => grade === input.grade)) {
+    throw new Error("Wähle eine Klassenstufe von 6 bis 13 aus.");
+  }
   const topicDescription = input.topicDescription.trim();
   if (!topicDescription || topicDescription.length > 300) {
     throw new Error("Beschreibe die Themen deiner Arbeit in 1 bis 300 Zeichen.");
@@ -77,6 +83,7 @@ export function createStudyPlan(input: { subjectId: string; examDate: string; to
   ] as const;
   return {
     subject: subject.name,
+    grade: input.grade,
     examDate: input.examDate,
     dayCount,
     topicDescription,

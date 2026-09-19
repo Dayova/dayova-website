@@ -3,7 +3,7 @@ import test from "node:test";
 import { createStudyPlan, studySubjects } from "../src/lib/study-plan.ts";
 
 const now = new Date(2026, 8, 18, 23, 59);
-const makePlan = (examDate, subjectId = "mathematics", date = now) => createStudyPlan({ subjectId, examDate, dailyMinutes: 60, topicDescription: "Gleichungen und Textaufgaben" }, date);
+const makePlan = (examDate, subjectId = "mathematics", date = now) => createStudyPlan({ subjectId, grade: "8", examDate, dailyMinutes: 60, topicDescription: "Gleichungen und Textaufgaben" }, date);
 const dayKey = (date) => new Date(date).toISOString().slice(0, 10);
 
 test("every subject produces subject-specific theory, practice and rehearsal", () => {
@@ -59,7 +59,7 @@ test("rejects missing subjects and invalid, past or same-day exams", () => {
 
 test("daily budgets stay within the selected limit even when phases share a day", () => {
   for (const dailyMinutes of [15, 60, 135, 240]) for (const days of [1, 2, 3, 14]) {
-    const plan = createStudyPlan({ subjectId: "mathematics", examDate: dayKey(Date.UTC(2026, 8, 18 + days)), dailyMinutes, topicDescription: "  Bruchrechnung und Gleichungen  " }, now);
+    const plan = createStudyPlan({ subjectId: "mathematics", grade: "8", examDate: dayKey(Date.UTC(2026, 8, 18 + days)), dailyMinutes, topicDescription: "  Bruchrechnung und Gleichungen  " }, now);
     assert.equal(plan.topicDescription, "Bruchrechnung und Gleichungen");
     assert.equal(plan.totalMinutes, dailyMinutes * days);
     assert.equal(plan.phases.reduce((sum, phase) => sum + phase.totalMinutes, 0), plan.totalMinutes);
@@ -72,8 +72,18 @@ test("daily budgets stay within the selected limit even when phases share a day"
 });
 
 test("rejects invalid time budgets and missing or oversized topic descriptions", () => {
-  const input = { subjectId: "mathematics", examDate: "2026-10-02", dailyMinutes: 60, topicDescription: "Gleichungen" };
+  const input = { subjectId: "mathematics", grade: "8", examDate: "2026-10-02", dailyMinutes: 60, topicDescription: "Gleichungen" };
   for (const dailyMinutes of [0, 14, 16, 241, 300, NaN, Infinity, 60.5]) assert.throws(() => createStudyPlan({ ...input, dailyMinutes }, now));
   for (const topicDescription of ["", "   ", "a".repeat(301)]) assert.throws(() => createStudyPlan({ ...input, topicDescription }, now));
   assert.equal(createStudyPlan({ ...input, topicDescription: "<script>test</script>" }, now).topicDescription, "<script>test</script>");
+});
+
+test("accepts the app's grade range and rejects unsupported grades", () => {
+  for (const grade of ["6", "7", "8", "9", "10", "11", "12", "13"]) {
+    const plan = createStudyPlan({ subjectId: "mathematics", grade, examDate: "2026-10-02", dailyMinutes: 60, topicDescription: "Gleichungen" }, now);
+    assert.equal(plan.grade, grade);
+  }
+  for (const grade of ["", "5", "14", "8. Klasse"]) {
+    assert.throws(() => createStudyPlan({ subjectId: "mathematics", grade, examDate: "2026-10-02", dailyMinutes: 60, topicDescription: "Gleichungen" }, now));
+  }
 });

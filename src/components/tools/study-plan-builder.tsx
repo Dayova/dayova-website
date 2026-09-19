@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { createStudyPlan, formatPlanDate, formatStudyDuration, studySubjects, type StudyPlan } from "@/lib/study-plan";
+import { createStudyPlan, formatPlanDate, formatStudyDuration, studyGrades, studySubjects, type StudyPlan } from "@/lib/study-plan";
 
 export function StudyPlanBuilder() {
   const [plan, setPlan] = useState<StudyPlan | null>(null);
@@ -14,7 +14,7 @@ export function StudyPlanBuilder() {
         event.preventDefault();
         try {
           const data = new FormData(event.currentTarget);
-          setPlan(createStudyPlan({ subjectId: String(data.get("subject")), examDate: String(data.get("examDate")), topicDescription: String(data.get("topicDescription")), dailyMinutes: Number(data.get("dailyMinutes")) }));
+          setPlan(createStudyPlan({ subjectId: String(data.get("subject")), grade: String(data.get("grade")), examDate: String(data.get("examDate")), topicDescription: String(data.get("topicDescription")), dailyMinutes: Number(data.get("dailyMinutes")) }));
           setError("");
           requestAnimationFrame(() => resultRef.current?.focus());
         } catch (cause) {
@@ -26,6 +26,10 @@ export function StudyPlanBuilder() {
           <label>Dein Fach<select name="subject" required defaultValue="">
             <option value="" disabled>Fach auswählen</option>
             {studySubjects.map((subject) => <option key={subject.id} value={subject.id}>{subject.name}</option>)}
+          </select></label>
+          <label>Deine Klasse<select name="grade" required defaultValue="">
+            <option value="" disabled>Klasse auswählen</option>
+            {studyGrades.map((grade) => <option key={grade} value={grade}>{grade}. Klasse</option>)}
           </select></label>
           <label>Dein Prüfungstag<input type="date" name="examDate" required aria-describedby="study-plan-date-hint" /></label>
         </div>
@@ -42,6 +46,7 @@ export function StudyPlanBuilder() {
       <div className="study-plan-result" ref={resultRef} tabIndex={-1} aria-label="Dein erstellter Lernplan">
         {plan && <>
           <h3>Dein Lernplan für {plan.subject}</h3>
+          <p><strong>Klassenstufe:</strong> {plan.grade}. Klasse</p>
           <p role="status">Prüfung am {formatPlanDate(plan.examDate)} · {plan.dayCount} {plan.dayCount === 1 ? "Tag" : "Tage"} zur Vorbereitung</p>
           <p><strong>Deine Prüfungsthemen:</strong> {plan.topicDescription}</p>
           <p><strong>{formatStudyDuration(plan.dailyMinutes)} pro Tag</strong> · {formatStudyDuration(plan.totalMinutes)} insgesamt, inklusive deiner Pausen.</p>
