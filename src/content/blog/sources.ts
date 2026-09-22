@@ -72,9 +72,14 @@ const sources = {
     url: "https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01693.x",
   },
   sleep: {
-    title: "Sleep and Health",
+    title: "About Sleep",
     publisher: "Centers for Disease Control and Prevention",
-    url: "https://www.cdc.gov/physical-activity-education/staying-healthy/sleep.html",
+    url: "https://www.cdc.gov/sleep/about/",
+  },
+  sleepAndMemory: {
+    title: "Sleep smart—optimizing sleep for declarative learning and memory",
+    publisher: "Frontiers in Psychology / PubMed",
+    url: "https://pubmed.ncbi.nlm.nih.gov/26029150/",
   },
   spacing: {
     title: "Distributed practice in verbal recall tasks: A review and quantitative synthesis",
@@ -114,6 +119,7 @@ const {
   procrastination,
   retrievalPractice,
   sleep,
+  sleepAndMemory,
   spacing,
   studentAssessment,
   taskSwitching,
@@ -121,6 +127,13 @@ const {
 } = sources;
 
 export const articleSources: Readonly<Record<string, readonly BlogSource[]>> = {
+  "am-tag-vor-der-pruefung-lernen": [
+    effectiveLearning,
+    metacognition,
+    retrievalPractice,
+    sleep,
+    sleepAndMemory,
+  ],
   "wie-lange-sollte-ich-fuer-eine-pruefung-lernen": [
     metacognition,
     retrievalPractice,

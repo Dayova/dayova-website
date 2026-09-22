@@ -2,6 +2,118 @@ import type { BlogArticle } from "./types";
 
 export const blogArticlesSeptember2026: readonly BlogArticle[] = [
   {
+    slug: "am-tag-vor-der-pruefung-lernen",
+    title: "Am Tag vor der Prüfung lernen: Was jetzt noch sinnvoll ist",
+    excerpt:
+      "Morgen ist die Prüfung und noch nicht alles sitzt. So entscheidest du, was du heute noch übst, was du weglässt und wann du aufhörst.",
+    seoTitle: "Am Tag vor der Prüfung lernen: Das ist noch sinnvoll",
+    seoDescription:
+      "Am Tag vor der Prüfung lernen: So priorisierst du wichtige Lücken, nutzt aktives Abrufen und setzt eine feste Schlusszeit statt alles nachzuholen.",
+    category: "Prüfungen",
+    readingTime: "11 Min.",
+    publishedAt: "21. September 2026",
+    publishedAtISO: "2026-09-21T10:00:00+02:00",
+    intro:
+      "Sonntagabend, kurz nach sechs. Morgen schreibst du Biologie. Fünf Kapitel liegen auf dem Tisch, zwei Aufgaben machen dir noch Probleme und im Klassenchat beginnt die übliche Unruhe: Wer lernt noch wie lange? Jetzt alles noch einmal durchzuarbeiten klingt gründlich. Es ist aber kein Plan. Am Tag vor der Prüfung brauchst du eine engere Frage: Welche begrenzte Aufgabe verbessert deine Vorbereitung heute noch – und was darf bis morgen unperfekt bleiben?",
+    sections: [
+      {
+        title: "Der letzte Tag ist kein zweiter Lernplan",
+        paragraphs: [
+          "Was bis heute sicher sitzt, musst du nicht aus Nervosität vollständig neu bearbeiten. Was noch völlig offen ist, lässt sich an einem Abend selten so aufbauen, prüfen und wiederholen wie an mehreren Tagen. Der letzte Tag eignet sich deshalb vor allem für Kontrolle, gezielte Korrektur und einen ruhigen Abschluss.",
+          "Das bedeutet nicht, dass Lernen heute nichts mehr bringt. Es bedeutet nur, dass du auswählen musst. Eine zentrale Verwechslung zu klären kann sinnvoll sein. Drei neue Kapitel oberflächlich anzulesen erzeugt dagegen leicht das Gefühl von Arbeit, ohne dir zu zeigen, was du morgen tatsächlich abrufen kannst.",
+        ],
+      },
+      {
+        title: "Beginne mit einem kurzen Abruf ohne Unterlagen",
+        paragraphs: [
+          "Lege Buch und Zusammenfassung für zehn bis fünfzehn Minuten beiseite. Nimm drei bis fünf typische Prüfungsaufgaben oder formuliere selbst Fragen zu den wichtigsten Themen. Löse, zeichne oder erkläre aus dem Gedächtnis. Erst danach vergleichst du dein Ergebnis mit den Unterlagen.",
+          "Dieser kurze Versuch erfüllt zwei Aufgaben. Er aktiviert Wissen, das du morgen brauchen könntest. Gleichzeitig zeigt er dir, wo eine konkrete Lücke liegt. Wiederholtes Lesen kann vertraut wirken, obwohl eine eigene Erklärung noch stockt. Ein Abruf macht diesen Unterschied sichtbar.",
+        ],
+        bullets: [
+          "Erkläre einen zentralen Zusammenhang in zwei Minuten laut.",
+          "Löse eine typische Aufgabe ohne Musterlösung.",
+          "Zeichne ein wichtiges Modell oder einen Ablauf aus dem Gedächtnis.",
+          "Notiere anschließend nur die Fehler, die du tatsächlich gemacht hast.",
+        ],
+      },
+      {
+        title: "Teile offene Punkte in drei Entscheidungen",
+        paragraphs: [
+          "Nach dem kurzen Abruf liegt meist keine allgemeine Wissenslücke vor, sondern eine kleine Liste konkreter Probleme. Behandle nicht jedes davon gleich. Ordne jeden Punkt einer von drei Entscheidungen zu:",
+        ],
+        bullets: [
+          "Heute korrigieren: Der Fehler betrifft eine wichtige Grundlage oder ein häufiges Aufgabenformat und lässt sich begrenzt bearbeiten.",
+          "Kurz kontrollieren: Das Thema sitzt grundsätzlich, braucht aber noch einen zweiten Abruf ohne Hilfe.",
+          "Bewusst weglassen: Der Punkt ist randständig, sehr umfangreich oder würde heute mehrere neue Grundlagen verlangen.",
+        ],
+      },
+      {
+        title: "Korrigiere Fehler, statt den ganzen Stoff neu zu lesen",
+        paragraphs: [
+          "Angenommen, du kannst einen Erbgang auswerten, verwechselst aber Genotyp und Phänotyp. Dann brauchst du keine erneute Lektüre des gesamten Genetik-Kapitels. Kläre den Unterschied, bearbeite zwei passende Aufgaben und erkläre anschließend ohne Unterlagen, woran du beide Begriffe erkennst.",
+          "Begrenze auch diese Korrektur. Wenn nach zwei oder drei Versuchen dieselbe Grundlage fehlt, notiere den Punkt und wechsle zu einem Bereich, den du noch stabilisieren kannst. Der letzte Abend ist zu kurz, um jede große Lücke zu schließen. Eine bewusste Grenze schützt die Zeit für das, was noch erreichbar ist.",
+        ],
+      },
+      {
+        title: "Übe so, wie du dein Wissen morgen brauchst",
+        paragraphs: [
+          "Wenn in der Prüfung gerechnet wird, rechne. Wenn du Zusammenhänge erklären sollst, formuliere vollständige Antworten. Wenn Materialien ausgewertet werden, nimm eine passende Grafik oder Quelle. Die letzte Wiederholung sollte dem erwarteten Abruf näher sein als dem Ordnen deiner Unterlagen.",
+          "Mische dabei wenige zentrale Aufgabentypen. Eine kurze Folge aus Begriff erklären, Aufgabe lösen und Fehler prüfen zeigt dir mehr als zehn fast identische Beispiele mit offener Lösung daneben. Schwierige Aufgaben dürfen anstrengend sein. Entscheidend ist, dass du deinen Lösungsweg noch nachvollziehen und Fehler gezielt auswerten kannst.",
+        ],
+      },
+      {
+        title: "Ein realistischer Plan für den letzten Abend",
+        paragraphs: [
+          "Du brauchst keinen starren Stundenplan. Eine einfache Reihenfolge verhindert aber, dass aus einer kurzen Kontrolle ein endloser Lernabend wird. Für eine Prüfung mit drei wichtigen Themen könnte der Ablauf so aussehen:",
+        ],
+        bullets: [
+          "15 Minuten: zentrale Aufgaben ohne Unterlagen versuchen und Fehler markieren.",
+          "25 Minuten: die wichtigste begrenzte Lücke verstehen und an zwei Aufgaben korrigieren.",
+          "10 Minuten Pause: aufstehen, trinken und den Arbeitsplatz verlassen.",
+          "25 Minuten: gemischte prüfungsnahe Aufgaben bearbeiten.",
+          "15 Minuten: Fehler kontrollieren und höchstens zwei Punkte für einen letzten Abruf notieren.",
+          "Danach: Schulsachen vorbereiten, Wecker stellen und den Lernabend beenden.",
+        ],
+      },
+      {
+        title: "Lege eine Schlusszeit fest, bevor du beginnst",
+        paragraphs: [
+          "Ohne Schlusszeit gewinnt am Abend fast immer das Gefühl, noch nicht genug getan zu haben. Lege deshalb vor dem ersten Lernblock fest, wann du aufhörst. Rechne von deiner üblichen Schlafenszeit rückwärts und plane auch Zeit zum Herunterfahren ein.",
+          "Ausreichender Schlaf unterstützt Aufmerksamkeit und Konzentration; Forschung beschreibt außerdem seine Rolle bei der Festigung von Erinnerungen. Daraus folgt keine Garantie für eine bessere Prüfungsleistung. Es spricht aber klar dagegen, Schlaf als beliebig verfügbare Reserve für weitere Lernstunden zu behandeln.",
+        ],
+      },
+      {
+        title: "Am Morgen reicht ein begrenzter Kontrollabruf",
+        paragraphs: [
+          "Wenn du morgens noch Zeit hast, öffne nicht wieder alle Kapitel. Nimm die ein oder zwei Punkte, die du am Vorabend notiert hast. Erkläre sie einmal ohne Unterlagen oder löse eine kurze Aufgabe. Danach ist Schluss.",
+          "Entdeckst du dabei eine Unsicherheit, lies nur die passende Stelle nach. Eine neue große Baustelle kurz vor dem Aufbruch hilft selten bei der Orientierung. Bereite stattdessen Material, Weg und Ankunft so vor, dass du nicht zusätzlich unter Zeitdruck gerätst.",
+        ],
+      },
+      {
+        title: "Was du heute besser nicht mehr tust",
+        paragraphs: [
+          "Manche Tätigkeiten fühlen sich beruhigend an, verbrauchen aber viel Zeit ohne klare Rückmeldung. Dazu gehören das vollständige Abschreiben einer Zusammenfassung, das erneute Markieren ganzer Kapitel oder der Versuch, jede Nachricht im Klassenchat zu beantworten.",
+          "Verzichte außerdem auf eine neue Lernmethode, nur weil sie am letzten Abend effizient klingt. Wenn Karteikarten, Lernvideos oder eine bestimmte App bisher keine Rolle gespielt haben, musst du heute kein neues System aufbauen. Nutze Material und Aufgaben, die zur konkreten Prüfung gehören und die du ohne zusätzliche Einrichtung bearbeiten kannst.",
+        ],
+      },
+      {
+        title: "Wie Dayova den letzten Tag entlasten kann",
+        paragraphs: [
+          "Wenn du Prüfungstermin, Themen und verfügbare Lernzeit früher in Dayova einträgst, verteilt der Lernplan die Vorbereitung auf die Tage vor der Prüfung. Dadurch bleibt der letzte Tag eher für einen begrenzten Kontrollabruf als für den gesamten Stoff.",
+          "Auch dann entscheidet dein Ergebnis, was noch sinnvoll ist. Prüfe die wichtigsten Aufgaben ohne Hilfe, korrigiere eine sichtbare Lücke und setze eine Schlusszeit. Ein Lernplan soll dir diese Auswahl abnehmen helfen. Er soll den letzten Abend nicht mit zusätzlichen Aufgaben füllen.",
+        ],
+        links: [
+          {
+            href: "/tools/study-plan",
+            label: "Kostenlosen Lernplan für die nächste Prüfung erstellen",
+          },
+        ],
+      },
+    ],
+    takeaway:
+      "Am Tag vor der Prüfung musst du nicht mehr alles schaffen. Prüfe wenige zentrale Aufgaben ohne Unterlagen, korrigiere die wichtigste begrenzte Lücke und übe im erwarteten Aufgabenformat. Lege die Schlusszeit vorher fest und behandle Schlaf nicht als Reserve.",
+  },
+  {
     slug: "wie-lange-sollte-ich-fuer-eine-pruefung-lernen",
     title: "Wie lange sollte ich für eine Prüfung lernen?",
     excerpt:

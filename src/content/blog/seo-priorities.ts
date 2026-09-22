@@ -1,19 +1,24 @@
 export const strategicRelatedArticleSlugs: Readonly<
   Partial<Record<string, readonly string[]>>
 > = {
+  "am-tag-vor-der-pruefung-lernen": [
+    "wie-lange-sollte-ich-fuer-eine-pruefung-lernen",
+    "abrufen-statt-passiv-lesen",
+    "warum-schlaf-beim-lernen-gewinnt",
+  ],
   "mehrere-pruefungen-gleichzeitig-was-lerne-ich-zuerst": [
     "was-soll-ich-heute-fuer-die-pruefung-lernen",
     "wie-lange-sollte-ich-fuer-eine-pruefung-lernen",
     "ein-lernplan-der-in-deinen-alltag-passt",
   ],
   "was-soll-ich-heute-fuer-die-pruefung-lernen": [
-    "mehrere-pruefungen-gleichzeitig-was-lerne-ich-zuerst",
+    "am-tag-vor-der-pruefung-lernen",
     "wie-lange-sollte-ich-fuer-eine-pruefung-lernen",
     "ein-lernplan-der-in-deinen-alltag-passt",
   ],
   "wie-lange-sollte-ich-fuer-eine-pruefung-lernen": [
+    "am-tag-vor-der-pruefung-lernen",
     "was-soll-ich-heute-fuer-die-pruefung-lernen",
-    "mehrere-pruefungen-gleichzeitig-was-lerne-ich-zuerst",
     "uebungszeit-allein-genuegt-nicht",
   ],
   "ein-lernplan-der-in-deinen-alltag-passt": [
