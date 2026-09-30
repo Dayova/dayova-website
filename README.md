@@ -73,6 +73,9 @@ product surface and will not be mixed into the public marketing routes.
 Additional architecture decisions and the prepared checkout boundary are
 documented in [`docs/architecture.md`](docs/architecture.md).
 
+The Git-based Preview, staging, Production, and rollback workflow is documented
+in [`docs/deployments.md`](docs/deployments.md).
+
 The visual foundations, spacing rules, typography, color system, radii, and
 interaction standards are documented in
 [`docs/design-system.md`](docs/design-system.md).
