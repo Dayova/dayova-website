@@ -127,6 +127,7 @@ const {
 } = sources;
 
 export const articleSources: Readonly<Record<string, readonly BlogSource[]>> = {
+  "wenn-dein-lernplan-nicht-mehr-zum-alltag-passt": [sources.metacognition],
   "am-tag-vor-der-pruefung-lernen": [
     effectiveLearning,
     metacognition,
