@@ -1,6 +1,11 @@
 import type { BlogSource } from "./types";
 
 const sources = {
+  workedExamples: {
+    title: "Organizing Instruction and Study to Improve Student Learning",
+    publisher: "Institute of Education Sciences – What Works Clearinghouse",
+    url: "https://ies.ed.gov/ncee/wwc/PracticeGuide/1",
+  },
   aiInEducation: {
     title: "Guidance for generative AI in education and research",
     publisher: "UNESCO",
@@ -127,6 +132,7 @@ const {
 } = sources;
 
 export const articleSources: Readonly<Record<string, readonly BlogSource[]>> = {
+  "mit-musterloesungen-lernen": [sources.workedExamples, metacognition],
   "wenn-dein-lernplan-nicht-mehr-zum-alltag-passt": [sources.metacognition],
   "am-tag-vor-der-pruefung-lernen": [
     effectiveLearning,

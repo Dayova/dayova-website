@@ -2,6 +2,88 @@ import type { BlogArticle } from "./types";
 
 export const blogArticlesSeptember2026: readonly BlogArticle[] = [
   {
+    slug: "mit-musterloesungen-lernen",
+    title: "Mit Musterlösungen lernen, ohne nur abzuschreiben",
+    excerpt:
+      "Mit der Lösung daneben wirkt jede Aufgabe verständlich. So nutzt du Musterlösungen zum Lernen und prüfst, ob du den nächsten Lösungsweg selbst findest.",
+    seoTitle: "Mit Musterlösungen lernen: Vom Beispiel zur eigenen Lösung",
+    seoDescription:
+      "Musterlösungen richtig nutzen: Rechenschritte erklären, Hilfen schrittweise abdecken und ähnliche Aufgaben selbst lösen. Mit einem konkreten Mathebeispiel.",
+    category: "Lernmethoden",
+    readingTime: "7 Min.",
+    publishedAt: "28. September 2026",
+    publishedAtISO: "2026-09-28T10:00:00+02:00",
+    intro:
+      "Du vergleichst deine Matheaufgabe mit der Musterlösung. Die erste Zeile leuchtet ein, die zweite auch. Du übernimmst die Rechnung ins Heft und hakst das Thema ab. Bei der nächsten Aufgabe fehlt dir trotzdem der Anfang. Die Lösung war nachvollziehbar – aber welche Entscheidung zum ersten Schritt geführt hat, ist noch offen. Genau dort kann die Arbeit mit einem Lösungsbeispiel beginnen.",
+    sections: [
+      {
+        title: "Eine Musterlösung darf dir beim Einstieg helfen",
+        paragraphs: [
+          "Wenn du ein Verfahren gerade erst kennenlernst, kann ein vollständig gelöstes Beispiel Orientierung geben. Du siehst, welche Angaben gebraucht werden, in welcher Reihenfolge jemand vorgeht und wie die Rechnung notiert wird. Du musst nicht jeden Schritt durch Raten finden.",
+          "Der Praxisleitfaden des Institute of Education Sciences empfiehlt, ausgearbeitete Lösungsbeispiele mit eigenen Lösungsversuchen abzuwechseln. Mit wachsender Sicherheit sollen die selbstständig bearbeiteten Aufgaben mehr Raum bekommen. Ein Beispiel ist damit eine Hilfe auf dem Weg zum eigenen Lösen, keine dauerhafte Vorlage für jede Zeile.",
+        ],
+      },
+      {
+        title: "Lies zuerst die Aufgabe und erst dann den Lösungsweg",
+        paragraphs: [
+          "Decke die Lösung zunächst ab. Lies die Aufgabenstellung und notiere: Was ist gegeben? Was soll am Ende herauskommen? Welche Regel könnte passen? Auch wenn du noch nicht weiterrechnen kannst, hast du damit eine konkrete Frage an das Beispiel.",
+          "Öffne anschließend die Lösung und suche die Stelle, die diese Frage beantwortet. Falls du schon die Aufgabenstellung nicht verstehst, kläre zuerst den Begriff oder die fehlende Grundlage. Eine lange Rechnung abzuschreiben hilft dir an dieser Stelle wenig.",
+        ],
+      },
+      {
+        title: "Erkläre, warum der nächste Schritt erlaubt ist",
+        paragraphs: [
+          "Nimm die Gleichung 3(x + 2) = 21. In der Musterlösung steht darunter vielleicht 3x + 6 = 21. Die wichtige Frage lautet: Warum wird aus der Klammer genau dieser Ausdruck? Eine passende Erklärung wäre: Die 3 wird mit beiden Summanden in der Klammer multipliziert.",
+          "Du kannst die Rechnung mit kurzen Begründungen verbinden. Dafür brauchst du keine langen Definitionen. Ein Satz, der den Schritt erklärt, reicht für dieses Beispiel aus.",
+        ],
+        table: {
+          caption: "Ein Lösungsweg mit Begründungen: 3(x + 2) = 21",
+          columns: ["Rechenschritt", "Begründung"],
+          rows: [
+            ["3x + 6 = 21", "Die Klammer ausmultiplizieren: 3 · x + 3 · 2."],
+            ["3x = 15", "Auf beiden Seiten 6 abziehen."],
+            ["x = 5", "Beide Seiten durch 3 teilen."],
+            ["3(5 + 2) = 21", "Die Lösung in die ursprüngliche Gleichung einsetzen und prüfen."],
+          ],
+        },
+      },
+      {
+        title: "Decke einen Teil ab und rechne selbst weiter",
+        paragraphs: [
+          "Lass jetzt nur die Aufgabenstellung und den ersten Rechenschritt sichtbar. Kannst du den Rest selbst ergänzen und begründen? Wenn das gelingt, versuche beim nächsten Beispiel, bereits den ersten Schritt ohne Vorlage zu finden.",
+          "Bleibst du hängen, schaue gezielt den fehlenden Schritt nach. Schließe die Lösung anschließend wieder und setze selbst fort. Markiere die Stelle, an der du Hilfe brauchtest. So bleibt sichtbar, was du noch üben solltest, auch wenn am Ende eine richtige Rechnung im Heft steht.",
+        ],
+      },
+      {
+        title: "Wechsle zu einer ähnlichen Aufgabe ohne Vorlage",
+        paragraphs: [
+          "Nach dem Beispiel kannst du 4(x + 3) = 28 versuchen. Lege die Musterlösung dafür ganz beiseite. Schreibe deinen Lösungsweg auf und kontrolliere das Ergebnis durch Einsetzen. Zur Kontrolle nach deinem Versuch: x = 4 erfüllt diese Gleichung.",
+          "Vergleiche danach auch die Entscheidungen in deinem Rechenweg. Hast du die Klammer korrekt behandelt? Hast du jede Umformung auf beiden Seiten ausgeführt? Ein anderer richtiger Weg ist ebenfalls möglich: Du könntest zuerst beide Seiten durch 4 teilen und danach 3 abziehen.",
+          "Wenn du beide Wege verstehst, frage dich, welcher hier übersichtlicher ist. Du lernst dadurch, einen passenden Weg auszuwählen, statt nur die Reihenfolge einer Vorlage zu übernehmen.",
+        ],
+      },
+      {
+        title: "Halte fest, welche Hilfe du noch brauchst",
+        paragraphs: [
+          "Eine nützliche Notiz wäre: „Ich kann Gleichungen mit Klammern lösen. Beim Ausmultiplizieren vergesse ich manchmal den zweiten Summanden.“ Daraus lässt sich eine konkrete nächste Übung ableiten. „Musterlösung verstanden“ bleibt dafür zu ungenau.",
+          "Versuche an einem späteren Lerntag erneut eine passende Aufgabe ohne Vorlage. Wenn derselbe Schritt wieder stockt, nimm deine Rechnung mit in den Unterricht und frage genau dort nach. Du musst nicht warten, bis ein ganzes Kapitel unverständlich geworden ist.",
+        ],
+      },
+      {
+        title: "Plane einen eigenen Versuch nach dem Beispiel ein",
+        paragraphs: [
+          "Schreibe in deinen Lernplan nicht nur „Lösungen ansehen“, sondern beispielsweise: „Ein Lösungsbeispiel erklären, eine ähnliche Aufgabe selbst rechnen und den unsicheren Schritt notieren.“ Damit gehört der eigene Versuch von Anfang an zur Lerneinheit.",
+          "Für die Verteilung deiner Vorbereitung auf mehrere Tage kannst du den kostenlosen Lernplan-Ersteller von Dayova nutzen. Welche konkrete Übung du in einem Termin bearbeitest, solltest du danach auswählen, was beim letzten eigenen Versuch noch schwierig war.",
+        ],
+        links: [
+          { href: "/tools/study-plan", label: "Kostenlosen Lernplan erstellen" },
+        ],
+      },
+    ],
+    takeaway:
+      "Nutze eine Musterlösung, um Entscheidungen zu verstehen. Decke die Hilfe danach schrittweise ab und löse eine ähnliche Aufgabe selbst. Der nächste eigene Versuch zeigt dir, welche Schritte schon sitzen und wo du noch Unterstützung brauchst.",
+  },
+  {
     slug: "am-tag-vor-der-pruefung-lernen",
     title: "Am Tag vor der Prüfung lernen: Was jetzt noch sinnvoll ist",
     excerpt:
