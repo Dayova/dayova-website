@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AnalyticsConsent } from "@/components/analytics-consent";
@@ -84,11 +83,15 @@ export const metadata: Metadata = {
 const themeInitializer = `
 (() => {
   const root = document.documentElement;
-  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  root.classList.toggle("dark", isDark);
-  root.dataset.theme = isDark ? "dark" : "light";
-  root.dataset.themeSource = "system";
+  const preference = window.matchMedia("(prefers-color-scheme: dark)");
+  const apply = () => {
+    root.classList.toggle("dark", preference.matches);
+    root.dataset.theme = preference.matches ? "dark" : "light";
+    root.dataset.themeSource = "system";
+    root.style.colorScheme = preference.matches ? "dark" : "light";
+  };
+  apply();
+  preference.addEventListener("change", apply);
 })();
 `;
 
@@ -107,14 +110,14 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
+      <head>
+        <script id="dayova-theme" dangerouslySetInnerHTML={{ __html: themeInitializer }} />
+      </head>
       <body>
         {children}
         <AnalyticsConsent measurementId={googleAnalyticsId} />
         <VercelAnalytics />
         <SpeedInsights />
-        <Script id="dayova-theme" strategy="beforeInteractive">
-          {themeInitializer}
-        </Script>
       </body>
     </html>
   );

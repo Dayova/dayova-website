@@ -1,0 +1,40 @@
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  animation: dissolve 1350ms linear both paused;
+}
+.intro[data-home-intro="complete"] { visibility: hidden; }
+.flower {
+  transform-origin: 0 0;
+  animation: bloom 1350ms cubic-bezier(.65,0,.35,1) both paused;
+}
+.petal {
+  opacity: .58;
+  animation: unfold 450ms cubic-bezier(.22,1,.36,1) both paused;
+}
+.intro:not([data-home-intro="loading"]) .flower { animation-play-state: running; }
+.intro:not([data-home-intro="loading"]),
+.intro:not([data-home-intro="loading"]) .petal { animation-play-state: running; }
+@keyframes bloom {
+  from { transform: scale(.05) rotate(-20deg); }
+  to { transform: scale(var(--flower-scale)) rotate(0); }
+}
+@keyframes unfold {
+  from { transform: translate(0, 0); }
+  to { transform: translate(var(--x), var(--y)); }
+}
+/* Dissolve the remaining petal overlaps while the flower is still growing.
+   The revealed page itself never changes opacity or background. */
+@keyframes dissolve {
+  0%, 72% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro { display: none; }
+  .flower, .petal { animation: none; }
+}
