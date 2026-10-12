@@ -1,0 +1,189 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding: 0 0 144px;
+  overflow: clip;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 144px;
+  background: var(--dayova-brand-gradient);
+  border-radius: 0 0 32px 32px;
+}
+
+.panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  max-width: 1856px;
+  min-height: 700px;
+  padding-top: 112px;
+  margin-inline: auto;
+
+  color: #10232c;
+}
+
+.copy {
+  position: relative;
+  z-index: 3;
+  animation: copy-enter 1050ms cubic-bezier(.22,1,.36,1) 0ms both paused;
+  padding: 54px 0 54px clamp(32px, 4.8vw, 92px);
+}
+
+
+.title {
+  color: #fff;
+  margin: 0;
+  font-size: clamp(42px, 4.65vw, 76px);
+  font-weight: 700;
+  line-height: 1.035;
+  letter-spacing: -0.055em;
+}
+
+.titleLine { display: block; white-space: nowrap; }
+
+.description {
+  max-width: 520px;
+  width: calc(100% - 110px);
+  margin: 26px 0 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #fff;
+}
+
+.action {
+  position: relative;
+  width: 100%;
+  display: grid;
+  justify-items: start;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.download.download {
+  min-height: 52px;
+  padding-inline: 26px;
+  border: 1px solid #17282f;
+  background: #17282f;
+  color: #fff;
+  box-shadow: none;
+  font-size: 14px;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.download.download:hover {
+  background: #233f4b;
+  transform: translateY(-2px);
+}
+
+.download.download:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+
+.visual {
+  position: relative;
+  align-self: stretch;
+  min-width: 0;
+  perspective: 1400px;
+}
+
+.mockup {
+  position: absolute;
+  top: 28px;
+  left: 3%;
+  width: min(94%, 600px);
+  filter: drop-shadow(0 24px 22px rgb(13 56 74 / 18%));
+  will-change: translate;
+  animation: phones-enter 1150ms cubic-bezier(.22,1,.36,1) 30ms both paused, float 8s ease-in-out 1180ms infinite paused;
+}
+
+.mockup img { display: block; width: 100%; height: auto; }
+.mockup img.darkScreen { display: none; }
+:global(.dark) .mockup img.lightScreen { display: none; }
+:global(.dark) .mockup img.darkScreen { display: block; }
+
+.arrow {
+  position: absolute;
+  left: 228px;
+  top: 50%;
+  transform: translateY(-79.4118%);
+  width: calc(100% - 248px);
+  height: 220px;
+  color: #173d4c;
+  pointer-events: none;
+}
+
+.arrow path {
+  stroke-dasharray: 1;
+}
+.arrowLine {
+  animation: draw-arrow 1200ms ease-in-out 1100ms both paused;
+}
+.arrowTip {
+  animation: draw-arrow 200ms ease-out 2300ms both paused;
+}
+@keyframes copy-enter {
+  from { opacity: 0; transform: translateX(-48px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes phones-enter {
+  from { opacity: 0; transform: translateX(72px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes draw-arrow {
+  from { stroke-dashoffset: 1; opacity: 0; }
+  1% { opacity: 1; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -9px; }
+}
+
+@media (min-width: 1600px) {
+  .panel { min-height: 780px; }
+  .mockup { left: 8%; top: 36px; }
+}
+
+@media (min-width: 700px) and (max-width: 1099px) {
+  .hero { padding: 0 0 72px; }
+  .hero::before { bottom: 72px; }
+  .panel { min-height: 630px; grid-template-columns: 1.08fr 1fr; }
+  .copy { padding: 40px 0 40px 32px; }
+  .title { font-size: clamp(35px, 4.5vw, 48px); }
+  .description { width: auto; max-width: 340px; font-size: 14px; padding-right: 16px; }
+  .mockup { top: 70px; left: 0; width: 98%; }
+  .arrow { display: none; }
+}
+
+@media (max-width: 699px) {
+  .hero { padding: 0 0 40px; }
+  .hero::before { bottom: 120px; border-radius: 0 0 26px 26px; }
+  .panel { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-top: 104px; }
+  .copy { padding: 22px 24px 0; }
+  .title { font-size: clamp(26px, 7.7vw, 50px); line-height: 1.06; }
+  .description { width: auto; font-size: 14px; line-height: 1.65; margin-top: 22px; }
+  .action { margin-top: 24px; gap: 10px; }
+  .download.download { font-size: 13px; min-height: 48px; padding-inline: 22px; }
+  .visual { margin-top: 32px; padding-bottom: 24px; }
+  .mockup { position: relative; top: auto; left: auto; width: 90%; max-width: 500px; margin-inline: auto; }
+  .arrow { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy, .arrow path { animation: none; }
+  .mockup { animation: none; will-change: auto; }
+  .download.download { transition: none; }
+  .download.download:hover { transform: none; }
+}
+
+:global(body:has([data-home-intro="complete"])) .copy,
+:global(body:has([data-home-intro="complete"])) .mockup,
+:global(body:has([data-home-intro="complete"])) .arrow path { animation-play-state: running; }

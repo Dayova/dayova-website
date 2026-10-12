@@ -10,7 +10,7 @@ export function Brand({ compact = false, inverse = false }: BrandProps) {
         compact ? "text-xl" : "text-[24px]"
       } ${inverse ? "text-white" : "text-ink"}`}
     >
-      dayova.
+      dayova
     </span>
   );
 }

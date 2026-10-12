@@ -73,54 +73,7 @@ const faqItems = [
   },
 ] as const;
 
-export function HomeHeroSection() {
-  return (
-    <section
-      className="home-classic-hero home-classic-hero--homepage"
-      aria-labelledby="home-hero-title"
-    >
-      <div className="dayova-container home-classic-hero__inner">
-        <div className="home-classic-hero__copy">
-          <h1 id="home-hero-title" className="dayova-hero-claim">
-            Einfach loslernen. Der Plan steht schon.
-          </h1>
-          <p className="dayova-body home-classic-hero__description">
-            Die Lernplan-App Dayova macht aus deinem Prüfungsstoff und deinen
-            freien Zeiten einen Plan für jeden Lerntag. Beim Öffnen siehst du, was heute dran ist.
-            Deine Antworten legen fest, welcher Lernschritt danach folgt.
-          </p>
-          <div className="home-classic-actions" aria-label="Dayova entdecken">
-            <StoreDownloadLink variant="primary">
-              14 Tage kostenlos testen
-            </StoreDownloadLink>
-          </div>
-        </div>
-
-        <div className="home-classic-hero__visual">
-          <Image
-            src="/images/dayova-hero-app-light.png"
-            alt="Drei Smartphones mit Lernplan, Tagesübersicht und Wissensanalyse in Dayova"
-            width={1800}
-            height={1200}
-            loading="eager"
-            fetchPriority="high"
-            sizes="(max-width: 767px) 128vw, (max-width: 1199px) 92vw, 56vw"
-            className="home-classic-hero__theme-image home-classic-hero__theme-image--light"
-          />
-          <Image
-            src="/images/dayova-hero-app-dark.png"
-            alt="Drei Smartphones mit Lernplan, Tagesübersicht und Wissensanalyse in Dayova"
-            width={1800}
-            height={1200}
-            loading="eager"
-            sizes="(max-width: 767px) 128vw, (max-width: 1199px) 92vw, 56vw"
-            className="home-classic-hero__theme-image home-classic-hero__theme-image--dark"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
+export { HomeHeroSection } from "./home-hero";
 
 export function HomeAboutSection() {
   return (
