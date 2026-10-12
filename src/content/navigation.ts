@@ -5,21 +5,15 @@ export type NavigationItem = {
 };
 
 export const primaryNavigation = [
-  { href: "/tools/study-plan", label: "Lernplan erstellen", description: "Kostenlos und ohne Anmeldung" },
   {
     href: "/parents",
     label: "Für Eltern",
     description: "Wie dein Kind selbst anfangen kann",
   },
   {
-    href: "/schools",
-    label: "Für Schulen",
-    description: "Pilot mit einer Lerngruppe",
-  },
-  {
     href: "/pricing",
     label: "Preise",
-    description: "Testphase, Abos und Pilotpreise",
+    description: "Testphase und Abos",
   },
   {
     href: "/about",
@@ -37,9 +31,7 @@ export const footerNavigation = [
   {
     title: "Seiten",
     links: [
-      { href: "/tools/study-plan", label: "Kostenloser Lernplan-Ersteller" },
       { href: "/parents", label: "Eltern" },
-      { href: "/schools", label: "Schulen" },
       { href: "/pricing", label: "Preise" },
       { href: "/about", label: "Über uns" },
       { href: "/blog", label: "Blog" },

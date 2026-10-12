@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-import { ContactForm } from "@/components/contact-form";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
   HomeAboutSection,
@@ -79,7 +78,6 @@ export default function Home() {
       <HomeAdvantagesSection />
       <HomeProcessSection />
       <HomeDownloadSection />
-      <ContactForm />
       <HomeFaqSection />
     </>
   );

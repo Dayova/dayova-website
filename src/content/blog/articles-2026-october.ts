@@ -62,10 +62,10 @@ export const blogArticlesOctober2026: readonly BlogArticle[] = [
         title: "Dein nächster Schritt",
         paragraphs: [
           "Nimm dir heute eine liegen gebliebene Aufgabe vor. Prüfe, ob sie noch wichtig ist, formuliere einen machbaren Einstieg und suche dafür ein freies Zeitfenster.",
-          "Wenn du deine Vorbereitung neu sortieren möchtest, kannst du dafür auch den kostenlosen Lernplan-Ersteller von Dayova nutzen. Trage deinen Prüfungstermin, die Themen und deinen Lernrhythmus ein.",
+          "Wenn du deine Vorbereitung neu sortieren möchtest, findest du in unserem Ratgeber Tipps für einen realistischen Lernplan. Berücksichtige deinen Prüfungstermin, die Themen und deinen Lernrhythmus.",
         ],
         links: [
-          { href: "/tools/study-plan", label: "Kostenlosen Lernplan erstellen" },
+          { href: "/blog/ein-lernplan-der-in-deinen-alltag-passt", label: "Tipps für einen realistischen Lernplan" },
         ],
       },
     ],

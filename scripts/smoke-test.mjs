@@ -24,7 +24,6 @@ const publicEntryPaths = [
   "/kasse/erfolgreich",
   "/nutzungsbedingungen",
   "/preise",
-  "/schulen",
   "/ueber-uns",
   "/robots.txt",
   "/sitemap.xml",
