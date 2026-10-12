@@ -75,69 +75,7 @@ const faqItems = [
 
 export { HomeHeroSection } from "./home-hero";
 
-export function HomeAboutSection() {
-  return (
-    <section className="home-classic-section" aria-labelledby="about-title">
-      <div className="dayova-container home-classic-about">
-        <div className="home-classic-about__content">
-          <div className="home-classic-heading-group">
-            <span className="home-classic-section-eyebrow">Über Dayova</span>
-            <h2 id="about-title" className="dayova-section-title">
-              <span className="home-classic-about__title-line">
-                Aus unserer Arbeit mit Schülern
-              </span>{" "}
-              <span className="home-classic-about__title-line">
-                wurde Dayova
-              </span>
-            </h2>
-            <p className="dayova-body">
-              In unserer Lernbegleitung kam vor Prüfungen immer wieder dieselbe
-              Frage auf: Wie teile ich den Stoff so auf, dass er bis zum Termin
-              sitzt? Aus dieser Frage entstand Dayova.
-            </p>
-            <ButtonLink
-              className="home-classic-about__link"
-              href="/about"
-              variant="secondary"
-            >
-              Wie aus Lernbegleitung Dayova wurde
-            </ButtonLink>
-          </div>
-
-          <div className="home-classic-metrics" aria-label="Dayova in Zahlen">
-            <article className="home-classic-metric">
-              <strong>150+</strong>
-              <span>Schüler begleitet</span>
-            </article>
-            <article className="home-classic-metric">
-              <strong>2023</strong>
-              <span>entstanden</span>
-            </article>
-          </div>
-        </div>
-
-        <article className="home-classic-about__visual home-classic-about__visual--learning-path">
-          <Image
-            src="/images/dayova-faq-white.png"
-            alt="Dayova verbindet Prüfung, Lernstand und verfügbare Zeit mit dem nächsten sinnvollen Schritt"
-            width={1200}
-            height={1200}
-            sizes="(max-width: 1023px) 88vw, 560px"
-            className="home-classic-about__theme-image home-classic-about__theme-image--light"
-          />
-          <Image
-            src="/images/dayova-faq-dark.png"
-            alt="Dayova verbindet Prüfung, Lernstand und verfügbare Zeit mit dem nächsten sinnvollen Schritt"
-            width={1200}
-            height={1200}
-            sizes="(max-width: 1023px) 88vw, 560px"
-            className="home-classic-about__theme-image home-classic-about__theme-image--dark"
-          />
-        </article>
-      </div>
-    </section>
-  );
-}
+export { HomeAboutSection } from "./home-about";
 
 export function HomeAdvantagesSection() {
   return (
