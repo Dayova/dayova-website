@@ -69,9 +69,4 @@ export const pricingFaqs = [
     answer:
       "Das Monatsabo ist monatlich kündbar. Beim Jahresabo zahlst du einmal für zwölf Monate und der monatliche Preis ist niedriger. Vor dem Kauf siehst du Laufzeit und Gesamtpreis.",
   },
-  {
-    question: "Wie funktioniert das Angebot für Schulen?",
-    answer:
-      "Vor dem Start legen wir Lerngruppe, Laufzeit, Funktionen und Ziele fest. Auf dieser Grundlage erhält die Schule ein Angebot für den Pilot.",
-  },
 ] as const;

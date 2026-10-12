@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { SchoolPricingCard } from "@/components/pricing/school-pricing-card";
 import { FaqAccordionSection } from "@/components/sections/faq-accordion-section";
 import { JsonLd } from "@/components/seo/json-ld";
 import { StudentPricingCard } from "@/components/pricing/student-pricing-card";
@@ -7,16 +6,16 @@ import { pricingFaqs } from "@/content/pricing";
 import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
 
 const pricingDescription =
-  "Vergleiche Monats- und Jahresabo für die Dayova Lern-App. Teste alle Funktionen 14 Tage ohne Zahlungsdaten. Schulen erhalten ein individuelles Pilotangebot.";
+  "Vergleiche Monats- und Jahresabo für die Dayova Lern-App. Teste alle Funktionen 14 Tage ohne Zahlungsdaten.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Preise & Abos für Schüler und Schulen",
+  title: "Preise & Abos für Schüler",
   description: pricingDescription,
   path: "/pricing",
 });
 
 const pricingStructuredData = createPageStructuredData({
-  name: "Dayova Preise für Schüler und Schulen",
+  name: "Dayova Preise für Schüler",
   description: pricingDescription,
   path: "/pricing",
   breadcrumbs: [
@@ -62,8 +61,7 @@ export default async function PricingPage({
             </h1>
             <p>
               Teste alle Funktionen 14 Tage ohne Zahlungsdaten. Danach kannst
-              du ein Monats- oder Jahresabo auswählen. Für Schulen planen wir
-              den Preis passend zum Pilot.
+              du ein Monats- oder Jahresabo auswählen.
             </p>
             <p className="content-small">Die angezeigten Preise gelten auf dieser Website. Beim Kauf im App Store oder bei Google Play können Preise abweichen. Maßgeblich ist die jeweilige Kaufbestätigung.</p>
             {checkoutMessage ? (
@@ -74,9 +72,8 @@ export default async function PricingPage({
           </div>
 
           <div className="pricing-plans-layout">
-            <div className="pricing-plans-grid">
+            <div className="pricing-plans-grid pricing-plans-grid--student-only">
               <StudentPricingCard />
-              <SchoolPricingCard />
             </div>
           </div>
         </div>

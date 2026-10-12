@@ -333,12 +333,12 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         "title": "Bevor du ein weiteres Werkzeug installierst",
         "paragraphs": [
           "Schreibe deine wichtigste Hürde in einem Satz auf: „Ich weiß nicht, wann ich üben soll“ ist etwas anderes als „Ich verstehe das Umformen nicht“. Wähle eine passende Hilfe und prüfe nach einigen Lernversuchen, ob genau diese Hürde kleiner geworden ist.",
-          "Für einen ersten Überblick kannst du den kostenlosen Lernplan-Ersteller nutzen. Wähle dein Fach und deinen Prüfungstermin: Du bekommst einen Plan mit Theorie, Üben und Praxis, ganz ohne Konto."
+          "Für einen ersten Überblick findest du in unserem Ratgeber konkrete Tipps, wie du Prüfungsstoff, Übungsphasen und freie Zeiten in einem realistischen Lernplan zusammenbringst."
         ],
         "links": [
           {
-            "href": "/tools/study-plan",
-            "label": "Kostenlosen Lernplan ohne Anmeldung erstellen"
+            "href": "/blog/ein-lernplan-der-in-deinen-alltag-passt",
+            "label": "Tipps für einen realistischen Lernplan"
           }
         ]
       }
@@ -466,8 +466,8 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         },
         "links": [
           {
-            "href": "/tools/study-plan",
-            "label": "Einen Lernplan für dein Fach und deinen Prüfungstermin erstellen"
+            "href": "/#so-funktioniert-dayova",
+            "label": "Lernplanung mit der Dayova-App entdecken"
           }
         ]
       },
@@ -490,8 +490,8 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
             "label": "Mehrere Prüfungen nach Termin und Lernbedarf priorisieren"
           },
           {
-            "href": "/tools/study-plan",
-            "label": "Kostenlosen Lernplan bis zu deiner Prüfung erstellen"
+            "href": "/#so-funktioniert-dayova",
+            "label": "Lernplanung mit der Dayova-App entdecken"
           }
         ]
       }
@@ -602,8 +602,8 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         },
         "links": [
           {
-            "href": "/tools/study-plan",
-            "label": "Zeit für Übung und spätere Wiederholung einplanen"
+            "href": "/blog/ein-lernplan-der-in-deinen-alltag-passt",
+            "label": "Tipps für einen realistischen Lernplan"
           }
         ]
       },

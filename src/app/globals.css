@@ -3898,6 +3898,13 @@
   gap: var(--space-6);
 }
 
+.pricing-plans-grid.pricing-plans-grid--student-only {
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
 .pricing-plans-grid {
   display: grid;
   align-items: stretch;

@@ -52,8 +52,7 @@ npm run start
 - `/` — student-focused homepage
 - `/blog` — blog shell with prepared article cards
 - `/parents` — parent-focused marketing page
-- `/schools` — school offer
-- `/pricing` — student subscriptions and custom school pricing
+- `/pricing` — student subscriptions
 - `/legal-notice` and `/privacy` — legal pages
 
 A future protected teacher experience will be implemented as a separate
@@ -89,3 +88,9 @@ Total TypeScript guidance:
 - a dedicated `npm run typecheck` command for CI and local verification
 
 See [`docs/typescript.md`](docs/typescript.md) for the complete conventions.
+
+## Unpublished drafts
+
+The school offer, web study planner and homepage contact form were withdrawn
+on 12 October 2026. Their source snapshots and restoration notes are kept in
+[`docs/drafts/2026-10-12/README.md`](docs/drafts/2026-10-12/README.md), outside public routes.

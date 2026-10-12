@@ -12,9 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
   );
   const routes = [
-    ...["/tools/study-plan"].map((path) => ({
-      path, priority: 0.8, changeFrequency: "monthly" as const, images: [] as string[],
-    })),
     {
       path: "",
       priority: 1,
@@ -32,14 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
       changeFrequency: "monthly" as const,
       images: [`${siteUrl}/images/dayova-hero-app-light.png`],
-    },
-    {
-      path: "/schools",
-      priority: 0.8,
-      changeFrequency: "monthly" as const,
-      images: [
-        `${siteUrl}/images/schools/teacher-dashboard-macbook-transparent-light.png`,
-      ],
     },
     {
       path: "/pricing",
@@ -65,9 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...routes.map((route) => ({
       url: `${siteUrl}${route.path}`,
       lastModified:
-        route.path.startsWith("/tools/")
-          ? new Date("2026-09-18")
-          : route.path === "/blog"
+        route.path === "/blog"
           ? newestArticleDate
           : undefined,
       changeFrequency: route.changeFrequency,

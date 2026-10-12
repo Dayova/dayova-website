@@ -73,10 +73,10 @@ export const blogArticlesSeptember2026: readonly BlogArticle[] = [
         title: "Plane einen eigenen Versuch nach dem Beispiel ein",
         paragraphs: [
           "Schreibe in deinen Lernplan nicht nur „Lösungen ansehen“, sondern beispielsweise: „Ein Lösungsbeispiel erklären, eine ähnliche Aufgabe selbst rechnen und den unsicheren Schritt notieren.“ Damit gehört der eigene Versuch von Anfang an zur Lerneinheit.",
-          "Für die Verteilung deiner Vorbereitung auf mehrere Tage kannst du den kostenlosen Lernplan-Ersteller von Dayova nutzen. Welche konkrete Übung du in einem Termin bearbeitest, solltest du danach auswählen, was beim letzten eigenen Versuch noch schwierig war.",
+          "Für die Verteilung deiner Vorbereitung auf mehrere Tage findest du in unserem Ratgeber Tipps für einen realistischen Lernplan. Welche konkrete Übung du in einem Termin bearbeitest, solltest du danach auswählen, was beim letzten eigenen Versuch noch schwierig war.",
         ],
         links: [
-          { href: "/tools/study-plan", label: "Kostenlosen Lernplan erstellen" },
+          { href: "/blog/ein-lernplan-der-in-deinen-alltag-passt", label: "Tipps für einen realistischen Lernplan" },
         ],
       },
     ],
@@ -186,8 +186,8 @@ export const blogArticlesSeptember2026: readonly BlogArticle[] = [
         ],
         links: [
           {
-            href: "/tools/study-plan",
-            label: "Kostenlosen Lernplan für die nächste Prüfung erstellen",
+            href: "/blog/ein-lernplan-der-in-deinen-alltag-passt",
+            label: "Tipps für einen realistischen Lernplan",
           },
         ],
       },

@@ -28,8 +28,8 @@ const dayovaAdvantages = [
     className: "home-classic-advantage--overview",
   },
   {
-    href: "/tools/study-plan",
-    linkLabel: "Einen Lernplan selbst erstellen",
+    href: "/blog/ein-lernplan-der-in-deinen-alltag-passt",
+    linkLabel: "Tipps für deine Lernplanung",
     label: "Heute dran",
     title: "Beim Öffnen wartet dein nächster Lernschritt.",
     description:
@@ -93,9 +93,6 @@ export function HomeHeroSection() {
             <StoreDownloadLink variant="primary">
               14 Tage kostenlos testen
             </StoreDownloadLink>
-            <ButtonLink href="/tools/study-plan" variant="secondary">
-              Kostenlosen Lernplan erstellen
-            </ButtonLink>
           </div>
         </div>
 
