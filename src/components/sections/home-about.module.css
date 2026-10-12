@@ -41,7 +41,7 @@
   .learningCard .copy h3 { width:calc(100% + 75px); }
   .learningCard .copy p { font-size:13px; }
   .link { font-size:11px; padding-inline:10px; gap:7px; }
-  .appPreview { right:10px; top:104px; width:35%; transform:rotate(5deg); }
+  .appPreview { right:24px; top:104px; width:32%; transform:rotate(5deg); }
 }
 
 .section [data-reveal-item][data-reveal="waiting"] { opacity:0; translate:0 32px; }
