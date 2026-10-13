@@ -33,7 +33,7 @@ export function HomeHeroSection() {
               <path className={styles.arrowTip} pathLength="1" d="M24 260L12 270L24 281" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
-          <svg className={styles.mobileArrow} viewBox="0 0 112 280" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <svg className={styles.mobileArrow} viewBox="-6 -4 132 284" preserveAspectRatio="none" fill="none" aria-hidden="true">
             <path className={styles.arrowLine} pathLength="1" d="M48 4C111 21 114 94 91 157C80 190 62 220 23 220C-12 220 2 181 68 187C130 191 119 215 85 228C60 238 32 248 5 250" stroke="currentColor" strokeWidth="2.5" vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" />
             <path className={styles.arrowTip} pathLength="1" d="M16 241L5 250L16 259" stroke="currentColor" strokeWidth="2.5" vectorEffect="non-scaling-stroke" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
