@@ -3,6 +3,7 @@
   isolation: isolate;
   padding: 0 0 144px;
   overflow: visible;
+  overflow-x: clip;
 }
 
 .hero::before {
