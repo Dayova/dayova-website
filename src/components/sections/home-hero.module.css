@@ -195,8 +195,6 @@
   .mockup { position: relative; top: auto; left: auto; width: 82%; max-width: 500px; margin-inline: auto; }
   .arrow { display: none; }
   .mobileArrow { display: block; position: absolute; left: calc(50% + 110px); right: 16px; top: calc(28px + var(--mobile-title-size) * 2.12); width: calc(50% - 126px); height: calc(100% - 28px - var(--mobile-title-size) * 2.12); color: var(--dayova-fixed-text); pointer-events: none; }
-  .mobileArrow .arrowLine { animation-duration: 1450ms; animation-timing-function: linear; }
-  .mobileArrow .arrowTip { animation-delay: 2550ms; animation-duration: 160ms; animation-timing-function: linear; }
 }
 
 @media (prefers-reduced-motion: reduce) {
