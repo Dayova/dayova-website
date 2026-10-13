@@ -19,14 +19,14 @@ export function Footer() {
               Einfach loslernen: Dayova macht aus deinen Prüfungen und freien
               Zeiten einen Plan für heute.
             </p>
-            <div className="mt-6">
+            <div className="site-footer__social mt-6">
               <p className="mb-3 text-sm font-medium text-white/70">Folge uns</p>
               <SocialLinks />
             </div>
           </div>
 
           <nav
-            className="grid gap-8 sm:grid-cols-2"
+            className="site-footer__nav grid grid-cols-2 gap-4 sm:gap-8"
             aria-label="Footer Navigation"
           >
             {footerNavigation.map((group) => (
