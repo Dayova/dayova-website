@@ -596,6 +596,15 @@
   width: min(calc(100% - 48px), 1600px);
 }
 
+@media (max-width: 639px) {
+  .site-footer__nav { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+  .site-footer__nav a { overflow-wrap: anywhere; }
+  .site-footer__social > [aria-label="Dayova Social Media"] { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .site-footer__social a { min-width: 0; justify-content: center; gap: 4px; padding-inline: 6px; font-size: clamp(10px, 2.8vw, 12px); }
+  .site-footer__social a > span:first-child { width: 22px; height: 22px; flex-shrink: 0; }
+  .site-footer__social a:last-child { grid-column: 3; grid-row: 1; }
+}
+
 @media (min-width: 768px) {
   .dayova-container.site-footer__container {
     width: min(calc(100% - 96px), 1600px);
