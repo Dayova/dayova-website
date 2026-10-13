@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AnalyticsConsent } from "@/components/analytics-consent";
+import "./dayova-palette.css";
 import "./tokens.css";
 import "./globals.css";
 import "./typography.css";

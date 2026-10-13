@@ -2,7 +2,7 @@
   position: relative;
   isolation: isolate;
   padding: 0 0 144px;
-  overflow: clip;
+  overflow: visible;
 }
 
 .hero::before {
@@ -24,7 +24,7 @@
   padding-top: 112px;
   margin-inline: auto;
 
-  color: #10232c;
+  color: var(--dayova-fixed-text);
 }
 
 .copy {
@@ -36,7 +36,7 @@
 
 
 .title {
-  color: #fff;
+  color: var(--dayova-fixed-surface);
   margin: 0;
   font-size: clamp(42px, 4.65vw, 76px);
   font-weight: 700;
@@ -52,7 +52,7 @@
   margin: 26px 0 0;
   font-size: 16px;
   line-height: 1.65;
-  color: #fff;
+  color: var(--dayova-fixed-surface);
 }
 
 .action {
@@ -66,22 +66,32 @@
 
 .download.download {
   min-height: 52px;
-  padding-inline: 26px;
-  border: 1px solid #17282f;
-  background: #17282f;
-  color: #fff;
+  padding: 12px 22px;
+  gap: 16px;
+  border-radius: 999px;
+  border: 1px solid var(--dayova-fixed-text);
+  background: var(--dayova-fixed-text);
+  color: var(--dayova-fixed-surface);
   box-shadow: none;
   font-size: 14px;
-  transition: transform 180ms ease, background 180ms ease;
+  transition: transform 180ms var(--dayova-ease);
+}
+
+.downloadIcon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: var(--dayova-fixed-primary);
 }
 
 .download.download:hover {
-  background: #233f4b;
   transform: translateY(-2px);
 }
 
 .download.download:focus-visible {
-  outline: 3px solid #fff;
+  outline: 3px solid var(--dayova-fixed-surface);
   outline-offset: 4px;
 }
 
@@ -98,11 +108,17 @@
   top: 28px;
   left: 3%;
   width: min(94%, 600px);
-  filter: drop-shadow(0 24px 22px rgb(13 56 74 / 18%));
+  filter: drop-shadow(0 24px 22px color-mix(in srgb, var(--dayova-fixed-black) 18%, transparent));
   will-change: translate;
   animation: phones-enter 1150ms cubic-bezier(.22,1,.36,1) 30ms both paused, float 8s ease-in-out 1180ms infinite paused;
 }
 
+.mockup { aspect-ratio:769 / 915; }
+.device { position:absolute; width:53%; padding:1.2%; background:var(--dayova-fixed-text); border:1px solid var(--dayova-fixed-secondary-text); border-radius:15% / 7%; box-shadow:inset 0 0 0 2px var(--dayova-fixed-path3), 0 3px 1px var(--dayova-fixed-black); overflow:hidden; }
+.device img { border-radius:13% / 6%; }
+.frontDevice { z-index:2; top:0; left:3%; transform:rotate(-3deg); }
+.backDevice { z-index:1; top:10%; right:4%; transform:rotate(16deg); }
+.island { position:absolute; top:3.6%; left:36%; width:28%; height:3.5%; border-radius:100px; background:var(--dayova-fixed-black); box-shadow:inset -4px 0 6px var(--dayova-fixed-text); }
 .mockup img { display: block; width: 100%; height: auto; }
 .mockup img.darkScreen { display: none; }
 :global(.dark) .mockup img.lightScreen { display: none; }
@@ -115,11 +131,13 @@
   transform: translateY(-79.4118%);
   width: calc(100% - 248px);
   height: 220px;
-  color: #173d4c;
+  color: var(--dayova-fixed-text);
   pointer-events: none;
 }
 
-.arrow path {
+.mobileArrow { display: none; }
+
+.arrow path, .mobileArrow path {
   stroke-dasharray: 1;
 }
 .arrowLine {
@@ -167,18 +185,19 @@
   .hero { padding: 0 0 40px; }
   .hero::before { bottom: 120px; border-radius: 0 0 26px 26px; }
   .panel { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-top: 104px; }
-  .copy { padding: 22px 24px 0; }
-  .title { font-size: clamp(26px, 7.7vw, 50px); line-height: 1.06; }
-  .description { width: auto; font-size: 14px; line-height: 1.65; margin-top: 22px; }
-  .action { margin-top: 24px; gap: 10px; }
-  .download.download { font-size: 13px; min-height: 48px; padding-inline: 22px; }
-  .visual { margin-top: 32px; padding-bottom: 24px; }
-  .mockup { position: relative; top: auto; left: auto; width: 90%; max-width: 500px; margin-inline: auto; }
+  .copy { --mobile-title-size: clamp(29px, 8.9vw, 56px); padding: 22px 24px 0; text-align: center; }
+  .title { font-size: var(--mobile-title-size); line-height: 1.06; }
+  .description { width: calc(100% - 48px); max-width: 380px; font-size: 14px; line-height: 1.65; margin: 22px auto 0; text-wrap: pretty; }
+  .action { margin-top: 24px; gap: 10px; justify-items: center; }
+  .download.download { font-size: 13px; min-height: 48px; padding: 12px 20px; gap: 12px; }
+  .visual { margin-top: 72px; padding-bottom: 24px; }
+  .mockup { position: relative; top: auto; left: auto; width: 82%; max-width: 500px; margin-inline: auto; }
   .arrow { display: none; }
+  .mobileArrow { display: block; position: absolute; left: calc(50% + 110px); right: 10px; top: calc(28px + var(--mobile-title-size) * 2.12); width: calc(50% - 120px); height: calc(100% - 28px - var(--mobile-title-size) * 2.12); color: var(--dayova-fixed-text); pointer-events: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .copy, .arrow path { animation: none; }
+  .copy, .arrow path, .mobileArrow path { animation: none; }
   .mockup { animation: none; will-change: auto; }
   .download.download { transition: none; }
   .download.download:hover { transform: none; }
@@ -186,4 +205,8 @@
 
 :global(body:has([data-home-intro="complete"])) .copy,
 :global(body:has([data-home-intro="complete"])) .mockup,
-:global(body:has([data-home-intro="complete"])) .arrow path { animation-play-state: running; }
+:global(body:has([data-home-intro="complete"])) .arrow path,
+:global(body:has([data-home-intro="complete"])) .mobileArrow path { animation-play-state: running; }
+
+/* Keep off-screen entrance artwork from widening narrow viewports. */
+@media(max-width:1050px) { .hero { overflow-x:clip; } }

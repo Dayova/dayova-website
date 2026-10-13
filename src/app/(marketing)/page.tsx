@@ -7,7 +7,6 @@ import {
   HomeDownloadSection,
   HomeFaqSection,
   HomeHeroSection,
-  HomeProcessSection,
 } from "@/components/sections/homepage-sections";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/seo";
@@ -76,7 +75,6 @@ export default function Home() {
       <HomeHeroSection />
       <HomeAboutSection />
       <HomeAdvantagesSection />
-      <HomeProcessSection />
       <HomeDownloadSection />
       <HomeFaqSection />
     </>
