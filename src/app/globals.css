@@ -1001,7 +1001,7 @@
   right: clamp(8px, 2vw, 34px);
   bottom: -56px;
   width: clamp(190px, 23vw, 285px);
-  filter: drop-shadow(0 26px 34px rgb(24 35 43 / 20%));
+  filter: drop-shadow(0 26px 34px color-mix(in srgb, var(--dayova-fixed-black) 20%, transparent));
 }
 
 .schools-hero-phone img {
@@ -1223,7 +1223,7 @@
 
 .schools-cta__actions .button-primary {
   background: white;
-  color: #101416;
+  color: var(--dayova-fixed-text);
 }
 
 .schools-cta__actions .button-secondary {
@@ -3794,9 +3794,9 @@
 
 .checkout-page__error {
   padding: var(--space-3) var(--space-4);
-  border: 1px solid color-mix(in srgb, #c33 35%, var(--dayova-line));
+  border: 1px solid color-mix(in srgb, var(--dayova-app-destructive) 35%, var(--dayova-line));
   border-radius: var(--dayova-radius-lg);
-  background: color-mix(in srgb, #c33 8%, var(--dayova-surface));
+  background: color-mix(in srgb, var(--dayova-app-destructive) 8%, var(--dayova-surface));
   color: var(--dayova-ink);
 }
 
@@ -3976,9 +3976,9 @@
 }
 
 .pricing-cycle-toggle__option--active {
-  background: #151515;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 18%);
+  background: var(--dayova-fixed-text);
+  color: var(--dayova-fixed-surface);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--dayova-fixed-black) 18%, transparent);
 }
 
 .pricing-cycle-toggle__badge {
@@ -4203,7 +4203,7 @@ img {
 
 ::selection {
   background: color-mix(in srgb, var(--dayova-brand) 75%, transparent);
-  color: #071217;
+  color: var(--dayova-fixed-text);
 }
 
 :focus-visible {
@@ -4356,12 +4356,12 @@ img {
   width: min(78vw, 300px);
   height: 570px;
   padding: var(--space-2);
-  border: 4px solid #101214;
+  border: 4px solid var(--dayova-fixed-text);
   border-radius: var(--dayova-radius-phone);
-  background: #17191b;
+  background: var(--dayova-fixed-text);
   box-shadow:
-    0 40px 72px rgba(9, 24, 34, 0.26),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+    0 40px 72px color-mix(in srgb, var(--dayova-fixed-black) 26%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--dayova-fixed-surface) 24%, transparent);
   transform: translateX(-50%);
 }
 
@@ -4373,7 +4373,7 @@ img {
   width: 104px;
   height: 28px;
   border-radius: var(--dayova-radius-pill);
-  background: #08090a;
+  background: var(--dayova-fixed-black);
   transform: translateX(-50%);
 }
 
@@ -4382,8 +4382,8 @@ img {
   height: 100%;
   overflow: hidden;
   border-radius: var(--dayova-radius-3xl);
-  background: #f8f9f7;
-  color: #17191b;
+  background: var(--dayova-fixed-background);
+  color: var(--dayova-fixed-text);
 }
 
 .dayova-phone-status {
@@ -4421,7 +4421,7 @@ img {
 .dayova-phone-focus-card small,
 .dayova-phone-section-title small,
 .dayova-phone-lesson small {
-  color: #737780;
+  color: var(--dayova-app-secondary-text);
   font-size: 10px;
 }
 
@@ -4431,7 +4431,7 @@ img {
   height: var(--space-8);
   place-items: center;
   border-radius: 50%;
-  background: #dff4ff;
+  background: var(--dayova-app-system-subtle);
   color: var(--dayova-brand);
   font-size: 12px;
   font-weight: 700;
@@ -4441,11 +4441,11 @@ img {
   display: grid;
   gap: var(--space-3);
   margin-inline: var(--space-3);
-  border: 1px solid #e1e7eb;
+  border: 1px solid var(--dayova-app-border);
   border-radius: var(--dayova-radius-2xl);
   padding: var(--space-4);
-  background: #fff;
-  box-shadow: 0 12px 28px rgba(24, 64, 88, 0.07);
+  background: var(--dayova-fixed-surface);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--dayova-fixed-black) 7%, transparent);
 }
 
 .dayova-phone-focus-top {
@@ -4455,7 +4455,7 @@ img {
   border-radius: var(--dayova-radius-xl);
   padding: var(--space-3);
   background: var(--dayova-brand-gradient);
-  color: #fff;
+  color: var(--dayova-fixed-surface);
 }
 
 .dayova-phone-focus-top > span:first-child {
@@ -4464,7 +4464,7 @@ img {
 }
 
 .dayova-phone-focus-top small {
-  color: rgba(255, 255, 255, 0.78);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 78%, transparent);
 }
 
 .dayova-phone-focus-check {
@@ -4473,15 +4473,15 @@ img {
   height: var(--space-8);
   place-items: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: color-mix(in srgb, var(--dayova-fixed-surface) 20%, transparent);
 }
 
 .dayova-phone-plan {
   margin: var(--space-4) var(--space-3) 0;
-  border: 1px solid #e1e7eb;
+  border: 1px solid var(--dayova-app-border);
   border-radius: var(--dayova-radius-2xl);
   padding: var(--space-4);
-  background: #fff;
+  background: var(--dayova-fixed-surface);
 }
 
 .dayova-phone-section-title {
@@ -4494,7 +4494,7 @@ img {
   grid-template-columns: repeat(5, 1fr);
   gap: var(--space-1);
   padding-block: var(--space-3);
-  color: #737780;
+  color: var(--dayova-app-secondary-text);
   font-size: 9px;
   text-align: center;
 }
@@ -4517,10 +4517,10 @@ img {
       90deg,
       transparent 0,
       transparent calc(25% - 1px),
-      #dde5ea calc(25% - 1px),
-      #dde5ea 25%
+      var(--dayova-app-border) calc(25% - 1px),
+      var(--dayova-app-border) 25%
     ),
-    #f1f6fa;
+    var(--dayova-app-system-subtle);
 }
 
 .dayova-phone-timeline-line {
@@ -4550,14 +4550,14 @@ img {
 .dayova-phone-lesson-math {
   top: var(--space-4);
   left: var(--space-2);
-  background: #f2e6ff;
-  color: #6d35a9;
+  background: var(--dayova-app-ueben-subtle);
+  color: var(--dayova-app-ueben);
 }
 
 .dayova-phone-lesson-german {
   right: var(--space-2);
   bottom: var(--space-3);
-  background: #e5f7ff;
+  background: var(--dayova-app-system-subtle);
   color: var(--dayova-brand);
 }
 
@@ -4569,17 +4569,17 @@ img {
   display: flex;
   justify-content: center;
   gap: var(--space-6);
-  border: 1px solid #e1e7eb;
+  border: 1px solid var(--dayova-app-border);
   border-radius: var(--dayova-radius-pill);
   padding: var(--space-3);
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 10px 28px rgba(24, 64, 88, 0.12);
+  background: color-mix(in srgb, var(--dayova-fixed-surface) 94%, transparent);
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--dayova-fixed-black) 12%, transparent);
 }
 
 .dayova-phone-nav span {
   width: var(--space-3);
   height: var(--space-3);
-  border: 2px solid #737780;
+  border: 2px solid var(--dayova-app-secondary-text);
   border-radius: 50%;
 }
 
@@ -4733,12 +4733,12 @@ img {
   position: relative;
   width: 168px;
   height: 232px;
-  border: var(--space-1) solid #151719;
+  border: var(--space-1) solid var(--dayova-fixed-text);
   border-bottom: 0;
   border-radius: var(--dayova-radius-2xl) var(--dayova-radius-2xl) 0 0;
   padding: var(--space-2);
-  background: #151719;
-  box-shadow: 0 20px 40px rgba(17, 23, 28, 0.18);
+  background: var(--dayova-fixed-text);
+  box-shadow: 0 20px 40px color-mix(in srgb, var(--dayova-fixed-black) 18%, transparent);
 }
 
 .dayova-placeholder-speaker {
@@ -4748,7 +4748,7 @@ img {
   width: var(--space-12);
   height: var(--space-3);
   border-radius: var(--dayova-radius-pill);
-  background: #151719;
+  background: var(--dayova-fixed-text);
   transform: translateX(-50%);
 }
 
@@ -4759,8 +4759,8 @@ img {
   gap: var(--space-3);
   border-radius: var(--dayova-radius-xl) var(--dayova-radius-xl) 0 0;
   padding: var(--space-8) var(--space-3) var(--space-3);
-  background: #f8faf9;
-  color: #1a1a1a;
+  background: var(--dayova-fixed-background);
+  color: var(--dayova-app-text);
 }
 
 .dayova-placeholder-icon {
@@ -4769,7 +4769,7 @@ img {
   height: calc(var(--space-8) + var(--space-2));
   place-items: center;
   border-radius: var(--dayova-radius-md);
-  background: #e8f9ff;
+  background: var(--dayova-app-system-subtle);
   color: var(--dayova-brand);
 }
 
@@ -4782,7 +4782,7 @@ img {
   width: 64%;
   height: var(--space-2);
   border-radius: var(--dayova-radius-pill);
-  background: #dfe5e8;
+  background: var(--dayova-app-border);
 }
 
 .dayova-placeholder-line.is-wide {
@@ -4850,7 +4850,7 @@ img {
   padding-inline: var(--space-6);
   background: var(--dayova-brand-gradient);
   color: white;
-  box-shadow: 0 10px 24px rgba(0, 186, 255, 0.2);
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--dayova-app-primary) 20%, transparent);
 }
 
 .button-secondary {
@@ -4888,7 +4888,7 @@ img {
 
 .button-primary:hover {
   background: var(--dayova-brand-gradient-hover);
-  box-shadow: 0 12px 28px rgba(0, 186, 255, 0.26);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--dayova-app-primary) 26%, transparent);
 }
 
 .button-secondary:hover {
@@ -4904,7 +4904,7 @@ img {
 .faq-item[open] > summary {
   border-color: transparent;
   background: var(--dayova-brand-gradient);
-  color: #fff;
+  color: var(--dayova-fixed-surface);
 }
 
 .faq-item,
@@ -5106,12 +5106,12 @@ img {
 
 .trust-story-card {
   background: var(--dayova-dark-panel);
-  color: #fff;
+  color: var(--dayova-fixed-surface);
 }
 
 .trust-story-card .trust-card-label,
 .trust-story-card p {
-  color: rgba(255, 255, 255, 0.68);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 68%, transparent);
 }
 
 .testimonial-placeholder {
@@ -5139,7 +5139,7 @@ img {
   gap: var(--space-8);
   border-radius: var(--dayova-radius-3xl);
   background: var(--dayova-dark-panel);
-  color: #fff;
+  color: var(--dayova-fixed-surface);
 }
 
 .waitlist-panel::before {
@@ -5149,8 +5149,8 @@ img {
   border-radius: var(--dayova-radius-pill);
   background: radial-gradient(
     circle,
-    rgba(0, 186, 255, 0.3),
-    rgba(0, 186, 255, 0)
+    color-mix(in srgb, var(--dayova-app-primary) 30%, transparent),
+    color-mix(in srgb, var(--dayova-app-primary) 0%, transparent)
   );
   content: "";
   inset: -160px -120px auto auto;
@@ -5171,7 +5171,7 @@ img {
 
 .waitlist-copy > p {
   max-width: 62ch;
-  color: rgba(255, 255, 255, 0.72);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 72%, transparent);
 }
 
 .waitlist-status {
@@ -5179,16 +5179,16 @@ img {
   align-items: center;
   min-height: var(--space-8);
   padding-inline: var(--space-3);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid color-mix(in srgb, var(--dayova-fixed-surface) 16%, transparent);
   border-radius: var(--dayova-radius-pill);
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.82);
+  background: color-mix(in srgb, var(--dayova-fixed-surface) 8%, transparent);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 82%, transparent);
   font-size: var(--type-small);
   font-weight: 600;
 }
 
 .waitlist-data-note {
-  color: rgba(255, 255, 255, 0.58) !important;
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 58%, transparent) !important;
   font-size: var(--type-small) !important;
 }
 
@@ -5206,9 +5206,9 @@ img {
   align-items: center;
   padding: var(--space-4);
   gap: var(--space-3);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid color-mix(in srgb, var(--dayova-fixed-surface) 12%, transparent);
   border-radius: var(--dayova-radius-xl);
-  background: rgba(255, 255, 255, 0.06);
+  background: color-mix(in srgb, var(--dayova-fixed-surface) 6%, transparent);
 }
 
 .waitlist-benefits li span {
@@ -5395,12 +5395,12 @@ img {
 
   .comparison-column-dayova {
     background: var(--dayova-dark-panel);
-    color: #fff;
+    color: var(--dayova-fixed-surface);
   }
 
   .comparison-column-dayova .comparison-cell {
-    border-color: rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.72);
+    border-color: color-mix(in srgb, var(--dayova-fixed-surface) 12%, transparent);
+    color: color-mix(in srgb, var(--dayova-fixed-surface) 72%, transparent);
   }
 
   .trust-metrics {
@@ -5675,8 +5675,8 @@ img {
   padding: var(--space-2);
   border: 1px solid color-mix(in srgb, white 20%, transparent);
   border-radius: var(--radius-phone);
-  background: #111316;
-  box-shadow: 0 32px 80px rgb(11 25 37 / 20%);
+  background: var(--dayova-fixed-text);
+  box-shadow: 0 32px 80px color-mix(in srgb, var(--dayova-fixed-black) 20%, transparent);
   transform: rotate(2deg);
 }
 
@@ -5687,8 +5687,8 @@ img {
   padding: var(--space-4);
   overflow: hidden;
   border-radius: calc(var(--radius-phone) - var(--space-2));
-  background: #f7f8f8;
-  color: #17191c;
+  background: var(--dayova-fixed-background);
+  color: var(--dayova-fixed-text);
 }
 
 .home-v3-status-row,
@@ -5726,7 +5726,7 @@ img {
 .home-v3-float-card span,
 .home-v3-capture-item span,
 .home-v3-path-copy span {
-  color: #747d89;
+  color: var(--dayova-app-secondary-text);
   font-size: 12px;
 }
 
@@ -5737,7 +5737,7 @@ img {
   place-items: center;
   border-radius: var(--radius-pill);
   background: color-mix(in srgb, var(--dayova-brand) 20%, white);
-  color: #006c96;
+  color: var(--dayova-selection-start);
   font-weight: 700;
 }
 
@@ -5750,7 +5750,7 @@ img {
   border-radius: var(--radius-xl);
   background: var(--dayova-brand-gradient);
   color: white;
-  box-shadow: 0 16px 32px rgb(0 186 255 / 20%);
+  box-shadow: 0 16px 32px color-mix(in srgb, var(--dayova-app-primary) 20%, transparent);
 }
 
 .home-v3-schedule-meta {
@@ -5758,7 +5758,7 @@ img {
   min-width: 64px;
   gap: var(--space-1);
   padding-right: var(--space-4);
-  border-right: 1px solid rgb(255 255 255 / 34%);
+  border-right: 1px solid color-mix(in srgb, var(--dayova-fixed-surface) 34%, transparent);
 }
 
 .home-v3-schedule-meta strong {
@@ -5772,7 +5772,7 @@ img {
 }
 
 .home-v3-schedule-card > div:last-child span {
-  color: rgb(255 255 255 / 78%);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 78%, transparent);
   font-size: 12px;
 }
 
@@ -5784,10 +5784,10 @@ img {
 .home-v3-feedback-card,
 .home-v3-plan-card {
   padding: var(--space-4);
-  border: 1px solid rgb(24 38 53 / 7%);
+  border: 1px solid color-mix(in srgb, var(--dayova-fixed-black) 7%, transparent);
   border-radius: var(--radius-lg);
   background: white;
-  box-shadow: 0 8px 24px rgb(19 32 45 / 6%);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--dayova-fixed-black) 6%, transparent);
 }
 
 .home-v3-today-card {
@@ -5799,7 +5799,7 @@ img {
 .home-v3-answer-card p,
 .home-v3-feedback-card p {
   margin: 0;
-  color: #68727f;
+  color: var(--dayova-app-secondary-text);
   font-size: 12px;
   line-height: 1.55;
 }
@@ -5820,7 +5820,7 @@ img {
   height: var(--space-2);
   overflow: hidden;
   border-radius: var(--radius-pill);
-  background: #edf1f4;
+  background: var(--dayova-app-muted-surface);
 }
 
 .home-v3-progress span {
@@ -5835,7 +5835,7 @@ img {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: var(--space-2);
-  color: #818a95;
+  color: var(--dayova-app-path3);
   font-size: 11px;
   text-align: center;
 }
@@ -5953,7 +5953,7 @@ img {
 }
 
 .home-v3-orientation-panel > span {
-  color: rgb(255 255 255 / 64%);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 64%, transparent);
   font-size: 13px;
 }
 
@@ -5965,7 +5965,7 @@ img {
 }
 
 .home-v3-orientation-panel p {
-  color: rgb(255 255 255 / 70%);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 70%, transparent);
 }
 
 .home-v3-orientation-task {
@@ -5975,7 +5975,7 @@ img {
   gap: var(--space-2);
   padding: var(--space-4);
   border-radius: var(--radius-xl);
-  background: rgb(255 255 255 / 8%);
+  background: color-mix(in srgb, var(--dayova-fixed-surface) 8%, transparent);
 }
 
 .home-v3-orientation-task > div {
@@ -5985,7 +5985,7 @@ img {
 }
 
 .home-v3-orientation-task span {
-  color: rgb(255 255 255 / 64%);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 64%, transparent);
   font-size: 12px;
 }
 
@@ -6044,7 +6044,7 @@ img {
 }
 
 .home-v3-story--dark .home-v3-story-copy p {
-  color: rgb(255 255 255 / 70%);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 70%, transparent);
 }
 
 .home-v3-capture,
@@ -6080,7 +6080,7 @@ img {
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-pill);
   background: color-mix(in srgb, var(--dayova-brand) 9%, white);
-  color: #007da9;
+  color: var(--dayova-selection-end);
 }
 
 .home-v3-capture-icon,
@@ -6118,7 +6118,7 @@ img {
   gap: var(--space-6);
   padding: var(--space-6);
   border-radius: var(--radius-2xl);
-  background: rgb(255 255 255 / 7%);
+  background: color-mix(in srgb, var(--dayova-fixed-surface) 7%, transparent);
 }
 
 .home-v3-path-summary {
@@ -6139,7 +6139,7 @@ img {
   bottom: var(--space-4);
   left: 19px;
   width: 2px;
-  background: rgb(255 255 255 / 14%);
+  background: color-mix(in srgb, var(--dayova-fixed-surface) 14%, transparent);
 }
 
 .home-v3-path-node {
@@ -6149,10 +6149,10 @@ img {
   width: calc(var(--space-8) + var(--space-2));
   height: calc(var(--space-8) + var(--space-2));
   place-items: center;
-  border: 1px solid rgb(255 255 255 / 16%);
+  border: 1px solid color-mix(in srgb, var(--dayova-fixed-surface) 16%, transparent);
   border-radius: var(--radius-pill);
-  background: #34383d;
-  color: rgb(255 255 255 / 62%);
+  background: var(--dayova-app-border);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 62%, transparent);
 }
 
 .home-v3-path-node.is-done,
@@ -6163,7 +6163,7 @@ img {
 }
 
 .home-v3-path-node.is-current {
-  box-shadow: 0 0 0 6px rgb(0 186 255 / 15%);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--dayova-app-primary) 15%, transparent);
 }
 
 .home-v3-path-copy {
@@ -6175,14 +6175,14 @@ img {
 }
 
 .home-v3-path-copy span {
-  color: rgb(255 255 255 / 55%);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 55%, transparent);
 }
 
 .home-v3-analysis-state {
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-pill);
-  background: #fff1df;
-  color: #b06100;
+  background: var(--dayova-app-wrong-subtle);
+  color: var(--dayova-app-wrong);
   font-size: 12px;
   font-weight: 600;
 }
@@ -6250,7 +6250,7 @@ img {
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-pill);
   background: color-mix(in srgb, var(--dayova-brand) 8%, white);
-  color: #007da9;
+  color: var(--dayova-selection-end);
   font-size: 11px;
   font-weight: 600;
 }
@@ -6268,7 +6268,7 @@ img {
 }
 
 .home-v3-trust-copy p {
-  color: rgb(255 255 255 / 68%);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 68%, transparent);
 }
 
 .home-v3-facts {
@@ -6284,7 +6284,7 @@ img {
   gap: var(--space-2);
   padding: var(--space-4);
   border-radius: var(--radius-xl);
-  background: rgb(255 255 255 / 7%);
+  background: color-mix(in srgb, var(--dayova-fixed-surface) 7%, transparent);
 }
 
 .home-v3-facts strong {
@@ -6293,7 +6293,7 @@ img {
 }
 
 .home-v3-facts span {
-  color: rgb(255 255 255 / 62%);
+  color: color-mix(in srgb, var(--dayova-fixed-surface) 62%, transparent);
   font-size: 13px;
 }
 
@@ -6306,7 +6306,7 @@ img {
   overflow: hidden;
   border-radius: var(--radius-3xl);
   background:
-    radial-gradient(circle at 82% 24%, rgb(255 255 255 / 56%), transparent 28%),
+    radial-gradient(circle at 82% 24%, color-mix(in srgb, var(--dayova-fixed-surface) 56%, transparent), transparent 28%),
     linear-gradient(135deg, color-mix(in srgb, var(--dayova-brand) 8%, var(--dayova-surface)), color-mix(in srgb, var(--dayova-brand) 24%, var(--dayova-surface)));
   box-shadow: var(--dayova-shadow-soft);
 }
@@ -6670,7 +6670,7 @@ img {
   gap: var(--space-4);
   padding: var(--space-6);
   border-radius: var(--dayova-radius-2xl);
-  color: #07141a;
+  color: var(--dayova-fixed-text);
   background: var(--dayova-brand-gradient);
 }
 
@@ -6941,8 +6941,8 @@ img {
 .home-v2-trust {
   overflow: hidden;
   border-radius: var(--dayova-radius-3xl);
-  color: #f8fafb;
-  background: #181a1c;
+  color: var(--dayova-app-light3);
+  background: var(--dayova-app-text);
 }
 
 .home-v2-trust-grid {
@@ -6955,7 +6955,7 @@ img {
 
 .home-v2-trust-copy p {
   max-width: 60ch;
-  color: #aeb3ba;
+  color: var(--dayova-app-path-locked-base);
 }
 
 .home-v2-facts {
@@ -6969,7 +6969,7 @@ img {
   gap: var(--space-1);
   padding: var(--space-4);
   border-radius: var(--dayova-radius-xl);
-  background: rgba(255, 255, 255, 0.06);
+  background: color-mix(in srgb, var(--dayova-fixed-surface) 6%, transparent);
 }
 
 .home-v2-facts strong {
@@ -6977,7 +6977,7 @@ img {
 }
 
 .home-v2-facts span {
-  color: #aeb3ba;
+  color: var(--dayova-app-path-locked-base);
   font-size: 0.8125rem;
 }
 
@@ -7359,17 +7359,17 @@ img {
   z-index: 2;
   width: min(72vw, 280px);
   aspect-ratio: 0.5;
-  border: 10px solid #15181a;
+  border: 10px solid var(--dayova-fixed-text);
   border-radius: var(--dayova-radius-phone);
   padding: var(--space-2);
-  background: #15181a;
-  box-shadow: 0 28px 64px rgb(19 33 40 / 24%);
+  background: var(--dayova-fixed-text);
+  box-shadow: 0 28px 64px color-mix(in srgb, var(--dayova-fixed-black) 24%, transparent);
   transform: rotate(-2deg);
 }
 
 .dark .home-phone {
-  border-color: #090a0b;
-  background: #090a0b;
+  border-color: var(--dayova-fixed-black);
+  background: var(--dayova-fixed-black);
 }
 
 .home-phone-screen {
@@ -7380,8 +7380,8 @@ img {
   overflow: hidden;
   border-radius: calc(var(--dayova-radius-phone) - 14px);
   padding: var(--space-3);
-  background: linear-gradient(180deg, #f9fbfc 0%, #eaf7fc 100%);
-  color: #182025;
+  background: linear-gradient(180deg, var(--dayova-app-light3) 0%, var(--dayova-app-system-subtle) 100%);
+  color: var(--dayova-app-text);
 }
 
 .home-phone-status {
@@ -7401,7 +7401,7 @@ img {
   width: 72px;
   height: 22px;
   border-radius: var(--dayova-radius-pill);
-  background: #101214;
+  background: var(--dayova-fixed-text);
 }
 
 .home-phone-greeting {
@@ -7414,7 +7414,7 @@ img {
 .home-phone-session > div span,
 .home-phone-session p,
 .home-phone-progress > span {
-  color: #6d777e;
+  color: var(--dayova-app-secondary-text);
   font-size: 11px;
 }
 
@@ -7431,15 +7431,15 @@ img {
 .home-phone-progress {
   display: grid;
   gap: var(--space-3);
-  border: 1px solid #dde7eb;
+  border: 1px solid var(--dayova-app-border);
   border-radius: var(--dayova-radius-xl);
   padding: var(--space-4);
   background: white;
-  box-shadow: 0 12px 28px rgb(49 82 98 / 8%);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--dayova-fixed-black) 8%, transparent);
 }
 
 .home-phone-session-label {
-  color: #008fc6;
+  color: var(--dayova-app-primary-strong);
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -7475,7 +7475,7 @@ img {
   overflow: hidden;
   height: var(--space-2);
   border-radius: var(--dayova-radius-pill);
-  background: #e6eef1;
+  background: var(--dayova-app-border);
 }
 
 .home-progress-track > span {
@@ -7653,7 +7653,7 @@ img {
 }
 
 .home-trust-copy p {
-  color: #b8bdc1;
+  color: var(--dayova-app-path-locked-base);
 }
 
 .home-metric-card {
@@ -7674,12 +7674,12 @@ img {
 
 .home-metric-card-dark {
   border-color: color-mix(in srgb, white 12%, transparent);
-  background: linear-gradient(145deg, #2b2f32, #191b1d);
+  background: linear-gradient(145deg, var(--dayova-app-surface), var(--dayova-app-background));
   color: white;
 }
 
 .home-metric-card-dark > span {
-  color: #c2c6c9;
+  color: var(--dayova-app-secondary-text);
 }
 
 .home-metric-card-wide {
@@ -9253,9 +9253,9 @@ img {
 @media print {
   .study-plan-page #builder > h2 { display: none; }
   .study-plan-result:not(:empty) { margin-top: 0; }
-  .study-plan-page .study-plan-phase { break-inside: avoid; padding: 12px; border-color: #ccc; }
+  .study-plan-page .study-plan-phase { break-inside: avoid; padding: 12px; border-color: var(--dayova-app-border); }
   .study-plan-page .study-plan-phase h4 { color: black; font-size: 13pt; }
-  .study-plan-page .study-plan-phase-number { background: white; color: black; border: 1px solid #ccc; }
+  .study-plan-page .study-plan-phase-number { background: white; color: black; border: 1px solid var(--dayova-app-border); }
   .study-plan-page .study-plan-phases { gap: 10px; margin: 12px 0; }
   .study-plan-page .study-plan-phase ul { margin: 10px 0 0; }
   .study-plan-page .study-plan-phase li { font-size: 10pt; line-height: 1.4; }

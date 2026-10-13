@@ -20,6 +20,7 @@ export function BlueCtaSection({
 }: BlueCtaSectionProps) {
   return (
     <section
+      id={id}
       className={`home-classic-section site-blue-cta-section ${sectionClassName}`.trim()}
       aria-labelledby={`${id}-title`}
     >

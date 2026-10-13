@@ -69,27 +69,19 @@ Standard sections use 48px vertical padding on mobile and 64px on desktop. The h
 
 ## Color
 
-The main brand color is `#008aff`.
+The marketing website uses the app's canonical palette, verified against `Dayova/dayova-mvp` on 2026-10-13:
 
-### Light mode
+- `src/lib/design-system.ts` (Git blob `78854f08e9dc24c0acfb53bbde3013358dd4bdd4`)
+- `src/lib/theme-variables.ts` (Git blob `939b2af8c188fba338c7f637de3924bbd3bc8013`)
 
-- Page background: `#f6f6f4`
-- Surface: `#fafaf8`
-- Elevated surface: `#ffffff`
-- Primary text: `#1a1a1a`
-- Secondary text: `#737780`
-- Border: `#dedfdd`
+Exact source snapshots are in `docs/design-reference/`. Website tokens live in `src/app/dayova-palette.css`; `tokens.css` maps the existing marketing names to this palette.
 
-### Dark mode
+- Brand: `#00BAFF`; interactive gradient: `#00A0E6` → `#4FD8FF` vertically.
+- Light: background `#F6F6F4`, surface `#FFFFFF`, text `#1A1A1A`, secondary text `#697586`, border `#DCE6EE`.
+- Dark: background `hsl(250 10% 8%)`, surface `hsl(248 10% 13%)`, text `hsl(36 15% 92%)`, secondary text `hsl(220 12% 68%)`, border `hsl(224 12% 24%)`.
+- Semantic success, error, practice, theory and path colors also come from the app.
 
-- Page background: `#212325`
-- Surface: `#26292c`
-- Elevated surface: `#2b2e32`
-- Primary text: `#ffffff`
-- Secondary text: `#b0b2ba`
-- Border: `#41464c`
-
-Blue is reserved for primary actions, links, selected states, and important product moments.
+Use `--dayova-app-*` for theme-aware UI and `--dayova-fixed-*` for fixed light artwork, white-on-blue copy and physical device frames. Transparent overlays and shadows derive from palette tokens. Original logos and app screenshots retain their source pixels. Do not add approximate one-off colors.
 
 ## Corner radii
 
