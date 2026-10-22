@@ -6,7 +6,7 @@ import { pricingFaqs } from "@/content/pricing";
 import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
 
 const pricingDescription =
-  "Vergleiche Monats- und Jahresabo für die Dayova Lern-App. Teste alle Funktionen 14 Tage ohne Zahlungsdaten.";
+  "Vergleiche Monats- und Jahresabo für die Dayova Lern-App. Teste alle Funktionen 30 Tage ohne Zahlungsdaten.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Preise & Abos für Schüler",
@@ -60,7 +60,7 @@ export default async function PricingPage({
               Dayova Preise: Erst testen, dann entscheiden.
             </h1>
             <p>
-              Teste alle Funktionen 14 Tage ohne Zahlungsdaten. Danach kannst
+              Teste alle Funktionen 30 Tage ohne Zahlungsdaten. Danach kannst
               du ein Monats- oder Jahresabo auswählen.
             </p>
             <p className="content-small">Die angezeigten Preise gelten auf dieser Website. Beim Kauf im App Store oder bei Google Play können Preise abweichen. Maßgeblich ist die jeweilige Kaufbestätigung.</p>

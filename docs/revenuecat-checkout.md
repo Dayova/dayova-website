@@ -72,5 +72,5 @@ acknowledges events would lose billing state and is intentionally not included.
 - Monthly: EUR 14.99 billed monthly.
 - Annual: EUR 155.88 billed annually, displayed as EUR 12.99 per month.
 - Pricing version: `pricing_2026_08_03`.
-- The 14-day app trial requires no payment details and does not automatically
+- The 30-day app trial requires no payment details and does not automatically
   convert into a paid subscription.

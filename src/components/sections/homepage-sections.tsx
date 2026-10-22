@@ -64,7 +64,7 @@ const faqItems = [
   {
     question: "Was kostet Dayova?",
     answer:
-      "Du kannst Dayova 14 Tage kostenlos und ohne Zahlungsdaten testen. Danach entscheidest du selbst, ob du ein Monats- oder Jahresabo abschließen möchtest. Alle Preise findest du transparent auf unserer Preisseite.",
+      "Du kannst Dayova 30 Tage kostenlos und ohne Zahlungsdaten testen. Danach entscheidest du selbst, ob du ein Monats- oder Jahresabo abschließen möchtest. Alle Preise findest du transparent auf unserer Preisseite.",
   },
   {
     question: "Wie erstelle ich meinen Lernplan?",
@@ -180,7 +180,7 @@ export function HomeDownloadSection() {
       id="download"
       eyebrow="Dein erster Plan"
       title="Hol dir Dayova und leg los."
-      description="Installiere Dayova auf Android über Google Play oder auf dem iPhone und iPad über den App Store. Du kannst alle Funktionen 14 Tage ohne Zahlungsdaten ausprobieren."
+      description="Installiere Dayova auf Android über Google Play oder auf dem iPhone und iPad über den App Store. Du kannst alle Funktionen 30 Tage ohne Zahlungsdaten ausprobieren."
     >
       <StoreDownloadLink variant="secondary">App herunterladen</StoreDownloadLink>
     </BlueCtaSection>

@@ -93,6 +93,6 @@ export const faqs = [
   {
     question: "Can I try Dayova for free?",
     answer:
-      "Yes. You can try Dayova free for 14 days without entering payment details. After that, you decide whether to choose a monthly or annual plan.",
+      "Yes. You can try Dayova free for 30 days without entering payment details. After that, you decide whether to choose a monthly or annual plan.",
   },
 ] as const;
