@@ -78,7 +78,7 @@ export function StudentPricingCard() {
           className="pricing-plan-card__button"
           variant="secondary"
         >
-          30 Tage kostenlos testen
+          {studentPricing.trialCtaLabel}
         </StoreDownloadLink>
         <ButtonLink
           className="pricing-plan-card__button"
