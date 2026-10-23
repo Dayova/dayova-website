@@ -120,7 +120,7 @@ const parentFaqItems = [
   {
     question: "Kann ich Dayova erst ausprobieren?",
     answer:
-      "Ja. Ihr könnt alle Funktionen 14 Tage ohne Zahlungsdaten ausprobieren. Danach entscheidet ihr, ob ihr ein Monats- oder Jahresabo möchtet.",
+      "Ja. Ihr könnt alle Funktionen 30 Tage ohne Zahlungsdaten ausprobieren. Danach entscheidet ihr, ob ihr ein Monats- oder Jahresabo möchtet.",
   },
 ] as const;
 
@@ -333,7 +333,7 @@ export default function ParentsPage() {
         id="parents-download"
         eyebrow="Gemeinsam entspannter lernen"
         title="Mehr Zeit für Familie. Mehr Vertrauen beim Lernen."
-        description="Probiert Dayova 14 Tage ohne Zahlungsdaten aus. Dein Kind legt die erste Prüfung an und sieht, wie daraus ein eigener Lernplan entsteht."
+        description="Probiert Dayova 30 Tage ohne Zahlungsdaten aus. Dein Kind legt die erste Prüfung an und sieht, wie daraus ein eigener Lernplan entsteht."
       >
         <StoreDownloadLink variant="secondary">Dayova herunterladen</StoreDownloadLink>
         <ButtonLink href="/pricing" variant="secondary">

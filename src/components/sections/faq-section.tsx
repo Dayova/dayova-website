@@ -6,7 +6,7 @@ import { faqs } from "@/content/home";
 const reasons = [
   "A plan shaped around your real week",
   "Clear priorities instead of another task list",
-  "Try every feature free for 14 days",
+  "Try every feature free for 30 days",
 ] as const;
 
 export function FaqSection() {

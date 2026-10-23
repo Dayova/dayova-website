@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | Dayova",
   },
   description:
-    "Plane deine Prüfungsvorbereitung mit Dayova: Die Lernplan-App verteilt den Stoff auf deine freien Zeiten und zeigt den nächsten Schritt. 14 Tage testen.",
+    "Plane deine Prüfungsvorbereitung mit Dayova: Die Lernplan-App verteilt den Stoff auf deine freien Zeiten und zeigt den nächsten Schritt. 30 Tage testen.",
   authors: [{ name: "Dayova", url: "https://dayova.com" }],
   creator: "Dayova",
   publisher: "Dayova",

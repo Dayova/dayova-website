@@ -12,7 +12,7 @@ import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/seo";
 
 const homeDescription =
-  "Plane deine Prüfungsvorbereitung mit Dayova: Die Lernplan-App verteilt den Stoff auf deine freien Zeiten und zeigt den nächsten Schritt. 14 Tage testen.";
+  "Plane deine Prüfungsvorbereitung mit Dayova: Die Lernplan-App verteilt den Stoff auf deine freien Zeiten und zeigt den nächsten Schritt. 30 Tage testen.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Lernplan-App für Schüler: Prüfungen planen | Dayova",

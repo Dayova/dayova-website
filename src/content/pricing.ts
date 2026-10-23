@@ -13,6 +13,7 @@ export type StudentPricingOption = {
 type StudentPricingConfig = {
   title: string;
   defaultCycle: BillingCycle;
+  trialCtaLabel: string;
   benefits: readonly string[];
   options: Record<BillingCycle, StudentPricingOption>;
 };
@@ -20,8 +21,9 @@ type StudentPricingConfig = {
 export const studentPricing = {
   title: "Dayova für Schüler",
   defaultCycle: "annual",
+  trialCtaLabel: "30 Tage kostenlos testen",
   benefits: [
-    "14 Tage ohne Zahlungsdaten testen",
+    "30 Tage ohne Zahlungsdaten testen",
     "Lernplan aus Prüfungen und freien Zeiten",
     "Nächster Lernschritt passend zu deinen Antworten",
   ],
@@ -62,7 +64,7 @@ export const pricingFaqs = [
   {
     question: "Wann beginnt die Zahlung?",
     answer:
-      "Die 14-tägige Testphase funktioniert ohne Zahlungsdaten und endet automatisch. Erst wenn du danach bewusst ein Abo auswählst und den Kauf bestätigst, beginnt die Zahlung.",
+      "Die 30-tägige Testphase funktioniert ohne Zahlungsdaten und endet automatisch. Erst wenn du danach bewusst ein Abo auswählst und den Kauf bestätigst, beginnt die Zahlung.",
   },
   {
     question: "Wie unterscheiden sich Monats- und Jahresabo?",

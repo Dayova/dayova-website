@@ -98,7 +98,7 @@ export default function TermsPage() {
             <section aria-labelledby="terms-trial">
               <h2 id="terms-trial">5. Kostenlose Testphase</h2>
               <p>
-                Die separat angebotene 14-tägige Testphase erfordert keine
+                Die separat angebotene 30-tägige Testphase erfordert keine
                 Zahlungsdaten, endet automatisch und wird nicht automatisch in
                 ein kostenpflichtiges Abo umgewandelt. Ein kostenpflichtiges
                 Abo beginnt erst nach einer eigenständigen Bestellung.
@@ -208,7 +208,7 @@ export default function TermsPage() {
 
             <section aria-labelledby="terms-version">
               <h2 id="terms-version">12. Stand</h2>
-              <p>Stand: 15. August 2026</p>
+              <p>Stand: 22. Oktober 2026</p>
             </section>
           </div>
         </div>

@@ -3,7 +3,7 @@ import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
 const downloadBenefits = [
-  "Try every feature free for 14 days",
+  "Try every feature free for 30 days",
   "Available for iOS and Android",
   "Start your personal learning plan in the app",
 ] as const;
@@ -20,7 +20,7 @@ export function LaunchSection() {
             </h2>
             <p>
               Get Dayova from the App Store or Google Play and try every
-              feature free for 14 days.
+              feature free for 30 days.
             </p>
             <StoreDownloadLink>Download Dayova</StoreDownloadLink>
             <p className="waitlist-data-note">
