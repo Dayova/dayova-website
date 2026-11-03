@@ -21,7 +21,7 @@
 .caption { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); text-align: center; font-size: 11px; color: var(--dayova-muted); white-space: nowrap; }
 .copy { max-width: 460px; }
 .eyebrow { display: block; margin-bottom: 12px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--dayova-muted); }
-.copy p { margin: 0; font-size: clamp(16px, 1.4vw, 18px); line-height: 1.55; color: var(--dayova-muted); }
+.copy p { font-size: var(--type-section-description); margin: 0; line-height: 1.55; color: var(--dayova-muted); }
 .copy h2 { margin: 0 0 24px; font-size: clamp(30px, 3.3vw, 46px); font-weight: 600; letter-spacing: -.045em; line-height: 1.18; }
 .copy h2 > span { display: block; white-space: nowrap; }
 @media (max-width: 699px) {
@@ -38,7 +38,6 @@
   .current { right: calc(50% + 66px); gap: 7px; }
   .current span { width: 12px; }
   .copy { max-width: none; }
-  .copy p { font-size: 16px; }
   .copy h2 { font-size: 28px; }
   .potential, .current, .caption { font-size: 11px; }
 }

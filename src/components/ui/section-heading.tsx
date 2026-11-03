@@ -32,7 +32,7 @@ export function SectionHeading({
       </h2>
       {description ? (
         <p
-          className={`text-dayova-body leading-relaxed ${
+          className={`dayova-section-description leading-relaxed ${
             inverse ? "text-white/70" : "text-muted"
           }`}
         >

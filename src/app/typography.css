@@ -5,6 +5,7 @@
   --type-h3: 20px;
   --type-body-lg: 16px;
   --type-body: 16px;
+  --type-section-description: var(--type-body);
   --type-small: 14px;
   --type-label: 12px;
   --leading-hero: 1.08;
@@ -66,6 +67,10 @@ li,
 input,
 textarea {
   font-weight: 400;
+}
+
+.dayova-section-description {
+  font-size: var(--type-section-description);
 }
 
 .dayova-hero-claim {
