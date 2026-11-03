@@ -1,0 +1,25 @@
+.brand {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.32em;
+  color: var(--dayova-ink);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+}
+
+.compact { font-size: 20px; }
+.inverse { color: white; }
+
+.mark {
+  display: block;
+  flex-shrink: 0;
+  width: 1.32em;
+  height: 1.32em;
+  color: var(--dayova-brand);
+}
+
+.wordmark { display: block; }
