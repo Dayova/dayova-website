@@ -120,7 +120,7 @@
   max-width: 720px;
   margin: 0;
   color: var(--dayova-muted);
-  font-size: clamp(17px, 1.8vw, 20px);
+  font-size: var(--type-section-description);
   line-height: 1.7;
 }
 
@@ -416,7 +416,7 @@
 
   .legal-page-hero .marketing-page-hero__copy > p {
     max-width: 34rem;
-    font-size: 1rem;
+    font-size: var(--type-section-description);
     line-height: 1.6;
   }
 
@@ -462,7 +462,7 @@
   .marketing-legal p,
   .marketing-legal li {
     max-width: 100%;
-    font-size: 0.975rem;
+    font-size: var(--type-body);
     line-height: 1.7;
   }
 
@@ -657,7 +657,7 @@
 
 .blog-overview-hero .marketing-page-hero__copy > p {
   max-width: 760px;
-  font-size: clamp(16px, 1.4vw, 18px);
+  font-size: var(--type-section-description);
   line-height: 1.65;
 }
 
@@ -1511,6 +1511,7 @@
 }
 
 .blog-overview-card > p {
+  font-size: var(--type-section-description);
   margin: var(--space-3) 0 0;
   color: var(--dayova-muted);
   line-height: 1.65;
@@ -1717,7 +1718,7 @@
   max-width: 900px;
   margin: var(--space-2) 0 0;
   color: var(--dayova-muted);
-  font-size: clamp(17px, 2vw, 20px);
+  font-size: var(--type-section-description);
   line-height: 1.7;
 }
 
@@ -2064,7 +2065,7 @@
   max-width: 680px;
   margin: 0;
   color: var(--dayova-muted);
-  font-size: var(--type-body-lg);
+  font-size: var(--type-section-description);
   line-height: 1.7;
 }
 
@@ -2154,7 +2155,7 @@
 .download-platform-card p {
   margin: 0;
   color: var(--dayova-muted);
-  font-size: var(--type-body);
+  font-size: var(--type-section-description);
   line-height: 1.65;
 }
 
@@ -2735,6 +2736,7 @@
 }
 
 .home-classic-process__intro p {
+  font-size: var(--type-section-description);
   max-width: 680px;
   margin: 0;
   color: var(--dayova-muted);
@@ -2845,6 +2847,7 @@
 }
 
 .home-classic-process-step__copy p {
+  font-size: var(--type-section-description);
   margin: 0;
   color: var(--dayova-muted);
 }
@@ -2865,7 +2868,7 @@
 }
 
 .home-classic-process-timeline--about .home-classic-process-step__copy p {
-  font-size: 15px;
+  font-size: var(--type-section-description);
   line-height: 1.6;
 }
 
@@ -2958,6 +2961,7 @@
 }
 
 .home-classic-download__copy p {
+  font-size: var(--type-section-description);
   margin: 0;
   max-width: 620px;
 }
@@ -3176,6 +3180,7 @@
 }
 
 .home-classic-faq details p {
+  font-size: var(--type-section-description);
   margin: 0;
   padding: var(--space-6) var(--space-8) var(--space-4);
   color: var(--dayova-ink);
@@ -3275,7 +3280,7 @@
   }
 
   .home-classic-process-timeline--about .home-classic-process-step__copy p {
-    font-size: 14px;
+    font-size: var(--type-section-description);
     line-height: 1.55;
   }
 
@@ -3529,7 +3534,7 @@
   max-width: 680px;
   margin: 0;
   color: var(--dayova-muted);
-  font-size: clamp(16px, 1.6vw, 19px);
+  font-size: var(--type-section-description);
   line-height: 1.7;
 }
 
@@ -3585,7 +3590,7 @@
   max-width: 690px;
   margin: 0;
   color: var(--dayova-muted);
-  font-size: clamp(16px, 1.6vw, 19px);
+  font-size: var(--type-section-description);
   line-height: 1.7;
 }
 
@@ -3647,7 +3652,7 @@
   max-width: 610px;
   margin: 0;
   color: var(--dayova-muted);
-  font-size: clamp(15px, 1.4vw, 18px);
+  font-size: var(--type-section-description);
   line-height: 1.65;
   text-wrap: balance;
 }
@@ -3838,7 +3843,7 @@
 
   .checkout-page__intro > p {
     max-width: 36ch;
-    font-size: 15px;
+    font-size: var(--type-section-description);
   }
 
   .checkout-page__summary {
@@ -8116,7 +8121,7 @@ img {
   max-width: 680px;
   margin: 0;
   color: var(--dayova-muted);
-  font-size: clamp(17px, 1.7vw, 20px);
+  font-size: var(--type-section-description);
   line-height: 1.7;
 }
 

@@ -31,7 +31,7 @@
 .benefitArt { position: absolute; z-index: -1; right: 8px; bottom: 8px; width: min(85%, 300px); height: auto; color: var(--benefit-art); }
 .benefitCopy { position: relative; max-width: 350px; }
 .benefitCopy h3 { margin: 0; font-size: clamp(23px, 2.1vw, 29px); font-weight: 600; line-height: 1.2; letter-spacing: -.035em; text-wrap: balance; }
-.benefitCopy p { margin: 18px 0 0; font-size: 16px; line-height: 1.7; text-wrap: pretty; }
+.benefitCopy p { font-size: var(--type-section-description); margin: 18px 0 0; line-height: 1.7; text-wrap: pretty; }
 :global(.dark) .benefitCard { --benefit-art: #3a7184; background: #183d4b; color: #e5f5fb; }
 :global(.dark) .benefitCard[data-benefit="feedback"] { --benefit-art: #776296; background: #383049; color: #f3ecfc; }
 :global(.dark) .benefitCard[data-benefit="family"] { --benefit-art: #6d8450; --benefit-book-line: #34422a; background: #34422a; color: #f0f6e3; }
@@ -54,7 +54,7 @@
 .eyebrow { display: block; margin-bottom: 14px; color: var(--dayova-muted); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 .benefitHeading > .eyebrow, .comparisonLabel { margin-bottom: 0; }
 .centeredHeading h2 { margin: 0; font-size: clamp(30px, 3.3vw, 46px); font-weight: 600; line-height: 1.18; letter-spacing: -.045em; text-wrap: balance; }
-.centeredHeading p { max-width: 650px; margin: 22px 0 0; color: var(--dayova-muted); font-size: 17px; line-height: 1.7; text-wrap: pretty; }
+.centeredHeading p { font-size: var(--type-section-description); max-width: 650px; margin: 22px 0 0; color: var(--dayova-muted); line-height: 1.7; text-wrap: pretty; }
 .cardsSection.cardsSection { padding-top: 0; }
 .cardsSection.cardsSection h3 > span { white-space: normal; text-wrap: balance; }
 .comparisonSection.comparisonSection { padding-top: 48px; }
@@ -100,7 +100,7 @@
   .relief { padding-top: 16px; }
   .centeredHeading { margin-bottom: 40px; padding-inline: 24px; }
   .centeredHeading h2 { font-size: 28px; }
-  .centeredHeading p { margin-top: 18px; font-size: 16px; }
+  .centeredHeading p { margin-top: 18px; }
   .comparisonSection.comparisonSection { padding-top: 24px; }
   .download [data-download-panel] { grid-template-columns: minmax(0, 1fr); min-height: 420px; padding: 56px 22px; }
   .download h2 { font-size: clamp(24px, 6.6vw, 34px); }

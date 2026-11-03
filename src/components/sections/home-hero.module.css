@@ -52,7 +52,7 @@
   max-width: 520px;
   width: calc(100% - 110px);
   margin: 26px 0 0;
-  font-size: 16px;
+  font-size: var(--type-section-description);
   line-height: 1.65;
   color: var(--dayova-fixed-surface);
 }
@@ -178,7 +178,7 @@
   .panel { min-height: 630px; grid-template-columns: 1.08fr 1fr; }
   .copy { padding: 40px 0 40px 32px; }
   .title { font-size: clamp(35px, 4.5vw, 48px); }
-  .description { width: auto; max-width: 340px; font-size: 14px; padding-right: 16px; }
+  .description { width: auto; max-width: 340px; padding-right: 16px; }
   .mockup { top: 70px; left: 0; width: 98%; }
   .arrow { display: none; }
 }
@@ -189,7 +189,7 @@
   .panel { grid-template-columns: minmax(0, 1fr); min-height: 0; padding-top: 104px; }
   .copy { --mobile-title-size: clamp(29px, 8.9vw, 56px); padding: 22px 24px 0; text-align: center; }
   .title { font-size: var(--mobile-title-size); line-height: 1.06; }
-  .description { width: calc(100% - 48px); max-width: 380px; font-size: 14px; line-height: 1.65; margin: 22px auto 0; text-wrap: pretty; }
+  .description { width: calc(100% - 48px); max-width: 380px; line-height: 1.65; margin: 22px auto 0; text-wrap: pretty; }
   .action { margin-top: 24px; gap: 10px; justify-items: center; }
   .download.download { font-size: 13px; min-height: 48px; padding: 12px 20px; gap: 12px; }
   .visual { margin-top: 72px; padding-bottom: 24px; }

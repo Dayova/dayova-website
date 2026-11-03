@@ -47,7 +47,7 @@
 .label { display: inline-block; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 48px; opacity: .65; }
 .copy h3 { margin: 0 0 20px; font-size: clamp(25px, 2.3vw, 34px); line-height: 1.22; font-weight: 600; letter-spacing: -.045em; }
 .copy h3 > span { display: block; white-space: nowrap; }
-.copy p { margin: 0; font-size: 17px; line-height: 1.75; opacity: .72; }
+.copy p { font-size: var(--type-section-description); margin: 0; line-height: 1.75; opacity: .72; }
 .visual { display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; min-width: 0; }
 .productMark { display: grid; place-items: center; width: 108px; height: 108px; margin-bottom: auto; margin-top: 12px; margin-right: 16%; border: 1px solid #ffffffb0; border-radius: 32px; background: #ffffff55; transform: rotate(-9deg); }
 .lilac .productMark { transform: rotate(8deg); }
@@ -63,7 +63,6 @@
 @media (max-width: 900px) {
   .surface { min-height: min(560px, calc(100svh - 128px)); gap: 24px; }
   .bigWord { font-size: clamp(25px, 3.8vw, 38px); }
-  .copy p { font-size: 16px; }
 }
 @media (max-width: 699px) {
   .statement { padding-inline: 24px; }
