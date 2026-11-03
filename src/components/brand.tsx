@@ -1,3 +1,6 @@
+import { BrandMark } from "@/components/brand-mark";
+import styles from "./brand.module.css";
+
 type BrandProps = {
   compact?: boolean;
   inverse?: boolean;
@@ -6,11 +9,10 @@ type BrandProps = {
 export function Brand({ compact = false, inverse = false }: BrandProps) {
   return (
     <span
-      className={`inline-flex items-center font-semibold leading-none tracking-[-0.045em] ${
-        compact ? "text-xl" : "text-[24px]"
-      } ${inverse ? "text-white" : "text-ink"}`}
+      className={`${styles.brand} ${compact ? styles.compact : ""} ${inverse ? styles.inverse : ""}`}
     >
-      dayova
+      <BrandMark className={styles.mark} />
+      <span className={styles.wordmark}>dayova.</span>
     </span>
   );
 }

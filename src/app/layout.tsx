@@ -33,15 +33,14 @@ export const metadata: Metadata = {
   publisher: "Dayova",
   category: "education",
   icons: {
-    icon: {
-      url: "/favicon.png",
-      type: "image/png",
-      sizes: "512x512",
-    },
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
+    ],
     apple: {
-      url: "/favicon.png",
+      url: "/apple-touch-icon.png",
       type: "image/png",
-      sizes: "512x512",
+      sizes: "180x180",
     },
   },
   openGraph: {
