@@ -14,9 +14,6 @@ export const siteConfig = {
       process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL ||
       "https://play.google.com/store/apps/details?id=com.dayova",
     linkedin: "https://www.linkedin.com/company/109756945/",
-    discord:
-      process.env.NEXT_PUBLIC_DISCORD_URL ||
-      "https://discord.com/channels/1086939783374315530/1507048041666838759",
     facebook:
       process.env.NEXT_PUBLIC_FACEBOOK_URL ||
       "https://www.facebook.com/61559712444806/",
