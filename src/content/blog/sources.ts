@@ -132,6 +132,18 @@ const {
 } = sources;
 
 export const articleSources: Readonly<Record<string, readonly BlogSource[]>> = {
+  "in-der-lerngruppe-lernen": [
+    {
+      title: "Collaborative learning approaches",
+      publisher: "Education Endowment Foundation",
+      url: "https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/collaborative-learning-approaches",
+    },
+    {
+      title: "Retrieval Practice for Improved Learning",
+      publisher: "Carnegie Mellon University, Eberly Center",
+      url: "https://www.cmu.edu/teaching/resources/instructionalstrategies/activelearningstrategies/retrievalpractice/index.html",
+    },
+  ],
   "vokabeln-lernen-und-sicher-abrufen": [
   {
     "title": "The critical importance of retrieval for learning (Karpicke & Roediger, 2008)",

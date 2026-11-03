@@ -3,6 +3,7 @@ import { blogArticlesEarly2026 } from "./blog/articles-2026-early";
 import { blogArticlesLate2026 } from "./blog/articles-2026-late";
 import { blogArticlesSeptember2026 } from "./blog/articles-2026-september";
 import { blogArticlesOctober2026 } from "./blog/articles-2026-october";
+import { blogArticlesNovember2026 } from "./blog/articles-2026-november";
 import { articleDeepDives } from "./blog/article-deep-dives";
 import { articlePracticeSections } from "./blog/article-practice";
 import { strategicRelatedArticleSlugs } from "./blog/seo-priorities";
@@ -36,6 +37,7 @@ function calculateReadingTime(article: BlogArticle) {
 }
 
 export const blogArticles: readonly BlogArticle[] = [
+  ...blogArticlesNovember2026,
   ...blogArticlesOctober2026,
   ...blogArticlesSeptember2026,
   ...blogArticlesLate2026,
