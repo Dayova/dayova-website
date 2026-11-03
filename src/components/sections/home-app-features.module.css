@@ -1,0 +1,209 @@
+.statement { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 32px 24px; text-align: center; color: var(--dayova-ink); }
+.statementTitle { visibility: var(--intro-stack-visibility, visible); transform: scale(var(--intro-stack-scale, 1)); will-change: transform; position: relative; z-index: 1; display: flex; flex-direction: column; align-items: stretch; gap: .16em; width: min(100%, 1120px); margin: 0; font-size: clamp(32px, 5.1vw, 74px); font-weight: 600; letter-spacing: -.045em; line-height: 1.18; }
+.statementLine { transform-origin: 100% 50%; will-change: transform, opacity; display: flex; align-items: center; width: fit-content; white-space: nowrap; }
+.statementLine:first-child { align-self: center; margin-left: 8%; }
+.statementLine:nth-child(2) { align-self: flex-start; }
+.statementLine:last-child { align-self: flex-end; color: var(--dayova-brand, #00baff); }
+.wordMask { display: inline-flex; overflow: hidden; will-change: transform; padding: .04em .02em; margin: -.04em -.02em; }
+.wordMask > span { display: inline-block; will-change: transform, opacity; }
+.mobileStatementWord { display: none; }
+.statementLead, .statementTail { display: contents; }
+.statementLine em { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 400; letter-spacing: -.035em; }
+.iconSlot { display: inline-flex; align-items: center; justify-content: center; width: 1.95em; height: 1.15em; flex: none; overflow: visible; }
+.statementIcon { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 1.65em; height: 1.1em; border: 1.5px solid currentColor; border-radius: .4em; will-change: transform; }
+.statementIcon svg { width: .78em; height: .78em; overflow: visible; }
+.bookFlip { position: relative; display: block; width: .78em; height: .78em; }
+.bookFlip svg { display: block; width: 100%; height: 100%; }
+.bookTurningPage { position: absolute; inset: 0; pointer-events: none; }
+.bookTurningPage path:not(:last-child) { display: none; }
+.bookTurningPage path:last-child { transform-box: view-box; transform-origin: 50% 50%; animation: turnPage 2.8s ease-in-out infinite; }
+.clockMotion svg path { transform-box: view-box; transform-origin: 50% 50%; animation: clockHands 4s linear infinite; }
+.calendarFlip { position: relative; display: block; width: .78em; height: .78em; perspective: 140px; }
+.calendarFlip svg { display: block; width: 100%; height: 100%; }
+.calendarLeaf { position: absolute; top: 41.6667%; left: 0; right: 0; height: 58.3333%; transform-origin: 50% 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: transparent; will-change: transform; }
+.calendarLeaf svg { display: block; width: 100%; height: 100%; }
+:global([data-animation-state="complete"]) .calendarLeaf { animation: calendarLeafTurn 3s cubic-bezier(.4,0,.2,1) infinite; }
+@keyframes calendarLeafTurn {
+  0%, 25% { transform: rotateX(0deg); opacity: 1; }
+  65% { transform: rotateX(165deg); opacity: 1; }
+  66%, 90% { transform: rotateX(165deg); opacity: 0; }
+  91% { transform: rotateX(0deg); opacity: 0; }
+  100% { transform: rotateX(0deg); opacity: 1; }
+}
+@keyframes turnPage { 0%, 15%, 100% { transform: perspective(70px) rotateY(0deg); opacity: 1; } 50%, 65% { transform: perspective(70px) rotateY(-135deg); opacity: .65; } }
+@keyframes clockHands { to { transform: rotate(360deg); } }
+.experience { position: relative; isolation: isolate; margin-bottom: clamp(96px, 12svh, 160px); }
+.features { position: relative; z-index: 2; padding: clamp(100px, 22svh, 220px) 28px 0; background: transparent; }
+.cards { position: relative; max-width: 1344px; margin: 0 auto; padding-bottom: 0; }
+.card { position: sticky; top: var(--stack-top, 96px); margin-bottom: 0; }
+.stackGap { height: clamp(100px, 24svh, 240px); }
+.stackRunway { height: 1px; }
+.surface { position: relative; display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; min-height: min(640px, calc(100svh - 140px)); height: var(--stack-card-height, auto); overflow: hidden; padding: clamp(32px, 4.8vw, 72px); border-radius: 36px; color: #162d38; transform-origin: 50% 0; will-change: transform; box-shadow: 0 -12px 40px #0000000b; }
+.surface::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: #000; opacity: var(--stack-shade, 0); pointer-events: none; }
+.blue { background: #def4fc; }
+.lilac { background: #eee8fb; color: #342848; }
+.lime { background: #eaf3d6; color: #303b26; }
+.copy { align-self: center; max-width: 460px; }
+.label { display: inline-block; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 48px; opacity: .65; }
+.copy h3 { margin: 0 0 20px; font-size: clamp(25px, 2.3vw, 34px); line-height: 1.22; font-weight: 600; letter-spacing: -.045em; }
+.copy h3 > span { display: block; white-space: nowrap; }
+.copy p { margin: 0; font-size: 17px; line-height: 1.75; opacity: .72; }
+.visual { display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; min-width: 0; }
+.productMark { display: grid; place-items: center; width: 108px; height: 108px; margin-bottom: auto; margin-top: 12px; margin-right: 16%; border: 1px solid #ffffffb0; border-radius: 32px; background: #ffffff55; transform: rotate(-9deg); }
+.lilac .productMark { transform: rotate(8deg); }
+.bigWord { display: flex; align-items: center; gap: .22em; margin: 60px 0 0; font-size: clamp(28px, 3.8vw, 58px); font-weight: 600; line-height: 1.18; letter-spacing: -.045em; white-space: nowrap; }
+.inlineIcon { display: inline-grid; place-items: center; flex: none; width: 1.5em; height: 1.08em; border: 1.5px solid currentColor; border-radius: .4em; }
+.inlineIcon svg { width: .72em; height: .72em; }
+.detail { font-size: 14px; opacity: .65; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+:global(.dark) .blue { background: #132d39; color: #e3f6fd; }
+:global(.dark) .lilac { background: #292337; color: #f0eafb; }
+:global(.dark) .lime { background: #283023; color: #eef5df; }
+:global(.dark) .productMark { border-color: #ffffff20; background: #ffffff08; }
+@media (max-width: 900px) {
+  .surface { min-height: min(560px, calc(100svh - 128px)); gap: 24px; }
+  .bigWord { font-size: clamp(25px, 3.8vw, 38px); }
+  .copy p { font-size: 16px; }
+}
+@media (max-width: 699px) {
+  .statement { padding-inline: 24px; }
+  .statementTitle { font-size: clamp(32px, 11vw, 60px); gap: .8em; line-height: 1.12; }
+  .statementLine { display: flex; flex-direction: column; align-items: flex-start; width: 100%; }
+  .statementLead, .statementTail { display: inline-flex; align-items: center; gap: .25em; }
+  .statementLine { row-gap: .2em; }
+  .statementLine .wordMask { padding-inline: 0; margin-inline: 0; overflow: clip; }
+  .statementLine .iconSlot { width: 1.65em; }
+  .statementLine:first-child { margin-left: 0; }
+  .statementLine:first-child .statementTail { margin-left: 8.3333%; }
+  .statementLine:nth-child(2) .statementLead { flex-direction: row-reverse; margin-left: 8.3333%; }
+  .statementLine:nth-child(2) .statementTail { margin-left: 16.6667%; }
+  .statementLine:last-child .statementTail { margin-left: 8.3333%; }
+  .desktopStatementWord { display: none; }
+  .mobileStatementWord { display: inline; }
+  .experience { margin-bottom: 96px; }
+  /* Give each landed card a longer reading interval before the next enters. */
+  .features { padding: clamp(180px, 30svh, 250px) 16px 0; }
+  .stackGap { height: clamp(180px, 30svh, 250px); }
+  .stackRunway { height: clamp(72px, 12svh, 104px); }
+  .surface { grid-template-columns: 1fr; gap: 28px; min-height: 580px; padding: 32px 26px; border-radius: 26px; }
+  .copy { max-width: 360px; }
+  .label { margin-bottom: 24px; font-size: 11px; }
+  .copy h3 { font-size: clamp(22px, 6.1vw, 26px); max-width: none; }
+  .copy p { line-height: 1.65; }
+  .visual { min-height: 205px; }
+  .productMark { width: 72px; height: 72px; border-radius: 22px; margin: 0 12% 0 0; }
+  .productMark svg { width: 38px; height: 38px; }
+  .bigWord { font-size: clamp(20px, 6.2vw, 30px); margin-top: 32px; }
+  .detail { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card { position: relative; top: auto; }
+  .stackGap { height: 24px; }
+  .stackRunway { display: none; }
+  .surface { transform: none !important; }
+  .surface::after { opacity: 0; }
+  .statementIcon svg, .statementIcon svg path, .calendarLeaf { animation: none; }
+  .surface { height: auto; }
+  .cards { padding-bottom: 0; }
+}
+
+.features[data-feature-motion] .copy, .features[data-feature-motion] .visual { transition: opacity 440ms ease, transform 600ms cubic-bezier(.2,.7,.2,1); }
+.features[data-feature-motion] .visual { transition-delay: 60ms; }
+.features[data-feature-motion] .card:not([data-card-revealed]) .copy,
+.features[data-feature-motion] .card:not([data-card-revealed]) .visual { opacity: 0; transform: translate3d(0, 48px, 0); }
+@media (prefers-reduced-motion: reduce) {
+  .features[data-feature-motion] .copy, .features[data-feature-motion] .visual { opacity: 1 !important; transform: none !important; transition: none; }
+}
+
+.introCardFrame { text-align: left; position: absolute; top: calc(var(--stack-top, 96px) - var(--learning-top-space, 96px)); left: max(28px, calc((100% - 1344px) / 2)); right: max(28px, calc((100% - 1344px) / 2)); opacity: 0; transform-origin: 50% 0; will-change: transform, opacity; }
+.introCardFrame .copy { will-change: transform, opacity; }
+.planTitleAnchor { display: block; width: 100%; height: clamp(42px, 5vw, 74px); margin-top: 60px; margin-bottom: 16px; flex: none; }
+@media(max-width: 699px) {
+  .introCardFrame { left: 16px; right: 16px; }
+  .planTitleAnchor { height: 38px; margin-top: 32px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  .introCardFrame { position: relative; inset: auto; width: 100%; margin-top: 48px; opacity: 1 !important; transform: none !important; order: 2; }
+  .introCardFrame .copy, .introCardFrame .visual { opacity: 1 !important; transform: none !important; }
+  .introCardFrame .surface { height: auto; }
+  .features { padding-top: 24px; }
+  .statement { height: auto; min-height: 75svh; padding-top: 48px; padding-bottom: 24px; }
+  .statementLine { opacity: 1 !important; transform: none !important; }
+}
+
+@media(prefers-reduced-motion: reduce) { .statementTitle { transform: none !important; } }
+
+.introCardFrame .blue { background: linear-gradient(110deg, color-mix(in srgb, var(--dayova-app-primary) 14%, var(--dayova-app-surface)), var(--dayova-app-system-subtle)); color: var(--dayova-ink); }
+
+.surface { padding-right: 44px; padding-bottom: 44px; --feature-art: #028ec2; }
+:global(.dark) .surface { --feature-art: #89d6f1; }
+.lilac { --feature-art: #8451cb; }
+.lime { --feature-art: #739a42; }
+:global(.dark) .lilac { --feature-art: #c7b1f2; }
+:global(.dark) .lime { --feature-art: #c7dd9e; }
+.visual { position: relative; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; min-height: 0; }
+.illustration { position: absolute; top: 0; right: 0; width: 100%; height: calc(100% - 96px); color: var(--feature-art); pointer-events: none; }
+.illustration svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.bigWord { position: relative; justify-content: flex-end; margin: 0; font-size: clamp(26px, 3.5vw, 52px); }
+.planTitleAnchor { margin: 0; height: clamp(42px, 4.4vw, 64px); }
+.paperBack { transform-origin: 300px 220px; animation: paperBackSettle 6s cubic-bezier(.4,0,.2,1) infinite; }
+.paperMiddle { transform-origin: 280px 220px; animation: paperMiddleSettle 6s cubic-bezier(.4,0,.2,1) infinite; }
+.paperFront { transform-origin: 225px 250px; animation: paperFrontSettle 6s cubic-bezier(.4,0,.2,1) infinite; }
+.planStep { animation: planStepReveal 6s ease-in-out infinite; }
+.calendarSelection { animation: calendarDaySelect 7s cubic-bezier(.4,0,.2,1) infinite; }
+.pathFlow { animation: learningPathFlow 6s linear infinite; }
+.activeStep { transform-origin: 410px 206px; animation: learningStepPulse 4s ease-in-out infinite; }
+.nextStep { animation: learningNextStep 4s ease-in-out infinite; }
+.feedbackBar { transform-box: fill-box; transform-origin: center bottom; animation: feedbackBarRise 5s ease-in-out infinite; }
+@keyframes feedbackBarRise { 0%,100% { transform: scaleY(.88); } 45%,65% { transform: scaleY(1); } }
+@keyframes paperBackSettle { 0%,100% { transform: rotate(12deg) translateX(8px); } 45%,65% { transform: rotate(5deg) translateX(-8px); } }
+@keyframes paperMiddleSettle { 0%,100% { transform: rotate(4deg); } 45%,65% { transform: rotate(-3deg) translateX(-7px); } }
+@keyframes paperFrontSettle { 0%,100% { transform: rotate(-8deg); } 45%,65% { transform: rotate(-3deg) translateY(-4px); } }
+@keyframes planStepReveal { 0%,12%,100% { opacity: .5; } 35%,80% { opacity: 1; } }
+@keyframes calendarDaySelect { 0%,15%,100% { transform: translateX(0); } 35%,48% { transform: translateX(76px); } 65%,78% { transform: translateX(152px); } }
+@keyframes learningPathFlow { to { stroke-dashoffset: -80; } }
+@keyframes learningStepPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+@keyframes learningNextStep { 0%,100% { transform: translateX(0); } 50% { transform: translateX(-10px); } }
+@media (max-width: 900px) and (min-width: 700px) {
+  .bigWord { font-size: clamp(25px, 3.5vw, 36px); }
+}
+@media (max-width: 699px) {
+  .surface { min-height: min(660px, calc(100svh - 112px)); padding: 32px 32px 40px 26px; }
+  .visual { min-height: clamp(210px, 36svh, 330px); }
+  .illustration { width: min(100%, 350px); height: min(255px, calc(100% - 56px)); top: 0; right: 0; }
+  .bigWord { font-size: clamp(20px, 6.2vw, 30px); }
+  .planTitleAnchor { height: clamp(72px, 22vw, 116px); }
+}
+@media(prefers-reduced-motion: reduce) {
+  .illustration g, .illustration path, .feedbackBar { animation: none; }
+  .paperBack { transform: rotate(10deg); }
+  .paperMiddle { transform: rotate(3deg); }
+  .paperFront { transform: rotate(-6deg); }
+}
+
+@media(prefers-reduced-motion: reduce) { :global([data-animation-state="complete"]) .calendarLeaf { animation: none; } }
+
+.overviewMotion svg { overflow: visible; }
+.overviewMotion svg path { transform-box: fill-box; transform-origin: center; animation: overviewTilePulse 3.6s cubic-bezier(.4,0,.2,1) infinite; }
+.overviewMotion svg path:nth-child(4) { animation-delay: 0s; }
+.overviewMotion svg path:nth-child(2) { animation-delay: .16s; }
+.overviewMotion svg path:nth-child(1) { animation-delay: .32s; }
+.overviewMotion svg path:nth-child(3) { animation-delay: .48s; }
+.adaptMotion svg { transform-origin: 50% 50%; animation: adaptPlanTurn 4.2s cubic-bezier(.45,0,.25,1) infinite; }
+@keyframes overviewTilePulse {
+  0%, 8%, 50%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+  25% { transform: translateY(-1px) scale(.78); opacity: .5; }
+}
+@keyframes adaptPlanTurn {
+  0%, 12% { transform: rotate(0deg); }
+  76%, 100% { transform: rotate(360deg); }
+}
+@media(prefers-reduced-motion: reduce) {
+  .overviewMotion svg path, .adaptMotion svg { animation: none; }
+}
+
+.planMotion svg { animation: planCalendarNod 4s ease-in-out infinite; }
+@keyframes planCalendarNod { 0%, 30%, 100% { transform: rotate(0); } 45% { transform: rotate(-9deg); } 60% { transform: rotate(7deg); } }
+@media(prefers-reduced-motion: reduce) { .planMotion svg { animation: none; } .statement [data-plan-card-title] { opacity: 1 !important; } }
+
+.planTitle { color: var(--dayova-brand, #00baff); }

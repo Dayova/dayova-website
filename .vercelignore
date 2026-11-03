@@ -1,0 +1,7 @@
+.codex-artifacts/
+.codex-worktrees/
+.pnpm-store/
+Bildsortierung_Linear/
+app-store-screenshots/
+output/
+tmp/

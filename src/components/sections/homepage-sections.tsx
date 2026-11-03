@@ -5,12 +5,11 @@ import {
 } from "@hugeicons/core-free-icons";
 import Image from "next/image";
 
-import { BlueCtaSection } from "@/components/sections/blue-cta-section";
+import { HomeDownloadShowcase } from "@/components/sections/home-download-showcase";
 import { FaqAccordionSection } from "@/components/sections/faq-accordion-section";
 import { ButtonLink } from "@/components/ui/button-link";
 import { ProcessTimeline } from "@/components/sections/process-timeline";
 import { ScrollActiveAdvantages } from "@/components/sections/scroll-active-advantages";
-import { StoreDownloadLink } from "@/components/store-download-link";
 import { DayovaIcon } from "@/components/ui/huge-icon";
 
 const dayovaAdvantages = [
@@ -64,7 +63,7 @@ const faqItems = [
   {
     question: "Was kostet Dayova?",
     answer:
-      "Du kannst Dayova 14 Tage kostenlos und ohne Zahlungsdaten testen. Danach entscheidest du selbst, ob du ein Monats- oder Jahresabo abschließen möchtest. Alle Preise findest du transparent auf unserer Preisseite.",
+      "Du kannst Dayova 14 Tage kostenlos und ohne Zahlungsdaten testen. Danach entscheidest du selbst, ob du ein Abo für einen Monat oder ein Jahr abschließen möchtest. Alle Preise findest du transparent auf unserer Preisseite.",
   },
   {
     question: "Wie erstelle ich meinen Lernplan?",
@@ -175,23 +174,14 @@ export function HomeProcessSection() {
 }
 
 export function HomeDownloadSection() {
-  return (
-    <BlueCtaSection
-      id="download"
-      eyebrow="Dein erster Plan"
-      title="Hol dir Dayova und leg los."
-      description="Installiere Dayova auf Android über Google Play oder auf dem iPhone und iPad über den App Store. Du kannst alle Funktionen 14 Tage ohne Zahlungsdaten ausprobieren."
-    >
-      <StoreDownloadLink variant="secondary">App herunterladen</StoreDownloadLink>
-    </BlueCtaSection>
-  );
+  return <HomeDownloadShowcase />;
 }
 
 export function HomeFaqSection() {
   return (
     <FaqAccordionSection
       id="faq"
-      title="Fragen zur Dayova Lernplan-App"
+      title="Fragen zu Dayova"
       items={faqItems}
       name="home-faq"
     />

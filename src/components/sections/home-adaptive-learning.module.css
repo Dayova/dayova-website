@@ -1,0 +1,45 @@
+.section { --adapt-progress: 0; position: relative; padding: 0 28px; margin-bottom: 32px; color: var(--dayova-ink); }
+.viewport { position: sticky; top: var(--potential-top, 96px); min-height: calc(100svh - 112px); display: grid; align-items: center; padding: 56px 0 64px; }
+.runway { height: 135svh; }
+.layout { width: 100%; display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: clamp(48px, 7vw, 104px); max-width: 1040px; margin: 0 auto; }
+.diagram { min-width: 0; aspect-ratio: .92; display: grid; place-items: center; position: relative; isolation: isolate; }
+.diagram::before { content: ""; position: absolute; inset: 4% -4%; z-index: -1; background: radial-gradient(ellipse, color-mix(in srgb, var(--dayova-brand) 11%, transparent), transparent 68%); }
+.chart { position: relative; width: 100%; height: 88%; max-height: 460px; }
+.bar { position: absolute; width: 138px; left: 50%; transform: translateX(-50%); top: 68px; bottom: 48px; border-radius: 38px; padding: 12px; border: 1px solid color-mix(in srgb, var(--dayova-ink) 12%, transparent); background: color-mix(in srgb, var(--dayova-surface) 72%, transparent); box-shadow: inset 0 1px 0 color-mix(in srgb, var(--dayova-ink) 5%, transparent), 0 24px 56px #00000008; }
+.steps { position: absolute; inset: 12px; display: flex; flex-direction: column; gap: 5px; }
+.steps span { flex: 1; min-height: 0; border-radius: 7px; background: color-mix(in srgb, var(--dayova-ink) 8%, var(--dayova-page)); }
+.steps span:first-child { border-radius: 22px 22px 7px 7px; }
+.steps span:last-child { border-radius: 7px 7px 22px 22px; }
+.fill { position: absolute; inset: 0; clip-path: inset(calc(48% * (1 - var(--adapt-progress))) 0 0); }
+.fill .steps span { background: linear-gradient(110deg, #37d1f6, #00a9e8); box-shadow: inset 0 1px 0 #ffffff40; }
+.goalIcon { position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 52px; height: 52px; display: grid; place-items: center; color: var(--dayova-brand); border: 1px solid color-mix(in srgb, var(--dayova-brand) 25%, transparent); border-radius: 18px; background: color-mix(in srgb, var(--dayova-brand) 7%, var(--dayova-page)); }
+.potential { position: absolute; left: calc(50% + 48px); top: 18px; font-size: 12px; font-weight: 500; white-space: nowrap; }
+.guide { position: absolute; left: 50%; top: 52px; height: 16px; border-left: 1px dashed color-mix(in srgb, var(--dayova-brand) 35%, transparent); }
+.current { position: absolute; right: calc(50% + 88px); top: calc(50% + 10px); display: flex; align-items: center; gap: 10px; color: var(--dayova-muted); font-size: 12px; }
+.current span { width: 20px; height: 1px; background: color-mix(in srgb, var(--dayova-brand) 45%, transparent); position: relative; }
+.current span::after { content: ""; position: absolute; width: 5px; height: 5px; right: -2px; top: -2px; border-radius: 50%; background: var(--dayova-brand); }
+.caption { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); text-align: center; font-size: 11px; color: var(--dayova-muted); white-space: nowrap; }
+.copy { max-width: 460px; }
+.eyebrow { display: block; margin-bottom: 12px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--dayova-muted); }
+.copy p { margin: 0; font-size: clamp(16px, 1.4vw, 18px); line-height: 1.55; color: var(--dayova-muted); }
+.copy h2 { margin: 0 0 24px; font-size: clamp(30px, 3.3vw, 46px); font-weight: 600; letter-spacing: -.045em; line-height: 1.18; }
+.copy h2 > span { display: block; white-space: nowrap; }
+@media (max-width: 699px) {
+  .section { padding: 0 24px; margin-bottom: 24px; }
+  .viewport { align-items: start; min-height: 0; padding: 16px 0 32px; }
+  .layout { grid-template-columns: 1fr; gap: 64px; max-width: 420px; }
+  .diagram { width: 100%; aspect-ratio: 1.05; }
+  .bar { width: 112px; top: 60px; bottom: 40px; border-radius: 32px; }
+  .chart { height: 100%; }
+  .goalIcon { width: 44px; height: 44px; border-radius: 15px; }
+  .goalIcon svg { width: 24px; height: 24px; }
+  .guide { top: 44px; }
+  .potential { left: calc(50% + 32px); top: 14px; }
+  .current { right: calc(50% + 66px); gap: 7px; }
+  .current span { width: 12px; }
+  .copy { max-width: none; }
+  .copy p { font-size: 16px; }
+  .copy h2 { font-size: 28px; }
+  .potential, .current, .caption { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .viewport { position: relative; top: auto; min-height: 0; } .runway { display: none; } .fill { clip-path: none; } }

@@ -43,7 +43,7 @@ const socialLinks: readonly SocialLink[] = [
   },
 ] as const;
 
-export function SocialLinks() {
+export function SocialLinks({ iconsOnly = false }: { iconsOnly?: boolean }) {
   return (
     <div className="flex flex-wrap gap-2" aria-label="Dayova Social Media">
       {socialLinks.map((social) => (
@@ -61,7 +61,7 @@ export function SocialLinks() {
           >
             <DayovaIcon icon={social.icon} size={18} />
           </span>
-          <span>{social.label}</span>
+          {!iconsOnly && <span>{social.label}</span>}
         </a>
       ))}
     </div>

@@ -7,7 +7,8 @@
   transition: transform 220ms ease, visibility 220ms;
 }
 
-:global(body:has(#home-hero-title)) .header {
+:global(body:has(#home-hero-title)) .header,
+:global(body:has(#parents-hero-title)) .header {
   position: fixed;
   left: 0;
   right: 0;

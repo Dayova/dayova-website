@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 
+import { HomeAppFeatures, HomeLearningExperience } from "@/components/sections/home-app-features";
+import { HomeAdaptiveLearning } from "@/components/sections/home-adaptive-learning";
+import { HomeLearningTransition } from "@/components/sections/home-learning-transition";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
   HomeAboutSection,
-  HomeAdvantagesSection,
   HomeDownloadSection,
-  HomeFaqSection,
   HomeHeroSection,
 } from "@/components/sections/homepage-sections";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/seo";
 
 const homeDescription =
-  "Plane deine Prüfungsvorbereitung mit Dayova: Die Lernplan-App verteilt den Stoff auf deine freien Zeiten und zeigt den nächsten Schritt. 14 Tage testen.";
+  "Plane deine Prüfungsvorbereitung mit Dayova: Die Lernplanapp verteilt den Stoff auf deine freien Zeiten und zeigt den nächsten Schritt. 14 Tage testen.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Lernplan-App für Schüler: Prüfungen planen | Dayova",
+  title: "Lernplanapp für Schüler: Prüfungen planen | Dayova",
   description: homeDescription,
   path: "/",
   absoluteTitle: true,
@@ -59,7 +60,7 @@ const homeStructuredData = {
       "@type": "WebPage",
       "@id": "https://dayova.com/#webpage",
       url: "https://dayova.com/",
-      name: "Lernplan-App für Schüler: Prüfungen planen | Dayova",
+      name: "Lernplanapp für Schüler: Prüfungen planen | Dayova",
       description: homeDescription,
       isPartOf: { "@id": "https://dayova.com/#website" },
       about: { "@id": "https://dayova.com/#organization" },
@@ -74,9 +75,12 @@ export default function Home() {
       <JsonLd data={homeStructuredData} />
       <HomeHeroSection />
       <HomeAboutSection />
-      <HomeAdvantagesSection />
+      <HomeLearningExperience>
+        <HomeLearningTransition />
+        <HomeAppFeatures />
+      </HomeLearningExperience>
+      <HomeAdaptiveLearning />
       <HomeDownloadSection />
-      <HomeFaqSection />
     </>
   );
 }

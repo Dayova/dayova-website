@@ -52,7 +52,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "23. März 2026",
     publishedAtISO: "2026-03-23T10:00:00+01:00",
     intro:
-      "Die Prüfung ist noch vier Wochen entfernt. Heute hast du endlich eine Aufgabensorte ohne Hilfe gelöst – und trotzdem fühlt sich das große Ziel kaum näher an. Wer Fortschritt nur an der Endnote misst, übersieht genau solche Veränderungen. Kleine, überprüfbare Erfolge machen sie sichtbar.",
+      "Die Prüfung ist noch vier Wochen entfernt. Heute hast du endlich eine Aufgabensorte ohne Hilfe gelöst, und trotzdem fühlt sich das große Ziel kaum näher an. Wer Fortschritt nur an der Endnote misst, übersieht genau solche Veränderungen. Kleine, überprüfbare Erfolge machen sie sichtbar.",
     sections: [
       {
         title: "Warum entfernte Ziele wenig zurückgeben",
@@ -134,7 +134,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "9. März 2026",
     publishedAtISO: "2026-03-09T10:00:00+01:00",
     intro:
-      "„Hast du schon gelernt?“ dauert drei Sekunden. Trotzdem kann die Frage einen ganzen Konflikt öffnen – vor allem, wenn das Kind selbst nicht weiß, womit es anfangen soll. Hilfreicher ist eine Frage, die das Hindernis sichtbar macht, ohne die Verantwortung sofort zu übernehmen.",
+      "„Hast du schon gelernt?“ dauert drei Sekunden. Trotzdem kann die Frage einen ganzen Konflikt öffnen, vor allem, wenn das Kind selbst nicht weiß, womit es anfangen soll. Hilfreicher ist eine Frage, die das Hindernis sichtbar macht, ohne die Verantwortung sofort zu übernehmen.",
     sections: [
       {
         title: "Vom Kontrollieren zum Verstehen",
@@ -265,7 +265,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "16. Februar 2026",
     publishedAtISO: "2026-02-16T10:00:00+01:00",
     intro:
-      "Im Text zur Zellteilung steht jeder Schritt sauber unter dem vorherigen. Beim Abrufen verschwimmen Reihenfolge und Beziehungen. Eine Skizze kann zeigen, was der Fließtext nur nacheinander beschreibt – sofern du sie zum Denken nutzt und nicht bloß abschreibst.",
+      "Im Text zur Zellteilung steht jeder Schritt sauber unter dem vorherigen. Beim Abrufen verschwimmen Reihenfolge und Beziehungen. Eine Skizze kann zeigen, was der Fließtext nur nacheinander beschreibt, sofern du sie zum Denken nutzt und nicht bloß abschreibst.",
     sections: [
       {
         title: "Zwei Darstellungen, ein Zusammenhang",
@@ -438,7 +438,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
     publishedAt: "19. Januar 2026",
     publishedAtISO: "2026-01-19T10:00:00+01:00",
     intro:
-      "Der Timer klingelt nach 25 Minuten – mitten in der Herleitung, die gerade endlich Sinn ergibt. Pomodoro kann den Start erleichtern. Die Zahl ist aber kein Naturgesetz. Ein guter Arbeitsblock endet an einem sinnvollen Punkt der Aufgabe, nicht blind an Minute 25.",
+      "Der Timer klingelt nach 25 Minuten, mitten in der Herleitung, die gerade endlich Sinn ergibt. Pomodoro kann den Start erleichtern. Die Zahl ist aber kein Naturgesetz. Ein guter Arbeitsblock endet an einem sinnvollen Punkt der Aufgabe, nicht blind an Minute 25.",
     sections: [
       {
         title: "Was ein Pomodoro-Lernblock leisten kann",
@@ -512,7 +512,7 @@ export const blogArticlesEarly2026: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Der Vergleich mit früher löst keine heutige Lernaufgabe. Übernimm, was weiterhin nützt – weniger Unterbrechungen und klare Zeiten – und behalte digitale Werkzeuge dort, wo sie erklären, planen oder Rückmeldung geben.",
+      "Der Vergleich mit früher löst keine heutige Lernaufgabe. Übernimm, was weiterhin nützt, weniger Unterbrechungen und klare Zeiten, und behalte digitale Werkzeuge dort, wo sie erklären, planen oder Rückmeldung geben.",
   },
   {
     slug: "wenn-selbstvertrauen-wissen-vortaeuscht",

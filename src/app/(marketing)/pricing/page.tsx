@@ -6,7 +6,7 @@ import { pricingFaqs } from "@/content/pricing";
 import { createPageMetadata, createPageStructuredData } from "@/lib/seo";
 
 const pricingDescription =
-  "Vergleiche Monats- und Jahresabo für die Dayova Lern-App. Teste alle Funktionen 14 Tage ohne Zahlungsdaten.";
+  "Vergleiche Monats- und Jahresabo für die Dayova Lernapp. Teste alle Funktionen 14 Tage ohne Zahlungsdaten.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Preise & Abos für Schüler",

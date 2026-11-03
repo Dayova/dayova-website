@@ -62,7 +62,7 @@ export const pricingFaqs = [
   {
     question: "Wann beginnt die Zahlung?",
     answer:
-      "Die 14-tägige Testphase funktioniert ohne Zahlungsdaten und endet automatisch. Erst wenn du danach bewusst ein Abo auswählst und den Kauf bestätigst, beginnt die Zahlung.",
+      "Die Testphase von 14 Tagen funktioniert ohne Zahlungsdaten und endet automatisch. Erst wenn du danach bewusst ein Abo auswählst und den Kauf bestätigst, beginnt die Zahlung.",
   },
   {
     question: "Wie unterscheiden sich Monats- und Jahresabo?",

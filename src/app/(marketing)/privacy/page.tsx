@@ -365,7 +365,7 @@ export default function PrivacyPage() {
                 Browserinformationen sowie pseudonyme Kennungen verarbeitet
                 werden. Rechtsgrundlagen sind Art. 6 Abs. 1 lit. a DSGVO und §
                 25 Abs. 1 TDDDG. Du kannst deine Einwilligung über
-                „Cookie-Einstellungen“ im Footer widerrufen.
+                „Cookieoptionen“ im Footer widerrufen.
               </p>
               <p>
                 Weitere Informationen findest du in der{" "}

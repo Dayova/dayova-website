@@ -15,7 +15,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
     publishedAt: "22. Dezember 2025",
     publishedAtISO: "2025-12-22T10:00:00+01:00",
     intro:
-      "Die ersten beiden Gleichungen kosten noch Mühe. Bei Nummer acht läuft der Lösungsweg fast von allein. Das fühlt sich nach sicherem Können an – bis in der Klassenarbeit verschiedene Aufgabentypen durcheinanderstehen. Dann musst du nicht nur rechnen, sondern zuerst entscheiden, welches Verfahren passt.",
+      "Die ersten beiden Gleichungen kosten noch Mühe. Bei Nummer acht läuft der Lösungsweg fast von allein. Das fühlt sich nach sicherem Können an, bis in der Klassenarbeit verschiedene Aufgabentypen durcheinanderstehen. Dann musst du nicht nur rechnen, sondern zuerst entscheiden, welches Verfahren passt.",
     sections: [
       {
         title: "Warum Blocklernen so überzeugend wirkt",
@@ -56,7 +56,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
     publishedAt: "15. Dezember 2025",
     publishedAtISO: "2025-12-15T10:00:00+01:00",
     intro:
-      "Du hast die Seite dreimal gelesen und erkennst jeden Satz. Dann klappst du das Buch zu – und bekommst die Erklärung nicht mehr zusammen. Ein kurzer Selbsttest deckt diesen Unterschied früh auf. Er prüft dein Lernen nicht erst am Ende, sondern wird selbst zum Lernen.",
+      "Du hast die Seite dreimal gelesen und erkennst jeden Satz. Dann klappst du das Buch zu, und bekommst die Erklärung nicht mehr zusammen. Ein kurzer Selbsttest deckt diesen Unterschied früh auf. Er prüft dein Lernen nicht erst am Ende, sondern wird selbst zum Lernen.",
     sections: [
       {
         title: "Abrufen ist mehr als Kontrollieren",
@@ -130,7 +130,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Plane nicht nur Lernzeit, sondern auch Abstand ein. Wenn du Wissen nach einer Pause erneut hervorholen musst, siehst du, was geblieben ist – und stärkst genau diesen späteren Zugriff.",
+      "Plane nicht nur Lernzeit, sondern auch Abstand ein. Wenn du Wissen nach einer Pause erneut hervorholen musst, siehst du, was geblieben ist, und stärkst genau diesen späteren Zugriff.",
   },
   {
     slug: "gute-noten-und-verstaendnis",
@@ -171,7 +171,7 @@ export const blogArticles2025: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Freu dich über die gute Note – und prüfe das Wissen trotzdem noch einmal anders. Kannst du das Prinzip erklären, auf einen neuen Fall übertragen und einige Tage später abrufen? Dann trägt mehr als nur das Prüfungsergebnis.",
+      "Freu dich über die gute Note, und prüfe das Wissen trotzdem noch einmal anders. Kannst du das Prinzip erklären, auf einen neuen Fall übertragen und einige Tage später abrufen? Dann trägt mehr als nur das Prüfungsergebnis.",
   },
   {
     slug: "uebungszeit-allein-genuegt-nicht",
