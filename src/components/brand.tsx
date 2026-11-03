@@ -12,7 +12,7 @@ export function Brand({ compact = false, inverse = false }: BrandProps) {
       className={`${styles.brand} ${compact ? styles.compact : ""} ${inverse ? styles.inverse : ""}`}
     >
       <BrandMark className={styles.mark} />
-      <span className={styles.wordmark}>dayova.</span>
+      <span className={styles.wordmark}>dayova</span>
     </span>
   );
 }
