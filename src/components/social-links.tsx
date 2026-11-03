@@ -1,5 +1,4 @@
 import {
-  DiscordIcon,
   Facebook01Icon,
   InstagramIcon,
   Linkedin01Icon,
@@ -16,11 +15,6 @@ type SocialLink = {
 };
 
 const socialLinks: readonly SocialLink[] = [
-  {
-    href: siteConfig.links.discord,
-    label: "Discord",
-    icon: DiscordIcon,
-  },
   {
     href: siteConfig.links.linkedin,
     label: "LinkedIn",
