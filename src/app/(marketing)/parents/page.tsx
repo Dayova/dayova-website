@@ -284,8 +284,6 @@ export default function ParentsPage() {
         className={styles.download}
         titleLines={["Mehr Zeit für Familie.", "Mehr Vertrauen beim Lernen."]}
         description="Probiert Dayova 14 Tage ohne Zahlungsdaten aus. Dein Kind legt die erste Prüfung an und sieht, wie daraus ein eigener Lernplan entsteht."
-        secondaryHref="/pricing"
-        secondaryLabel="Dayova Preise und Abos ansehen"
       />
       </ParentsMotion>
     </>

@@ -70,7 +70,7 @@ export function Footer() {
           <SocialLinks iconsOnly />
         </div>
         <div data-footer-reveal="wordmark" className={styles.wordmarkMask}><Link className={styles.wordmark} href="/" aria-label="Dayova Startseite">dayova</Link></div>
-        <p className={styles.copyright}>Copyright © 2026 Dayova</p>
+        <p className={styles.copyright}>Copyright © 2026 dayova</p>
       </div>
     </footer>
   );
