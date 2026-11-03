@@ -8,7 +8,6 @@ import {
   Idea01Icon,
   LaptopVideoIcon,
   PlayCircle02Icon,
-  PuzzleIcon,
   Rocket01Icon,
   School01Icon,
   SmartPhone01Icon,
@@ -44,31 +43,24 @@ const processStepsByVariant = {
       icon: ComputerPhoneSyncIcon,
     },
     {
-      number: "Anfang 2025",
-      title: "Die erste App-Idee nimmt Form an",
+      number: "2025",
+      title: "Die App-Idee bekommt einen Namen",
       description:
-        "Die Arbeit mit dem Campus zeigte, was noch fehlte: eine App, die den nächsten Lernschritt vorbereitet.",
+        "Aus der Arbeit mit dem Campus entstand die Idee einer App, die den nächsten Lernschritt vorbereitet. Sie bekam den Namen Dayova.",
       icon: SmartPhone01Icon,
     },
     {
-      number: "Spätsommer 2025",
-      title: "Dayova bekommt einen Namen",
+      number: "Anfang 2026",
+      title: "Messenger und Entwicklung der ersten App-Version",
       description:
-        "Mit dem Namen Dayova, einem neuen Design und einem neuen Campus kamen Quizze, Lernvideos und Online-Stunden an einen Ort.",
-      icon: PuzzleIcon,
-    },
-    {
-      number: "Anfang bis April 2026",
-      title: "Messenger, Team und erste Testphase",
-      description:
-        "Anfang 2026 kam der erste Messenger. Im April stießen Fabius Schurig und Jakob Rössner zum Team und arbeiteten mit uns am ersten nutzbaren App-Stand.",
+        "Anfang 2026 entstand der erste Messenger. Gleichzeitig begannen die Planung und Umsetzung der ersten App-Version von Dayova.",
       icon: TaskDone01Icon,
     },
     {
-      number: "17. August 2026",
-      title: "Der offizielle Start von Dayova",
+      number: "Oktober 2026",
+      title: "Veröffentlichung der ersten App-Version",
       description:
-        "Dayova erscheint als App und führt die Erfahrungen aus drei Jahren Lernbegleitung in einem Lernplan zusammen.",
+        "Die erste Version von Dayova erschien im App Store. Aus der Idee wurde eine App, die den nächsten Lernschritt vorbereitet.",
       icon: Rocket01Icon,
     },
   ],
