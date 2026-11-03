@@ -13,7 +13,7 @@ export function TransformationSection() {
             Built from real work with students.
           </h2>
           <p>
-            Dayova began in tutoring sessions—not in a feature brainstorm. The
+            Dayova began in tutoring sessions, not in a feature brainstorm. The
             product is shaped around the moments students lose orientation and
             need a clear way forward.
           </p>

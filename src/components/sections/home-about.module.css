@@ -1,4 +1,4 @@
-.section { position: relative; margin-top: 48px; padding: 24px 0 140px; color: var(--color-ink); }
+.section { min-height: 100svh; box-sizing: border-box; display: flex; align-items: center; position: relative; margin-top: 48px; padding: 24px 0 140px; color: var(--color-ink); }
 .container { max-width: 1280px; }
 .eyebrow { display: block; margin-bottom: 12px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--color-muted); }
 .heading { margin: 0 0 64px; font-size: clamp(30px, 3.3vw, 46px); font-weight: 600; line-height: 1.18; letter-spacing: -.045em; }
@@ -30,13 +30,17 @@
   .appPreview { right:20px; width:32%; top:4px; }
 }
 @media (max-width:767px) {
-  .section { margin-top:4px; padding:24px 0 212px; }
+  /* Clear the protruding phone above the animation's header inset before the
+     entrance lands. Otherwise a fragment stays in the top corner throughout. */
+  .section { margin-top:4px; padding:24px 0 160px; }
   .heading { margin-bottom:48px; font-size:28px; }
   .grid { grid-template-columns:1fr; gap:16px; }
   .card { min-height:0; }
   .planningCard .copy { padding:26px; }
   .planningCard .copy h3, .learningCard .copy h3 { font-size:25px; }
-  .learningCard { min-height:0; }
+  /* Keep the protruding phone inside the grid's measured height. The next
+     section must start below the artwork, including its rotation and shadow. */
+  .learningCard { min-height:0; margin-bottom:148px; }
   .learningCard .copy { width:100%; padding:26px 26px 18px; }
   .learningCard .copy h3 { width:auto; }
   .learningCard .copy p { font-size:13px; }
@@ -45,10 +49,10 @@
 }
 
 .section [data-reveal-item][data-reveal="waiting"] { opacity:0; translate:0 32px; }
-.section [data-reveal-item][data-reveal="visible"] { animation:about-enter 1000ms cubic-bezier(.22,1,.36,1) both; }
+.section [data-reveal-item][data-reveal="visible"] { animation:about-enter 1000ms cubic-bezier(.22,1,.36,1) backwards; }
 .section .learningCard[data-reveal="visible"] { animation-delay:100ms; }
 .learningCard[data-reveal="waiting"] .appPreview { opacity:0; translate:38px 28px; }
-.learningCard[data-reveal="visible"] .appPreview { animation:phone-enter 1100ms cubic-bezier(.22,1,.36,1) 280ms both; }
+.learningCard[data-reveal="visible"] .appPreview { animation:phone-enter 1100ms cubic-bezier(.22,1,.36,1) 280ms backwards; }
 @keyframes about-enter { from { opacity:0; translate:0 32px; } to { opacity:1; translate:0 0; } }
 @keyframes phone-enter { from { opacity:0; translate:38px 28px; } to { opacity:1; translate:0 0; } }
 @media (prefers-reduced-motion:reduce) {
@@ -58,5 +62,5 @@
 
 @media (prefers-reduced-motion:reduce) { .link { transition:none; } .link:hover { transform:none; } }
 
-/* Keep off-screen entrance artwork from widening narrow viewports. */
-@media(max-width:1050px) { .section { overflow-x:clip; } }
+/* The phone intentionally protrudes below its card. Do not clip this section:
+   iOS can apply horizontal clip bounds to the rotated artwork's vertical layer. */

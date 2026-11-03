@@ -11,9 +11,9 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   ...createPageMetadata({
-  title: "Lern-App herunterladen für iOS & Android",
+  title: "Lernapp herunterladen für iOS & Android",
   description:
-    "Lade die Dayova Lernplan-App für iPhone, iPad oder Android herunter. Hier findest du die offiziellen Store-Links und die Schritte zu deinem ersten Lernplan.",
+    "Lade die Dayova Lernplanapp für iPhone, iPad oder Android herunter. Hier findest du die offiziellen Store-Links und die Schritte zu deinem ersten Lernplan.",
   path: "/downloads",
   }),
   robots: { index: false, follow: true },

@@ -20,7 +20,7 @@ export function HeroSection() {
           </h1>
           <p className="text-dayova-body-lg">
             Dayova turns your exams, tasks, available time, and learning
-            progress into one clear plan—so you always know what to work on
+            progress into one clear plan, so you always know what to work on
             next.
           </p>
 
@@ -105,7 +105,7 @@ export function HeroSection() {
                 <div className="dayova-phone-focus-top">
                   <span>
                     <small>Today</small>
-                    <strong>16:00 – 16:30</strong>
+                    <strong>16:00, 16:30</strong>
                   </span>
                   <span className="dayova-phone-focus-check">
                     <DayovaIcon

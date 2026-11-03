@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Dayova",
   url: "https://dayova.com",
   description:
-    "Die Lern-App, die Prüfungsstoff in machbare Lernschritte teilt und zeigt, was heute dran ist.",
+    "Die Lernapp, die Prüfungsstoff in machbare Lernschritte teilt und zeigt, was heute dran ist.",
   launch: {
     date: "2026-08-17T00:00:00+02:00",
     displayDate: "17. August 2026",

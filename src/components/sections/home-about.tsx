@@ -51,7 +51,7 @@ export function HomeAboutSection() {
         </div>
         <div className={styles.grid}>
           <article data-reveal-item className={`${styles.card} ${styles.planningCard}`}>
-            <div className={styles.copy}><h3>Wir kennen den Kopf<br />voller Aufgaben.</h3><p>Aus unserer Lernbegleitung entstand Dayova – damit du deinen Lernalltag leichter planen kannst.</p><Link href="/about" className={styles.link}><span aria-hidden="true"><DayovaIcon icon={ArrowUpRight01Icon} size={18} /></span> Unsere Geschichte</Link></div>
+            <div className={styles.copy}><h3>Wir kennen den Kopf<br />voller Aufgaben.</h3><p>Aus unserer Lernbegleitung entstand Dayova. Damit du deinen Lernalltag leichter planen kannst.</p><Link href="/about" className={styles.link}><span aria-hidden="true"><DayovaIcon icon={ArrowUpRight01Icon} size={18} /></span> Unsere Geschichte</Link></div>
           </article>
           <article data-reveal-item className={`${styles.card} ${styles.learningCard}`}>
             <div className={styles.copy}><h3>Du weißt, was als<br />Nächstes dran ist.</h3><p>Dayova macht aus deinem Stoff einen Lernplan, der zu deinem Alltag passt.</p></div>

@@ -14,7 +14,7 @@ export function DifferentiationSection() {
           </h2>
           <p>
             Typical AI tools help when you ask. Dayova connects your deadlines,
-            available time, and learning progress—then keeps the next useful
+            available time, and learning progress, then keeps the next useful
             step visible.
           </p>
         </div>

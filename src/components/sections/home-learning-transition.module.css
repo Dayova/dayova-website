@@ -1,0 +1,38 @@
+.scene {
+  height: calc(100svh - var(--learning-top-space, 96px) - 16px + 80svh);
+  min-height: 420px;
+  position: sticky;
+  top: calc(var(--learning-top-space, 96px) - 80svh);
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  isolation: isolate;
+}
+.stage {
+  position: sticky;
+  top: var(--learning-top-space, 96px);
+  height: calc(100svh - var(--learning-top-space, 96px) - 16px);
+  width: 100%;
+  overflow: visible;
+}
+.badgeField { position: absolute; inset: 0; overflow: clip; pointer-events: none; }
+.badge { position: absolute; top: 50%; left: 50%; border-radius: 999px; padding: 14px 23px 14px 15px; display: flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 500; letter-spacing: -.65px; white-space: nowrap; box-shadow: 0 5px 0 #00000003, 0 10px 18px #17242c07; will-change: transform; }
+.badgeIcon { width: 32px; height: 32px; border-radius: 50%; background: #ffffff35; display: grid; place-items: center; }
+.blue { background: #00baff; color: #063b4f; }.white { background: #fff; color: #444847; }.lime { background: #dff3a0; color: #39431c; }.purple { background: #e4dcfa; color: #635079; }.dark { background: #25282a; color: white; }
+.flower { width: 280px; height: 280px; position: absolute; left: 50%; top: 50%; will-change: transform; }
+.petal { position: absolute; border-radius: 50%; background: #00baff; opacity: .58; }
+.newSection { position: absolute; inset: 0; background: var(--dayova-page); }
+@media(max-width: 699px) { .badge { font-size: 15px; padding: 11px 15px 11px 10px; gap: 6px; }.badgeIcon { width: 25px; height: 25px; } }
+@media(prefers-reduced-motion: reduce) { .badge,.flower { display: none; }.scene { height: auto; min-height: 300px; }.stage { position: relative; top: auto; height: auto; min-height: 75svh; } }
+
+.mergeTint { position: absolute; inset: 0; border-radius: inherit; background: #00baff; pointer-events: none; z-index: 2; }
+.petal { will-change: transform; }
+
+.badge, .flower { backface-visibility: hidden; }
+@media(max-width: 699px) { .badgeIcon svg { width: 19px; height: 19px; } }
+
+
+
+
+@media(prefers-reduced-motion: reduce) { .scene { position: relative; top: auto; } .newSection { position: relative; inset: auto; } }
+

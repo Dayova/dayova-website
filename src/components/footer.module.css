@@ -1,0 +1,56 @@
+.footer {
+  --footer-ink: #253d4c;
+  --footer-muted: #526b7a;
+  --footer-wordmark: #183d51;
+  --footer-glow: #c7e8f6;
+  overflow: clip;
+  color: var(--footer-ink);
+  background: radial-gradient(ellipse 80% 90% at 50% 110%, var(--footer-glow), transparent 100%), var(--dayova-page);
+}
+:global(.dark) .footer {
+  --footer-ink: #dce6ec;
+  --footer-muted: #8c9aa6;
+  --footer-wordmark: #e8f4fa;
+  --footer-glow: #123040;
+}
+.container { width: min(calc(100% - 96px), 1472px); margin-inline: auto; padding-top: 64px; }
+.navigation { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 36px; }
+.navigation a, .navigation button { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; text-decoration: none; transition: color 180ms ease; }
+.navigation a:hover, .navigation button:hover { color: var(--dayova-brand); }
+.social { margin-top: 24px; }
+.social > div { justify-content: center; gap: 20px; }
+.social a { width: 44px; padding: 0; justify-content: center; border: 0; border-radius: 50%; color: var(--footer-ink); background: transparent; }
+.social a > span:first-child { color: inherit; background: transparent; }
+.social a:hover { background: transparent; color: var(--dayova-brand); transform: translateY(-2px); }
+.social a:hover > span:first-child { color: inherit; }
+.wordmark {
+  display: block;
+  margin: 0;
+  font-size: clamp(80px, 26.5vw, 430px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -.075em;
+  text-align: center;
+  padding-right: .075em;
+  color: var(--footer-wordmark);
+}
+.copyright { padding: 20px 0 24px; color: var(--footer-muted); font-size: 10px; text-align: center; }
+.footer a:focus-visible, .footer button:focus-visible { outline: 2px solid var(--dayova-brand); outline-offset: 5px; border-radius: 3px; }
+@media (max-width: 767px) {
+  .container { width: calc(100% - 32px); padding-top: 40px; }
+  .navigation { gap: 0 20px; }
+  .navigation a, .navigation button { font-size: 12px; }
+  .social { margin-top: 20px; }
+  .social > div { gap: 10px; }
+  .wordmark { margin-top: 32px; font-size: 25.5vw; }
+  .copyright { padding: 16px 0 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer a, .footer button { transition: none; }
+  .social a:hover { transform: none; }
+}
+
+.wordmarkMask { overflow: hidden; margin-top: 44px; padding-bottom: 3vw; margin-bottom: -3vw; }
+.navigation[data-reveal-ready] a, .navigation[data-reveal-ready] button, .social[data-reveal-ready] a, .wordmarkMask[data-reveal-ready] .wordmark { opacity: 0; }
+@media(max-width: 767px) { .wordmarkMask { margin-top: 32px; } .wordmark { margin-top: 0; } }
+@media(prefers-reduced-motion: reduce) { .footer [data-reveal-ready] a, .footer [data-reveal-ready] button { opacity: 1; } }

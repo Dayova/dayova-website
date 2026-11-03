@@ -14,7 +14,7 @@ export const blogArticlesSeptember2026: readonly BlogArticle[] = [
     publishedAt: "28. September 2026",
     publishedAtISO: "2026-09-28T10:00:00+02:00",
     intro:
-      "Du vergleichst deine Matheaufgabe mit der Musterlösung. Die erste Zeile leuchtet ein, die zweite auch. Du übernimmst die Rechnung ins Heft und hakst das Thema ab. Bei der nächsten Aufgabe fehlt dir trotzdem der Anfang. Die Lösung war nachvollziehbar – aber welche Entscheidung zum ersten Schritt geführt hat, ist noch offen. Genau dort kann die Arbeit mit einem Lösungsbeispiel beginnen.",
+      "Du vergleichst deine Matheaufgabe mit der Musterlösung. Die erste Zeile leuchtet ein, die zweite auch. Du übernimmst die Rechnung ins Heft und hakst das Thema ab. Bei der nächsten Aufgabe fehlt dir trotzdem der Anfang. Die Lösung war nachvollziehbar, aber welche Entscheidung zum ersten Schritt geführt hat, ist noch offen. Genau dort kann die Arbeit mit einem Lösungsbeispiel beginnen.",
     sections: [
       {
         title: "Eine Musterlösung darf dir beim Einstieg helfen",
@@ -96,7 +96,7 @@ export const blogArticlesSeptember2026: readonly BlogArticle[] = [
     publishedAt: "21. September 2026",
     publishedAtISO: "2026-09-21T10:00:00+02:00",
     intro:
-      "Sonntagabend, kurz nach sechs. Morgen schreibst du Biologie. Fünf Kapitel liegen auf dem Tisch, zwei Aufgaben machen dir noch Probleme und im Klassenchat beginnt die übliche Unruhe: Wer lernt noch wie lange? Jetzt alles noch einmal durchzuarbeiten klingt gründlich. Es ist aber kein Plan. Am Tag vor der Prüfung brauchst du eine engere Frage: Welche begrenzte Aufgabe verbessert deine Vorbereitung heute noch – und was darf bis morgen unperfekt bleiben?",
+      "Sonntagabend, kurz nach sechs. Morgen schreibst du Biologie. Fünf Kapitel liegen auf dem Tisch, zwei Aufgaben machen dir noch Probleme und im Klassenchat beginnt die übliche Unruhe: Wer lernt noch wie lange? Jetzt alles noch einmal durchzuarbeiten klingt gründlich. Es ist aber kein Plan. Am Tag vor der Prüfung brauchst du eine engere Frage: Welche begrenzte Aufgabe verbessert deine Vorbereitung heute noch, und was darf bis morgen unperfekt bleiben?",
     sections: [
       {
         title: "Der letzte Tag ist kein zweiter Lernplan",
@@ -286,7 +286,7 @@ export const blogArticlesSeptember2026: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Die richtige Lernzeit ist keine feste Zahl. Prüfe deinen Stand, zerlege wichtige Lücken in konkrete Lernschritte und plane mehrere Abrufe mit Puffer. Ob der Aufwand reicht, zeigen deine eigenen Antworten und Aufgaben – nicht die Stundenzahl im Klassenchat.",
+      "Die richtige Lernzeit ist keine feste Zahl. Prüfe deinen Stand, zerlege wichtige Lücken in konkrete Lernschritte und plane mehrere Abrufe mit Puffer. Ob der Aufwand reicht, zeigen deine eigenen Antworten und Aufgaben, nicht die Stundenzahl im Klassenchat.",
   },
   {
     slug: "mehrere-pruefungen-gleichzeitig-was-lerne-ich-zuerst",

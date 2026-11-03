@@ -132,6 +132,27 @@ const {
 } = sources;
 
 export const articleSources: Readonly<Record<string, readonly BlogSource[]>> = {
+  "vokabeln-lernen-und-sicher-abrufen": [
+  {
+    "title": "The critical importance of retrieval for learning (Karpicke & Roediger, 2008)",
+    "publisher": "Science / PubMed",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/18276894/"
+  }
+],
+  "textaufgaben-verstehen-und-loesen": [
+  {
+    "title": "Improving Mathematics in Key Stages 2 and 3",
+    "publisher": "Education Endowment Foundation",
+    "url": "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/maths-ks-2-3"
+  }
+],
+  "muendliche-pruefung-vorbereiten": [
+  {
+    "title": "Retrieval Practice for Improved Learning",
+    "publisher": "Carnegie Mellon University, Eberly Center",
+    "url": "https://www.cmu.edu/teaching/resources/instructionalstrategies/activelearningstrategies/retrievalpractice/index.html"
+  }
+],
   "mit-musterloesungen-lernen": [sources.workedExamples, metacognition],
   "wenn-dein-lernplan-nicht-mehr-zum-alltag-passt": [sources.metacognition],
   "am-tag-vor-der-pruefung-lernen": [

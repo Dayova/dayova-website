@@ -1,78 +1,76 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { Brand } from "@/components/brand";
 import { SocialLinks } from "@/components/social-links";
-import { ButtonLink } from "@/components/ui/button-link";
 import { CookieSettingsButton } from "@/components/analytics-consent";
-import { siteConfig } from "@/config/site";
 import { footerNavigation } from "@/content/navigation";
+import styles from "./footer.module.css";
 
 export function Footer() {
+  const footerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const footer = footerRef.current;
+    if (!footer) return;
+    const preference = matchMedia("(prefers-reduced-motion: reduce)");
+    if (preference.matches) return;
+    const animations: Animation[] = [];
+    const groups = Array.from(footer.querySelectorAll<HTMLElement>("[data-footer-reveal]"));
+    groups.forEach(group => group.dataset.revealReady = "true");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const group = entry.target as HTMLElement;
+        observer.unobserve(group);
+        const elements = group.dataset.footerReveal === "wordmark"
+          ? [group.firstElementChild as HTMLElement]
+          : Array.from(group.querySelectorAll<HTMLElement>("a, button"));
+        if (!elements.length) { group.removeAttribute("data-reveal-ready"); return; }
+        const wordmark = group.dataset.footerReveal === "wordmark";
+        const batch = elements.map((element, index) => element.animate([
+          { opacity: 0, transform: wordmark ? "translate3d(0, 90%, 0)" : "translate3d(0, 24px, 0)" },
+          { opacity: 1, transform: "translate3d(0, 0, 0)" },
+        ], { duration: wordmark ? 1100 : 650, delay: index * 60, easing: "cubic-bezier(.22,1,.36,1)", fill: "both" }));
+        animations.push(...batch);
+        batch.at(-1)!.onfinish = () => {
+          group.removeAttribute("data-reveal-ready");
+          batch.forEach(animation => animation.cancel());
+        };
+      });
+    }, { threshold: .18 });
+    groups.forEach(group => observer.observe(group));
+    const showAll = () => {
+      if (!preference.matches) return;
+      observer.disconnect();
+      groups.forEach(group => group.removeAttribute("data-reveal-ready"));
+      animations.forEach(animation => animation.cancel());
+    };
+    preference.addEventListener("change", showAll);
+    return () => {
+      observer.disconnect();
+      groups.forEach(group => group.removeAttribute("data-reveal-ready"));
+      animations.forEach(animation => animation.cancel());
+      preference.removeEventListener("change", showAll);
+    };
+  }, []);
+
+  const legalLinks = footerNavigation.find((group) => group.title === "Rechtliches")!.links;
+
   return (
-    <footer className="bg-dark-panel text-white">
-      <div className="dayova-container site-footer__container py-12 lg:py-16">
-        <div className="section-inner border-b border-white/12 pb-8 lg:grid-cols-[1.35fr_0.65fr]">
-          <div>
-            <Link href="/" aria-label="Dayova Startseite">
-              <Brand inverse />
-            </Link>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-white/65">
-              Einfach loslernen: Dayova macht aus deinen Prüfungen und freien
-              Zeiten einen Plan für heute.
-            </p>
-            <div className="site-footer__social mt-6">
-              <p className="mb-3 text-sm font-medium text-white/70">Folge uns</p>
-              <SocialLinks />
-            </div>
-          </div>
-
-          <nav
-            className="site-footer__nav grid grid-cols-2 gap-4 sm:gap-8"
-            aria-label="Footer Navigation"
-          >
-            {footerNavigation.map((group) => (
-              <div key={group.title}>
-                <h2 className="text-sm font-semibold tracking-normal text-white">
-                  {group.title}
-                </h2>
-                <ul className="mt-4 grid gap-2">
-                  {group.links.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        className="inline-flex min-h-11 items-center py-2 text-sm text-white/65 transition hover:text-white"
-                        href={link.href}
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </nav>
+    <footer ref={footerRef} className={styles.footer}>
+      <div className={styles.container}>
+        <nav data-footer-reveal="links" className={styles.navigation} aria-label="Footer Navigation">
+          {legalLinks.map((link) => (
+            <Link href={link.href} key={link.href}>{link.label}</Link>
+          ))}
+          <CookieSettingsButton />
+        </nav>
+        <div data-footer-reveal="social" className={styles.social}>
+          <SocialLinks iconsOnly />
         </div>
-
-        <div className="flex flex-col gap-6 border-b border-white/12 py-8 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="font-semibold text-white">Du hast Fragen?</p>
-            <p className="mt-1 text-sm text-white/60">
-              Schreib uns – wir melden uns persönlich bei dir.
-            </p>
-          </div>
-          <ButtonLink
-            href={`mailto:${siteConfig.links.email}`}
-            variant="primary"
-          >
-            Kontakt aufnehmen
-          </ButtonLink>
-        </div>
-
-        <div className="flex flex-col gap-3 pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <span>Copyright © 2026 Dayova</span>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <CookieSettingsButton />
-            <span>Aus echter Lernbegleitung entstanden.</span>
-          </div>
-        </div>
+        <div data-footer-reveal="wordmark" className={styles.wordmarkMask}><Link className={styles.wordmark} href="/" aria-label="Dayova Startseite">dayova</Link></div>
+        <p className={styles.copyright}>Copyright © 2026 Dayova</p>
       </div>
     </footer>
   );

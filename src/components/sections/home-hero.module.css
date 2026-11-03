@@ -46,6 +46,7 @@
 }
 
 .titleLine { display: block; white-space: nowrap; }
+.eyebrow { display: block; margin-bottom: 18px; color: var(--dayova-fixed-surface); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 
 .description {
   max-width: 520px;
@@ -209,5 +210,12 @@
 :global(body:has([data-home-intro="complete"])) .arrow path,
 :global(body:has([data-home-intro="complete"])) .mobileArrow path { animation-play-state: running; }
 
+.hero[data-hero-ready="true"] .copy,
+.hero[data-hero-ready="true"] .mockup { animation-play-state: running; }
+
 /* Keep off-screen entrance artwork from widening narrow viewports. */
 @media(max-width:1050px) { .hero { overflow-x:clip; } }
+
+/* Current exports already include the complete iPhone frame and island. */
+.device { padding: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; overflow: visible; }
+.device img { border-radius: 0; }

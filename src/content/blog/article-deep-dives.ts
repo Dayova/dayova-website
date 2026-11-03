@@ -474,7 +474,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Beispiele tragen nur, wenn die Verbindung sichtbar wird",
       paragraphs: [
-        "Ein Beispiel macht einen Begriff nicht automatisch verständlich. Lernende müssen erkennen, welcher Teil des Beispiels für das Prinzip steht und welche Details austauschbar sind. Bei Wahrscheinlichkeit kann ein Würfel helfen – aber nur, wenn deutlich wird, was Ergebnisraum, Ereignis und Wahrscheinlichkeit im Modell bedeuten.",
+        "Ein Beispiel macht einen Begriff nicht automatisch verständlich. Lernende müssen erkennen, welcher Teil des Beispiels für das Prinzip steht und welche Details austauschbar sind. Bei Wahrscheinlichkeit kann ein Würfel helfen, aber nur, wenn deutlich wird, was Ergebnisraum, Ereignis und Wahrscheinlichkeit im Modell bedeuten.",
         "Besonders wirksam ist der Vergleich mehrerer Beispiele. Was bleibt bei Wahlprognosen, Münzwürfen und Qualitätskontrollen gleich? Was verändert sich? Durch diesen Kontrast wird die abstrakte Struktur sichtbar und lässt sich später auf neue Situationen übertragen.",
       ],
     },
@@ -544,7 +544,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Abrufen verändert die Gedächtnisspur",
       paragraphs: [
-        "Beim Abrufen wird Wissen geprüft und gefestigt. Der Versuch, eine Information ohne Vorlage zu erzeugen, stärkt den späteren Zugriff und zeigt zugleich, was fehlt. Das gilt auch dann, wenn die erste Antwort unvollständig ist – vorausgesetzt, anschließend folgt eine verlässliche Rückmeldung.",
+        "Beim Abrufen wird Wissen geprüft und gefestigt. Der Versuch, eine Information ohne Vorlage zu erzeugen, stärkt den späteren Zugriff und zeigt zugleich, was fehlt. Das gilt auch dann, wenn die erste Antwort unvollständig ist, vorausgesetzt, anschließend folgt eine verlässliche Rückmeldung.",
         "Passives Lesen kann als Vorbereitung sinnvoll sein. Problematisch wird es, wenn die gesamte Lernzeit dort bleibt. Schon kurze Unterbrechungen mit Fragen erhöhen den diagnostischen Wert: Nach einem Absatz das Buch schließen, die Kernaussage formulieren und ein Beispiel nennen.",
       ],
     },
@@ -698,7 +698,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Abstände mit Rückmeldung steuern",
       paragraphs: [
-        "Nutze jede Wiederholung als kleine Messung. Gelingt eine Antwort schnell und begründet, kann der nächste Abstand wachsen. Fehlen zentrale Teile, wird zeitnah erneut geübt – aber erst nach einer Erklärung und nicht durch sofortiges mehrfaches Abschreiben.",
+        "Nutze jede Wiederholung als kleine Messung. Gelingt eine Antwort schnell und begründet, kann der nächste Abstand wachsen. Fehlen zentrale Teile, wird zeitnah erneut geübt, aber erst nach einer Erklärung und nicht durch sofortiges mehrfaches Abschreiben.",
       ],
       bullets: [
         "Erste Wiederholung nach einem kurzen Abstand planen.",
@@ -775,7 +775,7 @@ export const articleDeepDives: Readonly<
     {
       title: "Nähe macht Folgen spürbar",
       paragraphs: [
-        "Eine Prüfung in drei Wochen konkurriert mit Nachrichten, Hausaufgaben und Freizeit, deren Wirkung sofort spürbar ist. Erst wenn der Termin nahe rückt, wird die mögliche Folge des Nichtlernens emotional bedeutsam. Der entstehende Druck liefert kurzfristig Energie – allerdings zu einem Zeitpunkt, an dem Abstand und Wiederholung kaum noch möglich sind.",
+        "Eine Prüfung in drei Wochen konkurriert mit Nachrichten, Hausaufgaben und Freizeit, deren Wirkung sofort spürbar ist. Erst wenn der Termin nahe rückt, wird die mögliche Folge des Nichtlernens emotional bedeutsam. Der entstehende Druck liefert kurzfristig Energie, allerdings zu einem Zeitpunkt, an dem Abstand und Wiederholung kaum noch möglich sind.",
         "Früher zu beginnen bedeutet deshalb nicht, wochenlang intensiv für einen Test zu arbeiten. Schon ein kurzer Lernstandscheck verändert die Situation. Er zeigt Umfang und Lücken, sodass spätere Lernschritte gezielt verteilt werden können. Der frühe Schritt dient zunächst der Orientierung, nicht der vollständigen Beherrschung.",
       ],
     },

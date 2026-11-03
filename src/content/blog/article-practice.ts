@@ -57,7 +57,7 @@ export const articlePracticeSections: Readonly<
       title: "Wenn der Plan nicht aufgeht",
       paragraphs: [
         "Ein Plan ist eine Annahme darüber, wie lange Aufgaben dauern und welche Reihenfolge sinnvoll ist. Neue Informationen dürfen ihn verändern. Dauert ein Grundlagenthema länger, wird nicht alles nach hinten gequetscht. Stattdessen werden Prioritäten neu bewertet, weniger wichtige Aufgaben verschoben und der nächste Tag angepasst.",
-        "Diese Haltung verhindert, dass Planung selbst zum Druckmittel wird. Dayova kann Termine, Lernzeiten und Rückmeldungen zusammenführen und daraus eine aktualisierte Reihenfolge bilden. Der Plan dient dem Lernen – nicht umgekehrt.",
+        "Diese Haltung verhindert, dass Planung selbst zum Druckmittel wird. Dayova kann Termine, Lernzeiten und Rückmeldungen zusammenführen und daraus eine aktualisierte Reihenfolge bilden. Der Plan dient dem Lernen, nicht umgekehrt.",
       ],
     },
   ],
@@ -129,7 +129,7 @@ export const articlePracticeSections: Readonly<
       title: "Schlaf lässt sich nicht am Wochenende vollständig nachholen",
       paragraphs: [
         "Längeres Schlafen nach mehreren kurzen Nächten kann Müdigkeit reduzieren, stellt aber nicht automatisch jeden beeinträchtigten Lernmoment wieder her. Bereits während der müden Tage wurden Informationen unaufmerksamer aufgenommen und Entscheidungen impulsiver getroffen. Prävention ist deshalb hilfreicher als regelmäßiges Nachholen.",
-        "Ein Lernplan sollte Schlaf als feste Grenze behandeln. Wenn die verfügbare Zeit nicht reicht, müssen Umfang und Prioritäten verändert werden – nicht die Nacht immer weiter verkürzt.",
+        "Ein Lernplan sollte Schlaf als feste Grenze behandeln. Wenn die verfügbare Zeit nicht reicht, müssen Umfang und Prioritäten verändert werden, nicht die Nacht immer weiter verkürzt.",
       ],
     },
   ],

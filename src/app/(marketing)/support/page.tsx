@@ -17,7 +17,7 @@ export default function SupportPage() {
     <>
       <PageHero
         eyebrow="Dayova Support"
-        title="Dayova Support: Hilfe zu deiner Lern-App."
+        title="Dayova Support: Hilfe zu deiner Lernapp."
         description="Hier findest du Hilfe zu deinem Konto, Lernplänen, Abonnements und Datenschutz."
         className="legal-page-hero"
       />

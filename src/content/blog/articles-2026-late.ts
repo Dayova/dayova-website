@@ -242,19 +242,19 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
   },
   {
     "slug": "eine-lern-app-sollte-dir-arbeit-abnehmen",
-    "title": "Eine Lern-App sollte dir Arbeit abnehmen",
+    "title": "Eine Lernapp sollte dir Arbeit abnehmen",
     "excerpt": "Kalender, Karteikarten, Lernvideos oder persönliche Nachhilfe? So wählst du nach deiner konkreten Lernhürde und prüfst eine App vor dem Abo.",
-    "seoTitle": "Lern-App oder Nachhilfe? Lernhilfen sinnvoll vergleichen",
+    "seoTitle": "Lernapp oder Nachhilfe? Lernhilfen sinnvoll vergleichen",
     "category": "Lernplanung",
     "readingTime": "7 Min.",
     "publishedAt": "27. Juli 2026",
     "publishedAtISO": "2026-07-27T10:00:00+02:00",
-    "intro": "Du hast eine Zusammenfassung, einen Kalender und zwei Lern-Apps. Trotzdem weißt du am Nachmittag nicht, womit du anfangen sollst. Die nächste App hilft erst dann, wenn klar ist, welches Problem sie lösen soll: Fehlt eine Erklärung, regelmäßige Übung, eine Planung oder jemand, der deinen Denkweg mit dir durchgeht?",
+    "intro": "Du hast eine Zusammenfassung, einen Kalender und zwei Lernapps. Trotzdem weißt du am Nachmittag nicht, womit du anfangen sollst. Die nächste App hilft erst dann, wenn klar ist, welches Problem sie lösen soll: Fehlt eine Erklärung, regelmäßige Übung, eine Planung oder jemand, der deinen Denkweg mit dir durchgeht?",
     "sections": [
       {
         "title": "Welche Lernhilfe passt zu welcher Aufgabe?",
         "paragraphs": [
-          "Die folgende Übersicht vergleicht typische Einsatzweisen, keine getesteten Einzelprodukte. Funktionsumfang und Preise unterscheiden sich je Anbieter. Dayova ist selbst Anbieter einer Lern-App; die Entscheidungskriterien sind deshalb bewusst überprüfbar formuliert."
+          "Die folgende Übersicht vergleicht typische Einsatzweisen, keine getesteten Einzelprodukte. Funktionsumfang und Preise unterscheiden sich je Anbieter. Dayova ist selbst Anbieter einer Lernapp; die Entscheidungskriterien sind deshalb bewusst überprüfbar formuliert."
         ],
         "table": {
           "caption": "Lernhilfen nach Aufgabe statt nach Werbeversprechen auswählen",
@@ -280,7 +280,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
               "Danach ohne Vorlage erklären oder eine neue Aufgabe lösen."
             ],
             [
-              "Lernplan-App wie Dayova",
+              "Lernplanapp wie Dayova",
               "du Prüfungen, freie Zeit und nächste Lernschritte verbinden möchtest.",
               "Themen und Zeiten passend angeben und Rückmeldungen fachlich prüfen."
             ],
@@ -313,7 +313,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         ]
       },
       {
-        "title": "Was Dayova heute anbietet – und was nicht",
+        "title": "Was Dayova heute anbietet und was nicht",
         "paragraphs": [
           "Dayova ist als App verfügbar. Sie verbindet Prüfungsthemen und freie Zeiten zu Lernschritten. Für die App gibt es ein Monats- oder Jahresabo nach der Testphase.",
           "Ein separater Elternzugang wird damit nicht versprochen. Für Schulen werden Lerngruppe, Ansichten und Funktionen in einem begleiteten Pilotprojekt vereinbart. Eine Lernstandsanzeige ist keine Notenprognose und KI-generierte Inhalte können Fehler enthalten."
@@ -325,7 +325,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
           },
           {
             "href": "/pricing",
-            "label": "Aktuelle Dayova-Preise und Testbedingungen"
+            "label": "Aktuelle Dayova Preise und Testbedingungen"
           }
         ]
       },
@@ -360,7 +360,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
     publishedAt: "20. Juli 2026",
     publishedAtISO: "2026-07-20T10:00:00+02:00",
     intro:
-      "Die Antwort ist rot markiert. Darunter steht die richtige Lösung. Du weißt jetzt, dass dein Ergebnis falsch war – aber noch nicht, an welcher Denkentscheidung du abgebogen bist. Erst diese Information macht aus Korrektur ein Feedback, das du im nächsten Versuch nutzen kannst.",
+      "Die Antwort ist rot markiert. Darunter steht die richtige Lösung. Du weißt jetzt, dass dein Ergebnis falsch war, aber noch nicht, an welcher Denkentscheidung du abgebogen bist. Erst diese Information macht aus Korrektur ein Feedback, das du im nächsten Versuch nutzen kannst.",
     sections: [
       {
         title: "Richtig und falsch sind erst der Anfang",
@@ -467,7 +467,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         "links": [
           {
             "href": "/#so-funktioniert-dayova",
-            "label": "Lernplanung mit der Dayova-App entdecken"
+            "label": "Lernplanung mit der Dayova App entdecken"
           }
         ]
       },
@@ -491,12 +491,12 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
           },
           {
             "href": "/#so-funktioniert-dayova",
-            "label": "Lernplanung mit der Dayova-App entdecken"
+            "label": "Lernplanung mit der Dayova App entdecken"
           }
         ]
       }
     ],
-    "takeaway": "Ein brauchbarer Lernplan zeigt konkrete Aufgaben, realistische Zeit und offene Lücken. Wenn der Stoff nicht hineinpasst, ändere die Prioritäten oder den Start – nicht heimlich die Grenze deines Tages.",
+    "takeaway": "Ein brauchbarer Lernplan zeigt konkrete Aufgaben, realistische Zeit und offene Lücken. Wenn der Stoff nicht hineinpasst, ändere die Prioritäten oder den Start, nicht heimlich die Grenze deines Tages.",
     "updatedAtISO": "2026-09-18"
   },
   {
@@ -631,7 +631,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
         "title": "Wie Dayova dabei unterstützt",
         "paragraphs": [
           "Mit Dayova planst du deine Prüfungsvorbereitung anhand deiner Themen und freien Zeiten. Ergänze deinen Plan durch die Beobachtungen aus der Vorlage: Was kannst du schon ohne Hilfe lösen, und was möchtest du als Nächstes üben? Planung ersetzt nicht dein eigenes Erklären und Anwenden.",
-          "Die Grundidee – das eigene Lernen planen, beobachten und auswerten – findet sich im EEF-Leitfaden zu selbstreguliertem Lernen. Die Vorlage hier ist eine praktische Übertragung der Dayova-Redaktion und kein Wirksamkeitsnachweis für die App."
+          "Die Grundidee, das eigene Lernen planen, beobachten und auswerten, findet sich im EEF-Leitfaden zu selbstreguliertem Lernen. Die Vorlage hier ist eine praktische Übertragung der Dayova-Redaktion und kein Wirksamkeitsnachweis für die App."
         ],
         "links": [
           {
@@ -771,7 +771,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
     slug: "was-hinter-dem-aufschieben-steckt",
     title: "Was hinter dem Aufschieben steckt",
     excerpt:
-      "Prokrastination ist häufig ein Versuch, unangenehme Gefühle zu vermeiden – nicht der Beweis fehlender Disziplin.",
+      "Prokrastination ist häufig ein Versuch, unangenehme Gefühle zu vermeiden, nicht der Beweis fehlender Disziplin.",
     category: "Lernpsychologie",
     readingTime: "7 Min.",
     publishedAt: "1. Juni 2026",
@@ -853,7 +853,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
     slug: "wie-dein-lernplatz-mitentscheidet",
     title: "Wie dein Lernplatz mitentscheidet",
     excerpt:
-      "Deine Umgebung lenkt Verhalten, Aufmerksamkeit und Einstieg mit – oft bevor du eine bewusste Entscheidung triffst.",
+      "Deine Umgebung lenkt Verhalten, Aufmerksamkeit und Einstieg mit, oft bevor du eine bewusste Entscheidung triffst.",
     category: "Gesund lernen",
     readingTime: "6 Min.",
     publishedAt: "18. Mai 2026",
@@ -970,7 +970,7 @@ export const blogArticlesLate2026: readonly BlogArticle[] = [
       },
     ],
     takeaway:
-      "Streiche Bewegung in Prüfungswochen nicht automatisch zuerst. Ein kurzer Weg, Sporttermin oder eine aktive Pause ersetzt keine Übung – kann aber dafür sorgen, dass die nächste Lernzeit brauchbarer wird.",
+      "Streiche Bewegung in Prüfungswochen nicht automatisch zuerst. Ein kurzer Weg, Sporttermin oder eine aktive Pause ersetzt keine Übung, kann aber dafür sorgen, dass die nächste Lernzeit brauchbarer wird.",
   },
   {
     slug: "warum-schlaf-beim-lernen-gewinnt",

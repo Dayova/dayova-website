@@ -138,7 +138,7 @@ export function CookieSettingsButton() {
         window.dispatchEvent(new Event("dayova:open-cookie-settings"))
       }
     >
-      Cookie-Einstellungen
+      Cookieoptionen
     </button>
   );
 }

@@ -28,7 +28,7 @@ export default function TermsPage() {
       <PageHero
         eyebrow="Rechtliches"
         title="Nutzungsbedingungen"
-        description="Die wichtigsten Bedingungen für dein Dayova-Abo – verständlich zusammengefasst."
+        description="Die wichtigsten Bedingungen für dein Dayova-Abo, verständlich zusammengefasst."
         className="legal-page-hero"
       />
       <section className="section marketing-legal-section">
@@ -59,7 +59,7 @@ export default function TermsPage() {
               <h2 id="terms-service">2. Leistung</h2>
               <p>
                 Das Dayova-Abo gewährt für seine Laufzeit Zugang zu den im
-                ausgewählten Tarif beschriebenen Funktionen der Dayova-App.
+                ausgewählten Tarif beschriebenen Funktionen der Dayova App.
                 Der konkrete Leistungsumfang ergibt sich aus der Preis- und
                 Bestellseite. Dayova darf Funktionen weiterentwickeln, sofern
                 der wesentliche Nutzen des gebuchten Tarifs erhalten bleibt.
@@ -98,7 +98,7 @@ export default function TermsPage() {
             <section aria-labelledby="terms-trial">
               <h2 id="terms-trial">5. Kostenlose Testphase</h2>
               <p>
-                Die separat angebotene 14-tägige Testphase erfordert keine
+                Die separat angebotene Testphase von 14 Tagen erfordert keine
                 Zahlungsdaten, endet automatisch und wird nicht automatisch in
                 ein kostenpflichtiges Abo umgewandelt. Ein kostenpflichtiges
                 Abo beginnt erst nach einer eigenständigen Bestellung.
